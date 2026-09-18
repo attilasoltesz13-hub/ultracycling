@@ -1,6 +1,6 @@
 # Stílusguide — Hosszú távon
 
-Verzió 0.1 (2026-09-18). A tokenek gépi forrása: `tokens/tokens.json` és `tokens/tokens.css`. Ez a dokumentum a szabályokat és a szándékot rögzíti; az értékeket a tokenfájlok.
+Verzió 0.2 (2026-09-18). A tokenek gépi forrása: `tokens/tokens.json` és `tokens/tokens.css`. PDF-motor: HTML + CSS → Chromium print (döntés 2026-09-18), így a PDF és a weboldal ugyanazokat a tokeneket és komponenseket használja. Ez a dokumentum a szabályokat és a szándékot rögzíti; az értékeket a tokenfájlok.
 
 ## 1. Alapelv
 
@@ -16,21 +16,21 @@ Adatvizualizációs stílus: sok fehér tér, egy márkaszín (éjszakai kék) �
 
 **Paletta.** Felület `#fcfcfb`, tinta `#0b0b0b`, márka `#184f95`, mély kék `#0d366b`, kiemelő `#eb6834`. A diagram-sorozatok rögzített sorrendű, validált kategorikus palettát használnak (tokens: `series`); szekvenciális skálához egyhangú kék ramp; divergálóhoz kék–szürke–piros. Státuszszínek (jó / figyelem / komoly / kritikus) csak biztonsági küszöbökhöz, mindig ikon és felirat mellett.
 
-**Tipográfia.** Két jelölt, mindkettő OFL-licencű és a `fonts/` alatt vendorozva: **IBM Plex Sans + Plex Mono** (adatokhoz és felületekhez tervezett, kifogástalan magyar ékezetek, karakteresebb) és **Inter + Inter Display** (semlegesebb, nagyon jól olvasható kis méretben, mono párja itt is a Plex Mono). A mintaoldalak mindkettővel készülnek; a döntés oldalkép alapján születik. Számok táblázatban és tengelyen `tabular-nums`, hero számoknál proporcionális. Betűméret-skála: display 34 pt, H1 24 pt, H2 16 pt, szöveg 10,5 pt, kis szöveg 8,5 pt, képaláírás 7,5 pt, hero szám 56 pt.
+**Tipográfia.** Inter (szöveg), Inter Display (címek) és IBM Plex Mono (számok, kód) — mind OFL-licencű, a `fonts/` alatt vendorozva. Döntés 2026-09-18, a mintaoldalak alapján (a másik jelölt az IBM Plex Sans volt). Számok táblázatban és tengelyen `tabular-nums`, hero számoknál proporcionális. Betűméret-skála: display 34 pt, H1 24 pt, H2 16 pt, szöveg 10,5 pt, kis szöveg 8,5 pt, képaláírás 7,5 pt, hero szám 56 pt.
 
 **Oldal.** Álló A4, margók 16 / 16 / 18 / 16 mm, 6 oszlopos rács 4 mm hézaggal, bal oldalsáv 8 mm a szint- és szakág-ikonoknak. Lábléc: modulszám · modulcím · oldalszám. Címlapon verzió és dátum.
 
 ## 3. Jelrendszer
 
-**Bizonyíték-fokozat (A–D).** Betűjel színezett négyzetben az állítás mellett; a betű mindig kiírva, a szín csak támogat. A = RCT / meta-analízis (`#0d366b`), B = terepvizsgálat, megfigyelés (`#256abf`), C = edzői / versenyzői konszenzus (`#5598e7`), D = feltörekvő, nem validált (`#86b6ef`). A D fokozat dobozai szaggatott keretet is kapnak, hogy nyomtatva, fekete-fehérben is elkülönüljenek.
+**Bizonyíték-fokozat.** Nem betűjel, hanem négysávos jelerősség-ikon az állítás mellett: 4 kitöltött sáv = RCT / meta-analízis (A, `#0d366b`), 3 = terepvizsgálat, megfigyelés (B, `#256abf`), 2 = szakmai (edzői / versenyzői) konszenzus (C, `#5598e7`), 1 = feltörekvő, nem validált (D, `#86b6ef`, a sávok szaggatott kerettel). A kitöltött sávok száma hordozza a jelentést, a szín csak támogat, így fekete-fehérben is olvasható. Minden oldal láblécében jelmagyarázat; a forrásjegyzékben a betűjel (A–D) marad a hivatkozások mellett.
 
 **Sablonelemek.** Három jel, a keret és az ikon hordozza a jelentést, a szín másodlagos:
 
 | Jel | Jelentés | Megjelenés |
 | --- | --- | --- |
-| fix | bizonyítékok alapján általánosan érvényes | tömör kék keret, kitöltött pötty |
-| példa | szemléltető érték, nem előírás | szaggatott szürke keret, üres pötty |
-| egyéni | csak saját teszttel beállítható | narancs keret, személy-ikon |
+| fix | bizonyítékok alapján általánosan érvényes | tömör kék keret, tű-ikon + szó |
+| példa | szemléltető érték, nem előírás | szaggatott szürke keret, ceruza-ikon + szó |
+| egyéni | csak saját teszttel beállítható | narancs keret, személy-ikon + szó |
 
 **Szint és szakág.** Oldalsáv-ikonok: Alap / Haladó / Elit (egy, két, három vonal); önellátó (táska), kísérős (autó), brevet (bélyegző), 24h (óra). Az oldal csak azokat mutatja, amelyekre az adott tartalom vonatkozik.
 

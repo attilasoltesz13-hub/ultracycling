@@ -1,15 +1,12 @@
 # Mintaoldalak (pilot, 0. lépés)
 
-Három oldaltípus — fogalom, adat, protokoll — a 04 (Alvás) modulból, két PDF-motorral és két betűtípus-jelölttel. A tartalom illusztratív: a formátumot mutatja, a számok a kutatási fázisban cserélődnek.
+Három oldaltípus — fogalom, adat, protokoll — a 04 (Alvás) modulból. A tartalom illusztratív: a formátumot mutatja, a számok a kutatási fázisban cserélődnek.
 
-| Fájl | Motor | Forrás |
-| --- | --- | --- |
-| `dist/samples/samples-chromium-{plex,inter}.pdf` | HTML + CSS → Chromium print (Playwright) | `samples.html` + `design/tokens/tokens.css` |
-| `dist/samples/samples-typst-{plex,inter}.pdf` | Typst | `samples.typ` |
-
-Ábrák: `figures/svg/*.svg` (a `{{FONT}}` helyőrzőt a build cseréli a választott családra; a HTML-ben inline SVG).
+Döntések (2026-09-18): PDF-motor **Chromium print** (HTML + CSS, Playwright), betűtípus **Inter** + IBM Plex Mono; a bizonyíték-fokozatot **sáv-ikon** jelöli betű helyett. A Typst-változat és az IBM Plex Sans a git-előzményben (commit 3264bee) megvan, ha kellene.
 
 ```
-python3 build/samples/render_chromium.py all   # pip install playwright && playwright install chromium
-build/samples/render_typst.sh all             # typst a PATH-on
+pip install playwright && playwright install chromium
+python3 build/samples/render_chromium.py     # → dist/samples/samples.pdf
 ```
+
+Ábrák: `figures/svg/*.svg` (a HTML-ben inline másolat; a valódi build onnan illeszti be őket).

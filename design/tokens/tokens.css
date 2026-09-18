@@ -33,9 +33,9 @@
   /* státusz (biztonsági küszöbök) */
   --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
 
-  /* tipográfia — a build a betűtípus-jelöltet a --font-* változókra állítja */
-  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
-  --font-display: "IBM Plex Sans", system-ui, sans-serif;
+  /* tipográfia — Inter (szöveg), Inter Display (címek), IBM Plex Mono (számok, kód) */
+  --font-sans: "Inter", system-ui, sans-serif;
+  --font-display: "Inter Display", "Inter", system-ui, sans-serif;
   --font-mono: "IBM Plex Mono", ui-monospace, monospace;
   --fs-display: 34pt; --fs-h1: 24pt; --fs-h2: 16pt; --fs-body: 10.5pt;
   --fs-small: 8.5pt; --fs-caption: 7.5pt; --fs-hero: 56pt;
