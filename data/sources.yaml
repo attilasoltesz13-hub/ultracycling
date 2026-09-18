@@ -1,0 +1,17 @@
+# Forrástár — minden hivatkozás egy bejegyzés. Kulcs: szerző-év-rövidcím.
+# grade: A (RCT/meta), B (terep/megfigyelés), C (edzői/versenyzői konszenzus), D (feltörekvő)
+# type: journal | book | report | podcast | article | race-report | talk
+#
+# példa:
+# lastella-2024-sleep-ultra:
+#   type: journal
+#   authors: [Lastella M, ...]
+#   year: 2024
+#   title: "..."
+#   journal: "..."
+#   doi: 10.xxxx/xxxxx
+#   grade: B
+#   modules: [04]
+#   summary: "Egy-két mondatos kivonat: mit mért, mit talált, mire jó nekünk."
+#   notes: "Korlátok, mintanagyság, alkalmazhatóság."
+sources: {}
