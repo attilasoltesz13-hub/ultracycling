@@ -16,7 +16,7 @@ TOK = json.loads((ROOT / "design/tokens/tokens.json").read_text())
 SOURCES = yaml.safe_load((ROOT / "data/sources.yaml").read_text())["sources"]
 DRAFT = "--draft" in sys.argv
 
-GRADE_LABEL = {"A": "RCT, meta-analízis", "B": "terepvizsgálat", "C": "szakmai konszenzus", "D": "feltörekvő"}
+GRADE_LABEL = {"A": "összesített kutatás", "B": "terepvizsgálat", "C": "szakmai tapasztalat", "D": "feltörekvő"}
 LEVEL_HU = {"alap": "Alap", "halado": "Haladó", "elit": "Elit"}
 TYPE_HU = {"modulnyito": "Modulnyitó", "fogalom": "Fogalom", "adat": "Adat", "konvergencia": "Tapasztalat", "protokoll": "Protokoll",
            "sablon": "Sablon", "feladat": "Feladat", "osszefoglalo": "Összefoglaló", "forrasok": "Források"}

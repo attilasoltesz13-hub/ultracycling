@@ -133,7 +133,7 @@ Az egyetlen kerékpáros ultraversenyen végzett alvásvizsgálat tanulsága ké
 :::figure src=figures/svg/04-race-across-france.svg caption="5. ábra · 23 versenyző a 2024-es Race Across France-on (2588 km, 5–8 éjszaka), csuklón viselt mozgásérzékelővel mérve. Balra: az alvás eloszlása a nap óráin — egyetlen csúcs 00:00 és 04:00 között, nappali második csúcs nélkül. Jobbra: átlagos napi alvás és helyezés — a jobb helyezettek kevesebbet aludtak. Sematikus ábra a közölt adatok alapján." ev=B
 :::
 
-**Mennyit alszanak.** Átlagosan **228 perc (3,8 óra) naponta**, a versenyzők egyéni átlaga 95 és 306 perc között. Az alvás 00:00–04:00 közé sűrűsödik; nappal gyakorlatilag nem alszanak. A reakcióidő 05:00–09:00 között a leglassabb, az álmosság 23:00 körül a legnagyobb. [@hurdiel-2026-raf] {ev:B} Kísérős RAAM-váltócsapatban napi 2,4 óra alatt; egy 24 napos, versenyszerűtlen 10 000 km-es tekerésen 5 óra 13 perc. [@lahart-2013-raam; @nedelec-2022-camaron] {ev:B}
+**Mennyit alszanak.** Átlagosan **228 perc (3,8 óra) naponta**, a versenyzők egyéni átlaga 95 és 306 perc között. Az alvás 00:00–04:00 közé sűrűsödik; nappal gyakorlatilag nem alszanak. A reakcióidő 05:00–09:00 között a leglassabb, az álmosság 23:00 körül a legnagyobb. [@hurdiel-2026-raf] {ev:B} Kísérős RAAM-váltócsapatban napi 2,4 óra alatt; egy 24 napos, nem verseny, hanem saját tempójú 10 000 km-es tekerésen 5 óra 13 perc. [@lahart-2013-raam; @nedelec-2022-camaron] {ev:B}
 
 **Állítás 1 — a mezőny.** A jobb helyezettek kevesebbet aludtak: 100 perc körüli napi átlag az élmezőnyben, 300 perc körüli a 70–90. hely környékén. Ugyanez a minta ultrafutókon, 1154 fős mintán is. [@hurdiel-2026-raf; @kishi-2024-ultramarathon] {ev:B} De: aki gyorsabb, az *rövidebb ideig van pályán*, tehát kevesebb éjszakát tölt el; a kevesebb alvás itt következmény, nem ok. A helyezés nem függött attól, hogy az állóidő mekkora részét töltötték alvással.
 
@@ -367,7 +367,7 @@ QR → kísérőoldal: alvásterv-kalkulátor, kronotípus-kérdőív, önellen�
 
 **Szószedet.** *Alvásnyomás* — az ébrenlét alatt halmozódó alvásigény. *Belső napi óra (cirkadián ritmus)* — a test napszakhoz kötött, alvástól független ritmusa. *Kronotípus* — hogy a belső órád korán vagy későn jár. *Alvási tehetetlenség* — az ébredés utáni kábaság. *Mikroalvás* — 1–15 másodperces akaratlan elalvás. *Érzett erőkifejtés (RPE)* — mennyire érzed nehéznek a munkát, skálán. *Figyelmi reakcióidő-teszt (PVT)* — egyszerű, monoton figyelemteszt; a kihagyott válaszok az álmosság mérőszáma. *Sok vizsgálat összesített eredménye (meta-analízis)* — több független kutatás számszerű összevonása. *Mozgáshányad* — mozgásidő osztva az eltelt idővel.
 
-**Bizonyíték-fokozat a forrásoknál:** A — összesített vagy kontrollált laborvizsgálat · B — terepvizsgálat, megfigyelés · C — versenyzői/edzői tapasztalat, szakmai áttekintés · D — feltörekvő, nem igazolt.
+**Bizonyíték-jelek a forrásoknál (4 sávtól 1-ig):** összesített kutatás — sok vizsgálat együtt vagy kontrollált kísérlet · terepvizsgálat — versenyen, edzésen mért adat · szakmai tapasztalat — edzők, versenyzők egybevágó gyakorlata · feltörekvő — ígéretes, de még nem igazolt.
 
 A hivatkozott források a szövegbeli sorszám szerint; teljes adataik (DOI, kivonat, megjegyzések) a `data/sources.yaml` fájlban és a kísérőoldalon kereshetően.
 

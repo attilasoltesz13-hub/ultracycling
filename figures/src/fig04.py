@@ -38,9 +38,9 @@ def egy_ejszaka():
             svg.line(X(lo), y + bh / 2, X(hi), y + bh / 2, INK, 1.4)
             svg.line(X(lo), y + 4, X(lo), y + bh - 4, INK, 1.4); svg.line(X(hi), y + 4, X(hi), y + bh - 4, INK, 1.4)
         svg.text(x0 - 8, y + bh / 2 + 3.5, lab, 9.5, INK2, "end")
-        edge = X(lo) if (lo is not None and v < 0) else (X(hi) if (hi is not None) else X(v))
-        lx = edge + (7 if v > 0 else -7)
-        svg.text(lx, y + bh / 2 + 3.5, f"{v:+.1f} %".replace(".", ","), 9.5, INK, "start" if v > 0 else "end", 600)
+        # az érték a nulla vonal túloldalán, így soha nem ütközik a sávval vagy a felirattal
+        lx = X(0) + (6 if v < 0 else -6)
+        svg.text(lx, y + bh / 2 + 3.5, f"{v:+.1f} %".replace(".", ","), 9.5, INK, "start" if v < 0 else "end", 600)
     # legenda
     svg.rect(x0 - 200, 256, 10, 10, BLUE, rx=2); svg.text(x0 - 186, 265, "sok vizsgálat összesítése (vonal: bizonytalansági tartomány)", 8.5, INK2)
     svg.rect(x0 + 110, 256, 10, 10, ORANGE, rx=2); svg.text(x0 + 124, 265, "kerékpáros laborvizsgálat", 8.5, INK2)
@@ -253,6 +253,46 @@ def regeneracio():
     return svg.write("04-regeneracio.svg")
 
 
+def ket_folyamat():
+    """Borbély-féle kétfolyamat-modell, sematikus. 48 óra: 1. éjszaka alvás, 2. éjszaka tekerés."""
+    W, H = 560, 250
+    svg = SVG(W, H)
+    x0, x1, y0, y1 = 40, 540, 190, 40   # rajzterület
+    def X(h): return scale(h, 0, 48, x0, x1)   # h = óra a 18:00-ás kezdettől
+    # éjszakai sávok: 22–06 (4–12 h) és 46–54 → 28–36 h
+    for a, b in ((4, 12), (28, 36)):
+        svg.rect(X(a), y1, X(b) - X(a), y0 - y1, BLUE, opacity=0.07)
+    # mélypont-sáv: 01–05 h → 7–11 h és 31–35 h
+    svg.rect(X(31), y1, X(35) - X(31), y0 - y1, DEEP, opacity=0.10)
+    svg.line(x0, y0, x1, y0, BASE, 1)
+    # S folyamat: 1. éjszaka alszik (esik), 2. éjszaka teker (tovább nő)
+    # fent = nagyobb álmosság; alvás alatt (4–12 h) az S esik, utána 36 órán át nő
+    svg.path(f"M{X(0):.1f} 118 L{X(4):.1f} 96 L{X(12):.1f} 168 L{X(28):.1f} 92 L{X(36):.1f} 66 L{X(48):.1f} 48", BLUE, 2.4)
+    # C folyamat: szinusz, minimum ~09 h (03:00) és 33 h
+    pts = []
+    for i in range(0, 481):
+        h = i / 10
+        y = 118 - 30 * math.cos((h - 9) / 24 * 2 * math.pi)  # csúcs (legnagyobb álmosság) 03:00-kor, azaz h = 9 és 33
+        pts.append(f"{X(h):.1f} {y:.1f}")
+    svg.path("M" + " L".join(pts), ORANGE, 2.4)
+    # x tengely: óraidő
+    for h in range(0, 49, 6):
+        clock = (18 + h) % 24
+        svg.text(X(h), y0 + 16, f"{clock:02d}", 9, MUTED, "middle")
+    svg.text(X(9), y0 + 32, "1. éjszaka — alszol", 9, INK2, "middle", 600)
+    svg.text(X(33), y0 + 32, "2. éjszaka — tekersz", 9, INK2, "middle", 600)
+    svg.text(x0 - 22, 111, "álmosság →", 9, MUTED, "middle", rotate=-90)
+    # feliratok a rajzterületen kívül / üres helyen
+    svg.text(X(15.5), 168, "S — alvásnyomás", 10, BLUE, "start", 600)
+    svg.text(X(15.5), 180, "ébren nő, alvással ürül", 8.5, INK2, "start")
+    svg.text(X(38), 160, "C — belső óra", 10, ORANGE, "start", 600)
+    svg.text(X(38), 171, "napszakhoz kötött hullám", 8.5, INK2, "start")
+    svg.rect(X(26), 20, X(40) - X(26), 15, DEEP, rx=3)
+    svg.text(X(33), 31, "a kettő összeadódik: 01–05 h", 8.5, "#fff", "middle", 600)
+    svg.line(X(33), 35, X(33), y1, DEEP, 1, dash="3 3")
+    return svg.write("04-ket-folyamat-modell.svg")
+
+
 if __name__ == "__main__":
-    for f in (egy_ejszaka, eberseg, kuszob, raf, banking, kronotipus, regeneracio):
+    for f in (ket_folyamat, egy_ejszaka, eberseg, kuszob, raf, banking, kronotipus, regeneracio):
         print("wrote", f().name)

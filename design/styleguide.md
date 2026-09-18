@@ -22,7 +22,7 @@ Adatvizualizációs stílus: sok fehér tér, egy márkaszín (éjszakai kék) �
 
 ## 3. Jelrendszer
 
-**Bizonyíték-fokozat.** Nem betűjel, hanem négysávos jelerősség-ikon az állítás mellett: 4 kitöltött sáv = RCT / meta-analízis (A, `#0d366b`), 3 = terepvizsgálat, megfigyelés (B, `#256abf`), 2 = szakmai (edzői / versenyzői) konszenzus (C, `#5598e7`), 1 = feltörekvő, nem validált (D, `#86b6ef`, a sávok szaggatott kerettel). A kitöltött sávok száma hordozza a jelentést, a szín csak támogat, így fekete-fehérben is olvasható. Minden oldal láblécében jelmagyarázat; a forrásjegyzékben a betűjel (A–D) marad a hivatkozások mellett.
+**Bizonyíték-fokozat.** Nem betűjel, hanem négysávos jelerősség-ikon az állítás mellett: 4 kitöltött sáv = összesített kutatás — sok vizsgálat együtt vagy kontrollált kísérlet (A, `#0d366b`), 3 = terepvizsgálat, megfigyelés (B, `#256abf`), 2 = szakmai tapasztalat — edzők, versenyzők (C, `#5598e7`), 1 = feltörekvő, nem igazolt (D, `#86b6ef`, a sávok szaggatott kerettel). A jelmagyarázat közérthető szavakkal: „összesített kutatás · terepvizsgálat · szakmai tapasztalat · feltörekvő”. A kitöltött sávok száma hordozza a jelentést, a szín csak támogat, így fekete-fehérben is olvasható. Minden oldal láblécében jelmagyarázat; a forrásjegyzékben a betűjel (A–D) marad a hivatkozások mellett.
 
 **Sablonelemek.** Három jel, a keret és az ikon hordozza a jelentést, a szín másodlagos:
 
