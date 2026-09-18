@@ -1,0 +1,759 @@
+# 08. modul – Pacing és versenystratégia – A csomag (Q1: mért intenzitás ultrán, durability; Q7: tempószabályozó mutatók)
+# Készült: 2026-09-18. DOI csak ott szerepel, ahol kiadói / Crossref / PubMed oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   roberts-2019-cycling, hurdiel-2026-raf, lahart-2013-raam, nedelec-2022-camaron, ridefar-time-efficiency, strasser-pez-2019
+sources:
+  # ---------------------------------------------------------------- Q1: mért intenzitás, tempóeloszlás
+  - key: rothschild-2021-ultracyclist
+    type: journal
+    authors: [Rothschild J.A., Delcourt M., Maunder E., Plews D.J.]
+    year: 2021
+    title: "Racing and Training Physiology of an Elite Ultra-Endurance Cyclist: Case Study of 2 Record-Setting Performances"
+    journal: "International Journal of Sports Physiology and Performance 16(5):739-743"
+    doi: 10.1123/ijspp.2020-0515
+    url: https://pubmed.ncbi.nlm.nih.gov/33547258/
+    grade: B
+    questions: [Q1, Q7]
+    summary: >-
+      Egy elit ultrakerékpáros (győztes és pályacsúcstartó) nyers teljesítmény-, pulzus- és sebességadatai két
+      versenyről 4 hónapon belül. 24 órás szólóverseny: 861,6 km, 35,9 km/h, átlag 210 W (2,8 W/kg), átlagpulzus
+      121/perc; a teljesítmény 37%-kal, a pulzus 22%-kal csökkent a verseny folyamán. RAAM 2 fős váltóban
+      (4939 km, 6 nap 10 óra 39 perc, 31,9 km/h): a versenyző 75,2 órát tekert, 2532 km-t, átlag 203 W (2,7 W/kg),
+      a teljesítménycsökkenés csak 12%; nappal 212 (25) W, éjjel 189 (18) W (p<0,001).
+    quote: >-
+      "the athlete completed 861.6 km (average speed 35.9 km·h⁻¹, average power 210 W [2.8 W·kg⁻¹], average HR
+      121 beats per minute) with a 37% decrease in power and a 22% decrease in HR throughout the race."
+    notes: >-
+      n=1 esettanulmány, férfi, elit; absztraktból. Két formátum egy sportolónál: a folyamatos 24 óra
+      (-37% teljesítmény) vs. a szakaszos 75 óra/6,5 nap (-12%) – a pihenőkkel tagolt terhelés sokkal laposabb
+      lecsengést ad. Az éjszakai -11% (212→189 W) a cirkadián/álmossági komponens. Szóló RAAM-ra és
+      self-supported versenyekre csak irányadó.
+    status: ellenorizve-doi
+
+  - key: knechtle-2015-24h-road
+    type: journal
+    authors: [Knechtle B., Bragazzi N.L., Rosemann T., Rüst C.A.]
+    year: 2015
+    title: "Pacing in a self-paced world record attempt in 24-h road cycling"
+    journal: "SpringerPlus 4:650"
+    doi: 10.1186/s40064-015-1445-1
+    url: https://link.springer.com/article/10.1186/s40064-015-1445-1
+    grade: B
+    questions: [Q1]
+    summary: >-
+      Tapasztalt ultrakerékpáros (33 év, 76 kg) 24 órás országúti világrekord-kísérlete 11,731 km-es körön:
+      896,173 km, átlag 37,34 km/h, átlagteljesítmény 250,2 W (~3,3 W/kg). Pozitív pacing: a sebesség és a
+      teljesítmény körről körre lineárisan csökkent (távolság vs. sebesség r=-0,79; vs. teljesítmény r=-0,85);
+      a hőmérséklet és a szél is befolyásolta a sebességet (átlag ~6 °C, minimum ~2 °C hajnali 3-kor).
+      22:37 után hajrá: az utolsó szakasz 44,38 km/h.
+    quote: >-
+      "The decrease in cycling speed and power output across laps could be modelled linearly."
+    notes: >-
+      n=1, férfi (feltehetően Christoph Strasser 2015-ös rekordja, a cikk nem nevesíti). Az r-értékek a
+      Springer-oldalról, a W/kg saját számítás (250,2 W / 76 kg). Tanulság: a rutinos rekorder is lineárisan
+      lassul, nem "egyenletes" – a tervezésnél számolni kell a lecsengéssel, és a végén marad tartalék a hajrára.
+    status: ellenorizve-doi
+
+  - key: knechtle-2019-24h-track
+    type: journal
+    authors: [Knechtle B., Rosemann T., Nikolaidis P.T.]
+    year: 2019
+    title: "Self-Selected Pacing during a 24 h Track Cycling World Record"
+    journal: "International Journal of Environmental Research and Public Health 16(16):2943"
+    doi: 10.3390/ijerph16162943
+    url: https://www.mdpi.com/1660-4601/16/16/2943
+    grade: B
+    questions: [Q1]
+    summary: >-
+      Ugyanaz a sportoló (35 év, 76 kg) 250 m-es pályán: 3767 kör, 941,873 km (+37,99 km a régi rekordhoz képest),
+      átlagsebesség 39,2 ± 1,9 km/h (35,5–42,8), teljesítmény 214,5 ± 23,7 W (190–266 W). Négy fázis: 0–4. óra
+      stabil sebesség; 4–9. óra a legnagyobb sebességesés; 9–22. óra kis változás; 22. órától hajrá.
+      Első megállás (2,5 perc WC) csak 21:53-nál. Sebesség vs. távolság r=-0,73, teljesítmény r=-0,66.
+    quote: >-
+      "The average cycling speed was 39.2 ± 1.9 km/h (range 35.5–42.8 km/h) and the power output measured was
+      214.5 ± 23.7 W (range 190.0–266.0 W) during the 24 h of cycling."
+    notes: >-
+      n=1, férfi; pulzust nem közöl. A pályán a szélárnyék/légellenállás miatt a W alacsonyabb (214 W), mint az
+      országúti rekordnál (250 W), a km több. A négyfázisú mintázat (elején tartás, 4–9. óra esés, plató, hajrá)
+      a 24 órás tempótervezés sablonja.
+    status: ellenorizve-doi
+
+  - key: schumacher-2011-raam
+    type: journal
+    authors: [Schumacher Y.O., Ahlgrim C., Prettin S., Pottgiesser T.]
+    year: 2011
+    title: "Physiology, Power Output, and Racing Strategy of a Race Across America Finisher"
+    journal: "Medicine & Science in Sports & Exercise 43(5):885-889"
+    doi: 10.1249/MSS.0b013e3181fec009
+    url: https://michael-nehls.com/index_htm_files/Physiology,%20power%20output,%20and%20racing%20strategy%20of%20a%20Race%20Across%20America%20finisher..pdf
+    grade: B
+    questions: [Q1, Q7]
+    summary: >-
+      Szóló RAAM-befutó (10 nap 22 óra 53 perc, 4800 km), jól edzett, nem elit (VO2peak 63 ml/kg/perc, HRmax 174,
+      LT 2,37 W/kg, IAT 3,72 W/kg, Pmax 4,69 W/kg). Verseny alatt: átlag 141 ± 76 W (1,8 W/kg), pulzus 117 ± 14/perc,
+      kadencia 69/perc – gyakorlatilag végig az LT körül vagy alatta. Stratégia: rendszeres pihenő (összesen 91 óra
+      pihenés, 45 óra alvás, ~5 óra alvás/nap, délben 20–30 perces szunyókálás). Szegmensenként stabil teljesítmény
+      mellett szignifikánsan csökkenő átlagpulzus. Tesztoszteron kezdetben -30–40%, kortizol végig +75–90%.
+    quote: >-
+      "The race was mainly performed at low intensities (mean ± SD: power output = 141 ± 76 W, HR = 117 ± 14 bpm)."
+    notes: >-
+      n=1, férfi, teljes szöveg (szerzői PDF-tükör). A DOI Crossrefen ellenőrizve. Az 1,8 W/kg ~38%-a a Pmax-nak és
+      ~76%-a az LT-teljesítménynek. Ellenpélda az "alvásminimalizáló" RAAM-stratégiához: sok alvással is befutott.
+      Kulcs Q7-hez: azonos wattnál eső pulzus napról napra → a pulzuszóna-tartás egyre nagyobb wattot kényszerítene ki.
+    status: ellenorizve-doi
+
+  - key: brayson-2019-tcr
+    type: journal
+    authors: [Brayson D., Frigiola A., Clark J.E.]
+    year: 2019
+    title: "Dynamic heart rate response to multi-day unsupported ultra-endurance cycle racing: a case report"
+    journal: "Experimental Physiology 104(2):174-179"
+    doi: 10.1113/EP087341
+    url: https://discovery-pp.ucl.ac.uk/10073899/1/EP-CR-2018-087341R2_Merged_PDF.pdf
+    grade: B
+    questions: [Q1, Q7]
+    summary: >-
+      Transcontinental Race No5 (2017), 3978,7 km, 14 nap, 32 éves, jól edzett hobbiversenyző (73,3 kg). Átlagsebesség
+      23,1 km/h, napi táv 139,8–409,6 km, átlagos napi teljesítmény 109 ± 12 W (~1,5 W/kg), alvás 247 perc/nap
+      (versenyen kívül 533). A napi átlagpulzus U-alakú (R²=0,63): az 5. napon minimum 111/perc, fordulópont a
+      ~7. napon, a 14. napon 158/perc – vagyis a szokásos pulzuselnyomás után a verseny végén emelkedő pulzus.
+    quote: >-
+      "Average daily power was recorded as 109 ± 12 watts" ... "turning point was calculated as 6.7 (7 days)"
+      ... minimum mean HR 111 bpm on day 5, maximum 158 bpm on day 14.
+    notes: >-
+      n=1, férfi, self-supported; szerzői kézirat (UCL repozitórium), DOI Crossrefen ellenőrizve. A 109 W a
+      legalacsonyabb publikált ultra-átlag: TCR-en a mozgásidő nagy része nagyon alacsony intenzitású. A késői
+      pulzusemelkedést a szerzők kronotróp zavarnak nevezik (ok: fiziológiai/környezeti/genetikai – nyitott).
+      Q7: a pulzus 14 nap alatt NEM monoton – zónatartásra alkalmatlan.
+    status: ellenorizve-doi
+
+  - key: neumayr-2004-rata
+    type: journal
+    authors: [Neumayr G., Pfister R., Mitterbauer G., Maurer A., Hoertnagl H.]
+    year: 2004
+    title: "Effect of ultramarathon cycling on the heart rate in elite cyclists"
+    journal: "British Journal of Sports Medicine 38(1):55-59"
+    doi: 10.1136/bjsm.2002.003707
+    url: https://bjsm.bmj.com/content/38/1/55
+    grade: B
+    questions: [Q1, Q7]
+    summary: >-
+      10 elit férfi ultrakerékpáros az első Race Across the Alps-on (2001; 525 km, 12 600 m szint). Versenyidő
+      27 óra 25 perc, 18,6 km/h. HRmax 186, átlagpulzus 126/perc → HRátlag/HRmax = 0,68. Időeloszlás: 53% <70% HRmax,
+      25% 70–80%, 19% 80–90%, 3% >90%. A HRátlag/HRmax a rajtnál 0,86-ról a végén 0,66-ra esett (-23%);
+      a szerzők szerint ~10% csökkenés 10 óránként, és az "ultraendurance küszöb" ~70% HRmax.
+    quote: >-
+      "In all subjects, exercise intensity declined significantly during the race, as indicated by a decrease in
+      HRaverage/HRmax of 23% from 0.86 at the start to 0.66 at the end."
+    notes: >-
+      n=10, csak férfi, ~27 órás, hegyes verseny; nincs teljesítménymérő adat. Klasszikus alap a
+      "10%/10 óra pulzuscsökkenés" szabályhoz. A 0,86-os rajtintenzitás elit mezőnyben is túl magasnak bizonyult
+      – ez a "túl gyors rajt" fiziológiai lenyomata.
+    status: ellenorizve-doi
+
+  - key: wirnitzer-2008-transalp
+    type: journal
+    authors: [Wirnitzer K.C., Kornexl E.]
+    year: 2008
+    title: "Exercise intensity during an 8-day mountain bike marathon race"
+    journal: "European Journal of Applied Physiology 104(6):999-1005"
+    doi: 10.1007/s00421-008-0855-y
+    url: https://link.springer.com/article/10.1007/s00421-008-0855-y
+    grade: B
+    questions: [Q1]
+    summary: >-
+      7 amatőr MTB-s (33,6 év, 58,4 kg) a Transalp Challenge 2004-en (8 napos szakaszverseny). Pulzustelemetria,
+      laktátküszöb-alapú zónák (2/4/6 mmol/l). Átlagpulzus a versenyen 85,4% HRmax (a labormaximum 79,2%-a);
+      a versenyidő 36%-a a magas és nagyon magas zónában.
+    quote: >-
+      "Mean HR was 85.4% of maximal HR during the race or 79.2% of laboratory determined maximum. Thirty-six percent
+      of total race time was spent in the high and very-high intensity zones."
+    notes: >-
+      Szakaszverseny (napi 4–7 óra, éjszakai alvással), nem folyamatos ultra – ezért a 85% HRmax nem vihető át
+      a 24 órás vagy többnapos nonstop versenyekre; kontraszt-adat: ha a nap közötti alvás megvan, a napi intenzitás
+      többszöröse az ultrának. Vegyes nem (kis testsúly), absztraktból.
+    status: ellenorizve-doi
+
+  - key: manunzio-2016-raam-team
+    type: journal
+    authors: [Manunzio C., Mester J., Kaiser W., Wahl P.]
+    year: 2016
+    title: "Training Intensity Distribution and Changes in Performance and Physiology of a 2nd Place Finisher Team of the Race across America Over a 6 Month Preparation Period"
+    journal: "Frontiers in Physiology 7:642"
+    doi: 10.3389/fphys.2016.00642
+    url: https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2016.00642/full
+    grade: B
+    questions: [Q1]
+    summary: >-
+      4 fős RAAM-váltó (2. hely) 6 hónapos felkészülése és versenyadatai (3. táblázat). Versenyen a négy versenyző
+      egyenként 29:55–45:16 órát, 890–1628 km-t tekert; átlagteljesítmény 186–214 W, 2,3–2,8 W/kg, a laktátminimum-
+      teljesítmény (MLSSP) 69–85%-a, az LT1 91–141%-a, kadencia 78–90/perc. A szerzők szerint ez egybevág
+      Laursen és mtsai (1999) adataival: 4 fős RAAM-csapat intenzitása kevéssel a ventilációs küszöb alatt.
+    quote: >-
+      "The race intensity of our athletes is in agreement with the data of Laursen et al. (1999), who described
+      a mean intensity slightly below the ventilatory threshold of a 4 person RAAM team."
+    notes: >-
+      n=4 férfi, váltó: rövid (20–60 perces) etapok, ezért a szóló ultránál jóval magasabb intenzitás (69–85% MLSSP).
+      A felkészülés ~28%-a MLSSP 50% alatti "üresjárat". Táblázatból, teljes szöveg megnyitva.
+    status: ellenorizve-doi
+
+  - key: hyldahl-2024-tourdivide
+    type: journal
+    authors: [Hyldahl R.D., Gifford J.R., Davidson L.E., Hancock C.R., Hafen P.S., Parcell A.C., Mack G.W.]
+    year: 2024
+    title: "Physiological assessment of a 16 day, 4385 km ultra-endurance mountain bike race: A case study"
+    journal: "Experimental Physiology 109(2):165-174"
+    doi: 10.1113/EP091260
+    url: https://doaj.org/article/0e26490f416c437ba963d772c9064514
+    grade: B
+    questions: [Q1]
+    summary: >-
+      Tour Divide (4385 km), 47 éves férfi, 16 nap 7 óra 45 perc, átlagosan 16,8 óra nyeregben naponta. Mérés
+      35 nappal a rajt előtt és ~36 órával a cél után: VO2max és maximális teljesítmény nem változott; duplán jelölt
+      vízzel mért energiaforgalom + étkezési napló szerint az első 9 napban energiaegyensúly, testtömeg változatlan;
+      zsír csökkent, láb-izomtömeg nőtt; izom-mitokondriális és ér-endotél funkció romlott.
+    quote: >-
+      "The 47‐year‐old male subject took 16 days 7 h 45 min to complete the route. He rode an average of 16.8 h/day.
+      Neither maximal O2 uptake nor maximal power output changed pre‐ to post‐TD."
+    notes: >-
+      n=1, férfi; verseny alatti W/pulzus adatot NEM közöl (csak a napi nyeregidőt) – Tour Divide-ra ez az egyetlen
+      lektorált fiziológiai esettanulmány. Üzenet a durability-vitához: 16 nap után is megmaradt a VO2max/Pmax,
+      miközben a sejtszintű funkció romlott ("metabolikus tartalék"). Absztraktból, DOI Crossrefen.
+    status: ellenorizve-doi
+
+  - key: fesseler-2026-raam58
+    type: journal
+    authors: [Fesseler L., Heinz V., Specks H., Patzak A., Blottner D., Opatz O., Pilz N., Bothe T.L.]
+    year: 2026
+    title: "Continuous multimodal physiological monitoring during the Race Across America (RAAM) of a 58-year-old athlete"
+    journal: "Physiological Measurement 47(1):015002"
+    doi: 10.1088/1361-6579/ae2bbb
+    url: https://api.crossref.org/works/10.1088/1361-6579/ae2bbb
+    grade: B
+    questions: [Q1, Q7]
+    summary: >-
+      58 éves szóló RAAM-versenyző (2024, ~3000 mérföld, 11 nap) folyamatos többcsatornás monitorozása: 2,3 kg
+      testtömegvesztés, becsült energiadeficit 21 169 kcal; vércukor napi 0,92 mg/dl-rel csökkent (p<0,001), több idő
+      100 mg/dl alatt; a tekerés alatti pulzus fokozatosan csökkent és 94/perc körül platózott; a teljesítmény/pulzus
+      arány a 7. napig esett, majd a 11. napon tetőzött; összesített alvásdeficit 65 óra; passzív izomfeszesség nőtt.
+    quote: >-
+      "Heart rate during cycling progressively decreased, stabilising at a plateau of 94 bpm." ...
+      "Power output-to-heart rate ratio initially dropped until day 7 before peaking on day 11."
+    notes: >-
+      n=1, idős férfi; absztraktból (Crossref-metaadat), a kiadói oldal robots-tiltás miatt nem nyílt meg.
+      2026-os publikáció. A W:pulzus arány nem monoton (7. napig romlik, végén javul) – ugyanaz a "vég felé
+      megváltozó pulzusviselkedés", mint Brayson TCR-esetében, csak fordított előjellel a pulzusra nézve
+      (itt a pulzus lefelé, ott felfelé tér el). A monitorozás valós idejű tempó/etetés-korrekciót tett lehetővé.
+    status: ellenorizve-doi
+
+  - key: heidenfelder-2016-raam-pacing
+    type: journal
+    authors: [Heidenfelder A., Rosemann T., Rüst C.A., Knechtle B.]
+    year: 2016
+    title: "Pacing Strategies of Ultracyclists in the 'Race Across AMerica'"
+    journal: "International Journal of Sports Physiology and Performance 11(3):319-327"
+    doi: 10.1123/ijspp.2015-0051
+    url: https://api.crossref.org/works/10.1123/ijspp.2015-0051
+    grade: B
+    questions: [Q1]
+    summary: >-
+      RAAM 2010–2014 szóló mezőnye (~4860 km): sebesség az időállomásokon, szint, szél, hőmérséklet, kor, nem.
+      A sebesség az időállomások mentén nőknél és férfiaknál egyaránt csökkent (férfiak gyorsabbak); a teljesítmény
+      is csökkent a verseny során. A top 3 gyorsabban és nagyobb teljesítménnyel rajtolt, elérte a legmagasabb
+      csúcssebességet/-teljesítményt, és tovább tartotta, mielőtt lassult. Következtetés: pozitív pacing
+      (sebességcsökkenés végig) tűnik megfelelőnek a RAAM-on.
+    quote: >-
+      "The top 3 finishers started faster and had a higher power output at the start than less successful
+      competitors, achieved the highest peak cycling speeds and power output, and maintained peak cycling speed
+      and power output longer before slowing down."
+    notes: >-
+      Absztraktból (Crossref), a kiadói oldal 403. Az abstract nem adja meg n-t és a százalékos lassulást.
+      Megfigyeléses: a "gyors rajt" a jobb versenyzők tulajdonsága, nem bizonyítottan ok; a pozitív pacing
+      ajánlása a mezőny gyakorlatát írja le (= mindenki lassul), nem kontrollált összehasonlítás.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q1: durability / fáradtságállóság
+  - key: clark-2019-cp-dynamics
+    type: journal
+    authors: [Clark I.E., Vanhatalo A., Thompson C., Joseph C., Black M.I., Blackwell J.R., Wylie L.J., Tan R., Bailey S.J., Wilkins B.W., Kirby B.S., Jones A.M.]
+    year: 2019
+    title: "Dynamics of the power-duration relationship during prolonged endurance exercise and influence of carbohydrate ingestion"
+    journal: "Journal of Applied Physiology 127(3):726-736"
+    doi: 10.1152/japplphysiol.00207.2019
+    url: https://api.crossref.org/works/10.1152/japplphysiol.00207.2019
+    grade: A
+    questions: [Q1, Q7]
+    summary: >-
+      16 résztvevő, 3 perces all-out teszt pihenten, illetve 40, 80 és 120 perc "heavy" intenzitású kerékpározás
+      után (placebo), valamint 2 óra után 60 g/h szénhidráttal. Végteszt-teljesítmény (EP ≈ CP): 260 ± 37 W
+      kontroll, 268 ± 39 (40 perc), 260 ± 40 (80 perc), 2 óra után 236 ± 47 W (-9%, p<0,05). W' (WEP): 17,9 ± 3,3 kJ →
+      14,7 ± 2,9 (80 perc) és 13,8 ± 2,7 kJ (2 óra). Szénhidráttal az EP-csökkenés eltűnt (254 ± 49 W), a WEP nem
+      (13,5 ± 3,4 kJ).
+    quote: >-
+      "after 2-h, EP was 9% lower compared to control (236 ± 47 W; P<0.05)." ... "CHO ingestion negated the
+      reduction of EP following 2-h of heavy-intensity exercise (254 ± 49 W) but had no effect on WEP (13.5 ± 3.4 kJ)."
+    notes: >-
+      Laborvizsgálat, csak 2 óra "heavy" (CP alatti, de LT feletti) munka – ultrán a munka intenzitása ennél
+      alacsonyabb, az időtartam 10–100-szoros. Két különböző időlefutás: a W' hamarabb (80 perc) esik, a CP később
+      (2 óra); a CP-esés szénhidrátfüggő → Q7: az energiadeficit közvetlenül lejjebb tolja a fenntartható tempót.
+    status: ellenorizve-doi
+
+  - key: spragg-2024-intensity
+    type: journal
+    authors: [Spragg J., Leo P., Giorgi A., Martinez Gonzalez B., Swart J.]
+    year: 2024
+    title: "The intensity rather than the quantity of prior work determines the subsequent downward shift in the power duration relationship in professional cyclists"
+    journal: "European Journal of Sport Science 24(4):449-457"
+    doi: 10.1002/ejsc.12077
+    url: https://api.crossref.org/works/10.1002/ejsc.12077
+    grade: A
+    questions: [Q1]
+    summary: >-
+      14 profi kerékpáros (CP 5,3 ± 0,21 W/kg), power-profil teszt (15 s, 3 perc, 12 perc) frissen, ~2000 kJ
+      <70% CP alatti folyamatos munka (LIC) után, és 5×8 perc 105–110% CP (HI) után. A HI-ben kevesebb munka mellett
+      az 1 s és 15 s teljesítmény szignifikánsan alacsonyabb volt, mint LIC után; a 3 perces teljesítmény HI után
+      esett, LIC után nem szignifikánsan; a 12 perces teljesítmény és a CP egyik kondícióban sem különbözött.
+    quote: >-
+      "The 12‐min power output and CP were not significantly different between conditions. These findings demonstrate
+      the importance of the intensity of prior work in the resultant downward shift in the power‐duration relationship"
+    notes: >-
+      Profi férfiak, absztraktból (Semantic Scholar tükör; DOI Crossrefen). Ultrára a fő üzenet: ~2000 kJ alacsony
+      intenzitású munka (≈ 2–3 óra Z2) a CP-t még nem tolja lejjebb; a "lyukak" (küszöb feletti szakaszok, hegyek
+      erőltetése) viszont a rövid teljesítményt igen. A kJ-mennyiség önmagában nem írja le a fáradtságot.
+    status: ellenorizve-doi
+
+  - key: spragg-2023-durability
+    type: journal
+    authors: [Spragg J., Leo P., Swart J.]
+    year: 2023
+    title: "The Relationship between Physiological Characteristics and Durability in Male Professional Cyclists"
+    journal: "Medicine & Science in Sports & Exercise 55(1):133-140"
+    doi: 10.1249/MSS.0000000000003024
+    url: https://api.crossref.org/works/10.1249/MSS.0000000000003024
+    grade: A
+    questions: [Q1]
+    summary: >-
+      10 fiatal profi (VO2max 74,4, CP 5,6 W/kg, W' 23,7 kJ). Fáradt CP a friss CP százalékában (ΔCP) 5×8 perc
+      105–110% CP után. ΔCP pozitívan korrelált a relatív csúcsteljesítménnyel (r=0,891), VO2max-szal (r=0,835),
+      a VT1-teljesítménnyel (r=0,748; relatív 0,826), a VT2-vel (r=0,738) és a bruttó hatásfokkal 300 W-on (r=0,869),
+      negatívan a 200 W-os szénhidrát-oxidációval (r=-0,702); regresszió R²=0,96–0,98.
+    quote: >-
+      "Significant negative relationships were found between ∆CP and carbohydrate oxidation at 200 W (r = −0.702,
+      P = 0.024)."
+    notes: >-
+      Kis profi minta, absztraktból. Ultrára: aki alacsony intenzitáson kevesebb szénhidrátot éget (jobb
+      zsíroxidáció) és hatékonyabb, az kevesebbet veszít a CP-jéből – a durability edzhető profil, nem csak
+      "akaraterő". Nem ultra-terhelés, extrapoláció.
+    status: ellenorizve-doi
+
+  - key: barsumyan-2025-durability-amateur
+    type: journal
+    authors: [Barsumyan A., Soost C., Burchard R.]
+    year: 2025
+    title: "Enhanced durability predicts success in amateur road cycling: evidence of power output declines"
+    journal: "Frontiers in Sports and Active Living 7:1530162"
+    doi: 10.3389/fspor.2025.1530162
+    url: https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2025.1530162/full
+    grade: A
+    questions: [Q1]
+    summary: >-
+      14 állóképességi amatőr (37,5 év, VO2max 52,0, 9,6 óra/hét): 5 és 20 perces időfutam frissen és 1000 kJ
+      (70–80%-os) munka után. A sikeresebb versenyzők 20 perces teljesítménye 6,5%-kal, a kevésbé sikereseké
+      12,5%-kal esett; az 5 perces teljesítményben és a pulzusválaszban nem volt csoportkülönbség.
+    quote: >-
+      "The average drop in power is only half as high for successful athletes (6.5%) as it is for the less
+      successful athletes (12.5%)."
+    notes: >-
+      Kis amatőr minta, 1000 kJ (ultrán ez az első 1–1,5 óra). Fontos Q7-adalék: a pulzus NEM különbözött friss vs.
+      fáradt állapotban, miközben a watt esett – a pulzus "nem látja" a durability-különbséget.
+    status: ellenorizve-doi
+
+  - key: maunder-2021-durability
+    type: journal
+    authors: [Maunder E., Seiler S., Mildenhall M.J., Kilding A.E., Plews D.J.]
+    year: 2021
+    title: "The Importance of 'Durability' in the Physiological Profiling of Endurance Athletes"
+    journal: "Sports Medicine 51:1619-1628"
+    doi: 10.1007/s40279-021-01459-0
+    url: https://link.springer.com/article/10.1007/s40279-021-01459-0
+    grade: C
+    questions: [Q1, Q7]
+    summary: >-
+      Narratív áttekintés, amely bevezeti a "durability" fogalmát: a fiziológiai profil-jellemzők (küszöbök,
+      hatásfok) romlásának kezdete és mértéke elhúzódó terhelés alatt. Érv: a pihenten mért profil nem statikus,
+      ezért a rá épített intenzitás-szabályozás hosszú edzésen/versenyen pontatlan.
+    quote: >-
+      "'durability' of individual athletes, here defined as the time of onset and magnitude of deterioration in
+      physiological-profiling characteristics over time during prolonged exercise."
+    notes: >-
+      Fogalmi alap, nincs összevont hatásméret. Q7-hez az elvi tétel: a pihent FTP/LT-re számolt zónák a verseny
+      10. órájában már más fiziológiai állapotot jelölnek.
+    status: ellenorizve-doi
+
+  - key: jones-2024-resilience
+    type: journal
+    authors: [Jones A.M.]
+    year: 2024
+    title: "The fourth dimension: physiological resilience as an independent determinant of endurance exercise performance"
+    journal: "The Journal of Physiology 602(17):4113-4128"
+    doi: 10.1113/JP284205
+    url: https://www.fisiologiadelejercicio.com/wp-content/uploads/2024/09/The_fourth_dimension_physiological_resilience_as_a-1-1.pdf
+    grade: C
+    questions: [Q1]
+    summary: >-
+      Áttekintés: a VO2max, a gazdaságosság és a frakcionális kihasználás "rajtvonal-értékei" nem statikusak.
+      A CP átlagosan ~10%-kal esik 2 óra heavy intenzitású kerékpározás után, egyénenként <1%-tól ~32%-ig;
+      a relatív VO2 ugyanezen 2 óra alatt 64%-ról 68% VO2max-ra nőtt. A "fiziológiai reziliencia" negyedik
+      dimenzióként önálló teljesítmény-meghatározó.
+    quote: >-
+      "The extent of this deterioration displays appreciable inter-individual variability, with changes in CP
+      ranging from <1% to ∼32%."
+    notes: >-
+      Narratív; a számok Clark és mtsai laborvizsgálataiból. A <1–32%-os egyéni szórás az ultra-tervezés kulcsa:
+      a "hány % FTP-n menjek" kérdésre nincs általános válasz, egyéni durability-teszt kell. PDF tükörről,
+      DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: hunter-2025-durability-methods
+    type: journal
+    authors: [Hunter B., Maunder E., Jones A.M., Gallo G., Muniz-Pumares D.]
+    year: 2025
+    title: "Durability as an index of endurance exercise performance: Methodological considerations"
+    journal: "Experimental Physiology 110(11):1612-1624"
+    doi: 10.1113/EP092120
+    url: https://api.crossref.org/works/10.1113/EP092120
+    grade: C
+    questions: [Q1]
+    summary: >-
+      Módszertani áttekintés a durability méréséről: a fárasztó protokoll intenzitása és időtartama határozza meg
+      a romlás mértékét, ezért a táplálkozást és a környezetet kontrollálni kell, a protokollt a kérdéshez és
+      a sportoló szintjéhez kell igazítani.
+    quote: >-
+      "the construction of the fatiguing protocol affects durability profiles, with greater relative intensity and
+      duration resulting in more marked deterioration."
+    notes: >-
+      Absztraktból (Crossref); nincs ultra-specifikus adat. Fontos korlát-jelzés: a laborban mért "durability"
+      számok (2 óra, 1000–2000 kJ) nem konvertálhatók egyszerűen többnapos versenyre.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q1: versenyzői/edzői adatok (C)
+  - key: strasser-power2max-2018
+    type: web-article
+    authors: [power2max (interjú Christoph Strasserrel)]
+    credential: "Teljesítménymérő-gyártó blogja; alany: Christoph Strasser, hatszoros RAAM-győztes, 2018-as RAAM-rekorder"
+    year: 2018
+    title: "Ultra-Cycling: Christoph Strasser and the RAAM 2018"
+    journal: "power2max.com"
+    doi: null
+    url: https://www.power2max.com/en/2018/08/ultra-cycling-christoph-strasser-raam-2018/
+    grade: C
+    questions: [Q1, Q7]
+    summary: >-
+      Strasser 2018-as RAAM-rekordja: 4938 km, 8 nap 1 óra 23 perc, ~7,5 nap tiszta tekerés, mindössze 14 óra szünet
+      alvással együtt. Normalizált teljesítmény a teljes versenyre 162 W, TSS 3173. Az elején "250 W fölött" ment,
+      a verseny végén a pulzusa "csak 120-ig megy fel".
+    quote: >-
+      "only 14 hours break, including sleep" ... normalized power 162 W, TSS 3,173 ... average power early "over 250
+      watts" ... late-race heart rate "only goes up to 120 beats".
+    notes: >-
+      Gyártói interjú, nem lektorált; a számokat maga a versenyző közli. A 162 W NP ~2,0–2,1 W/kg (78–80 kg-nál),
+      ~40% a 400 W-os FTP-hez képest. A "250 W fölött" az első napra vonatkozik → napi lecsengés az elit szólónál is.
+    status: url-megnyitva
+
+  - key: strasser-inscyd-2022
+    type: web-article
+    authors: [Makarov I. (INSCYD), Kinzlbauer M. (edző)]
+    credential: "INSCYD teljesítménydiagnosztikai cég; Markus Kinzlbauer Strasser edzője"
+    year: 2022
+    title: "Riding over 1000 km in 24 hours: what does it take?"
+    journal: "inscyd.com"
+    doi: null
+    url: https://inscyd.com/article/riding-over-1000-km-in-24-hours-what-it-takes/
+    grade: C
+    questions: [Q1]
+    summary: >-
+      Strasser 2021. júliusi 24 órás országúti rekordja: 1026 km, 42,75 km/h, átlagteljesítmény 272 W, átlagpulzus
+      136/perc. Szénhidrát: az első 12 órában 116 g/h, a 24 órára átlagosan ~105 g/h; ~13 450 kcal bevitel.
+    quote: >-
+      "Power avg: 272 watt" ... "Heart rate: 136 bpm" ... "we fed 116g/h in the first 12h and a total of almost
+      105g/h in the 24h"
+    notes: >-
+      Cég/edzői közlés, nem lektorált; a W/kg nem szerepel (78–80 kg-nál ~3,4–3,5 W/kg, saját számítás). A 24 órás
+      "plafon" elit szinten: ~68% FTP (272/400). A 2015-ös rekord (250 W, knechtle-2015-24h-road) és a 2021-es
+      (272 W) különbsége az aero és a táplálkozás fejlődése.
+    status: url-megnyitva
+
+  # ---------------------------------------------------------------- Q7: mi szabályoz jól – labor és terep
+  - key: martin-1981-sleep-rpe
+    type: journal
+    authors: [Martin B.J.]
+    year: 1981
+    title: "Effect of sleep deprivation on tolerance of prolonged exercise"
+    journal: "European Journal of Applied Physiology and Occupational Physiology 47:345-354"
+    doi: 10.1007/BF02332962
+    url: https://link.springer.com/article/10.1007/BF02332962
+    grade: A
+    questions: [Q7]
+    summary: >-
+      8 alany, ~80% VO2max-os futószalag-gyaloglás kimerülésig normál alvás után és 36 óra alvásmegvonás után.
+      Az alvásmegvonás 11%-kal rövidítette a kimerülésig tartó időt (p=0,05), az érzett erőkifejtés szignifikánsan
+      nagyobb volt, miközben a pulzus és az anyagcsere (VO2, VCO2) nem változott; a percventiláció nőtt. Négy alany
+      <5%-ot, négy 15–40%-ot romlott.
+    quote: >-
+      "sleep loss reduced work time to exhaustion by an average of 11% (p=0.05)" ... "exercise heart rate and
+      metabolic rate (V̇O₂ and V̇CO₂) were unchanged" ... "significantly greater perceived exertion (p<0.05)".
+    notes: >-
+      Klasszikus, kis minta, gyaloglás. Q7-kulcs: alváshiány után az RPE "felfelé csal" (adott pulzus/watt
+      nehezebbnek érződik), a pulzus nem jelzi. Ugyanezt kerékpáron roberts-2019-cycling erősíti (RPE:pulzus arány nő).
+    status: ellenorizve-doi
+
+  - key: wingo-2005-cvdrift
+    type: journal
+    authors: [Wingo J.E., Lafrenz A.J., Ganio M.S., Edwards G.L., Cureton K.J.]
+    year: 2005
+    title: "Cardiovascular Drift Is Related to Reduced Maximal Oxygen Uptake during Heat Stress"
+    journal: "Medicine & Science in Sports & Exercise 37(2):248-255"
+    doi: 10.1249/01.MSS.0000152731.33450.95
+    url: https://ir.ua.edu/items/23d4bcad-ac51-4d91-abae-49a919fca19a
+    grade: A
+    questions: [Q7]
+    summary: >-
+      9 férfi kerékpáros 60% VO2max-on, 35 °C-ban. A 15. és 45. perc között a pulzus 12%-kal nőtt (151 ± 9 → 169 ± 10),
+      a verőtérfogat 16%-kal csökkent (120 → 101 ml), a VO2max 19%-kal esett (4,4 → 3,6 l/perc); a folyadékbevitel
+      ezt nem befolyásolta érdemben. A kardiovaszkuláris drift tehát a relatív intenzitás valódi emelkedésével jár.
+    quote: >-
+      "a 12% increase in HR (151 ± 9 vs 169 ± 10 bpm)" ... "a 19% decrease in VO2max (4.4 ± 0.6 vs 3.6 ± 0.4 L·min⁻¹)"
+    notes: >-
+      Rövid (45 perc), meleg laborhelyzet, n=9 férfi; egyetemi repozitórium-absztraktból, DOI Crossrefen. Q7:
+      hőségben a pulzusdrift NEM "hamis jel", hanem a csökkenő VO2max miatti valós relatív intenzitás-emelkedés →
+      hőségben a watt-tartás a csaló, a pulzus a valósabb.
+    status: ellenorizve-doi
+
+  - key: montain-1992-dehydration
+    type: journal
+    authors: [Montain S.J., Coyle E.F.]
+    year: 1992
+    title: "Influence of graded dehydration on hyperthermia and cardiovascular drift during exercise"
+    journal: "Journal of Applied Physiology 73(4):1340-1350"
+    doi: 10.1152/jappl.1992.73.4.1340
+    url: https://api.crossref.org/works/10.1152/jappl.1992.73.4.1340
+    grade: A
+    questions: [Q7]
+    summary: >-
+      8 edzett kerékpáros 2 órás terhelése melegben, négy folyadékpótlási szinttel (semmi, az izzadás 20, 48, 81%-a),
+      így a kiszáradás 1,1–4,2% testtömeg között alakult. A maghőmérséklet-, pulzusemelkedés és a verőtérfogat-esés
+      arányos a felhalmozott kiszáradással (maghő vs. dehidráció r=0,98).
+    quote: >-
+      "the magnitude of increase in core temperature and HR and the decline in SV are graded in proportion to the
+      amount of dehydration accrued during exercise."
+    notes: >-
+      Klasszikus labor, n=8 férfi, 2 óra; absztraktból (Crossref). Q7: a pulzusdrift egyik komponense a
+      folyadékdeficit – kiszáradva a pulzus "felfelé csal" a wattokhoz képest; a laborban a pontos bpm/%-os
+      érték az absztraktban nincs megadva.
+    status: ellenorizve-doi
+
+  - key: goulet-2011-dehydration-meta
+    type: journal
+    authors: [Goulet E.D.B.]
+    year: 2011
+    title: "Effect of exercise-induced dehydration on time-trial exercise performance: a meta-analysis"
+    journal: "British Journal of Sports Medicine 45(14):1149-1156"
+    doi: 10.1136/bjsm.2010.077966
+    url: https://bjsm.bmj.com/content/45/14/1149
+    grade: A
+    questions: [Q7]
+    summary: >-
+      5 cikk, 13 hatásbecslés, 39 alany: az edzés közbeni kiszáradás (átlag 2,20 ± 1,0% testtömeg) önszabályozott
+      időfutamon nem rontotta a teljesítményt (+0,06 ± 2,72%, n.s.); a szomjúság szerinti ivás jobb volt, mint az
+      alatta maradó ivás (+5,2 ± 4,6%, p=0,01). Következtetés: kültéri kerékpározásnál 4% testtömegvesztésig nincs
+      teljesítményromlás, a szomjúság jó szabályozó.
+    quote: >-
+      "The effect of EID (mean BW loss of 2.20±1.0%) during self-paced exercise conditions was to produce a
+      non-significant increase in endurance performance of 0.06±2.72%."
+    notes: >-
+      Kevés vizsgálat, rövid (≤2–3 órás) időfutamok, ökológiailag valid (kültér, önszabályozott). Ultrára:
+      a "2%-os szabály" nem dogma, de a 4%-os határ többnapos hőségben nem tesztelt; alváshiány tompíthatja
+      a szomjúságérzetet (erre nincs forrás).
+    status: ellenorizve-doi
+
+  - key: tatterson-2000-heat
+    type: journal
+    authors: [Tatterson A.J., Hahn A.G., Martin D.T., Febbraio M.A.]
+    year: 2000
+    title: "Effects of heat stress on physiological responses and exercise performance in elite cyclists"
+    journal: "Journal of Science and Medicine in Sport 3(2):186-193"
+    doi: 10.1016/S1440-2440(00)80080-8
+    url: https://www.sciencedirect.com/science/article/pii/S1440244000800808
+    grade: A
+    questions: [Q7]
+    summary: >-
+      11 ausztrál válogatott országúti kerékpáros 30 perces időfutama 32 °C-on és 23 °C-on (60% páratartalom).
+      Melegben a teljesítmény 6,5%-kal alacsonyabb (p<0,05), a végbélhőmérséklet mégis hasonló – a versenyzők
+      önszabályozással lejjebb vették a tempót; a laktát a meleg elején magasabb, a végén alacsonyabb.
+    quote: >-
+      "Power output was 6.5% lower (P<0.05) during HT compared with NT." ... "rectal temperature was remarkably
+      similar throughout each trial."
+    notes: >-
+      Rövid TT, elit férfiak; absztraktból (ScienceDirect). Q7: hőségben az önszabályozott (RPE-vezérelt) tempó
+      automatikusan csökken – a "tartsd az FTP-%-ot" utasítás melegben túlterhel.
+    status: ellenorizve-doi
+
+  - key: barrero-2019-tdf-hrv
+    type: journal
+    authors: [Barrero A., Schnell F., Carrault G., Kervio G., Matelot D., Carré F., Le Douairon Lahaye S.]
+    year: 2019
+    title: "Daily fatigue-recovery balance monitoring with heart rate variability in well-trained female cyclists on the Tour de France circuit"
+    journal: "PLOS ONE 14(3):e0213472"
+    doi: 10.1371/journal.pone.0213472
+    url: https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0213472
+    grade: B
+    questions: [Q7]
+    summary: >-
+      10 jól edzett női kerékpáros a 2017-es Tour de France teljes útvonalán (21 szakasz), napi fekvő/álló HRV, TRIMP,
+      Borg CR-10. A HRV-egyensúly eltolódása (szimpatikus fel, vagális le) korrelált az RPE-vel (r=0,46), a TRIMP-pel
+      (r=0,60) és a szakasz kilométerével (r=0,46); a legnagyobb HRV-változás a legnagyobb terhelések után. A fáradtság
+      nem halmozódott szakaszról szakaszra; a pulzus és HRV egy héttel a vége után tért vissza az alapértékre.
+    quote: >-
+      "fatigue is not summative or augmented with each successive stage and its physical load" ... "Mean heart rate
+      and heart rate variability values returned to their baseline values one week after completion of the event"
+    notes: >-
+      Női minta (ritka!), szakaszverseny napi alvással – nem nonstop ultra. A HRV a napi terhelést tükrözte, de
+      nem mutatott kumulatív "lejtőt" – a teljes alvás a többnapos fáradtság-felhalmozódás fékje. Absztraktból.
+    status: ellenorizve-doi
+
+  - key: swart-2023-mtb-hrv
+    type: journal
+    authors: [Swart A., Constantinou D.]
+    year: 2023
+    title: "The effects of a 3-day mountain bike cycling race on the autonomic nervous system (ANS) and heart rate variability in amateur cyclists: a prospective quantitative research design"
+    journal: "BMC Sports Science, Medicine and Rehabilitation 15:2"
+    doi: 10.1186/s13102-022-00614-y
+    url: https://link.springer.com/article/10.1186/s13102-022-00614-y
+    grade: B
+    questions: [Q7]
+    summary: >-
+      16 amatőr kerékpáros 3 napos MTB-szakaszversenyen: idő- és frekvenciatartománybeli HRV-mutatók minden versenynap
+      után szignifikánsan eltértek az alapértéktől (p≤0,05), és a nyugalmi pulzus/RR-variabilitás 24 órás pihenés után
+      sem tért vissza az alapszintre (csökkent vagális tónus).
+    quote: >-
+      "time-domain and frequency-domain measures showed significant changes from baseline HRV parameters after each
+      race day (p ≤ 0.05)" ... "the mean heart rate and R–R variability intervals did not return to baseline values
+      after 24 h of recovery."
+    notes: >-
+      Amatőrök, 3 nap, absztraktból. Kontraszt Barreróval: amatőröknél már 3 nap után sem áll helyre 24 óra alatt
+      az autonóm egyensúly. Ultrán a reggeli HRV-mérés gyakorlati értéke ezért kérdéses: a "lent" állapot a norma.
+    status: ellenorizve-doi
+
+  - key: bellenger-2016-hrv-meta
+    type: journal
+    authors: [Bellenger C.R., Fuller J.T., Thomson R.L., Davison K., Robertson E.Y., Buckley J.D.]
+    year: 2016
+    title: "Monitoring Athletic Training Status Through Autonomic Heart Rate Regulation: A Systematic Review and Meta-Analysis"
+    journal: "Sports Medicine 46(10):1461-1486"
+    doi: 10.1007/s40279-016-0484-2
+    url: https://link.springer.com/article/10.1007/s40279-016-0484-2
+    grade: A
+    questions: [Q7]
+    summary: >-
+      27 vizsgálat (24 meta-analízisben). Pozitív adaptációnál a nyugalmi RMSSD kis mértékben nő (SMD 0,58), a
+      terhelés utáni HRR nő (SMD 0,63). Túlterhelésnél (overreaching) a nyugalmi RMSSD szintén kissé nő (SMD 0,26),
+      a HFP/SD1 nem változik, a HRR is nő (SMD 0,46), viszont a pulzusgyorsulás csökken (SMD -0,48). A nyugalmi HRV
+      tehát alig különbözteti meg a jó és rossz adaptációt.
+    quote: >-
+      "Resting HRV is largely unaffected by overreaching, although this may be the result of methodological issues
+      that warrant further investigation." ... "HR acceleration appears to decrease in response to overreaching
+      training, and thus may be a potential indicator of training-induced fatigue."
+    notes: >-
+      Edzési (hetek–hónapok) kontextus, nem versenyközi. Q7: a "magas HRV = jó" olvasat túlterhelésnél is
+      előfordulhat (paraszimpatikus túlsúly), ezért ultrán a HRV önmagában nem tempó-jel.
+    status: ellenorizve-doi
+
+  - key: aubry-2015-overreaching-hrr
+    type: journal
+    authors: [Aubry A., Hausswirth C., Louis J., Coutts A.J., Buchheit M., Le Meur Y.]
+    year: 2015
+    title: "The Development of Functional Overreaching Is Associated with a Faster Heart Rate Recovery in Endurance Athletes"
+    journal: "PLOS ONE 10(10):e0139754"
+    doi: 10.1371/journal.pone.0139754
+    url: https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0139754
+    grade: A
+    questions: [Q7]
+    summary: >-
+      31 triatlonista (10 kontroll, 21 túlterhelés; ebből 10 funkcionálisan túledzett, f-OR). Az f-OR csoportban
+      a teljesítmény -2,1 ± 0,8%, a HRR +8 ± 5/perc (99% valószínűség), a laktát -11 ± 14%, a noradrenalin -12 ± 37%;
+      a csúcspulzus 182 ± 5-ről 176 ± 6/percre esett ("almost certain large decrease").
+    quote: >-
+      "The f-OR group demonstrated an almost certain large decrease in HRpeak (182 ± 5 vs 176 ± 6 bpm at Pre and
+      Mid, respectively)."
+    notes: >-
+      Edzési túlterhelés (3 hét), nem versenyközi; triatlon. Mechanizmus-átvitel: halmozódó fáradtságnál a
+      HRmax és a szubmaximális pulzus is lejjebb csúszik (csökkent adrenerg érzékenység), ezért a %HRmax-zóna
+      "lefelé csal": ugyanaz a watt alacsonyabb pulzussal jár.
+    status: ellenorizve-doi
+
+  - key: tucker-2009-anticipatory
+    type: journal
+    authors: [Tucker R.]
+    year: 2009
+    title: "The anticipatory regulation of performance: the physiological basis for pacing strategies and the development of a perception-based model for exercise performance"
+    journal: "British Journal of Sports Medicine 43(6):392-400"
+    doi: 10.1136/bjsm.2008.050799
+    url: https://bjsm.bmj.com/content/43/6/392
+    grade: C
+    questions: [Q7]
+    summary: >-
+      Elméleti modell: önszabályozott terhelésnél az agy a különböző rendszerek jelzéseinek integrálásával
+      szabályozza az izomaktivációt, az RPE a közvetítő; hőség, hipoxia és üzemanyag-kimerülés esetén az RPE
+      "előre" emelkedik, és a tempó anticipatív módon csökken.
+    quote: >-
+      "the exercise work rate is regulated by the brain based on the integration of numerous signals from various
+      physiological systems."
+    notes: >-
+      Narratív, nem ultra-specifikus. Q7-hez a keret: az RPE a legintegráltabb jel (hő, glikogén, alvás), ezért
+      hosszú távon a "legkevésbé csaló" – kivéve, ha az alváshiány maga torzítja (martin-1981, roberts-2019).
+    status: ellenorizve-doi
+
+  - key: abbiss-2008-pacing
+    type: journal
+    authors: [Abbiss C.R., Laursen P.B.]
+    year: 2008
+    title: "Describing and Understanding Pacing Strategies during Athletic Competition"
+    journal: "Sports Medicine 38(3):239-252"
+    doi: 10.2165/00007256-200838030-00004
+    url: https://link.springer.com/article/10.2165/00007256-200838030-00004
+    grade: C
+    questions: [Q7, Q1]
+    summary: >-
+      Pacing-tipológia (negatív, all-out, pozitív, egyenletes, parabolikus, változó). >2 perces eseményeknél az
+      egyenletesebb eloszlás javíthatja az időt; >4 órás ultra-eseményekre az optimális stratégia ismerete hiányzik,
+      a jól edzettek jellemzően pozitív pacinget mutatnak (csúcssebesség után fokozatos lassulás).
+    quote: >-
+      "knowledge pertaining to optimal pacing strategies during middle-distance (1.5–2 minutes) and ultra-endurance
+      (>4 hours) events is currently lacking."
+    notes: >-
+      Narratív, 2008; az ultra-hiányt azóta esettanulmányok (knechtle-2015/2019, heidenfelder-2016) részben
+      töltötték ki, de kontrollált összehasonlítás ma sincs.
+    status: ellenorizve-doi
+
+  - key: friel-decoupling-tp
+    type: web-article
+    authors: [Friel J.]
+    credential: "Edző, a TrainingPeaks társalapítója, a 'Training Bible' sorozat szerzője"
+    year: 2026
+    title: "Aerobic Endurance and Decoupling"
+    journal: "trainingpeaks.com (eredeti 2008-10-10, frissítve 2026-06-03)"
+    doi: null
+    url: https://www.trainingpeaks.com/blog/aerobic-endurance-and-decoupling/
+    grade: C
+    questions: [Q7]
+    summary: >-
+      A Pw:Hr "aerob szétcsatolódás" mutató: egy egyenletes edzés első és második felének teljesítmény/pulzus
+      arányát hasonlítja össze. Értelmezés: <5% erős aerob állóképesség az adott intenzitáson; 5–10% mérsékelt
+      korlát vagy fáradtság; >10% az erőfeszítés valószínűleg az aerob küszöb felett volt.
+    quote: >-
+      "< 5% decoupling: Strong aerobic endurance at that intensity" ... "> 10% decoupling: The effort was likely
+      above aerobic threshold" ... "comparing the first half of a steady effort to the second half."
+    notes: >-
+      Edzői heurisztika, nem validált küszöbök; többórás/többnapos ultrán a drift természetes (hő, dehidráció,
+      alváshiány), ezért a 5%-os szabály csak edzésdiagnosztikára, nem verseny alatti tempóvezérlésre való.
+    status: url-megnyitva

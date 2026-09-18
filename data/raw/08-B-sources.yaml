@@ -1,0 +1,613 @@
+# 08. modul – Pacing és versenystratégia – B csomag (Q2: tempóstratégia ultra-távon; Q5: alvás–sebesség átváltás; Q8: energiabevitel mint tempókorlát)
+# Készült: 2026-09-18. DOI csak ott szerepel, ahol kiadói / Crossref / PubMed / Europe PMC oldalon látható volt; egyébként doi: null + notes.
+# Meglévő forrástárból (data/sources.yaml) csak HIVATKOZOTT, itt NEM újradefiniált kulcsok:
+#   hurdiel-2026-raf, kishi-2024-ultramarathon, lynch-2025-200mile, martin-2018-habits, miller-2022-empty,
+#   guilherme-2026-ultra, lahart-2013-raam, nedelec-2022-camaron, brayson-2019-tcr (08-A), ridefar-time-efficiency,
+#   hayden-sleeping-guide, ridefar-sleeping, raam-sleepcom-2022, kolbinger-euronews-2019, bikepacking-ultraguide-2019,
+#   dotwatcher-moresleep-2026, craven-2022-akut, lopes-2023-endurance, gattoni-2025-recovery
+# A 08-A csomagból (raw/08-A-sources.yaml) hivatkozott kulcsok:
+#   abbiss-2008-pacing, tucker-2009-anticipatory, heidenfelder-2016-raam-pacing, knechtle-2015-24h-road,
+#   knechtle-2019-24h-track, rothschild-2021-ultracyclist, schumacher-2011-raam, neumayr-2004-rata,
+#   hyldahl-2024-tourdivide, fesseler-2026-raam58, spragg-2023-durability, clark-2019-cp-dynamics
+# Megjegyzés: a Crossref API és az Europe PMC a munkamenet második felében 429-et adott, ezért négy forrásnál
+#   (hulton-2010, geesmann-2014, black-2012, atkinson-2007) a DOI csak repozitóriumi/tükör-oldalon volt látható -> doi: null.
+sources:
+  # ================================================================ Q2: tempóstratégia
+  - key: bossi-2017-24h-running
+    type: journal
+    authors: [Bossi A.H., Matta G.G., Millet G.Y., Lima P., Pertence L.C., de Lima J.P., Hopker J.G.]
+    year: 2017
+    title: "Pacing Strategy During 24-Hour Ultramarathon-Distance Running"
+    journal: "International Journal of Sports Physiology and Performance 12(5):590-596"
+    doi: 10.1123/ijspp.2016-0237
+    url: https://kar.kent.ac.uk/56782/1/Bossi%20et%20al%202016%20Pacing%20Strategy%20During%2024-hour%20Ultramarathon-Distance%20Running.pdf
+    grade: B
+    questions: [Q2]
+    summary: >-
+      501 futó (398 férfi, 103 nő) öt kiadás (2008–2012) 24 órás pályafutásán (Rio, 400 m-es pálya), legalább
+      19,2 óra tényleges futással. Átlag 135,6 ± 33,0 km, 22,4 ± 1,3 óra aktív idő. Fordított J-alakú tempó:
+      folyamatos lassulás a 19. óráig, kis emelkedés, majd az utolsó órában szignifikáns esés. A leggyorsabb
+      csoport (180,5 km) alacsonyabb relatív rajtintenzitással és egyenletesebben futott, a leglassabb (97,2 km)
+      gyorsabban indult és jobban ingadozott. Az első 2 óra normalizált sebessége és az összes távolság között
+      r = -0,58 (p < 0,001), az utolsó 2 óráé nem korrelált (r = 0,03).
+    quote: >-
+      "an inverse moderate correlation was found between total running distance and normalised mean running
+      speed in the first 2 h" ... "the fastest runners start at lower relative intensities and display a more
+      even pacing strategy than slower runners."
+    notes: >-
+      Futás, 24 órás formátum – a 24 órás kerékpáros versenyekre a legközelebbi analógia (időlimit, kör,
+      folyamatos). A "túl gyors rajt ára" itt a saját átlaghoz viszonyított rajtsebesség: aki a saját átlagához
+      képest gyorsan kezd, kevesebbet tesz meg. Megfigyeléses (nem randomizált) – a jobb futó okos rajtja
+      lehet a tapasztalat következménye is. Kent-repozitóriumi szerzői PDF, DOI a Crossref-en ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: inoue-2019-24h-pacing
+    type: journal
+    authors: [Inoue A., Santos T.M., Hettinga F.J., Alves D.S., Viana B.F., Terra B.S., Pires F.O.]
+    year: 2019
+    title: "The Impact of Sex and Performance Level on Pacing Behavior in a 24-h Ultramarathon"
+    journal: "Frontiers in Sports and Active Living 1:57"
+    doi: 10.3389/fspor.2019.00057
+    url: https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2019.00057/full
+    grade: B
+    questions: [Q2]
+    summary: >-
+      51 futó (30 férfi, 21 nő), 24 órás pályafutás (Rio). Sebesség: kezdeti szakasz 9,5 ± 1,5 km/h, középső
+      6,2 ± 1,4, záró 6,5 ± 1,4 km/h. A sebesség variációs együtthatója (CV) a jó teljesítményű férfiaknál
+      21,5 ± 4,8%, a gyengébbeknél 27,2 ± 3,0%. Az összes távolság fordítottan korrelált a jelentős
+      sebességcsökkenések (SSR) számával és a CV-vel (férfiak: r = -0,47 és -0,64; nők: -0,61 és -0,47).
+    quote: >-
+      "Total distance was inversely correlated with the number of SSR and speed CV in male (r= -0.47 and r= -0.64,
+      respectively) and female (r= -0.61 and r= -0.47, respectively)."
+    notes: >-
+      Futás; a "sebesség-ingadozás = távolságveszteség" tétel legtisztább számszerűsítése 24 órás keretben.
+      Az SSR (jelentős sebességcsökkenés) fogalma a kerékpáros megállások/lassulások elemzésére átvihető.
+      Kis minta (n=51), egy kiadás. Nyílt hozzáférés, teljes szöveg.
+    status: ellenorizve-doi
+
+  - key: deusch-2021-timelimited
+    type: journal
+    authors: [Deusch H., Nikolaidis P.T., Alvero-Cruz J.R., Rosemann T., Knechtle B.]
+    year: 2021
+    title: "Pacing in Time-Limited Ultramarathons from 6 to 24 Hours—The Aspects of Age, Sex and Performance Level"
+    journal: "Sustainability 13(5):2705"
+    doi: 10.3390/su13052705
+    url: https://www.mdpi.com/2071-1050/13/5/2705
+    grade: B
+    questions: [Q2]
+    summary: >-
+      937 befutó (677 férfi, 260 nő; 48,6 ± 11,8 év) 6, 12 és 24 órás időlimites futóversenyeken (Svájc, Románia,
+      Görögország, 2009–2018). A tempó variációs együtthatója a táv hosszával nő: 6 h CV = 0,120 ± 0,062;
+      12 h 0,176 ± 0,070; 24 h 0,218 ± 0,186. A gyorsabb futók egyenletesebbek: 12 h-n r = -0,64 (nők) és -0,49
+      (férfiak), 24 h-n r = -0,47 (p < 0,001).
+    quote: >-
+      "The faster running speed in the 12 h (women, r = -0.64; men, r = -0.49, p < 0.001)...was related to less
+      variable pacing." ... "the finishers in the 24 h showed the most variable pacing."
+    notes: >-
+      Futás, nagy minta, több verseny – a "hosszabb táv = nagyobb tempó-ingadozás" trend a kerékpáros 6–24 órás
+      versenyekre analógiaként vihető át (ott a megállások, éjszaka, hőmérséklet is növeli a CV-t). A folyóirat
+      (Sustainability) nem sporttudományi profilú – a szerzőcsoport (Knechtle/Nikolaidis) viszont az ultra-pacing
+      irodalom fő forrása. Nyílt hozzáférés.
+    status: ellenorizve-doi
+
+  - key: renfree-2016-100km
+    type: journal
+    authors: [Renfree A., Crivoi do Carmo E., Martin L.]
+    year: 2016
+    title: "The influence of performance level, age and gender on pacing strategy during a 100-km ultramarathon"
+    journal: "European Journal of Sport Science 16 (online 2015)"
+    doi: 10.1080/17461391.2015.1041061
+    url: https://api.crossref.org/works/10.1080/17461391.2015.1041061
+    grade: B
+    questions: [Q2]
+    summary: >-
+      100 km-es IAU világbajnokság (masters) 10 km-es szakaszidői. A legjobb teljesítménycsoport az első három
+      10 km-es szakaszon szignifikánsan alacsonyabb RELATÍV sebességgel futott, mint az összes többi csoport, a
+      verseny későbbi részén viszont magasabbal. A mintázat korcsoportonként belül is megismétlődött; a nők
+      alacsonyabb rajt- és magasabb befejező relatív sebességgel futottak, mint a férfiak.
+    quote: >-
+      "significantly lower relative speeds than all other groups in the first three 10-km segments" ...
+      "significantly higher relative speeds than" lower-performing groups later in the race.
+    notes: >-
+      Absztraktból (Crossref-metaadat; a Wiley/T&F kiadói oldal nem nyílt meg), a százalékos értékek nem
+      elérhetők. Futás; a kulcsüzenet – a legjobbak a SAJÁT átlagukhoz képest konzervatívan kezdenek – a
+      kerékpáros ultrákra (RAAM/24 h) átvihető elv, de a heidenfelder-2016-raam-pacing adat épp ellentétes
+      abszolút képet mutat (a RAAM top 3 gyorsabban rajtol). Relatív vs. abszolút rajtsebesség különbségét
+      a tananyagban külön kell választani.
+    status: ellenorizve-doi
+
+  - key: lambert-2004-100km
+    type: journal
+    authors: [Lambert M.I., Dugas J.P., Kirkman M.C., Mokone G.G., Waldeck M.R.]
+    year: 2004
+    title: "Changes in Running Speeds in a 100 KM Ultra-Marathon Race"
+    journal: "Journal of Sports Science and Medicine 3(3):167-173"
+    doi: null
+    url: https://www.jssm.org/hf.php?id=jssm-03-167.xml
+    grade: B
+    questions: [Q2]
+    summary: >-
+      67 futó hét csoportban (A: leggyorsabb, átlag 6:36:58; G: leglassabb, 10:02:04) egy 100 km-es versenyen.
+      Az A csoport a teljes távot a kezdősebesség 15%-án belül futotta, és kb. 50 km-ig tartotta a kezdő
+      tempót; a G csoportnál az első és utolsó 10 km közti sebességváltozás 1,4 ± 0,7 m/s volt, az A csoportnál
+      0,5 ± 0,2 m/s. A lassulás mértéke a teljesítményszinttel arányosan nő.
+    quote: >-
+      "Runners who finished in group A completed the entire race at running speeds within 15% of their initial
+      starting speed" ... "Slower runners showed the greatest change in mean speed from 0-10 km vs. 90-100 km
+      (group G; 1.4 ± 0.7 m·s-1)".
+    notes: >-
+      Klasszikus alapmunka (2004), kis minta, egy verseny, futás. DOI a JSSM oldalán nincs feltüntetve –
+      "DOI nem ellenőrizve". A "15%-on belüli" sáv a kerékpáros tervezésben mint a jó tempóelosztás durva
+      mércéje használható (analógia). Nyílt hozzáférés.
+    status: url-megnyitva
+
+  - key: knechtle-2022-spartathlon
+    type: journal
+    authors: [Knechtle B., Cuk I., Villiger E., Nikolaidis P.T., Weiss K., Scheer V., Thuany M.]
+    year: 2022
+    title: "The Effects of Sex, Age and Performance Level on Pacing in Ultra-Marathon Runners in the 'Spartathlon'"
+    journal: "Sports Medicine – Open 8"
+    doi: 10.1186/s40798-022-00452-9
+    url: https://link.springer.com/article/10.1186/s40798-022-00452-9
+    grade: B
+    questions: [Q2]
+    summary: >-
+      2598 futó (2255 férfi, 343 nő) a 246 km-es Spartathlonon 2011–2019 között, 10 ellenőrzőpont. Nők és
+      férfiak egyaránt lassultak az első 7 ellenőrzőpontig, majd a cél felé gyorsítottak (fordított J). A
+      leglassabb ÉS a leggyorsabb csoport kisebb sebességváltozást mutatott, mint a két középső csoport
+      (p < 0,01); a férfiak az 1–2. ellenőrzőponton, a nők az utolsón változtattak nagyobbat. Az életkornak
+      nem volt szignifikáns hatása.
+    quote: >-
+      "The slowest and the fastest runners showed a more minor change in ACCS than the two medium groups of both
+      men and women (p < 0.01)."
+    notes: >-
+      Futás, a legnagyobb minta az ultra-pacing irodalomban; a "gyorsabb = egyenletesebb" lineáris kép
+      itt NEM igazolódik (U-alak: a leglassabbak is egyenletesek, mert eleve az időlimithez igazodnak).
+      A Spartathlon szigorú részidő-limitjei (cut-off) torzítják a mezőny alját. Nyílt hozzáférés.
+    status: ellenorizve-doi
+
+  - key: atkinson-2007-variable-power
+    type: journal
+    authors: [Atkinson G., Peacock O., Passfield L.]
+    year: 2007
+    title: "Variable versus constant power strategies during cycling time-trials: prediction of time savings using an up-to-date mathematical model"
+    journal: "Journal of Sports Sciences 25(9):1001-1009"
+    doi: null
+    url: https://researchportal.bath.ac.uk/en/publications/variable-versus-constant-power-strategies-during-cycling-time-tri
+    grade: A
+    questions: [Q2]
+    summary: >-
+      Matematikai modell (70 kg-os kerékpáros) három forgatókönyvre: a lejtővel/széllel párhuzamosan ±10%-kal
+      változtatott teljesítmény azonos átlagteljesítmény mellett 126 s-ot takarít meg dombos (±10% lejtő),
+      51 s-ot szeles (±4,4 m/s) és 26 s-ot sík 40 km-es időfutamon a konstans teljesítményhez képest. A
+      szerzők szerint nyitott kérdés, hogy a versenyző elviseli-e a teljesítmény-ingadozást.
+    quote: >-
+      "time savings are possible in cycling time-trials if the rider varies power in parallel with hill gradient
+      and wind direction."
+    notes: >-
+      Kerékpár, de rövid (40 km) időfutam-modell, nem ultra: a "változó teljesítmény = egyenletes sebesség"
+      elv fizikai alapja (a légellenállás sebességköbös), a haszon ultrán is fennáll, de a ±10% W-ingadozás
+      költsége (glikogén, izomkár) sokórás terhelésnél nem modellezett. DOI (10.1080/02640410600944709) csak
+      a Bath-repozitóriumi oldalon látva – a Crossref 429 miatt "DOI nem ellenőrizve".
+    status: url-megnyitva
+
+  - key: dekoning-2011-hazard
+    type: journal
+    authors: [de Koning J.J., Foster C., Bakkum A., Kloppenburg S., Thiel C., Joseph T., Cohen J., Porcari J.P.]
+    year: 2011
+    title: "Regulation of Pacing Strategy during Athletic Competition"
+    journal: "PLoS ONE 6(1):e15863"
+    doi: 10.1371/journal.pone.0015863
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0015863
+    grade: A
+    questions: [Q2]
+    summary: >-
+      Laboratóriumi szimulált versenyek alapján a "Hazard Score" = pillanatnyi RPE × hátralévő távolság-hányad.
+      1,5 alatt a versenyzők gyorsítanak, 1–3 között tartják a sebességet, 3 fölött lassítanak. A modell a
+      tempóváltoztatás valószínűségét írja le, nem az optimális stratégiát.
+    quote: >-
+      "There was a significant likelihood that the change in velocity would be positive (acceleration) when the
+      Hazard Score was less than 1.5, negative when the Hazard Score was greater than 3 and unchanged when the
+      Hazard Score was between 1–3."
+    notes: >-
+      Rövid laborfutamok (percek–1 óra), nem ultra; a keret (RPE × hátralévő rész) az ultrán is használható
+      önellenőrző szabály: ha a verseny elején (hátralévő hányad ~1) az RPE már 3 fölött van, a lassulás
+      elkerülhetetlen. Elméleti alap az abbiss-2008-pacing és tucker-2009-anticipatory mellé. Nyílt hozzáférés.
+    status: ellenorizve-doi
+
+  - key: mckenzie-dotwatcher-tcr-2026
+    type: web-article
+    authors: [McKenzie C.]
+    credential: "DotWatcher.cc elemző-kommentátor (Substack: DotWatcher), tracking-adatokból dolgozik"
+    year: 2026
+    title: "What Seven Days of Transcontinental Has Revealed"
+    journal: "DotWatcher Substack, 2026-07-27"
+    doi: null
+    url: https://dotwatcher.substack.com/p/seven-days-of-transcontinental2026
+    grade: C
+    questions: [Q2, Q5]
+    summary: >-
+      TCR No12 (2026) első hét napja a nyomkövető-adatokból: Robin Gemperle 3422,9 km (≈489 km/nap), becsült
+      mozgósebesség 25,97 km/h; Nicolas Chatelet 3403 km, 26,21 km/h. A második helyezett mozgósebessége
+      magasabb, de Gemperle kb. két órával többet volt mozgásban, és a vezetést a versenyidő 87,3%-ában tartotta.
+      Napi ingadozás: a 4. napon Gemperle 184,8 km-rel, a 7. napon Chatelet 103,6 km-rel tett meg többet.
+    quote: >-
+      "Nicolas's estimated moving speed was marginally higher – 26.21 km/h compared with Robin's 25.97 km/h – but
+      Robin spent almost two additional hours moving."
+    notes: >-
+      Nem lektorált, tracker-alapú becslés (a mozgósebesség a pontok közti időből számolt, a rövid megállásokat
+      is tartalmazhatja). A legfontosabb üzenet Q5-höz: az élen a különbséget nem a sebesség, hanem a
+      mozgásidő (≈2 óra ≈ 50 km) adja – ez a ridefar-time-efficiency "moving percentage" modelljének
+      terepi illusztrációja. Az alvásmennyiséget a cikk nem adja meg.
+    status: url-megnyitva
+
+  - key: cyclecharts-pbp-2023
+    type: dataset
+    authors: [Cycling Charts (cyclecharts.uk)]
+    credential: "Brit audax-adatelemző oldal; a PBP 2023 ellenőrzőpont-érkezési idők (≈6400 induló) elemzése"
+    year: 2023
+    title: "Cycling Charts – PBP 2023"
+    journal: "cyclecharts.uk"
+    doi: null
+    url: https://www.cyclecharts.uk/pbp-2023
+    grade: C
+    questions: [Q2, Q5]
+    summary: >-
+      A 2023-as Paris–Brest–Paris (6430 induló, 66 ország, 80/84/90 órás limit, 30 °C feletti hőség) ellenőrzőpont-
+      idői alapján: a 84 és 90 órás csoportban az időn belül célba érők 1. szakaszos medián sebessége magasabb,
+      mint a DNF/időn túli csoporté. A befutók 14%-a, a DNF/OTL-esek 43%-a NEM rögzített 3 óránál hosszabb
+      megállást; a befutók többsége egy hosszú (alvó)megállót iktatott be, és messzebb jutott, mielőtt megtette.
+    quote: >-
+      "a much higher percentage of DNF/OTL riders do not record any long stops (43%, vs 14% for riders who finished
+      successfully)."
+    notes: >-
+      Nem lektorált, kontroll-érkezési időkből (nem brevet-kártyából) számolt; kb. 300 hiányos rekord. Fontos
+      ellenpont a "túl gyors rajt" tételhez: brevet-mezőnyben a gyors első szakasz a befejezéssel járt együtt
+      (a lassú rajt itt inkább a gyengébb felkészültség jele). Q5: a 3 óránál hosszabb megállás hiánya
+      DNF-fel társult – ok-okozat nem bizonyított (aki bajban van, nem áll meg aludni, vagy kiszáll, mielőtt
+      aludna). Szakaszonkénti km/h-lecsengést az oldal nem közöl számmal.
+    status: url-megnyitva
+
+  - key: storbeck-2019-pbp-speeds
+    type: web-article
+    authors: [Storbeck O.]
+    credential: "Cycling Intelligence blog szerzője, randonneur (PBP 2015, 2019 befutó), újságíró"
+    year: 2019
+    title: "Why don't seven decades of cycling innovation show up in PBP speeds?"
+    journal: "cycling-intelligence.com, 2019-12-30"
+    doi: null
+    url: https://cycling-intelligence.com/2019/12/30/why-dont-seven-decades-of-cycling-innovation-show-up-in-pbp-speeds/
+    grade: C
+    questions: [Q2, Q5]
+    summary: >-
+      PBP-átlagidők: 1948-ban 78:37 óra (15,6 km/h átlag), 1975-ben 73:10 (16,0 km/h, leggyorsabb év),
+      2019-ben ~78 óra (15,3 km/h); a leggyorsabbak 1948-ban 51:15 (23,4 km/h), 1966-ban 44:21, 2015-ben 42:26
+      (rekord). A szerző tézise: a bruttó sebességet nem az anyag, hanem a megállási/alvási idő és a mezőny
+      összetétele határozza meg; 1 kg tömegcsökkentés kb. napi 3 percet ér.
+    quote: >-
+      "In 1948, long before Di2, hub dynamos and tubeless tyres with low rolling resistance were invented, the
+      average rider came around in 78:37 hours, an average speed of 15.6 kph."
+    notes: >-
+      Nem lektorált, hivatalos eredménylistákból számolt átlagok. A 1200 km-es brevet bruttó sebessége (15–16 km/h)
+      vs. a gyorsak 23–28 km/h-ja a mozgásidő-hányad szerepét illusztrálja; kontrollonkénti sebesség-lecsengést
+      nem közöl. A "3 perc/nap/kg" a szerző (és forrása, Chris White) becslése, nem mérés.
+    status: url-megnyitva
+
+  - key: homer-bikepacking-tourdivide-2026
+    type: web-article
+    authors: [Homer J.]
+    credential: "BIKEPACKING.com versenytudósító, Tour Divide-befutó és ultra-bikepacking szerző"
+    year: 2026
+    title: "2026 Tour Divide Day 5: Slowing Down"
+    journal: "BIKEPACKING.com, 2026-06-17"
+    doi: null
+    url: https://bikepacking.com/news/2026-tour-divide-day-5/
+    grade: C
+    questions: [Q2, Q5]
+    summary: >-
+      Tour Divide 2026, 5. nap: az éllovas Victor Bosoni egyetlen napon 438 km-t (272,2 mérföld) tett meg 4573 m
+      szinttel 16 óra 27 perc alatt, majd 6 óránál hosszabb megállót tartott; a mezőny többi részét sérülések
+      (térd, esés), légúti panaszok és mentális fáradtság lassították. A második helyezett több mint 160 mérfölddel
+      hátrébb; a női éllovas 90 mérfölddel a saját rekordidejének megfelelő pont előtt.
+    quote: >-
+      "272.2 miles (438 kilometers) with 15,003 feet (4,573 meters) of climbing for 16 hours and 27 minutes"
+    notes: >-
+      Riport, tracker-adatból; nem elemzés. A 438 km/16,5 óra ≈ 26,6 km/h mozgósebesség murvás terepen és a
+      >6 órás pihenő együtt a "nagy napi táv + rendes alvás" stratégia példája (vs. alvásminimalizálás).
+      A "lassulás" a címben a mezőnyre, nem az éllovasra vonatkozik. Napi lecsengés-adatsort nem ad.
+    status: url-megnyitva
+
+  - key: halfwayanywhere-tourdivide-2024
+    type: web-article
+    authors: [Halfway Anywhere (Mac)]
+    credential: "Túrázó/bikepacker blogger, saját 2024-es Tour Divide-adatait (GPS, napi bontás) publikálja"
+    year: 2024
+    title: "Tour Divide Bikepacking Data and Stats"
+    journal: "halfwayanywhere.com, 2024-09-16"
+    doi: null
+    url: https://www.halfwayanywhere.com/bikepacking/tour-divide/tour-divide-bikepacking-data-stats/
+    grade: C
+    questions: [Q5]
+    summary: >-
+      Egy középmezőnyös befutó (19 nap 17 óra 18 perc, 4262 km, 53 206 m szint) napi bontása: átlag 221,2 km/nap,
+      14 óra 49 perc tekerés naponta 18 óra 12 perc eltelt versenyidőből (≈81% mozgáshányad az ébren töltött időre,
+      ≈62% a 24 órára), átlagos rajt 6:21. Ugyanazon a pályán a 2023-as győztes ≈305 km/nap.
+    quote: >-
+      "Average Daily Distance: 137.44 mi / 221.19 km" ... "Total Time: 19 days, 17 hours, 18 minutes"
+    notes: >-
+      n=1, nem lektorált, saját adat. Haszna a számpélda: a napi ~5,8 óra "nem versenyidő" (alvás+táborozás) és a
+      15 km/h-s mozgósebesség együtt adja a 221 km-t; ugyanennyi mozgásidővel 20 km/h-nál ~300 km/nap lenne –
+      vagyis középmezőnyben a sebesség, az élen a mozgásidő a fő változó. Alvásórát nem közöl.
+    status: url-megnyitva
+
+  # ================================================================ Q5: alvás–sebesség
+  - key: poussel-2015-utmb-sleep
+    type: journal
+    authors: [Poussel M., Laroppe J., Hurdiel R., Girard J., Poletti L., Thil C., Didelot A., Chenuel B.]
+    year: 2015
+    title: "Sleep Management Strategy and Performance in an Extreme Mountain Ultra-marathon"
+    journal: "Research in Sports Medicine 23(3)"
+    doi: 10.1080/15438627.2015.1040916
+    url: https://api.crossref.org/works/10.1080/15438627.2015.1040916
+    grade: B
+    questions: [Q5]
+    summary: >-
+      UTMB 2013 (168 km) futóinak kérdőíves alvásstratégia-vizsgálata. Minden futó alkalmazott verseny előtti
+      alvásstratégiát; a többség nem aludt a verseny alatt, és a nem alvók gyorsabbak voltak az alvóknál. Akik
+      a verseny előtti éjszakán MEGNÖVELTÉK az alvásidőt, gyorsabban értek célba, mint akik "alvásmegvonásra
+      edzettek" (p = 0,026).
+    quote: >-
+      "ultramarathon runners who adopted increased sleep time the night before the UTMB completed the race faster
+      than those who trained for sleep deprivation (p = 0.026)." [Kishi 2024 idézi]
+    notes: >-
+      A kiadói absztrakt (T&F 403, PubMed CAPTCHA) nem nyílt meg – a számok MÁSODLAGOS forrásból (kishi-2024-ultramarathon
+      és a Nikolaidis 2023 Frontiers Neurology áttekintés) származnak; n és a pontos alvásidők nem ellenőrizve.
+      DOI a Crossref-en látva. Egyéjszakás (<48 h) futóverseny: a "nem alvó gyorsabb" itt a keresztmetszeti
+      konfundálás (a gyors nem ér rá aludni), az alvásnyújtás hatása viszont stratégiai szintű, kerékpárra
+      átvihető. Ellentmond lynch-2025-200mile "kevesebb verseny előtti alvás = jobb" leletének.
+    status: ellenorizve-doi
+
+  - key: bianchi-2022-200mile-case
+    type: journal
+    authors: [Bianchi D., Miller D.J., Lastella M.]
+    year: 2022
+    title: "Sleep–Wake Behaviour of 200-Mile Ultra-Marathon Competitors: A Case Study"
+    journal: "International Journal of Environmental Research and Public Health 19(5):3006"
+    doi: 10.3390/ijerph19053006
+    url: https://www.mdpi.com/1660-4601/19/5/3006
+    grade: B
+    questions: [Q5]
+    summary: >-
+      4 futó (2 nő; 45,5 ± 3,1 év) a 326 km-es Irrational S.O.U.T.H. versenyen (Dél-Ausztrália), aktigráfiával.
+      Befutóidő 82,5 ± 7,1 óra (73,6–88,5). Verseny alatti alvás 4,7 ± 3,0 óra, 4,8 ± 2,4 epizódban, átlag
+      59,9 ± 49,2 perces alvásokkal; a gyorsabb futók 1,8 órát, a lassabbak 9,0 órát aludtak. Verseny előtti
+      alvás 6,0 ± 1,3, utáni 6,3 ± 1,3 óra/éjszaka.
+    quote: >-
+      "Faster runners recorded less sleep than slower runners (1.8 h vs. 9.0 h) during the race" ... "runners
+      obtained 4.7 ± 3.0 h of sleep from 4.8 ± 2.4 sleep episodes".
+    notes: >-
+      n=4, esettanulmány, futás; objektív (aktigráf) mérés. A 7,2 órás alváskülönbség és a ~15 órás
+      befutóidő-különbség (73,6 vs. 88,5 h) aránya durván 1 óra alvás ≈ 2 óra versenyidő – de ez keresztmetszeti,
+      nem oksági (a lassabb futó tovább van pályán, ezért többet alszik). A tananyagban csak a mintázatra
+      (kevés, ~1 órás blokkok, éjszaka) használható.
+    status: ellenorizve-doi
+
+  # ================================================================ Q8: energiabevitel mint tempókorlát
+  - key: thurber-2019-alimentary
+    type: journal
+    authors: [Thurber C., Dugas L.R., Ocobock C., Carlson B., Speakman J.R., Pontzer H.]
+    year: 2019
+    title: "Extreme events reveal an alimentary limit on sustained maximal human energy expenditure"
+    journal: "Science Advances 5(6):eaaw0341"
+    doi: 10.1126/sciadv.aaw0341
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC6551185/
+    grade: B
+    questions: [Q8]
+    summary: >-
+      Race Across USA (140 napos transzkontinentális futás) résztvevőinél kettős jelölt vízzel mért teljes energiaforgalom:
+      1. hét 6202 ± 881 kcal/nap (3,76× BMR), utolsó hét 4906 ± 864 kcal/nap (2,81× BMR), 140 napos átlag
+      3,11× BMR. Más extrém események metaelemzésével: a fenntartható energiaBEVITEL kb. 2,36 ± 0,59× BMR,
+      az esemény hosszától független; a 2,5× BMR fölötti forgalmat a test raktárainak leépítése fedezi. A Tour
+      de France 4–5× BMR-je csak 23 napig tartható.
+    quote: >-
+      "sustained energy intake was similar across studies (2.36 ± 0.59× BMR) and independent of event duration"
+      ... "The increment of expenditure above 2.5× BMR generally rely on drawing down energy stores".
+    notes: >-
+      Futás + kerékpár (TdF) + sarki expedíció adatok; a "metabolikus plafon" nem izom-, hanem bél/felszívódási
+      korlát. Ultrakerékpárra: 1–2 hetes versenyen 4–5× BMR forgalom mellett napi 2000–4000 kcal deficit
+      strukturális, ezért a testtömeg-veszteség és a teljesítménycsökkenés tervezendő, nem hiba. A RAUSA-minta
+      kicsi. PMC teljes szöveg, DOI a PMC-oldalon.
+    status: ellenorizve-doi
+
+  - key: hulton-2010-raam-energy
+    type: journal
+    authors: [Hulton C.L., Lahart I., Williams K.L., Godfrey R., Charlesworth S., Wilson M., Pedlar C., Whyte G.]
+    year: 2010
+    title: "Energy expenditure in the Race Across America (RAAM)"
+    journal: "International Journal of Sports Medicine 31(7):463-467"
+    doi: null
+    url: https://www.academia.edu/29554920/Energy_expenditure_in_the_Race_Across_America_RAAM_
+    grade: B
+    questions: [Q8]
+    summary: >-
+      4 fős RAAM-váltó (37 ± 4 év, 80,8 ± 6,6 kg), 6 nap 10 óra 51 perc, kettős jelölt vízzel mért energiaforgalom.
+      Teljes forgalom 43 401 kcal (6420 kcal/nap; az absztrakt-tükör nem mondja ki, hogy versenyzőnként), bevitel 29 506 kcal (4918 kcal/nap), deficit
+      13 878 kcal, azaz 1503 kcal/nap – váltóban, ahol a versenyzők idejük ~3/4-ét nem a nyeregben töltik.
+    quote: >-
+      Total energy expenditure "43,401 kcals" ... mean daily intake "4,918 kcals" ... mean daily deficit
+      "1,503 kcals" [absztrakt, academia.edu-tükör].
+    notes: >-
+      Ugyanaz a csapat, mint lahart-2013-raam. Absztraktból, academia.edu-tükrön; a Thieme kiadói oldal 403,
+      Crossref 429 – DOI (10.1055/s-0030-1251992) nem ellenőrizve. Váltó, nem szóló; szólóban a forgalom
+      napi 8–10 ezer kcal is lehet (Knechtle 2005 RAAM-esetleírás nem nyílt meg). A napi 1500 kcal deficit
+      váltóban is a "nem tudsz annyit enni, mint amennyit elégetsz" tétel terepi bizonyítéka.
+    status: url-megnyitva
+
+  - key: geesmann-2014-1230km
+    type: journal
+    authors: [Geesmann B., Mester J., Koehler K.]
+    year: 2014
+    title: "Energy Balance, Macronutrient Intake, and Hydration Status During a 1,230 km Ultra-Endurance Bike Marathon"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 24(5):497"
+    doi: null
+    url: https://fis.dshs-koeln.de/de/publications/energy-balance-macronutrient-intake-and-hydration-status-during-a/
+    grade: B
+    questions: [Q8]
+    summary: >-
+      14 jól edzett kerékpáros egy 1230 km-es nonstop országúti ultrán (≈42 óra 47 perc). Bevitel 19 749 ± 4502 kcal,
+      forgalom 25 303 ± 2436 kcal (≈-5500 kcal deficit, ≈-3100 kcal/nap); szénhidrát 57,1 ± 17,7 g/óra, ami 618 km
+      után szignifikánsan csökkent; folyadék 392 ± 85 ml/óra, a második félben szintén esett. A hidratáltság a
+      rajtnál szuboptimális, de a verseny alatt stabil.
+    quote: >-
+      "57.1 ± 17.7 g/hr" carbohydrate ... "participants failed to maintain in energy balance" [absztrakt].
+    notes: >-
+      Absztraktból (DSHS Köln repozitórium); kiadói oldal 403, Crossref 429 – DOI (10.1123/ijsnem.2013-0169)
+      nem ellenőrizve. Kerékpáros, csoportos (n=14), ~43 órás – a leginkább "tankönyvi" ultrakerékpáros
+      energiaadat: a 57 g/h CHO a 90 g/h ajánlás 2/3-a, és a második félben tovább esik (étvágy, GI, éjszaka).
+    status: url-megnyitva
+
+  - key: black-2012-384km
+    type: journal
+    authors: [Black K.E., Skidmore P.M.L., Brown R.C.]
+    year: 2012
+    title: "Energy Intakes of Ultraendurance Cyclists During Competition, an Observational Study"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 22(1):19"
+    doi: null
+    url: https://www.academia.edu/120385802/Energy_Intakes_of_Ultraendurance_Cyclists_During_Competition_an_Observational_Study
+    grade: B
+    questions: [Q8]
+    summary: >-
+      18 kerékpáros egy 384 km-es versenyen (átlag 16 óra 21 perc). Energiabevitel 18,7 MJ (≈4470 kcal) a becsült
+      25,5 MJ (≈6100 kcal) igénnyel szemben; szénhidrát 52 g/óra, zsír 15,8 g/óra, fehérje 2,9 g/óra. A magasabb
+      energiabevitel rövidebb versenyidővel járt (p = 0,023, r² = 0,283); a CHO- és zsírbevitel is fordítottan
+      korrelált az idővel, a fehérje nem.
+    quote: >-
+      "There was a significant negative relationship between energy intake and time taken to complete the race
+      (p = .023, r2 = -.283)." [absztrakt]
+    notes: >-
+      Absztraktból, academia.edu-tükrön; DOI (10.1123/ijsnem.22.1.19) nem ellenőrizve. Megfigyeléses: a "többet
+      evő gyorsabb" lehet fordított is (aki bírja a tempót, tud enni). 16 órás, egynapos verseny – a 03 modul
+      "energiabevitel mint tempókorlát" tételének legközvetlenebb kerékpáros terepi adata.
+    status: url-megnyitva
+
+  - key: purcell-2025-canada
+    type: journal
+    authors: [Purcell S.A., Melanson E.L., Creasy S.A., Barros M., Ramage S., Craven S.A., Prado C.M.]
+    year: 2025
+    title: "Energy balance in cyclists on plant-based diets during a 30-day, 4300-km ride across Canada: Two case studies"
+    journal: "Physiological Reports"
+    doi: 10.14814/phy2.70629
+    url: https://api.crossref.org/works/10.14814/phy2.70629
+    grade: B
+    questions: [Q8]
+    summary: >-
+      Két hobbikerékpáros (férfi 41, nő 38 év) 30 napos, 4300 km-es kanadai átkelése, kettős jelölt víz az első és
+      utolsó héten. Napi táv 154,8 ± 24,0 km az elején, 118,2 ± 25,3 km a végén. A fizikai aktivitási szint (PAL =
+      TEE/BMR) végig 3,71–4,11 (nő) és 3,76–3,94 (férfi); testtömeg stabil, a férfinál -2,3 kg zsír, +1,4 kg
+      zsírmentes tömeg; energiabevitel +421 (nő) és +761 kcal/nap (férfi) a kiindulóhoz képest.
+    quote: >-
+      "Cyclists averaged 154.8±24.0 km/day early and 118.2±25.3 km/day late in the ride." ... "PAL remained high
+      (female: 3.71–4.11; male: 3.76–3.94)."
+    notes: >-
+      Absztraktból (Crossref-metaadat; Wiley 403), n=2, nem verseny (túra, napi ~6–8 óra nyeregidő). Ellenpont
+      a thurber-2019 2,5× BMR bevitelplafonhoz: 30 napon át ~3,8× BMR forgalom mellett stabil testtömeg –
+      ha a nap többi része (≈16 óra) evésre és emésztésre rendelkezésre áll. Verseny-tempójú (16+ óra nyereg)
+      napokra nem vihető át.
+    status: ellenorizve-doi
+
+  - key: jeukendrup-2014-personalized
+    type: journal
+    authors: [Jeukendrup A.]
+    year: 2014
+    title: "A Step Towards Personalized Sports Nutrition: Carbohydrate Intake During Exercise"
+    journal: "Sports Medicine 44 (Suppl 1)"
+    doi: 10.1007/s40279-014-0148-z
+    url: https://link.springer.com/article/10.1007/s40279-014-0148-z
+    grade: C
+    questions: [Q8]
+    summary: >-
+      Narratív áttekintés, az időtartam-alapú ajánlás alapja: ~1 óráig szájöblítés/kis mennyiség, 2–3 óráig
+      ~60 g/óra egyetlen szénhidrátforrásból, 2,5 óra fölött ~90 g/óra több transzporteres (glükóz+fruktóz)
+      keverékből. Exogén CHO-oxidáció csúcsa glükóz-fruktóz keverékkel ~1,26 g/perc (≈75 g/óra); az ajánlás
+      testtömegtől és edzettségtől független; a bél edzhető (magas CHO-diéta után magasabb exogén oxidáció).
+    quote: >-
+      "A single carbohydrate source can be oxidized at rates up to approximately 60 g/h and this is the
+      recommendation for exercise that is more prolonged (2–3 h)." ... "Carbohydrate intake advice is independent
+      of body weight as well as training status."
+    notes: >-
+      Nem ultra-specifikus (2,5 óra fölött egy kategória); az ultrán a 90 g/h a gyakorlatban ritkán tartható
+      (geesmann-2014: 57 g/h; black-2012: 52 g/h). A "bélrendszer edzése" tételt itt csak röviden említi.
+      Nyílt hozzáférés.
+    status: ellenorizve-doi
+
+  - key: podlogar-2022-newhorizons
+    type: journal
+    authors: [Podlogar T., Wallis G.A.]
+    year: 2022
+    title: "New Horizons in Carbohydrate Research and Application for Endurance Athletes"
+    journal: "Sports Medicine 52 (Suppl 1)"
+    doi: 10.1007/s40279-022-01757-1
+    url: https://link.springer.com/article/10.1007/s40279-022-01757-1
+    grade: C
+    questions: [Q8]
+    summary: >-
+      Narratív áttekintés a 2022-es állásról: 120 g/óra glükóz-fruktóz/maltodextrin bevitellel az exogén
+      CHO-oxidáció tovább nő a 90 g/órához képest, az endogén (glikogén) oxidáció nem változik; a
+      teljesítményelőny a 90 g/óra fölött viszont bizonytalan. Egyetlen (glükóz-alapú) forrásból az exogén
+      oxidáció 1–1,1 g/percen tetőzik, akárhány grammot viszünk be.
+    quote: >-
+      "increased exogenous but unaltered endogenous carbohydrate oxidation with combined fructose-maltodextrin
+      ingested at 120 g h−1 versus 90 g h−1" ... "Exogenous carbohydrate oxidation rates peak at 1–1.1 g·min−1,
+      even if the ingestion rate is higher".
+    notes: >-
+      Az adatok 2–3 órás laborvizsgálatokból (jól edzett kerékpárosok); ultrán (6+ óra, több nap) 120 g/h
+      fenntarthatóságáról nincs adat. A 03 modulra utal; itt csak a "felső korlát" számai kellenek.
+    status: ellenorizve-doi
+
+  - key: maunder-2018-mfo
+    type: journal
+    authors: [Maunder E., Plews D.J., Kilding A.E.]
+    year: 2018
+    title: "Contextualising Maximal Fat Oxidation During Exercise: Determinants and Normative Values"
+    journal: "Frontiers in Physiology 9:599"
+    doi: 10.3389/fphys.2018.00599
+    url: https://www.frontiersin.org/articles/10.3389/fphys.2018.00599/full
+    grade: B
+    questions: [Q8]
+    summary: >-
+      Normatív értékek: edzett állóképességi sportolóknál a maximális zsíroxidáció (MFO) 0,53 ± 0,16 g/perc
+      (percentilis-tartomány 0,40–0,67 g/perc; ≈ 4,8 kcal/perc ≈ 290 kcal/óra 0,53 g/percnél – saját átszámítás),
+      a Fatmax intenzitás 56 ± 8% VO2max (49–63%). Edzéssel az MFO nő, a Fatmax intenzitás nem; 64 Ironman-triatlonistánál
+      az MFO és a versenyidő között r = 0,35 (p < 0,01).
+    quote: >-
+      "In comparisons of trained endurance athletes with different levels of VO2max, the better-trained group has
+      greater MFO, with no difference in Fatmax" ... "a significant, albeit modest, correlation between MFO and
+      performance time in the 2016 Copenhagen Ironman (r = 0.35, P < 0.01)".
+    notes: >-
+      Narratív, de számszerű normatív táblákkal (B). A kcal/óra átszámítás (×9,1 kcal/g) saját; az ultra-tempó
+      (~50–60% VO2max) éppen a Fatmax-sáv – a zsír ~300 kcal/h + a bél ~250–350 kcal/h CHO adja a
+      fenntartható ~550–650 kcal/h "üzemanyag-plafont" (ez a 03 modul tétele, itt csak jelezve).
+    status: ellenorizve-doi
+
+  - key: tiller-2019-issn-ultra
+    type: journal
+    authors: [Tiller N.B., Roberts J.D., Beasley L., et al.]
+    year: 2019
+    title: "International Society of Sports Nutrition Position Stand: nutritional considerations for single-stage ultra-marathon training and racing"
+    journal: "Journal of the International Society of Sports Nutrition 16"
+    doi: 10.1186/s12970-019-0312-9
+    url: https://link.springer.com/article/10.1186/s12970-019-0312-9
+    grade: C
+    questions: [Q8]
+    summary: >-
+      ISSN-állásfoglalás egynapos ultramaratonra: verseny alatt 150–400 kcal/óra (szénhidrát 30–50 g/óra, fehérje
+      5–10 g/óra) változatos, energiadús ételekből; folyadék 450–750 ml/óra. Az ultrázók a verseny alatti
+      energiaforgalmuk 36–53%-át viszik be – a deficit a norma.
+    quote: >-
+      "To attenuate caloric deficits, runners should aim to consume 150–400 Kcal·h−1 (carbohydrate, 30–50 g·h−1;
+      protein, 5–10 g·h−1)" ... "between 36 and 53% of their racing energy expenditure."
+    notes: >-
+      Futásra írt konszenzus; kerékpáron a bél terhelése kisebb (nincs rázkódás), ezért a felső sáv (400 kcal/h,
+      50+ g CHO/h) reálisabb – lásd geesmann-2014 57 g/h. Többnapos, alvással tagolt eseményre nem terjed ki.
+      Nyílt hozzáférés.
+    status: ellenorizve-doi

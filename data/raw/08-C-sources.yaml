@@ -1,0 +1,676 @@
+# 08. modul – Pacing és versenystratégia – C csomag (Q3: mozgó és álló idő; Q4: időköltségvetés-modell; Q6: a sebesség fizikája terhelt ultrakerékpáron)
+# Készült: 2026-09-18/19. DOI csak ott szerepel, ahol Crossref API / kiadói oldalon LÁTTAM; egyébként doi: null + notes.
+# Meglévő forrástárból (data/sources.yaml) csak HIVATKOZOTT, itt NEM újradefiniált kulcsok:
+#   ridefar-time-efficiency, raceacrossseries-sleeprule (WMG), hurdiel-2026-raf, bikepacking-ultraguide-2019,
+#   hayden-sleeping-guide, nedelec-2022-camaron, boundary-pbp-coaching, bikepacking-transiberica-rule-2022
+# A 08-A csomagból hivatkozott: brayson-2019-tcr, hyldahl-2024-tourdivide, schumacher-2011-raam, strasser-pez-2019
+# A 08-B csomagból hivatkozott: mckenzie-dotwatcher-tcr-2026, cyclecharts-pbp-2023, storbeck-2019-pbp-speeds,
+#   homer-bikepacking-tourdivide-2026, halfwayanywhere-tourdivide-2024
+# Technikai megjegyzés: a Bash-curl a Crossref felé tiltott volt (proxy 403), a WebFetch-en át a Crossref időnként 429-et adott;
+#   a DOI-ellenőrzés Crossref API-n (WebFetch) történt. Az OpenAlex API-t csak absztrakt-rekonstrukcióra használtam (jelölve).
+#   A "derived"-ként jelölt számok saját számítások a Martin-modellből (scratchpad/model.py, budget.py), nem forrásidézetek.
+sources:
+  # ================================================================ Q6: fizikai modell (lektorált)
+  - key: martin-1998-model
+    type: journal
+    authors: [Martin J.C., Milliken D.L., Cobb J.E., McFadden K.L., Coggan A.R.]
+    credential: "Biomechanikai/élettani kutatók (Univ. of Utah, USOC); a Martin-modell a Best Bike Split és a legtöbb kalkulátor alapja"
+    year: 1998
+    title: "Validation of a Mathematical Model for Road Cycling Power"
+    journal: "Journal of Applied Biomechanics 14(3):276-291"
+    doi: 10.1123/jab.14.3.276
+    url: https://collections.lib.utah.edu/dl_files/b4/8e/b48ef26086091662c561e673d7bd990d77868437.pdf
+    grade: A
+    questions: [Q6, Q4]
+    summary: >-
+      A teljes teljesítményt a légellenállás (½ρ·CdA·v_lég²·v), a gördülési ellenállás (Crr·m·g·v), a kerékcsapágy-veszteség,
+      az emelkedő (m·g·GR·v) és a gyorsítás tagjaiból építi fel, hajtáslánc-hatásfokkal (Ec ≈ 97,7%) osztva. Szélcsatornában
+      mért CdA 0,255–0,269 m² (0–15° yaw), Crr = 0,0032 (magas nyomású köpeny, Kyle 1988 alapján). Terepi SRM-validálás:
+      R² = 0,97, standard hiba 2,7 W, 172,8 ± 14,7 W (SRM) vs 172,0 ± 15,2 W (modell).
+    quote: >-
+      "The measured values for power were highly correlated (R² = .97) with, and were not different than, the modeled
+      values. The standard error between the modeled and measured power (2.7 W) was very small."
+    notes: >-
+      Ez a kalkulátor alapegyenlete. Az egyenlet (15): Ptot = [V·½ρ(CdA+Fw)·Va² + V·Crr·mT·g + V(91+8,7V)·10⁻³ + V·mT·g·GR +
+      ½(mT+I/r²)(Vf²−Vi²)/(tf−ti)]/Ec. A validálás sík, szélcsendes, 20–40 km/h tartományban, versenyzői pozícióban történt –
+      terhelt bringával, murván, 15–25 km/h-n a struktúra ugyanaz, de a paraméterek (CdA, Crr) mások (lásd Frank 2021, Bertucci 2013).
+      Utah-repozitóriumi szerzői PDF; DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: crouch-2017-aero-review
+    type: journal
+    authors: [Crouch T.N., Burton D., LaBry Z.A., Blair K.B.]
+    credential: "Monash University (aerodinamikai kutatócsoport) és MIT Sports Lab"
+    year: 2017
+    title: "Riding against the wind: a review of competition cycling aerodynamics"
+    journal: "Sports Engineering 20(2):81-110"
+    doi: 10.1007/s12283-017-0234-1
+    url: https://link.springer.com/article/10.1007/s12283-017-0234-1
+    grade: A
+    questions: [Q6]
+    summary: >-
+      Áttekintés (96 hivatkozás): síkon a légellenállás az összes ellenállás >90%-a (Kyle & Burke), Martin szerint a
+      teljesítmény 56–96%-a a lejtéstől függően. Az ellenállási tényező Cd ≈ 0,6 (áramvonalas TT-pozíció) – >0,8 (felegyenesedett).
+      Felsőfogás/kormányszarv → alsófogás: 15–20% kevesebb légellenállás; TT-pozíció: 30–35% kevesebb. Oldalszél aszimmetrikus
+      áramlást, plusz oldalerőt és nyomatékokat kelt.
+    quote: >-
+      "Average wind tunnel data suggest that the reduction in drag between an upright sitting position with straight arms
+      (such as the stem and hoods positions) and a drops position can be as much as 15–20%, and for the time-trial position
+      as much as 30–35%."
+    notes: >-
+      Versenykerékpározásra (nem terhelt bringára) vonatkozik; a százalékok a pozícióváltás felső becslései – aerobaron
+      táskás bringával a "TT-pozíció" nyeresége kisebb (lásd white-2016-ridefar-aero: −0,03 m², branston-2023-windtunnel: 31 W/35 km/h).
+      Springer-oldal megnyitva, DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: grappe-1997-obree
+    type: journal
+    authors: [Grappe F., Candau R., Belli A., Rouillon J.D.]
+    year: 1997
+    title: "Aerodynamic drag in field cycling with special reference to the Obree's position"
+    journal: "Ergonomics 40(12):1299-1311"
+    doi: 10.1080/001401397187388
+    url: https://api.openalex.org/works/doi:10.1080/001401397187388
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Terepi (velodrom, állandó sebesség, mért külső mechanikai teljesítmény) CdA-mérés négy pozícióban: felsőfogás (UP),
+      alsófogás (DP), aero (AP), Obree (OP). Az UP-hoz képest DP −7,8%, AP −12,4%, OP −27,8%. A cikk táblázatában ismert
+      abszolút értékek: UP 0,299, DP 0,276, AP 0,262, OP 0,216 m² (edzett versenyző, táska nélkül).
+    quote: >-
+      "Compared to UP, DP, AP and OP produced significant reductions 7.8, 12.4 and 27.8%, respectively"
+    notes: >-
+      Absztrakt OpenAlex-rekonstrukcióból (a százalékok az absztraktban szerepelnek; az abszolút m²-értékek a cikk 1. táblázatából
+      származnak, az absztraktban nem szerepelnek – másodlagosan ismert számok, jelölve). Régi (1997), de ez a leggyakrabban
+      idézett terepi CdA-referencia pozíciónként. Ultrára: az "AP" itt klasszikus aerobar-pozíció; terhelt bringán +0,03–0,08 m²
+      várható (Frank 2021, Ridefar). DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: bertucci-2013-mtb-field
+    type: journal
+    authors: [Bertucci W., Rogier S., Reiser R.F.]
+    year: 2013
+    title: "Evaluation of aerodynamic and rolling resistances in mountain-bike field conditions"
+    journal: "Journal of Sports Sciences 31(14):1606-1613"
+    doi: 10.1080/02640414.2013.792945
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2013.792945
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Terepi mérés MTB-seknél ülő pozícióban: CdA = 0,357 ± 0,023 m². A légellenállás az összes mozgási ellenállás 8–35%-a
+      (a gördülési ellenállás nagyságától függően). Sima köpeny 21 ± 15%-kal kisebb gördülési ellenállás, mint a bütykös;
+      a felület (út, homok, fű) és a nyomás (200 vs 400 kPa) is szignifikánsan hat. Másodlagos forrás (Lessa Bernardineli
+      2024 HackMD-modell) szerint az út feletti terepen a Crr "2–3-szor magasabb, mint hagyományos országúton".
+    quote: >-
+      "Mountain-bike cyclists have an effective frontal area of 0.357 ± 0.023 m², with mean aerodynamic representing 8-35%
+      of total resistance of cyclists' motion depending on the magnitude of rolling resistance."
+    notes: >-
+      Absztrakt OpenAlex-rekonstrukcióból; a Crr abszolút számai (út vs fű vs homok) csak a teljes szövegben vannak, amit nem
+      sikerült megnyitni (Taylor & Francis 403, PubMed captcha, ResearchGate 429) – a "2–3×" arány MÁSODLAGOS forrásból
+      (hackmd.io/@danlessa). Tour Divide-jellegű felületre ez a legjobb lektorált támpont, de a murva nem szerepel a vizsgált
+      felületek között. DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: bassett-1999-hour-records
+    type: journal
+    authors: [Bassett D.R., Kyle C.R., Passfield L., Broker J.P., Burke E.R.]
+    year: 1999
+    title: "Comparing cycling world hour records, 1967–1996: modeling with empirical data"
+    journal: "Medicine & Science in Sports & Exercise 31(11):1665-1676"
+    doi: 10.1097/00005768-199911000-00025
+    url: https://api.openalex.org/works/doi:10.1097/00005768-199911000-00025
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Szélcsatorna- és SRM-adatokra épített teljesítménymodell + a magasság aerob teljesítményre gyakorolt hatásának irodalmi
+      becslése: a ritkább levegő csökkenti a légellenállást, de a leadható teljesítményt is. Órarekordhoz az optimális
+      magasság akklimatizált versenyzőnek 2500 m, nem akklimatizáltnak 2000 m; a rekordjavulás ~60%-a technológia, ~40%
+      élettan.
+    quote: >-
+      "The ideal elevation for record attempts is predicted to be 2500 m for acclimatized riders and 2000 m for
+      unacclimatized riders."
+    notes: >-
+      Absztrakt OpenAlex-rekonstrukcióból; LWW kiadói oldal 402-t adott. Ultrára az üzenet: a magasság kettős hatása
+      (ρ −0,8–1%/100 m vs VO2max-esés) 1500–2500 m-ig kb. kiegyenlíti egymást síkon, emelkedőn viszont csak a
+      teljesítményvesztés marad (a gravitáció nem ritkul). A konkrét %/100 m számok a Ridefar oldalról (white-2016-ridefar-resistance).
+      DOI Crossrefen ellenőrizve.
+    status: ellenorizve-doi
+
+  - key: isvan-2015-wind-yaw
+    type: journal
+    authors: [Isvan O.]
+    year: 2015
+    title: "Wind speed, wind yaw and the aerodynamic drag acting on a bicycle and rider"
+    journal: "Journal of Science and Cycling 4(1):42-50"
+    doi: null
+    url: https://www.jsc-journal.com/index.php/JSC/article/download/168/250
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Terepi mérés (szélszenzor + erőmérő + SRM): a légellenállás a négyzetes légsebesség tengelyirányú komponensével arányos,
+      nem a tengelyirányú komponens négyzetével – oldalszélben a hagyományos szélszenzor alulbecsli a drag-et. Bevezeti
+      az oldal-/front-CdA arányt (μ ≈ 1,2 egy 179 cm/64 kg-os versenyzőnél) és a λ = cos²β + μ·sin²β korrekciót; a "virtuális
+      yaw" módszer a 30%-nál nagyobb hibájú pontok arányát 17,4%-ról 2,9%-ra csökkentette.
+    quote: >-
+      "air drag is proportional to the axial component of the squared airspeed; it is not proportional to the square of
+      the axial component"
+    notes: >-
+      DOI nem ellenőrizve (a JSC oldala nem mutat DOI-t; Crossref-keresés 429). n=1 versenyző, iBike Newton szenzorral.
+      Kalkulátorhoz: oldalszélben a hatásos CdA nő (μ>1), tehát a "csak a fejszél-komponenst számolom" közelítés
+      alábecsüli a veszteséget – ultrán a tiszta oldalszél is lassít.
+    status: url-megnyitva
+
+  - key: groeskamp-2017-incline-wind
+    type: journal
+    authors: [Groeskamp S.]
+    year: 2017
+    title: "Translating Uphill Cycling into a Head-Wind and Vice Versa"
+    journal: "Journal of Science and Cycling 6(1):32-37"
+    doi: null
+    url: https://www.jsc-journal.com/index.php/JSC/article/download/296/391/1678
+    grade: C
+    questions: [Q6]
+    summary: >-
+      Fizikai levezetés: az emelkedő átváltása egyenértékű szembeszélre. Alapparaméterek (2. táblázat): ρ = 1,20 kg/m³,
+      η = 0,98, Crr = 0,0032, CdA (amatőr) = 0,4 m², teljes tömeg 85 kg. Eredmény: a Mont Ventoux (7,3% átlag) amatőrnek
+      30–65 km/h, átlagosan ~56 km/h szembeszélnek felel meg.
+    quote: >-
+      "cycling up the Mont Ventoux is equivalent to cycling against 30 to 65 km h⁻¹ winds, averaging around 56 km h⁻¹"
+    notes: >-
+      Nem mérés, elméleti modell (ezért C). Haszna: publikált, "amatőr" alapparaméter-készlet (CdA 0,4 / 85 kg / η 0,98),
+      ami egybevág a Ridefar terhelt-bikepacker feltevésével. DOI nem ellenőrizve.
+    status: url-megnyitva
+
+  # ================================================================ Q6: mért CdA / Crr terhelt és táskás bringán
+  - key: frank-2021-tailfin-aero
+    type: web-article
+    authors: [Frank T.]
+    credential: "Független tesztelő (Chung-módszer + Aerotune Aerotest), a Tailfin blogján publikálva; nem Tailfin-alkalmazott"
+    year: 2021
+    title: "How aerodynamic is your Bikepacking setup?"
+    journal: "Tailfin Cycling blog, 2021-12-16"
+    doi: null
+    url: https://www.tailfin.cc/blog/how-aerodynamic-is-your-bikepacking-setup/
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Terepi CdA-mérés (Golden Cheetah Chung-módszer + Aerotune), 2 hónap, 8 beállítás, 107 futam 1 km-es körön.
+      Eredmények aeroPOINT-ban (= CdA × 100): alapbringa táska nélkül 32,9 (0,329 m²); Tailfin AeroPack egyedül 32,4;
+      AeroPack + Cyclite aero kormánytáska 31,5 (leggyorsabb); Apidura 14 l nyeregtáska 33,4; kormányhenger + AeroPack
+      34,6 (leglassabb). Leggyorsabb vs leglassabb: 7 perc 31 s különbség 180 km-en 200 W-nál.
+    quote: >-
+      "At a set 200 watts, riding at 35 km/h in calm conditions, the difference between the 'fastest setup (A-3) and
+      'slowest' (A-2) equated to 7 minutes and 31 seconds"
+    notes: >-
+      n=1 versenyző, saját bringa, nem lektorált – de mért CdA, ezért B. Fő üzenet: a jól elhelyezett táskák CdA-ja ≈ a csupasz
+      bringáé (0,32–0,33 m² felsőfogás/hoods pozícióban), a kormányhenger +0,02–0,03 m². "aeroPOINTS multiply the results by
+      100". Aerobar NEM szerepel a tesztben.
+    status: url-megnyitva
+
+  - key: denham-2016-panniers-velodrome
+    type: web-article
+    authors: [Denham A.]
+    credential: "CyclingAbout.com szerzője, hosszú távú túrakerékpáros, aerodinamikai tesztsorozat"
+    year: 2016
+    title: "What's the Speed Difference Between Front/Rear Panniers and Bikepacking Bags? Results"
+    journal: "CYCLINGABOUT.com, 2016-05-19"
+    doi: null
+    url: https://www.cyclingabout.com/speed-difference-between-panniers-bikepacking-bags-aerodynamic-testing-results/
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Velodrom-teszt (320,6 m-es pálya) állandó 200 W-tal, teljesítménymérővel: bikepacking-táskák 30,17 km/h; csak hátsó
+      táskatartó-táskák 28,20 km/h (−6,5%); csak első 28,23 km/h (−6,4%); első + hátsó 27,78 km/h (−7,9%). 100 km-re
+      extrapolálva +12, +12, +17 perc.
+    quote: >-
+      "Using two panniers on either the front or rear slowed my speed by about 6.5% while running both sets at the same time
+      stretched that out to 7.9%."
+    notes: >-
+      n=1, nem szélcsatorna, CdA-t nem számol; a Ridefar ebből 0,07–0,10 m² CdA-különbséget becsül (white-2016-ridefar-aero),
+      a GCN hasonló tesztje szerényebb, ~0,025 m². A táskatartós rendszer ultrán 5–10 óra/4000 km nagyságrendű hátrány.
+    status: url-megnyitva
+
+  - key: branston-2023-windtunnel
+    type: web-article
+    authors: [Branston J., von Bromley S.]
+    credential: "BikeRadar technikai szerkesztők; Silverstone Sports Engineering Hub szélcsatorna, 35 km/h, 0/5/10° yaw"
+    year: 2023
+    title: "The best-value aero upgrades wind tunnel tested and ranked"
+    journal: "BikeRadar, 2023-03-20"
+    doi: null
+    url: https://www.bikeradar.com/features/tech/best-value-aero-upgrades
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Szélcsatorna, egy tesztelő (Liam Cahill), 35 km/h: clip-on aerobar 31,33 W megtakarítás; testhelyzet (aero hoods vs
+      hoods) 22,38 W; hoods vs tops 19,26 W; aero sisak 7,56 W; aero kerekek 10,17 W; speedsuit 3,69 W; keskeny kormány
+      2,43 W; összesen 55,51 W = 10 perc 30 s 60 km-en. Derived: 31,3 W 35 km/h-n ≈ ΔCdA 0,057 m² (ρ = 1,2).
+    quote: >-
+      "riding with your hands on the brake hoods was 19.26 watts more efficient...than putting your hands on the tops"
+    notes: >-
+      n=1, országúti bringa táska nélkül; az aerobar-nyereség a hoods-alaphelyzethez képest értendő, ultrán táskákkal és
+      fáradt, lazább pozícióval kisebb (Ridefar −0,03 m² becslés vs itt −0,057). A tops→hoods→aerobar sorrend és nagyságrend
+      ugyanaz, mint Grappe 1997-ben.
+    status: url-megnyitva
+
+  - key: steyn-2014-mtb-surfaces
+    type: journal
+    authors: [Steyn W.J.vdM., Warnich J.]
+    year: 2014
+    title: "Comparison of tyre rolling resistance for different mountain bike tyre diameters and surface conditions"
+    journal: "South African Journal for Research in Sport, Physical Education and Recreation 36(2):179-193"
+    doi: null
+    url: https://www.ajol.info/index.php/sajrs/article/view/108811
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Kigurulásos (coast-down) terepi Crr-mérés négy MTB-vel, 26" vs 29" kerékkel, több felületen: a felület hatása a
+      legnagyobb, ezt követi a kerékpáros tömege, a kerékátmérő és a nyomás. Aszfalt (bitumen) a legalacsonyabb Crr,
+      fű és murva hasonló, homok a legmagasabb (4,5–15-ször a másik három felületé). A 26"-os kerék átlagos Crr-je magasabb.
+    quote: >-
+      "terrain surface showed the largest effect on rolling resistance coefficients measured, followed by the cyclist mass,
+      wheel diameter and tyre inflation pressure"
+    notes: >-
+      Az AJOL-oldal csak kötet-szintű DOI-t mutat (10.4314/sajrs.v36i2), cikk-DOI-t nem → doi: null. Az abszolút Crr-táblázat
+      (2. táblázat) a ResearchGate-en van, ami 429-et adott – ezért csak a sorrend és a homok-arány idézhető; a "fű ≈ murva"
+      megállapítás a RG-figura leírásából. Tour Divide-jellegű felületre a legrelevánsabb lektorált mérés, számok nélkül.
+    status: url-megnyitva
+
+  - key: brr-test-method
+    type: dataset
+    authors: [Bicycle Rolling Resistance (Jarno Bierman)]
+    credential: "Független gördülésiellenállás-labor (dobteszt), 2013 óta több száz köpeny mért adata"
+    year: 2024
+    title: "Our Tests Explained – Bicycle Rolling Resistance"
+    journal: "bicyclerollingresistance.com"
+    doi: null
+    url: https://www.bicyclerollingresistance.com/the-test
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Módszer: 77 cm-es dob gyémántlemez-felülettel ("átlagos út"), 42,5 kg terhelés, 28,8 km/h, 21,5–22,5 °C, 30 perc
+      bemelegítés után 3 mérés/nyomás. A közölt watt egy kerékre vonatkozik; 85 kg-os rendszertömegnél a teljes gördülési
+      veszteség a közölt érték kétszerese. A CX/gravel listán (35–45 mm, alacsony nyomás) a köpenyek 11,4–18+ W között
+      szórnak (derived: Crr ≈ 0,0034–0,0054 a dobon, P/(m·g·v) képlettel).
+    quote: >-
+      "The total rolling resistance of an average rider with a total bike + rider weight of 85 kg / 188 lbs that averages
+      28.8 km/h / 18 mph will be double the rolling resistance you can find on our website."
+    notes: >-
+      Dobteszt sima felületen: valós, érdes aszfalton a Crr ~1,3–1,6× (impedancia, Silca), murván 2–3× (Bertucci) magasabb.
+      A gravel-lista URL-je: /cx-gravel-reviews (megnyitva). A kalkulátor "jó aszfalt" Crr-alapjához (0,004–0,005) ez a
+      legjobb mért adatbázis; a felület-szorzó külön paraméter.
+    status: url-megnyitva
+
+  # ================================================================ Q6/Q4: Ridefar modell-sorozat (TCR-útvonalra futtatott sebességmodell)
+  - key: white-2016-ridefar-method
+    type: guide
+    authors: [White C. (Ride Far)]
+    credential: "Ultra-távú versenyző (TCR-befutó), Ride Far tudástár; saját fejlesztésű teljesítmény–sebesség modell a teljes TCR-útvonalra"
+    year: 2016
+    title: "Method, Finish Times & Power Effects – What Determines Cycling Speed?"
+    journal: "ridefar.info (Bike → Cycling Speed sorozat, 2. és 1. oldal)"
+    doi: null
+    url: https://ridefar.info/bike/cycling-speed/method/
+    grade: C
+    questions: [Q6, Q4, Q3]
+    summary: >-
+      Saját modell (a Bike Calculator / Best Bike Split / Cycling Power Lab helyett) a 2015-ös (4333 km, ~38 000 m) és
+      2016-os (3899 km, ~55 000 m) TCR-útvonalra: 67 kg versenyző + 10 kg bringa + 8 kg felszerelés = 85 kg. Átlagos versenyző
+      ~130 W, erős ~165 W (+40 W minden szakaszon): +40 W (+28%) → +3 km/h (+14%) átlagsebesség. Előrejelzett tekerési idő
+      2015: 186 h 20 min, 2016: 180 h 31 min. A célidő a tekerési idő kétszerese, mert a 2015-ös mezőny átlagosan
+      12 óra 10 percet tekert 24 óránként.
+    quote: >-
+      "People appeared to spend an average of about 12 hours and 10 minutes out of every 24 hours on the bike during the race."
+      ... "The predicted cycling times were therefore simply doubled to get the predicted race finishing times."
+    notes: >-
+      Nem lektorált, de a legteljesebb nyilvános ultra-specifikus modellfuttatás; a részletes módszertan PDF-ben. A "12 h 10 min/nap"
+      (≈51% mozgáshányad a 24 órára) a 2015-ös TCR teljes mezőnyének tracker-alapú becslése – ez a Q3 középmezőny-alapszáma.
+      Az összefoglaló oldal (…/summary/, megnyitva) rangsora: köpeny "akár 7 óra", nyomás "akár 4 óra", ruházat "akár 5 óra",
+      bringa-aero "akár 4 óra", tömeg "akár 40 perc/kg", hajtáslánc "akár 2 óra", 50%-kal erősebb szél "+8,5 óra".
+    status: url-megnyitva
+
+  - key: white-2016-ridefar-aero
+    type: guide
+    authors: [White C. (Ride Far)]
+    credential: "Ultra-távú versenyző, Ride Far tudástár"
+    year: 2016
+    title: "Cyclist Air Resistance & Bike/Equipment Air Resistance – What Determines Cycling Speed?"
+    journal: "ridefar.info (Bike → Cycling Speed sorozat, 6–7. oldal)"
+    doi: null
+    url: https://ridefar.info/bike/cycling-speed/air-resistance-cyclist/
+    grade: C
+    questions: [Q6]
+    summary: >-
+      Terhelt bikepacker alap-CdA-ja síkon 0,40 m². Pozíció (150 W, sík): tops → hoods −0,03 m² (+0,6 km/h), hoods → drops
+      −0,02 (+0,4 km/h), drops → aerobar −0,03 (+0,7 km/h); tops → aerobar összesen +1,7 km/h. 0,01 m² CdA = ~1 óra 5 perc
+      tekerési idő a 3900 km-es 2016-os TCR-en; aerobar nettó nyeresége ~40 perc (a súly és a kevesebb használat miatt).
+      Feszes vs bő mez −0,02 m² (~2 óra). Bringa-oldal: a légellenállás ~75%-a a versenyzőé, 25%-a a bringáé; első kerék
+      0,01 m² ≈ 1 óra; táskatartó vs bikepacking-táska 0,07–0,10 m² (CyclingAbout) ill. ~0,025 m² (GCN).
+    quote: >-
+      "the average CdA of a typical bikepacker with a loaded bike and on a flat section of road is assumed to be 0.4"
+      ... "a change in CdA of 0.01 translates into about 1 hour 5 minutes of cycling time saved across the 3900 km long route"
+    notes: >-
+      A bringa-oldal URL-je: https://ridefar.info/bike/cycling-speed/air-resistance-bike/ (megnyitva; 0,01 m² ≈ 0,13 km/h a
+      2016-os útvonalon). A CdA-lépések Specialized Win Tunnel / Aeroweenie / BikeRadar adatokból, nem saját mérés → C.
+      Az aerobar-nyereség (−0,03) konzervatívabb, mint a BikeRadar-szélcsatorna (−0,057, branston-2023-windtunnel).
+    status: url-megnyitva
+
+  - key: white-2016-ridefar-resistance
+    type: guide
+    authors: [White C. (Ride Far)]
+    credential: "Ultra-távú versenyző, Ride Far tudástár"
+    year: 2016
+    title: "Weight Effects, Tire Rolling Resistance & Environmental Factors – What Determines Cycling Speed?"
+    journal: "ridefar.info (Bike → Cycling Speed sorozat, 4., 5. és 9. oldal)"
+    doi: null
+    url: https://ridefar.info/bike/cycling-speed/weight/
+    grade: C
+    questions: [Q6]
+    summary: >-
+      Tömeg: 1 kg = 30–40 perc tekerési idő a 3900 km-es, 55 000 m-es 2016-os TCR-en (~1 perc/100 km/kg; 0,08 km/h/kg);
+      −5 kg (−5,9%) → +0,41 km/h (+1,9%), −3 h 23 min; a laposabb 2015-ös úton 0,06 km/h/kg. Gördülés: a teljes ellenállás
+      ~10%-a; GP 4-Season (+40% Crr) → −0,6 km/h, +5 óra; Gatorskin további −0,3 km/h; latex belső +0,2 km/h (−2 óra);
+      60 psi vs 100 psi → +20–40% Crr, −0,5 km/h, +4 óra. Környezet: átlag 10 km/h szél feltételezve (21,6 km/h átlag);
+      szélcsend +0,5 km/h; 15 km/h átlagszél −0,9 km/h, +8,5 óra; sűrűség −0,8%/100 m; teljesítmény −0,6%/100 m
+      (1000 m: −5%, Furka-hágó: −16%); 5 °C hidegebb → −0,2 km/h.
+    quote: >-
+      "about 30 to 40 minutes of cycling time saved across the entire 3900 km route per kilogram saved" ... "If the wind was
+      assumed to be 50% stronger, so averaging 15 km/h...the total riding time would be 8.5 hours more"
+    notes: >-
+      További megnyitott oldalak: …/rolling-resistance/ és …/environmental/ (a …/tire-rolling-resistance/ és
+      …/environmental-factors/ URL 404). Modellszámítás, nem mérés → C; a Crr-arányok a BRR dobtesztjeiből származnak.
+      Kalkulátorhoz a legfontosabb: a "−0,6% teljesítmény/100 m" és a "−0,8% sűrűség/100 m" közel kioltja egymást síkon.
+    status: url-megnyitva
+
+  # ================================================================ Q6: eszközök (kalkulátorok, becslők)
+  - key: gribble-power-speed
+    type: tool
+    authors: [Gribble S.]
+    credential: "Informatikus (Univ. of Washington), nyílt forrású, széles körben hivatkozott teljesítmény–sebesség kalkulátor"
+    year: 2024
+    title: "Cycling Power and Speed Calculator – the physics of cycling"
+    journal: "gribble.org"
+    doi: null
+    url: https://www.gribble.org/cycling/power_v_speed.html
+    grade: C
+    questions: [Q6]
+    summary: >-
+      Nyíltan dokumentált egyenletek: F_gravity = 9,8067·sin(arctan(G/100))·W; F_rolling = 9,8067·cos(arctan(G/100))·W·Crr;
+      F_drag = 0,5·Cd·A·ρ·V_lég²; P_legs = [1 − Loss_dt/100]⁻¹·[F_gravity + F_rolling + F_drag]·V_talaj; hajtásláncveszteség
+      "usually around 2%". Sebesség teljesítményből: harmadfokú egyenlet (aV³ + bV² + cV + d = 0) Cardano-képlettel.
+      Külön légsűrűség-kalkulátor: ρ = Pd/(Rd·Tk) + Pv/(Rv·Tk), Rd = 287,0531, Rv = 461,4964.
+    quote: >-
+      "P_legs = [1 - Loss_dt/100]^(-1) · [F_gravity + F_rolling + F_drag] · V_gs"
+    notes: >-
+      Nem validálás, hanem implementációs referencia – a modul kalkulátora ugyanezt a Martin-struktúrát követi.
+      Légsűrűség-oldal: https://www.gribble.org/cycling/air_density.html (megnyitva). A képletek (Cardano vs. bisection)
+      egyenértékűek; a modul kalkulátorában felezéses megoldás is elég.
+    status: url-megnyitva
+
+  - key: bestbikesplit-tt-accuracy
+    type: tool
+    authors: [Best Bike Split (TrainingPeaks)]
+    credential: "Kereskedelmi, fizikai alapú versenyidő-előrejelző (Martin-modell + időjárás); gyártói pontossági állítás"
+    year: 2025
+    title: "Time Trial Pacing Plan — Best Bike Split"
+    journal: "bestbikesplit.com"
+    doi: null
+    url: https://www.bestbikesplit.com/time-trial-pacing-plan
+    grade: C
+    questions: [Q6, Q4]
+    summary: >-
+      Bemenetek: FTP, testtömeg, CdA (mérésből, pozícióból vagy korábbi menetből becsülve), kerék/ruha, GPX-profil, felület,
+      szél/hőmérséklet (előrejelzett vagy historikus). Gyártói állítás: pontos bemenetek mellett a célidőt tipikusan
+      2–3%-on belül jósolja; a generikus tempókalkulátorok sík, szélcsendes pályán 5–8%-on belül.
+    quote: >-
+      "When power data, course information, and weather conditions are accurate, our physics-based modeling typically
+      predicts finish times within 2-3%."
+    notes: >-
+      Az állítás időfutamra (1–5 óra) vonatkozik, nem többnapos ultrára; nincs független validálás. Ultrán a fő hibaforrás
+      nem a fizika, hanem a bemeneti teljesítmény (durability, 10 nap alatti esés) és az álló idő, amit a BBS nem modellez –
+      a 2–3% tehát a MOZGÁSIDŐ hibája jó teljesítménybecslés mellett, nem a célidőé.
+    status: url-megnyitva
+
+  - key: komoot-fitness-hub
+    type: guide
+    authors: [komoot (Adventure Hub)]
+    credential: "Útvonaltervező szolgáltató saját magyarázata a becsült időtartamról"
+    year: 2023
+    title: "Fitness vs Fun-ness When Planning a Route on komoot"
+    journal: "komoot.com Adventure Hub"
+    doi: null
+    url: https://www.komoot.com/adventure-hub/186OZJztsNtyEOgjSnbQkf/fitness-vs-fun-ness-when-planning-a-route-on-komoot
+    grade: C
+    questions: [Q6, Q4]
+    summary: >-
+      A komoot a becsült időt a sportág, a technikai nehézség, a szintemelkedés és a felület (aszfalt vs murva) alapján, a
+      választott fitneszszinthez rendelt átlagsebességből számolja; számszerű sebességeket vagy pontosságot nem közöl.
+      Kifejezetten kimondja, hogy csak a mozgásban töltött időt számolja, a megállásokat nem.
+    quote: >-
+      komoot "only calculates your time moving" ... "The fitness setting on komoot is a guide, not a goal!"
+    notes: >-
+      A tankönyvben ez a "becslők = mozgásidő, nem célidő" tézis forrása; a Ride with GPS becslője hasonló logikájú, de
+      dokumentációját nem sikerült számszerűen megnyitni (lásd Nem sikerült megnyitni). Pontossági adat nincs.
+    status: url-megnyitva
+
+  # ================================================================ Q4: időlimit-számítás, tracking-alapú tervezőszámok
+  - key: rusa-acp-control-times
+    type: guide
+    authors: [Randonneurs USA (ACP-szabályzat alapján)]
+    credential: "Az ACP (Audax Club Parisien) hivatalos brevet-kontrollidő-szabályának amerikai közlése és kalkulátora"
+    year: 2018
+    title: "ACP Brevet Control Times Calculator – rules"
+    journal: "rusa.org"
+    doi: null
+    url: https://rusa.org/pages/acp-brevet-control-times-calculator
+    grade: C
+    questions: [Q4]
+    summary: >-
+      Kontroll-nyitás a maximális, zárás a minimális sebességgel, sávonként összegezve: 0–200 km 34/15 km/h; 200–400 km
+      32/15; 400–600 km 30/15; 600–1000 km 28/11,428; 1000–1300 km 26/13,333. Így 200 km = 13 h 30, 600 km = 40 h 00,
+      1000 km = 75 h, 1200 km = 90 h (40 + 35 + 15). Az első 60 km-en belüli kontroll zárása: 20 km/h + 1 óra (francia
+      változat, 2018 márciusa óta máshol is engedélyezett).
+    quote: >-
+      "The calculation of a control's opening time is based on the maximum speed. Calculation of a control's closing time
+      is based on the minimum speed."
+    notes: >-
+      Hivatalos szabály, ezért a számok biztosak, de nem "bizonyíték" – C. A 90 órás PBP-limit ebből származik; a 84/80 órás
+      PBP-kategóriák külön ACP-döntés. A modul kalkulátorában a sávos zárási sebességek adják az "utolsó pillanat" görbét.
+    status: url-megnyitva
+
+  - key: white-2017-tcr-results
+    type: web-article
+    authors: [White C. (Ride Far)]
+    credential: "Ultra-távú versenyző; a TCR 2013–2016 eredménylistáinak statisztikai elemzése"
+    year: 2017
+    title: "Transcontinental Race results: Scratch rate, finish time & distance per day"
+    journal: "ridefar.info, 2017-01-16 (frissítve 2021-05-23)"
+    doi: null
+    url: https://ridefar.info/2017/01/transcontinental-race-results-analysis/
+    grade: B
+    questions: [Q3, Q4]
+    summary: >-
+      TCR-befutók napi távjának mediánja: 2013 252 km/nap (20 befutó, 3300 km), 2014–2015 267 km/nap (3600 / 4200 km),
+      2016 258 km/nap (3800 km). Top 25%-hoz legalább ~300 km/nap, top 5%-hoz >350 km/nap kell. 2014: 64/87 befutó (74%);
+      kiesés kb. 1% versenyző / 100 km.
+    quote: >-
+      "Someone who wants to be in the top 25% of finishers probably needs to average at least 300 km per day" ... "Someone
+      who rides more than 350 km per day should finish in the top 5%"
+    notes: >-
+      Eredménylista-alapú (elapsed), nem tracker-alapú → mozgáshányadot nem ad, de a napi táv × napok időköltségvetés
+      "ellenőrző számai". A 2020-as évek TCR-jei hosszabbak (4300–4700 km) és gyorsabbak (2022 győztes 480 km/nap, 2026
+      ~490 km/nap), a medián 2016 óta valószínűleg feljebb csúszott – ez nem szerepel a cikkben.
+    status: url-megnyitva
+
+  # ================================================================ Q3: terepadatok (tracker / Strava / saját GPS)
+  - key: evans-2022-bikeradar-bartholmoes
+    type: web-article
+    authors: [Evans J.]
+    credential: "BikeRadar újságíró; Ulrich Bartholmoes (TCRNo8 6. hely) Strava-adatai és nyilatkozata alapján"
+    year: 2022
+    title: "4,300km in 10 days: how hard is the Transcontinental Race?"
+    journal: "BikeRadar, 2022-08-08"
+    doi: null
+    url: https://www.bikeradar.com/features/routes-and-rides/transcontinental-race-stats
+    grade: B
+    questions: [Q3, Q4]
+    summary: >-
+      TCRNo8 (2022), 6. hely: 4324,59 km, 10 nap 1 óra 51 perc (241,85 h), mozgásidő 183 h 42 min (derived: 76% mozgáshányad,
+      18,4 h/nap), ~60 óra álló idő, 425 km és 4200 m szint naponta, mozgósebesség 23,5 km/h, becsült 134 W átlag, alvás
+      1,5–3 óra/éjszaka (derived: az álló időből 15–30 h alvás, 30–45 h = 3–4,5 h/nap egyéb megállás). A győztes Strasser
+      480 km/nap, 9 nap 14 óra.
+    quote: >-
+      "183 hours 42 minutes" moving time ... "Roughly 60 hours paused time over 10 days" ... "between one and a half and
+      three hours a night"
+    notes: >-
+      Strava-alapú, egyetlen élversenyző; a teljesítmény becsült (nem mért). Ez a legteljesebb nyilvános "mozgó vs álló"
+      bontás TCR-élmezőnyből: az álló idő NAGYOBBIK fele nem alvás, hanem bolt/evés/egyéb – a Q3 "álló idő összetevői"
+      egyetlen kvantitatív TCR-forrása.
+    status: url-megnyitva
+
+  - key: long-2025-tcr11
+    type: web-article
+    authors: [Long J.]
+    credential: "Versenyző (TCRNo11 befutó, Tour Divide 2024 befutó), saját GPS-statisztikái"
+    year: 2025
+    title: "Reflections: Transcontinental Race no.11"
+    journal: "mountainathlete.substack.com, 2025-08-24"
+    doi: null
+    url: https://mountainathlete.substack.com/p/reflections-transcontinental-race
+    grade: B
+    questions: [Q3, Q4]
+    summary: >-
+      TCRNo11 (2025): 4685 km, 53 765 m szint, 13 nap 4 óra 55 perc (316,9 h), 360 km/nap, 4136 m/nap, átlagos mozgósebesség
+      21 km/h. Derived: 223 h mozgás = 70% mozgáshányad, 17,0 h/nap mozgás, 7,1 h/nap álló idő. Az utolsó két napban 850 km
+      / ~10 000 m 5 óra alvással (kompfelvétel miatt).
+    quote: >-
+      "Average Moving Speed: 21kph / 13mph" ... "Total Elapsed Time: 13 days, 4 hours, 55 minutes" ... "Daily Average
+      Distance: 360km / 224mi"
+    notes: >-
+      n=1, saját adat, helyezés nincs megadva (360 km/nap a 2016-os skálán top 5%, de a 2025-ös hosszabb útvonalon inkább
+      felső harmad). A "21 km/h" a Strava-féle mozgósebesség (az 1–2 perces megállások gyakran mozgásidőnek számítanak) –
+      a valódi mozgáshányad ennél 3–5 ponttal alacsonyabb lehet.
+    status: url-megnyitva
+
+  - key: mckenzie-dotwatcher-tcr12-briefing-2026
+    type: web-article
+    authors: [McKenzie C.]
+    credential: "DotWatcher.cc elemző-kommentátor, tracker-adatokból (első 24 óra)"
+    year: 2026
+    title: "TCRNo12 Briefing: Frozen Roads, Fast Starts"
+    journal: "DotWatcher Substack, 2026-07-20"
+    doi: null
+    url: https://dotwatcher.substack.com/p/tcrno12-20-july
+    grade: B
+    questions: [Q3]
+    summary: >-
+      TCRNo12 első 24 órája: Gemperle 664,5 km, Agut 664,2 km, Strasser 655,9 km, Moritz 646,9 km. Átlagos mozgósebesség:
+      Agut 28,75, Chatelet 28,06, Gemperle 27,91 km/h. A top 10 mindegyike 5–31 perc tracker-rögzített álló időt mutatott;
+      a női éllovas (Kesenheimer) nullát. Derived: 664,5 km / 27,91 km/h = 23,8 h mozgás → ~99% mozgáshányad az első napon.
+      Éjszaka −1…−3 °C.
+    quote: >-
+      "Every rider in the cumulative top ten recorded between five and 31 minutes stationary" ... "Max has recorded the
+      highest average moving speed across the opening day at 28.75 km/h"
+    notes: >-
+      Tracker-alapú (a rövid megállások "mozgásnak" számíthatnak); csak az első nap – az élmezőny nyitó taktikája
+      (alvás nélküli 24 óra), nem fenntartható napi minta. A 7 napos folytatás: mckenzie-dotwatcher-tcr-2026 (08-B),
+      ahol Gemperle 25,97 km/h mozgósebességgel 489 km/nap → derived ~78% mozgáshányad 7 napra.
+    status: url-megnyitva
+
+  - key: giuliani-2023-morton-tourdivide
+    type: web-article
+    authors: [Giuliani S.]
+    credential: "Cyclingnews újságíró; Lachlan Morton tracker-adatai és interjúja (EF Pro Cycling)"
+    year: 2023
+    title: "'That was a game changer for me' says Morton of Tour Divide rest break rule"
+    journal: "Cyclingnews, 2023-09-13"
+    doi: null
+    url: https://www.cyclingnews.com/news/that-was-a-game-changer-for-me-says-morton-of-tour-divide-rest-break-rule/
+    grade: B
+    questions: [Q3, Q4]
+    summary: >-
+      Tour Divide-útvonal (2671 mi / 4298 km) 12 nap 12 óra 21 perc alatt (Mike Hall rekordja 13 nap 22 óra 51 perc),
+      önkéntes szabállyal: 48 óránként minimum 12 óra pihenő; gyakorlatban ~6 óra alvás/éjszaka (±1 h). Tracker szerint
+      Morton álló ideje ~30%, Hallé és a 2023-as győztes Bartholmoesé 25% alatt. Derived: Morton 300,4 h × 70% = 210 h mozgás
+      → 20,5 km/h; Hall 334,9 h × ≥75% ≥ 251 h → ≤17,1 km/h mozgósebesség.
+    quote: >-
+      "The stopped time data on Morton's tracker came in at about 30 percent, while ... Mike Hall, and most recent winner
+      Ulrich Bartholmoes. Both had stopped times under 25 percent."
+    notes: >-
+      Nem hivatalos verseny (egyéni ITT a Tour Divide után), profi országúti versenyző – a mozgósebesség nem reprezentatív.
+      A Q3 "sebesség vs mozgáshányad szétválasztás" legtisztább példája: Morton ~5 ponttal TÖBBET állt és mégis ~34 órával
+      gyorsabb volt, mert ~3,4 km/h-val gyorsabban mozgott. A 30/25% tracker-alapú, alvás + minden megállás együtt.
+    status: url-megnyitva
+
+  - key: horanyi-2024-leveika-tourdivide
+    type: web-article
+    authors: [Horanyi E.]
+    credential: "BIKEPACKING.com versenytudósító, Tour Divide-befutó"
+    year: 2024
+    title: "Justinas Leveika Wins 2024 Tour Divide, Setting New Record Time!"
+    journal: "BIKEPACKING.com, 2024-06-27"
+    doi: null
+    url: https://bikepacking.com/news/justinas-leveika-wins-2024-tour-divide/
+    grade: C
+    questions: [Q3]
+    summary: >-
+      Tour Divide 2024 versenyrekord: 13 nap 2 óra 16 perc (314,3 h), 20 órával Mike Hall 2016-os ideje alatt; ~2700 mérföld
+      → ~207 mi (333 km)/nap; "átlagos mozgótempó 8,6 mph". Leveika a riválisainál (Bartholmoes) következetesen kevesebbet
+      aludt hasonló mozgótempó mellett, több egész éjszakás tolással.
+    quote: >-
+      "average moving pace of 8.6 miles per hour" ... Leveika "consistently slept less than his competitors while keeping a
+      similar average moving pace"
+    notes: >-
+      FIGYELEM: 2700 mi / 314,3 h = 8,59 mph, azaz a cikk "mozgótempója" valójában az ELTELT időre vetített átlag, nem
+      mozgósebesség (a valódi mozgósebesség ~11–12 mph / 18–19 km/h lehet 75%-os mozgáshányadnál). Tanulság a modulba:
+      a "moving pace" kifejezést a sajtó gyakran pontatlanul használja – mindig ellenőrizni kell, mivel osztottak.
+      Az élen a különbség itt is a mozgásidő (alvás), nem a sebesség.
+    status: url-megnyitva
+
+  - key: adn-2019-srmr
+    type: web-article
+    authors: [Anchorage Daily News (AP/ADN sportrovat)]
+    credential: "Napilap; a Silk Road Mountain Race 2019 szervezői tracker-adataira hivatkozva"
+    year: 2019
+    title: "Anchorage cyclist breaks 8-day barrier in 1,053-mile race in Kyrgyzstan"
+    journal: "Anchorage Daily News, 2019-08-25"
+    doi: null
+    url: https://www.adn.com/sports/2019/08/25/anchorage-cyclist-breaks-8-day-barrier-in-1053-mile-race-in-kyrgyzstan/
+    grade: C
+    questions: [Q3]
+    summary: >-
+      SRMR 2019 (1056 mi ≈ 1700 km, >88 000 ft szint): a győztes Jakub Sliacan 7 nap 6 óra 46 perc (174,8 h), pihenője
+      "több mint 52 óra" (≈30%); a második Lael Wilcox 7 nap 15 óra 23 perc (183,4 h), pihenője "állítólag 30 óra" (≈16%).
+      Derived: Sliacan mozgósebessége >13,8 km/h, Wilcoxé ~11,1 km/h – a győztes ~22 órával többet pihent és mégis nyert.
+    quote: >-
+      "Sliacan, who was battling Hayden for the lead earlier in the week, rested for more than 52 hours" ... "Wilcox reportedly
+      rested for a total of 30 hours"
+    notes: >-
+      Sajtóforrás, a pihenőidők "reportedly" – C. A Q3 sebesség-vs-mozgáshányad szétválasztás második, terep-ultra példája
+      (murva/hegyi, ahol a mozgósebesség-különbség nagyobb tud lenni, mint a pihenő-különbség).
+    status: url-megnyitva
+
+  - key: toone-2016-pbp-southern
+    type: web-article
+    authors: [Toone B.]
+    credential: "Ultra-versenyző (RAAM-befutó), egyetemi oktató; saját teljesítménymérős GPS-adatai egy 1200 km-es randonneur-túrán"
+    year: 2016
+    title: "Paris-Brest-Paris southern style data analysis"
+    journal: "toonecycling.com, 2016-03-31"
+    doi: null
+    url: https://toonecycling.com/2016/03/31/paris-brest-paris-southern-style-data-analysis/
+    grade: B
+    questions: [Q3, Q4]
+    summary: >-
+      1216 km (755,8 mi), 17 628 m szint, egyben: eltelt 70 h 37 min, mozgás 52 h 01 min (derived: 73,7% mozgáshányad),
+      álló idő 18 h 36 min, ebből alvás 7 h, nem-alvás megállás 9 h 09 min; 31 megállás, átlag 36 perc; eltelt-átlag
+      10,7 mph (17,2 km/h), mozgó-átlag 14,5 mph (23,3 km/h); 143 W átlag, 109 bpm. A tervezettnél 2,5 órával többet állt
+      eszköztöltés miatt.
+    quote: >-
+      "70h, 37min (2 days 22h, 37 min)" elapsed ... "52h, 01min (2 days 4h, 1 min)" moving ... "avg stop duration: 36 minutes"
+      ... "I only slept for 7 hours, but I was stopped for 2.5 hours longer"
+    notes: >-
+      NEM a valódi PBP (egy 1200 km-es amerikai "PBP-stílusú" túra), n=1, de a legrészletesebb nyilvános megállás-bontás
+      1200 km-re: 31 megállás × 36 perc – a nem-alvás álló idő (9 h) MEGHALADJA az alvást (7 h). PBP-tempóra (90 h limit)
+      ez 20 óra tartalékot hagyna.
+    status: url-megnyitva
