@@ -219,7 +219,7 @@ A konzisztencia többet ér, mint az összmennyiség: „jobb minden éjjel öt 
 
 Laborban ez az egyik legjobban reprodukált eredmény — versenyen még senki nem mérte.
 
-:::figure src=figures/svg/04-sleep-banking.svg caption="6. ábra · Kihagyott válaszok a figyelmi reakcióidő-teszten egy átvirrasztott éjszaka alatt: aki előtte 6 éjszakán át 9,8 órát aludt, feleannyit hibázott, mint aki a szokásos 8,2 órát (14 fő, keresztezett laborvizsgálat). Sematikus ábra a közölt adatok alapján." ev=A
+:::figure size=half src=figures/svg/04-sleep-banking.svg caption="6. ábra · Kihagyott válaszok a figyelmi reakcióidő-teszten egy átvirrasztott éjszaka alatt: aki előtte 6 éjszakán át 9,8 órát aludt, feleannyit hibázott, mint aki a szokásos 8,2 órát (14 fő, keresztezett laborvizsgálat). Sematikus ábra a közölt adatok alapján." ev=A
 :::
 
 **Mit mutat a labor.** Hat éjszakán át napi +1,5 óra alvás után egy teljes átvirrasztott éjszaka alatt fele annyi kihagyott válasz és kevesebb mikroalvás, és az előny egy regenerációs éjszaka után is megmaradt. [@arnal-2015-extension] {ev:A} Egy héten át napi 10 óra ágyban töltött idő után egy hét 3 órás alvás-korlátozást jobban bírtak, és a regeneráció egy éjszaka alatt megtörtént a kontrollcsoport öt napja helyett. [@rupp-2009-banking] {ev:A} A mechanizmus vitatott (valódi tartalék képződik, vagy csak az adósságot törleszted), de a gyakorlati következtetés mindkét esetben ugyanaz. [@raizen-2025-procon] {ev:C}
@@ -274,6 +274,9 @@ Kitöltve egy oldal. A kísérőoldalon kalkulátor számolja ki a küszöbidők
 
 Ugyanaz a hajnali 4 két embernek két különböző időpont.
 
+:::figure src=figures/svg/04-kronotipus.svg caption="7. ábra · A csúcsteljesítmény ideje és a napon belüli ingadozás kronotípusonként, 121 versenysportoló felmérése és 20 fő teljesítménytesztje alapján." ev=B
+:::
+
 **Kronotípus.** Versenysportolók között 28 % korai, 48 % köztes, 24 % késői típus. A csúcsteljesítmény ideje ennek megfelelően tolódik: korai típusnál dél körül, köztesnél délután 4 körül, késői típusnál este 8 körül — több mint 7 óra különbség. A csúcs és a mélypont közötti eltérés korai típusnál 7,6 %, késői típusnál **26 %**. [@facerchilds-2015-chronotype] {ev:B} Késői típusként a hajnali szakasz sokkal többet vesz el belőled — és a hajnali ébresztés utáni kábaság is erősebb. [@tomzig-2024-inertia] {ev:A}
 
 **Nem az óraidő, hanem az ébredés óta eltelt idő.** A legjobb teljesítmény korai és köztes típusnál 5,5–6,5 órával, késői típusnál 11 órával az ébredés után jön. [@facerchilds-2015-chronotype] {ev:B} Tervezéskor tehát az utolsó alvásból való ébredés idejét igazítod a nehéz szakaszhoz, nem a napszakot.
@@ -291,6 +294,9 @@ Ugyanaz a hajnali 4 két embernek két különböző időpont.
 ## Regeneráció a verseny után: az alvásod napokig töredezett marad, miközben te már jól érzed magad
 
 A célvonalon nem ér véget az alvásmegvonás — csak láthatatlanná válik.
+
+:::figure src=figures/svg/04-regeneracio.svg caption="8. ábra · A célba érés utáni hét: alvás-visszapótlás az első napon, töredezett éjszakák a 4. napig, szubjektív helyreállás kb. 6 nap. Futóversenyek terepadatai és versenyzői tapasztalat; többnapos ultrakerékpáros verseny után mért adat nincs." ev=B
+:::
 
 **Mi történik.** A verseny utáni első 24 órában alvás-visszapótlás jön: ultrafutóknál 9,9 óra a szokásos 7,5 helyett. [@kishi-2024-ultramarathon] {ev:B} Utána az alvás nem rövidebb, hanem **töredezettebb**: több éjszakai ébredés, rosszabb alváshatékonyság az 1., 2. és 4. éjszakán — miközben a sportoló már az első éjszaka után rendben érzi magát. [@fachan-2026-postrace] {ev:B} A töredezettség az izomfájdalommal együtt jár, és a teljes szubjektív helyreállás kb. 6 nap. [@baron-2022-utmb-recovery] {ev:B} Rutinos versenyzők 4–7 napot mondanak a napi ritmus helyreállására, a teljes felépülésre RAAM után hónapokat. [@raam-sleepcom-2022; @strasser-pez-2019] {ev:C}
 
@@ -363,5 +369,8 @@ QR → kísérőoldal: alvásterv-kalkulátor, kronotípus-kérdőív, önellen�
 
 **Bizonyíték-fokozat a forrásoknál:** A — összesített vagy kontrollált laborvizsgálat · B — terepvizsgálat, megfigyelés · C — versenyzői/edzői tapasztalat, szakmai áttekintés · D — feltörekvő, nem igazolt.
 
-A hivatkozott források teljes adatai (szerzők, folyóirat, DOI, fokozat, kivonat) a `data/sources.yaml` fájlban, a kísérőoldalon kereshetően. Kulcsok ebben a modulban: craven-2022-akut (A) · lopes-2023-endurance (A) · roberts-2019-cycling (A) · temesi-2013-central (A) · gattoni-2025-recovery (A) · limdinges-2010-pvt (A) · vandongen-2003-doseresponse (A) · belenky-2003-restoration (A) · choong-2025-inhibition (A) · wei-2024-risk (A) · dawson-1997-alcohol (A) · williamson-2000-alcohol (A) · tefft-2018-crash (B) · davin-2025-microsleep (C) · poudel-2018-microsleep (A) · waters-2018-hallucination (A) · miller-2022-empty (B) · davidson-2026-anomalous (A) · hurdiel-2026-raf (B) · kishi-2024-ultramarathon (B) · lahart-2013-raam (B) · nedelec-2022-camaron (B) · bourlois-2026-naps (B) · rosekind-1994-cockpit (B) · hilditch-2020-controlledrest (B) · hilditch-2019-inertia (C) · tomzig-2024-inertia (A) · suzuki-2025-napwake (A) · boukhris-2026-napmeta (A) · centofanti-2020-caffeinenap (A) · filtness-2026-caffeinenap (A) · gardiner-2023-caffeine (A) · rupp-2009-banking (A) · arnal-2015-extension (A) · raizen-2025-procon (C) · silva-2021-extension-sr (A) · walsh-2021-consensus (C) · facerchilds-2015-chronotype (B) · scott-2024-light (A) · fachan-2026-postrace (B) · baron-2022-utmb-recovery (B) · smith-2023-cycling-review (C) · és a versenyzői/edzői források (C): hayden-sleeping-guide · hayden-restrap-2016 · allegaert-apidura-2016 · wilcox-roadman-2026 · sehili-breakaway · strasser-pez-2019 · raam-sleepcom-2022 · dotwatcher-guide-sleeping · ridefar-sleeping · ridefar-sleepdep · ridefar-time-efficiency · towers-3tactics-2024 · cyclingweekly-sleepless-2023 · bikepacking-ultraguide-2019 · pearson-ebr-2024 · boundary-pbp-coaching · kolbinger-euronews-2019 · hall-bikepacking-2016 · bartholmoes-styrkr-2022 · bikepacking-transiberica-rule-2022 · raceacrossseries-sleeprule.
+A hivatkozott források a szövegbeli sorszám szerint; teljes adataik (DOI, kivonat, megjegyzések) a `data/sources.yaml` fájlban és a kísérőoldalon kereshetően.
+
+:::references
+:::
 :::
