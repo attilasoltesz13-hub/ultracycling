@@ -116,7 +116,11 @@ class WebModule(Module):
             quiz_html = ('<h3 id="quiz-h">Ellenőrizd magad — interaktív változat</h3><div class="quiz" id="quiz"></div>')
         secs = [self.section(a, b, i + 1, quiz_html) for i, (a, b) in enumerate(self.pages)]
         hero, rest = secs[0], secs[1:]
-        toc = "".join(f'<li data-level="{lv}"><a href="#p-{i:02d}"><span class="n">{i:02d}</span>{re.sub("<.*?>", "", t)}</a></li>' for i, t, lv, pt in self.titles[1:])
+        if not any('class="refs"' in x for x in secs):
+            rest.append(f'<section class="pg forrasok" id="p-forrasok" data-level="alap" data-type="forrasok"><div class="kicker"><span class="n">{self.meta["id"]} – források</span><b>Források</b></div>'
+                        f'<h2>A modul {len(self.cite_order)} forrása</h2><p class="lede">Számozás a szövegbeli felső indexek szerint; a könyvben a közös irodalomjegyzékben ugyanezzel a számozással.</p>{self.references_web()}</section>')
+            self.titles.append((len(self.pages) + 1, "Források", "alap", "forrasok"))
+        toc = "".join(f'<li data-level="{lv}"><a href="#p-{"forrasok" if pt == "forrasok" and i > len(self.pages) else f"{i:02d}"}"><span class="n">{"§" if i > len(self.pages) else f"{i:02d}"}</span>{re.sub("<.*?>", "", t)}</a></li>' for i, t, lv, pt in self.titles[1:])
         tools = "".join(f'<li><a href="../eszkozok/{k}/">{t}</a></li>' for k, t, _ in TOOLS)
         chips = "".join(f'<button class="chip" data-level="{l}">{level_svg(l)}{LEVEL_HU[l]}</button>' for l in ("alap", "halado", "elit"))
         body = (f'{hero}<div class="wrap"><div class="layout"><aside class="toc"><ol>{toc}</ol><div class="tools"><b>Eszközök</b><ol>{tools}</ol></div></aside><main>'

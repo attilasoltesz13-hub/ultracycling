@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """Modul-Markdown → HTML → PDF (Chromium print, Playwright).
 
-Használat:  python3 build/render.py content/hu/04-alvas.md [--html-only] [--draft]
+Használat:  python3 build/render.py content/hu/04-alvas.md [--html-only] [--draft] [--refs]
+            --refs: a forrásjegyzék a modul végén (önálló lektori példány); alapból a közös irodalomjegyzékbe kerül
 Kimenet:    dist/<modul>.html és dist/<modul>.pdf; túlcsordulási jelentés a stdout-on.
 
 Direktívák (design/styleguide.md 7. pont): :::page … :::, :::you, :::protocol, :::figure src= caption= ev=,
@@ -15,6 +16,7 @@ ROOT = Path(__file__).resolve().parents[1]
 TOK = json.loads((ROOT / "design/tokens/tokens.json").read_text())
 SOURCES = yaml.safe_load((ROOT / "data/sources.yaml").read_text())["sources"]
 DRAFT = "--draft" in sys.argv
+REFS = "--refs" in sys.argv   # forrásjegyzék a modul PDF-jében (különben: közös irodalomjegyzék, build/bibliography.py)
 
 GRADE_LABEL = {"A": "összesített kutatás", "B": "terepvizsgálat", "C": "szakmai tapasztalat", "D": "feltörekvő"}
 LEVEL_HU = {"alap": "Alap", "halado": "Haladó", "elit": "Elit"}
@@ -174,7 +176,10 @@ class Module:
             elif b[0] == "refchunk":
                 parts.append(self.references_html(*refchunk))
             elif b[0] == "references":
-                parts.append(self.references_html(self.cite_order[:self.REFS_FIRST]))
+                if REFS:
+                    parts.append(self.references_html(self.cite_order[:self.REFS_FIRST]))
+                else:
+                    parts.append(f'<p class="refnote">A modul {len(self.cite_order)} forrása a könyv végi irodalomjegyzékben, ezzel a modulon belüli számozással.</p>')
         content = "\n".join(parts)
         mod = self.meta["id"]; mtitle = self.meta["title"]
         if ptype == "modulnyito":
@@ -237,11 +242,11 @@ class Module:
         # két menet: az első a hivatkozás-sorrendet gyűjti (a források oldal a végén van)
         for attrs, body in pages:
             self.inline(body)
-        extra = max(0, -(-(len(self.cite_order) - self.REFS_FIRST) // self.REFS_PAGE)) if len(self.cite_order) > self.REFS_FIRST else 0
+        extra = max(0, -(-(len(self.cite_order) - self.REFS_FIRST) // self.REFS_PAGE)) if (REFS and len(self.cite_order) > self.REFS_FIRST) else 0
         total = len(pages) + extra
         htmls = [self.page_html(a, b, i + 1, total) for i, (a, b) in enumerate(pages)]
         # hivatkozás-folytató oldalak
-        rest = self.cite_order[self.REFS_FIRST:]
+        rest = self.cite_order[self.REFS_FIRST:] if REFS else []
         n = len(pages)
         while rest:
             chunk, rest = rest[:self.REFS_PAGE], rest[self.REFS_PAGE:]

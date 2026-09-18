@@ -16,3 +16,7 @@ Részek:
 Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
 
 GitHub Pages: a `dist/site/` tartalma tehető a `gh-pages` ágra vagy egy Actions-lépés futtathatja a buildet (`.nojekyll` benne van).
+
+## GitHub Pages
+
+`.github/workflows/pages.yml`: minden `main`-re érkező push után a workflow lefuttatja a `build/site.py`-t és a `dist/site` mappát teszi közzé. Egyszeri beállítás a GitHubon: Settings → Pages → Source: **GitHub Actions**. Publikus repónál ingyenes.

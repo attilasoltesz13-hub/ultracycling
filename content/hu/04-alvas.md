@@ -360,17 +360,10 @@ A modul fele egyénenként más. Ez a három teszt adja a saját számaidat; a r
 **A modul három legerősebb bizonyítéka:** a 17 órás küszöb (két független labor), a mikroalvás megduplázódása egyetlen 4 órás éjszaka után, és hogy az éberség romlik a legjobban, miközben az önértékelés nem követi (dózis-hatás vizsgálatok). **A három leggyengébb:** a hallucinációk időrendje versenyen, a szunyókálás haszna mély alváshiányban, és minden, ami a 3. éjszaka utánra vonatkozik — ott csak becslés van.
 
 QR → kísérőoldal: alvásterv-kalkulátor, kronotípus-kérdőív, önellenőrző kvíz.
-:::
-
-:::page type=forrasok level=alap disc=all
-## Források és szószedet
 
 **Szószedet.** *Alvásnyomás* — az ébrenlét alatt halmozódó alvásigény. *Belső napi óra (cirkadián ritmus)* — a test napszakhoz kötött, alvástól független ritmusa. *Kronotípus* — hogy a belső órád korán vagy későn jár. *Alvási tehetetlenség* — az ébredés utáni kábaság. *Mikroalvás* — 1–15 másodperces akaratlan elalvás. *Érzett erőkifejtés (RPE)* — mennyire érzed nehéznek a munkát, skálán. *Figyelmi reakcióidő-teszt (PVT)* — egyszerű, monoton figyelemteszt; a kihagyott válaszok az álmosság mérőszáma. *Sok vizsgálat összesített eredménye (meta-analízis)* — több független kutatás számszerű összevonása. *Mozgáshányad* — mozgásidő osztva az eltelt idővel.
+{: .small }
 
-**Bizonyíték-jelek a forrásoknál (4 sávtól 1-ig):** összesített kutatás — sok vizsgálat együtt vagy kontrollált kísérlet · terepvizsgálat — versenyen, edzésen mért adat · szakmai tapasztalat — edzők, versenyzők egybevágó gyakorlata · feltörekvő — ígéretes, de még nem igazolt.
-
-A hivatkozott források a szövegbeli sorszám szerint; teljes adataik (DOI, kivonat, megjegyzések) a `data/sources.yaml` fájlban és a kísérőoldalon kereshetően.
-
-:::references
-:::
+**Bizonyíték-jelek a forrásoknál (4 sávtól 1-ig):** összesített kutatás — sok vizsgálat együtt vagy kontrollált kísérlet · terepvizsgálat — versenyen, edzésen mért adat · szakmai tapasztalat — edzők, versenyzők egybevágó gyakorlata · feltörekvő — ígéretes, de még nem igazolt. A hivatkozások sorszáma modulon belüli; a teljes lista a könyv végi irodalomjegyzékben és a kísérőoldalon.
+{: .small }
 :::
