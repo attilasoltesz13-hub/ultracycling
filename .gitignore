@@ -11,3 +11,6 @@ __pycache__/
 
 # Szerzői jogvédett cikkek helyi másolata — nem verziókezelt
 references/
+
+# A Claude asztali app által ide mentett chat-mellékletek
+Claude outputs/
