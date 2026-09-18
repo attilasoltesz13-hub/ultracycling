@@ -492,7 +492,7 @@ sources:
     title: 'The Cognitive Costs of Sleep Deprivation in Ultra-Endurance Cycling: Insights From the Race Across France'
     venue: Journal of Sleep Research
     doi: 10.1111/jsr.70295
-    url: https://api.crossref.org/works/10.1111/jsr.70295
+    url: https://onlinelibrary.wiley.com/doi/10.1111/jsr.70295
     grade: B
     questions:
     - Q2
@@ -504,33 +504,28 @@ sources:
     - Q9
     modules:
     - '04'
-    summary: 23 ultrakerékpáros alvását mérték csuklós akcelerométerrel a 2024-es Race Across France (2588 km, 29
-      250 m szint) alatt, 4 óránként álmossági (KSS) és kognitív (go/no-go reversal) teszttel. Az átlagos alvás
-      228 perc/24 óra volt (tartomány 95–306 perc), és aki 24 óránként többet aludt, jobb helyezéssel ért célba;
-      aki kevesebbet, annál lassultak a reakcióidők és romlott a visszajelzés-alapú viselkedéskorrekció. Az alvási
-      hajlam csúcsa 00:00–04:00 közé, a leglassabb reakcióidők 05:00–09:00 közé, a leggyorsabbak 17:00–21:00 közé
-      estek.
-    notes: 'n=23 (40 jelentkezőből 10 kilépett, 7-nél eszközhiba) — kicsi minta, csak egy verseny. Ez az egyetlen
-      publikált mezőnyvizsgálat, amely ultrakerékpáros versenyen közvetlenül alvásmennyiség ↔ helyezés összefüggést
-      mutat, ezért Q2 sarokköve. A konkrét számadatokat (228 perc, <5 h 29 perc küszöb, napszaki mintázat) a Crossref-absztrakt
-      mellett a TOUR-magazin szakmai ismertetője adta, mert a teljes szöveg (PMC13357885) nem volt elérhető; a számokat
-      kiadói szövegből még érdemes ellenőrizni.
-
-      [másik kutatási szál megjegyzése] Megfigyeléses terepvizsgálat, n=23, nincs randomizáció, a helyezés és az
-      alvás közti összefüggés kétirányú lehet. Ez az egyetlen talált, kifejezetten ultrakerékpáros adatsor; a ~5,3
-      óra/24 h küszöb és a kimutatott 24 órás ritmus közvetlenül használható a tananyagban. Megjegyzendő, hogy az
-      eredmény (több alvás = jobb helyezés) ellentétes a guilherme-2026-ultra áttekintés fő megfigyelésével.
-
-      [másik kutatási szál megjegyzése] Az absztrakt erős összefüggést jelez az átlagos alvásidő és a helyezés között
-      (r = 0,80; p < 0,001) – a helyezésszám növekedésével (rosszabb helyezés) több alvás jár, azaz a gyorsabb versenyzők
-      kevesebbet aludtak. FONTOS: ez keresztmetszeti korreláció, NEM ok-okozat, és nem mond ellent annak, hogy egyéni
-      szinten az alváshiány rontja a kognitív teljesítményt. A reakcióidő 5 és 9 óra között romlott a leginkább,
-      17 és 21 óra között volt a leggyorsabb (cirkadián mintázat). A teljes szöveg PMC/Wiley oldalán reCAPTCHA-zott;
-      az adatok a ResearchGate absztraktból származnak.'
-    status: ellenorizve-doi
+    summary: 23 versenyző (a 134 befutóból a 3.–96. helyezettek), 142–214 óra versenyidő, 5–8 éjszaka a 2024-es
+      Race Across France-on (2588 km, 29 250 m szint), csuklós akcelerométer + 4 óránkénti álmossági skála (KSS)
+      + go/no-go teszt 5 ponton. Teljes alvásidő 228 ± 107 perc / 24 óra (egyéni átlagok 95–306 perc). Az alvási
+      hajlam csúcsa 00:00–04:00, nincs nappali második csúcs; az álmosság csúcsa 23:00–00:00; a reakcióidő 05:00–09:00
+      között a leglassabb, 17:00–21:00 között a leggyorsabb. Akik átlagosan kevesebb mint 5,29 órát aludtak naponta,
+      azoknál az álmosság napról napra szignifikánsan nőtt; a kevesebb alvás lassabb reakcióidővel és rosszabb megkülönböztetési
+      teljesítménnyel járt.
+    notes: 'TELJES SZÖVEG ELLENŐRIZVE (2026-09-18, Attila PDF-je). Az 1. ábra egyértelmű: a helyezés SZÁMA nő az
+      átlagos alvásidővel (y = −22,03 + 0,33·x, R² = 0,655; ~100 perc alvás → ~5. hely, ~300 perc → ~75. hely),
+      azaz a GYORSABB versenyzők aludtak KEVESEBBET. Az alvásidő a versenyben töltött idővel is szorosan együtt
+      nő (R² = 0,83), és a helyezés NEM korrelál az alvás/állóidő aránnyal. A szerzők a vitában ezt „higher rankings”-ként,
+      több alvás = jobb eredményként értelmezik — ez a saját ábrájukkal és a futóversenyes irodalommal (kishi-2024,
+      martin-2018) ellentétes; a TOUR-magazin ismertetője ezt a félreértelmezést vette át. A tankönyvben: keresztmetszeti
+      minta (a lassabbak tovább vannak pályán, többet alszanak) ≠ egyéni oksági hatás (ugyanannál a versenyzőnél
+      a kevesebb alvás rontja a reakcióidőt és az álmosságot — ezt a vizsgálat személyen belül is kimutatta). Az
+      5,29 órás küszöb az álmosság-görbe töréspontja, nem teljesítménycél. n = 23, egy verseny, 2 nő; a tesztek
+      időpontja a kora estére tolódott (torzíthat).'
+    status: ellenorizve-teljes-szoveg
     aliases:
     - hurdiel-2026-raf
     - hurdiel-raf-2026
+    fulltext: references/hurdiel-2026-jsr-e70295.pdf (helyi, nem verziókezelt)
   hurdiel-2015-utmb:
     key: hurdiel-2015-utmb
     type: journal-article

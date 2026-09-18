@@ -1,6 +1,6 @@
 # 04 · Alvás, fáradtság, kognitív teljesítmény — kutatási fázis
 
-Állapot: **1. lépés lezárva, döntések rögzítve** (2026-09-18). A tíz kulcsállítás elfogadva; E1 a teljes szöveg alapján feloldva (lásd lent). Forrástár: `data/sources.yaml` (87 egyedi forrás a modulhoz: 29 A, 23 B, 33 C, 2 D fokozat). Ez a dokumentum a kilenc kutatási kérdésre adott bizonyíték-térképet, a versenyzői/edzői konvergencia-mátrixot, a feltörekvő irányokat, és a szerkesztői döntést igénylő pontokat tartalmazza. A nyers kutatási csomagok a `data/raw/` alatt vannak.
+Állapot: **1. lépés kész, jóváhagyásra vár** (2026-09-18). Forrástár: `data/sources.yaml` (87 egyedi forrás a modulhoz: 29 A, 23 B, 33 C, 2 D fokozat). Ez a dokumentum a kilenc kutatási kérdésre adott bizonyíték-térképet, a versenyzői/edzői konvergencia-mátrixot, a feltörekvő irányokat, és a szerkesztői döntést igénylő pontokat tartalmazza. A nyers kutatási csomagok a `data/raw/` alatt vannak.
 
 ## Hogyan készült
 
@@ -23,7 +23,7 @@ Négy párhuzamos irodalomkutatás (Q1+Q6 laborirodalom; Q2+Q7 terepvizsgálatok
 
 | # | Ellentmondás | Forrás-oldalak | Javasolt kezelés |
 | --- | --- | --- | --- |
-| E1 | **A Race Across France vizsgálat iránya — FELOLDVA a teljes szövegből.** Az 1. ábra szerint a helyezés száma nő az alvásidővel (y = −22,03 + 0,33·x, R² = 0,655): a gyorsabbak aludtak kevesebbet, és az alvásidő a versenyben töltött idővel is együtt nő (R² = 0,83). A szerzők vitájában szereplő „több alvás = jobb helyezés” olvasat ellentmond a saját ábrájuknak; a TOUR-magazin és két kutatási szálunk ezt vette át. Személyen belül viszont a kevesebb alvás lassabb reakcióidővel és nagyobb álmossággal járt. | hurdiel-2026-raf (teljes szöveg), kishi-2024-ultramarathon, martin-2018-habits | A modulban a két állítás külön oldalon: (1) keresztmetszet — a gyorsabbak kevesebbet állnak és alszanak, ez nem tanács; (2) egyéni hatás — a saját alvásod csökkentése rontja az éberségedet. Az 5,29 óra/nap az álmosság töréspontja, nem cél. |
+| E1 | **A Race Across France vizsgálat iránya.** A Crossref/ResearchGate absztrakt szerint „higher mean TST … higher race rankings (r = 0,80)”; a TOUR-magazin ismertetője és két kutatási szál szerint a többet alvók *jobb* helyezést értek el, a harmadik szál szerint a *gyorsabbak aludtak kevesebbet* (ahogy futóversenyeken is: r = 0,44 a kumulált alvás és a célidő között). Az angol „higher ranking” kétértelmű. | hurdiel-2026-raf vs. kishi-2024-ultramarathon, guilherme-2026-ultra | **A teljes szöveg beszerzése kötelező az írás előtt** (Wiley, J Sleep Res 2026; PMC13357885). Addig egyik irány sem idézhető. Didaktikai példának mindkét esetben jó: keresztmetszeti korreláció ≠ egyéni oksági hatás. |
 | E2 | **Regeneráció sebessége.** Egy éjszaka megvonás után egy éjszaka regeneráló alvás elég (Gattoni 2025); 7 éjszaka korlátozás után 3 regenerációs éjszaka sem (Belenky 2003). | gattoni-2025-recovery vs. belenky-2003-restoration | Dózisfüggőként tanítani: rövid deficit gyorsan törleszthető, halmozott nem. |
 | E3 | **Kockázatvállalás alvásmegvonás alatt.** A gátlókontroll romlása jól alátámasztott (g ≈ −0,48), a kockázatkeresés eltolódása nem (60 % nullhatás). | choong-2025-inhibition vs. wei-2024-risk | „A fáradt ultrázó kockázatkeresőbb” NEM állítható; az impulzuskontroll és hibajavítás romlása igen. |
 | E4 | **Alvásmegvonás-tűrés edzhetősége.** Sehili szerint tapasztalattal javul; Wilcox szándékosan nem edzi; a labor (Van Dongen) szerint az adaptáció szubjektív, nem objektív. | sehili-breakaway vs. wilcox-roadman-2026, vandongen-2003-doseresponse | Tanítható: a *jelek felismerése* és a *protokoll*; nem tanítható: a biológiai szükséglet. |
@@ -44,10 +44,10 @@ Négy párhuzamos irodalomkutatás (Q1+Q6 laborirodalom; Q2+Q7 terepvizsgálatok
 
 ## Döntést igénylő pontok (Attila)
 
-- [x] **E1**: teljes szöveg megvan (references/, nem verziókezelt); irány tisztázva, lásd az E1 sort.
-- [x] Jobson–Irvine könyv: nincs meg → másodlagos hivatkozásként marad, konkrét számot nem tulajdonítunk neki.
-- [x] Biztonsági küszöb (17 óra ≈ 0,05 %): retorikai hasonlatként, a magyar zéró tolerancia megjegyzésével.
-- [x] Szervezői kötelező-pihenő szabályok: példaként említve (nem előírásként).
+- [ ] **E1**: beszerzed-e a Race Across France cikk teljes szövegét (Wiley / PMC13357885), vagy az írás addig a futó-adatokra és a laborra támaszkodjon, a RAF-et csak „ellenőrzés alatt” jelöléssel említve?
+- [ ] A Jobson–Irvine *Ultra-Distance Cycling* könyv megvan-e neked (alvás-fejezet), vagy másodlagos hivatkozásként marad?
+- [ ] A biztonsági küszöb (17 óra ≈ 0,05 %) magyar kontextusban: a zéró tolerancia miatt „retorikai, nem jogi” hasonlatként tálaljuk — rendben?
+- [ ] A modul protokolljaiban a szervezői kötelező-pihenő szabályok (Transibérica 4 óra/24 óra 72 óra fölött; Race Across Series 4 óra/36 óra) bekerüljenek-e mint „intézményesült minimum”?
 - [ ] Elfogadod-e a tíz kulcsállítást mint a modul gerincét — az írás (2. lépés) ezekre épül, oldaltípusonként.
 
 ---
@@ -113,7 +113,7 @@ Négy párhuzamos irodalomkutatás (Q1+Q6 laborirodalom; Q2+Q7 terepvizsgálatok
 ### Q2 — Alvásmennyiség, alvásidőzítés és versenyeredmény többnapos ultra-eseményeken
 
 - **Az ultrakerékpáros versenyeken az alvás 24 óránként jellemzően 2–4 óra, a legjobb dokumentált mezőnyadat 228 perc/24 h (95–306 perc) a Race Across France-on** [hurdiel-2026-raf, B], váltócsapatos RAAM-on 2,4 óra/24 h alatt [lahart-2013-raam, B], szólóvitorlázáson 4,1–4,6 óra/24 h [hurdiel-2012-sailing, B]. Etapjellegű, nem versenyszerű 24 napos kihívásnál ez 5:13 ± 0:30 órára emelkedik [nedelec-2022-camaron, B].
-- **JAVÍTVA a teljes szöveg alapján:** a Race Across France-on a helyezés száma az átlagos alvásidővel együtt nő (1. ábra, R² = 0,655) — a gyorsabbak aludtak kevesebbet, ugyanúgy, mint a futóversenyeken; a szerzők diszkussziója ezt tévesen fordítva fogalmazza. Személyen belül viszont a kevesebb alvás lassabb reakcióidőt és napról napra növekvő álmosságot okozott, az 5,29 óra/nap küszöb alatt szignifikánsan [hurdiel-2026-raf, B]. ⚠️ n=23, egyetlen verseny; nincs replikáció.
+- **A több alvás 24 óránként jobb helyezéssel járt együtt** – ez az egyetlen közvetlen mezőnyadat kerékpáros ultraversenyen [hurdiel-2026-raf, B]. A vizsgálat szerint ~5 óra 29 perc/nap alatt a fáradtság progresszíven nő, és a kevesebbet alvóknál lassabb reakcióidők mérhetők. ⚠️ **Gyenge bizonyíték**: n=23, egyetlen verseny, egyetlen év; nincs replikáció.
 - **⚠️ ELLENTMONDÓ adat**: 200+ mérföldes futóversenyen a legjobb kvartilisbe kerülést a verseny előtti éjszaka *rövidebb* (<7 óra) alvása jósolta [lynch-2025-200mile, B]. Ez majdnem biztosan zavaró változó (rajtidő, izgalom, rutin), nem oksági összefüggés — de mutatja, hogy a „több alvás = jobb eredmény" tétel nem univerzális, és a felkészülés/verseny előtti éjszaka nem keverendő össze a verseny alatti alvással.
 - **⚠️ KORREKCIÓS FIGYELMEZTETÉS**: futóversenyeken a verseny alatti halmozott alvás *pozitívan* korrelál a befutóidővel (r = 0,44; p < 0,0001 [kishi-2024-ultramarathon, B]; r = 0,48 a 36–60 h-s és r = 0,44 a >60 h-s versenyeken [martin-2018-habits, B]) — vagyis a lassabbak alszanak többet, mert tovább vannak pályán. Ez NEM mond ellent a hurdiel-2026-raf eredményének (ott 24 órára normalizált alvás vs. helyezés), de a kettő összekeverése a leggyakoribb értelmezési hiba.
 - **Az alvásidőzítés konzisztensen cirkadián-vezérelt: a mezőny éjszaka alszik.** A szundik 79,5%-a 00:00–05:00 közé esik, 82%-uk 30 percnél rövidebb [kishi-2024-ultramarathon, B]; az alvási hajlam csúcsa 00:00–04:00 [hurdiel-2026-raf, B], illetve éjfél körül ~50%, másodlagos csúccsal kora délután ~15% [hurdiel-2012-sailing, B]. A kognitív mélypont 05:00–09:00, a csúcs 17:00–21:00 [hurdiel-2026-raf, B].

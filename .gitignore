@@ -8,3 +8,6 @@ __pycache__/
 .DS_Store
 *.log
 .env
+
+# Szerzői jogvédett cikkek helyi másolata — nem verziókezelt
+references/

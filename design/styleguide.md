@@ -1,6 +1,6 @@
 # Stílusguide — Hosszú távon
 
-Verzió 0.2 (2026-09-18). A tokenek gépi forrása: `tokens/tokens.json` és `tokens/tokens.css`. PDF-motor: HTML + CSS → Chromium print (döntés 2026-09-18), így a PDF és a weboldal ugyanazokat a tokeneket és komponenseket használja. Ez a dokumentum a szabályokat és a szándékot rögzíti; az értékeket a tokenfájlok.
+Verzió 0.3 (2026-09-18). A tokenek gépi forrása: `tokens/tokens.json` és `tokens/tokens.css`. PDF-motor: HTML + CSS → Chromium print (döntés 2026-09-18), így a PDF és a weboldal ugyanazokat a tokeneket és komponenseket használja. Ez a dokumentum a szabályokat és a szándékot rögzíti; az értékeket a tokenfájlok.
 
 ## 1. Alapelv
 
@@ -57,4 +57,10 @@ A dataviz-szabályok kötelezőek: egy tengely (soha dupla y-tengely), vékony j
 
 ## 6. Nyelv és hang
 
-Tegeződő, közvetlen, pontos. Rövid mondatok, számok mértékegységgel. Szakkifejezés első előfordulásakor zárójelben az angol megfelelő. Nincs motivációs töltelék; a „mit jelent neked” doboz mindig felszólító módban kezdődik (Mérd, Állítsd, Tervezd, Kerüld).
+Tegeződő, közvetlen, pontos. Rövid mondatok, számok mértékegységgel. Nincs motivációs töltelék; a „mit jelent neked” doboz mindig felszólító módban kezdődik (Mérd, Állítsd, Tervezd, Kerüld).
+
+**Szakszavak (döntés 2026-09-18).** A kész anyagban nem kerékpáros szakszó — élettani, alvástudományi, statisztikai kifejezés — csak egyértelmű magyar magyarázattal szerepelhet az első előfordulásnál, és lehetőleg a köznyelvi alak marad a szövegben (pl. „érzett erőkifejtés” az RPE helyett, „figyelmi reakcióidő-teszt” a PVT helyett, „belső napi óra” a cirkadián ritmus helyett, „csuklón viselt mozgásérzékelő” az aktigráf helyett). Az angol megfelelő zárójelben csak akkor, ha a további keresést segíti. A modul végén rövid szószedet; a kutatási dokumentumok (`docs/`, `data/`) maradnak szakmaiak.
+
+## 7. Tartalmi jelölések a Markdownban
+
+Oldal: `:::page type=<modulnyito|fogalom|adat|konvergencia|protokoll|sablon|feladat|osszefoglalo> level=<alap|halado|elit> disc=<all|onellato,kiseros,brevet,24h>` … `:::`. Dobozok: `:::you` (mit jelent neked), `:::protocol`, `:::task`, `:::summary`, `:::figure src=… caption=…`. Inline jelek: `{ev:A}`…`{ev:D}` bizonyíték-fokozat, `{fix}` / `{példa}` / `{egyéni}` sablonelem, `[@kulcs]` hivatkozás a `data/sources.yaml`-re. A build ezekből állítja elő a PDF-dobozokat és a webes komponenseket.
