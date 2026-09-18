@@ -1,0 +1,360 @@
+sources:
+  - key: craven-2022-akut
+    type: journal
+    authors: [Craven J., McCartney D., Desbrow B., et al.]
+    year: 2022
+    title: "Effects of Acute Sleep Loss on Physical Performance: A Systematic and Meta-Analytical Review"
+    journal: "Sports Medicine 52(11):2669-2690"
+    doi: 10.1007/s40279-022-01706-y
+    url: https://link.springer.com/content/pdf/10.1007/s40279-022-01706-y.pdf
+    grade: A
+    summary: >-
+      69 publikáció, 77 vizsgálat, 227 kimenet, n=959 (89% férfi): akut alvásvesztés utáni fizikai
+      teljesítményváltozás. Állóképesség -5,55% (95% CI -8,12 - -2,99), anaerob teljesítmény -6,26%
+      (-9,10 - -3,41), erő -2,85% (-4,47 - -1,23), készség/technika -20,9% (-27,0 - -14,9).
+      Meta-regresszió: az ébredés óta eltelt óránként -0,36%/h (restrikció), késői restrikciónál -0,55%/h.
+    notes: >-
+      Csak AKUT (1 éjszaka) alvásvesztés; 3+ éjszakára nem ad becslést. 89% férfi minta.
+      Délutáni/esti tesztek romlanak, a délelőttiek alig - ultratávon ez a második nap délutánját
+      és az éjszakai szakaszt teszi kritikussá. A "készség -20,9%" kevés vizsgálatból (9) származik,
+      tág CI-vel; kerékpáros technikára (vonalvezetés, csoportos haladás, defektszerelés) csak
+      analógiásan vihető át.
+
+  - key: lopes-2023-endurance
+    type: journal
+    authors: [Lopes T.R., Pereira H.M., Bittencourt L.R.A., et al.]
+    year: 2023
+    title: "How much does sleep deprivation impair endurance performance? A systematic review and meta-analysis"
+    journal: "European Journal of Sport Science 23(7):1279-1292"
+    doi: 10.1080/17461391.2022.2155583
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22How%20much%20does%20sleep%20deprivation%20impair%20endurance%20performance%22&resultType=core&format=json
+    grade: A
+    summary: >-
+      31 vizsgálat, n=478: az alvásdepriváció közepes negatív hatása az állóképességi teljesítményre,
+      összevont SMD = -0,52. A hatás mértékét egyértelműen az edzés/teszt időtartama moderálta:
+      a 30 percnél hosszabb terheléseknél nagyobb a romlás.
+    notes: >-
+      Az edzettségi szint, a depriváció súlyossága, a tesztelés időpontja és a terhelés típusa NEM
+      moderálta szignifikánsan a hatást - vagyis edzett ultrázók sem védettek. Ultrakerékpárra ez a
+      legdirektebb üzenet: minél hosszabb a megterhelés, annál nagyobb a romlás; a labortesztek
+      leghosszabbjai is jóval rövidebbek egy ultránál (extrapolációs korlát).
+
+  - key: fullagar-2015-athletic
+    type: journal
+    authors: [Fullagar H.H.K., Skorski S., Duffield R., et al.]
+    year: 2015
+    title: "Sleep and Athletic Performance: The Effects of Sleep Loss on Exercise Performance, and Physiological and Cognitive Responses to Exercise"
+    journal: "Sports Medicine 45(2):161-186"
+    doi: 10.1007/s40279-014-0260-0
+    url: https://link.springer.com/article/10.1007/s40279-014-0260-0
+    grade: C
+    summary: >-
+      Narratív áttekintés: a maximális, rövid, bruttó motoros teljesítmények nagyrészt megőrizhetők
+      alvásvesztés után, a sportspecifikus és hosszabb, önszabályozott teljesítmények viszont romlanak.
+      Autonóm idegrendszeri egyensúlyvesztést ír le, amely a túledzettség tüneteit utánozza, valamint
+      emelkedett gyulladásos citokinszinteket és lassabb, pontatlanabb kognitív teljesítményt.
+    notes: >-
+      Nem szisztematikus, nincs összevont hatásméret - a benne leírt ellentmondásokat a későbbi
+      meta-analízisek (Craven 2022, Lopes 2023) oldják fel. Fő haszna a mechanizmus-keret:
+      immun-, hormonális és autonóm válaszok, amelyek többnapos verseny alatt halmozódnak.
+      Ultrakerékpárra közvetlen adata nincs.
+
+  - key: vandongen-2003-doseresponse
+    type: journal
+    authors: [Van Dongen H.P.A., Maislin G., Mullington J.M., et al.]
+    year: 2003
+    title: "The Cumulative Cost of Additional Wakefulness: Dose-Response Effects on Neurobehavioral Functions and Sleep Physiology From Chronic Sleep Restriction and Total Sleep Deprivation"
+    journal: "Sleep 26(2):117-126"
+    doi: 10.1093/sleep/26.2.117
+    url: https://academic.oup.com/sleep/article-abstract/26/2/117/2709164
+    grade: A
+    summary: >-
+      48 egészséges felnőtt, 14 éjszakán át 4, 6 vagy 8 óra ágyban töltött idő, illetve 3 éjszaka
+      teljes depriváció. A 4 és 6 órás csoportban kumulatív, dózisfüggő teljesítményromlás minden
+      kognitív feladaton; a 14 napi 6 órás alvás kognitív deficitje elérte a 2 éjszaka teljes
+      depriváció szintjét. A PVT-kiesések közel lineárisan nőttek a 15,84 órát meghaladó KUMULÁLT
+      ébrenléttel.
+    notes: >-
+      Kulcsleletet ad az önértékelés csalódásához: a résztvevők szubjektív álmossága az első napok
+      után alig nőtt tovább, és nem tudták megkülönböztetni a 4 és 6 órás feltételt, miközben az
+      objektív teljesítmény folyamatosan romlott. Labor, nem terhelés alatt; a napi 15,84 órás
+      "ébrenléti költségvetés" ultraversenyen napi szinten túllépésre kerül, így a modell szerint a
+      deficit napról napra halmozódik.
+
+  - key: belenky-2003-restoration
+    type: journal
+    authors: [Belenky G., Wesensten N.J., Thorne D.R., et al.]
+    year: 2003
+    title: "Patterns of performance degradation and restoration during sleep restriction and subsequent recovery: a sleep dose-response study"
+    journal: "Journal of Sleep Research 12(1):1-12"
+    doi: 10.1046/j.1365-2869.2003.00337.x
+    url: https://jhanley.biostat.mcgill.ca/bios601/Surveys/Belenky2003.pdf
+    grade: A
+    summary: >-
+      66 fő (16 nő, 50 férfi), 7 éjszaka 3 / 5 / 7 / 9 óra ágyidő, majd 3 regenerációs éjszaka.
+      A 9 órás csoport végig stabil; a 7 órás minimális romlás után stabilizálódott; az 5 órás
+      kezdeti romlás után beállt csökkent szinten, kiesései a 6-7. napon nőttek; a 3 órás csoport
+      folyamatosan romlott a 7. napig.
+    notes: >-
+      A legfontosabb korlátozó lelet többnapos versenyre: HÁROM regenerációs éjszaka után egyik
+      korlátozott csoport sem tért vissza a kiindulási szintre - az adaptív változások napokig
+      fennmaradnak. Labor, fizikai terhelés nélkül; az ultra alvásmintázata (töredezett, 20-90
+      perces alvások) nem egyezik a folyamatos, rövidített éjszakával, így az átvitel korlátozott.
+
+  - key: limdinges-2010-pvt
+    type: journal
+    authors: [Lim J., Dinges D.F.]
+    year: 2010
+    title: "A Meta-Analysis of the Impact of Short-Term Sleep Deprivation on Cognitive Variables"
+    journal: "Psychological Bulletin 136(3):375-389"
+    doi: 10.1037/a0018883
+    url: https://www.med.upenn.edu/uep/assets/user-content/documents/LimDinges2010MetaAnalysis.pdf
+    grade: A
+    summary: >-
+      70 közlemény, 147 kognitív teszt, n=1533. A legnagyobb romlás az egyszerű figyelemben
+      (PVT): kiesések g=-0,762 (95% CI -0,948 - -0,576), reakcióidő g=-0,732 (-0,874 - -0,590).
+      Munkamemória pontosság g=-0,555, komplex figyelem pontosság g=-0,479, feldolgozási sebesség
+      g=-0,302 - -0,245, következtetés g=-0,125.
+    notes: >-
+      Rövid távú (jellemzően <48 óra) depriváció; 3+ éjszakára nem általánosít. A gradiens gyakorlati
+      jelentése: az éberségtartás (PVT-kiesések, mikroalvás-közeli állapotok) romlik legelőször és
+      legerősebben, a "gondolkodás" (következtetés) csak enyhén - ezért az ultrázó szubjektíve
+      "tisztának" érzi magát, miközben a vigilanciája már súlyosan sérült.
+
+  - key: dawson-1997-alcohol
+    type: journal
+    authors: [Dawson D., Reid K.]
+    year: 1997
+    title: "Fatigue, alcohol and performance impairment"
+    journal: "Nature 388:235"
+    doi: 10.1038/40775
+    url: https://www.nature.com/articles/40775
+    grade: A
+    summary: >-
+      40 fő, félóránként ismételt számítógépes kéz-szem koordinációs (kiszámíthatatlan követési)
+      feladat elnyújtott ébrenlét, illetve kontrollált alkoholadagolás mellett. A 10. és 26. ébrenléti
+      óra között a relatív teljesítmény óránként átlagosan 0,74%-kal csökkent. 17 óra ébrenlét után a
+      romlás megfelelt 0,05% véralkoholszintnek, 24 óra után kb. 0,10%-nak.
+    notes: >-
+      Kis minta, egyetlen pszichomotoros feladat, laborkörnyezet - nem valós vezetés vagy kerékpározás.
+      A 0,74%/óra lineáris közelítés csak a 10-26 órás ablakban érvényes, 26 órán túl nem extrapolálható.
+      Oktatási célra a legerősebb, legkönnyebben kommunikálható küszöb: "17 óra ébren = ittas vezetés
+      határa" (Magyarországon zéró tolerancia, tehát a hasonlat retorikai, nem jogi).
+
+  - key: williamson-2000-alcohol
+    type: journal
+    authors: [Williamson A.M., Feyer A.-M.]
+    year: 2000
+    title: "Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally prescribed levels of alcohol intoxication"
+    journal: "Occupational and Environmental Medicine 57(10):649-655"
+    doi: 10.1136/oem.57.10.649
+    url: https://oem.bmj.com/content/57/10/649
+    grade: A
+    summary: >-
+      39 fő (30 közlekedési dolgozó, 9 katona), 28 órás ébrentartás vs. kontrollált alkoholadagolás.
+      17-19 óra folyamatos ébrenlét után a kognitív és motoros teljesítmény a 0,05% véralkoholszintnek
+      megfelelő szintre romlott; egyes teszteken a válaszidő akár 50%-kal lassabb lett, a pontosság
+      szignifikánsan rosszabb. Hosszabb ébrenlétnél a romlás elérte a maximális alkoholadag (~0,10%)
+      szintjét.
+    notes: >-
+      Megerősíti Dawson & Reid küszöbét független mintán és több feladaton - két független
+      laborból származó egybehangzó eredmény, ezért ez a Q1 legerősebben alátámasztott küszöbe.
+      Korlát: max. 28 óra, tehát a 2-3. éjszakára nincs adata; nem terhelés alatt mérve.
+      A "pontosság vs. sebesség" különválása fontos: az ultrázó lassulása kevésbé feltűnő számára,
+      mint a hibázás.
+
+  - key: choong-2025-inhibition
+    type: journal
+    authors: [Choong S.Y., Byrne J.E.M., Drummond S.P.A., et al.]
+    year: 2025
+    title: "A meta-analytic investigation of the effect of sleep deprivation on inhibitory control"
+    journal: "Sleep Medicine Reviews 80:102042"
+    doi: 10.1016/j.smrv.2024.102042
+    url: https://www.sciencedirect.com/science/article/pii/S1087079224001461
+    grade: A
+    summary: >-
+      24 vizsgálat, 712 egészséges felnőtt. Az alvásdepriváció közepesen rontja a gátlókontrollt:
+      Go/No-Go feladat Hedges g=-0,475, Stop Signal feladat g=-0,482 (mindkettő p<0,001) - több
+      elkövetési (commission) hiba és hosszabb stop-jel reakcióidő. 22 vizsgálat teljes depriváció
+      (24-43 óra ébrenlét), 3 részleges restrikció (2-6 nap, 3-6 óra alvás).
+    notes: >-
+      A gátlókontroll az impulzív, korrigálatlan döntések (hirtelen kormánymozdulat, kockázatos
+      előzés, rossz forgalmi rés megítélése) laborproxyja - ez teszi biztonsági kérdéssé.
+      A részleges restrikciós alvizsgálat nagyon kicsi (3 tanulmány), így a többnapos,
+      krónikusan korlátozott alvásra vonatkozó becslés gyenge. Fizikai terhelés nélküli labor.
+
+  - key: wei-2024-risk
+    type: journal
+    authors: [Wei X., Ma J., Liu S.-J., et al.]
+    year: 2024
+    title: "The effects of sleep deprivation on risky decision making"
+    journal: "Psychonomic Bulletin & Review 32(1):80-96"
+    doi: 10.3758/s13423-024-02549-6
+    url: https://link.springer.com/article/10.3758/s13423-024-02549-6
+    grade: A
+    summary: >-
+      25 kísérletes vizsgálat szisztematikus áttekintése egészséges felnőtteken, 47 kimenettel.
+      Az eredmények erősen ellentmondásosak: 13 kimenet (28%) fokozott kockázatkeresést, 6 (13%)
+      csökkent kockázatkeresést, 28 (60%) semmilyen szignifikáns hatást nem mutatott. A hatást
+      moderálta a nem, a nyereség-veszteség keretezés, pszichotróp szerek használata és a
+      depriváció időtartama.
+    notes: >-
+      A nőknél gyakoribb volt a kockázatkerülő irány (4/12 vs. 2/12 férfiaknál). Koffein és
+      dextroamfetamin részben tompította a fokozott kockázatvállalást - ultraversenyen gyakori a
+      koffeinhasználat, ez zavaró tényező. FONTOS ÓVATOSSÁG: a "fáradt ultrázó kockázatkeresőbb"
+      állítás NEM tekinthető bizonyítottnak; a gátlókontroll romlása (choong-2025) jobban
+      alátámasztott, mint a kockázatpreferencia eltolódása.
+
+  - key: roberts-2019-cycling
+    type: journal
+    authors: [Roberts S.S.H., Teo W.-P., Aisbett B., et al.]
+    year: 2019
+    title: "Effects of total sleep deprivation on endurance cycling performance and heart rate indices used for monitoring athlete readiness"
+    journal: "Journal of Sports Sciences 37(23):2691-2701"
+    doi: 10.1080/02640414.2019.1661561
+    url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/02640414.2019.1661561?fields=title,abstract,year,venue,authors,externalIds
+    grade: A
+    summary: >-
+      13 állóképességi sportoló keresztezett elrendezésben, két egymást követő napon önszabályozott
+      kerékpáros időfutam, közte normál alvás vagy teljes alvásdepriváció. A deprivációs ág 2. napján
+      az idő 10%-kal volt rosszabb a normál alvás 2. napjához képest (64±7 vs 59±4 perc, p<0,01)
+      és 11%-kal a saját 1. napjához képest (58±5 perc). A szubjektív/objektív intenzitásarány
+      (RPE:átlagpulzus) emelkedett, a hangulatzavar és a PVT átlagos válaszidő romlott.
+    notes: >-
+      Kicsi minta (n=13), egyetlen éjszaka teljes depriváció - a 10%-os romlás a legkonkrétabb
+      kerékpáros szám, de nem extrapolálható 2-3. éjszakára. Gyakorlati üzenet a monitorozásra:
+      az RPE:pulzus arány érzékenyebb az alvásvesztésre, mint a nyers pulzusadat - ultraversenyen
+      ez azt jelenti, hogy adott pulzus "nehezebbnek" érződik, és a pulzusalapú zónavezérlés
+      félrevezethet. Az anaerob küszöb korrelált a romlás mértékével (R=-0,73).
+
+  - key: temesi-2013-central
+    type: journal
+    authors: [Temesi J., Arnal P.J., Davranche K., et al.]
+    year: 2013
+    title: "Does central fatigue explain reduced cycling after complete sleep deprivation?"
+    journal: "Medicine & Science in Sports & Exercise 45(12):2243-2253"
+    doi: 10.1249/MSS.0b013e31829ce379
+    url: https://static1.squarespace.com/static/55b7ffebe4b0568a75e3316b/t/59f9e9d16c31941828c3931c/1509550552676/Temesi+et+al.+Med+Sci+Sports+Exerc+2013+Does+Central+Fatigue+Explain+Reduced+Cycling+after+sleep+deprivation.pdf
+    grade: A
+    summary: >-
+      12 aktív férfi (VO2max 60±7 ml/kg/perc), egy éjszaka teljes alvásdepriváció (~24 óra ébrenlét)
+      vs. kontroll; 40 perc szubmaximális kerékpározás a maximális aerob teljesítmény 65%-án, majd
+      inkrementális teszt kimerülésig. A kimerülésig eltelt idő 7,5%-kal csökkent (1137±253 s vs
+      1236±282 s, p=0,013), az RPE a 40 perces szakaszban szignifikánsan magasabb volt (p=0,009).
+      A maximális akaratlagos izomaktiváció és a motoros kiváltott válasz NEM különbözött a két ág között.
+    notes: >-
+      Kis minta, csak férfiak, egy éjszaka. Mechanizmus szempontjából kulcsfontosságú negatív lelet:
+      a romlás NEM magyarázható fokozott idegizomrendszeri ("központi") fáradással - a romlás
+      elsősorban percepciós/motivációs eredetű (az azonos munka nehezebbnek érződik).
+      Ultrakerékpárra ez azt jelenti, hogy a beavatkozásnak a terhelésérzet és a vigilancia
+      kezelésére kell irányulnia, nem "izomregenerációra".
+
+  - key: gattoni-2025-recovery
+    type: journal
+    authors: [Gattoni C., Girardi M., Javadi A.-H., et al.]
+    year: 2025
+    title: "The effects of one-night sleep deprivation and one-night recovery sleep on endurance cycling performance"
+    journal: "European Journal of Applied Physiology"
+    doi: 10.1007/s00421-025-05908-w
+    url: https://link.springer.com/article/10.1007/s00421-025-05908-w
+    grade: A
+    summary: >-
+      26 amatőr kerékpáros/triatlonista (30,5 év, VO2peak 55,3 ml/kg/perc), 25 óra folyamatos
+      ébrenlét vs. kontroll, három egymást követő napon mérve. Az alvásdepriváció a mérsékelt
+      intenzitású teljesítményt rontotta, a magasabb RPE közvetítésével, de a 20 perces nagy
+      intenzitású időfutamot NEM. Egyetlen éjszaka regeneráló alvás elegendő volt a mérsékelt
+      intenzitású állóképesség és a vigilancia helyreállításához.
+    notes: >-
+      A legfrissebb, leginkább ultra-releváns dizájn: a hosszú, mérsékelt intenzitású (ultratempó)
+      munka sérül, a rövid, nagy intenzitású kirobbanó teljesítmény megőrizhető - ez magyarázza,
+      hogy az ultrázó "még tud sprintelni", miközben a tartós tempója összeomlik. Korlát:
+      csak 1 éjszaka depriváció, csak férfiak, laborkörülmények; a többnapos halmozódásra nem
+      ad választ, és a regenerációra vonatkozó optimista lelet ELLENTMOND Belenky 3 éjszakás
+      nem-teljes helyreállásának (más dózis: 1 vs 7 éjszaka korlátozás).
+
+  - key: tefft-2018-crash
+    type: journal
+    authors: [Tefft B.C.]
+    year: 2018
+    title: "Acute sleep deprivation and culpable motor vehicle crash involvement"
+    journal: "Sleep 41(10):zsy144"
+    doi: 10.1093/sleep/zsy144
+    url: https://academic.oup.com/sleep/article/41/10/zsy144/5067408
+    grade: B
+    summary: >-
+      6845 balesetben érintett amerikai gépjárművezető módosított eset-kontroll elemzése (2005-2007).
+      A 7-9 óra alváshoz képest a baleset okozásának esélye 6 óra alvásnál OR=1,3 (95% CI 1,04-1,7),
+      5 óránál OR=1,9 (1,1-3,2), 4 óránál OR=2,9 (1,4-6,2), 4 óránál kevesebbnél OR=15,1 (4,2-54,4).
+    notes: >-
+      Valós közúti adat, nem labor - ezért mutatja meg, hogy a laborküszöbök baleseti kockázattá
+      fordíthatók. Önbevalláson alapuló alvásidő, retrospektív, tág konfidencia-intervallumok a
+      szélső kategóriákban (a 15,1-es OR alsó határa 4,2). Gépjárműre vonatkozik, nem kerékpárra;
+      a kerékpáros kitettség (sebesség, védtelenség, közúti forgalom) miatt a kockázat iránya
+      bizonyosan azonos, mértéke ismeretlen.
+
+  - key: waters-2018-hallucination
+    type: journal
+    authors: [Waters F., Chiu V., Atkinson A., et al.]
+    year: 2018
+    title: "Severe Sleep Deprivation Causes Hallucinations and a Gradual Progression Toward Psychosis With Increasing Time Awake"
+    journal: "Frontiers in Psychiatry 9:303"
+    doi: 10.3389/fpsyt.2018.00303
+    url: https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2018.00303/full
+    grade: A
+    summary: >-
+      21 vizsgálat, 760 egészséges résztvevő, 24 órától 11 napig terjedő alvásdeprivációval.
+      Időbeli progresszió: 24-48 óra között észlelési torzulások, szorongás, ingerlékenység,
+      deperszonalizáció, időbeli dezorientáció; 48-90 óra között komplex hallucinációk és
+      gondolkodászavar; 72 óra felett téveszmék, a kép akut pszichózist vagy toxikus delíriumot utánoz.
+      Modalitás szerint: vizuális a vizsgálatok 90%-ában, szomatoszenzoros 52%, auditív 33%.
+    notes: >-
+      A rendeződéshez a depriváció időtartamának nagyjából 50%-át kitevő normál alvás kellett, és
+      nem minden esetben szűntek meg teljesen a tünetek. Laborban, nyugalomban mértek: az ultraverseny
+      hozzáad fizikai kimerülést, hipoglikémiát, hipotermiát, dehidrációt és monoton vizuális
+      ingerkörnyezetet, amelyek a küszöböt valószínűleg LEJJEBB tolják - ezt azonban egyetlen
+      laborvizsgálat sem kvantifikálta. Az időablakok tájékoztató jellegűek, nagy egyéni szórással.
+
+  - key: davin-2025-microsleep
+    type: journal
+    authors: [Davin A., Tamisier R., Barateau L., et al.]
+    year: 2025
+    title: "Shedding light on microsleep episodes for comprehensive sleepiness assessment: a narrative review"
+    journal: "Sleep Medicine Reviews 82:102113"
+    doi: 10.1016/j.smrv.2025.102113
+    url: https://www.sciencedirect.com/science/article/pii/S1087079225000668
+    grade: C
+    summary: >-
+      Narratív áttekintés a mikroalvásról: rövid alvásbetörés az ébrenlétbe, jellemzően szemzárással
+      és csökkent válaszkészséggel. A klasszikus 3-15 másodperces definíciót a 2020-as BERN-kritériumok
+      1-15 másodpercre tágították, mert az epizódok kb. 40%-a az 1-3 másodperces tartományba esik.
+      EEG-kritérium: túlnyomó théta-aktivitás occipitálisan, hiányzó vagy elmosódott alfa, egyidejű
+      béta-csökkenés, legalább 80%-os szemzárás. Dózis-hatás összefüggést ír le a mikroalvás-epizódok
+      és a baleseti kockázat között, erősebben szimulátoros vizsgálatokban.
+    notes: >-
+      Szurrogát mérőszámok közül a PERCLOS-80 (a szemzárással töltött idő aránya), a pupillainstabilitás
+      és a szemhéjmozgás ígéretes; a bőrellenállás és a pulzusvariabilitás önmagában NEM megbízható -
+      ez közvetlen figyelmeztetés a sportórák/HRV-alapú "fáradtságjelzők" használatára ultraversenyen.
+      Narratív, nem szisztematikus áttekintés; klinikai (alvászavaros) populációkra fókuszál,
+      nem sportolókra.
+
+  - key: poudel-2018-microsleep
+    type: journal
+    authors: [Poudel G.R., Innes C.R.H., Jones R.D.]
+    year: 2018
+    title: "Temporal evolution of neural activity and connectivity during microsleeps when rested and following sleep restriction"
+    journal: "NeuroImage 174:263-273"
+    doi: 10.1016/j.neuroimage.2018.03.031
+    url: https://www.nzbri.org/resources/publications/451/Poudel_NeuroImage-174-2018_2018.pdf
+    grade: A
+    summary: >-
+      20 egészséges önkéntes (17 elemezve) 20 perces folyamatos vizuomotoros követési feladatot végzett
+      fMRI-ben kipihenten (7,84±0,93 óra alvás) és egyetlen éjszaka 4 órára korlátozott alvás után.
+      A mikroalvások (0,5-15 s) száma a 20 perc alatt átlagosan 11,4-ről 27,9-re nőtt, és a
+      mikroalvást mutató résztvevők aránya 7/17-ről 15/17-re emelkedett.
+    notes: >-
+      Egyetlen éjszaka MÉRSÉKELT (4 órás) alváskorlátozás - tehát nem is teljes depriváció - után
+      megkétszereződik a mikroalvások száma egy figyelmet igénylő, folyamatos vizuomotoros feladatban.
+      Ez a legközvetlenebb laborbizonyíték arra, hogy az ultraverseny szokásos 2-4 órás alvásadagja
+      mellett a kormányzási feladat közben rendszeres mikroalvás várható. Kis minta (n=17),
+      fekvő fMRI-helyzet, nem kerékpározás; a mikroalvások abszolút száma tényleges vezetésre
+      nem vihető át közvetlenül.

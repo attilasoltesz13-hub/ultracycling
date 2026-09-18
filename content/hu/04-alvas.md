@@ -5,14 +5,14 @@ title_en: "Sleep, fatigue and cognitive performance"
 level: [alap, halado, elit]
 disciplines: [onellato, kiseros, brevet, 24h]
 version: 0.0
-status: kutatas
-sources: []
+status: kutatas-kesz
+sources: [data/sources.yaml — questions Q1–Q9]
 estimated_pages: 16
 ---
 
 # Alvás, fáradtság, kognitív teljesítmény
 
-_(Pilot modul — a kutatási fázis után töltődik.)_
+_(Pilot modul — kutatási fázis lezárva 2026-09-18, lásd `docs/04-alvas-kutatas.md`; írás a jóváhagyás után.)_
 
 ## Kutatási kérdések
 

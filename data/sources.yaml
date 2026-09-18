@@ -1,17 +1,2407 @@
-# Forrástár — minden hivatkozás egy bejegyzés. Kulcs: szerző-év-rövidcím.
-# grade: A (RCT/meta), B (terep/megfigyelés), C (edzői/versenyzői konszenzus), D (feltörekvő)
-# type: journal | book | report | podcast | article | race-report | talk
-#
-# példa:
-# lastella-2024-sleep-ultra:
-#   type: journal
-#   authors: [Lastella M, ...]
-#   year: 2024
-#   title: "..."
-#   journal: "..."
-#   doi: 10.xxxx/xxxxx
-#   grade: B
-#   modules: [04]
-#   summary: "Egy-két mondatos kivonat: mit mért, mit talált, mire jó nekünk."
-#   notes: "Korlátok, mintanagyság, alkalmazhatóság."
-sources: {}
+# Forrástár — Hosszú távon
+# Egy bejegyzés = egy forrás. Kulcs: szerző-év-rövidcím. Egyesítve 2026-09-18 (04 modul kutatási fázis).
+# grade: A (RCT/meta/szisztematikus), B (terep/megfigyelés), C (edzői/versenyzői konszenzus, narratív review), D (feltörekvő, nem validált)
+# status: ellenorizve-doi = a DOI-t a kutató megnyitott kiadói/Crossref/PubMed oldalon látta; url-megnyitva = nincs DOI, az URL megnyitva
+# questions: a 04 modul kutatási kérdései (Q1–Q9), modules: mely modulok hivatkoznak rá
+# Fizetőfal/CAPTCHA miatt csak absztraktból/másodlagos forrásból vett számok a notes mezőben jelölve — a végleges szövegbe csak teljes szöveg ellenőrzése után.
+sources:
+  craven-2022-akut:
+    key: craven-2022-akut
+    type: journal
+    authors:
+    - Craven J.
+    - McCartney D.
+    - Desbrow B.
+    - et al.
+    year: 2022
+    title: 'Effects of Acute Sleep Loss on Physical Performance: A Systematic and Meta-Analytical Review'
+    venue: Sports Medicine 52(11):2669-2690
+    doi: 10.1007/s40279-022-01706-y
+    url: https://link.springer.com/content/pdf/10.1007/s40279-022-01706-y.pdf
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '69 publikáció, 77 vizsgálat, 227 kimenet, n=959 (89% férfi): akut alvásvesztés utáni fizikai teljesítményváltozás.
+      Állóképesség -5,55% (95% CI -8,12 - -2,99), anaerob teljesítmény -6,26% (-9,10 - -3,41), erő -2,85% (-4,47
+      - -1,23), készség/technika -20,9% (-27,0 - -14,9). Meta-regresszió: az ébredés óta eltelt óránként -0,36%/h
+      (restrikció), késői restrikciónál -0,55%/h.'
+    notes: Csak AKUT (1 éjszaka) alvásvesztés; 3+ éjszakára nem ad becslést. 89% férfi minta. Délutáni/esti tesztek
+      romlanak, a délelőttiek alig - ultratávon ez a második nap délutánját és az éjszakai szakaszt teszi kritikussá.
+      A "készség -20,9%" kevés vizsgálatból (9) származik, tág CI-vel; kerékpáros technikára (vonalvezetés, csoportos
+      haladás, defektszerelés) csak analógiásan vihető át.
+    status: ellenorizve-doi
+  lopes-2023-endurance:
+    key: lopes-2023-endurance
+    type: journal
+    authors:
+    - Lopes T.R.
+    - Pereira H.M.
+    - Bittencourt L.R.A.
+    - et al.
+    year: 2023
+    title: How much does sleep deprivation impair endurance performance? A systematic review and meta-analysis
+    venue: European Journal of Sport Science 23(7):1279-1292
+    doi: 10.1080/17461391.2022.2155583
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=%22How%20much%20does%20sleep%20deprivation%20impair%20endurance%20performance%22&resultType=core&format=json
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '31 vizsgálat, n=478: az alvásdepriváció közepes negatív hatása az állóképességi teljesítményre, összevont
+      SMD = -0,52. A hatás mértékét egyértelműen az edzés/teszt időtartama moderálta: a 30 percnél hosszabb terheléseknél
+      nagyobb a romlás.'
+    notes: 'Az edzettségi szint, a depriváció súlyossága, a tesztelés időpontja és a terhelés típusa NEM moderálta
+      szignifikánsan a hatást - vagyis edzett ultrázók sem védettek. Ultrakerékpárra ez a legdirektebb üzenet: minél
+      hosszabb a megterhelés, annál nagyobb a romlás; a labortesztek leghosszabbjai is jóval rövidebbek egy ultránál
+      (extrapolációs korlát).'
+    status: ellenorizve-doi
+  fullagar-2015-athletic:
+    key: fullagar-2015-athletic
+    type: journal
+    authors:
+    - Fullagar H.H.K.
+    - Skorski S.
+    - Duffield R.
+    - et al.
+    year: 2015
+    title: 'Sleep and Athletic Performance: The Effects of Sleep Loss on Exercise Performance, and Physiological
+      and Cognitive Responses to Exercise'
+    venue: Sports Medicine 45(2):161-186
+    doi: 10.1007/s40279-014-0260-0
+    url: https://link.springer.com/article/10.1007/s40279-014-0260-0
+    grade: C
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 'Narratív áttekintés: a maximális, rövid, bruttó motoros teljesítmények nagyrészt megőrizhetők alvásvesztés
+      után, a sportspecifikus és hosszabb, önszabályozott teljesítmények viszont romlanak. Autonóm idegrendszeri
+      egyensúlyvesztést ír le, amely a túledzettség tüneteit utánozza, valamint emelkedett gyulladásos citokinszinteket
+      és lassabb, pontatlanabb kognitív teljesítményt.'
+    notes: 'Nem szisztematikus, nincs összevont hatásméret - a benne leírt ellentmondásokat a későbbi meta-analízisek
+      (Craven 2022, Lopes 2023) oldják fel. Fő haszna a mechanizmus-keret: immun-, hormonális és autonóm válaszok,
+      amelyek többnapos verseny alatt halmozódnak. Ultrakerékpárra közvetlen adata nincs.'
+    status: ellenorizve-doi
+  vandongen-2003-doseresponse:
+    key: vandongen-2003-doseresponse
+    type: journal
+    authors:
+    - Van Dongen H.P.A.
+    - Maislin G.
+    - Mullington J.M.
+    - et al.
+    year: 2003
+    title: 'The Cumulative Cost of Additional Wakefulness: Dose-Response Effects on Neurobehavioral Functions and
+      Sleep Physiology From Chronic Sleep Restriction and Total Sleep Deprivation'
+    venue: Sleep 26(2):117-126
+    doi: 10.1093/sleep/26.2.117
+    url: https://academic.oup.com/sleep/article-abstract/26/2/117/2709164
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 48 egészséges felnőtt, 14 éjszakán át 4, 6 vagy 8 óra ágyban töltött idő, illetve 3 éjszaka teljes
+      depriváció. A 4 és 6 órás csoportban kumulatív, dózisfüggő teljesítményromlás minden kognitív feladaton; a
+      14 napi 6 órás alvás kognitív deficitje elérte a 2 éjszaka teljes depriváció szintjét. A PVT-kiesések közel
+      lineárisan nőttek a 15,84 órát meghaladó KUMULÁLT ébrenléttel.
+    notes: 'Kulcsleletet ad az önértékelés csalódásához: a résztvevők szubjektív álmossága az első napok után alig
+      nőtt tovább, és nem tudták megkülönböztetni a 4 és 6 órás feltételt, miközben az objektív teljesítmény folyamatosan
+      romlott. Labor, nem terhelés alatt; a napi 15,84 órás "ébrenléti költségvetés" ultraversenyen napi szinten
+      túllépésre kerül, így a modell szerint a deficit napról napra halmozódik.'
+    status: ellenorizve-doi
+  belenky-2003-restoration:
+    key: belenky-2003-restoration
+    type: journal
+    authors:
+    - Belenky G.
+    - Wesensten N.J.
+    - Thorne D.R.
+    - et al.
+    year: 2003
+    title: 'Patterns of performance degradation and restoration during sleep restriction and subsequent recovery:
+      a sleep dose-response study'
+    venue: Journal of Sleep Research 12(1):1-12
+    doi: 10.1046/j.1365-2869.2003.00337.x
+    url: https://jhanley.biostat.mcgill.ca/bios601/Surveys/Belenky2003.pdf
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 66 fő (16 nő, 50 férfi), 7 éjszaka 3 / 5 / 7 / 9 óra ágyidő, majd 3 regenerációs éjszaka. A 9 órás
+      csoport végig stabil; a 7 órás minimális romlás után stabilizálódott; az 5 órás kezdeti romlás után beállt
+      csökkent szinten, kiesései a 6-7. napon nőttek; a 3 órás csoport folyamatosan romlott a 7. napig.
+    notes: 'A legfontosabb korlátozó lelet többnapos versenyre: HÁROM regenerációs éjszaka után egyik korlátozott
+      csoport sem tért vissza a kiindulási szintre - az adaptív változások napokig fennmaradnak. Labor, fizikai
+      terhelés nélkül; az ultra alvásmintázata (töredezett, 20-90 perces alvások) nem egyezik a folyamatos, rövidített
+      éjszakával, így az átvitel korlátozott.'
+    status: ellenorizve-doi
+  limdinges-2010-pvt:
+    key: limdinges-2010-pvt
+    type: journal
+    authors:
+    - Lim J.
+    - Dinges D.F.
+    year: 2010
+    title: A Meta-Analysis of the Impact of Short-Term Sleep Deprivation on Cognitive Variables
+    venue: Psychological Bulletin 136(3):375-389
+    doi: 10.1037/a0018883
+    url: https://www.med.upenn.edu/uep/assets/user-content/documents/LimDinges2010MetaAnalysis.pdf
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '70 közlemény, 147 kognitív teszt, n=1533. A legnagyobb romlás az egyszerű figyelemben (PVT): kiesések
+      g=-0,762 (95% CI -0,948 - -0,576), reakcióidő g=-0,732 (-0,874 - -0,590). Munkamemória pontosság g=-0,555,
+      komplex figyelem pontosság g=-0,479, feldolgozási sebesség g=-0,302 - -0,245, következtetés g=-0,125.'
+    notes: 'Rövid távú (jellemzően <48 óra) depriváció; 3+ éjszakára nem általánosít. A gradiens gyakorlati jelentése:
+      az éberségtartás (PVT-kiesések, mikroalvás-közeli állapotok) romlik legelőször és legerősebben, a "gondolkodás"
+      (következtetés) csak enyhén - ezért az ultrázó szubjektíve "tisztának" érzi magát, miközben a vigilanciája
+      már súlyosan sérült.'
+    status: ellenorizve-doi
+  dawson-1997-alcohol:
+    key: dawson-1997-alcohol
+    type: journal
+    authors:
+    - Dawson D.
+    - Reid K.
+    year: 1997
+    title: Fatigue, alcohol and performance impairment
+    venue: Nature 388:235
+    doi: 10.1038/40775
+    url: https://www.nature.com/articles/40775
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 40 fő, félóránként ismételt számítógépes kéz-szem koordinációs (kiszámíthatatlan követési) feladat
+      elnyújtott ébrenlét, illetve kontrollált alkoholadagolás mellett. A 10. és 26. ébrenléti óra között a relatív
+      teljesítmény óránként átlagosan 0,74%-kal csökkent. 17 óra ébrenlét után a romlás megfelelt 0,05% véralkoholszintnek,
+      24 óra után kb. 0,10%-nak.
+    notes: 'Kis minta, egyetlen pszichomotoros feladat, laborkörnyezet - nem valós vezetés vagy kerékpározás. A
+      0,74%/óra lineáris közelítés csak a 10-26 órás ablakban érvényes, 26 órán túl nem extrapolálható. Oktatási
+      célra a legerősebb, legkönnyebben kommunikálható küszöb: "17 óra ébren = ittas vezetés határa" (Magyarországon
+      zéró tolerancia, tehát a hasonlat retorikai, nem jogi).'
+    status: ellenorizve-doi
+  williamson-2000-alcohol:
+    key: williamson-2000-alcohol
+    type: journal
+    authors:
+    - Williamson A.M.
+    - Feyer A.-M.
+    year: 2000
+    title: Moderate sleep deprivation produces impairments in cognitive and motor performance equivalent to legally
+      prescribed levels of alcohol intoxication
+    venue: Occupational and Environmental Medicine 57(10):649-655
+    doi: 10.1136/oem.57.10.649
+    url: https://oem.bmj.com/content/57/10/649
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 39 fő (30 közlekedési dolgozó, 9 katona), 28 órás ébrentartás vs. kontrollált alkoholadagolás. 17-19
+      óra folyamatos ébrenlét után a kognitív és motoros teljesítmény a 0,05% véralkoholszintnek megfelelő szintre
+      romlott; egyes teszteken a válaszidő akár 50%-kal lassabb lett, a pontosság szignifikánsan rosszabb. Hosszabb
+      ébrenlétnél a romlás elérte a maximális alkoholadag (~0,10%) szintjét.
+    notes: 'Megerősíti Dawson & Reid küszöbét független mintán és több feladaton - két független laborból származó
+      egybehangzó eredmény, ezért ez a Q1 legerősebben alátámasztott küszöbe. Korlát: max. 28 óra, tehát a 2-3.
+      éjszakára nincs adata; nem terhelés alatt mérve. A "pontosság vs. sebesség" különválása fontos: az ultrázó
+      lassulása kevésbé feltűnő számára, mint a hibázás.'
+    status: ellenorizve-doi
+  choong-2025-inhibition:
+    key: choong-2025-inhibition
+    type: journal
+    authors:
+    - Choong S.Y.
+    - Byrne J.E.M.
+    - Drummond S.P.A.
+    - et al.
+    year: 2025
+    title: A meta-analytic investigation of the effect of sleep deprivation on inhibitory control
+    venue: Sleep Medicine Reviews 80:102042
+    doi: 10.1016/j.smrv.2024.102042
+    url: https://www.sciencedirect.com/science/article/pii/S1087079224001461
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '24 vizsgálat, 712 egészséges felnőtt. Az alvásdepriváció közepesen rontja a gátlókontrollt: Go/No-Go
+      feladat Hedges g=-0,475, Stop Signal feladat g=-0,482 (mindkettő p<0,001) - több elkövetési (commission) hiba
+      és hosszabb stop-jel reakcióidő. 22 vizsgálat teljes depriváció (24-43 óra ébrenlét), 3 részleges restrikció
+      (2-6 nap, 3-6 óra alvás).'
+    notes: A gátlókontroll az impulzív, korrigálatlan döntések (hirtelen kormánymozdulat, kockázatos előzés, rossz
+      forgalmi rés megítélése) laborproxyja - ez teszi biztonsági kérdéssé. A részleges restrikciós alvizsgálat
+      nagyon kicsi (3 tanulmány), így a többnapos, krónikusan korlátozott alvásra vonatkozó becslés gyenge. Fizikai
+      terhelés nélküli labor.
+    status: ellenorizve-doi
+  wei-2024-risk:
+    key: wei-2024-risk
+    type: journal
+    authors:
+    - Wei X.
+    - Ma J.
+    - Liu S.-J.
+    - et al.
+    year: 2024
+    title: The effects of sleep deprivation on risky decision making
+    venue: Psychonomic Bulletin & Review 32(1):80-96
+    doi: 10.3758/s13423-024-02549-6
+    url: https://link.springer.com/article/10.3758/s13423-024-02549-6
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '25 kísérletes vizsgálat szisztematikus áttekintése egészséges felnőtteken, 47 kimenettel. Az eredmények
+      erősen ellentmondásosak: 13 kimenet (28%) fokozott kockázatkeresést, 6 (13%) csökkent kockázatkeresést, 28
+      (60%) semmilyen szignifikáns hatást nem mutatott. A hatást moderálta a nem, a nyereség-veszteség keretezés,
+      pszichotróp szerek használata és a depriváció időtartama.'
+    notes: 'A nőknél gyakoribb volt a kockázatkerülő irány (4/12 vs. 2/12 férfiaknál). Koffein és dextroamfetamin
+      részben tompította a fokozott kockázatvállalást - ultraversenyen gyakori a koffeinhasználat, ez zavaró tényező.
+      FONTOS ÓVATOSSÁG: a "fáradt ultrázó kockázatkeresőbb" állítás NEM tekinthető bizonyítottnak; a gátlókontroll
+      romlása (choong-2025) jobban alátámasztott, mint a kockázatpreferencia eltolódása.'
+    status: ellenorizve-doi
+  roberts-2019-cycling:
+    key: roberts-2019-cycling
+    type: journal
+    authors:
+    - Roberts S.S.H.
+    - Teo W.-P.
+    - Aisbett B.
+    - et al.
+    year: 2019
+    title: Effects of total sleep deprivation on endurance cycling performance and heart rate indices used for monitoring
+      athlete readiness
+    venue: Journal of Sports Sciences 37(23):2691-2701
+    doi: 10.1080/02640414.2019.1661561
+    url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1080/02640414.2019.1661561?fields=title,abstract,year,venue,authors,externalIds
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 13 állóképességi sportoló keresztezett elrendezésben, két egymást követő napon önszabályozott kerékpáros
+      időfutam, közte normál alvás vagy teljes alvásdepriváció. A deprivációs ág 2. napján az idő 10%-kal volt rosszabb
+      a normál alvás 2. napjához képest (64±7 vs 59±4 perc, p<0,01) és 11%-kal a saját 1. napjához képest (58±5
+      perc). A szubjektív/objektív intenzitásarány (RPE:átlagpulzus) emelkedett, a hangulatzavar és a PVT átlagos
+      válaszidő romlott.
+    notes: 'Kicsi minta (n=13), egyetlen éjszaka teljes depriváció - a 10%-os romlás a legkonkrétabb kerékpáros
+      szám, de nem extrapolálható 2-3. éjszakára. Gyakorlati üzenet a monitorozásra: az RPE:pulzus arány érzékenyebb
+      az alvásvesztésre, mint a nyers pulzusadat - ultraversenyen ez azt jelenti, hogy adott pulzus "nehezebbnek"
+      érződik, és a pulzusalapú zónavezérlés félrevezethet. Az anaerob küszöb korrelált a romlás mértékével (R=-0,73).'
+    status: ellenorizve-doi
+  temesi-2013-central:
+    key: temesi-2013-central
+    type: journal
+    authors:
+    - Temesi J.
+    - Arnal P.J.
+    - Davranche K.
+    - et al.
+    year: 2013
+    title: Does central fatigue explain reduced cycling after complete sleep deprivation?
+    venue: Medicine & Science in Sports & Exercise 45(12):2243-2253
+    doi: 10.1249/mss.0b013e31829ce379
+    url: https://static1.squarespace.com/static/55b7ffebe4b0568a75e3316b/t/59f9e9d16c31941828c3931c/1509550552676/Temesi+et+al.+Med+Sci+Sports+Exerc+2013+Does+Central+Fatigue+Explain+Reduced+Cycling+after+sleep+deprivation.pdf
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 12 aktív férfi (VO2max 60±7 ml/kg/perc), egy éjszaka teljes alvásdepriváció (~24 óra ébrenlét) vs.
+      kontroll; 40 perc szubmaximális kerékpározás a maximális aerob teljesítmény 65%-án, majd inkrementális teszt
+      kimerülésig. A kimerülésig eltelt idő 7,5%-kal csökkent (1137±253 s vs 1236±282 s, p=0,013), az RPE a 40 perces
+      szakaszban szignifikánsan magasabb volt (p=0,009). A maximális akaratlagos izomaktiváció és a motoros kiváltott
+      válasz NEM különbözött a két ág között.
+    notes: 'Kis minta, csak férfiak, egy éjszaka. Mechanizmus szempontjából kulcsfontosságú negatív lelet: a romlás
+      NEM magyarázható fokozott idegizomrendszeri ("központi") fáradással - a romlás elsősorban percepciós/motivációs
+      eredetű (az azonos munka nehezebbnek érződik). Ultrakerékpárra ez azt jelenti, hogy a beavatkozásnak a terhelésérzet
+      és a vigilancia kezelésére kell irányulnia, nem "izomregenerációra".'
+    status: ellenorizve-doi
+  gattoni-2025-recovery:
+    key: gattoni-2025-recovery
+    type: journal
+    authors:
+    - Gattoni C.
+    - Girardi M.
+    - Javadi A.-H.
+    - et al.
+    year: 2025
+    title: The effects of one-night sleep deprivation and one-night recovery sleep on endurance cycling performance
+    venue: European Journal of Applied Physiology
+    doi: 10.1007/s00421-025-05908-w
+    url: https://link.springer.com/article/10.1007/s00421-025-05908-w
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 26 amatőr kerékpáros/triatlonista (30,5 év, VO2peak 55,3 ml/kg/perc), 25 óra folyamatos ébrenlét vs.
+      kontroll, három egymást követő napon mérve. Az alvásdepriváció a mérsékelt intenzitású teljesítményt rontotta,
+      a magasabb RPE közvetítésével, de a 20 perces nagy intenzitású időfutamot NEM. Egyetlen éjszaka regeneráló
+      alvás elegendő volt a mérsékelt intenzitású állóképesség és a vigilancia helyreállításához.
+    notes: 'A legfrissebb, leginkább ultra-releváns dizájn: a hosszú, mérsékelt intenzitású (ultratempó) munka sérül,
+      a rövid, nagy intenzitású kirobbanó teljesítmény megőrizhető - ez magyarázza, hogy az ultrázó "még tud sprintelni",
+      miközben a tartós tempója összeomlik. Korlát: csak 1 éjszaka depriváció, csak férfiak, laborkörülmények; a
+      többnapos halmozódásra nem ad választ, és a regenerációra vonatkozó optimista lelet ELLENTMOND Belenky 3 éjszakás
+      nem-teljes helyreállásának (más dózis: 1 vs 7 éjszaka korlátozás).'
+    status: ellenorizve-doi
+  tefft-2018-crash:
+    key: tefft-2018-crash
+    type: journal
+    authors:
+    - Tefft B.C.
+    year: 2018
+    title: Acute sleep deprivation and culpable motor vehicle crash involvement
+    venue: Sleep 41(10):zsy144
+    doi: 10.1093/sleep/zsy144
+    url: https://academic.oup.com/sleep/article/41/10/zsy144/5067408
+    grade: B
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 6845 balesetben érintett amerikai gépjárművezető módosított eset-kontroll elemzése (2005-2007). A 7-9
+      óra alváshoz képest a baleset okozásának esélye 6 óra alvásnál OR=1,3 (95% CI 1,04-1,7), 5 óránál OR=1,9 (1,1-3,2),
+      4 óránál OR=2,9 (1,4-6,2), 4 óránál kevesebbnél OR=15,1 (4,2-54,4).
+    notes: Valós közúti adat, nem labor - ezért mutatja meg, hogy a laborküszöbök baleseti kockázattá fordíthatók.
+      Önbevalláson alapuló alvásidő, retrospektív, tág konfidencia-intervallumok a szélső kategóriákban (a 15,1-es
+      OR alsó határa 4,2). Gépjárműre vonatkozik, nem kerékpárra; a kerékpáros kitettség (sebesség, védtelenség,
+      közúti forgalom) miatt a kockázat iránya bizonyosan azonos, mértéke ismeretlen.
+    status: ellenorizve-doi
+  waters-2018-hallucination:
+    key: waters-2018-hallucination
+    type: journal
+    authors:
+    - Waters F.
+    - Chiu V.
+    - Atkinson A.
+    - et al.
+    year: 2018
+    title: Severe Sleep Deprivation Causes Hallucinations and a Gradual Progression Toward Psychosis With Increasing
+      Time Awake
+    venue: Frontiers in Psychiatry 9:303
+    doi: 10.3389/fpsyt.2018.00303
+    url: https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2018.00303/full
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: '21 vizsgálat, 760 egészséges résztvevő, 24 órától 11 napig terjedő alvásdeprivációval. Időbeli progresszió:
+      24-48 óra között észlelési torzulások, szorongás, ingerlékenység, deperszonalizáció, időbeli dezorientáció;
+      48-90 óra között komplex hallucinációk és gondolkodászavar; 72 óra felett téveszmék, a kép akut pszichózist
+      vagy toxikus delíriumot utánoz. Modalitás szerint: vizuális a vizsgálatok 90%-ában, szomatoszenzoros 52%,
+      auditív 33%.'
+    notes: 'A rendeződéshez a depriváció időtartamának nagyjából 50%-át kitevő normál alvás kellett, és nem minden
+      esetben szűntek meg teljesen a tünetek. Laborban, nyugalomban mértek: az ultraverseny hozzáad fizikai kimerülést,
+      hipoglikémiát, hipotermiát, dehidrációt és monoton vizuális ingerkörnyezetet, amelyek a küszöböt valószínűleg
+      LEJJEBB tolják - ezt azonban egyetlen laborvizsgálat sem kvantifikálta. Az időablakok tájékoztató jellegűek,
+      nagy egyéni szórással.'
+    status: ellenorizve-doi
+  davin-2025-microsleep:
+    key: davin-2025-microsleep
+    type: journal
+    authors:
+    - Davin A.
+    - Tamisier R.
+    - Barateau L.
+    - et al.
+    year: 2025
+    title: 'Shedding light on microsleep episodes for comprehensive sleepiness assessment: a narrative review'
+    venue: Sleep Medicine Reviews 82:102113
+    doi: 10.1016/j.smrv.2025.102113
+    url: https://www.sciencedirect.com/science/article/pii/S1087079225000668
+    grade: C
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 'Narratív áttekintés a mikroalvásról: rövid alvásbetörés az ébrenlétbe, jellemzően szemzárással és
+      csökkent válaszkészséggel. A klasszikus 3-15 másodperces definíciót a 2020-as BERN-kritériumok 1-15 másodpercre
+      tágították, mert az epizódok kb. 40%-a az 1-3 másodperces tartományba esik. EEG-kritérium: túlnyomó théta-aktivitás
+      occipitálisan, hiányzó vagy elmosódott alfa, egyidejű béta-csökkenés, legalább 80%-os szemzárás. Dózis-hatás
+      összefüggést ír le a mikroalvás-epizódok és a baleseti kockázat között, erősebben szimulátoros vizsgálatokban.'
+    notes: Szurrogát mérőszámok közül a PERCLOS-80 (a szemzárással töltött idő aránya), a pupillainstabilitás és
+      a szemhéjmozgás ígéretes; a bőrellenállás és a pulzusvariabilitás önmagában NEM megbízható - ez közvetlen
+      figyelmeztetés a sportórák/HRV-alapú "fáradtságjelzők" használatára ultraversenyen. Narratív, nem szisztematikus
+      áttekintés; klinikai (alvászavaros) populációkra fókuszál, nem sportolókra.
+    status: ellenorizve-doi
+  poudel-2018-microsleep:
+    key: poudel-2018-microsleep
+    type: journal
+    authors:
+    - Poudel G.R.
+    - Innes C.R.H.
+    - Jones R.D.
+    year: 2018
+    title: Temporal evolution of neural activity and connectivity during microsleeps when rested and following sleep
+      restriction
+    venue: NeuroImage 174:263-273
+    doi: 10.1016/j.neuroimage.2018.03.031
+    url: https://www.nzbri.org/resources/publications/451/Poudel_NeuroImage-174-2018_2018.pdf
+    grade: A
+    questions:
+    - Q1
+    - Q6
+    modules:
+    - '04'
+    summary: 20 egészséges önkéntes (17 elemezve) 20 perces folyamatos vizuomotoros követési feladatot végzett fMRI-ben
+      kipihenten (7,84±0,93 óra alvás) és egyetlen éjszaka 4 órára korlátozott alvás után. A mikroalvások (0,5-15
+      s) száma a 20 perc alatt átlagosan 11,4-ről 27,9-re nőtt, és a mikroalvást mutató résztvevők aránya 7/17-ről
+      15/17-re emelkedett.
+    notes: Egyetlen éjszaka MÉRSÉKELT (4 órás) alváskorlátozás - tehát nem is teljes depriváció - után megkétszereződik
+      a mikroalvások száma egy figyelmet igénylő, folyamatos vizuomotoros feladatban. Ez a legközvetlenebb laborbizonyíték
+      arra, hogy az ultraverseny szokásos 2-4 órás alvásadagja mellett a kormányzási feladat közben rendszeres mikroalvás
+      várható. Kis minta (n=17), fekvő fMRI-helyzet, nem kerékpározás; a mikroalvások abszolút száma tényleges vezetésre
+      nem vihető át közvetlenül.
+    status: ellenorizve-doi
+  hurdiel-2026-raf:
+    key: hurdiel-2026-raf
+    type: journal-article
+    authors:
+    - Hurdiel R
+    - Kurinec C
+    - Pezé T
+    - et al.
+    year: 2026
+    title: 'The Cognitive Costs of Sleep Deprivation in Ultra-Endurance Cycling: Insights From the Race Across France'
+    venue: Journal of Sleep Research
+    doi: 10.1111/jsr.70295
+    url: https://api.crossref.org/works/10.1111/jsr.70295
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    - Q3
+    - Q4
+    - Q5
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 23 ultrakerékpáros alvását mérték csuklós akcelerométerrel a 2024-es Race Across France (2588 km, 29
+      250 m szint) alatt, 4 óránként álmossági (KSS) és kognitív (go/no-go reversal) teszttel. Az átlagos alvás
+      228 perc/24 óra volt (tartomány 95–306 perc), és aki 24 óránként többet aludt, jobb helyezéssel ért célba;
+      aki kevesebbet, annál lassultak a reakcióidők és romlott a visszajelzés-alapú viselkedéskorrekció. Az alvási
+      hajlam csúcsa 00:00–04:00 közé, a leglassabb reakcióidők 05:00–09:00 közé, a leggyorsabbak 17:00–21:00 közé
+      estek.
+    notes: 'n=23 (40 jelentkezőből 10 kilépett, 7-nél eszközhiba) — kicsi minta, csak egy verseny. Ez az egyetlen
+      publikált mezőnyvizsgálat, amely ultrakerékpáros versenyen közvetlenül alvásmennyiség ↔ helyezés összefüggést
+      mutat, ezért Q2 sarokköve. A konkrét számadatokat (228 perc, <5 h 29 perc küszöb, napszaki mintázat) a Crossref-absztrakt
+      mellett a TOUR-magazin szakmai ismertetője adta, mert a teljes szöveg (PMC13357885) nem volt elérhető; a számokat
+      kiadói szövegből még érdemes ellenőrizni.
+
+      [másik kutatási szál megjegyzése] Megfigyeléses terepvizsgálat, n=23, nincs randomizáció, a helyezés és az
+      alvás közti összefüggés kétirányú lehet. Ez az egyetlen talált, kifejezetten ultrakerékpáros adatsor; a ~5,3
+      óra/24 h küszöb és a kimutatott 24 órás ritmus közvetlenül használható a tananyagban. Megjegyzendő, hogy az
+      eredmény (több alvás = jobb helyezés) ellentétes a guilherme-2026-ultra áttekintés fő megfigyelésével.
+
+      [másik kutatási szál megjegyzése] Az absztrakt erős összefüggést jelez az átlagos alvásidő és a helyezés között
+      (r = 0,80; p < 0,001) – a helyezésszám növekedésével (rosszabb helyezés) több alvás jár, azaz a gyorsabb versenyzők
+      kevesebbet aludtak. FONTOS: ez keresztmetszeti korreláció, NEM ok-okozat, és nem mond ellent annak, hogy egyéni
+      szinten az alváshiány rontja a kognitív teljesítményt. A reakcióidő 5 és 9 óra között romlott a leginkább,
+      17 és 21 óra között volt a leggyorsabb (cirkadián mintázat). A teljes szöveg PMC/Wiley oldalán reCAPTCHA-zott;
+      az adatok a ResearchGate absztraktból származnak.'
+    status: ellenorizve-doi
+    aliases:
+    - hurdiel-2026-raf
+    - hurdiel-raf-2026
+  hurdiel-2015-utmb:
+    key: hurdiel-2015-utmb
+    type: journal-article
+    authors:
+    - Hurdiel R
+    - Pezé T
+    - Daugherty J
+    - et al.
+    year: 2015
+    title: Combined effects of sleep deprivation and strenuous exercise on cognitive performances during The North
+      Face Ultra Trail du Mont Blanc (UTMB)
+    venue: Journal of Sports Sciences
+    doi: 10.1080/02640414.2014.960883
+    url: https://pubmed.ncbi.nlm.nih.gov/25333827/
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 17 futó kognitív teljesítményét mérték a 168 km-es UTMB alatt, 27–44 órás versenyidőkkel. A versenyzők
+      átlagosan mindössze 12 ± 17 perc pihenést/alvást vettek igénybe a verseny alatt. A kognitív romlás a reakcióidő
+      megnyúlásától a vizuális hallucinációkig terjedt, és a szerzők szerint a pihenés hosszától és a versenyben
+      töltött időtől függetlenül megjelent.
+    notes: n=17, csak befutók, nincs kontrollcsoport, a hallucinációk prevalenciáját az absztrakt nem számszerűsíti.
+      Egyéjszakás (<48 h) esemény, ezért a többnapos ultrakerékpárra csak korlátozottan vihető át. A leggyakrabban
+      idézett ultra-trail referencia.
+    status: ellenorizve-doi
+  bourlois-2026-naps:
+    key: bourlois-2026-naps
+    type: journal-article
+    authors:
+    - Bourlois V
+    - Boulagnon A
+    - Elsworth-Edelsten C
+    - et al.
+    year: 2026
+    title: Do power naps save sleepiness? Cognitive benefits of brief sleep during a 100 miles ultramarathon
+    venue: Sleep Medicine
+    doi: 10.1016/j.sleep.2026.109159
+    url: https://www.sciencedirect.com/science/article/pii/S1389945726003989
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 52 UTMB-befutónál (170 km, ~10 000 m szint; 43,9 ± 8,3 év) frissítőpontokon felajánlott 20 perces alvási
+      lehetőség hatását mérték; a teljes verseny alatti halmozott alvás 28,4 ± 21,9 perc volt. A CP3-nál tartott
+      szundi után a CP4-en a reakcióidő 53,4 ms-mal javult (p = 0,025), a KSS-álmosság pedig a CP2-n és CP3-on szignifikánsan
+      csökkent (p < 0,0001). A haszon késleltetve, a következő ellenőrzőpontokon jelentkezett.
+    notes: 'Kvázi-kísérleti mezőnyvizsgálat, nem randomizált; az alvás 26,1%-a a monitorozott pontokon kívül történt;
+      táplálkozás/koffein nem kontrollált. A legerősebb közvetlen bizonyíték arra, hogy a 20 perces mikroalvás verseny
+      közben mérhető kognitív hasznot hoz.
+
+      [másik kutatási szál megjegyzése] Terepvizsgálat, önszelekció (ki alszik és ki nem), futók nem kerékpárosok
+      – de a legközelebbi elérhető analógia. Kulcsüzenet ultrakerékpárosnak: a 20 perces nap után az objektív reakcióidő
+      NEM javul azonnal (alvási tehetetlenség), a haszon késleltetve jelentkezik – ezért a nap utáni első 15–30
+      perc technikailag könnyű szakaszra essen.'
+    status: ellenorizve-doi
+    aliases:
+    - bourlois-2026-powernap
+  lahart-2013-raam:
+    key: lahart-2013-raam
+    type: journal-article
+    authors:
+    - Lahart IM
+    - Lane AM
+    - Hulton A
+    - et al.
+    year: 2013
+    title: Challenges in Maintaining Emotion Regulation in a Sleep and Energy Deprived State Induced by the 4800
+      km Ultra-Endurance Bicycle Race; The Race Across AMerica (RAAM)
+    venue: Journal of Sports Science and Medicine
+    doi: null
+    url: https://www.jssm.org/jssm-12-481.xml-Fulltext
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: Négy férfi kerékpáros (37,5 ± 4,1 év) váltócsapatát követték a 4856 km-es RAAM alatt, amit 6 nap 10
+      óra 51 perc alatt, 3. helyen teljesítettek; az alvás 24 óránként 2,4 óra alatt maradt. A pihenőkben mért tényleges
+      alvás 130 ± 17 perc volt (alapérték 431 ± 21 perc), az alváshatékonyság 24 ± 4% (alapérték 84 ± 2%); a hosszabb,
+      6 órás pihenőkben közel háromszor annyi alvás jött össze, mint a 3 órásokban. A versenyzők a versenyidő kevesebb
+      mint 50%-ában voltak optimális érzelmi állapotban, a legnagyobb hangulatromlás az 1.–2. nap között következett
+      be.
+    notes: n=4, csak férfi, váltócsapat (nem szóló RAAM) — az általánosíthatóság erősen korlátozott, DOI nincs.
+      Gyakorlati üzenete a hosszabb, összefüggő pihenőblokkok hatékonysága.
+    status: url-megnyitva
+  nedelec-2022-camaron:
+    key: nedelec-2022-camaron
+    type: journal-article
+    authors:
+    - Nédélec M
+    - Chauvineau M
+    - Guilhem G
+    year: 2022
+    title: 'On the Road to Camarón: The Sleep of an Ultra-Endurance Athlete Cycling 10,000 km in 24 Days'
+    venue: International Journal of Environmental Research and Public Health
+    doi: 10.3390/ijerph19084543
+    url: https://www.mdpi.com/1660-4601/19/8/4543
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 'Egyetlen master ultrakerékpáros alvását követték 10 358 km / 24 nap alatt (~432 km és ~16 óra kerékpározás
+      naponta, ~27 km/h). Az éjszakai alvás 5:13 ± 0:30 órára csökkent a 7:00 ± 1:00 órás alapértékről, az alváshatékonyság
+      viszont változatlanul 93% maradt. Az alvásszerkezet erősen eltolódott: a mélyalvás (N3) 27 ± 5%-ról 46 ± 7%-ra
+      nőtt, a REM 25 ± 5%-ról 16 ± 6%-ra csökkent; az elalvás átlagosan 23:49-kor, az ébredés 5:13-kor történt.'
+    notes: 'n=1 esettanulmány, tapasztalt sportoló, szabályos napi ritmussal (nem versenyhelyzet, hanem folyamatos
+      etap-jellegű kihívás) — nem általánosítható. Fő tanulság: a krónikus alvásrestrikció alatt a homeosztatikus
+      nyomás a mélyalvást priorizálja a REM rovására.'
+    status: ellenorizve-doi
+  kishi-2024-ultramarathon:
+    key: kishi-2024-ultramarathon
+    type: journal-article
+    authors:
+    - Kishi A
+    - Millet GY
+    - Desplan M
+    - et al.
+    year: 2024
+    title: 'Sleep and Ultramarathon: Exploring Patterns, Strategies, and Repercussions of 1,154 Mountain Ultramarathons
+      Finishers'
+    venue: Sports Medicine - Open
+    doi: 10.1186/s40798-024-00704-w
+    url: https://link.springer.com/article/10.1186/s40798-024-00704-w
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 1154 hegyi ultramaraton-befutót kérdeztek ki két réunioni versenyen (Diagonale des Fous, 165 km / 9576
+      m; Trail de Bourbon, 111 km / 6433 m). A verseny előtti alvás 7,5 ± 1,0 óra, a verseny alatti halmozott alvás
+      a hosszabb versenyen 76 perc, a rövidebben 27 perc, a verseny utáni első 24 órában 9,9 ± 3,3 óra volt. A szundik
+      79,5%-a 00:00 és 05:00 közé esett és 82%-uk 30 percnél rövidebb volt; a halmozott alvás pozitívan korrelált
+      a befutóidővel (r = 0,44; p < 0,0001), a versenyzők ~80%-a számolt be alvásmegvonási tünetekről.
+    notes: 'A legnagyobb mintájú ultra-alvásvizsgálat, de retrospektív, önbevallásos; csak befutók (9 DNF kizárva),
+      ezért a DNF-kérdésre nem ad választ. A pozitív r itt NEM azt jelenti, hogy az alvás lassít: a lassabb futók
+      hosszabb ideig vannak pályán, tehát többet alszanak — fordított irányú következtetés tilos.
+
+      [másik kutatási szál megjegyzése] Pozitív korreláció a kumulált alvásidő és a célidő között (r = 0,44; p <
+      0,0001) – a lassabbak aludtak többet, ugyanaz az irány, mint a Race Across France-nál. A futók átlagosan –50
+      perc alvásadóssággal érkeztek a rajtba. 80%-uk beszámolt legalább egy alvásmegvonáshoz kötött tünetről (esés,
+      hallucináció); 75% két napon belül normalizálódott. Futóadat, kerékpárra csak óvatosan extrapolálható – de
+      a 30 perc alatti nap és a 00:00–05:00 csúcs átvihető minta.'
+    status: ellenorizve-doi
+    aliases:
+    - kishi-ultramarathon-2024
+  martin-2018-habits:
+    key: martin-2018-habits
+    type: journal-article
+    authors:
+    - Martin T
+    - Arnal PJ
+    - Hoffman MD
+    - et al.
+    year: 2018
+    title: Sleep habits and strategies of ultramarathon runners
+    venue: PLOS ONE
+    doi: 10.1371/journal.pone.0194705
+    url: https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0194705
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 636 ultramaratonista kérdőíves felmérése az alvási szokásokról és stratégiákról. A futók 73,9%-ának
+      volt verseny előtti alvásstratégiája (54,7% megnövelte az éjszakai alvást, ~20% nappali szundit használt),
+      de verseny közbeni alvásmenedzsmentről már csak 21% számolt be, leggyakrabban mikroszundi formájában. A verseny
+      alatti alvás mennyisége korrelált a befutóidővel a 36–60 órás (r = 0,48; p < 0,01) és a 60 óránál hosszabb
+      (r = 0,44; p < 0,001) versenyeken; alvászavart 24,5% jelzett, az Epworth-pontszám 8,9 ± 4,3, és 37,6% esett
+      a kóros nappali aluszékonyság tartományába (>10).
+    notes: 'Kényelmi minta, visszaemlékezéses torzítás, csak 221 teljes adatsor, nők aluképviselve (14,9%). Hallucináció-prevalenciát
+      és DNF-összefüggést nem vizsgál. Q7 szempontjából fontos: az alvásnyújtás mint felkészülési eszköz a gyakorlatban
+      már elterjedt, de verseny közbeni tervezés alig van.'
+    status: ellenorizve-doi
+  miller-2022-empty:
+    key: miller-2022-empty
+    type: journal-article
+    authors:
+    - Miller DJ
+    - Bianchi D
+    - Lastella M
+    year: 2022
+    title: 'Running on Empty: Self-Reported Sleep/Wake Behaviour during Ultra-Marathon Events Exceeding 100 Miles'
+    venue: European Journal of Investigation in Health, Psychology and Education
+    doi: 10.3390/ejihpe12070058
+    url: https://www.mdpi.com/2254-9625/12/7/58
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 119 sportoló 287 darab, 100 mérföldnél hosszabb versenyről számolt be önbevallásos kérdőívben. A 100–149
+      mérföldes versenyeken az összes alvás 12,1 ± 50,5 perc volt (a versenyek 74%-ában egyáltalán nem aludtak),
+      a 200+ mérföldeseken 248,6 ± 228,0 perc (~4 óra), átlagosan 4,1 alvási alkalomra elosztva. A leggyakoribb
+      minta a „kimerülésig megyek, aztán alszom" volt; az alvásmegvonás legjellemzőbb tünete a vizuális hallucináció,
+      a versenyek 26%-ában jelentették.
+    notes: Önbevallás, nagy szórás (SD > átlag a rövidebb kategóriában), elit és rekreációs futók keverve, befutás/DNF-összefüggést
+      nem elemez. Jó alátámasztás ahhoz, hogy a 24–36 óránál hosszabb eseményeknél a nulla alvás reális, de hallucinációval
+      jár.
+    status: ellenorizve-doi
+  lynch-2025-200mile:
+    key: lynch-2025-200mile
+    type: journal-article
+    authors:
+    - Lynch L
+    - Ginell KM
+    - Gray AR
+    - et al.
+    year: 2025
+    title: 'Running Under Conditions of Extreme Sleep Deprivation and Exhaustion: An Analysis of Performance and
+      Satisfaction of 200+ Mile (322+ Kilometer) Ultramarathon Runners'
+    venue: Wilderness & Environmental Medicine
+    doi: 10.1177/10806032251395944
+    url: https://journals.sagepub.com/doi/10.1177/10806032251395944
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 117 futó (67% férfi, átlagéletkor 47,2 év) adatait elemezték 200+ mérföldes (medián 217 mérföld) versenyekről.
+      A verseny alatti teljes alvás mediánja 5,63 óra volt, a leggyakoribb stratégia a „kimerülésig megyek" (38%).
+      A legjobb kvartilisbe kerülés esélyét a férfi nem (3,37-szeres esély), az alacsonyabb BMI (egységenként 15%-kal
+      kisebb esély) és — meglepő módon — a verseny előtti éjszaka 7 óránál rövidebb alvása jósolta.
+    notes: Keresztmetszeti, önbevallásos; a „kevesebb verseny előtti alvás = jobb helyezés" eredmény valószínűleg
+      zavaró változó (rutin, korai rajt, izgalom), nem oksági — a szerzők maguk is így értelmezik. Ez a legfontosabb
+      ELLENTMONDÓ adat a hurdiel-2026-raf mellett, érdemes explicit módon kezelni a tananyagban.
+    status: ellenorizve-doi
+  benchetrit-2024-backyard:
+    key: benchetrit-2024-backyard
+    type: journal-article
+    authors:
+    - Benchetrit S
+    - Badariotti JI
+    - Corbett J
+    - et al.
+    year: 2024
+    title: The effects of sleep deprivation and extreme exertion on cognitive performance at the world-record breaking
+      Suffolk Back Yard Ultra-marathon
+    venue: PLOS ONE
+    doi: 10.1371/journal.pone.0299475
+    url: https://journals.plos.org/plosone/article?id=10.1371%2Fjournal.pone.0299475
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 11 férfi backyard-ultrafutót teszteltek a világcsúcsot hozó Suffolk Back Yard Ultra alatt, átlagosan
+      23,8 ± 7,9 óra ébrenlét és 158,5 ± 53,8 km megtétele után. A kétválasztásos reakcióidő 77 ± 68 ms-mal nőtt
+      (p = 0,004), a Stroop-interferencia 4,3 ± 5,6 egységgel romlott (p = 0,028), a torony-feladattal mért döntéshozatal
+      viszont nem változott. A szerzők szerint a verseny előtti hét jó alvásminősége mérsékelheti ezeket a hatásokat.
+    notes: 'n=11, csak férfi (az egyetlen nőt kizárták), nincs objektív alvásmérés, nagy szórás a megtett távban.
+      Fontos részlet: nem minden kognitív domén romlik egyformán — a reakcióidő és a végrehajtó kontroll érzékenyebb,
+      mint a lassú, tervezős döntéshozatal.'
+    status: ellenorizve-doi
+  hurdiel-2012-sailing:
+    key: hurdiel-2012-sailing
+    type: journal-article
+    authors:
+    - Hurdiel R
+    - Monaca C
+    - Mauvieux B
+    - et al.
+    year: 2012
+    title: Field study of sleep and functional impairments in solo sailing races
+    venue: Sleep and Biological Rhythms
+    doi: 10.1111/j.1479-8425.2012.00570.x
+    url: https://link.springer.com/article/10.1111/j.1479-8425.2012.00570.x
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 16 szólóvitorlázó alvását követték egy kétszakaszos transzatlanti versenyen. A 24 órára vetített alvás
+      az 1. szakaszon 4,1 ± 0,4 óra, a hosszabb 2. szakaszon 4,6 ± 0,4 óra volt, polifázisos mintázatban. Az alvási
+      hajlam csúcsa éjfél körül volt (~50%), másodlagos csúccsal kora délután (~15%); a versenyzők technikai hibákról,
+      hangulatingadozásról és hallucinációkról számoltak be.
+    notes: n=16, terepi körülmények miatt korlátozott mérési pontosság; helyezéssel nem korrelálták az alvást. Az
+      ultrakerékpárra jól átvihető, mert szintén többnapos, önellátó, saját döntésű alvásütemezés — és megerősíti
+      a kétcsúcsú (éjfél + kora délután) alvási hajlamot.
+    status: ellenorizve-doi
+  davidson-2026-anomalous:
+    key: davidson-2026-anomalous
+    type: journal-article
+    authors:
+    - Davidson EE
+    - Davidson SL
+    - Glue P
+    year: 2026
+    title: 'Anomalous Perceptual Experience During Ultra-Endurance Sport: A Systematic Review'
+    venue: Wilderness & Environmental Medicine
+    doi: 10.1177/10806032261423071
+    url: https://journals.sagepub.com/doi/full/10.1177/10806032261423071
+    grade: A
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 14 tanulmány (4 esetismertetés, 4 esetsorozat, 4 mezőnyvizsgálat, 2 keresztmetszeti felmérés, összesen
+      ~1400 fő) szisztematikus áttekintése hegymászás, ultrafutás, szólóvitorlázás, kutyaszánhajtás területéről.
+      Az egyik felmérésben 34%-os hallucináció-prevalenciát találtak, egy hegymászó-beszámoló elemzésben 83-ból
+      60 esetben, egy ultrafutó-vizsgálatban 21-ből 21 sportolónál jelent meg anomális észlelés. A tünetek jellemzően
+      24 óránál hosszabb terhelés után, sötétben jelentkeztek, és az alvásmegvonás bizonyult a legkonzisztensebben
+      jelentett kiváltó tényezőnek.
+    notes: Erősen heterogén dizájnok és minőség, sok retrospektív önbevallás, kontrollcsoportok hiánya, döntően
+      férfi/nyugati minta, egységes fogalomhasználat hiánya. A prevalenciaszámok ezért tartományként (nem pontbecslésként)
+      kezelendők.
+    status: ellenorizve-doi
+  smith-2023-cycling-review:
+    key: smith-2023-cycling-review
+    type: journal-article
+    authors:
+    - Smith A
+    - Buadze A
+    - Colangelo J
+    - et al.
+    year: 2023
+    title: 'A narrative review of sleep deprivation in ultra-endurance cycling: Improving mental health awareness
+      and regulatory emphasis'
+    venue: Sports Psychiatry
+    doi: 10.1024/2674-0052/a000032
+    url: https://doaj.org/article/b0c53b4a4b924890a5cb9f89ed0ebd66
+    grade: C
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: Narratív áttekintés az ultrakerékpáros versenyek (RAAM, transzkontinentális típusú események) alvásmegvonásáról;
+      mindössze 7 releváns tanulmányt azonosítottak. A szerzők szerint az alvásmegvonás és a szakaszos, akut rövid
+      alvás a sportág alapvető jellemzője, a mentális egészségre gyakorolt hatását azonban gyakorlatilag nem kutatták.
+      Szabályozói és rendezői szintű beavatkozásokat (kötelező pihenő, monitorozás) sürgetnek.
+    notes: Narratív, nem szisztematikus; nem közöl saját adatot. Fő értéke, hogy dokumentálja a bizonyítékhiányt
+      (7 tanulmány az egész sportágra) és a pszichiátriai kockázat kérdését.
+    status: ellenorizve-doi
+  fachan-2026-postrace:
+    key: fachan-2026-postrace
+    type: journal-article
+    authors:
+    - Fachan F
+    - Vilcourt F
+    - Lemarchand B
+    - et al.
+    year: 2026
+    title: 'Sleep disturbances after an ultra-trail endurance race: a field study'
+    venue: 'Sleep Medicine: X'
+    doi: 10.1016/j.sleepx.2026.100197
+    url: https://www.sciencedirect.com/science/article/pii/S259014272600025X
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 18 sportolót (15 férfi, 3 nő; 34,6 ± 8,1 év) követtek aktigráfiával az Ultra Marathon des Cirques (64
+      km, 5000 m szint, 03:30-as rajt, átlagos versenyidő 13,8 ± 5,8 óra) után. A verseny utáni 1., 2. és 4. éjszakán
+      csökkent az alváshatékonyság, az 1.–2. éjszakán nőtt az éjszakai ébrenléti idő, és az 1.–4. éjszakán végig
+      emelkedett volt a WASO és az ébredések száma (mind p < 0,05), miközben a teljes alvásidő nem változott. A
+      szubjektív alvásromlás lényegében csak az első éjszakára korlátozódott.
+    notes: 'n=18, nincs poliszomnográfia (aktigráfia nem ad alvásfázis-bontást), csak 3 nő, kronotípus nem mért,
+      és a verseny „csak" ~14 órás. Legfontosabb üzenet: az objektív alvászavar 3–4 éjszakán át tart, miközben a
+      sportoló szubjektíven már rendben érzi magát — vagyis az önbevallás alulbecsli a regenerációs igényt.'
+    status: ellenorizve-doi
+  baron-2022-utmb-recovery:
+    key: baron-2022-utmb-recovery
+    type: journal-article
+    authors:
+    - Baron P
+    - Hermand É
+    - Elsworth-Edelsten C
+    - et al.
+    year: 2022
+    title: Sleep and Subjective Recovery in Amateur Trail Runners After the Ultra-Trail du Mont Blanc (UTMB)
+    venue: Journal of Science in Sport and Exercise
+    doi: 10.1007/s42978-021-00154-w
+    url: https://link.springer.com/article/10.1007/s42978-021-00154-w
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 19 amatőr UTMB-befutót követtek aktigráfiával a verseny előtti 10. naptól a verseny utáni 10. napig.
+      A teljes alvásidő nem változott érdemben a verseny hatására, viszont a 2. verseny utáni éjszakán kifejezett
+      WASO-csúcs jelent meg, és a WASO pozitívan korrelált az izomfájdalommal. A szubjektív regeneráció (Hooper-index)
+      az 5. napig emelkedett maradt, a teljes helyreállás körülbelül 6 napot vett igénybe, a fiatalabbak gyorsabban
+      regenerálódtak.
+    notes: 'n=19, kis minta, aktigráfia PSG helyett, csak befutók. Megerősíti a fachan-2026-postrace mintázatot:
+      nem a hossz, hanem a folytonosság (WASO, ébredések) romlik napokig.'
+    status: ellenorizve-doi
+  mah-2011-extension:
+    key: mah-2011-extension
+    type: journal-article
+    authors:
+    - Mah CD
+    - Mah KE
+    - Kezirian EJ
+    - et al.
+    year: 2011
+    title: The effects of sleep extension on the athletic performance of collegiate basketball players
+    venue: Sleep
+    doi: 10.5665/sleep.1132
+    url: https://academic.oup.com/sleep/article/34/7/943/2596050
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 11 egyetemi kosárlabdázó 5–7 héten át napi 10 óra ágyban töltött időre tért át, ami 110,9 ± 79,7 perccel
+      több tényleges alvást jelentett az alapidőszakhoz képest. A sprintidő 16,2 ± 0,61 s-ról 15,5 ± 0,54 s-ra javult,
+      a büntetődobás-pontosság 9%-kal, a hárompontos pontosság 9,2%-kal nőtt, a reakcióidő szignifikánsan csökkent
+      (p < 0,01), és a nappali aluszékonyság is mérséklődött.
+    notes: 'n=11, nincs kontrollcsoport és nincs randomizáció (egykarú, „baseline → intervenció" dizájn), tanulási/szezonhatás
+      nem zárható ki — ezért B, nem A. Nem ultrasport és nem állóképességi: az átvitel az ultrakerékpárra közvetett.'
+    status: ellenorizve-doi
+  silva-2021-extension-sr:
+    key: silva-2021-extension-sr
+    type: journal-article
+    authors:
+    - Silva AC
+    - Silva A
+    - Edwards BJ
+    - et al.
+    year: 2021
+    title: 'Sleep extension in athletes: what we know so far – A systematic review'
+    venue: Sleep Medicine
+    doi: 10.1016/j.sleep.2020.11.028
+    url: https://www.sciencedirect.com/science/article/abs/pii/S1389945720305281
+    grade: A
+    questions:
+    - Q2
+    - Q7
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 'Szisztematikus áttekintés: 74 azonosított cikkből mindössze 2 felelt meg a beválasztási kritériumoknak,
+      amelyekben az alvást 26–106 perccel nyújtották meg a szokásoshoz képest. A vizsgált 15 teljesítménymutatóból
+      6-nál mutatkozott nagy hatásméret, a többinél elhanyagolható vagy közepes. A bizonyíték minősége nagyon alacsonytól
+      közepesig terjedt, a randomizált vizsgálatnál magas torzítási kockázattal.'
+    notes: 'A legfontosabb józanító forrás: az „alvásnyújtás növeli a teljesítményt" állítás mögött 2021-ben mindössze
+      2 tanulmány állt. A szerzők ajánlása inkább a stabil, egyéni igényhez igazított alvásrutin, mint az alvásnyújtás
+      mint teljesítménystratégia.
+
+      [másik kutatási szál megjegyzése] A bizonyíték minősége "very low"–"moderate", publikációs torzítás gyanúja,
+      kerékpáros minta csak egy vizsgálatban. A hatások főleg rövid, robbanékony és célzó feladatokban jelentkeztek,
+      nem tartós aerob teljesítményben – ultrakerékpáros teljesítményre közvetlen bizonyíték nincs. Gyakorlati üzenet:
+      +30–100 perc/éj reálisan tartható protokoll.'
+    status: ellenorizve-doi
+    aliases:
+    - coelhosilva-2021-extension
+  juginovic-2026-banking:
+    key: juginovic-2026-banking
+    type: journal-article
+    authors:
+    - Juginović A
+    - Rodman L
+    year: 2026
+    title: 'The Role of Sleep Banking in Reducing Cognitive and Motor Impairments from Subsequent Sleep Restriction:
+      A Narrative Review'
+    venue: Clocks & Sleep
+    doi: 10.3390/clockssleep8010008
+    url: https://www.mdpi.com/2624-5175/8/1/8
+    grade: B
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: 12 tanulmány (ebből 7 kísérletes vizsgálat, ~140 fő) narratív áttekintése az „alvásbankolásról". Rupp
+      és mtsai protokolljában napi 1–2 órával megnyújtott alvás egy héten át, majd 3 órás ágyban töltött idő mellett
+      a bankoló csoportban a 7. napra ~6 PVT-kihagyás jelentkezett a kontroll ~12-vel szemben; Arnal és mtsai vizsgálatában
+      6 éjszakán át ~9,8 óra ágyidő, majd ~38 órás teljes alvásmegvonás mellett ~8 vs ~16 kihagyás, és a regenerációs
+      szakaszban is gyorsabb reakcióidő (~258 ms vs ~280 ms).
+    notes: Narratív, nem szisztematikus review; kis mintás laborvizsgálatokra épül, nem sportolókon és nem terepen.
+      A szerzők maguk jelzik, hogy szinte kizárólag a homeosztatikus (S) folyamatot fedi le, a cirkadián (C) komponenst
+      nem — pont az, ami az ultrakerékpárban kritikus.
+    status: ellenorizve-doi
+  walsh-2021-consensus:
+    key: walsh-2021-consensus
+    type: journal-article
+    authors:
+    - Walsh NP
+    - Halson SL
+    - Sargent C
+    - et al.
+    year: 2021
+    title: 'Sleep and the athlete: narrative review and 2021 expert consensus recommendations'
+    venue: British Journal of Sports Medicine
+    doi: 10.1136/bjsports-2020-102025
+    url: https://www.sportgeneeskunde.com/wp-content/uploads/Br-J-Sports-Med-2021-Walsh-consensus-statement-sleep-and-the-athlete.pdf
+    grade: C
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: Nemzetközi szakértői konszenzus (BJSM 2021; 55:356–368) a sportolók alvásáról. Felnőtteknek napi 7–9
+      óra alvást ajánl (tinédzsereknek 8–10 órát), a sportolóknál a terhelés függvényében többet; alvásnyújtásra
+      9–10 órás alváslehetőség-ablakot javasol, amelynek már egy hete is hasznos lehet fontos verseny előtt. A szundikra
+      30 percnél rövidebb hosszt ajánl 13:00–16:00 között, illetve 15–20 perces „kávészundit" a délutáni álmosság
+      ellen.
+    notes: Konszenzus, nem eredeti adat; az ajánlások általános sportolói populációra vonatkoznak, többnapos alvásmegvonásos
+      versenyre nincs külön protokollja. Idézhető keretrendszerként a felkészülési időszakra, nem a verseny alatti
+      taktikára.
+    status: ellenorizve-doi
+  vitale-2019-hygiene:
+    key: vitale-2019-hygiene
+    type: journal-article
+    authors:
+    - Vitale KC
+    - Owens R
+    - Hopkins SR
+    - et al.
+    year: 2019
+    title: 'Sleep Hygiene for Optimizing Recovery in Athletes: Review and Recommendations'
+    venue: International Journal of Sports Medicine
+    doi: 10.1055/a-0905-3103
+    url: https://escholarship.org/content/qt4s341444/qt4s341444.pdf
+    grade: C
+    questions:
+    - Q2
+    - Q7
+    modules:
+    - '04'
+    summary: Áttekintő cikk és ajánláscsomag (Int J Sports Med 40(8):535–543). Rögzíti, hogy a legtöbb felnőttnek
+      7–9 óra alvásra van szüksége, az olimpiai sportolók viszont jellemzően csak 6,5–6,8 órát alszanak, miközben
+      az elit sportolói cél akár 9 óra is lehet. Az alvás kb. 2 órával való megnövelése reakcióidő-, hangulat-,
+      sprint- és technikai pontosságjavulással járt; a szundikra 30–60 percet ajánl, és külön tárgyalja az „alvásbankolást"
+      tervezett alvásmegvonás előtt.
+    notes: Narratív review, nem szisztematikus, ajánlásai nagyrészt csapatsportokból származó vizsgálatokra épülnek.
+      Az ultra-specifikus (>24 órás verseny alatti) alváskezelésre nem tér ki.
+    status: ellenorizve-doi
+  rupp-2009-banking:
+    key: rupp-2009-banking
+    type: controlled-lab-trial
+    authors:
+    - Rupp TL
+    - Wesensten NJ
+    - Bliese PD
+    - et al.
+    year: 2009
+    title: 'Banking Sleep: Realization of Benefits During Subsequent Sleep Restriction and Recovery'
+    venue: Sleep
+    doi: 10.1093/sleep/32.3.311
+    url: https://academic.oup.com/sleep/article-abstract/32/3/311/3741695
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 24 egészséges felnőtt (18–39 év) 1 héten át vagy 10 óra ágyban töltött időt (Extended), vagy a szokásos
+      ~7,09 órát (Habitual) kapott, majd 7 éjszaka 3 órás alvásmegvonás és 5 éjszaka 8 órás regeneráció következett.
+      A Habitual csoportban a restrikció alatt több PVT-kiesés (lapse) és rövidebb MWT-alvási latencia volt; az
+      Extended csoport PVT-lapse értéke már az első regenerációs éjszaka után helyreállt, míg a Habitual csak fokozatosan,
+      öt nap alatt javult. Szubjektív álmosságban nem volt csoportkülönbség.
+    notes: 'Ez a "sleep banking" alapvizsgálata: 10 h TIB × 7 éjszaka, párhuzamos csoportos elrendezés, n=24 (csoportonként
+      12) – kicsi minta, nem sportolók, laborkörnyezet. A védőhatás krónikus részleges megvonásra (3 h/éj) vonatkozik,
+      nem egy 24–48 órás versenyre; ultrakerékpárosra való átvitel extrapoláció. A szubjektív álmosság hiányzó különbsége
+      figyelmeztet: a versenyző "érzésre" nem fogja észlelni a banking előnyét.'
+    status: ellenorizve-doi
+  arnal-2015-extension:
+    key: arnal-2015-extension
+    type: randomized-crossover-lab
+    authors:
+    - Arnal PJ
+    - Sauvet F
+    - Leger D
+    - et al.
+    year: 2015
+    title: Benefits of Sleep Extension on Sustained Attention and Sleep Pressure Before and During Total Sleep Deprivation
+      and Recovery
+    venue: Sleep
+    doi: 10.5665/sleep.5244
+    url: https://academic.oup.com/sleep/article/38/12/1935/2417960
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 14 egészséges férfi (26–37 év) 6 éjszakán át átlag 9,8 ± 0,1 óra alvást kapott (EXT) a szokásos 8,2
+      ± 0,1 órával (HAB) szemben, majd teljes éjszakai alvásmegvonás és regeneráció következett. Az EXT feltételben
+      kiindulási állapotban hosszabb MSLT-latencia (kisebb alvásnyomás), a megvonás alatt kevesebb PVT-lapse, gyorsabb
+      reakcióidő és kevesebb mikroalvás volt. Az előny egy regenerációs éjszaka után is megmaradt.
+    notes: 'Kicsi (n=14), csak férfi minta. A protokoll gyakorlatban használható: +1,5–1,6 óra/éj 6 éjszakán át.
+      Egyetlen átvirrasztott éjszakára modellez – ez áll a legközelebb egy 24–36 órás ultrakerékpáros etaphoz. Fizikai
+      teljesítményt (teljesítmény wattban) nem mért, csak figyelmet/neuromuszkuláris funkciót.'
+    status: ellenorizve-doi
+  balkin-2025-pro:
+    key: balkin-2025-pro
+    type: editorial-debate
+    authors:
+    - Balkin TJ
+    - Rupp TL
+    year: 2025
+    title: 'Pro: Does sleep banking produce a surplus of sleep-dependent brain resources?'
+    venue: Sleep
+    doi: 10.1093/sleep/zsaf250
+    url: https://academic.oup.com/sleep/article-abstract/48/12/zsaf250/8321788
+    grade: C
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 'A PRO-oldal érvelése szerint az alvás "bankolása" valós tartalékot képez: a Rupp-féle 10 óra ágyban/éj
+      × 1 hét protokoll (1) mérsékelte az alvásmegvonás okozta éberség- és teljesítménycsökkenést a rákövetkező
+      restrikció alatt, és (2) gyorsította a regenerációt. A szerzők elismerik, hogy vitatott, vajon többlet-erőforrás
+      keletkezik-e, vagy csak a meglévő alvásadósság törlesztése történik.'
+    notes: 'Szakértői álláspont, nem új adat; konkrét hatásméretet nem közöl. Ultrakerékpárosnak a gyakorlati következtetés
+      ugyanaz mindkét értelmezés mellett: a verseny előtti hetekben érdemes alvásadósság nélkül állni a rajthoz.'
+    status: ellenorizve-doi
+  raizen-2025-procon:
+    key: raizen-2025-procon
+    type: editorial-debate
+    authors:
+    - Raizen DM
+    year: 2025
+    title: Can sleep be "banked"? A PRO-CON debate
+    venue: Sleep
+    doi: 10.1093/sleep/zsaf255
+    url: https://academic.oup.com/sleep/article/48/12/zsaf255/8240160
+    grade: C
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 'Bevezető a 2025-ös PRO-CON vitához: ugyanazokat a vizsgálatokat a CON-oldal úgy értelmezi, hogy az
+      alvás inkább hitelkártya (a kölcsönvett ébrenlétet vissza kell fizetni) vagy benzintank (nem tölthető túl),
+      semmint megtakarítási számla. Mindkét fél elismeri, hogy a kérdés eldöntéséhez az alvás sejtszintű funkciójának
+      megértése kellene; állatmodellekben az alvásnyújtás hatása vegyes.'
+    notes: 'Ez a legfrissebb jelzés arra, hogy a "sleep banking" mechanizmusa 2025-ben is vitatott. Tankönyvi használatra:
+      a jelenség empirikusan reprodukált, az elméleti magyarázat nem konszenzusos – ne ígérjünk "alvástartalékot"
+      a versenyzőnek.'
+    status: ellenorizve-doi
+  guilherme-2026-ultra:
+    key: guilherme-2026-ultra
+    type: systematic-review
+    authors:
+    - Guilherme LQ
+    - et al.
+    year: 2026
+    title: 'The Role of Sleep on Physical and Cognitive Performance of Ultra-Endurance Athletes: A Systematic Review'
+    venue: Journal of Clinical Medicine
+    doi: 10.3390/jcm15041398
+    url: https://www.mdpi.com/2077-0383/15/4/1398
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 16 vizsgálat, 1389 ultratávos sportoló; a három vizsgált stratégia a verseny alatti nappali alvás (nap),
+      a verseny előtti alvásnyújtás és a sleep banking. A gyorsabban célba érők kevesebbet vagy egyáltalán nem aludtak
+      a verseny alatt; a verseny előtti alvásnyújtás és a több könnyű alvás jobb kimenettel járt. Kognitív téren
+      a verseny előtti alvásminőség és a verseny közbeni rövid alvások javítottak, ugyanakkor a tesztelés előtt
+      felhalmozott több alvás óránként kb. 2,7-tel kevesebb helyes választ jelentett.
+    notes: 'Túlnyomórészt megfigyeléses terepadat: a "kevesebb alvás = gyorsabb idő" összefüggés erősen konfundált
+      (a gyorsabb versenyzőnek egyszerűen kevesebb ideje van aludni), ok-okozati következtetésre nem alkalmas. A
+      2,7 válasz/óra fordított összefüggés ellentmond a Q3 laborbizonyítéknak – a térképben ütközésként jelölve.'
+    status: ellenorizve-doi
+  lastella-2021-nap:
+    key: lastella-2021-nap
+    type: systematic-review
+    authors:
+    - Lastella M
+    - Halson SL
+    - Vitale JA
+    - et al.
+    year: 2021
+    title: To Nap or Not to Nap? A Systematic Review Evaluating Napping Behavior in Athletes and the Impact on Various
+      Measures of Athletic Performance
+    venue: Nature and Science of Sleep
+    doi: 10.2147/nss.s315556
+    url: https://www.dovepress.com/to-nap-or-not-to-nap-a-systematic-review-evaluating-napping-behavior-i-peer-reviewed-fulltext-article-NSS
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 37 vizsgálat áttekintése 20–90 perces nappali alvásokról, optimális időablakként a 13:00–16:00 sávot
+      azonosítva. A sportteljesítményre 9 vizsgálat (24,7%) pozitív, 5 (13,5%) semleges, 2 (5,4%) negatív hatást
+      talált; az előny nagyobb volt alváshiányos, mint kipihent sportolóknál. Öt kognitív vizsgálatból négy javulást
+      mutatott vizuális reakcióidőben, figyelemben és mentális rotációban; a szerzők 30 perc pufferidőt javasolnak
+      ébredés után az alvási tehetetlenség (sleep inertia) lecsengésére.
+    notes: 'Heterogén protokollok, sok kis mintás vizsgálat, zömmel csapatsport és délutáni (nem éjszakai) időzítés.
+      Az ultrakerékpáros helyzet ettől eltér: éjszakai időzítés, halmozott alváshiány, terepkörülmények. A 30 perces
+      "ébredés utáni puffer" és a 20–90 perces sáv azonban közvetlenül protokollba írható.'
+    status: ellenorizve-doi
+  boukhris-2026-napmeta:
+    key: boukhris-2026-napmeta
+    type: meta-analysis
+    authors:
+    - Boukhris O
+    - Trabelsi K
+    - Suppiah H
+    - et al.
+    year: 2026
+    title: 'The effects of daytime napping on psychophysiological measures in physically active individuals and
+      athletes: A systematic review, meta-analysis, and meta-regression, with assessment of the certainty of evidence'
+    venue: Biology of Sport
+    doi: 10.5114/biolsport.2026.153310
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC12884900/
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '35 vizsgálat, 489 sportoló/fizikailag aktív résztvevő, 20–90 perces nappali alvások (gyakorlatilag
+      hatékony sáv: 25–90 perc). Normál éjszakai alvás után a nap csökkentette a fáradtságot (SMD 0,91; p=0,01),
+      a hangulati zavart (POMS SMD 0,61; p=0,008), a terhelés alatti (SMD 1,62; p=0,008) és utáni RPE-t (SMD 1,11;
+      p=0,007), és javította az észlelt regenerációt (SMD 1,66; p=0,009); az álmosságra (SMD 1,09; p=0,10) és izomlázra
+      (SMD 1,57; p=0,06) nem volt szignifikáns hatás. Meta-regresszió: minden további napperc 0,01 (terhelés alatti)
+      illetve 0,026 (utáni) RPE-hatásmérettel járt.'
+    notes: 'Kulcskorlát: részleges alvásmegvonás után a nap NEM javította szignifikánsan az álmosságot (SMD 1,03;
+      p=0,11) és a fáradtságot (SMD 0,79; p=0,07) – vagyis épp abban a helyzetben gyengül a bizonyíték, ami az ultrakerékpárosra
+      jellemző. A bizonyosság csak az RPE-nél "moderate", máshol low/very low. A PMC-rekordban 2025-ös online és
+      2026-os DOI-évszám egyaránt szerepel (vol. 43).'
+    status: ellenorizve-doi
+  hilditch-2019-inertia:
+    key: hilditch-2019-inertia
+    type: narrative-review
+    authors:
+    - Hilditch CJ
+    - McHill AW
+    year: 2019
+    title: 'Sleep inertia: current insights'
+    venue: Nature and Science of Sleep
+    doi: 10.2147/nss.s188911
+    url: https://www.dovepress.com/sleep-inertia-current-insights-peer-reviewed-fulltext-article-NSS
+    grade: C
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 'Áttekintés az alvási tehetetlenségről: a legnagyobb teljesítményromlás az ébredést követő 30 percen
+      belül jelentkezik, a teljes lecsengés feladattól függően kb. 1–3,5 óra. Súlyosbítja a mélyalvásból (N3/SWS)
+      való ébredés, a cirkadián mélypont (biológiai éjszaka, ~03:00), valamint az előzetes akut vagy krónikus alváshiány.
+      Ellenszerek: koffein az alvás ELŐTT bevéve kivédi a tehetetlenséget; a fényexpozíció objektív teljesítményre
+      alig hat; a zene a szubjektív álmosságon segít; a napot érdemes 30 perc alá tartani, mert az SWS jellemzően
+      kb. 30 perc után indul.'
+    notes: 'Narratív (nem szisztematikus) áttekintés, ezért C. A 30 perces nap-küszöb és az "1–3,5 óra teljes lecsengés"
+      a legfontosabb protokollszám. Éjszakai kerékpározásra kritikus: a tehetetlenség éppen a cirkadián mélyponton
+      a legrosszabb, tehát a 04:00 körüli ébredés a legveszélyesebb pillanat a nyeregbe való visszaülésre.'
+    status: ellenorizve-doi
+  rosekind-1994-cockpit:
+    key: rosekind-1994-cockpit
+    type: field-trial
+    authors:
+    - Rosekind MR
+    - Graeber RC
+    - Dinges DF
+    - et al.
+    year: 1994
+    title: 'Crew factors in flight operations 9: Effects of planned cockpit rest on crew performance and alertness
+      in long-haul operations'
+    venue: NASA Ames Research Center / DOT/FAA/92/24 technical report
+    doi: null
+    url: https://ntrs.nasa.gov/citations/19950006379
+    grade: B
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 21 hosszútávú pilóta (12 pihenő, 9 kontroll) 40 perces tervezett pihenőlehetőséget kapott az utazómagasságon.
+      A pihenőcsoport az alkalmak 93%-ában elaludt, átlagosan 5,6 perc alatt aludt el és 25,8 percet aludt. A rövid
+      alvás javította a fiziológiai éberséget és a teljesítményt a kontrollcsoporthoz képest, és a hatás kitartott
+      a kritikus süllyedési és leszállási fázisig.
+    notes: 'Klasszikus terepvizsgálat, kis n, nem randomizált, nem sportolókon. Az ultrakerékpáros analógia erős:
+      40 perces lehetőségből reálisan ~26 perc valódi alvás lesz – a tervezéskor az ablakot, nem az alvásidőt kell
+      40 percre venni. A "kritikus fázisig kitartó" hatás a hajnali szakaszra való időzítést támogatja.'
+    status: url-megnyitva
+  hilditch-2020-controlledrest:
+    key: hilditch-2020-controlledrest
+    type: observational-field
+    authors:
+    - Hilditch CJ
+    - Arsintescu L
+    - Gregory KB
+    - et al.
+    year: 2020
+    title: 'Mitigating fatigue on the flight deck: how is controlled rest used in practice?'
+    venue: Chronobiology International
+    doi: 10.1080/07420528.2020.1803898
+    url: https://hsi.arc.nasa.gov/publications/Hilditch_etal_2020_Chronobiol_Int_controlled_rest.pdf
+    grade: B
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '44 pilóta 239 járata: kontrollált pihenőt a járatok 46%-án kíséreltek meg, leggyakrabban kétfős legénységnél
+      (69%), éjszakai műveletekben (55%) és 10 óránál rövidebb járatokon (63%); a kísérletek kb. 80%-ában valóban
+      volt alvás. Az átlagos pihenőablak 43,1 ± 11,0 perc (15–70 perc), a ténylegesen aludt idő 31,7 ± 12,2 perc
+      volt. A légitársasági szabály a pihenőt maximum 45 percben korlátozza a mélyalvás elkerülésére, és 20 perc
+      "felébredési" puffert ír elő a szolgálatba való visszatérés előtt.'
+    notes: Megfigyeléses, egyetlen légitársaság, önbevallásos alvásbecslés. Az itt látott operatív számok (max.
+      45 perc nap, 20 perc puffer, a pihenő vége a leszállás előtt 30 perccel) közvetlenül átvihetők ultrakerékpáros
+      forgatókönyvre mint konzervatív, már validált iparági keret.
+    status: ellenorizve-doi
+  oriyama-2024-napnight:
+    key: oriyama-2024-napnight
+    type: randomized-crossover-trial
+    authors:
+    - Oriyama S
+    - et al.
+    year: 2024
+    title: 'A 90- followed by a 30-min nap reduces fatigue whereas a 30- followed by a 90-min nap maintains cognitive
+      performance in night work: A randomized crossover-pilot study'
+    venue: Sleep Medicine
+    doi: 10.1016/j.sleep.2024.03.010
+    url: https://www.sciencedirect.com/science/article/pii/S1389945724001084
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '12 egészséges nő randomizált keresztezett vizsgálatban három feltételt teljesített: Pre90 (90 perc
+      alvás 22:30–00:00 + 30 perc 02:30–03:00), Pre30 (30 perc 23:30–00:00 + 90 perc 02:30–04:00) és alvás nélküli
+      kontroll. A Pre90 szignifikánsan alacsonyabb fáradtságot adott 03:00–09:00 között, a Pre30 viszont 05:00–09:00
+      között tartotta fenn jobban a PVT-teljesítményt. Mindkét 90 perces alvás után alvási tehetetlenség jelentkezett,
+      a 30 perces alvások után alig.'
+    notes: 'Pilot jellegű, n=12, csak nők, laborkörülmények, nem terheléses helyzet. Viszont ez az egyetlen talált
+      vizsgálat, amely a nap-SORRENDET teszteli egy éjszakán belül – pontosan az ultrakerékpáros kérdés. Következtetés:
+      a hosszú (90 perces) alvást inkább az éjszaka elejére, a rövidet a hajnali mélypont elé érdemes tenni, ha
+      a hajnali éberség a cél.'
+    status: ellenorizve-doi
+  suzuki-2025-napwake:
+    key: suzuki-2025-napwake
+    type: randomized-controlled-trial
+    authors:
+    - Suzuki Y
+    - Suzuki C
+    - Abe T
+    - et al.
+    year: 2025
+    title: Effects of optimal timed automatic awakening from a short daytime nap on cognitive performance, alertness,
+      and fatigue
+    venue: Scientific Reports
+    doi: 10.1038/s41598-025-21008-3
+    url: https://www.nature.com/articles/s41598-025-21008-3
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: Két kísérlet (n=81, illetve n=50) párhuzamos csoportos RCT-ben, ahol a résztvevőket az N2 alvásstádium
+      észlelése után 9 perccel ébresztették. A manuálisan ébresztett csoport átlagosan 11,8 ± 3,9 perc, az automatikusan
+      ébresztett 22,6 ± 6,5 perc alvást kapott. Mindkét alvócsoport szignifikánsan csökkentette az álmosságot (KSS)
+      és a fáradtságot (VAS) a pihenő kontrollhoz képest az összes ébredés utáni mérésnél, de a DSST (kognitív feldolgozás)
+      csak a rövidebb, manuális csoportban javult.
+    notes: 'Egészséges, nem alvásmegvont, nappali minta – az ultrakerékpáros helyzetre nem közvetlenül átvihető.
+      Fontos jelzés viszont: a ~22 perces alvás kognitív előnye NEM volt nagyobb a ~12 percesnél, sőt a DSST-javulás
+      a rövidebbnél jelent meg – a "minél hosszabb, annál jobb" nem áll.'
+    status: ellenorizve-doi
+  centofanti-2020-caffeinenap:
+    key: centofanti-2020-caffeinenap
+    type: pilot-randomized-trial
+    authors:
+    - Centofanti S
+    - Banks S
+    - Coussens S
+    - et al.
+    year: 2020
+    title: A pilot study investigating the impact of a caffeine-nap on alertness during a simulated night shift
+    venue: Chronobiology International
+    doi: 10.1080/07420528.2020.1804922
+    url: https://www.sciencedaily.com/releases/2020/08/200828115401.htm
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: Szimulált éjszakai műszakban a résztvevők 200 mg koffeint (kb. 1–2 csésze kávé) kaptak közvetlenül
+      egy 30 perces, 03:30-ra időzített alvás ELŐTT. A "caffeine-nap" csoportban a szerzők szerint kifejezett javulás
+      mutatkozott mind a teljesítményben, mind az éberségben az összehasonlító feltételekhez képest.
+    notes: Pilot vizsgálat, kis minta (a nyilvános összefoglalóból az n nem volt kiolvasható), szimulált műszak,
+      nem terheléses. A kiadói teljes szöveg fizetőfal mögött (tandfonline 403), így csak a hivatalos sajtóközlemény
+      szintű számokat közlöm – hatásméret nincs. A protokoll (200 mg koffein közvetlenül egy 30 perces nap előtt,
+      a hajnali mélypont környékén) viszont pontosan az, ami ultrakerékpáros éjszakára illeszthető.
+    status: ellenorizve-doi
+  filtness-2026-caffeinenap:
+    key: filtness-2026-caffeinenap
+    type: randomized-crossover-trial
+    authors:
+    - Filtness AJ
+    - Miller KA
+    - Maynard S
+    - et al.
+    year: 2026
+    title: Optimising the caffeine nap for counteracting driver sleepiness in CPAP treated obstructive sleep apnoea
+      patients
+    venue: Scientific Reports
+    doi: 10.1038/s41598-026-42894-1
+    url: https://www.nature.com/articles/s41598-026-42894-1
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '21 CPAP-kezelt OSA-beteg (átlag 59 év, 19 fejezte be) ismételt méréses elrendezésben, 4 órára korlátozott
+      alvás után monoton autópálya-szimulátoron vezetett. Vizsgált feltételek: 127,5 mg vs. 255 mg koffein; 15 vs.
+      30 perces alvási lehetőség; és a kombináció (255 mg + 15 perc alvás). A 255 mg koffein csökkentette a sávtartási
+      szórást és a sávelhagyásokat, a KSS-t kb. 1,37 ponttal; a hatás 15–45 perc között tetőzött és 60–75 percre
+      lecsengett. A 30 perces alvás nem adott többet a 15 percesnél, a kombináció pedig "gyakorlatilag alig javított"
+      a két kávéhoz képest.'
+    notes: 'Idős, OSA-beteg minta (átlag 59 év) – az általánosítás fiatal, edzett kerékpárosra korlátozott, és a
+      szimulátoros vezetés nem terheléses. Két kemény, protokollba írható szám mégis adódik: a koffein ablaka kb.
+      15–45 perc, és 60–75 percre elfogy; a 15 percnél hosszabb nap nem feltétlenül fizet többet. Ütközik a centofanti-2020
+      optimista eredményével.'
+    status: ellenorizve-doi
+  gardiner-2023-caffeine:
+    key: gardiner-2023-caffeine
+    type: meta-analysis
+    authors:
+    - Gardiner C
+    - Weakley J
+    - Burke LM
+    - et al.
+    year: 2023
+    title: 'The effect of caffeine on subsequent sleep: A systematic review and meta-analysis'
+    venue: Sleep Medicine Reviews
+    doi: 10.1016/j.smrv.2023.101764
+    url: https://www.sciencedirect.com/science/article/pii/S1087079223000205
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '24 vizsgálat, 340 résztvevő (teljes alvásidő elemzés). A koffein átlagosan 45,3 perccel (95% CI 29,0–61,5)
+      csökkentette a teljes alvásidőt, 7,0%-kal (95% CI 4,0–10,0) az alváshatékonyságot, és 9,1 perccel (95% CI
+      3,8–14,4) növelte az elalvási latenciát. Meta-regresszió alapján, 22:00-s lefekvést feltételezve: 107 mg koffeint
+      (egy kávé) kb. 13:12-ig, 217,5 mg-ot (edzés előtti készítmény) kb. 08:50-ig érdemes bevenni – azaz 8,8, illetve
+      13,2 órával lefekvés előtt.'
+    notes: 'A cut-off értékek modellbecslések, nagy egyéni (genetikai, tolerancia) szórással, és nem alvásmegvont
+      populációra vonatkoznak. Ultrakerékpárosnál kettős jelentőség: (a) a verseny ELŐTTI alvásnyújtás/banking hetében
+      a délutáni koffeint korlátozni kell, különben a Q3 protokoll ellen dolgozik; (b) a verseny alatti koffein
+      ára az lesz, hogy a következő tervezett alvás rövidebb és töredezettebb.'
+    status: ellenorizve-doi
+  facerchilds-2015-chronotype:
+    key: facerchilds-2015-chronotype
+    type: observational-field
+    authors:
+    - Facer-Childs E
+    - Brandstaetter R
+    year: 2015
+    title: The Impact of Circadian Phenotype and Time since Awakening on Diurnal Performance in Athletes
+    venue: Current Biology
+    doi: 10.1016/j.cub.2014.12.036
+    url: https://www.sciencedirect.com/science/article/pii/S096098221401639X
+    grade: B
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: '121 versenyszintű sportoló kronotípus-felmérése (korai 28%, köztes 48%, késői 24%), majd 20 gyeplabdázó
+      teljesítménytesztje napi hat időpontban. A csúcsteljesítmény ideje kronotípusonként markánsan eltért: korai
+      ~12:11, köztes ~15:49, késői ~19:40. A csúcs és a mélypont közötti különbség 7,62 ± 1,18% (korai), 10,03 ±
+      1,62% (köztes) és 26,2 ± 3,97% (késői) volt. A legmegbízhatóbb előrejelző nem az óraidő, hanem az ébredés
+      óta eltelt idő volt: korai/köztes ~5,6–6,5 óra, késői ~11,2 óra.'
+    notes: 'Kis teljesítménytesztelt minta (n=20), egyetlen sportág, aerob ingafutás-teszt (nem tartós állóképesség).
+      A 26%-os ingadozás késői kronotípusnál a legfontosabb gyakorlati szám: éjszakai kerékpározásnál a késői típus
+      a hajnali órákban lényegesen nagyobb relatív esést szenved, a korai típus viszont hamarabb "kifut".'
+    status: ellenorizve-doi
+  lopezsamanes-2025-timeofday:
+    key: lopezsamanes-2025-timeofday
+    type: meta-analysis
+    authors:
+    - López-Samanes Á
+    - Martin-López J
+    - Pérez-López A
+    - et al.
+    year: 2025
+    title: 'Influence of time-of-day on neuromuscular performance in team sport athletes: a systematic review and
+      meta-analysis'
+    venue: Frontiers in Sports and Active Living
+    doi: 10.3389/fspor.2024.1466050
+    url: https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2024.1466050/full
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 10 vizsgálat kvalitatív, 5 kvantitatív szintézise (összesen 163, a metaanalízisben 68 sportoló), reggel
+      (07:00–10:00) és késő délután/kora este (16:00–20:00) összevetve. A felugrás (CMJ) reggel szignifikánsan alacsonyabb
+      volt (átlagos különbség −1,44 cm; 95% CI −2,80…−0,08; p=0,04), az agility-idő reggel rosszabb (0,42 s; 95%
+      CI 0,09–0,74; p=0,01); a squat jump (p=0,09) és a kézi szorítóerő (p=0,17) nem különbözött. A szerzők a késő
+      délutáni magasabb maghőmérséklet "passzív bemelegítő" hatásával érvelnek.
+    notes: Kis metaanalitikus minta (n=68), csapatsport, és csak nappali időpontokat hasonlít össze – éjszakai (00:00–06:00)
+      adat nincs benne. Ultrakerékpárosra tehát csak a napközbeni teljesítményrutin irányát adja meg, a hajnali
+      mélypont nagyságát nem.
+    status: ellenorizve-doi
+  tomzig-2024-inertia:
+    key: tomzig-2024-inertia
+    type: experimental-crossover
+    authors:
+    - Tomzig M
+    - Wörle J
+    - Kremer C
+    - et al.
+    year: 2024
+    title: Sleep in automated driving – Effects of time of day and chronotype on sleepiness and sleep inertia
+    venue: 'Transportation Research Part F: Traffic Psychology and Behaviour'
+    doi: 10.1016/j.trf.2024.02.003
+    url: https://www.sciencedirect.com/science/article/abs/pii/S136984782400024X
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 20 fő (10 reggeli, 10 esti kronotípus) vezetésszimulátoros vizsgálata két időpontban (06:00 és 21:00),
+      alvás utáni átvételi feladatokkal. Esti alvás után lassabb vezetési sebesség és hosszabb átvételi idő jelentkezett,
+      mint reggeli alvás után; az alvási tehetetlenség a mindennapi körülmények között kb. 30 percen belül lecsengett.
+      Álmosság esetén a hangulat, sávtartás és éberség a vezetési idővel fokozatosan romlott (time-on-task), alvási
+      tehetetlenség esetén viszont stabilabbak maradtak a mutatók. Mindkét hatás erősebb volt, ha az időpont nem
+      illeszkedett az egyéni kronotípushoz.
+    notes: 'Kis minta (n=20), automatizált vezetés kontextusa, nem fizikai terhelés. Két protokollszám: az alvási
+      tehetetlenség kb. 30 perc alatt lecseng, és a kronotípus–óraidő eltérés felerősíti mind az álmosságot, mind
+      a tehetetlenséget – vagyis a késői típusnak a hajnali ébresztés, a koraiaknak a késő esti nap a kockázatosabb.'
+    status: ellenorizve-doi
+  scott-2024-light:
+    key: scott-2024-light
+    type: randomized-crossover-trial
+    authors:
+    - Scott H
+    - Guyett A
+    - Manners J
+    - et al.
+    year: 2024
+    title: Circadian-informed lighting improves vigilance, sleep, and subjective sleepiness during simulated night-shift
+      work
+    venue: Sleep
+    doi: 10.1093/sleep/zsae173
+    url: https://academic.oup.com/sleep/article/47/11/zsae173/7724228
+    grade: A
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 19 egészséges résztvevő (29 ± 10 év) randomizált, keresztezett, 8 napos laborvizsgálata négy szimulált
+      éjszakai műszakkal (00:00–08:00). A cirkadián fázishoz igazított, kékben gazdag >300 lux világítás (váltakozva
+      <10 lux kékszegény fénnyel) a kontroll ~7 lux, 2400 K világításhoz képest a műszak végére kb. 50%-kal kevesebb
+      PVT-kiesést adott (7,4 ± 5,0 vs. 15,6 ± 6,1), gyorsabb reakciót (p=0,02), a 7. napra +52 perc nappali alvást
+      (95% CI 27,5–76,5) és 9%-kal jobb alváshatékonyságot. A fázis-késleltetés napi ~1,5 óra volt a kontroll ~0,5
+      órájával szemben.
+    notes: Laborszimuláció, n=19, egészséges fiatalok; a fényintenzitás terepen (kerékpárlámpa, fejlámpa) nem reprodukálható
+      közvetlenül. Mégis ez a legerősebb bizonyíték arra, hogy az időzített, kékben gazdag fény éjszaka önmagában
+      felére csökkentheti a figyelemkieséseket – a hajnali szakaszra tervezett erős, hideg fényű megvilágítás ésszerű,
+      bár átvitt következtetés.
+    status: ellenorizve-doi
+  assis-2026-chronotraffic:
+    key: assis-2026-chronotraffic
+    type: scoping-review
+    authors:
+    - Assis EP
+    - Silva AAB
+    - Moreno CRC
+    - et al.
+    year: 2026
+    title: 'Influence of Seasonal and Chronobiological Factors on Driver Behavior and Traffic Accident Risk: A Scoping
+      Review'
+    venue: Sleep Science
+    doi: 10.1055/s-0046-1819711
+    url: https://pmc.ncbi.nlm.nih.gov/articles/PMC13109013/
+    grade: B
+    questions:
+    - Q3
+    - Q4
+    - Q5
+    modules:
+    - '04'
+    summary: 40 közlemény (ebből 9 kifejezetten szezonalitás + kronobiológia) áttekintése a közlekedési balesetek
+      időbeli mintázatáról. A baleseti kockázat a késő esti és kora reggeli órákban emelkedett, amikor a cirkadián
+      alvásnyomás tetőzik; az ütközések és borulások gyakorisága 20:00 és 23:59 között kiemelkedő. 12 467 fős mintában
+      a résztvevők 25%-a – többségében esti kronotípus – számolt be alvászavarról a nyári időszámításra váltáskor,
+      a tavaszi óraátállítás első hetében a halálos balesetek kockázata kb. 6%-kal nőtt.
+    notes: Scoping review, heterogén, jórészt gépjárművezetői adat, nem kerékpáros; a "20:00–23:59" csúcs részben
+      expozíciós (forgalmi) torzítás, nem tisztán élettani. A kronotípus-érzékenység (esti típus rosszabbul tűri
+      a fáziseltolást) viszont egybevág a tomzig-2024-inertia laboreredményével.
+    status: ellenorizve-doi
+  hayden-sleeping-guide:
+    key: hayden-sleeping-guide
+    type: guide
+    authors:
+    - James Hayden
+    credential: Transcontinental Race győztes (TCR No.5 2017, TCR No.6 2018); Silk Road Mountain Race, Atlas Mountain
+      Race résztvevő
+    year: 2021
+    title: Sleeping in an ultra-endurance bikepacking event
+    venue: jamesmarkhayden.eu (saját tudástár)
+    doi: null
+    url: https://jamesmarkhayden.eu/knowledge/sleeping
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Hayden versenyhossz szerint differenciál: 4 napnál rövidebb eseményen éjszakánként minimum kb. 1 óra
+      30 perc, 4 napnál hosszabbon átlagosan kb. 3 óra alvás. Hangsúlyozza a konzisztenciát: jobb minden éjjel öt
+      órát aludni, mint egyik éjjel ötöt, a másikon semmit, és az alvás mennyiségét a körülményekhez (hotel vs.
+      esőben bivakolás) igazítja.'
+    notes: 'Alaptétele: „bölcsebb túl sokat aludni és gyorsan, élvezettel tekerni, mint keveset aludni abban a hitben,
+      hogy gyorsabb leszel." Saját példával illusztrálja a „sleep drunk" állapotot: egy órán át eltévedve tekert,
+      elveszítve a megspórolt időt. Nem ad szunyókálási protokollt, koffein- vagy megállási jeleket – ezekre más
+      forrás kell.'
+    status: url-megnyitva
+  hayden-restrap-2016:
+    key: hayden-restrap-2016
+    type: interview
+    authors:
+    - James Hayden (interjú, Restrap)
+    credential: későbbi kétszeres TCR-győztes; 2016-ban TCR No.4 résztvevő
+    year: 2016
+    title: 'Interview: James Mark Hayden takes us through the highs and lows of the Trans Continental Race 2016'
+    venue: Restrap
+    doi: null
+    url: https://restrap.com/blogs/news/interview-james-mark-hayden-takes-us-through-the-highs-and-lows-of-the-trans-continental-race-2016
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Hayden elmondja, hogy volt alvásterve a rajtnál, de egy mellkasi fertőzés és 36 óra kiesés után a
+      terv teljesen felborult, és ad hoc módon aludt „itt-ott pár órát". Alvóhely-választásában tudatos: mindig
+      védett, szélvédett helyet keres, hogy ne kelljen a lehűléssel és az átázással foglalkoznia.'
+    notes: 'Kulcsüzenet a tankönyv számára: az alvásstratégia „rendkívül személyes", és a terv az első komoly zavar
+      után úgyis alkalmazkodó üzemmódba vált. Nincs benne koffein- vagy szunyókálási adat.'
+    status: url-megnyitva
+  allegaert-apidura-2016:
+    key: allegaert-apidura-2016
+    type: article
+    authors:
+    - Apidura Journal
+    credential: 'alany: Kristof Allegaert – háromszoros TCR-győztes (2013, 2014, 2015), Red Bull Trans-Siberian
+      Extreme győztes'
+    year: 2016
+    title: Kristof Allegaert; The Unstoppable
+    venue: Apidura
+    doi: null
+    url: https://www.apidura.com/journal/kristof-allegaert-the-unstoppable/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'A cikk szerint Allegaert a 2014-es TCR nyolc napjából összesen mindössze 9 óra 38 percet töltött mozgáson
+      kívül, azaz szélsőségesen kevés és rövid megállásokkal versenyzett. Filozófiája: „könnyebb továbbmenni, mint
+      megpihenni, majd újra elindulni" – tehát a megállás pszichés és logisztikai költségét tartja a legdrágábbnak.'
+    notes: A 9h38m a teljes álló idő (alvás + evés + bolt), nem tiszta alvásidő – a tankönyvben így kell idézni.
+      A szélső értéket képviseli a mezőnyben; nem általánosítható ajánlás, hanem a spektrum egyik vége.
+    status: url-megnyitva
+  wilcox-rouleur-2024:
+    key: wilcox-rouleur-2024
+    type: article
+    authors:
+    - Rouleur (Issue 141)
+    credential: 'alany: Lael Wilcox – Trans Am Bike Race abszolút rekorder, Tour Divide női rekorder, világkerülő
+      rekorder (2024)'
+    year: 2024
+    title: '''The more you sleep, the better you perform'' – Lael Wilcox and the secrets to ultra cycling'
+    venue: Rouleur
+    doi: null
+    url: https://www.rouleur.it/blogs/the-rouleur-journal/the-more-you-sleep-the-better-you-perform-lael-wilcox-and-the-secrets-to-ultra-cycling
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Wilcox támogatott rekordkísérleteinél 6–7 óra alvást céloz éjszakánként: korábbi napirendje 12 óra
+      kerékpározás + 12 óra minden más (ebből 7 óra alvás), a következő próbálkozásnál 16 óra kerékpározás + 8 óra
+      minden más (6–7 óra alvás). Támogatott formátumban lakóautóban alszik, a csapat készíti elő a pihenőt.'
+    notes: 'Fontos kontraszt: ugyanaz a versenyző önellátó versenyen sokkal kevesebbet alszik (lásd wilcox-roadman-2026).
+      A 6–7 óra tehát a támogatott rekordkísérlet paramétere, nem a self-supported versenyé – a tankönyvben külön
+      kell kezelni.'
+    status: url-megnyitva
+  wilcox-roadman-2026:
+    key: wilcox-roadman-2026
+    type: podcast
+    authors:
+    - Roadman Cycling Podcast (blogösszefoglaló)
+    credential: 'alany: Lael Wilcox – 37+ ultraverseny, Trans Am rekord (7000 km, 18 nap)'
+    year: 2026
+    title: 'Ultra Distance Cycling: Lael Wilcox on Sleep & Setup / 1 Thing I Learned Riding 37 Ultra Distance Races'
+    venue: Roadman Cycling
+    doi: null
+    url: https://roadmancycling.com/blog/lael-wilcox-ultra-distance-cycling-lessons
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Egy hétnél hosszabb önellátó versenyen Wilcox maximum négy óra alvást tervez éjszakánként, emellett
+      taktikai, 10–15 perces útszéli power napeket használ, ébresztővel – jellemzően az ébresztő előtt felébred.
+      Egy rövid szunyókálás elég ahhoz, hogy a hallucinációkig fáradt szem újra élesen lássa a technikás lejtmeneteket.
+    notes: 'Nem edzi az alvásmegvonást: versenyen kívül szándékosan normálisan alszik, mert az alváshiányt tartja
+      az ultrázás legkevésbé egészséges elemének. A Badlandsen hat alkalommal állt meg szunyókálni.'
+    status: url-megnyitva
+  sehili-breakaway:
+    key: sehili-breakaway
+    type: interview
+    authors:
+    - Breakaway Digital
+    credential: 'alany: Sofiane Sehili – Atlas Mountain Race győztes (2020), Tour Divide 3. (2016), BikingMan IncaDivide
+      győztes, Trans-Eurázsia rekord'
+    year: 2020
+    title: Sofiane Sehili – The man who doesn't sleep
+    venue: Breakaway Digital
+    doi: null
+    url: https://breakawaydigital.co.uk/journal/sofiane-sehili-the-man-who-doesnt-sleep/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Sehili beceneve („az ember, aki nem alszik") az Italy Divide-on ragadt rá, de ő maga azt mondja, az
+      alvásmegvonás nála nem terv, hanem taktikai kényszer: ha megáll, a többiek beérik vagy ellépnek. Koffeinstratégiája
+      tudatos: hétköznap koffeinmentes kávét iszik, hogy versenyen a koffein erősebben hasson.'
+    notes: Ez az egyik legkonkrétabb koffein-tolerancia protokoll a gyakorlati irodalomban (versenyen kívüli deload).
+      Azt is állítja, hogy az alvásmegvonás-tűrése edzéssel és tapasztalattal jelentősen javult – ez ellentmond
+      Wilcox álláspontjának, és a tudomány sem támasztja alá egyértelműen.
+    status: url-megnyitva
+  strasser-pez-2019:
+    key: strasser-pez-2019
+    type: interview
+    authors:
+    - Edmond Hood (PezCycling News)
+    credential: 'alany: Christoph Strasser – hatszoros RAAM-győztes, 24 órás fedettpályás világrekorder'
+    year: 2019
+    title: 'PEZ Talk: Six Time RAAM Winner – Christoph Strasser'
+    venue: PezCycling News
+    doi: null
+    url: https://pezcyclingnews.com/interviews/pez-talk-six-time-race-across-america-winner-christoph-strasser/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Strasser a RAAM alatt éjszakánként kb. egy órát alszik; ez alatt a szerelő teljes átvizsgálást végez
+      a kerékpáron, így az alvás és a szerviz egyszerre történik. Elmondja, hogy néhány nap után a fáradtság miatt
+      már képtelen a saját testére hallgatni, ezért a csapat dönti el, mikor és mit egyen-igyon.
+    notes: 'Kulcskontraszt a self-supported versenyekkel szemben: a támogatott RAAM-ban a döntéshozatal kiszervezhető
+      a stábra, ezért lehet sokkal alacsonyabb az alvásmennyiség. Regeneráció: 3–4 nap erős fájdalom/fáradtság,
+      teljes felépülés 2–3 hónap.'
+    status: url-megnyitva
+  raam-sleepcom-2022:
+    key: raam-sleepcom-2022
+    type: article
+    authors:
+    - Ebony Roberts (Sleep.com)
+    credential: 'alanyok: Leah Goldstein (RAAM 2021 abszolút győztes), Christoph Strasser (6× RAAM); szakértő: Dr.
+      Sara Forsyth (sportorvos)'
+    year: 2022
+    title: How Cyclists Get Sleep During a Near Non-Stop Race Across America
+    venue: Sleep.com
+    doi: null
+    url: https://www.sleep.com/travel/race-across-america-raam-sleep
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Goldstein a 11 napos győztes RAAM alatt összesen kb. 15 órát aludt: az első 40–45 órában egyáltalán
+      nem, utána a verseny első felében napi 3 órát, a második felében napi kb. 90 percet – egy nagy blokkot preferál
+      sok kis szunyókálás helyett. Strasser 2014-es rekordfutamán (7 nap 15 óra) összesen kb. 6 órát aludt: az első
+      24 órában 20 perc, majd négy nap alatt összesen 80 perc, később 50–70 perces blokkok nappali power napekkel.'
+    notes: 'Mindkettőjüknél a 9–11 fős stáb dönt az alvás időzítéséről, nem a versenyző. Tervezett pihenő lakóautóban,
+      nem tervezett a kísérőautó ülésén. Regeneráció: Goldstein kb. 1 hét, Strasser 4–5 nap a normalizálódásig.
+      Ez a legkonkrétabb számokat tartalmazó RAAM-forrás.'
+    status: url-megnyitva
+  dotwatcher-guide-sleeping:
+    key: dotwatcher-guide-sleeping
+    type: guide
+    authors:
+    - DotWatcher.cc szerkesztőség
+    credential: 'ultra-távú versenykövető szakportál; példa: Nicky Shaw, Two Volcano Sprint 2021'
+    year: 2022
+    title: 'DotWatcher Guide: Sleeping During a Bikepacking Race'
+    venue: DotWatcher.cc
+    doi: null
+    url: https://dotwatcher.cc/feature/sleeping-during-a-bikepacking-race
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Az útmutató a hotel vs. bivak döntést járja körül: a hotel zuhanyt (nyeregseb-megelőzés) és töltési
+      lehetőséget ad, de köti a be- és kijelentkezési időpont; a bivak teljes rugalmasságot ad („bárhol megállhatsz"),
+      de nincs mosdás és áram. Hangsúlyozza, hogy a felszerelést és a komfortszintet élesben kell letesztelni a
+      verseny előtt.'
+    notes: 'Környezeti kényszerek is döntenek: a Highland Trail 550-en a törpeszúnyogok sátorba kényszeríthetik
+      a versenyzőt. Óraszámot, szunyókálás-hosszt és koffeint nem tárgyal – tisztán a „hol aludj" dimenzióra jó
+      forrás.'
+    status: url-megnyitva
+  ridefar-sleeping:
+    key: ridefar-sleeping
+    type: guide
+    authors:
+    - Chris White (Ride Far)
+    credential: ultra-távú versenyző és a Ride Far tudástár szerzője; TCR/PBP-tapasztalat
+    year: 2018
+    title: Sleeping Strategies & Equipment for Bikepacking Races
+    venue: ridefar.info
+    doi: null
+    url: https://ridefar.info/rider/strategy/sleeping/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Elit versenyzőknél a tipikus minta „a legtöbb (de nem minden) éjjel egy 2–3 órás blokk plusz néhány
+      rövid power nap", a mezőny közepén haladóknál 4–6 óra éjszakánként plusz alkalmi nappali szunyókálás. Több
+      hetes eseményen a legtöbben kb. 2 órával kevesebbet alszanak a szokásosnál anélkül, hogy komoly fáradtsági
+      probléma lenne.
+    notes: 'Időzítési tippek: ne éjjel keress szállást (állj meg elég korán, hogy legyen szoba és kaja), és hajnalban
+      indulj nagyon korán; az alvóhelyet úgy tedd, hogy a városok reggeli forgalmát átaludd, és ne fagyoskodj egy
+      hosszú lejtmeneten indulás után. Felszerelés: minimum alufólia takaró (<100 g), tipikus szett bivak + felfújható
+      matrac + könnyű hálózsák (0,5–1,5 kg).'
+    status: url-megnyitva
+  ridefar-sleepdep:
+    key: ridefar-sleepdep
+    type: guide
+    authors:
+    - Chris White (Ride Far)
+    credential: ultra-távú versenyző, Ride Far tudástár
+    year: 2017
+    title: Sleep Deprivation in Bikepacking Races
+    venue: ridefar.info
+    doi: null
+    url: https://ridefar.info/rider/safety/sleep-deprivation/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'A megállást kikényszerítő jelek: homályos látás, hallucinációk, mikroalvás – de a szerző szerint ezek
+      megjelenése ELŐTT kell pihenni; korai figyelmeztető jel, ha nem emlékszel az elmúlt percekre, nem megy az
+      egyszerű fejszámolás vagy nem tudsz beszélgetést fenntartani. A 15 percnél rövidebb power nap több órára visszaadja
+      az éberséget.'
+    notes: 'Koffeinről: emeli az éberséget, de ismételt használattal tolerancia épül, és a populáció kb. 10%-ánál
+      alig hat. Hangsúlyozza, hogy alváshiányosan továbbtekerni kontraproduktív, mert az energiaszint és a leadott
+      teljesítmény drasztikusan esik.'
+    status: url-megnyitva
+  ridefar-time-efficiency:
+    key: ridefar-time-efficiency
+    type: guide
+    authors:
+    - Chris White (Ride Far)
+    credential: ultra-távú versenyző, Ride Far tudástár
+    year: 2017
+    title: Time Management & Measuring Time Efficiency in Bikepacking Races
+    venue: ridefar.info
+    doi: null
+    url: https://ridefar.info/rider/strategy/time-management/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Bevezeti a „moving percentage" (mozgásidő / eltelt idő) mutatót: 80% fölött reális cél (pl. 15 órából
+      12 óra mozgás), 90% fölött egész nap nehezen tartható, 70% alatt már inkább túrázás. A tipikus versenytartomány
+      75–85%. Számpélda: 15 ébren töltött óra és 24 km/h átlagsebesség mellett 85% = 306 km/nap, 75% = 270 km/nap.'
+    notes: 'Ez a legközelebbi dolog egy „alvás vs. sebesség" modellhez a gyakorlati irodalomban, de nem alvásspecifikus:
+      a mozgáshányad a bolti, evési és alvási megállásokat együtt kezeli. 4000 km-en a 10 százalékpontos különbség
+      napi 36 km-t, azaz több mint 1,5 nap időveszteséget jelent.'
+    status: url-megnyitva
+  towers-3tactics-2024:
+    key: towers-3tactics-2024
+    type: article
+    authors:
+    - Gregor Towers
+    credential: 'ultra-távú versenyző és coach (Substack: ultra cycling taktika)'
+    year: 2024
+    title: 3 sleeping tactics for ultra cycling races
+    venue: gregortowers.substack.com
+    doi: null
+    url: https://gregortowers.substack.com/p/3-sleeping-tactics-for-ultra-cycling
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Három explicit archetípust ad: (1) „Fast and Furious" – max. 3 óra/éj, 2–5 napos versenyre, nappali
+      power napekkel, buszmegállóban/bokorban/padon, alufólia takaróval; (2) „Conservative & Steady" – 3–5 óra/éj,
+      bármilyen hosszra, hotel és bivak vegyesen; (3) „Slow and Safe" – 6–8 óra/éj, hotel/Airbnb, gyakorlatilag
+      csak bankkártyával.'
+    notes: 'Alapelve mindhárom esetben: „minden éjjel ugyanannyit aludj" – a konzisztencia fontosabb, mint az abszolút
+      mennyiség, és amikor lehet, fedett helyet válasszon a versenyző. Ez a legjobban strukturált gyakorlati tipológia
+      a tankönyvhöz.'
+    status: url-megnyitva
+  cyclingweekly-sleepless-2023:
+    key: cyclingweekly-sleepless-2023
+    type: article
+    authors:
+    - Adam Becket (Cycling Weekly)
+    credential: 'megszólalók: Lachlan Morton (EF profi, Tour Divide 2023 győztes), Sofiane Sehili, Gail Brown, Donnie
+      Campbell (GBDuro győztes), Will Robinson (GBDuro 2.)'
+    year: 2023
+    title: 'Sleepless in the saddle: Is ultra-racing taking sleep deprivation to dangerous levels?'
+    venue: Cycling Weekly
+    doi: null
+    url: https://www.cyclingweekly.com/news/sleepless-in-the-saddle-is-ultra-racing-taking-sleep-deprivation-to-dangerous-levels
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Morton a 2023-as Tour Divide-ot (12 nap 12 óra, győzelem) éjszakánként 6–7 óra alvással teljesítette,
+      és ezt „game changer"-nek nevezi. Campbell 48 órát bír alvás nélkül, de a French Divide-on éjszakánként 3
+      órát aludt, a 90 perces alvásciklusokhoz igazítva; Brown a „szenvedés-narratíva" ellen érvel, és biztonságosabbnak
+      érzi a civilizációtól távoli vadkempinget.
+    notes: 'A cikk a Q8 „hol nem értenek egyet" részének gerince: ugyanazon a versenyen (Tour Divide) a győztes
+      6–7 órát alszik, míg a hagyomány a minimalizálást dicsőítette. Fontos: a cikkben egyetlen alváskutató vagy
+      edző sem szólal meg, kizárólag sportolói vélemények – ezt a tankönyvben jelölni kell.'
+    status: url-megnyitva
+  bikepacking-ultraguide-2019:
+    key: bikepacking-ultraguide-2019
+    type: guide
+    authors:
+    - Colt Fetters (BIKEPACKING.com)
+    credential: ultra-bikepacking versenyző és szerző
+    year: 2019
+    title: Planning for Your First Bikepacking Ultra
+    venue: BIKEPACKING.com
+    doi: null
+    url: https://bikepacking.com/plan/bikepacking-ultra-guide/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Nem ad fix óraszámot, hanem azt javasolja, hogy edzésben mérd fel, mennyi alvás mellett maradsz produktív,
+      és azzal tervezz. A gyors mezőny tipikusan 16–18 óra mozgásidővel dolgozik, ami 4–6 óra alvást hagy; az élmezőny
+      ennél is kevesebbet alszik (említ egy 56 órán át alvás nélküli győzelmet), de a szerző szerint ez „valószínűleg
+      nem volt a leggyorsabb megoldás".
+    notes: 'Explicit figyelmeztetés a stimulánsokra: ne építs koffeintablettára és nikotinrágóra az ébrenlét fenntartásához,
+      helyette hangoskönyv/podcast. Megjegyzi, hogy az elsőversenyzők általában kevesebb alvással is boldogulnak,
+      mint hitték.'
+    status: url-megnyitva
+  pearson-ebr-2024:
+    key: pearson-ebr-2024
+    type: article
+    authors:
+    - Clare Pearson (Endurance Bike & Run)
+    credential: ultra-távú edző
+    year: 2024
+    title: How to Manage Sleep Deprivation on Ultra Endurance Cycling and Running Events
+    venue: Endurance Bike and Run
+    doi: null
+    url: https://endurancebikeandrun.com/blog/how-to-manage-sleep-deprivation-on-ultra-endurance-cycling-and-running-events
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Az edzői ajánlás lényege, hogy az alvásterv a versenyterv része legyen, egyéni tapasztalat alapján,
+      nem menet közben rögtönözve. A verseny előtti „sleep banking" (korábbi lefekvés, délutáni szunyókálás a napokban
+      a rajt előtt) a legelterjedtebb és igazolt hatású stratégia; a koffein adenozin-blokkolóként csökkenti a fáradtságérzetet,
+      de a lecsengésekor „crash" jön.
+    notes: 'Koffeint edzésversenyen kell tesztelni, mert a hatás genetikailag változó. Biztonsági alapszabálya:
+      ha úgy érzed, veszélyt jelentesz magadra vagy másokra, mindig állj meg aludni. Felsorolt tünetek: lassuló
+      reakcióidő, kognitív és motoros romlás, hallucinációk, immunfunkció-esés.'
+    status: url-megnyitva
+  boundary-pbp-coaching:
+    key: boundary-pbp-coaching
+    type: guide
+    authors:
+    - Boundary Cycle Coach (Nick)
+    credential: kerékpáros edző; kétszeres London–Edinburgh–London teljesítő
+    year: 2025
+    title: 'Paris-Brest-Paris Coaching: Multi-Day Preparation for 1,200km Across France'
+    venue: Boundary Cycle Coach
+    doi: null
+    url: https://www.boundarycycle.coach/events/paris-brest-paris
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'A 90 órás PBP-re rövid, stratégiai 90–120 perces alvásblokkokat javasol kulcsponti helyszíneken (ellenőrzőpontokon,
+      nem az árokparton), mert ezek megelőzik a veszélyes fáradtságot, miközben fenntartják a haladást. Az egyéni
+      minimumot edzésben kell meghatározni: van, aki 90 perces szunyókálásokkal működik, másnak 2–3 órás blokk kell.'
+    notes: 'Explicit elv: „az alvásigényt a felkészülés alatt határozzuk meg, nem a versenyen". A brevet-formátum
+      sajátossága, hogy a kontrollpontok fűtött, biztonságos alvóhelyet adnak – ez érdemben más döntési helyzet,
+      mint a self-supported versenyeken.'
+    status: url-megnyitva
+  kolbinger-euronews-2019:
+    key: kolbinger-euronews-2019
+    type: race-report
+    authors:
+    - Euronews
+    credential: 'alany: Fiona Kolbinger – az első női abszolút TCR-győztes (TCR No.7, 2019)'
+    year: 2019
+    title: 'Transcontinental Race 2019: woman wins 4,000km bike race after sleeping by the roadside'
+    venue: Euronews
+    doi: null
+    url: https://www.euronews.com/2019/08/06/transcontinental-race-2019-woman-wins-4-000-km-bulgaria-france-bike-race-after-sleeping-by
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Kolbinger a győztes TCR No.7 alatt átlagosan nagyjából négy órát aludt éjszakánként, jellemzően az
+      útszélen, hálózsákban, hogy időt spóroljon. A célban azt mondta, szerinte még keményebben mehetett volna,
+      és kevesebbet is alhatott volna.
+    notes: Jó példa arra, hogy egy abszolút győzelem a „közepes" alvásmennyiséggel (kb. 4 óra) is összejön – ez
+      ellentmond a Allegaert-típusú minimalizáló mítosznak. A velomotion.net 2019-es beszámolója ugyanezt erősíti
+      meg.
+    status: url-megnyitva
+  hall-bikepacking-2016:
+    key: hall-bikepacking-2016
+    type: interview
+    authors:
+    - Neil Beltchenko (BIKEPACKING.com)
+    credential: 'alany: Mike Hall – TCR alapító, Tour Divide és Trans Am győztes, World Cycle Race győztes'
+    year: 2016
+    title: 2016 Interview with Tour Divide Legend Mike Hall
+    venue: BIKEPACKING.com
+    doi: null
+    url: https://bikepacking.com/plog/2016-mike-hall-interview/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Hall a 2016-os Tour Divide-on rövid, ébresztőórával fegyelmezett 90 perces alvásokat használt, és
+      a megállókat a szolgáltatások nyitvatartásához igazította: úgy időzített, hogy pl. este 10 után érjen egy
+      szállásra, ahol „eat–sleep–eat" ciklust tudott csinálni zuhannyal, mosással és ággyal.'
+    notes: Az első napon elázott a hálózsákja, ezért ruhástul, csak bivakzsákban aludt, de a rövid alvásrendet így
+      is tartotta. Nála az alvás időzítését nem a fáradtság, hanem a verseny „splitjei" és a szolgáltatások ablakai
+      vezérelték – ez erős taktikai tanulság.
+    status: url-megnyitva
+  ibbett-roadcc-2016:
+    key: ibbett-roadcc-2016
+    type: interview
+    authors:
+    - Mat Brett (road.cc)
+    credential: 'alany: Josh Ibbett – TCR No.3 (2015) győztes'
+    year: 2016
+    title: 'Transcontinental Q&A: 2015 race winner Josh Ibbett'
+    venue: road.cc
+    doi: null
+    url: https://road.cc/content/tech-news/199085-transcontinental-qa-2015-race-winner-josh-ibbett
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Ibbett nem ad számszerű alvásrendet, hanem teljesítmény- és biztonságalapú döntési szabályt fogalmaz
+      meg: néha egyszerűen meg kell mondanod magadnak, hogy lefekszel, mert annyira fáradt vagy, hogy a továbbmenés
+      ártana a biztonságodnak és a teljesítményednek.'
+    notes: Gyenge kvantitatív tartalom, de tipikus a „szabály helyett szabályozó elv" gyakorlati megközelítésre,
+      amit a tankönyvben a merev alvásterv ellenpontjaként lehet használni.
+    status: url-megnyitva
+  apidura-nightriders-2023:
+    key: apidura-nightriders-2023
+    type: article
+    authors:
+    - Apidura Journal
+    credential: 'megszólalók: Christoph Strasser (TCR No.9 győztes), Robin Gemperle (TCR No.9 2. hely), Nicky Shaw,
+      Sebastian Sarx, Sherry Cardona'
+    year: 2023
+    title: Night Riders
+    venue: Apidura
+    doi: null
+    url: https://www.apidura.com/journal/night-riders/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'Strasser szerint a TCR No.9 megnyerésének kulcsa az éjszakai tekerés és az alvás gondos egyensúlya
+      volt, és a biztonságot erős első-hátsó lámpával plusz jó láthatósági mellénnyel (EN 17353) teremtette meg.
+      A többi versenyző az éjszaka pszichés előnyeit emeli ki: nyugalom, kevesebb zavaró inger, jobb koncentráció,
+      hűvösebb idő.'
+    notes: Az éjszakai tekerés melletti érvek itt nem fiziológiaiak, hanem pszichológiaiak és környezetiek – ez
+      fontos a „mikor aludj a 24 órán belül" vita árnyalásához. Konkrét alvásidőt, koffeint nem tárgyal.
+    status: url-megnyitva
+  bartholmoes-styrkr-2022:
+    key: bartholmoes-styrkr-2022
+    type: interview
+    authors:
+    - Ella Ransley (Styrkr, Sport Science Lead)
+    credential: 'alany: Ulrich Bartholmoes – GranGuanche győztes, TCR No.8 és Badlands élversenyző'
+    year: 2022
+    title: Inside GranGuanche 2022 with ultra-cycling phenomenon Ulrich Bartholmoes
+    venue: Styrkr
+    doi: null
+    url: https://styrkr.com/en-us/blogs/stories/inside-granguanche-2022-with-ultra-cycling-phenomenon-ulrich-bartholmoes
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Bartholmoes a GranGuanche során kb. négy órát aludt egy komp indulása előtt, és maga is azt mondja
+      magáról, hogy „nem kell sokat aludnia". Az alvás nála a logisztikai kényszerpontokhoz (kompmenetrend, ellátás)
+      igazodik, nem fordítva.
+    notes: A forrás tápanyagstratégia-központú, az alvás mellékesen kerül elő – gyenge kvantitatív érték, de jó
+      példa arra, hogy többszakaszos/szigetes versenyeken a menetrend szabja meg az alvásablakot.
+    status: url-megnyitva
+  bikepacking-transiberica-rule-2022:
+    key: bikepacking-transiberica-rule-2022
+    type: article
+    authors:
+    - BIKEPACKING.com szerkesztőség
+    credential: Transibérica Ultracycling szervezői közlemény alapján
+    year: 2022
+    title: Should Sleeping be Mandatory in Ultra-distance Bikepacking Races?
+    venue: BIKEPACKING.com
+    doi: null
+    url: https://bikepacking.com/news/transiberica-sleep-deprivation-rule/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 'A Transibérica 2022-től kötelező pihenőt vezetett be: a négyórás megállások száma N = (összóra / 24)
+      – 2, azaz 72 óránál hosszabb versenyidőnél 24 óránként legalább egy négyórás megállás kell (90 óra = 1 megálló,
+      142 óra = 3). A szervezők indoka, hogy a versenyzők egyre veszélyesebb mértékben feszegetik az alvásmegvonás
+      határait.'
+    notes: A szervezők maguk is „népszerűtlen intézkedésnek" nevezik, de azzal védik, hogy a pihenő IDŐZÍTÉSE szabadon
+      marad. Ez a szabályozási irány a Q8 „hol nem értenek egyet" tengely intézményesült változata.
+    status: url-megnyitva
+  raceacrossseries-sleeprule:
+    key: raceacrossseries-sleeprule
+    type: guide
+    authors:
+    - Race Across Series (szervezői blog)
+    credential: francia ultra-távú versenysorozat (Race Across France stb.) szervezője
+    year: 2025
+    title: 'The sleep rule in ultra-cycling: understanding its impact on performance and safety'
+    venue: Race Across Series
+    doi: null
+    url: https://en.raceacrossseries.com/blog/grer-son-sommeil-en-ultra-distance-la-rgle-sommeil-sur-les-race-across-series
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: A sorozat kötelező szabálya 36 óránként 4 óra pihenő, GPS-szel ellenőrizve, hogy senki ne hagyjon ki
+      két egymást követő éjszakát. A szervezői álláspont szerint a legtöbb versenyzőnek 24 óránként minimum 4 óra
+      alvásra van szüksége hosszabb versenyen, és csak nagyon edzett sportolók működnek 1,5–2 órán.
+    notes: 'Bevezetik a „Wakefulness Made Good" (WMG) fogalmát: a hasznos ébrenlét fenntartására fordított idő a
+      versenyidő 8–20%-a. Ez az egyetlen talált félkvantitatív „alvás-hatékonysági" keretrendszer, de a szervezőtől
+      származik, nem lektorált forrás.'
+    status: url-megnyitva
+  jobson-irvine-book-2017:
+    key: jobson-irvine-book-2017
+    type: book
+    authors:
+    - 'Simon Jobson & Dominic Irvine (könyv); recenzió: Chris White (Ride Far)'
+    credential: 'Jobson: sporttudós/edző; Irvine: rekorder ultra-távú kerékpáros (LEJOG tandem rekord)'
+    year: 2017
+    title: 'Ultra-Distance Cycling: An Expert Guide to Endurance Cycling (könyvrecenzió)'
+    venue: 'Bloomsbury / recenzió: ridefar.info'
+    doi: null
+    url: https://ridefar.info/2017/11/book-review-ultra-distance-cycling-simon-jobson-dominic-irvine/
+    grade: C
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: A recenzió szerint a könyv mentális fejezeteiben van egy „jó rész az alvásmegvonásról", de a recenzens
+      szerint ezek a fejezetek olykor elkalandoznak a témától. A könyv sporttudós + rekorder szerzőpárosa miatt
+      hivatkozható klasszikus kézikönyv, de konkrét óraszám-ajánlást a recenzió nem idéz.
+    notes: 'FIGYELEM: a könyv elsődleges szövegét nem tudtam megnyitni, csak a recenziót – a tankönyvben vagy be
+      kell szerezni a nyomtatott fejezetet, vagy másodlagos hivatkozásként kell jelölni. Ne tulajdonítsunk neki
+      konkrét számokat.'
+    status: url-megnyitva
+  chinoy-2021:
+    key: chinoy-2021
+    type: article
+    authors:
+    - Evan D. Chinoy, Rachel R. Markwald és mtsai
+    credential: Naval Health Research Center alváskutató csoport
+    year: 2021
+    title: Performance of seven consumer sleep-tracking devices compared with polysomnography
+    venue: SLEEP (Oxford Academic), 44(5)
+    doi: 10.1093/sleep/zsaa291
+    url: https://academic.oup.com/sleep/article/44/5/zsaa291/6055610
+    grade: B
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 34 egészséges fiatal felnőtt három egymást követő laborálmát vizsgálták hét fogyasztói eszközzel (Fatigue
+      Science Readiband, Fitbit Alta HR, Garmin Fenix 5S, Garmin Vivosmart 3, EarlySense Live, ResMed S+, SleepScore
+      Max) poliszomnográfia ellenében. Az alvás felismerésének érzékenysége minden eszköznél ≥0,93, de az ébrenlét
+      felismerésének specificitása csak 0,18–0,54; a Garmin eszközök kb. 44–47 perccel túlbecsülték a teljes alvásidőt
+      és kb. 48 perccel alábecsülték a WASO-t.
+    notes: 'Az alvásstádium-becslés inkonzisztens: minden stádiumot jelző eszköz túlbecsülte a felszínes alvást,
+      három a mélyalvást, három alábecsülte a REM-et. Kulcs a tankönyv szempontjából: az eszközök MINDEGYIKE rosszabbul
+      teljesített a zavart, széttöredezett alvású éjszakákon – pontosan olyanokon, amilyenek egy ultraverseny alatt
+      vannak.'
+    status: ellenorizve-doi
+  schyvens-2025:
+    key: schyvens-2025
+    type: article
+    authors:
+    - Schyvens, Peters, Van Oost, Aerts, Masci, Neven, Dirix, Wets, Ross, Verbraecken
+    credential: klinikai alváslabor-kutatócsoport (Antwerpen / UHasselt)
+    year: 2025
+    title: Performance validation of six commercial wrist-worn wearable sleep-tracking devices for sleep stage scoring
+      compared to polysomnography
+    venue: SLEEP Advances (Oxford Academic), 6(2)
+    doi: 10.1093/sleepadvances/zpaf021
+    url: https://academic.oup.com/sleepadvances/article/6/2/zpaf021/8090472
+    grade: B
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 62 felnőtt (átlagéletkor 46,0 ± 12,6 év) poliszomnográfiával párhuzamos mérése hat eszközzel (Fitbit
+      Charge 5, Fitbit Sense, Withings Scanwatch, Garmin Vivosmart 4, Whoop 4.0, Apple Watch Series 8). Stádiumbesoroláson
+      közepes egyezés az Apple Watch (κ = 0,53), Fitbit Sense (κ = 0,42) és Fitbit Charge 5 (κ = 0,41), gyenge-közepes
+      a Whoop 4.0 (κ = 0,37), Withings (κ = 0,22) és Garmin (κ = 0,21) esetében.
+    notes: 'Az alvás detektálásának érzékenysége mindenhol >90%, de az ébrenlét specificitása csak 29–52% – négy
+      évvel Chinoy után is ugyanaz az alapprobléma. Gyakorlati következtetés a tankönyvbe: a versenyalvás mennyiségének
+      okos-óra alapú visszamérése szisztematikusan felfelé torzíthat, a stádiumadatok (mély/REM) pedig nem megbízhatóak.'
+    status: ellenorizve-doi
+  zhao-lighttherapy-2025:
+    key: zhao-lighttherapy-2025
+    type: article
+    authors:
+    - Zhao, Li, Miao, He, Lin
+    credential: szisztematikus áttekintés és metaanalízis szerzői
+    year: 2025
+    title: A systematic review and meta-analysis on light therapy for sleep disorders in shift workers
+    venue: Scientific Reports (Nature)
+    doi: 10.1038/s41598-024-83789-3
+    url: https://www.nature.com/articles/s41598-024-83789-3
+    grade: B
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: 11 vizsgálat, 195 résztvevő (18–60 év) metaanalízise alapján a fényterápia műszakos dolgozóknál 32,54
+      perccel növelte a teljes alvásidőt (p < 0,00001) és 2,91%-kal az alváshatékonyságot (p = 0,007), valamint
+      1,72 órával késleltette a cirkadián fázist. A leghatékonyabb a közepes megvilágítás (900–6000 lx) éjszaka,
+      legalább 1 órás expozícióval.
+    notes: 'Dózis-válasz: a teljes alvásidőre fordított U-alakú összefüggés (R² = 0,822), az alváshatékonyságra
+      lineáris a kumulált dózissal (lx*h, R² = 0,92) – tehát „több fény" nem mindig jobb. Az alvásindulási látencia
+      és a WASO nem javult. ÁTVITEL FIGYELMEZTETÉS: műszakos dolgozói populáció, nem kerékpáros verseny – a kerékpárlámpa
+      vagy fejlámpa hasonló hatását ultraversenyen SEMMILYEN vizsgálat nem igazolta; ez feltevés, nem evidencia.'
+    status: ellenorizve-doi
+  dotwatcher-moresleep-2026:
+    key: dotwatcher-moresleep-2026
+    type: article
+    authors:
+    - Samuel Thompson (DotWatcher Substack)
+    credential: hivatásos ultra-kerékpáros edző
+    year: 2026
+    title: More Sleep = Higher Race Ranking?
+    venue: DotWatcher Substack
+    doi: null
+    url: https://dotwatcher.substack.com/p/more-sleep-higher-race-ranking
+    grade: D
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Edzői kommentár egy „új, ultra-kerékpáros verseny alatti alvásmintázatokat követő vizsgálatról" és
+      az alvásmegvonás kognitív költségeiről; a szerző a teljesítményoptimalizálás szempontjából értelmezi az eredményeket.
+      A cikk érdemi része (számok, módszertan, következtetések) fizetőfal mögött van.
+    notes: Csak a bevezető érhető el ingyenesen – a tankönyvben NEM idézhető adatforrásként, csak annak jelzéseként,
+      hogy a gyakorlati közösség 2026-ban aktívan recipiálja a Race Across France vizsgálatot (hurdiel-raf-2026).
+      A cím kérdőjeles; a mögöttes tanulmány korrelációjának iránya épp fordított (a gyorsabbak aludtak kevesebbet).
+    status: url-megnyitva
+  dotwatcher-opinion-2026:
+    key: dotwatcher-opinion-2026
+    type: article
+    authors:
+    - Conor McKenzie (DotWatcher Substack)
+    credential: ultra-kerékpáros újságíró/versenyző
+    year: 2026
+    title: 'Opinion: Sleep is the best performance hack in ultra cycling'
+    venue: DotWatcher Substack
+    doi: null
+    url: https://dotwatcher.substack.com/p/opinion-is-sleep-is-the-best-performance
+    grade: D
+    questions:
+    - Q8
+    - Q9
+    modules:
+    - '04'
+    summary: Véleménycikk azzal a tézissel, hogy „az ultrázásnak alvásproblémája van", és abba kell hagyni az alapvető
+      szükségletek gyengeségként való kezelését; esettanulmányként az Atlas Mountain Race-t hozza. A szerző saját
+      versenyzői és megfigyelői tapasztalatára hivatkozik, nem adatokra.
+    notes: Fizetőfalas, a számok nem ellenőrizhetők – kizárólag a 2024–2026-os kulturális fordulat dokumentálására
+      használható (a „szenvedéskultusz" visszaszorulása), nem ajánlásforrásként.
+    status: url-megnyitva
