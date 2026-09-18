@@ -1,0 +1,18 @@
+# Kísérőoldal (statikus)
+
+Ugyanabból a modul-Markdownból készül, mint a PDF (`build/render.py` értelmezője), `build/site.py` írja a `dist/site/` mappába.
+
+    python3 build/site.py                # minden: content/hu/04-alvas.md → dist/site/
+    open dist/site/index.html            # file:// alól is működik, szerver nem kell
+
+Részek:
+
+- `web.css` — webes stíluslap a közös tokenekre (`design/tokens/tokens.css`) építve; a jelek (bizonyíték-ikon, fix/példa/egyéni) ugyanazok, mint a PDF-ben.
+- `js/site.js` — tartalomjegyzék-kiemelés, szintszűrő (alap/haladó/elit), `localStorage` segéd.
+- `js/kviz.js` — önellenőrző kvíz; kérdések: `data/quiz/<modul>.yaml` (a build keveri a válaszokat, determinisztikusan).
+- `js/alvasterv.js` + `templates/alvasterv.html` — alvásterv-kalkulátor és a 12. oldal sablonja; paraméterek: `data/tools/alvasterv.yaml`.
+- `js/kronotipus.js` + `templates/kronotipus.html` — rMEQ-alapú kronotípus-kérdőív (forrás: `adan-1991-rmeq`).
+
+Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
+
+GitHub Pages: a `dist/site/` tartalma tehető a `gh-pages` ágra vagy egy Actions-lépés futtathatja a buildet (`.nojekyll` benne van).

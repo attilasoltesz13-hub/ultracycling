@@ -1,0 +1,56 @@
+# Alvásterv-kalkulátor paraméterei — a 04 modul 5., 10., 12. és 13. oldalából.
+# Minden érték jelölve: fix (nem alku tárgya) · példa (rutinos versenyzők értéke) · egyéni (teszttel töltendő).
+# A kísérőoldal build/site.py-ból olvassa és JSON-ként a kalkulátor oldalába írja.
+module: "04"
+thresholds:            # fix — 5. oldal
+  first_hours: 17      # ébrenléti óra ≈ 0,5 ‰
+  second_hours: 24     # ébrenléti óra ≈ 1 ‰
+nadir:                 # belső óra mélypontja — 2., 7., 13. oldal
+  start: 0             # 00:00
+  end: 4               # 04:00
+  danger_start: 5      # 05:00–09:00: a leglassabb reakcióidő terepen (7. oldal)
+  danger_end: 9
+chronotype_shift_h:    # példa · egyéni — a mérték egyéni, csak az irány biztos (13. oldal)
+  korai: -1
+  koztes: 0
+  kesoi: 1.5
+sleep_bands:           # példa — 10. oldal táblázata
+  - id: rovid
+    label: "< 72 óra (BRM 600–1000, 24 órás)"
+    max_days: 3
+    hours_min: 0
+    hours_max: 1.5
+    note: "0–1,5 óra/éj, 20 perces szunyókálásokkal; a 17/24 órás küszöb akkor is érvényes"
+  - id: kozep
+    label: "3–5 nap (1000–1500 km)"
+    max_days: 5
+    hours_min: 1.5
+    hours_max: 3
+    note: "„4 napnál rövidebben minimum 1,5 óra” — minden éjjel ugyanannyi"
+  - id: hosszu
+    label: "5+ nap (TCR, 2000+ km)"
+    max_days: 99
+    hours_min: 3
+    hours_max: 5
+    note: "3–5 óra/éj, minden éjjel ugyanannyi; 5,3 óra/nap alatt az álmosság napról napra halmozódik"
+  - id: brevet
+    label: "Brevet (PBP, 1200 km, 90 óra)"
+    max_days: 4
+    hours_min: 1.5
+    hours_max: 2
+    note: "90–120 perces blokkok az ellenőrzőpontokon, fűtött, biztonságos helyen"
+nap:                   # példa · egyéni — 9. oldal
+  window_min: 30
+  sleep_min: 20
+moving_ratio:          # példa — 10. oldal
+  low: 0.75
+  high: 0.85
+  default_speed_kmh: 24
+banking:               # példa — 11. oldal
+  nights: 6
+  extra_hours: 1.5
+  bedtime_hours_max: 10
+caffeine:              # példa — 9., 11. oldal
+  before_main_sleep_h: 4.5    # versenyen: a főalvás előtti 4–5 órában nem
+  before_bed_h_100mg: 9       # rajt előtti héten, labormodell
+  before_bed_h_200mg: 13

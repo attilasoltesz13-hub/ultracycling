@@ -17,14 +17,15 @@ kísérőoldal. Előbb teljes magyar kiadás, utána angol.
 | `design/` | Stílusguide, design tokenek, oldaltípus-sablonok, betűtípusok, ikonok |
 | `figures/src` → `figures/svg` | Diagramok forráskódja és renderelt SVG |
 | `assets/photos/` | Saját és szabad felhasználású fotók (forrás a `CREDITS.md`-ben) |
-| `site/` | Statikus kísérőoldal (Astro) |
-| `build/` | PDF- és web-build szkriptek |
+| `web/` | Kísérőoldal forrása: stíluslap, JS-eszközök, sablonok (lásd `web/README.md`) |
+| `data/quiz/`, `data/tools/` | Kvízkérdések és a kalkulátorok paraméterei modulonként |
+| `build/` | `render.py` (PDF, Chromium print) és `site.py` (statikus kísérőoldal), egy közös értelmezővel |
 | `dist/` | Generált PDF és weboldal (nem verziókezelt) |
 | `docs/` | Projektdokumentumok, döntésnapló |
 
 ## Jelrendszer
 
-- **Bizonyíték-fokozat**: A (RCT / meta-analízis) · B (terepvizsgálat, megfigyelés) · C (edzői/versenyzői konszenzus) · D (feltörekvő, nem validált)
+- **Bizonyíték-fokozat** (négysávos ikon): összesített kutatás (A) · terepvizsgálat (B) · szakmai tapasztalat (C) · feltörekvő (D)
 - **Sablonelemek**: `fix` (általánosan érvényes) · `példa` (szemléltető érték) · `egyéni` (csak saját teszttel beállítható)
 - **Szint**: Alap · Haladó · Elit — **Szakág**: önellátó · kísérős · brevet · 24h
 
@@ -32,6 +33,11 @@ kísérőoldal. Előbb teljes magyar kiadás, utána angol.
 
 Használati útmutató (0) · I. Elmélet és élettan (1–8) · II. Gyakorlat (9–14) · III. Sablonok, eszközök, feladatok (15–19) · Függelékek.
 Pilot modul: **04 – Alvás, fáradtság, kognitív teljesítmény**.
+
+## Build
+
+    python3 build/render.py content/hu/04-alvas.md --draft   # dist/04-alvas.pdf
+    python3 build/site.py                                     # dist/site/ (open dist/site/index.html)
 
 ## Licenc
 

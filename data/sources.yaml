@@ -2426,3 +2426,24 @@ sources:
       nem mért adatok. A DOI a Wiley-oldal URL-jében látható; a teljes szöveg fizetőfal mögött, nyílt másolat a
       ZORA/chronobiology.ch oldalon.
     status: ellenorizve-doi
+  adan-1991-rmeq:
+    key: adan-1991-rmeq
+    type: journal
+    authors:
+    - Adan A.
+    - Almirall H.
+    year: 1991
+    title: 'Horne & Östberg morningness-eveningness questionnaire: A reduced scale'
+    venue: Personality and Individual Differences 12(3):241-253
+    doi: 10.1016/0191-8869(91)90110-w
+    url: https://doi.org/10.1016/0191-8869(91)90110-w
+    grade: B
+    questions:
+    - Q5
+    modules:
+    - '04'
+    summary: 'A Horne–Östberg reggeliség–estiség kérdőív rövidített, 5 kérdéses változata (rMEQ). Pontszám 4–25: 4–7
+      határozottan esti, 8–11 mérsékelten esti, 12–17 köztes, 18–21 mérsékelten reggeli, 22–25 határozottan reggeli.'
+    notes: A kísérőoldal kronotípus-kérdőívének alapja; a kérdéseket magyarra fogalmaztuk, a pontozás az eredetit követi.
+      Tájékoztató eszköz, nem klinikai besorolás. DOI a Crossref-rekordból (2026-09-18).
+    status: ellenorizve-doi

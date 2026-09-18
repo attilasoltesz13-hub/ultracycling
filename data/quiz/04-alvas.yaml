@@ -1,0 +1,86 @@
+# Önellenőrző kvíz — 04 Alvás. A kérdések a modul 15. oldalának tíz kérdését követik;
+# minden válasz a modul szövegéből vezethető le (page = a PDF oldala, ahol a válasz áll).
+# A kísérőoldal build/site.py-ból olvassa; a PDF-ben csak a nyitott kérdések szerepelnek.
+module: "04"
+title: Önellenőrzés — tíz kérdés
+questions:
+  - q: "Melyik két folyamat összege az álmosság, és melyik nem függ attól, mennyit aludtál?"
+    options:
+      - "Alvásnyomás + belső óra; a belső óra nem függ az alvás mennyiségétől."
+      - "Izomfáradtság + koffeinszint; a koffeinszint nem függ az alvástól."
+      - "Alvásnyomás + testhőmérséklet; az alvásnyomás nem függ az alvástól."
+    answer: 0
+    why: "Az alvásnyomás ébren nő és alvással csökken; a belső óra napszakhoz kötött, akkor is mélypontja van 00:00–04:00 körül, ha kipihent vagy."
+    page: 2
+  - q: "Hány százalékot ront egy átvirrasztott éjszaka az állóképességen — és mi az, ami nem romlik?"
+    options:
+      - "Kb. 5–6 %-ot; a rövid, nagy intenzitású teljesítmény (sprint) megmarad."
+      - "Kb. 20–25 %-ot; minden teljesítménymutató romlik."
+      - "Nincs mérhető romlás, csak az érzeted rosszabb."
+    answer: 0
+    why: "Összesített kutatás szerint −5–6 % állóképesség, +10 % időfutam-idő; az izom aktiválása és a sprint nem változik — az erőfeszítés érzete nő."
+    page: 3
+  - q: "Miért nem használható a saját álmosságérzeted a megállás jelzésére?"
+    options:
+      - "Mert az önértékelés nem követi a mért romlást — a fáradt agy magát pihentnek érzi."
+      - "Mert az álmosság mindig 03:00-kor a legerősebb, függetlenül a jelektől."
+      - "Mert az álmosságérzet csak alvásnyújtás után megbízható."
+    answer: 0
+    why: "Az éberség omlik először, az önértékelés utoljára; ezért külső szabály (jelek, óraidő) kell, nem érzés."
+    page: 4
+  - q: "Hány óra ébrenlét felel meg nagyjából 0,5 ezrelék véralkoholnak?"
+    options:
+      - 17 óra
+      - 12 óra
+      - 24 óra
+    answer: 0
+    why: "17 óra ébrenlét ≈ 0,5 ‰, 24 óra ≈ 1 ‰ a laborvizsgálatokban — Magyarországon a vezetésnél zéró tolerancia van, ez csak hasonlat."
+    page: 5
+  - q: "Melyik érzékelés érintett leggyakrabban alvásmegvonásban, és melyik ritkábban?"
+    options:
+      - "Leggyakrabban a látás, ritkábban a testérzés és a hallás."
+      - "Leggyakrabban a hallás, ritkábban a látás."
+      - "Leggyakrabban a szaglás, ritkábban a látás."
+    answer: 0
+    why: "Az összesített kutatás szerint a vizsgálatok 90 %-ában a látás torzul, 52 %-ban a testérzés, 33 %-ban a hallás."
+    page: 6
+  - q: "Mit jelent, hogy a Race Across France-on a gyorsabbak kevesebbet aludtak — és mit nem?"
+    options:
+      - "A mezőny-összehasonlítás nem tanács — aki gyorsabb, rövidebb ideig van pályán; személyen belül a kevesebb alvás rontja a reakcióidőt."
+      - "Azt jelenti, hogy kevesebb alvással gyorsabb leszel."
+      - "Azt jelenti, hogy az alvásnak nincs hatása az eredményre."
+    answer: 0
+    why: "Két független állítás: a mezőnyben a gyorsabbak kevesebbet aludtak (statisztika), ugyanazoknál a versenyzőknél a kevesebb alvás rosszabb éberséggel járt (személyen belüli hatás)."
+    page: 7
+  - q: "Miért 30 perc az ablak egy 20 perces szunyókáláshoz?"
+    options:
+      - "Az elalvás 5–6 percet visz el, és 30 percnél hosszabb alvásnál elindul a mélyalvás, amiből nehezebb ébredni."
+      - "Mert 30 perc alatt lezajlik egy teljes alvásciklus."
+      - "Mert a koffein pontosan 30 perc alatt hat."
+    answer: 0
+    why: "Pilóták 40 perces pihenőablakából átlagosan 26 perc lett alvás; a 30/20 ebből levezetett, egyszerűsített arány — a saját optimumod teszttel derül ki."
+    page: 9
+  - q: "Mikor nem szabad koffeint venni a versenyen?"
+    options:
+      - "A tervezett főalvás előtti 4–5 órában — és versenyen először kipróbálva."
+      - "Szunyókálás előtt."
+      - "Hajnalban, a mélypont után."
+    answer: 0
+    why: "Szunyókálás előtt éppen hasznos; a főalvás előtti órákban viszont az alvásod ellen dolgozik. Versenyen ne próbáld ki először."
+    page: 9
+  - q: "Mennyi alvásnyújtás mekkora hasznot adott a laborban, és hány éjszakán át?"
+    options:
+      - "Hat éjszakán át napi +1,6 óra; egy átvirrasztott éjszaka alatt nagyjából feleannyi kihagyott válasz."
+      - "Egy éjszaka +3 óra; a teljesítmény megduplázódott."
+      - "Két hét +30 perc; a hatás nem volt kimutatható."
+    answer: 0
+    why: "Az előny egy pihenőéjszaka után is megmaradt; sportolókon a bizonyíték gyengébb — ami biztos, hogy alvásadósság nélkül állj rajthoz."
+    page: 11
+  - q: "Hány napig töredezett az alvásod a célba érés után, és mit nem szabad az első napon?"
+    options:
+      - "Kb. a 4. éjszakáig töredezett, a helyreállás kb. 6 nap; az első napon nem vezetsz."
+      - "Egy éjszaka után minden helyreáll; az első napon nem ehetsz."
+      - "Két hétig nem alszol; az első napon nem mozoghatsz."
+    answer: 0
+    why: "Az 1., 2. és 4. éjszaka töredezett futóversenyek terepadataiban, miközben a sportoló már jól érzi magát; a 17/24 órás küszöb a célban is érvényes."
+    page: 14

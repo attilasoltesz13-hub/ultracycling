@@ -262,8 +262,8 @@ def ket_folyamat():
     # éjszakai sávok: 22–06 (4–12 h) és 46–54 → 28–36 h
     for a, b in ((4, 12), (28, 36)):
         svg.rect(X(a), y1, X(b) - X(a), y0 - y1, BLUE, opacity=0.07)
-    # mélypont-sáv: 01–05 h → 7–11 h és 31–35 h
-    svg.rect(X(31), y1, X(35) - X(31), y0 - y1, DEEP, opacity=0.10)
+    # mélypont-sáv: 00–04 h → 6–10 h és 30–34 h (a 2. éjszakán jelölve)
+    svg.rect(X(30), y1, X(34) - X(30), y0 - y1, DEEP, opacity=0.10)
     svg.line(x0, y0, x1, y0, BASE, 1)
     # S folyamat: 1. éjszaka alszik (esik), 2. éjszaka teker (tovább nő)
     # fent = nagyobb álmosság; alvás alatt (4–12 h) az S esik, utána 36 órán át nő
@@ -287,9 +287,9 @@ def ket_folyamat():
     svg.text(X(15.5), 180, "ébren nő, alvással ürül", 8.5, INK2, "start")
     svg.text(X(38), 160, "C — belső óra", 10, ORANGE, "start", 600)
     svg.text(X(38), 171, "napszakhoz kötött hullám", 8.5, INK2, "start")
-    svg.rect(X(26), 20, X(40) - X(26), 15, DEEP, rx=3)
-    svg.text(X(33), 31, "a kettő összeadódik: 01–05 h", 8.5, "#fff", "middle", 600)
-    svg.line(X(33), 35, X(33), y1, DEEP, 1, dash="3 3")
+    svg.rect(X(25), 20, X(39) - X(25), 15, DEEP, rx=3)
+    svg.text(X(32), 31, "a kettő összeadódik: 00–04 h", 8.5, "#fff", "middle", 600)
+    svg.line(X(32), 35, X(32), y1, DEEP, 1, dash="3 3")
     return svg.write("04-ket-folyamat-modell.svg")
 
 
