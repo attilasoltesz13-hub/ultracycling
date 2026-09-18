@@ -2400,3 +2400,29 @@ sources:
     notes: Fizetőfalas, a számok nem ellenőrizhetők – kizárólag a 2024–2026-os kulturális fordulat dokumentálására
       használható (a „szenvedéskultusz" visszaszorulása), nem ajánlásforrásként.
     status: url-megnyitva
+  borbely-2016-twoprocess:
+    key: borbely-2016-twoprocess
+    type: journal
+    authors:
+    - Borbély A.A.
+    - Daan S.
+    - Wirz-Justice A.
+    - et al.
+    year: 2016
+    title: 'The two-process model of sleep regulation: a reappraisal'
+    venue: Journal of Sleep Research 25(2):131-143
+    doi: 10.1111/jsr.12371
+    url: https://onlinelibrary.wiley.com/doi/abs/10.1111/jsr.12371
+    grade: C
+    questions:
+    - Q1
+    - Q5
+    modules:
+    - '04'
+    summary: 'A kétfolyamat-modell (1982) szerzői áttekintése: az álmosságot a homeosztatikus alvásnyomás (S, ébrenlét
+      alatt nő, alvás alatt csökken) és a cirkadián folyamat (C, napszakhoz kötött) együttese határozza meg. A modell
+      30+ év empirikus vizsgálatát foglalja össze.'
+    notes: Fogalmi keret, narratív áttekintés (C). A modul 1. ábrája ezt a sémát rajzolja; a görbék sematikusak,
+      nem mért adatok. A DOI a Wiley-oldal URL-jében látható; a teljes szöveg fizetőfal mögött, nyílt másolat a
+      ZORA/chronobiology.ch oldalon.
+    status: ellenorizve-doi

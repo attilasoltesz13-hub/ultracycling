@@ -48,7 +48,22 @@ Négy párhuzamos irodalomkutatás (Q1+Q6 laborirodalom; Q2+Q7 terepvizsgálatok
 - [x] Jobson–Irvine könyv: nincs meg → másodlagos hivatkozásként marad, konkrét számot nem tulajdonítunk neki.
 - [x] Biztonsági küszöb (17 óra ≈ 0,05 %): retorikai hasonlatként, a magyar zéró tolerancia megjegyzésével.
 - [x] Szervezői kötelező-pihenő szabályok: példaként említve (nem előírásként).
-- [ ] Elfogadod-e a tíz kulcsállítást mint a modul gerincét — az írás (2. lépés) ezekre épül, oldaltípusonként.
+- [x] Elfogadod-e a tíz kulcsállítást mint a modul gerincét — az írás (2. lépés) ezekre épül, oldaltípusonként.
+
+## Validálás (v0.1 tényellenőrzés, 2026-09-18)
+
+Független ellenőrző menet: a modul minden számát, időablakát és hivatkozását visszakerestük a `data/sources.yaml` összefoglalókban és a nyitott forrásokban. 57 talált eltérés, 62 javítás a szövegben. A fontosabb tanulságok, amelyek a többi modulra is érvényesek:
+
+- **Időablakok forrás szerint:** a cirkadián mélypont a forrásokban 00:00–04:00 / 00:00–05:00 — a korábbi „01–05 h” ablakot javítottuk (ábra és szöveg egyaránt).
+- **Eredmény-irány és szignifikancia:** a reakcióidő napszak-hatása a Hurdiel-vizsgálatban nem szignifikáns — nem állíthatjuk erősebbnek; a RAF-cikk szerzői diszkussziója (több alvás = gyorsabb) az 1. ábrával ellentétes, a modul a két különböző állítást (mezőny-összehasonlítás vs. saját alvásmegvonás) külön mondja ki, és jelzi a Lynch 2025 ellentmondást.
+- **Egységek és népesség:** „a futók 26–34 %-a” valójában más egység volt; a Waters-modalitások gyakoriságok, nem sorrend. Ilyen átfordítást a jövőben csak a forrás mondatával együtt írunk.
+- **Koffein-szunyókálás:** a „koffein + szunyókálás” protokoll két külön forrás összemosásából állt; időtartamokat (45–60 vs 60–75 perc) a saját forrásukhoz kötöttük.
+- **„Egyetlen kerékpáros vizsgálat”-típusú kizárólagos állítások** tilosak, ha nem kerestük vissza (Lahart RAAM létezik).
+- **Bizonyíték-fokozat az ábrákon:** az ábra fokozata a bemutatott adat forrásáé (4. és 6. ábra → terepvizsgálat/laborvizsgálat), nem a szövegkörnyezeté.
+- **Szint-sávok a nyitóoldalon** a tényleges oldalakhoz igazítva.
+- Új forrás: `borbely-2016-twoprocess` (kétfolyamat-modell elsődleges hivatkozása).
+
+Következmény a munkafolyamatra: minden modulnál a tényellenőrzés kötelező lépés a vázlat és a PDF-lezárás között, külön ügynökkel, a forráskulcsok szintjén.
 
 ---
 
