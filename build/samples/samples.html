@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="utf-8">
+<title>Hosszú távon — mintaoldalak</title>
+<link rel="stylesheet" href="../../design/tokens/tokens.css"><!-- az ábrák inline másolatai a figures/svg/ fájloknak; a valódi build onnan illeszti be őket -->
+<style>
+  /* ===== betűtípusok (vendorozva, OFL) ===== */
+  @font-face { font-family: "IBM Plex Sans"; src: url("../../design/fonts/IBMPlexSans-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "IBM Plex Sans"; src: url("../../design/fonts/IBMPlexSans-Italic.ttf"); font-weight: 400; font-style: italic; }
+  @font-face { font-family: "IBM Plex Sans"; src: url("../../design/fonts/IBMPlexSans-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "IBM Plex Sans"; src: url("../../design/fonts/IBMPlexSans-SemiBold.ttf"); font-weight: 600; }
+  @font-face { font-family: "IBM Plex Sans"; src: url("../../design/fonts/IBMPlexSans-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "IBM Plex Mono"; src: url("../../design/fonts/IBMPlexMono-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "IBM Plex Mono"; src: url("../../design/fonts/IBMPlexMono-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "IBM Plex Mono"; src: url("../../design/fonts/IBMPlexMono-SemiBold.ttf"); font-weight: 600; }
+  @font-face { font-family: "Inter"; src: url("../../design/fonts/Inter-Regular.ttf"); font-weight: 400; }
+  @font-face { font-family: "Inter"; src: url("../../design/fonts/Inter-Italic.ttf"); font-weight: 400; font-style: italic; }
+  @font-face { font-family: "Inter"; src: url("../../design/fonts/Inter-Medium.ttf"); font-weight: 500; }
+  @font-face { font-family: "Inter"; src: url("../../design/fonts/Inter-SemiBold.ttf"); font-weight: 600; }
+  @font-face { font-family: "Inter"; src: url("../../design/fonts/Inter-Bold.ttf"); font-weight: 700; }
+  @font-face { font-family: "Inter Display"; src: url("../../design/fonts/InterDisplay-SemiBold.ttf"); font-weight: 600; }
+  @font-face { font-family: "Inter Display"; src: url("../../design/fonts/InterDisplay-Bold.ttf"); font-weight: 700; }
+
+  html[data-font="inter"] { --font-sans: "Inter", system-ui, sans-serif; --font-display: "Inter Display", "Inter", sans-serif; }
+
+  /* ===== oldal ===== */
+  @page { size: A4 portrait; margin: 0; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; background: var(--paper); color: var(--ink); font-family: var(--font-sans); font-size: var(--fs-body); line-height: var(--lh-body); }
+  .page { position: relative; width: 210mm; height: 297mm; padding: var(--m-top) var(--m-right) var(--m-bottom) calc(var(--m-left) + var(--sidebar) + var(--gutter)); page-break-after: always; overflow: hidden; }
+  .page:last-child { page-break-after: auto; }
+  h1, h2, h3 { font-family: var(--font-display); line-height: var(--lh-heading); margin: 0; letter-spacing: -0.01em; }
+  h1 { font-size: var(--fs-h1); font-weight: 700; color: var(--brand-deep); max-width: 150mm; }
+  h2 { font-size: var(--fs-h2); font-weight: 600; color: var(--brand); }
+  h3 { font-size: var(--fs-body); font-weight: 600; text-transform: uppercase; letter-spacing: 0.06em; color: var(--ink-2); }
+  p { margin: 0 0 2.2mm; }
+  .lede { font-size: 11.5pt; color: var(--ink-2); max-width: 150mm; margin-bottom: 4mm; }
+  .kicker { font-size: var(--fs-small); text-transform: uppercase; letter-spacing: 0.1em; color: var(--muted); font-weight: 500; margin-bottom: 1.5mm; }
+  .kicker b { color: var(--brand); }
+  .small { font-size: var(--fs-small); color: var(--ink-2); }
+  .caption { font-size: var(--fs-caption); color: var(--muted); line-height: 1.35; }
+  .mono, .num { font-family: var(--font-mono); font-variant-numeric: tabular-nums; }
+  .tnum { font-variant-numeric: tabular-nums; }
+
+  /* oldalsáv és lábléc */
+  .sidebar { position: absolute; left: var(--m-left); top: var(--m-top); width: var(--sidebar); display: flex; flex-direction: column; gap: 2.5mm; align-items: center; }
+  .sidebar svg { width: 6mm; height: 6mm; }
+  .sidebar .sep { width: 4mm; height: var(--w-hairline); background: var(--baseline); margin: 1mm 0; }
+  .footer { position: absolute; left: var(--m-left); right: var(--m-right); bottom: 8mm; display: flex; justify-content: space-between; align-items: baseline; font-size: var(--fs-caption); color: var(--muted); border-top: var(--w-hairline) solid var(--hairline); padding-top: 1.6mm; }
+  .footer .pg { font-family: var(--font-mono); color: var(--ink-2); }
+  .sample-tag { position: absolute; top: 6mm; right: var(--m-right); font-size: 7pt; text-transform: uppercase; letter-spacing: 0.12em; color: var(--accent); border: var(--w-rule) solid var(--accent); border-radius: 1mm; padding: 0.6mm 1.6mm; }
+
+  /* rács */
+  .grid { display: grid; grid-template-columns: repeat(6, 1fr); column-gap: var(--gutter); row-gap: 4mm; }
+  .c2 { grid-column: span 2; } .c3 { grid-column: span 3; } .c4 { grid-column: span 4; } .c6 { grid-column: span 6; }
+
+  /* jelrendszer: bizonyíték */
+  .ev { display: inline-flex; align-items: center; gap: 1.2mm; font-size: var(--fs-caption); color: var(--ink-2); vertical-align: middle; }
+  .ev i { display: inline-block; width: 4.2mm; height: 4.2mm; border-radius: 0.8mm; color: #fff; font: 600 6.5pt/4.2mm var(--font-sans); text-align: center; font-style: normal; }
+  .ev.a i { background: var(--ev-a); } .ev.b i { background: var(--ev-b); } .ev.c i { background: var(--ev-c); }
+  .ev.d i { background: var(--ev-d); color: var(--ink); outline: 0.3mm dashed var(--brand); outline-offset: 0.3mm; }
+
+  /* jelrendszer: sablonelemek */
+  .t { display: inline-flex; align-items: center; gap: 1.2mm; font-size: var(--fs-caption); padding: 0.4mm 1.6mm 0.4mm 1.2mm; border-radius: var(--r-chip); border: 0.35mm solid; white-space: nowrap; }
+  .t::before { content: ""; width: 2mm; height: 2mm; border-radius: 50%; border: 0.35mm solid currentColor; }
+  .t.fix { color: var(--t-fix); } .t.fix::before { background: var(--t-fix); }
+  .t.ex { color: var(--t-example); border-style: dashed; }
+  .t.ind { color: var(--t-individual); } .t.ind::before { background: var(--t-individual); border-radius: 50% 50% 20% 20%; }
+
+  /* dobozok */
+  .box { border: var(--w-hairline) solid var(--hairline); border-radius: var(--r-box); padding: 3.5mm 4mm; background: var(--plane); }
+  .box.you { background: #fff; border-left: 1.2mm solid var(--accent); border-radius: 0 var(--r-box) var(--r-box) 0; }
+  .box.you h3 { color: var(--accent); margin-bottom: 1.5mm; }
+  .box.you p { font-size: 9.5pt; }
+  .box.you strong { color: var(--ink); }
+  .figure { border-bottom: var(--w-hairline) solid var(--hairline); padding-bottom: 2mm; }
+  .figure svg { width: 100%; height: auto; display: block; }
+
+  /* adat-oldal: hero szám */
+  .hero { font-family: var(--font-display); font-size: var(--fs-hero); font-weight: 700; color: var(--brand-deep); line-height: 1; letter-spacing: -0.02em; }
+  .hero small { font-size: 12pt; font-weight: 500; color: var(--ink-2); letter-spacing: 0; margin-left: 1mm; }
+
+  /* protokoll-oldal */
+  .steps { counter-reset: step; list-style: none; margin: 0; padding: 0; }
+  .steps li { counter-increment: step; display: grid; grid-template-columns: 9mm 1fr 30mm; column-gap: 3mm; align-items: start; padding: 2.6mm 0; border-top: var(--w-hairline) solid var(--hairline); }
+  .steps li::before { content: counter(step, decimal-leading-zero); font-family: var(--font-mono); font-size: 13pt; font-weight: 600; color: var(--brand); line-height: 1; padding-top: 0.5mm; }
+  .steps li .what { font-weight: 600; }
+  .steps li .how { font-size: 9.5pt; color: var(--ink-2); }
+  .steps li .tags { display: flex; flex-direction: column; gap: 1.2mm; align-items: flex-start; }
+  .status { display: inline-flex; align-items: center; gap: 1.5mm; font-size: var(--fs-small); font-weight: 600; }
+  .status i { width: 3mm; height: 3mm; border-radius: 0.6mm; display: inline-block; }
+  .status.crit i { background: var(--critical); } .status.warn i { background: var(--warning); } .status.good i { background: var(--good); }
+  table { border-collapse: collapse; width: 100%; font-size: var(--fs-small); }
+  th { text-align: left; font-weight: 600; color: var(--ink-2); border-bottom: var(--w-rule) solid var(--baseline); padding: 1.2mm 1.5mm; }
+  td { border-bottom: var(--w-hairline) solid var(--hairline); padding: 1.4mm 1.5mm; vertical-align: top; }
+  td.num, th.num { text-align: right; }
+  .specimen { font-size: 9pt; color: var(--ink-2); border-top: var(--w-hairline) solid var(--hairline); padding-top: 2mm; margin-top: 2mm; }
+  .specimen b { color: var(--ink); }
+</style>
+</head>
+<body>
+
+<!-- ============ 1. FOGALOM-OLDAL ============ -->
+<section class="page">
+  <div class="sample-tag">Mintaoldal · tartalom illusztratív</div>
+  <div class="sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#184f95" stroke-width="2.2" stroke-linecap="round"><path d="M5 17h14M5 12h14M5 7h14"/></svg>
+    <div class="sep"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 14l2-5h12l2 5v4H4zM7 18v2M17 18v2"/><circle cx="8" cy="15.5" r="1"/><circle cx="16" cy="15.5" r="1"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+  </div>
+
+  <div class="kicker"><b>04 · Alvás, fáradtság, kognitív teljesítmény</b> &nbsp;·&nbsp; Fogalom &nbsp;·&nbsp; Alap</div>
+  <h1>Két erő dönti el, mikor alszol el a nyeregben: az alvásnyomás és a belső óra</h1>
+  <p class="lede">A fáradtság nem egyenletesen nő. Az ébren töltött órákkal halmozódó alvásnyomás és a napszakhoz kötött cirkadián ritmus összege adja az álmosságot — és a kettő hajnali 3 és 5 között találkozik.</p>
+
+  <div class="grid">
+    <div class="c4 figure">
+      <svg viewBox="0 0 520 250" xmlns="http://www.w3.org/2000/svg" font-family="inherit" style="height:auto">
+        <defs>
+          <linearGradient id="night" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#184f95" stop-opacity="0.10"/><stop offset="1" stop-color="#184f95" stop-opacity="0.02"/></linearGradient>
+        </defs>
+        <!-- éjszakai sávok: 22–06 -->
+        <rect x="40" y="20" width="0" height="180"/>
+        <rect x="40" y="20" width="60" height="180" fill="url(#night)"/>
+        <rect x="280" y="20" width="60" height="180" fill="url(#night)"/>
+        <rect x="500" y="20" width="10" height="180" fill="url(#night)"/>
+        <!-- rács -->
+        <g stroke="#e1e0d9" stroke-width="1"><line x1="40" y1="200" x2="510" y2="200"/><line x1="40" y1="110" x2="510" y2="110"/></g>
+        <!-- S folyamat: fűrészfog, alvás alatt csökken -->
+        <path d="M40 60 L100 150 L280 55 L340 32 L510 22" fill="none" stroke="#2a78d6" stroke-width="2.4" stroke-linejoin="round"/>
+        <!-- C folyamat: szinusz, mélypont ~04:00 -->
+        <path d="M40 120 C 70 60, 110 60, 145 120 S 220 190, 260 120 S 330 60, 380 120 S 460 190, 510 120" fill="none" stroke="#eb6834" stroke-width="2.4"/>
+        <!-- cirkadián mélypont jelölés -->
+        <g>
+          <line x1="310" y1="20" x2="310" y2="200" stroke="#0d366b" stroke-width="1" stroke-dasharray="3 3"/>
+          <rect x="262" y="206" width="96" height="16" rx="3" fill="#0d366b"/>
+          <text x="310" y="217.5" font-size="10" fill="#fff" text-anchor="middle" font-weight="600">mélypont 03–05 h</text>
+        </g>
+        <!-- tengely feliratok -->
+        <g font-size="10" fill="#898781">
+          <text x="40" y="238">18 h</text><text x="100" y="238">06</text><text x="160" y="238">12</text><text x="220" y="238">18</text><text x="280" y="238">24</text><text x="340" y="238">06</text><text x="400" y="238">12</text><text x="460" y="238">18</text>
+          <text x="10" y="45" transform="rotate(-90 10 45)" text-anchor="end">álmosság →</text>
+        </g>
+        <!-- közvetlen feliratok -->
+        <text x="150" y="112" font-size="11" fill="#2a78d6" font-weight="600">S — alvásnyomás</text>
+        <text x="392" y="60" font-size="11" fill="#eb6834" font-weight="600">C — belső óra</text>
+        <text x="46" y="34" font-size="9" fill="#898781">1. éjszaka (alvás)</text>
+        <text x="286" y="34" font-size="9" fill="#898781">2. éjszaka (tekersz)</text>
+      </svg>
+      <p class="caption">1. ábra · A két-folyamat modell sémája 48 órán át egy átalvott és egy áttekert éjszakával. Sematikus rajz, nem mért görbe. Forrás: Borbély-modell <span class="ev a"><i>A</i></span></p>
+    </div>
+
+    <div class="c2">
+      <h3>Hogyan működik</h3>
+      <p><strong>S – alvásnyomás.</strong> Minden ébren töltött órával nő, alvással ürül. Ha átteker­sz egy éjszakát, a második nap eleve magasabb szintről indulsz.</p>
+      <p><strong>C – belső óra.</strong> Napszakhoz kötött hullám, függetlenül attól, mennyit aludtál. Mélypontja hajnali 3–5 óra között; a testhőmérséklet, a reakcióidő és az éberség itt a legrosszabb. <span class="ev a"><i>A</i></span></p>
+      <p><strong>Az összeg számít.</strong> A második éjszakán a magas S és a C-mélypont összeadódik: ez a mikroalvások, a hallucinációk és a rossz döntések ablaka. <span class="ev b"><i>B</i></span></p>
+    </div>
+
+    <div class="c6 box you">
+      <h3>Mit jelent neked</h3>
+      <p><strong>Tervezd</strong> a napi rövid alvást a C-mélypont köré (kb. 02:30–05:00), nem oda, ahol „épp elfáradsz”: ugyanaz a 90 perc itt a legtöbbet ér. <strong>Mérd</strong> a saját mélypontodat: két-három éjszakai edzésen jegyezd fel, mikor a legrosszabb — a görbe fázisa egyénenként ±2 órát eltolódhat. <span class="t ind">egyéni</span></p>
+    </div>
+  </div>
+
+  <div class="footer"><span>04 · Alvás, fáradtság, kognitív teljesítmény</span><span>Hosszú távon · minta v0.1</span><span class="pg">04 – 03</span></div>
+</section>
+
+<!-- ============ 2. ADAT-OLDAL ============ -->
+<section class="page">
+  <div class="sample-tag">Mintaoldal · számok illusztratívak</div>
+  <div class="sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#184f95" stroke-width="2.2" stroke-linecap="round"><path d="M5 12h14M5 7h14"/></svg>
+    <div class="sep"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="8"/><path d="M12 8v4l3 2"/></svg>
+  </div>
+
+  <div class="kicker"><b>04 · Alvás, fáradtság, kognitív teljesítmény</b> &nbsp;·&nbsp; Adat &nbsp;·&nbsp; Haladó</div>
+  <h1>Az éberség nem lassan kopik, hanem lépcsőben omlik: a figyelemkiesések az ébren töltött 18. óra után szaporodnak</h1>
+
+  <div class="grid">
+    <div class="c6 figure">
+      <svg viewBox="0 0 560 230" xmlns="http://www.w3.org/2000/svg">
+        <g stroke="#e1e0d9" stroke-width="1">
+          <line x1="50" y1="190" x2="540" y2="190"/><line x1="50" y1="140" x2="540" y2="140"/><line x1="50" y1="90" x2="540" y2="90"/><line x1="50" y1="40" x2="540" y2="40"/>
+        </g>
+        <line x1="50" y1="190" x2="540" y2="190" stroke="#c3c2b7" stroke-width="1"/>
+        <!-- veszélyzóna 18 h+ -->
+        <rect x="365" y="30" width="175" height="160" fill="#fab219" fill-opacity="0.08"/>
+        <line x1="365" y1="30" x2="365" y2="190" stroke="#fab219" stroke-width="1.2" stroke-dasharray="4 3"/>
+        <text x="371" y="42" font-size="9.5" fill="#8a6100" font-weight="600">figyelem-zóna (≥ 18 h ébren)</text>
+        <!-- görbe: illusztratív -->
+        <path d="M50 182 L120 180 L190 176 L260 168 L330 150 L400 118 L470 78 L540 46" fill="none" stroke="#2a78d6" stroke-width="2.4" stroke-linejoin="round"/>
+        <g fill="#fcfcfb" stroke="#2a78d6" stroke-width="2.4">
+          <circle cx="50" cy="182" r="4"/><circle cx="120" cy="180" r="4"/><circle cx="190" cy="176" r="4"/><circle cx="260" cy="168" r="4"/><circle cx="330" cy="150" r="4"/><circle cx="400" cy="118" r="4"/><circle cx="470" cy="78" r="4"/><circle cx="540" cy="46" r="4"/>
+        </g>
+        <g font-size="10" fill="#898781" text-anchor="middle">
+          <text x="50" y="208">0</text><text x="120" y="208">4</text><text x="190" y="208">8</text><text x="260" y="208">12</text><text x="330" y="208">16</text><text x="400" y="208">20</text><text x="470" y="208">24</text><text x="540" y="208">28 h</text>
+          <text x="295" y="226" fill="#52514e">ébren töltött órák</text>
+        </g>
+        <g font-size="10" fill="#898781" text-anchor="end">
+          <text x="44" y="194">0</text><text x="44" y="144">5</text><text x="44" y="94">10</text><text x="44" y="44">15</text>
+        </g>
+        <text x="14" y="120" font-size="10" fill="#52514e" transform="rotate(-90 14 120)" text-anchor="middle">figyelemkiesés / 10 perc</text>
+        <text x="476" y="70" font-size="11" fill="#2a78d6" font-weight="600" text-anchor="end">reakcióteszt-kiesések</text>
+      </svg>
+      <p class="caption">2. ábra · Figyelemkiesések (≥ 500 ms reakcióidő) száma egy 10 perces éberségi teszten az ébren töltött idő függvényében. <strong>Illusztratív görbe a formátum bemutatására</strong> — a kutatási fázisban a forrás mért adatsora kerül ide. Tervezett forrás: Dawson &amp; Reid 1997, Nature <span class="ev b"><i>B</i></span></p>
+    </div>
+
+    <div class="c3">
+      <div class="hero tnum">17–19<small>óra ébren</small></div>
+      <p class="small" style="margin-top:2mm">ennyi után a reakcióidő és a figyelem romlása a 0,5 ‰-es véralkoholszinttel mérhető össze — a legtöbb országban ez a vezetési határ. <span class="ev b"><i>B</i></span></p>
+      <p class="caption">Ez a szám gyakran idézett és a mintában tájékoztató jellegű; a végleges modulban a konkrét tanulmány és a konfidencia-tartomány szerepel.</p>
+    </div>
+
+    <div class="c3 box you">
+      <h3>Mit jelent neked</h3>
+      <p><strong>Kerüld</strong>, hogy a 18. ébren töltött óra forgalmas útra vagy hosszú lejtőre essen; a rajtidő ismeretében ez előre kiszámolható. <strong>Állítsd</strong> be az első tervezett alvást legkésőbb 20–22 óra ébrenlét után <span class="t ex">példa</span> — hogy neked hol a küszöb, azt a 16. modul alvásmegvonásos próbatekerése mutatja meg. <span class="t ind">egyéni</span></p>
+    </div>
+
+    <div class="c6" style="margin-top:2mm">
+      <h3 style="margin-bottom:2mm">Három szám, amit a végleges oldal a forrásból hoz <span class="t ex">példa</span></h3>
+      <div class="grid" style="row-gap:0">
+        <div class="c2 box"><div class="hero tnum" style="font-size:30pt">≈ 2×</div><p class="small" style="margin:1.5mm 0 0">ennyivel több figyelemkiesés a 2. áttekert éjszaka hajnalán az elsőhöz képest <span class="ev b"><i>B</i></span></p></div>
+        <div class="c2 box"><div class="hero tnum" style="font-size:30pt">20 perc</div><p class="small" style="margin:1.5mm 0 0">rövid alvás után mérhetően javul az éberség; a hatás 2–3 órán át tart <span class="ev a"><i>A</i></span></p></div>
+        <div class="c2 box"><div class="hero tnum" style="font-size:30pt">03–05 h</div><p class="small" style="margin:1.5mm 0 0">a cirkadián mélypont — itt a legnagyobb a mikroalvás kockázata, alvástól függetlenül <span class="ev a"><i>A</i></span></p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer"><span>04 · Alvás, fáradtság, kognitív teljesítmény</span><span>Hosszú távon · minta v0.1</span><span class="pg">04 – 07</span></div>
+</section>
+
+<!-- ============ 3. PROTOKOLL-OLDAL ============ -->
+<section class="page">
+  <div class="sample-tag">Mintaoldal · protokoll illusztratív</div>
+  <div class="sidebar">
+    <svg viewBox="0 0 24 24" fill="none" stroke="#184f95" stroke-width="2.2" stroke-linecap="round"><path d="M5 17h14M5 12h14M5 7h14"/></svg>
+    <div class="sep"></div>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"/></svg>
+    <svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10" width="14" height="9" rx="1.5"/><path d="M9 10V6h6v4M8 19v2M16 19v2"/></svg>
+  </div>
+
+  <div class="kicker"><b>04 · Alvás, fáradtság, kognitív teljesítmény</b> &nbsp;·&nbsp; Protokoll &nbsp;·&nbsp; Alap → Elit</div>
+  <h1>Út menti szunyókálás: hat lépés, hogy 20 perc alvásból 3 óra tiszta fej legyen</h1>
+  <p class="lede">A rövid alvás akkor hoz a legtöbbet, ha a jelekre indul, nem a kimerülésre, és ha az ébredés utáni tehetetlenséget is betervezed. A jelölések mutatják, mi általános szabály, mi példaérték és mi az, amit magadon kell bemérned.</p>
+
+  <div class="grid">
+    <div class="c6">
+      <ol class="steps">
+        <li><div><div class="what">Állj meg a második jelre</div><div class="how">Az első mikroalvás-jel (fejbiccentés, kihagyott kanyar, „hogy kerültem ide?”) után a következő biztonságos helyen megállsz — nem a harmadikra. Mikroalvás = azonnali stop.</div></div><div class="tags"><span class="t fix">fix</span><span class="status crit"><i></i>biztonsági</span></div></li>
+        <li><div><div class="what">Koffein a lefekvés előtt, nem utána</div><div class="how">100–200 mg (egy erős kávé vagy gél) közvetlenül alvás előtt: mire felébredsz, hatni kezd. Érzékeny gyomornál vagy este 22 után hagyd ki, ha a főalvást is tervezed.</div></div><div class="tags"><span class="t ex">példa</span><span class="ev c"><i>C</i></span></div></li>
+        <li><div><div class="what">Időzítő 15–25 percre</div><div class="how">A rövid alvás nem éri el a mélyalvást, ezért könnyebb belőle felébredni. 30 perc fölött nő az alvási tehetetlenség kockázata. A saját optimumod a próbatekeréseken derül ki.</div></div><div class="tags"><span class="t ind">egyéni</span><span class="ev a"><i>A</i></span></div></li>
+        <li><div><div class="what">Fekvő helyzet, meleg, sötét</div><div class="how">Buszmegálló, templomelőtér, benzinkút mosdója. Sapka, minden réteg fel, biciklit magadhoz kötve. Fény és hideg ellen szemmaszk és mentőfólia.</div></div><div class="tags"><span class="t fix">fix</span><span class="ev c"><i>C</i></span></div></li>
+        <li><div><div class="what">Ébredés után 5 perc gyaloglás</div><div class="how">Ne ülj azonnal nyeregbe: az alvási tehetetlenség 5–15 percig rontja a reakcióidőt. Egyél, igyál, nézd meg az útvonalat — csak utána indulj.</div></div><div class="tags"><span class="t fix">fix</span><span class="ev b"><i>B</i></span></div></li>
+        <li><div><div class="what">Két szunyókálás után főalvás</div><div class="how">Ha ugyanazon az éjszakán másodszor is kell, a harmadik jelnél már 90 perces alvás jön (egy teljes ciklus) — a rövid alvás nem pótolja a hiányt, csak áthidal.</div></div><div class="tags"><span class="t ex">példa</span><span class="status warn"><i></i>figyelem</span></div></li>
+      </ol>
+    </div>
+
+    <div class="c3">
+      <h3>Döntési fa</h3>
+      <table>
+        <tr><th>Jel</th><th>Teendő</th></tr>
+        <tr><td>Ásítás, nehéz szemhéj</td><td>Koffein, hideg víz, 10 perc állva — még nincs stop</td></tr>
+        <tr><td>Kihagyott kanyar, „hol vagyok?”</td><td>Következő biztonságos hely: 20 perc <span class="t fix">fix</span></td></tr>
+        <tr><td>Fejbiccentés, hallucináció</td><td><span class="status crit"><i></i>Azonnali stop</span>, 20–90 perc</td></tr>
+      </table>
+    </div>
+
+    <div class="c3 box you">
+      <h3>Mit jelent neked</h3>
+      <p><strong>Mérd</strong> be a 16. modul protokolljával, hogy 15, 20 vagy 25 perc után vagy-e a legtisztább — ezt a számot viszed a versenytervbe. <strong>Írd</strong> a Garminra emlékeztetőnek a jeleket: a fáradt agy nem ismeri fel őket magától.</p>
+    </div>
+
+    <div class="c6 specimen">
+      <b>Ékezet- és számpróba:</b> Öt hűtőházból kértünk színhúst — árvíztűrő tükörfúrógép. <span class="mono">1 234,5 km · 03:47 · 2 340 m · 145 W · 6,8 W/kg</span> · <span class="tnum">0123456789</span> · ŐŰ őű ÁÉÍÓÖÚÜ áéíóöúü
+    </div>
+  </div>
+
+  <div class="footer"><span>04 · Alvás, fáradtság, kognitív teljesítmény</span><span>Hosszú távon · minta v0.1</span><span class="pg">04 – 12</span></div>
+</section>
+
+</body>
+</html>

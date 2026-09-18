@@ -1,0 +1,49 @@
+/* Hosszú távon — design tokenek (generált forrás: tokens.json, v0.1.0)
+   Egyetlen forrás a PDF (Chromium print) és a weboldal számára. */
+:root {
+  /* felületek és tinta */
+  --paper: #fcfcfb;
+  --plane: #f4f4f1;
+  --ink: #0b0b0b;
+  --ink-2: #52514e;
+  --muted: #898781;
+  --hairline: #e1e0d9;
+  --baseline: #c3c2b7;
+
+  /* márka */
+  --brand: #184f95;
+  --brand-deep: #0d366b;
+  --accent: #eb6834;
+
+  /* bizonyíték-fokozatok (ordinális kék ramp) */
+  --ev-a: #0d366b;
+  --ev-b: #256abf;
+  --ev-c: #5598e7;
+  --ev-d: #86b6ef;
+
+  /* sablonelemek */
+  --t-fix: #184f95;
+  --t-example: #898781;
+  --t-individual: #eb6834;
+
+  /* diagram-sorozatok, rögzített sorrend */
+  --s1: #2a78d6; --s2: #eb6834; --s3: #1baf7a; --s4: #eda100;
+  --s5: #e87ba4; --s6: #008300; --s7: #4a3aa7; --s8: #e34948;
+
+  /* státusz (biztonsági küszöbök) */
+  --good: #0ca30c; --warning: #fab219; --serious: #ec835a; --critical: #d03b3b;
+
+  /* tipográfia — a build a betűtípus-jelöltet a --font-* változókra állítja */
+  --font-sans: "IBM Plex Sans", system-ui, sans-serif;
+  --font-display: "IBM Plex Sans", system-ui, sans-serif;
+  --font-mono: "IBM Plex Mono", ui-monospace, monospace;
+  --fs-display: 34pt; --fs-h1: 24pt; --fs-h2: 16pt; --fs-body: 10.5pt;
+  --fs-small: 8.5pt; --fs-caption: 7.5pt; --fs-hero: 56pt;
+  --lh-body: 1.45; --lh-heading: 1.15;
+
+  /* oldal */
+  --m-top: 16mm; --m-right: 16mm; --m-bottom: 18mm; --m-left: 16mm;
+  --gutter: 4mm; --sidebar: 8mm;
+  --r-box: 1.5mm; --r-chip: 6mm;
+  --w-hairline: 0.2mm; --w-rule: 0.4mm; --w-chart: 0.6mm;
+}
