@@ -16,13 +16,15 @@ OUT = ROOT / "dist/site"
 WEB = ROOT / "web"
 SITE_TITLE = "Hosszú távon"
 DISC_HU = {"onellato": "önellátó", "kiseros": "kísérős", "brevet": "brevet", "24h": "24 órás"}
-TOOLS = [("alvasterv", "Alvásterv-kalkulátor", "Rajtidőből a 17. és 24. ébrenléti óra, mélypont, éjszakai blokkok, mozgáshányad; a 12. oldal sablonja kitölthetően."),
-         ("kronotipus", "Kronotípus-kérdőív", "Öt kérdés (rMEQ-alapú): korai, köztes vagy késői típus — a kalkulátor ebből tolja el a mélypontot.")]
+# eszközök: (kulcs, cím, leírás, modul, adatfájl a data/tools alatt vagy None)
+TOOLS = [("alvasterv", "Alvásterv-kalkulátor", "Rajtidőből a 17. és 24. ébrenléti óra, mélypont, éjszakai blokkok, mozgáshányad; a 04 modul sablonja kitölthetően.", "04", "alvasterv.yaml"),
+         ("kronotipus", "Kronotípus-kérdőív", "Öt kérdés (rMEQ-alapú): korai, köztes vagy késői típus — a kalkulátor ebből tolja el a mélypontot.", "04", None),
+         ("idokoltsegvetes", "Időköltségvetés-kalkulátor", "Táv, sebesség, alvás, álló idő → napok és a három kar; fizikai réteg (CdA, Crr, lejtés, szél, magasság); a 08 modul versenyterv-sablonja.", "08", "idokoltsegvetes.yaml")]
+MODULES_NAV = [("04-alvas", "04 · Alvás"), ("08-pacing", "08 · Pacing")]
 
 
 def shell(title, body, rel, nav_on="", extra_head="", scripts=()):
-    nav = [("index.html", "Kezdőlap", "home"), ("hu/04-alvas/", "04 · Alvás", "04"),
-           ("hu/eszkozok/alvasterv/", "Kalkulátor", "alvasterv"), ("hu/eszkozok/kronotipus/", "Kronotípus", "kronotipus")]
+    nav = [("index.html", "Kezdőlap", "home")] + [(f"hu/{slug}/", t, slug[:2]) for slug, t in MODULES_NAV] + [("index.html#eszkozok", "Eszközök", "tools")]
     navh = "".join(f'<a href="{rel}{h}"{" class=on" if k == nav_on else ""}>{t}</a>' for h, t, k in nav)
     sc = "".join(f'<script src="{rel}assets/{s}"></script>' for s in scripts)
     return (f'<!DOCTYPE html><html lang="hu"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">'
@@ -78,8 +80,9 @@ class WebModule(Module):
         if ptype == "feladat" and quiz_html:
             content += quiz_html
         if ptype == "osszefoglalo":
-            content = re.sub(r"<p>QR → kísérőoldal: .*?</p>",
-                             '<p><b>Eszközök:</b> <a href="../eszkozok/alvasterv/">alvásterv-kalkulátor</a> · <a href="../eszkozok/kronotipus/">kronotípus-kérdőív</a> · <a href="#quiz">önellenőrző kvíz</a>.</p>', content, flags=re.S)
+            mine = [t for t in TOOLS if t[3] == self.meta["id"]]
+            links = " · ".join(f'<a href="../eszkozok/{k}/">{t}</a>' for k, t, *_ in mine) + ' · <a href="#quiz">önellenőrző kvíz</a>'
+            content = re.sub(r"<p>QR → kísérőoldal: .*?</p>", f'<p><b>Eszközök:</b> {links}.</p>', content, flags=re.S)
         mod = self.meta["id"]
         if ptype == "modulnyito":
             return (f'<section class="hero" id="p-{idx:02d}"><div class="wrap"><div class="modnum">{mod}</div><div class="kicker">{SITE_TITLE} · {mod}. modul</div>'
@@ -121,13 +124,13 @@ class WebModule(Module):
                         f'<h2>A modul {len(self.cite_order)} forrása</h2><p class="lede">Számozás a szövegbeli felső indexek szerint; a könyvben a közös irodalomjegyzékben ugyanezzel a számozással.</p>{self.references_web()}</section>')
             self.titles.append((len(self.pages) + 1, "Források", "alap", "forrasok"))
         toc = "".join(f'<li data-level="{lv}"><a href="#p-{"forrasok" if pt == "forrasok" and i > len(self.pages) else f"{i:02d}"}"><span class="n">{"§" if i > len(self.pages) else f"{i:02d}"}</span>{re.sub("<.*?>", "", t)}</a></li>' for i, t, lv, pt in self.titles[1:])
-        tools = "".join(f'<li><a href="../eszkozok/{k}/">{t}</a></li>' for k, t, _ in TOOLS)
+        tools = "".join(f'<li><a href="../eszkozok/{k}/">{t}</a></li>' for k, t, _, mod, _f in TOOLS if mod == self.meta["id"])
         chips = "".join(f'<button class="chip" data-level="{l}">{level_svg(l)}{LEVEL_HU[l]}</button>' for l in ("alap", "halado", "elit"))
         body = (f'{hero}<div class="wrap"><div class="layout"><aside class="toc"><ol>{toc}</ol><div class="tools"><b>Eszközök</b><ol>{tools}</ol></div></aside><main>'
                 f'<div class="filters"><span class="lab">Szint:</span>{chips}<span class="lab" style="margin-left:8px">— a haladó az alapot is mutatja</span></div>{self.legend()}'
                 + "".join(rest) + "</main></div></div>")
         quiz_js = f"<script>window.HT_QUIZ={json.dumps(quiz, ensure_ascii=False)};</script>" if quiz else ""
-        return shell(f'{self.meta["id"]} · {self.meta["title"]}', body + quiz_js, "../../", nav_on="04", scripts=("site.js", "kviz.js"))
+        return shell(f'{self.meta["id"]} · {self.meta["title"]}', body + quiz_js, "../../", nav_on=self.meta["id"], scripts=("site.js", "kviz.js"))
 
 
 def load_quiz(mod_id):
@@ -144,27 +147,26 @@ def load_quiz(mod_id):
     return q
 
 
-def tool_page(key, title, desc):
+def tool_page(key, title, desc, mod, datafile):
     tpl = (WEB / f"templates/{key}.html").read_text()
     tpl = tpl.replace("{{ICON_FIX}}", ICONS["fix"]).replace("{{ICON_EX}}", ICONS["ex"]).replace("{{ICON_IND}}", ICONS["ind"])
     data = ""
-    if key == "alvasterv":
-        p = yaml.safe_load((ROOT / "data/tools/alvasterv.yaml").read_text())
+    if datafile:
+        p = yaml.safe_load((ROOT / "data/tools" / datafile).read_text())
         data = f"<script>window.HT_TOOL={json.dumps(p, ensure_ascii=False)};</script>"
-    return shell(title, tpl + data, "../../../", nav_on=key, scripts=("site.js", f"{key}.js"))
+    return shell(title, tpl + data, "../../../", nav_on="tools", scripts=("site.js", f"{key}.js"))
 
 
 def home(modules):
     cards = []
     for m in modules:
         cards.append(f'<a class="card" href="hu/{m["slug"]}/"><div class="k">{m["id"]}. modul · {m["pages"]} oldal</div><h2>{html.escape(m["title"])}</h2><p>{html.escape(m["lede"])}</p></a>')
-    for k, t, d in TOOLS:
-        cards.append(f'<a class="card" href="hu/eszkozok/{k}/"><div class="k">eszköz</div><h2>{t}</h2><p>{d}</p></a>')
-    cards.append('<div class="card soon"><div class="k">hamarosan</div><h2>További 18 modul</h2><p>Élettan, edzés, táplálkozás, felszerelés, navigáció, mentális oldal, sablonok — a 04 modul a pilot, a többi ugyanezen a pályán készül.</p></div>')
+    cards.append('<div class="card soon"><div class="k">hamarosan</div><h2>További 17 modul</h2><p>Élettan, edzés, táplálkozás, felszerelés, navigáció, mentális oldal, sablonok — a 04 modul a pilot, a többi ugyanezen a pályán készül.</p></div>')
+    tools = "".join(f'<a class="card" href="hu/eszkozok/{k}/"><div class="k">eszköz · {mod}. modul</div><h2>{t}</h2><p>{d}</p></a>' for k, t, d, mod, _f in TOOLS)
     body = (f'<div class="wrap home-hero"><div class="kicker">Ultrakerékpáros oktatóanyag · vázlat v0.1</div><h1>{SITE_TITLE}</h1>'
             '<p class="sub">Az ultrakerékpározás tudománya és gyakorlata — önállóan feldolgozható modulok, a legfrissebb kutatásokból és a rutinos versenyzők egybevágó tapasztalatából. '
             'A PDF a tananyag; ez az oldal a hozzá tartozó eszközök és a webes olvasat.</p>'
-            f'<div class="cards">{"".join(cards)}</div>'
+            f'<div class="cards">{"".join(cards)}</div><h2 id="eszkozok" style="margin-top:24px">Eszközök</h2><div class="cards">{tools}</div>'
             '<p class="note">Jelölések a teljes anyagban: négysávos bizonyíték-ikon (összesített kutatás · terepvizsgálat · szakmai tapasztalat · feltörekvő), és minden sablonelemnél <span class="t fix">'
             + ICONS["fix"] + 'fix</span> <span class="t ex">' + ICONS["ex"] + 'példa</span> <span class="t ind">' + ICONS["ind"] + 'egyéni</span>.</p></div>')
     return shell("Kezdőlap", body, "", nav_on="home", scripts=("site.js",))
@@ -190,10 +192,10 @@ def build(paths):
         lede = re.sub("<.*?>", "", m.md(m.pages[0][1]).split("</p>")[0].split("<p>")[-1]) if m.pages else ""
         modules.append({"id": m.meta["id"], "slug": Path(p).stem, "title": m.meta["title"], "pages": len(m.pages), "lede": (lede.split(". ")[0] + ".") if len(lede) > 220 else lede})
         print("wrote", (out / "index.html").relative_to(ROOT), f"({len(m.pages)} szakasz, {len(m.cite_order)} hivatkozás)")
-    for k, t, d in TOOLS:
+    for k, t, d, mod, datafile in TOOLS:
         out = OUT / "hu/eszkozok" / k
         out.mkdir(parents=True, exist_ok=True)
-        (out / "index.html").write_text(tool_page(k, t, d))
+        (out / "index.html").write_text(tool_page(k, t, d, mod, datafile))
         print("wrote", (out / "index.html").relative_to(ROOT))
     (OUT / "index.html").write_text(home(modules))
     (OUT / ".nojekyll").write_text("")
@@ -201,5 +203,5 @@ def build(paths):
 
 
 if __name__ == "__main__":
-    args = [a for a in sys.argv[1:] if not a.startswith("--")] or ["content/hu/04-alvas.md"]
+    args = [a for a in sys.argv[1:] if not a.startswith("--")] or [f"content/hu/{slug}.md" for slug, _ in MODULES_NAV]
     build([ROOT / a for a in args])

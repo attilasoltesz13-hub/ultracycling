@@ -117,8 +117,8 @@ class Module:
         svg = (ROOT / a["src"]).read_text().split("?>", 1)[-1].strip().replace("{{FONT}}", "Inter")
         cap = self.inline(a.get("caption", ""))
         ev = ev_svg(a["ev"]) if a.get("ev") else ""
-        if a.get("size") == "half":
-            cls += " half"
+        if a.get("size") in ("half", "short"):
+            cls += " " + a["size"]
         return f'<div class="{cls}">{svg}<p class="caption">{cap} {ev}</p></div>'
 
     def protocol_html(self, body):

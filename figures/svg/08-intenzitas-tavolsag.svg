@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 262" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<line x1="60.0" y1="184.5" x2="540.0" y2="184.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="54.0" y="188.0" font-size="9" fill="#898781" text-anchor="end" font-weight="400">100 W</text>
+<line x1="60.0" y1="145.9" x2="540.0" y2="145.9" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="54.0" y="149.4" font-size="9" fill="#898781" text-anchor="end" font-weight="400">150 W</text>
+<line x1="60.0" y1="107.3" x2="540.0" y2="107.3" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="54.0" y="110.8" font-size="9" fill="#898781" text-anchor="end" font-weight="400">200 W</text>
+<line x1="60.0" y1="68.6" x2="540.0" y2="68.6" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="54.0" y="72.1" font-size="9" fill="#898781" text-anchor="end" font-weight="400">250 W</text>
+<line x1="60.0" y1="30.0" x2="540.0" y2="30.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="54.0" y="33.5" font-size="9" fill="#898781" text-anchor="end" font-weight="400">300 W</text>
+<line x1="103.8" y1="200.0" x2="103.8" y2="205.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="103.8" y="217.0" font-size="9" fill="#898781" text-anchor="middle" font-weight="400">24 óra</text>
+<line x1="271.3" y1="200.0" x2="271.3" y2="205.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="271.3" y="217.0" font-size="9" fill="#898781" text-anchor="middle" font-weight="400">3 nap</text>
+<line x1="400.4" y1="200.0" x2="400.4" y2="205.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="400.4" y="217.0" font-size="9" fill="#898781" text-anchor="middle" font-weight="400">7 nap</text>
+<line x1="506.0" y1="200.0" x2="506.0" y2="205.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="506.0" y="217.0" font-size="9" fill="#898781" text-anchor="middle" font-weight="400">14 nap</text>
+<line x1="60.0" y1="200.0" x2="540.0" y2="200.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="300.0" y="234.0" font-size="9.5" fill="#52514e" text-anchor="middle" font-weight="400">a verseny hossza (logaritmikus skála)</text>
+<text x="14.0" y="115.0" font-size="9" fill="#898781" text-anchor="middle" font-weight="400" transform="rotate(-90 14 115.0)">átlagteljesítmény →</text>
+<circle cx="103.8" cy="99.5" r="5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="112.8" y="111.5" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">24 h szóló, 861 km · 210 W · 2,8 W/kg</text>
+<circle cx="103.8" cy="96.1" r="5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="112.8" y="88.1" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">24 h pálya, 942 km · 214 W · 2,8 W/kg</text>
+<circle cx="103.8" cy="51.6" r="5" fill="#eb6834" stroke="#fff" stroke-width="1.5"/>
+<text x="112.8" y="55.6" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">24 h, 1026 km (edzői közlés) · 272 W · 3,5 W/kg</text>
+<circle cx="387.1" cy="105.0" r="5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="378.1" y="120.0" font-size="8.5" fill="#52514e" text-anchor="end" font-weight="400">RAAM 2 fős váltó (75 h) · 203 W · 2,7 W/kg</text>
+<circle cx="421.5" cy="136.6" r="5" fill="#eb6834" stroke="#fff" stroke-width="1.5"/>
+<text x="412.5" y="128.6" font-size="8.5" fill="#52514e" text-anchor="end" font-weight="400">RAAM szóló, 8 nap (NP, gyártói közlés) · 162 W · 2,1 W/kg</text>
+<circle cx="468.7" cy="152.9" r="5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="459.7" y="167.9" font-size="8.5" fill="#52514e" text-anchor="end" font-weight="400">RAAM szóló, 11 nap · 141 W · 1,8 W/kg</text>
+<circle cx="506.0" cy="177.6" r="5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="497.0" y="191.6" font-size="8.5" fill="#52514e" text-anchor="end" font-weight="400">TCR önellátó, 14 nap · 109 W · 1,5 W/kg</text>
+<circle cx="66.0" cy="246.0" r="4" fill="#2a78d6"/>
+<text x="75.0" y="249.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">terepvizsgálat, mért</text>
+<circle cx="230.0" cy="246.0" r="4" fill="#eb6834"/>
+<text x="239.0" y="249.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">edzői / gyártói közlés</text>
+</svg>

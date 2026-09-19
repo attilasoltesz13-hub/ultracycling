@@ -1,0 +1,71 @@
+<div class="wrap tool">
+  <div class="kicker"><b>08 · Pacing és versenystratégia</b> · Eszköz · Haladó</div>
+  <h1>Időköltségvetés-kalkulátor</h1>
+  <p class="lede">Táv, mozgósebesség, alvás és egyéb álló idő → napok; és a három kar: mennyit ér nálad +1 km/h, +1 óra mozgás, −30 perc állás. A fizikai réteg megmondja, mennyi wattba kerül egy km/h a te bringádon, lejtésen, szélben, magasságban.</p>
+  <div class="legend"><span>Jelölés:</span><span class="t fix">{{ICON_FIX}}fix</span> képlet, szabály <span class="t ex">{{ICON_EX}}példa</span> tracker- és esettanulmány-adat, igazítandó <span class="t ind">{{ICON_IND}}egyéni</span> saját mérés (<a href="../../08-pacing/#p-13">13. oldal</a>)</div>
+
+  <div class="card">
+    <h2>1 · A verseny és a napod <span class="t ex">{{ICON_EX}}példa</span></h2>
+    <div class="grid3">
+      <label class="f">Előbeállítás <select id="preset"></select><span class="hint" id="preset-note"></span></label>
+      <label class="f">Táv (km) <input id="tav" type="number" min="100" step="10" value="4000"></label>
+      <label class="f">Mozgósebesség (km/h) <input id="v" type="number" min="8" max="40" step="0.5" value="22"><span class="hint">terhelt bringán, edzésből; a fizikai réteg ellenőrzi</span></label>
+      <label class="f">Alvás (óra / 24 h) <input id="alvas" type="number" min="0" max="10" step="0.5" value="5"><span class="hint">a 04. modul sávjai: <72 h 0–1,5 · 3–5 nap 1,5–3 · 5+ nap 3–5</span></label>
+      <label class="f">Egyéb álló idő (óra / 24 h) <input id="egyeb" type="number" min="0" max="12" step="0.5" value="6.5"><span class="hint">bolt, evés, töltés, navigáció, tétovázás</span></label>
+      <label class="f">Brevet-időlimit ellenőrzése <select id="brevet"><option value="0">nem brevet</option><option value="1">brevet (ACP kontrollzárás)</option></select></label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Az eredmény <span class="t fix">{{ICON_FIX}}fix</span></h2>
+    <div class="kv" id="out"></div>
+    <div id="warn" style="margin-top:12px"></div>
+  </div>
+
+  <div class="card">
+    <h2>A három kar — hol a szűk keresztmetszet?</h2>
+    <div class="timeline" id="bars"></div>
+    <div class="kv" id="levers" style="margin-top:12px"></div>
+    <p class="note" id="verdict" style="margin:12px 0 0"></p>
+  </div>
+
+  <div class="card">
+    <h2>2 · Fizika: mennyi wattba kerül a sebesség <span class="t ind">{{ICON_IND}}egyéni</span></h2>
+    <div class="grid3">
+      <label class="f">Légellenállási felület (CdA, m²) <select id="cda"></select><span class="hint">saját mérés: <a href="../../08-pacing/#p-13">13. oldal</a>, 3. teszt</span></label>
+      <label class="f">Saját CdA (felülírja) <input id="cda-own" type="number" min="0.15" max="0.6" step="0.005" placeholder="pl. 0,32"></label>
+      <label class="f">Gördülési ellenállás (Crr) <select id="crr"></select></label>
+      <label class="f">Össztömeg (te + bringa + csomag, kg) <input id="m" type="number" min="50" max="150" step="1" value="85"></label>
+      <label class="f">Lejtés (%) <input id="grade" type="number" min="-15" max="20" step="0.5" value="0"></label>
+      <label class="f">Szél (km/h, + szembe, − hát) <input id="wind" type="number" min="-40" max="40" step="1" value="0"></label>
+      <label class="f">Magasság (m) <input id="alt" type="number" min="0" max="4000" step="50" value="200"></label>
+      <label class="f">Hőmérséklet (°C) <input id="temp" type="number" min="-15" max="45" step="1" value="15"></label>
+      <label class="f">Leadott teljesítmény (W) <input id="p" type="number" min="50" max="400" step="5" value="150"></label>
+    </div>
+    <div class="kv" id="phys" style="margin-top:16px"></div>
+    <div class="timeline" id="curve" style="margin-top:12px"></div>
+    <p class="note" style="margin:12px 0 0">Levezetés a terepen validált teljesítmény–sebesség modellből (Martin 1998); 15–25 km/h-n, terhelten, fáradtan nem validált — sávnak jó, tizedesnek nem. A CdA-sávok mért bikepacking-beállításokból (<a href="../../08-pacing/#p-08">8. oldal</a>).</p>
+  </div>
+
+  <div class="card" id="sablon">
+    <h2>Versenyterv-sablon <span class="badge gray">08 · 12. oldal</span></h2>
+    <div class="actions noprint"><button class="btn" id="atvesz">Átvétel a kalkulátorból</button><button class="btn sec" id="print">Nyomtatás / PDF</button><button class="btn sec" id="torol">Mezők törlése</button></div>
+    <div class="grid2" id="sablon-f" style="margin-top:14px">
+      <label class="f">Verseny, táv, szint, felület <textarea data-k="verseny"></textarea></label>
+      <label class="f">Mozgósebesség (saját, terhelt) <span class="t ind">{{ICON_IND}}egyéni</span> <textarea data-k="v"></textarea></label>
+      <label class="f">Napi alvás <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="alvas"></textarea></label>
+      <label class="f">Egyéb álló idő célja → mozgáshányad <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="egyeb"></textarea></label>
+      <label class="f">Napi mozgásóra és napi táv <textarea data-k="napi"></textarea></label>
+      <label class="f">Célidő + 5 % tartalék <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="celido"></textarea></label>
+      <label class="f">A három kar (+1 km/h · +1 h mozgás · −30 min állás) → szűk keresztmetszet <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="karok"></textarea></label>
+      <label class="f">Első nap plafonja (watt / pulzus) <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="plafon" placeholder="pl. FTP 60 %-a; hegyen a fenntartható szint alatt"></textarea></label>
+      <label class="f">Első 24 óra terve <span class="t ind">{{ICON_IND}}egyéni</span> <textarea data-k="elso24"></textarea></label>
+      <label class="f">Napi ritmus időjárásra <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="idojaras" placeholder="35 °C fölött: hajnali indulás, déli lassítás, éjfélig"></textarea></label>
+      <label class="f">Mutatók a kormányon <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="mutatok" placeholder="1. nap watt-plafon; hőségben pulzus; 2. naptól watt + érzés/pulzus arány"></textarea></label>
+      <label class="f">Brevet: kontrollzárás <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="brevet"></textarea></label>
+      <label class="f">Kísérős: ki dönt a tempóról és a megállásról <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="stab"></textarea></label>
+      <label class="f">Rossz szakasz szabálya <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="badpatch" placeholder="„20 percig”; éjjel nem adom fel; élettani ok → lassíts és tölts, mentális → egység, alvás"></textarea></label>
+    </div>
+    <p class="small muted" style="margin-top:10px">A mezők ebben a böngészőben mentődnek; szerverre semmi nem megy.</p>
+  </div>
+</div>

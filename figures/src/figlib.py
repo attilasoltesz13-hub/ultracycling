@@ -34,8 +34,9 @@ class SVG:
         dd = f' stroke-dasharray="{dash}"' if dash else ""
         self.add(f'<path d="{d}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}" stroke-linejoin="round" stroke-linecap="round" opacity="{opacity}"{dd}/>')
 
-    def circle(self, cx, cy, r, fill, stroke=None, sw=0):
+    def circle(self, cx, cy, r, fill, stroke=None, sw=0, opacity=1):
         extra = f' stroke="{stroke}" stroke-width="{sw}"' if stroke else ""
+        if opacity != 1: extra += f' fill-opacity="{opacity}"'
         self.add(f'<circle cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{fill}"{extra}/>')
 
     def text(self, x, y, s, size=10, fill=None, anchor="start", weight=400, rotate=None, family=None):

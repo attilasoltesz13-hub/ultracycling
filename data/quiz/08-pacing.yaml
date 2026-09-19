@@ -1,0 +1,85 @@
+# Önellenőrző kvíz — 08 Pacing. A kérdések a modul 13. oldalának tíz kérdését követik;
+# minden válasz a modul szövegéből vezethető le (page = a PDF oldala). A helyes válasz a fájlban az első; a build keveri.
+module: "08"
+title: Önellenőrzés — tíz kérdés
+questions:
+  - q: "Miért nem „hiba” a lassulás egy ultrán — és mi az, ami valóban az?"
+    options:
+      - "Négy óra fölött mindenki lassul (pozitív tempó); a hiba a nagy ingadozás és a saját átlag fölötti rajt."
+      - "A lassulás edzetlenség jele; a jó versenyző végig egyenletes wattot tart."
+      - "A lassulás csak a hőség miatt van; hűvösben nincs."
+    answer: 0
+    why: "A jól edzettek is pozitív tempóval mennek; futáson az ingadozás (szórás/átlag) és a relatív rajtsebesség jósolta a rossz eredményt, nem a lassulás ténye."
+    page: 2
+  - q: "Mekkora relatív rajtintenzitás járt a legtöbb megtett távval 24 órás futáson?"
+    options:
+      - "A saját átlag alatti: a leggyorsabb csoport alacsonyabb relatív intenzitással indult (r = −0,58 a gyors rajt és a táv között)."
+      - "A saját átlag fölötti: aki gyorsan indul, tartalékot épít."
+      - "Mindegy, mert a tempó az első két órában nem számít."
+    answer: 0
+    why: "501 futó adatán a saját átlaghoz képest gyors első két óra kevesebb távval járt; kerékpáron az élboly abszolút értékben gyors, de a saját átlagához képest mérsékelt."
+    page: 3
+  - q: "Mi dönti el, mennyi marad a kritikus teljesítményedből két óra után — és mi védi meg?"
+    options:
+      - "Az előzetes munka intenzitása, nem a kilojoule; a szénhidrát (60 g/h) megszünteti a kritikus teljesítmény esését."
+      - "A megtett kilojoule mennyisége; a szénhidrát nem számít."
+      - "A pulzus szintje; a kiszáradás dönt."
+    answer: 0
+    why: "Két óra után a CP −9 % placebóval, szénhidráttal nincs esés; a fenntartható szint feletti munka kevesebb összmunkával is nagyobb esést okoz."
+    page: 4
+  - q: "Egy óra plusz napi mozgásidő hány km/h sebességnek felel meg 22 km/h-nál és 12,5 órás mozgásidőnél?"
+    options:
+      - "Kb. 1,8 km/h (sebesség / mozgásóra)."
+      - "Kb. 0,5 km/h."
+      - "Kb. 5 km/h."
+    answer: 0
+    why: "A képlet szorzatos: napok = táv / (sebesség × mozgásóra), ezért +1 óra ≡ v/h km/h = 22/12,5 = 1,76 km/h."
+    page: 5
+  - q: "A TCR-középmezőnyben mi a szűk keresztmetszet, és miért nem a watt?"
+    options:
+      - "A megállások: a mozgáshányad 50–60 %, és +1 óra mozgás (−26 h) többet ér, mint +1 km/h (−15 h), ami +13 W-ot kérne."
+      - "A watt: +1 km/h a legolcsóbb nyereség."
+      - "Az alvás: a középmezőny túl sokat alszik."
+    answer: 0
+    why: "Az élen (19–23 h mozgás/nap) már csak a sebesség marad karnak; a középmezőnyben a logisztika a nagy tétel."
+    page: 5
+  - q: "Mennyi az álló idő nem-alvás része egy felső harmados TCR-en, és hova megy?"
+    options:
+      - "Naponta 3–4,5 óra: bolt, evés, töltés, tétovázás — a 60 órás álló időből csak 15–30 óra volt alvás."
+      - "Szinte semmi: az álló idő csak alvás."
+      - "Naponta 8–10 óra, főleg mechanika."
+    answer: 0
+    why: "Bartholmoes 6. helye: 183,7 óra mozgás / 241,9 óra, kb. 60 óra állás, éjszakánként 1,5–3 óra alvás."
+    page: 6
+  - q: "Hány kilométert „ér” egy óra alvás 24 km/h-nál — és miért nem a mezőny adatából derül ki?"
+    options:
+      - "Kb. 20 km (0,8 × sebesség) modellszámítás szerint; a mezőnyszintű „több alvás = lassabb” a pályán töltött idő műterméke."
+      - "Kb. 100 km, a Race Across France mérése szerint."
+      - "Semennyit: az alvás nem csökkenti a napi távot."
+    answer: 0
+    why: "Mért „km/óra alvás” kerékpáron nincs; személyen belül a kevesebb alvás rontja a reakcióidőt és az álmosságot."
+    page: 7
+  - q: "Hogyan csal a pulzus hőségben, a harmadik napon és a verseny végén?"
+    options:
+      - "Hőségben felfelé (valós terhelés-emelkedés), több napon lefelé (azonos wattnál egyre alacsonyabb), a végén ismét felfelé (szabályozási zavar)."
+      - "Mindig felfelé, mert a fáradtság emeli."
+      - "Sehogy: a pulzus a legmegbízhatóbb mutató ultrán."
+    answer: 0
+    why: "Ugyanaz a mutató három irányba csal, ezért a pulzuszóna önmagában nem tempóvezérlő eszköz többnapos versenyen."
+    page: 9
+  - q: "Mit csinál a rutinos versenyző 35 °C fölött, és mit nem?"
+    options:
+      - "Eltolja a napot (hajnali rajt, éjfélig tekerés), a legmelegebb órákban lassít és rövid hűtés-megállókat tart — nem alszik nappal."
+      - "Nappal alszik, éjjel teker."
+      - "Változatlan tempóval megy, csak többet iszik."
+    answer: 0
+    why: "A versenyzői gyakorlat ritmuseltolás; a küszöb nem mért, 25–30 °C-nál a csere nem biztos."
+    page: 10
+  - q: "Mennyivel lassít a rossz csomagolás vagy a védett gumi 150 W-on, és mennyi wattot kérne ugyanaz a különbség?"
+    options:
+      - "A jól és rosszul pakolt bringa közt 7,5 perc 180 km-en; a védett gumi −0,6 km/h ≈ +5 óra a TCR-en; +1 km/h síkon kb. +13 W."
+      - "Semmit: a csomag és a gumi nem számít a légellenállás mellett."
+      - "Kb. 10 km/h; ugyanez +100 W."
+    answer: 0
+    why: "A CdA és a Crr csökkentése olcsóbb sebesség, mint a watt: +40 W csak +3 km/h a Ridefar-modellben."
+    page: 8

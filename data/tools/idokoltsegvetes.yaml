@@ -1,0 +1,79 @@
+# Időköltségvetés-kalkulátor paraméterei — a 08 modul 5., 6., 8. és 12. oldalából.
+# Jelölés: fix (nem alku tárgya) · példa (tracker/esettanulmány-adat, igazítandó) · egyéni (saját mérés).
+# A kísérőoldal build/site.py-ból olvassa és JSON-ként a kalkulátor oldalába írja.
+module: "08"
+formula: "napok = táv / (mozgósebesség × napi mozgásóra); napi mozgásóra = 24 − alvás − egyéb álló idő"   # fix
+reserve_pct: 5            # példa — +5 % tartalék a tervbe (ridefar-schedule)
+presets:                  # példa — white-2016-ridefar-method, evans-2022-bikeradar-bartholmoes, mckenzie-dotwatcher-tcr-2026, halfwayanywhere-tourdivide-2024, toone-2016-pbp-southern
+  - id: tcr-kozep
+    label: "TCR középmezőny"
+    distance_km: 4000
+    speed_kmh: 22
+    sleep_h: 5
+    other_h: 6.5
+    note: "260–300 km/nap; mozgáshányad ~50–55 %"
+  - id: tcr-felso
+    label: "TCR felső harmad"
+    distance_km: 4300
+    speed_kmh: 23
+    sleep_h: 2.5
+    other_h: 3.5
+    note: "360–425 km/nap; 2022, 6. hely: 18,4 h mozgás/nap"
+  - id: tcr-el
+    label: "TCR élmezőny"
+    distance_km: 4000
+    speed_kmh: 26
+    sleep_h: 3
+    other_h: 2
+    note: "480–490 km/nap; első 24 óra állás nélkül"
+  - id: td-kozep
+    label: "Tour Divide középmezőny"
+    distance_km: 4300
+    speed_kmh: 15
+    sleep_h: 6
+    other_h: 3.2
+    note: "~221 km/nap, ~20 nap; n = 1 blog"
+  - id: pbp
+    label: "PBP / 1200 km brevet (90 h)"
+    distance_km: 1216
+    speed_kmh: 23
+    sleep_h: 2.5
+    other_h: 3.8
+    note: "73,7 % mozgáshányad, 70,6 h; a 90 órás limit 13,33 km/h bruttó"
+brevet_limits:            # fix — rusa-acp-control-times (ACP): zárás min. sebességgel sávonként
+  - to_km: 200
+    min_kmh: 15
+    max_kmh: 34
+  - to_km: 400
+    min_kmh: 15
+    max_kmh: 32
+  - to_km: 600
+    min_kmh: 15
+    max_kmh: 30
+  - to_km: 1000
+    min_kmh: 11.428
+    max_kmh: 28
+  - to_km: 1300
+    min_kmh: 13.333
+    max_kmh: 26
+physics:                  # martin-1998-model; CdA/Crr sávok: grappe-1997, frank-2021, denham-2016, brr-test-method, steyn-2014, white-2016-ridefar-*
+  eta: 0.976
+  g: 9.81
+  rho_sea_15c: 1.225
+  rho_per_100m_pct: -0.8
+  power_per_100m_pct: -0.6
+  cda_options:            # példa · egyéni (saját mérés: 13. oldal)
+    - {id: aero-min, label: "aerobar, minimális csomag", cda: 0.26}
+    - {id: drops-mid, label: "alsófogás / aerobar közepes csomaggal", cda: 0.29}
+    - {id: hoods-packed, label: "felsőfogás, jól pakolt táskák (mért)", cda: 0.33}
+    - {id: tops-loaded, label: "felsőfogás, kormányhenger, bő ruha", cda: 0.38}
+    - {id: panniers, label: "táskatartós rendszer", cda: 0.45}
+  crr_options:            # példa
+    - {id: smooth, label: "sima aszfalt, prémium gumi", crr: 0.0035}
+    - {id: road, label: "átlagos aszfalt, 28–35 mm", crr: 0.005}
+    - {id: rough, label: "érdes/nedves út, védett gumi, alacsony nyomás", crr: 0.007}
+    - {id: gravel, label: "tömör murva, földút", crr: 0.011}
+    - {id: loose, label: "laza murva (nem mért, becslés)", crr: 0.02}
+  default_mass_kg: 85
+  default_power_w: 150
+  wind_default_kmh: 0

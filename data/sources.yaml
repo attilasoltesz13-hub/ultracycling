@@ -4544,6 +4544,8 @@ sources:
     status: url-megnyitva
   mckenzie-dotwatcher-tcr12-briefing-2026:
     key: mckenzie-dotwatcher-tcr12-briefing-2026
+    aliases:
+    - mckenzie-2026-tcr12-frozen
     type: web-article
     authors:
     - McKenzie C.

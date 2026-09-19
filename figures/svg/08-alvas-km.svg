@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<line x1="52.0" y1="190.0" x2="320.0" y2="190.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="47.0" y="193.5" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">200 km</text>
+<line x1="52.0" y1="136.7" x2="320.0" y2="136.7" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="47.0" y="140.2" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">300 km</text>
+<line x1="52.0" y1="83.3" x2="320.0" y2="83.3" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="47.0" y="86.8" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">400 km</text>
+<line x1="52.0" y1="30.0" x2="320.0" y2="30.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="47.0" y="33.5" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">500 km</text>
+<line x1="52.0" y1="190.0" x2="52.0" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="52.0" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">0 h</text>
+<line x1="119.0" y1="190.0" x2="119.0" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="119.0" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">2 h</text>
+<line x1="186.0" y1="190.0" x2="186.0" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="186.0" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">4 h</text>
+<line x1="253.0" y1="190.0" x2="253.0" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="253.0" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">6 h</text>
+<line x1="320.0" y1="190.0" x2="320.0" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="320.0" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">8 h</text>
+<line x1="52.0" y1="190.0" x2="320.0" y2="190.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<path d="M52.0 30.4 L320.0 119.2" fill="none" stroke="#0d366b" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<text x="324.0" y="122.2" font-size="8.5" fill="#0d366b" text-anchor="start" font-weight="600">26 km/h</text>
+<path d="M52.0 50.9 L320.0 132.8" fill="none" stroke="#2a78d6" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<text x="324.0" y="135.8" font-size="8.5" fill="#2a78d6" text-anchor="start" font-weight="600">24 km/h</text>
+<path d="M52.0 91.9 L320.0 160.1" fill="none" stroke="#eda100" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<text x="324.0" y="163.1" font-size="8.5" fill="#eda100" text-anchor="start" font-weight="600">20 km/h</text>
+<rect x="152.5" y="30.0" width="33.5" height="160.0" rx="0" fill="#2a78d6" fill-opacity="0.08"/>
+<text x="169.2" y="42.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="600">3–4 h: 2020 utáni győztesek</text>
+<text x="52.0" y="18.0" font-size="9.5" fill="#52514e" text-anchor="start" font-weight="600">napi táv az alvás függvényében (modell, 80 % mozgáshányad)</text>
+<text x="186.0" y="220.0" font-size="9" fill="#52514e" text-anchor="middle" font-weight="400">alvás óra / 24 h</text>
+<text x="62.0" y="172.9" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">1 óra alvás ≈ 0,8 × sebesség km</text>
+<line x1="380.0" y1="30.0" x2="540.0" y2="30.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="375.0" y="33.5" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">0.</text>
+<line x1="380.0" y1="83.3" x2="540.0" y2="83.3" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="375.0" y="86.8" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">30.</text>
+<line x1="380.0" y1="136.7" x2="540.0" y2="136.7" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="375.0" y="140.2" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">60.</text>
+<line x1="380.0" y1="190.0" x2="540.0" y2="190.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="375.0" y="193.5" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">90.</text>
+<line x1="404.6" y1="190.0" x2="404.6" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="404.6" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">100</text>
+<line x1="466.2" y1="190.0" x2="466.2" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="466.2" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">200</text>
+<line x1="527.7" y1="190.0" x2="527.7" y2="194.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="527.7" y="205.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">300</text>
+<line x1="380.0" y1="190.0" x2="540.0" y2="190.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<circle cx="432.4" cy="56.3" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="480.0" cy="115.7" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="482.8" cy="127.2" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="510.3" cy="151.6" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="435.2" cy="85.6" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="462.6" cy="174.8" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="510.1" cy="120.0" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="421.1" cy="69.7" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="484.0" cy="142.7" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="497.8" cy="119.2" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="488.7" cy="162.8" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="478.3" cy="133.8" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="440.7" cy="125.8" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="462.9" cy="113.4" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="494.9" cy="160.0" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="521.1" cy="137.3" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="452.8" cy="102.7" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="523.0" cy="140.4" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="515.7" cy="164.8" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="429.7" cy="80.1" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="526.9" cy="138.5" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="440.6" cy="95.5" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<circle cx="467.4" cy="94.4" r="3" fill="#eb6834" fill-opacity="0.7"/>
+<line x1="392.3" y1="37.8" x2="533.8" y2="172.7" stroke="#52514e" stroke-width="1.6" stroke-linecap="round" stroke-dasharray="4 3"/>
+<text x="380.0" y="18.0" font-size="9.5" fill="#52514e" text-anchor="start" font-weight="600">mezőny: alvás és helyezés (RAF 2024)</text>
+<text x="460.0" y="220.0" font-size="9" fill="#52514e" text-anchor="middle" font-weight="400">alvás perc / nap · helyezés</text>
+<text x="384.0" y="44.0" font-size="8" fill="#898781" text-anchor="start" font-weight="400">sematikus — nem tanács</text>
+</svg>

@@ -32,12 +32,13 @@ kísérőoldal. Előbb teljes magyar kiadás, utána angol.
 ## Modulok
 
 Használati útmutató (0) · I. Elmélet és élettan (1–8) · II. Gyakorlat (9–14) · III. Sablonok, eszközök, feladatok (15–19) · Függelékek.
-Pilot modul: **04 – Alvás, fáradtság, kognitív teljesítmény**.
+Kész modulok (vázlat, tényellenőrzött): **04 – Alvás, fáradtság, kognitív teljesítmény**, **08 – Pacing és versenystratégia**. Kísérőoldal: https://attilasoltesz13-hub.github.io/ultracycling/
 
 ## Build
 
-    python3 build/render.py content/hu/04-alvas.md --draft   # dist/04-alvas.pdf
-    python3 build/site.py                                     # dist/site/ (open dist/site/index.html)
+    python3 build/render.py content/hu/08-pacing.md --draft  # dist/08-pacing.pdf (--refs: forrásjegyzékkel)
+    python3 build/bibliography.py                              # dist/irodalomjegyzek.pdf (minden modul)
+    python3 build/site.py                                      # dist/site/ (open dist/site/index.html)
 
 ## Licenc
 

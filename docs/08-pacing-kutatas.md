@@ -49,7 +49,18 @@ Egyéni durability-profilozás („fáradt CP”) a %FTP helyett; intenzitás-s�
 - [ ] **Saját adat.** A modul példái közé beleférne a te TCR-célod: 4000 km, saját mozgósebesség és alvásterv → napok — csak ha szeretnéd; a szöveg enélkül is teljes.
 - [ ] **Hőség-küszöb.** Az E5 ellentmondásnál a modul „35 °C felett ritmuseltolás, alatta egyéni” szabályt adna, jelölve, hogy a küszöb nem mért. Elfogadható?
 - [ ] **Durability-teszt mint feladat.** A 15. oldali „mérd be magad” része lenne egy 2 órás CP alatti előterhelés utáni 20 perces teszt (fáradt FTP %). Ez edzésbe illesztendő — Nándival egyeztetendő később, de a leírás bekerülhet most?
-- [ ] Elfogadod-e a tíz kulcsállítást mint a modul gerincét?
+- [x] Elfogadod-e a tíz kulcsállítást mint a modul gerincét? — elfogadva (2026-09-19); döntések: a fizikai réteg ebbe a modulba, saját adat nem, 35 °C-os hőség-küszöb szabályként (nem mért jelöléssel), a fáradt-teljesítmény teszt bekerül (Nándival később egyeztetve).
+
+## Validálás (v0.1 tényellenőrzés, 2026-09-19)
+
+Független ellenőrző menet a vázlat és az ábrák után, a PDF-lezárás előtt: 51 tétel (9 magas, 12 közepes, 30 alacsony súlyú), 54 javítás a szövegben és 2 az ábrakódban; részletek: `docs/08-tenyellenorzes.md`. A pilothoz képest új tanulságok:
+
+- **Örökölt hiba a kutatási doksiból:** a 212/189 W éjszakai wattveszteséget a bizonyíték-térkép Manunziónak tulajdonította, valójában Rothschild n = 1 váltó-esete — a tényellenőrzés a kutatási összefoglalót is nézze, ne csak a modult.
+- **Levezetett számok fokozata:** a Martin-modell validált (A), de a belőle számolt km/h-értékek levezetések (C); a modul most ezt jelöli. Ugyanez a mozgáshányad-levezetéseknél.
+- **Saját példa konzisztenciája:** a sablon példasora nem a saját bemeneteiből jött ki; a kalkulátor most a sablont a tényleges számokból tölti.
+- **Két definíció egy szóra:** a mozgáshányad eltelt időre és ébren töltött időre más szám; a modul és a kalkulátor most mindkettőt kiírja.
+- **Idézet ≠ adat:** „4 óra megállás” nem „4 óra alvás” (Gemperle); a konvergencia-táblázatban a versenyzői számokat a forrás szavával kell írni.
+- A `mckenzie-dotwatcher-tcr12-briefing-2026` és a `mckenzie-2026-tcr12-frozen` ugyanaz a cikk: az előbbi kapott `aliases` mezőt, a következő forrástár-tisztításnál összevonandó.
 
 ---
 

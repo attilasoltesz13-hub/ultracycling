@@ -84,6 +84,7 @@ sup.cite { font-size: 6.5pt; color: var(--brand); font-weight: 500; margin-left:
 .figure { border-bottom: var(--w-hairline) solid var(--hairline); padding-bottom: 2mm; margin-bottom: 3mm; }
 .figure > svg { width: 100%; height: auto; display: block; }
 .figure.half > svg { max-height: 52mm; width: auto; margin: 0 auto; }
+.figure.short > svg { max-height: 48mm; width: auto; margin: 0 auto; }
 .hero { font-family: var(--font-display); font-size: var(--fs-hero); font-weight: 700; color: var(--brand-deep); line-height: 1; letter-spacing: -0.02em; }
 .hero small { font-size: 12pt; font-weight: 500; color: var(--ink-2); letter-spacing: 0; margin-left: 1mm; }
 
