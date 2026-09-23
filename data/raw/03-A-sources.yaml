@@ -1,0 +1,757 @@
+# 03. modul – Táplálkozás és hidratálás – A csomag (Q1: szénhidrát-bevitel ultrán; Q2: energiamérleg többnapos versenyen; Q3: zsíradaptáció / metabolikus rugalmasság)
+# Készült: 2026-09-23. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex / Europe PMC oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   thurber-2019-alimentary, hulton-2010-raam-energy, geesmann-2014-1230km, black-2012-384km, purcell-2025-canada,
+#   jeukendrup-2014-personalized, podlogar-2022-newhorizons, maunder-2018-mfo, tiller-2019-issn-ultra,
+#   hyldahl-2024-tourdivide, fesseler-2026-raam58, rothschild-2021-ultracyclist, brayson-2019-tcr, strasser-inscyd-2022
+# Párhuzamos 03-B/C/D csomagokban már definiált, itt csak hivatkozott kulcsok:
+#   thomas-2016-joint-position (03-C), mountjoy-2023-ioc-reds (03-C), bescos-2012-24h-relay (03-C), keay-2018-male-cyclists-lea (03-C),
+#   wilson-2025-highcarb-review (03-D), ishihara-2026-glucose-phases (03-D), martinez-2023-guttraining-sr (03-D),
+#   stuempfle-2011-ws100-diet (03-D), martinez-2025-mallorca312 (03-B), costa-2017-guttraining (03-B), stuempfle-2013-racediet-gi (03-B)
+sources:
+  # ---------------------------------------------------------------- Q1: exogén oxidáció, felszívódási plafon, 120 g/h
+  - key: jeukendrup-2006-ultra-exo
+    type: journal
+    authors: [Jeukendrup A.E., Moseley L., Mainwaring G.I., Samuels S., Perry S., Mann C.H.]
+    year: 2006
+    title: "Exogenous carbohydrate oxidation during ultraendurance exercise"
+    journal: "Journal of Applied Physiology 100(4):1134-1141"
+    doi: 10.1152/japplphysiol.00981.2004
+    url: https://api.crossref.org/works/10.1152/japplphysiol.00981.2004
+    grade: A
+    questions: [Q1]
+    summary: >-
+      Kontrollált labor: 8 edzett kerékpáros 5 órán át tekert 58% VO2max-on, 1,5 g/perc (90 g/h) szénhidrátot fogyasztva
+      csak glükózként, illetve glükóz+fruktóz 2:1 arányban, vagy vizet. A csak-glükóz exogén oxidációja 120 perc után
+      platót ért el, csúcs 1,24 ± 0,04 g/perc (~74 g/h); a glükóz+fruktóz csúcsa 1,40 ± 0,08 g/perc (~84 g/h), gyorsabb
+      felfutással és kisebb teltségérzettel. Ez a leghosszabb (5 órás) itt talált izotópos mérés, ami a "60 g/h egyetlen transzporter" plafon
+      és a "többszörös transzportálható CHO" előny közvetlen, ultra-releváns bizonyítéka.
+    quote: >-
+      "CHO oxidation rates following the ingestion of Glu leveled off after 120 min and peaked at 1.24 ± 0.04 g/min"
+      … glucose plus fructose gave "a significantly higher peak rate of CHO oxidation (1.40 ± 0.08 g/min)".
+    notes: >-
+      n=8 férfi, labor, kerékpár-ergométer, 5 h, alacsony intenzitás (58% VO2max) – ultrás tempóhoz közel. Számok Crossref-
+      absztraktból. Csak 90 g/h bevitelt teszteltek, 120 g/h-t nem. A glükóz-plafon (~1,2 g/perc) itt magasabb a "60 g/h"
+      tankönyvi számnál, mert 90 g/h-t etettek; a hatásfok ~80%. Több napra nem vihető át közvetlenül.
+    status: ellenorizve-doi
+
+  - key: podlogar-2022-120vs90
+    type: journal
+    authors: [Podlogar T., Bokal Š., Cirnski S., Wallis G.A.]
+    year: 2022
+    title: "Increased exogenous but unaltered endogenous carbohydrate oxidation with combined fructose-maltodextrin ingested at 120 g h−1 versus 90 g h−1 at different ratios"
+    journal: "European Journal of Applied Physiology 122:2393-2401"
+    doi: 10.1007/s00421-022-05019-w
+    url: https://link.springer.com/article/10.1007/s00421-022-05019-w
+    grade: A
+    questions: [Q1]
+    summary: >-
+      11 jól edzett férfi kerékpáros (VO2peak 62,6 ml/kg/perc), 3 óra tekerés 95% GET-en éhgyomorra, 13C-jelölés. 120 g/h
+      (fruktóz:maltodextrin 0,8:1) mellett az exogén CHO-oxidáció a 120–180. percben 1,51 ± 0,22 g/perc, 90 g/h-nál (1:2)
+      1,29 ± 0,16 g/perc (p=0,026). Az endogén CHO-oxidáció NEM változott (2,15 vs 2,20 g/perc, p=0,786) – a plusz 30 g/h
+      nem "kímélte" a glikogént, csak a teljes CHO-oxidációt emelte. GI-panaszban nem volt különbség.
+    quote: >-
+      "120–180 min: 1.51 ± 0.22 g min−1" vs "1.29 ± 0.16 g min−1; p = 0.026" … endogenous "2.15 ± 0.30 and 2.20 ± 0.33 g min−1
+      for 120 and 90 g h−1 conditions, respectively; p = 0.786".
+    notes: >-
+      n=11, labor, 3 h, éhgyomri állapot (ez növeli az exogén hasznosítást). Hatásfok 120 g/h-nál ~75%. Fő tanulság: a
+      120 g/h nem glikogén-kímélő, hanem "több üzemanyag összesen"; ultrán a hasznosság az abszolút oxidációs igénytől függ.
+      Teljesítménymérés nem volt.
+    status: ellenorizve-doi
+
+  - key: hearris-2022-120-formats
+    type: journal
+    authors: [Hearris M.A., Pugh J.N., Langan-Evans C., Mann S.J., Burke L., Stellingwerff T., Gonzalez J.T., Morton J.P.]
+    year: 2022
+    title: "13C-glucose-fructose labeling reveals comparable exogenous CHO oxidation during exercise when consuming 120 g/h in fluid, gel, jelly chew, or coingestion"
+    journal: "Journal of Applied Physiology 132(6):1394-1406"
+    doi: 10.1152/japplphysiol.00091.2022
+    url: https://e-space.mmu.ac.uk/638734/
+    grade: A
+    questions: [Q1]
+    summary: >-
+      9 edzett férfi, 180 perc kerékpár 95% laktátküszöbön, majd kapacitásteszt 150% LT-n; 120 g/h (glükóz:fruktóz 1:0,8)
+      italként, gélként, zselés rágóként vagy vegyesen. Az exogén oxidáció csúcsa 1,56–1,66 g/perc minden formában,
+      hatásfok 72–75%; GI-panasz minimális; kapacitásteszt nem különbözött. A forma (folyadék/gél/szilárd) nem számít,
+      a mennyiség és a glükóz–fruktóz arány igen.
+    quote: >-
+      "Peak rates of exogenous CHO oxidation (DRINK 1.56 ± 0.16, GEL 1.58 ± 0.13, CHEW 1.59 …" and "Despite ingesting 120 g·h−1,
+      participants reported minimal symptoms of gastrointestinal distress".
+    notes: >-
+      n=9, labor, 3 h, nem ultra. A csúcs 1,56–1,66 g/perc (~94–100 g/h) a legmagasabb publikált exogén oxidációs
+      értékek közé tartozik. Számok az MMU repozitóriumi absztraktból; a DOI a Bath és MMU repozitóriumban szerepel
+      (kiadói oldal 403). Ultrán a szilárd/gél/folyadék váltogatás emiatt szabadon tervezhető.
+    status: url-megnyitva
+
+  - key: ravikanti-2025-marathoners-120
+    type: journal
+    authors: [Ravikanti S., Silang K.G., Martyn H.J., Johnson K.O., Louis J.B., Bampouras T.M., Owens D.J., Jones A.M., Morton J.P., Pugh J.N.]
+    year: 2025
+    title: "13C-labelled glucose-fructose show greater exogenous and whole-body CHO oxidation and lower O2 cost of running at 120 versus 60 and 90 g·h−1 in elite male marathoners"
+    journal: "Journal of Applied Physiology 139(6):1581-1595"
+    doi: 10.1152/japplphysiol.00665.2025
+    url: https://api.crossref.org/works/10.1152/japplphysiol.00665.2025
+    grade: A
+    questions: [Q1]
+    summary: >-
+      8 elit férfi maratonista (PB 2:22:54), 120 perc futás laktát-fordulópont körül, 60 (1:0), 90 (2:1) és 120 g/h (1:1
+      maltodextrin:fruktóz). A 2. órában az exogén oxidáció 0,89 / 1,31 / 1,68 g/perc (60/90/120 g/h), teljes CHO-oxidáció
+      2,09 / 2,46 / 3,07 g/perc; a 120 g/h 8,1 ml O2/kg/km-rel javította a futóökonómiát a 60 g/h-hoz képest (p=0,039).
+      Közepes/súlyos (≥4) GI-tünet minden dózisnál gyakori volt, de a hányinger, teltség, görcs csúcsa a 120 g/h-nál volt
+      a legnagyobb.
+    quote: >-
+      "hour 2 mean exogenous CHO oxidation (120 g·h−1, 1.68 ± 0.16; 90 g·h−1, 1.31 ± 0.18; 60 g·h−1, 0.89 ± 0.11 g·min−1)" …
+      "peak symptoms of nausea, stomach fullness, and abdominal cramps were greatest for 120 g·h−1".
+    notes: >-
+      n=8, labor, futás, 2 h, elit; absztraktból (Europe PMC). Legmagasabb publikált exogén ráta (1,68 g/perc ≈ 101 g/h).
+      A magas intenzitás (maratoni tempó) ultrára nem jellemző; a GI-terhelés futásban nagyobb, mint kerékpáron. A
+      teljesítményhatást a szerzők nyitva hagyják.
+    status: ellenorizve-doi
+
+  - key: morton-2026-metabolism-medals
+    type: journal
+    authors: [Morton J.P., Fell J.M., Gonzalez J.T., Hearris M.A., Podlogar T., Pugh J.N., Wallis G.A.]
+    year: 2026
+    title: "From Metabolism to Medals: Contemporary Perspectives and Revisiting Carbohydrate Guidelines for Fueling Endurance Athletes during Exercise"
+    journal: "The Journal of Nutrition (in press, 101442)"
+    doi: 10.1016/j.tjnut.2026.101442
+    url: https://www.sciencedirect.com/science/article/pii/S002231662600091X
+    grade: A
+    questions: [Q1]
+    summary: >-
+      2026-os áttekintés az irányelvek revíziójáról (a 120 g/h-kutatások vezető szerzőitől). Az ACSM 2016 szerint ≤90 g/h
+      többszörös transzportálható CHO >2,5–3 órás eseményre; a terepen megfigyelt 120–200 g/h "hatékonyságát a jelenlegi
+      tudomány nem támasztja alá", de a felső határ edzett sportolóknál 90-ről 120 g/h-ra emelhető, mert az exogén és a
+      teljes CHO-oxidáció is nő. Csúcs exogén oxidáció 1,60–1,75 g/perc (96–105 g/h) 2,0–2,4 g/perc bevitelnél. A >6 órás
+      ultrákon a sportolók tipikusan 30–66 g/h-t visznek be; a gut training következetesen csökkenti a bélpanaszokat.
+    quote: >-
+      "the efficacy of such doses is not yet substantiated by current scientific research. Rather, contemporary research
+      suggests that the upper limit of CHO intake could increase from 90 to 120 g/h (at least for trained participants)".
+    notes: >-
+      Narratív, de konszenzus-jellegű szakértői áttekintés lektorált folyóiratban; a 120 g/h iskola saját összegzése,
+      ezért a >120 g/h-ra vonatkozó óvatossága különösen súlyos. Nem ad ultra-specifikus (6+ óra, több nap) adatot –
+      ez maga a hiány. A "30–66 g/h 12–24 órás versenyeken" másodlagos (a szerzők idézik).
+    status: ellenorizve-doi
+
+  - key: rowlands-2015-fructose-glucose
+    type: journal
+    authors: [Rowlands D.S., Houltham S., Musa-Veloso K., Brown F., Paulionis L., Bailey D.]
+    year: 2015
+    title: "Fructose–Glucose Composite Carbohydrates and Endurance Performance: Critical Review and Future Perspectives"
+    journal: "Sports Medicine 45(11):1561-1576"
+    doi: 10.1007/s40279-015-0381-0
+    url: https://link.springer.com/article/10.1007/s40279-015-0381-0
+    grade: A
+    questions: [Q1]
+    summary: >-
+      Kritikai áttekintés/meta-szintézis 14 vizsgálatból (2,5–3 órás terhelés). Fruktóz:glükóz 0,5–1:1 arányú italok
+      1,3–2,4 g/perc bevitelnél 1–9% (95% CI 0–19) átlagteljesítmény-javulást adtak a csak-glükózhoz képest; ≥1,7 g/perc
+      bevitelnél 4–9%, alacsonyabbnál 1–3%. A mechanizmus: magasabb exogén oxidáció, gyorsabb folyadékfelszívódás, kisebb
+      GI-terhelés. Legjobb: 0,8:1 fruktóz:glükóz 1,5–1,8 g/perc (90–108 g/h).
+    quote: >-
+      "ingestion of 0.5–1.0:1-ratio fructose:glucose/maltodextrin beverages at 1.3–2.4 g carbohydrate·min−1 produced small to
+      moderate enhancements (1–9 %; 95 % confidence interval 0–19) in mean power".
+    notes: >-
+      Kerékpáros laborvizsgálatok dominálnak; 2,5–3 h, nem ultra. Ipari társszerzők (Musa-Veloso, Brown – Intertek), ezt
+      jelezni kell. A 0,8:1 arány ajánlása a mai 1:0,8 gélek alapja. Ultrán az abszolút intenzitás alacsonyabb, így a
+      plafon relatív jelentősége kisebb.
+    status: ellenorizve-doi
+
+  - key: stellingwerff-2014-cho-sr
+    type: journal
+    authors: [Stellingwerff T., Cox G.R.]
+    year: 2014
+    title: "Systematic review: Carbohydrate supplementation on exercise performance or capacity of varying durations"
+    journal: "Applied Physiology, Nutrition, and Metabolism 39(9):998-1011"
+    doi: 10.1139/apnm-2014-0027
+    url: https://api.crossref.org/works/10.1139/apnm-2014-0027
+    grade: A
+    questions: [Q1]
+    summary: >-
+      Szisztematikus áttekintés: 61 teljesítményvizsgálat, 679 alany. 82% (50 vizsgálat) mutatott statisztikailag
+      szignifikáns teljesítményelőnyt CHO-bevitellel, 18% nem. >2 órás terhelésnél a fő mechanizmus a magas CHO-szállítás
+      (>90 g/h) és az ebből eredő magas oxidáció; ~1 órás terhelésnél a szájüregi hatás. Az időtartam-alapú dózisajánlás
+      egyik alapja.
+    quote: >-
+      "82% showed statistically significant performance benefits (n = 50 studies), with 18% showing no change compared with
+      placebo" … ">2 hours … via high rates of CHO delivery (>90 g/h), resulting in high rates of CHO oxidation".
+    notes: >-
+      Crossref-absztraktból. A vizsgálatok többsége <3 h labor; ultra (>6 h) adat gyakorlatilag nincs benne. Ez az
+      "ajánlás-alap" hiánya ultrára.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q1: terepi bevitel, GI, bevitel–teljesítmény
+  - key: viribay-2020-120-mountain
+    type: journal
+    authors: [Viribay A., Arribalzaga S., Mielgo-Ayuso J., Castañeda-Babarro A., Seco-Calvo J., Urdampilleta A.]
+    year: 2020
+    title: "Effects of 120 g/h of Carbohydrates Intake during a Mountain Marathon on Exercise-Induced Muscle Damage in Elite Runners"
+    journal: "Nutrients 12(5):1367"
+    doi: 10.3390/nu12051367
+    url: https://www.mdpi.com/2072-6643/12/5/1367
+    grade: A
+    questions: [Q1]
+    summary: >-
+      Terepi randomizált vizsgálat: 20 elit férfi hegyi maratonista (42,2 km, ~4000 m szint), 60 / 90 / 120 g/h csoport
+      (n=6/7/7), előzetes bél-edzéssel. A 120 g/h csoportban a belső terhelés (sRPE-alapú) 3805 ± 281 AU vs 4688 / 4692 AU
+      (p=0,019), és 24 órával a verseny után a CK-emelkedés 156% vs 976% (60 g/h), az LDH 8,5% vs 46,7%, a GOT 27% vs 162%.
+      A 26 indulóból 3 GI-problémával lépett vissza; a 20 befejező GI-panasz nélkül teljesített. Versenyidő nem különbözött
+      (p=0,871).
+    quote: >-
+      "internal exercise load during the mountain marathon was significantly lower (p = 0.019; η2p = 0.471) in EXP (3805 ± 281 AU)
+      compared to LOW (4688 ± 705 AU) and CON (4692 ± 716 AU)".
+    notes: >-
+      Kis csoportok (n=6–7), futás, ~4–5 h; nem ultra-kerékpár. Teljesítményre nem volt hatás, csak izomkárosodás-markerekre
+      és belső terhelésre – a többnapos versenyek "másnapja" szempontjából releváns. A résztvevők 4 hetes gut-trainingen estek
+      át; a 120 g/h tolerálása erre épül.
+    status: ellenorizve-doi
+
+  - key: arribalzaga-2021-ultratrail-sr
+    type: journal
+    authors: [Arribalzaga S., Viribay A., Calleja-González J., Fernández-Lázaro D., Castañeda-Babarro A., Mielgo-Ayuso J.]
+    year: 2021
+    title: "Relationship of Carbohydrate Intake during a Single-Stage One-Day Ultra-Trail Race with Fatigue Outcomes and Gastrointestinal Problems: A Systematic Review"
+    journal: "International Journal of Environmental Research and Public Health 18(11):5737"
+    doi: 10.3390/ijerph18115737
+    url: https://www.mdpi.com/1660-4601/18/11/5737
+    grade: A
+    questions: [Q1]
+    summary: >-
+      Szisztematikus áttekintés 8 egynapos ultratrail-vizsgálatról: a mért CHO-bevitel 22–126 g/h között szórt, a futók
+      többsége nem érte el a 90 g/h ajánlást. Két vizsgálat a 120 g/h-t alacsonyabb belső terheléssel és kisebb
+      izomkárosodással kötötte össze; hat vizsgálatban a GI-tünetek gyakorisága 65–82% volt, és inkább magasságtól,
+      környezettől és sebességtől függött, mint önmagában a bevitel szintjétől.
+    quote: >-
+      "In six studies, athletes had GI symptoms between 65–82%. In summary, most of the runners did not meet CHO intake standard
+      recommendations for SOUT events (90 g/h)".
+    notes: >-
+      Futás, egynapos; a szerzőcsoport azonos a 120 g/h terepvizsgálatokéval (önhivatkozás-torzítás). A 22–126 g/h tartomány
+      a valós szórást mutatja. Kerékpárra a GI-mechanizmus (rázkódás, splanchnikus hypoperfúzió) enyhébb – a bevitel felső
+      tartománya kerékpáron könnyebben elérhető.
+    status: ellenorizve-doi
+
+  - key: costa-2016-ultra-gis-intake
+    type: journal
+    authors: [Costa R.J.S., Snipe R., Camões-Costa V., Scheer V., Murray A.]
+    year: 2016
+    title: "The impact of gastrointestinal symptoms and dermatological injuries on nutritional intake and hydration status during ultramarathon events"
+    journal: "Sports Medicine – Open 2:16"
+    doi: 10.1186/s40798-015-0041-9
+    url: https://link.springer.com/article/10.1186/s40798-015-0041-9
+    grade: B
+    questions: [Q1, Q2]
+    summary: >-
+      Terepi megfigyelés: többnapos ultramaraton (MSUM, n=54) és 24 órás futás (n=22), ad libitum étel-folyadék naplózással.
+      GI-tünetet a MSUM-on 85%, a 24 órán 73% jelentett. A többnaposon a GI-tünet csökkentette a napi, futás közbeni és
+      szakasz utáni energia- és makrotápanyag-bevitelt (futás közbeni CHO −8 g/h a tünetesek­nél, p<0,01); a 24 órás
+      versenyen viszont a GI-tünet nem változtatta meg a bevitelt.
+    quote: >-
+      "GIS were reported by 85 and 73 % of ultramarathon runners throughout MSUM and 24 h, respectively." … "Rate of
+      carbohydrate intake during running was also significantly lower (−8 g/h) in participants reporting GIS (p < 0.01 vs. no-GIS)".
+    notes: >-
+      Futás, sivatagi többnapos (Al Andalus-típusú) és 24 h; kerékpárra a GI-arány valószínűleg alacsonyabb. Kulcs a
+      többnapos versenyekre: a GI-tünet nem csak kellemetlen, hanem a bevitelt (és így az energiamérleget) rontja –
+      lásd Q2. DOI a Springer URL-ből.
+    status: ellenorizve-doi
+
+  - key: noakes-2025-sub2h-critique
+    type: journal
+    authors: [Noakes T.D., Prins P.J.]
+    year: 2025
+    title: "Are very high rates of exogenous carbohydrate ingestion (>90 g/hr) sufficient or indeed necessary to run a sub-2hr marathon? An analysis of the model predictions of Lukasiewicz and colleagues"
+    journal: "Frontiers in Nutrition 11:1507572"
+    doi: 10.3389/fnut.2024.1507572
+    url: https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2024.1507572/full
+    grade: C
+    questions: [Q1, Q3]
+    summary: >-
+      Ellenvélemény: a szerzők szerint 2 óra alatt a bevitt CHO-nak legfeljebb ~50%-a oxidálódik; 144 g/h bevitelnél is
+      legfeljebb ~137 g (68,5 g/h) exogén oxidáció valószínű, és a bevitt CHO 53–70%-a oxidálatlanul a bélben marad. Elegendő
+      zsíroxidációval (0,7 g/perc férfi, 0,9 g/perc nő) a sub-2h maraton exogén CHO nélkül is lehetséges lenne.
+    quote: >-
+      "The maximum amount of exogenous CHO oxidation during a sub2hrM in which subjects ingest CHO even at 144 g/hr, would
+      likely be only 137 g (68.5 g/hr)." … "Fifty three and 70% of the ingested CHO … remained unoxidized after 2 hours exercise".
+    notes: >-
+      Vitairat, nem adat; a 2 órás ablak érvelése ultrára (ahol az exogén oxidáció 2–3 óra után éri el a platót) csak
+      részben érvényes. Fontos az "ELLENTMONDÁS" blokkhoz: az izotópos mérések 1,5–1,7 g/perc csúcsot mutatnak (podlogar-2022-120vs90,
+      hearris-2022-120-formats, ravikanti-2025-marathoners-120), Noakes ezt a 2 órás átlagos hasznosulással vitatja.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q2: energiaforgalom, deficit, testösszetétel, RED-S
+  - key: knechtle-2005-raam-case
+    type: journal
+    authors: [Knechtle B., Enggist A., Jehle T.]
+    year: 2005
+    title: "Energy Turnover at the Race Across AMerica (RAAM) – a Case Report"
+    journal: "International Journal of Sports Medicine 26(6):499-503"
+    doi: 10.1055/s-2004-821136
+    url: https://www.thieme-connect.com/products/ejournals/abstract/10.1055/s-2004-821136
+    grade: B
+    questions: [Q2, Q1]
+    summary: >-
+      n=1 szóló RAAM-versenyző (33 év, 73 kg, VO2max 60), 4701 km 9 nap 16 óra 45 perc alatt, napi 470 ± 73 km. Becsült
+      energiaforgalom 179 650 kcal (17 965 ± 2165 kcal/nap), bevitel 96 124 kcal (9612 ± 1500 kcal/nap; 75% CHO, 16% zsír,
+      9% fehérje), napi deficit 8352 ± 2523 kcal, össz-deficit 83 526 kcal, testtömeg-vesztés 5 kg. A 9,6 ezer kcal/nap
+      bevitel a legmagasabb publikált ultrakerékpáros érték; a becsült forgalom valószínűleg túlbecslés (nem DLW).
+    quote: >-
+      Absztraktból: total energy expenditure "179,650 kcal (17,965 ± 2,165 kcal/day)", intake "96,124 kcal (9,612 ± 1,500 kcal/day)",
+      "average daily energy deficiency: 8,352 ± 2,523 kcal", "body weight loss: 5 kg".
+    notes: >-
+      n=1, szóló RAAM, forgalom nem DLW-vel, hanem becsléssel (a 5 kg-os tömegvesztés nem egyeztethető össze 83 ezer kcal
+      valódi deficittel – ~11 kg zsír lenne). Tanulság: a becsült deficitek ultrán rendszeresen túlbecsültek; a bevitel
+      (~400 kcal/h) reális felső plafon.
+    status: ellenorizve-doi
+
+  - key: best-2023-cocodona-dlw
+    type: journal
+    authors: [Best A.W., McGrosky A., Swanson Z., Rimbach R., McConaughy K., McConaughy J., Ocobock C., Pontzer H.]
+    year: 2023
+    title: "Total Energy Expenditure and Nutritional Intake in Continuous Multiday Ultramarathon Events"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 33(6):342-348"
+    doi: 10.1123/ijsnem.2023-0063
+    url: https://api.openalex.org/works/doi:10.1123/ijsnem.2023-0063
+    grade: B
+    questions: [Q2]
+    summary: >-
+      Kettős jelölt víz (DLW) a Cocodona 250 (~402 km, folyamatos többnapos futás) 5 befutójánál (4 férfi, 1 nő, 34,6 év) és
+      egy Arizona Trail FKT-nél (~1315 km). PAL (TEE/BMR) 4,34–6,94 (Cocodona), 5,63 (Arizona Trail). Más DLW-ultrákkal
+      együtt erős inverz kapcsolat az esemény hossza és a PAL között (r²=0,68). A Cocodona-győztes az energiaigény ~53%-át
+      fedezte bevitelből (ennek 85,6%-a CHO), ~47%-át testtömeg-katabolizmusból.
+    quote: >-
+      "PAL during events exceeded four times basal metabolic rate (Cocodona range: 4.34–6.94; Arizona Trail: 5.63)" … "The Cocodona
+      250 winner met ~53% of energy demand via dietary intake, 85.6% of which was carbohydrate".
+    notes: >-
+      Futás, n=5+1; OpenAlex-absztraktból. Az egyik legfrissebb DLW-ultra adat; a PAL 4–7 a 2,5×BMR "alimentáris plafon"
+      fölött van, ami a néhány napos eseményeken a testraktárak terhére lehetséges (Thurber-görbe). Ultrakerékpárra
+      (RAAM 8–12 nap) a görbe szerint ~3–4×BMR várható.
+    status: ellenorizve-doi
+
+  - key: stroud-1997-antarctic
+    type: journal
+    authors: [Stroud M.A., Ritz P., Coward W.A., Sawyer M.B., Constantin-Teodosiu D., Greenhaff P.L., Macdonald I.A.]
+    year: 1997
+    title: "Energy expenditure using isotope-labelled water (2H2 18O), exercise performance, skeletal muscle enzyme activities and plasma biochemical parameters in humans during 95 days of endurance exercise with inadequate energy intake"
+    journal: "European Journal of Applied Physiology and Occupational Physiology 76:243-252"
+    doi: 10.1007/s004210050243
+    url: https://link.springer.com/article/10.1007/s004210050243
+    grade: B
+    questions: [Q2]
+    summary: >-
+      Két férfi 2300 km-es, 95 napos, segítség nélküli antarktiszi szánhúzó átkelése, napi ~10 óra munka. Átlagos bevitel
+      21,3 MJ/nap (~5100 kcal); DLW-vel mért forgalom az első 50 napban 35,5 ill. 29,1 MJ/nap (~8500 / 6950 kcal), a 20–30.
+      napon csúcs 44,6 és 48,7 MJ/nap (~10 650 / 11 640 kcal). Mindkét résztvevő >25% testtömeget vesztett; utána a VO2max
+      53,6→41,2 és 58,1→46,0 ml/kg/perc, izomerő −55,8%-ig, izomenzim-aktivitás −63%-ig, hipoglikémia.
+    quote: >-
+      Absztraktból: "an average energy intake of 21.3 MJ · day−1" … peak expenditure days 20–30: "44.6 and 48.7 MJ/day"; weight
+      loss "exceeding 25%"; VO2max "53.6 to 41.2; 58.1–46.0 ml O2/kg/min".
+    notes: >-
+      n=2, expedíció, hideg + szánhúzás; a klasszikus "krónikus deficit határa" adat. Számok a Springer-oldal absztraktjából.
+      A RAAM/TCR-nél sokkal hosszabb; a tanulság a deficit ára: 25% tömegvesztés mellett 20%-os VO2max- és 50%-os erővesztés.
+    status: ellenorizve-doi
+
+  - key: knechtle-2011-1000km-bodycomp
+    type: journal
+    authors: [Knechtle B., Knechtle P., Kohler G.]
+    year: 2011
+    title: "The Effect of 1,000 Km Nonstop Cycling on Fat Mass and Skeletal Muscle Mass"
+    journal: "Research in Sports Medicine 19(3):170-185"
+    doi: 10.1080/15438627.2011.582827
+    url: https://api.openalex.org/works/doi:10.1080/15438627.2011.582827
+    grade: B
+    questions: [Q2]
+    summary: >-
+      n=1 ultrakerékpáros 1000 km 48 óra alatt, állandó ~48% VO2max intenzitáson (pulzus ~105 ± 5). Zsírtömeg-csökkenés
+      ~1 kg, legnagyobb a 12–24. óra között; a bőrredő és BIA a lábak folyadék-felhalmozódását tévesen tömegnövekedésként
+      méri. Nem alakult ki metabolikus "steady state"; a testvíz nőtt (endokrin vízretenció) miközben dehidráció is fennállt.
+    quote: >-
+      "A 1 kg fat mass decrease resulted, with the largest decrease occurring between the 12th and 24th hour." … BIA and skinfolds
+      "analyse fluid accumulation … apparently incorrectly as an increase and not as fluids."
+    notes: >-
+      n=1, kerékpár, 48 h; OpenAlex-absztraktból. Módszertani figyelmeztetés: ultra utáni BIA/bőrredő-mérés a folyadék-
+      retenció miatt megbízhatatlan – a "izomvesztés" adatok ultrán ezért zajosak. 1 kg zsír ≈ 7000–7700 kcal, ami 48 óra
+      alatt ~150 kcal/h nettó zsírmobilizációnak felel meg.
+    status: ellenorizve-doi
+
+
+  # ---------------------------------------------------------------- Q3: zsíradaptáció, LCHF, train-low, MFO
+  - key: volek-2016-faster
+    type: journal
+    authors: [Volek J.S., Freidenreich D.J., Saenz C., Kunces L.J., Creighton B.C., Bartley J.M., Davitt P.M., Munoz C.X., Anderson J.M., Maresh C.M., Lee E.C., Schuenke M.D., Aerni G., Kraemer W.J., Phinney S.D.]
+    year: 2016
+    title: "Metabolic characteristics of keto-adapted ultra-endurance runners"
+    journal: "Metabolism 65(3):100-110"
+    doi: 10.1016/j.metabol.2015.10.028
+    url: https://www.sciencedirect.com/science/article/pii/S0026049515003340
+    grade: B
+    questions: [Q3]
+    summary: >-
+      FASTER-vizsgálat: 10 hosszú távon (átlag 20, 9–36 hónap) ketogén (LC) és 10 magas CHO-s (HC) elit ultrafutó/triatlonista
+      keresztmetszeti összehasonlítása. Csúcs zsíroxidáció LC 1,54 ± 0,18 vs HC 0,67 ± 0,14 g/perc, a csúcs 70,3 vs 54,9%
+      VO2max-nál; 3 órás futás (64% VO2max) alatt 1,21 vs 0,76 g/perc. Az izomglikogén-felhasználás (~64% csökkenés) és
+      -visszatöltés mindkét csoportban hasonló volt.
+    quote: >-
+      "Long-term keto-adaptation results in extraordinarily high rates of fat oxidation, whereas muscle glycogen utilization and
+      repletion patterns during and after a 3 hour run are similar" (absztraktból).
+    notes: >-
+      Keresztmetszeti, önszelektált csoportok (nem RCT) – B fokozat; futás, labor. Nincs teljesítménymérés. A 1,5 g/perc
+      zsíroxidáció (~13,5 kcal/perc ≈ 810 kcal/h) ultrás tempón elméletileg fedezné az energiaigény nagy részét – ez a
+      zsíradaptáció-érv magja. A glikogén-felhasználás azonossága viszont ellentmond a "glikogén-kímélés" narratívának.
+    status: ellenorizve-doi
+
+  - key: burke-2017-supernova
+    type: journal
+    authors: [Burke L.M., Ross M.L., Garvican-Lewis L.A., Welvaert M., Heikura I.A., Forbes S.G., Mirtschin J.G., Cato L.E., Strobel N., Sharma A.P., Hawley J.A.]
+    year: 2017
+    title: "Low carbohydrate, high fat diet impairs exercise economy and negates the performance benefit from intensified training in elite race walkers"
+    journal: "The Journal of Physiology 595(9):2785-2807"
+    doi: 10.1113/JP273230
+    url: https://api.openalex.org/works/doi:10.1113/JP273230
+    grade: A
+    questions: [Q3]
+    summary: >-
+      Kontrollált 3 hetes vizsgálat elit versenygyaloglókon: magas CHO (8,6 g/kg/nap, n=9), periodizált CHO (n=10) és LCHF
+      (<50 g CHO/nap, 78% zsír, n=10). LCHF-en a zsíroxidáció csúcsa 1,57 ± 0,32 g/perc lett 2 órás ~80%-os terhelésen, de
+      a versenysebességű járás O2-költsége nem javult (a másik két csoportban igen); 10 km-es versenyidő: HCHO +6,6%, PCHO
+      +5,3%, LCHF −1,6% (nem javult).
+    quote: >-
+      "HCHO and PCHO groups improved 10 km … race walk times: 6.6% (90% CI: 4.1, 9.1%) and 5.3% (3.4, 7.2%), with no improvement
+      (-1.6% (-8.5, 5.3%)) in LCHF group" (OpenAlex-absztraktból).
+    notes: >-
+      Elit gyaloglók, 3 hét (rövid adaptáció – a keto-tábor fő kritikája), magas intenzitású (~90% VO2max) versenyfeladat;
+      ultrára az intenzitás nem vihető át, az ökonómia-romlás (több O2 ugyanahhoz a sebességhez) viszont ultrán is
+      költség. A vizsgálatot 2020-ban megismételték azonos eredménnyel (burke-2020-supernova2).
+    status: ellenorizve-doi
+
+  - key: burke-2020-supernova2
+    type: journal
+    authors: [Burke L.M., Sharma A.P., Heikura I.A., Forbes S.F., Holloway M., McKay A.K.A., Bone J.L., Leckey J.J., Welvaert M., Ross M.L.]
+    year: 2020
+    title: "Crisis of confidence averted: Impairment of exercise economy and performance in elite race walkers by ketogenic low carbohydrate, high fat (LCHF) diet is reproducible"
+    journal: "PLOS ONE 15(6):e0234027"
+    doi: 10.1371/journal.pone.0234027
+    url: https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0234027
+    grade: A
+    questions: [Q3]
+    summary: >-
+      Replikáció 25 napos kontrollált diétával elit gyaloglókon (HCHO n=8, PCHO n=8, LCHF n=10). LCHF: teljes test
+      zsíroxidáció 0,6→1,3 g/perc, de nőtt a versenysebességű járás O2-költsége; 10 000 m: HCHO −4,8% (134 s), PCHO −2,2%
+      (trend), LCHF +2,3% (86 s lassabb, p<0,001). A LCHF után 2,5 hét magas-CHO "visszatöltés" sem adott "rebound"
+      előnyt 20 km-en.
+    quote: >-
+      "LCHF markedly increased whole-body fat oxidation (from 0.6 g∙min-1 to 1.3 g∙min-1), but also the oxygen cost of walking at
+      race-relevant velocities." … "LCHF were slower by 2.3%, -86 s ([-18 to -144 s]; p < 0.001)".
+    notes: >-
+      Két független kohorsz azonos eredménnyel – ez a legerősebb bizonyíték a LCHF magas intenzitású teljesítményrontására.
+      Korlát: 3,5 hét adaptáció, gyaloglás, ~50 perces feladat. A "periodizált CHO utáni rebound" hipotézis cáfolata
+      a train-low ultrás alkalmazását is gyengíti.
+    status: ellenorizve-doi
+
+  - key: cao-2021-keto-meta
+    type: journal
+    authors: [Cao J., Lei S., Wang X., Cheng S.]
+    year: 2021
+    title: "The Effect of a Ketogenic Low-Carbohydrate, High-Fat Diet on Aerobic Capacity and Exercise Performance in Endurance Athletes: A Systematic Review and Meta-Analysis"
+    journal: "Nutrients 13(8):2896"
+    doi: 10.3390/nu13082896
+    url: https://www.mdpi.com/2072-6643/13/8/2896
+    grade: A
+    questions: [Q3]
+    summary: >-
+      Meta-analízis 10 vizsgálatból állóképességi sportolókon: K-LCHF hatása a VO2max-ra nem szignifikáns (SMD −0,06; CI
+      −0,36–0,25; p=0,72), a kimerülésig tartó időre sem (SMD −0,13; CI −0,66–0,40; 3 vizsgálat, 48 sportoló), a maximális
+      pulzusra sem; az RER viszont erősen csökkent (SMD −1,81; CI −2,49 – −1,13) – azaz a zsíroxidáció nő, a teljesítmény nem.
+    quote: >-
+      "We did not find a significant effect of K-LCHF diet interventions on VO2max" (SMD: −0.06, CI: −0.36 to 0.25, p = 0.72);
+      TTE SMD −0.13 (CI −0.66 to 0.40, p = 0.64).
+    notes: >-
+      Kis számú, heterogén vizsgálat; időmérő-teljesítményre alig van pool-olható adat; ultra-időtartamú vizsgálat nincs
+      benne. A "nem árt, nem használ" eredmény a hosszú távú, alacsony intenzitású ultrára a legkevésbé informatív.
+    status: ellenorizve-doi
+
+  - key: gawelczyk-2026-lchf-aerobic-sr
+    type: journal
+    authors: [Gawelczyk M., Kaszuba M., Zając A., Maszczyk A.]
+    year: 2026
+    title: "Effects of Low-Carbohydrate and Ketogenic Diets on Aerobic Performance in Trained Athletes: A Systematic Review and Meta-Analysis"
+    journal: "Nutrients 18(5):740"
+    doi: 10.3390/nu18050740
+    url: https://www.mdpi.com/2072-6643/18/5/740
+    grade: A
+    questions: [Q3]
+    summary: >-
+      2026-os szisztematikus áttekintés + meta-analízis, 33 aerob-fókuszú vizsgálat, 409 résztvevő. Mind a 30 zsíroxidációt
+      mérő vizsgálat növekedést mutatott (+28% – +200%); a VO2max a vizsgálatok 50%-ában megmaradt, 11%-ban javult; a
+      szubmaximális ökonómia a legérzékenyebb: 50%-ban romlott; a kimerülésig tartó idő 69%-ban megmaradt. Időbeli küszöb:
+      ≤7 napon belül mérve teljesítményromlás, >1 hét után fenntartott vagy javult teljesítmény.
+    quote: >-
+      "All 30 studies measuring fat oxidation demonstrated consistent increases (+28% to +200%)" … "Submaximal exercise economy
+      showed the greatest sensitivity, with 50.0% documenting impaired efficiency".
+    notes: >-
+      Vote-counting jellegű összegzés, magas heterogenitás; a ">1 hét után helyreáll" tézis ellentmond a Burke-vizsgálatok
+      3–3,5 hetes romlásának – lásd ELLENTMONDÁS. Ultra-specifikus (>4 h) vizsgálat itt sincs.
+    status: ellenorizve-doi
+
+  - key: gejl-2021-trainlow-meta
+    type: journal
+    authors: [Gejl K.D., Nybo L.]
+    year: 2021
+    title: "Performance effects of periodized carbohydrate restriction in endurance trained athletes – a systematic review and meta-analysis"
+    journal: "Journal of the International Society of Sports Nutrition 18:37"
+    doi: 10.1186/s12970-021-00435-3
+    url: https://link.springer.com/article/10.1186/s12970-021-00435-3
+    grade: A
+    questions: [Q3]
+    summary: >-
+      Meta-analízis 9 vizsgálatból (407 találatból), jól edzett sportolók (VO2max ≥55–60), ≥1 hetes, heti ≥3 "train low"
+      alkalmat tartalmazó beavatkozások: a periodizált CHO-korlátozásnak nincs összhatása az állóképességi teljesítményre
+      (SMD 0,17; 95% CI −0,15–0,49; p=0,29). A mitokondriális jelátviteli előnyök nem fordulnak teljesítménybe.
+    quote: >-
+      "no overall effect of CHO periodization on endurance performance" – standardized mean difference = 0.17 [−0.15, 0.49]; P = 0.29
+      … "periodized CHO restriction does not per se enhance performance in endurance-trained athletes".
+    notes: >-
+      A "sleep low"/"train low" iskola legjobb bizonyítéka: semleges. Rövid (1–4 hetes) protokollok, <2 órás tesztek;
+      ultra-specifikus kimenet nincs. Ultrán a train-low ára (rontott edzésminőség, immun-, RED-S-kockázat) külön mérlegelendő.
+    status: ellenorizve-doi
+
+  - key: randell-2017-mfo-athletes
+    type: journal
+    authors: [Randell R.K., Rollo I., Roberts T.J., Dalrymple K.J., Jeukendrup A.E., Carter J.M.]
+    year: 2017
+    title: "Maximal Fat Oxidation Rates in an Athletic Population"
+    journal: "Medicine & Science in Sports & Exercise 49(1):133-140"
+    doi: 10.1249/MSS.0000000000001084
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000001084
+    grade: B
+    questions: [Q3]
+    summary: >-
+      1121 sportoló (933 férfi, 188 nő) éhgyomri (≥5 h) lépcsőzetes futószalag-tesztje: átlagos MFO 0,59 ± 0,18 g/perc,
+      tartomány 0,17–1,27 g/perc; Fatmax 49,3 ± 14,8% VO2max (22,6–88,8%). Férfiak 0,61 vs nők 0,50 g/perc. Az FFM, a
+      Fatmax-intenzitás, a testzsír% és az éhezés hossza a variancia 47%-át magyarázza – több mint fele megmagyarázatlan.
+    quote: >-
+      "Mean MFO was 0.59 ± 0.18 g·min⁻¹, ranging from 0.17 to 1.27 g·min⁻¹. Peak rates occurred at 49.3% ± 14.8% VO₂max" (OpenAlex-absztraktból).
+    notes: >-
+      Legnagyobb MFO-adatbázis; vegyes sportágak (nem csak állóképességi), Gatorade-kutatók. Az 1,27 g/perc felső érték
+      vegyes étrenden – tehát a keto (1,5 g/perc) többlete valós, de az egyéni szórás akkora, hogy diéta nélkül is
+      elérhető 1+ g/perc. Kiegészíti maunder-2018-mfo-t.
+    status: ellenorizve-doi
+
+  - key: webster-2016-lchf-gluconeogenesis
+    type: journal
+    authors: [Webster C.C., Noakes T.D., Chacko S.K., Swart J., Kohn T.A., Smith J.A.H.]
+    year: 2016
+    title: "Gluconeogenesis during endurance exercise in cyclists habituated to a long-term low carbohydrate high-fat diet"
+    journal: "The Journal of Physiology 594(15):4389-4405"
+    doi: 10.1113/JP271934
+    url: https://api.openalex.org/works/doi:10.1113/JP271934
+    grade: B
+    questions: [Q3]
+    summary: >-
+      7+7 jól edzett férfi kerékpáros, >8 hónapja LCHF (7% CHO, 72% zsír) vs vegyes étrend; 2 órás labor-tekerés ~72%
+      VO2max-on éhgyomorra, izotópos nyomjelzéssel. Endogén glükóztermelés LCHF 6,0 ± 0,9 vs vegyes 7,8 ± 1,1 mg/kg/perc
+      (p<0,01), glikogenolízis 3,2 vs 5,3 (p<0,01), glükoneogenezis 2,8 vs 2,5 (n.s.). A LCHF-kerékpárosok nem
+      kompenzálnak több glükoneogenezissel; a glükóz-oxidáció csökken, a máj glikogénje védettebb.
+    quote: >-
+      "Exercise glucose production rates were significantly lower in the LCHF group (6.0 ± 0.9 mg/kg/min) versus mixed diet group
+      (7.8 ± 1.1 mg/kg/min; P < 0.01)" (OpenAlex-absztraktból).
+    notes: >-
+      Kerékpáros, krónikusan (8+ hónap) adaptált – a "rövid adaptáció" kritika itt nem áll; n=7/csoport, keresztmetszeti.
+      Teljesítménymérés nincs. Ultrára releváns: a hosszan adaptált kerékpáros stabil vércukrot tart CHO nélkül is, de a
+      CHO-oxidációs kapacitása (nagy intenzitáshoz) csökken.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q2 kiegészítés: DLW / forgalom / hormon / kogníció
+  - key: westerterp-1986-tdf-dlw
+    type: journal
+    authors: [Westerterp K.R., Saris W.H.M., van Es M., ten Hoor F.]
+    year: 1986
+    title: "Use of the doubly labeled water technique in humans during heavy sustained exercise"
+    journal: "Journal of Applied Physiology 61(6):2162-2167"
+    doi: 10.1152/jappl.1986.61.6.2162
+    url: https://api.openalex.org/works/doi:10.1152/jappl.1986.61.6.2162
+    grade: B
+    questions: [Q2]
+    summary: >-
+      Az első DLW-mérés versenysportban: 4 Tour de France-versenyző, három egymást követő 7–8 napos intervallum. A DLW
+      szisztematikusan magasabb forgalmat adott, mint az étkezési napló (+12,9%, +21,4%, +35,3% az egymást követő
+      hetekben) – a naplózott bevitel a verseny előrehaladtával egyre jobban alábecsül. A napi anyagcsere a BMR
+      3,4–3,9-szerese (bevitel alapján) ill. 4,3–5,3-szorosa (DLW), stabil testösszetétel mellett.
+    quote: >-
+      "Subjects achieved daily metabolic rates of 3.4-3.9 or 4.3-5.3 times basal metabolic rate" … discrepancy
+      "12.9±7.9%, 21.4±9.8%, and 35.3±4.4% respectively—based on dietary records" (OpenAlex-absztraktból).
+    notes: >-
+      n=4 profi, 3 hetes szakaszverseny (napi ~5 h, éjszakai pihenéssel) – nem nonstop ultra. Klasszikus referencia a
+      "fenntartható 4–5×BMR" tartományhoz és a naplózott bevitel alábecsléséhez. Abszolút MJ/nap az absztraktban nincs.
+    status: ellenorizve-doi
+
+  - key: enqvist-2010-adventure-racing
+    type: journal
+    authors: [Enqvist J.K., Mattsson C.M., Johansson P., Brink-Elfegoun T., Bakkman L., Ekblom B.T.]
+    year: 2010
+    title: "Energy turnover during 24 hours and 6 days of adventure racing"
+    journal: "Journal of Sports Sciences 28(9):947-955"
+    doi: 10.1080/02640411003734069
+    url: https://api.openalex.org/works/doi:10.1080/02640411003734069
+    grade: B
+    questions: [Q2, Q1]
+    summary: >-
+      Pulzus–VO2 kalibrációval (oxigénpulzus-drift korrekcióval) becsült energiaforgalom: 24 órás vegyes ultra (9 férfi):
+      18 050 ± 2390 kcal (750 ± 100 kcal/h), bevitel 8450 ± 1160 kcal, deficit 9590 ± 770 kcal, testtömeg −2,3 ± 0,8 kg,
+      zsírtömeg −1,5 kg, izomglikogén −60%. 800 km-es, 152,5 órás kalandverseny (6 férfi): 80 000 ± 18 000 kcal
+      (500 ± 100 kcal/h), testtömeg változatlan. Az oxigénpulzus 12 óra után 10% ill. 5%-kal nőtt – a pulzusalapú
+      becslés korrekció nélkül alábecsül.
+    quote: >-
+      "Mean energy expenditure was 18,050 ± 2,390 kcal (750 ± 100 kcal h⁻¹) and 80,000 ± 18,000 kcal (500 ± 100 kcal h⁻¹),
+      respectively" … "Energy intake was 8,450 ± 1,160 kcal, resulting in an energy deficit of 9,590 ± 770 kcal."
+    notes: >-
+      Kalandverseny (kajak+kerékpár+futás), nem tiszta kerékpár; HR-alapú becslés, nem DLW. Kulcsszám ultrára: a 24 órás
+      formátum ~750 kcal/h, a 6 napos ~500 kcal/h – a hossz növekedésével csökken az óránkénti forgalom (Thurber-görbe).
+      A 24 órás bevitel ~350 kcal/h (a forgalom 47%-a), az "alimentáris" korlát és a GI-panasz miatt.
+    status: ellenorizve-doi
+
+  - key: geesmann-2017-hormone-suppression
+    type: journal
+    authors: [Geesmann B., Gibbs J.C., Mester J., Koehler K.]
+    year: 2017
+    title: "Association Between Energy Balance and Metabolic Hormone Suppression During Ultraendurance Exercise"
+    journal: "International Journal of Sports Physiology and Performance 12(7):984-989"
+    doi: 10.1123/ijspp.2016-0061
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2016-0061
+    grade: B
+    questions: [Q2]
+    summary: >-
+      Ugyanaz a 14 jól edzett férfi kerékpáros, mint geesmann-2014-1230km (1230 km nonstop, ~43 h). Verseny után a szérum
+      tesztoszteron −67 ± 18%, IGF-1 −45 ± 8%, leptin −79 ± 9%, és 12 órás pihenés után is elnyomva maradtak. Az IGF-1
+      változása pozitívan korrelált az energiamérleggel (r=0,65; p=0,037), amely −11 859 kcal deficittől +3593 kcal
+      többletig terjedt: minél nagyobb a deficit, annál nagyobb az IGF-1-esés. A tesztoszteron/leptin-elnyomás az akut
+      éhezéséhez hasonló.
+    quote: >-
+      "Post-event serum testosterone (-67% ± 18%), insulin-like growth factor-1 (-45% ± 8%), and leptin (-79% ± 9%) were
+      significantly suppressed and remained suppressed during 12-hour recovery." (OpenAlex-absztraktból)
+    notes: >-
+      Kerékpáros terepadat, n=14, egyetlen ~43 órás esemény; a hormonhatás 12 óra után még fennállt, hosszabb követés nincs.
+      Az egyéni deficit-tartomány (−11,9 ezer – +3,6 ezer kcal) mutatja, hogy a bevitel egyénileg drasztikusan eltér.
+      Ultrakerékpárra közvetlenül átvihető (RED-S "akut" komponense).
+    status: ellenorizve-doi
+
+  - key: kupchak-2014-wser-hormones
+    type: journal
+    authors: [Kupchak B.R., Kraemer W.J., Hoffman M.D., Phinney S.D., Volek J.S.]
+    year: 2014
+    title: "The Impact of an Ultramarathon on Hormonal and Biochemical Parameters in Men"
+    journal: "Wilderness & Environmental Medicine 25(3):278-288"
+    doi: 10.1016/j.wem.2014.03.013
+    url: https://www.sciencedirect.com/science/article/abs/pii/S1080603214001021
+    grade: B
+    questions: [Q2]
+    summary: >-
+      12 férfi futó a Western States 161 km-en; vérminta rajt előtt, célban (IP), 1 és 2 nappal később. Tesztoszteron, LH
+      és SHBG szignifikánsan csökkent, a kortizol a célban markánsan emelkedett; a tesztoszteron/kortizol arány (anabolikus
+      marker) a célban és 1 nappal később is alacsonyabb volt; CK, mioglobin, AST, ALT a 2. napon is emelkedett. A
+      hipotalamusz–hipofízis–here tengely elnyomása 2 napon túl is fennáll.
+    quote: >-
+      "significant (P ≤ .05) decreases in testosterone, LH, and SHBG" … "the testosterone to cortisol (T:C) ratio, a marker of
+      anabolism, was decreased at IP and D1".
+    notes: >-
+      Futás, egynapos (~24 h), n=12; az absztraktban százalékos értékek nincsenek (csak szignifikancia). Kiegészíti
+      geesmann-2017-t: a hormonelnyomás nem kerékpár-specifikus, és legalább 2 napig tart. Egyik sem méri a többnapos
+      versenyek kumulatív hatását.
+    status: ellenorizve-doi
+
+  - key: beckner-2023-susops-deficit
+    type: journal
+    authors: [Beckner M.E., Lieberman H.R., Hatch-McChesney A., Allen J.T., Niro P.J., Thompson L.A., Karl J.P., Gwin J.A., Margolis L.M., Hennigar S.R., McClung J.P., Pasiakos S.M.]
+    year: 2023
+    title: "Effects of energy balance on cognitive performance, risk-taking, ambulatory vigilance and mood during simulated military sustained operations (SUSOPS)"
+    journal: "Physiology & Behavior 258:114010"
+    doi: 10.1016/j.physbeh.2022.114010
+    url: https://www.sciencedirect.com/science/article/pii/S0031938422003158
+    grade: A
+    questions: [Q2]
+    summary: >-
+      Randomizált keresztezett vizsgálat: 10 katona (22 év, 87 kg), két 72 órás szimulált művelet (napi ~4500 kcal
+      forgalom, 4 óra alvás/éj), energia-egyensúlyban vs 43 ± 3%-os deficitben. A deficit növelte a kockázatvállalást
+      (p=0,047) és rontotta az önkontrollt (p=0,021); a vigilancia-pontosság, munkamemória, hangulat mindkét állapotban
+      romlott (alvásmegvonás + terhelés), azaz az energia-egyensúly a döntéshozatal kockázati komponensét védi, a
+      figyelmet nem.
+    quote: >-
+      Absztraktból: "Risk-taking increased during energy deficit (p = 0.047)"; "Self-control decreased with energy deficit
+      (p = 0.021)"; maintaining energy balance "did not prevent cognitive or mood deterioration during sustained operations".
+    notes: >-
+      Nem sportolók, 72 h, ~4500 kcal/nap (egy ultrakerékpáros napi forgalmának fele); az alváshiány itt is jelen van, ezért
+      a modell a többnapos self-supported ultrához (deficit + alvásmegvonás) hasonlít. Egyetlen kontrollált adat a "deficit →
+      kockázatosabb döntés" kapcsolatra. Számok a ScienceDirect-absztrakt kivonatából.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q3 kiegészítés: kerékpáros keto-vizsgálatok, esettanulmány, CHO-visszavezetés
+  - key: mcswiney-2018-keto-cyclists
+    type: journal
+    authors: [McSwiney F.T., Wardrop B., Hyde P.N., Lafountain R.A., Volek J.S., Doyle L.]
+    year: 2018
+    title: "Keto-adaptation enhances exercise performance and body composition responses to training in endurance athletes"
+    journal: "Metabolism 81:25-34"
+    doi: 10.1016/j.metabol.2017.10.010
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0026049517302986
+    grade: B
+    questions: [Q3]
+    summary: >-
+      20 férfi állóképességi sportoló (33 ± 11 év), 12 hét azonos edzés magas CHO (n=11) vs ketogén (n=9) étrenden
+      (önválasztott csoportok). Testtömeg −5,9 vs −0,8 kg (p=0,006), testzsír −5,2 vs −0,7% (p=0,008); 100 km-es
+      időfutam −4,07 vs −1,13 perc (p=0,057, n.s.); 6 s sprint csúcsteljesítmény +0,8 vs −0,1 W/kg (p=0,025); kritikus
+      teljesítmény +1,4 vs −0,7 W/kg (p=0,047). Éhgyomri BHB 0,1→0,5 mmol/l.
+    quote: >-
+      Absztraktból: 100 km time trial "HC −1.13 min, LCKD −4.07 min, P=0.057"; body mass "−5.9 kg vs. −0.8 kg, P=0.006";
+      critical power "LCKD increased 1.4 w/kg; HC decreased −0.7 w/kg (P=0.047)".
+    notes: >-
+      Kerékpáros, 100 km-es (~3 h) teszt – a legultrásabb keto-vizsgálat. Nem randomizált; a W/kg-javulás nagyrészt a
+      6 kg-os tömegvesztésből származhat (abszolút W nem közölt az absztraktban); a 100 km-es különbség nem szignifikáns.
+      Volek társszerző (FASTER-csoport). A tömegvesztés ultrán (hegyi szakaszok) valódi előny lehet, de a "hatásfok"
+      kérdést nem válaszolja meg.
+    status: ellenorizve-doi
+
+  - key: zinn-2017-nz-keto-pilot
+    type: journal
+    authors: [Zinn C., Wood M., Williden M., Chatterton S., Maunder E.]
+    year: 2017
+    title: "Ketogenic diet benefits body composition and well-being but not performance in a pilot case study of New Zealand endurance athletes"
+    journal: "Journal of the International Society of Sports Nutrition 14:22"
+    doi: 10.1186/s12970-017-0180-0
+    url: https://link.springer.com/article/10.1186/s12970-017-0180-0
+    grade: B
+    questions: [Q3]
+    summary: >-
+      Esetsorozat: 5 állóképességi sportoló (4 nő, 1 férfi), 10 hét ketogén étrend. Testtömeg −4 ± 3,1 kg (p=0,046),
+      bőrredő-összeg −25,9 mm; csúcs zsíroxidáció +41% (0,6→0,8 g/perc, p=0,001), Fatmax +31%; de a kimerülésig tartó
+      idő ~2 perccel rövidült (p=0,004), csúcsteljesítmény −18 W (p=0,07), VO2max változatlan. Mindenki jobb közérzetet,
+      gyorsabb regenerációt, kevesebb gyulladást jelentett – a szubjektív előny és az objektív teljesítmény elválik.
+    quote: >-
+      Time to exhaustion "dropped by ~2 min (±SD 0.7; p = 0.004; ES: 0.53)" … peak fat oxidation "0.6 ± 0.1 to 0.8 ± 0.1 g.min⁻¹, p=0.001"
+      … "Each athlete reported experiencing enhanced well-being, included improved recovery".
+    notes: >-
+      n=5, nem kontrollált, 10 hét, vegyes sportágak (nem ultra). Tanulság ultrára: a "jobban érzem magam" beszámolók és a
+      mért teljesítmény nem esnek egybe; a versenyzői anekdoták óvatosan kezelendők. Az ultrakerékpáros keto-esettanulmány
+      keresése (lásd evidence.md) nem adott lektorált találatot.
+    status: ellenorizve-doi
+
+  - key: carpenter-2025-keto-cho-feeding
+    type: journal
+    authors: [Carpenter M., Brouner J., Spendiff O.]
+    year: 2025
+    title: "Strategic carbohydrate feeding improves performance in ketogenic trained athletes"
+    journal: "Clinical Nutrition 51:212-221"
+    doi: 10.1016/j.clnu.2025.06.016
+    url: https://www.sciencedirect.com/science/article/pii/S0261561425001700
+    grade: A
+    questions: [Q3, Q1]
+    summary: >-
+      13 hosszú távon (25 ± 12 hónap) ketogén rekreációs sportoló (11 férfi, 2 nő), latin négyzet elrendezés: placebo,
+      akut 60 g CHO edzés előtt, 2 napos CHO-töltés (200 g/nap), vagy mindkettő. Az akut edzés előtti CHO-bolusz javította a
+      16,1 km-es időfutamot (p<0,05), a 48 órás töltés önmagában nem; placebónál a zsíroxidáció 0,60–0,74 g/perc volt az
+      időfutam alatt. A szerzők szerint a hatás a hipoglikémia elkerülésén (máj) alapul, nem az izomglikogén-visszatöltésen.
+    quote: >-
+      "Conditions involving a pre-exercise carbohydrate bolus significantly improved 16.1 km time" … ergogenic effect derives
+      from "prevention of hypoglycaemia, rather than through delayed metabolic pathways" (absztraktból).
+    notes: >-
+      Rekreációs szint, rövid (~25–30 perces) teszt; a hosszú távon keto-adaptáltak zsíroxidációja itt csak 0,6–0,7 g/perc
+      (nem a FASTER 1,5). Ultrára a fontos üzenet: a zsíradaptált versenyző is profitál a verseny alatti CHO-ból – a két
+      stratégia nem kizáró ("metabolikus rugalmasság" gyakorlati értelme).
+    status: ellenorizve-doi

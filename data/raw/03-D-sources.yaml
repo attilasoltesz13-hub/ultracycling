@@ -1,0 +1,1021 @@
+# 03. modul – Táplálkozás és hidratálás – D csomag (Q7: boltból táplálkozás és valódi étel; Q10: konvergencia-mátrix; Q11: feltörekvő)
+# Készült: 2026-09-23. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   thurber-2019-alimentary, hulton-2010-raam-energy, geesmann-2014-1230km, black-2012-384km, purcell-2025-canada,
+#   jeukendrup-2014-personalized, podlogar-2022-newhorizons, maunder-2018-mfo, tiller-2019-issn-ultra, fesseler-2026-raam58,
+#   hyldahl-2024-tourdivide, strasser-inscyd-2022, strasser-pez-2019, baloh-nduranz-2024, baloh-infinity-2020,
+#   muller-precisionhydration-2017, hughes-rbr-2015, rutberg-cts-2016, hall-bikepacking-2016, hayden-restrap-2016,
+#   wilcox-rouleur-2024, wilcox-roadman-2026, sehili-breakaway, allegaert-apidura-2016, bartholmoes-styrkr-2022,
+#   gemperle-apidura-2026, kolbinger-euronews-2019, goldstein-cbc-2021, hager-transiberica-2022, bikepacking-ultraguide-2019,
+#   evans-2022-bikeradar-bartholmoes, ridefar-schedule, ridefar-time-efficiency, dotwatcher-guide-sleeping
+sources:
+  # ---------------------------------------------------------------- Q11: CGM
+  - key: skroce-2026-cgm-records
+    type: journal
+    authors: [Skroce K., Turner L.V., Zignoli A., Lipman D.J., Zisser H.C., Riddell M.C.]
+    year: 2026
+    title: "Beyond Euglycemia: Case Studies Using Continuous Glucose Monitoring in Elite Athletes Without Diabetes During Record Athletic Events"
+    journal: "Sensors 26(5):1624"
+    doi: 10.3390/s26051624
+    url: https://www.mdpi.com/1424-8220/26/5/1624
+    grade: B
+    questions: [Q11]
+    summary: >-
+      Három elit sportoló CGM-esettanulmánya (Abbott Libre Sense sport-bioszenzor), köztük egy Race Across the West
+      (RAW) váltó-világrekord (44 óra 20 perc) és egy Everesting-rekordkísérlet. A RAW alatt a tekerési szakaszokban az
+      átlagos interstitialis glükóz 91 ± 23,2 mg/dl volt, a pihenőkben 115 ± 24,7 mg/dl; a tekerés idejének 9,15%-a
+      (a pihenő 1,23%-a) esett a céltartomány alá (TBR). Az Everestingnél végig magas, 160 ± 5,7 mg/dl-es glükóz
+      (100% TAR140), 3,5%-os variációs együtthatóval. Következtetés: a klinikai euglikémiás tartományoktól való
+      eltérés elit teljesítmény közben gyakori, az értelmezésnek kontextusfüggőnek kell lennie.
+    quote: >-
+      "Mean interstitial glucose during cycling segments was 91 ± 23.2 mg/dL, compared with 115 ± 24.7 mg/dL during
+      resting periods" ... "TBR accounted for 9.15% of cycling time and 1.23% of resting time"
+    notes: >-
+      n=3 esettanulmány (ebből 2 kerékpáros: RAW váltó, Everesting), nem kontrollált, a szenzor gyártói kapcsolat
+      (Abbott/Supersapiens-környezet) miatt érdekkonfliktus lehetséges. Ultrakerékpárra közvetlenül releváns: a
+      váltó-formátumban a nyeregben ~24 mg/dl-rel alacsonyabb glükóz, mint pihenőben – a szólóversenyzőnél
+      (fesseler-2026-raam58) hasonló, napról napra csökkenő minta. Nem bizonyítja, hogy a CGM-vezérelt etetés javítja a
+      teljesítményt.
+    status: ellenorizve-doi
+
+  - key: riddell-2025-gssi-cgm
+    type: web-article
+    authors: [Riddell M.C., et al.]
+    credential: "Gatorade Sports Science Institute, Sports Science Exchange #263 – York University, diabetes/exercise-fiziológus"
+    year: 2025
+    title: "Glucose Monitoring In Athletes Without Diabetes (SSE #263)"
+    venue: "GSSI Sports Science Exchange"
+    doi: null
+    url: https://www.gssiweb.org/sports-science-exchange/article/continuous-glucose-monitoring-use-in-athletes-without-diabetes
+    grade: C
+    questions: [Q11]
+    summary: >-
+      Narratív áttekintés a nem diabéteszes sportolók CGM-használatáról. A szenzorpontosság edzés közben elfogadható, de
+      gyengébb (MARD <15%), az interstitialis érték késik a vérglükózhoz képest gyors változásoknál. Elit kerékpárosoknál
+      az edzés alatti átlag 108 ± 9 mg/dl, az edzésen belüli max/min 144 ± 14 és 74 ± 10 mg/dl. Ultramaratonon a
+      kevesebb szénhidrátot fogyasztók glükózszintje és teljesítménye is alacsonyabb volt; szénhidrátbevitel mellett
+      106 ± 18 vs. 88 ± 10 mg/dl és 113 ± 69 vs. 81 ± 49 perc kimerülési idő. Reaktív hipoglikémia a felhasználók ~8%-ánál,
+      főleg 30–90 perccel az edzés előtti étkezésnél. A CGM nem méri az izomglikogént.
+    quote: >-
+      "Accuracy is deemed to be acceptable, but perhaps a little worse (MARD <15%), in persons without diabetes who are
+      exercising" ... "Athletes anecdotally report better performances when glucose levels were higher than their usual
+      trends, but lack scientific evidence supports this claim"
+    notes: >-
+      GSSI = Gatorade-finanszírozású intézet, narratív (C). A számok másodlagosak (a cikk idézi az elsődleges
+      vizsgálatokat, n nem mindenütt megadott). Ultrakerékpárra a fő üzenet: a CGM trend- és hipoglikémia-jelzőként
+      használható, de a „magasabb glükóz = jobb teljesítmény" állításra nincs bizonyíték.
+    status: url-megnyitva
+
+  - key: helleputte-2025-cgm-review
+    type: journal
+    authors: [Helleputte S., Podlogar T., Gonzalez J.T.]
+    year: 2025
+    title: "Application potential of continuous glucose monitoring (CGM) in elite endurance athletes without diabetes: What do physiology and current evidence tell us?"
+    journal: "Performance Nutrition 1(1), Springer/BMC, 2025-11-07"
+    doi: 10.1186/s44410-025-00013-7
+    url: https://api.openalex.org/works/doi:10.1186/s44410-025-00013-7
+    grade: C
+    questions: [Q11]
+    summary: >-
+      Szemleírás (95 hivatkozás) a CGM alkalmazhatóságáról nem diabéteszes elit állóképességi sportolóknál. Fő
+      megállapítások: a CGM validitása terhelés alatt korlátozott (interstitialis–vér időkésés); nem méri az
+      izomglikogént és a szénhidrát-fluxust, ezért etetés-vezérlőként korlátozott; a nyílt hipoglikémia fáradtságot
+      okozhat, de konkrét glükózérték és teljesítmény kapcsolatára nincs bizonyíték; az „optimális glükóztartomány"
+      kutatandó; egészséges sportolónál a CGM használatának robusztus élettani indoka hiányzik, a félreértelmezés
+      felesleges diétamódosításon át a regenerációt ronthatja.
+    quote: >-
+      "research is needed to determine optimal glucose ranges" [OpenAlex-absztraktból; a Springer-oldal HTTP 429 miatt
+      nem nyílt meg, a teljes szöveg számai nem ellenőrzöttek]
+    notes: >-
+      Narratív áttekintés (C), a terület vezető kutatóitól (Podlogar, Gonzalez). Absztrakt OpenAlexről, DOI Crossrefen
+      ellenőrizve. Ultrakerékpárra a kulcsüzenet: a CGM etetési „műszerként" ma nem validált.
+    status: ellenorizve-doi
+
+  - key: hamilton-2025-gi-cgm
+    type: journal
+    authors: [Hamilton R.A., Xia R., Nicholas C., Churm R., McCarthy O.M., Bracken R.M.]
+    year: 2025
+    title: "Glycaemic Impact of Low- and High-Glycaemic Index Carbohydrate Diets in Ultra-Endurance Athletes: Insights From Continuous Glucose Monitoring"
+    journal: "European Journal of Sport Science"
+    doi: 10.1002/ejsc.70092
+    url: https://api.openalex.org/works/doi:10.1002/ejsc.70092
+    grade: A
+    questions: [Q11]
+    summary: >-
+      9 ultra-állóképességi sportoló, randomizált keresztezett vizsgálat, 2×28 napos alacsony vs. magas glikémiás indexű
+      szénhidrátdiéta (58 ± 3% CH, 15 ± 2% fehérje, 26 ± 2% zsír), folyamatos CGM. A 24 órás átlagglükóz azonos
+      (LGI 102 ± 5 vs. HGI 100 ± 5 mg/dl), a glükózvariabilitás az LGI-nél alacsonyabb; futószalagon 74 ± 1% VO2peak
+      mellett a kimerülésig tartó kapacitás nem különbözött, az LGI-nél kisebb szénhidrát-oxidáció.
+    quote: >-
+      "Mean 24-hour glucose proved similar between diets (LGI: 102±5 vs HGI: 100±5 mg/dL)" [OpenAlex-absztraktból
+      rekonstruált, absztraktból]
+    notes: >-
+      Futók, n=9, labor; a Wiley-oldal 403-at adott, az absztrakt az OpenAlex inverted-indexből rekonstruált (részben
+      parafrázis). Ultrakerékpárra: a CGM 24 órás átlaga a diéta GI-jétől érdemben nem függ – a CGM „napi átlag"
+      mutató önmagában keveset mond az etetés minőségéről.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q11: ketonészter
+  - key: brooks-2022-ketone-meta
+    type: journal
+    authors: [Brooks E., Lamothe G., Nagpal T.S., Imbeault P., Adamo K., Kara J., Doucet É.]
+    year: 2022
+    title: "Acute Ingestion of Ketone Monoesters and Precursors Do Not Enhance Endurance Exercise Performance: A Systematic Review and Meta-Analysis"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 32(3):214-225"
+    doi: 10.1123/ijsnem.2021-0280
+    url: https://journals.humankinetics.com/view/journals/ijsnem/32/3/article-p214.xml
+    grade: A
+    questions: [Q11]
+    summary: >-
+      8 randomizált keresztezett vizsgálat, 80 résztvevő (77 férfi, 3 nő), 2016–2020. Az akut exogén keton (monoészter
+      és prekurzor) bevitel nem javította az állóképességi teljesítményt: Hedges g = 0,136 (95% CI -0,195–0,467;
+      p = 0,419); sem a kimerülési idő, sem az időfutam nem különbözött. A monoészterek hatékonyabban emelték a
+      vérketon-szintet, mint a prekurzorok; a GI-panaszok a keton-karon gyakoribbak voltak.
+    quote: >-
+      "no significant differences were found between ketone and control trials" ... "exogenous ketone precursors and
+      monoesters do not exert significant improvements on endurance exercise performance"
+    notes: >-
+      Meta-analízis, főleg 1–2 órás laborprotokollok, nem ultra. A g-érték és CI a kiadói oldal absztraktjából. Ultrára
+      irányadó: akut ergogén hatás nincs; a többnapos „regenerációs" (EPO, overreaching) hatás külön kérdés
+      (sitko-2024-ketones-cycling).
+    status: ellenorizve-doi
+
+  - key: sitko-2024-ketones-cycling
+    type: journal
+    authors: [Sitko S.]
+    year: 2024
+    title: "The Role of Exogenous Ketones in Road Cycling: Evidence, Mechanisms, and Performance Claims"
+    journal: "Physiologia 4(4):29"
+    doi: 10.3390/physiologia4040029
+    url: https://www.mdpi.com/2673-9488/4/4/29
+    grade: C
+    questions: [Q11]
+    summary: >-
+      Narratív áttekintés az exogén ketonokról országúti kerékpárban. A terepvizsgálatok teljesítményhatása
+      „kiábrándító"; a szisztematikus áttekintések szerint nincs szignifikáns javulás. Krónikus ketonmonoészter-
+      kiegészítés 3 hetes edzésblokk alatt 26%-kal emelte a szérum EPO-t 12 órával az utolsó edzés után (Poffé).
+      Tipikus akut dózis 300–800 mg/kg; magas dózisnál (főleg ketonsóknál) hányinger, hányás, hasmenés. Az egyéni
+      válasz variabilitása megoldatlan.
+    quote: >-
+      "Chronic ketone monoester supplementation during a 3-week training period led to a 26% increase in serum EPO levels
+      12 h after final exercise." ... "Most field studies used doses of 300–800 mg/kg of ketone monoesters during acute
+      supplementation."
+    notes: >-
+      Narratív (C), MDPI Physiologia. Kerékpár-specifikus, de nem ultra. A GI-mellékhatás ultrán különösen kritikus
+      (eleve terhelt bél). Az „alvásjavító" hatásról a cikkben nincs adat.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q11: 120+ g/h, hidrogél
+  - key: wilson-2025-highcarb-review
+    type: journal
+    authors: [Wilson P.B.]
+    year: 2025
+    title: "A Narrative Review of the High-Carbohydrate Fueling Revolution (≥ 100 g/h) in the Professional Peloton"
+    journal: "Sports Medicine (online 2025-12-04, print 2026-02)"
+    doi: 10.1007/s40279-025-02372-6
+    url: https://link.springer.com/article/10.1007/s40279-025-02372-6
+    grade: C
+    questions: [Q11, Q10]
+    summary: >-
+      Narratív áttekintés a ≥100 g/h szénhidrát-etetésről a profi pelotonban. A kísérletes vizsgálatok kis száma
+      alapján nincs egyértelmű bizonyíték, hogy 100–120 g/h a 60–90 g/h-hoz képest csökkentené az endogén
+      szénhidrát-felhasználást vagy javítaná a teljesítményt (King 2018: 90 g/h-nál ~5%-kal magasabb időfutam-
+      teljesítmény, mint 112,5 g/h-nál, nem szignifikáns; Viribay: csoportonként 6–7 fő). Az 1984–2023 közötti
+      országúti versenyek óránkénti bevitele idővel nőtt (r = 0,64 a kiugró érték nélkül). Lehetséges előny:
+      a versenybeli bevitel erősen korrelál a napi összbevitellel (glikogén-újratöltés, alacsony energia-
+      elérhetőség elkerülése). Javaslat: egyéni exogén-oxidációs mérés alapján személyre szabni.
+    quote: >-
+      "there is not clear evidence that it reduces reliance on endogenous carbohydrate stores or improves performance"
+      ... "average power output during the time trial was highest with 90 g/h and ~ 5% higher than with 112.5 g/h,
+      though this was statistically insignificant."
+    notes: >-
+      Narratív áttekintés, profi országúti (3–6 órás) kontextus. Ultrára átvihető tanulság: a 120 g/h nem
+      „bizonyítottan jobb" mint 90; a többnapos formátumban a napi összbevitel emelése lehet a valódi haszon.
+      A Springer-oldal megnyílt, a számok az onnan idézett mondatokból.
+    status: ellenorizve-doi
+
+  - key: li-2026-hydrogel-review
+    type: journal
+    authors: [Li P., Song Q., Xu N.]
+    year: 2026
+    title: "Plant-derived alginate polysaccharide hydrogels in sport and exercise nutrition: implications for carbohydrate metabolism, gastrointestinal integrity, exercise recovery, and athletic performance"
+    journal: "Frontiers in Nutrition 13:1774380"
+    doi: 10.3389/fnut.2026.1774380
+    url: https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1774380/full
+    grade: A
+    questions: [Q11]
+    summary: >-
+      Szisztematikus áttekintés (9 vizsgálat, alacsony–közepes torzítási kockázat) az alginát-hidrogél
+      szénhidrátokról. A randomizált/keresztezett vizsgálatok többsége nem talált szignifikáns teljesítményjavulást;
+      ≤70 g/h-nál a hidrogél nem növeli az exogén oxidációt a hagyományos oldathoz képest, ≥90–180 g/h-nál viszont
+      következetesen magas exogén oxidációt tesz lehetővé. Egy futóvizsgálatban ~2% javulás 5 km-es időfutamon
+      glükóz–fruktóz hidrogéllel. A szubjektív GI-tünetek gyakran csökkennek vagy változatlanok (főleg futásnál);
+      a bélpermeabilitás-markerekben nincs többletvédelem.
+    quote: >-
+      "The majority of randomized controlled and crossover trials reported no statistically significant improvements in
+      conventional performance metrics" ... "At very high ingestion rates (≥90–180 g⋅h–1), alginate-based hydrogels
+      consistently support exceptionally high ExCHO oxidation rates"
+    notes: >-
+      Szisztematikus áttekintés, de kis vizsgálatszám (9), rövid (≤3 h) labor-protokollok, futók és kerékpárosok
+      vegyesen. Ultrán a hidrogél a magas óránkénti bevitel „eszköze" lehet, nem önmagában ergogén.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q11: egyénre szabott nátrium
+  - key: mccubbin-2024-sodium-personalized
+    type: journal
+    authors: [McCubbin A.J., Costa R.J.S.]
+    year: 2024
+    title: "Effect of Personalized Sodium Replacement on Fluid and Sodium Balance and Thermophysiological Strain During and After Ultraendurance Running in the Heat"
+    journal: "International Journal of Sports Physiology and Performance 19(2):105-115"
+    doi: 10.1123/ijspp.2023-0295
+    url: https://api.crossref.org/works/10.1123/ijspp.2023-0295
+    grade: A
+    questions: [Q11]
+    summary: >-
+      9 résztvevő (7 férfi, 2 nő), kettős vak randomizált keresztezett; 2×5 órás futószalagfutás 60% VO2max-on,
+      30 °C-ban, ad libitum ivással; NaCl-kapszula az előzetesen mért izzadságveszteség 100%-ának pótlására vs.
+      placebo. A nátrium nem befolyásolta az ad libitum folyadékbevitelt és a nettó folyadékegyensúlyt (p > 0,05);
+      a plazma-nátrium mindkét karon nőtt, a nátriummal jobban (2,5 óránál és utána); a plazmatérfogat-változás
+      nem különbözött. Következtetés: az egyénre szabott nátriumpótlás nem befolyásolta érdemben a
+      testvíz-egyensúlyt és a hőterhelést.
+    quote: >-
+      "No effect of sodium observed for ad libitum fluid intake or net fluid balance (P > .05)" ... "Personalized sodium
+      replacement during ultraendurance running in hot conditions did not substantially influence overall body-water
+      balance or thermophysiological strain." [OpenAlex-absztraktból]
+    notes: >-
+      Futók, n=9, labor, 5 óra – nem kerékpár, nem többnapos. A kiadói oldal 403, az absztrakt OpenAlexen ellenőrizve.
+      Ultrakerékpárra: az izzadásteszt-alapú „100% pótlás" élettani haszna 5 órán nem mutatható ki; a sokkal hosszabb,
+      hőségben zajló RAAM-típusú terhelésre nincs vizsgálat.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q11: bélflóra, probiotikum, gut training
+  - key: aitkenhead-2025-supplements-gut
+    type: journal
+    authors: [Aitkenhead R., Waldron M., Conway G.E., Horner K., Heffernan S.M.]
+    year: 2025
+    title: "The Influence of Dietary Supplements on Exercise-Induced Gut Damage and Gastrointestinal Symptoms: A Systematic Review and Meta-Analysis"
+    journal: "Nutrients 17(3):443"
+    doi: 10.3390/nu17030443
+    url: https://www.mdpi.com/2072-6643/17/3/443
+    grade: A
+    questions: [Q11]
+    summary: >-
+      26 vizsgálat, 495 résztvevő, három meta-analízis. A terhelés a bélkárosodás-marker I-FABP-t átlagosan 106%-kal
+      emelte (g = 1,01). A kiegészítők összesített hatása a GI-tünetekre nem szignifikáns (g = 0,42; 95% CI -0,17–1,02;
+      p = 0,15); alcsoportban a probiotikumok mérsékelt hatásúak (g = -0,62; p = 0,05). A teljesítményre egyik
+      kiegészítőnek sincs hatása (p = 0,53); a változások a klinikai relevancia alatt maradnak; heterogenitás
+      I² ≥ 58,6%.
+    quote: >-
+      "probiotics had a moderate significant effect for gastrointestinal symptoms (Hedges' g = −0.62, 95% CI −1.01; 1.01,
+      p = 0.05)" ... "no pooled or sub-group differences for exercise performance for any supplements (p = 0.53)"
+    notes: >-
+      Meta-analízis, rövid labor-terhelések (futás/kerékpár), nem ultra. A probiotikum-hatás határértékű (p = 0,05, a CI
+      a kiadói absztraktban furcsán szerepel: −1,01; 1,01). Ultrakerékpárra: a probiotikum legfeljebb tünetcsökkentő
+      kiegészítő, nem teljesítményjavító.
+    status: ellenorizve-doi
+
+  - key: martinez-2023-guttraining-sr
+    type: journal
+    authors: [Martinez I.G., Mika A.S., Biesiekierski J.R., Costa R.J.S.]
+    year: 2023
+    title: "The Effect of Gut-Training and Feeding-Challenge on Markers of Gastrointestinal Status in Response to Endurance Exercise: A Systematic Literature Review"
+    journal: "Sports Medicine"
+    doi: 10.1007/s40279-023-01841-0
+    url: https://api.crossref.org/works/10.1007/s40279-023-01841-0
+    grade: A
+    questions: [Q11]
+    summary: >-
+      Szisztematikus áttekintés (8 vizsgálat) az edzés alatti ismételt tápanyag-expozíció („gut training") hatásáról.
+      A bélkellemetlenség átlagosan 47%-kal és 26%-kal csökkent a szénhidrát-etetési protokollokkal, a
+      szénhidrát-malabszorpció 45–54%-kal a 2 hetes beavatkozásoknál; a gyomorürülésben és a bélpermeabilitás-
+      markerekben nem volt szignifikáns változás; a GI-tünetek javulása vizsgálatonként bizonytalan.
+    quote: >-
+      "gut discomfort decreased by an average of 47% and 26%" ... "carbohydrate malabsorption by 45–54%" [Crossref-
+      absztraktból]
+    notes: >-
+      Kis vizsgálatszám, főleg futók, 2 hetes protokollok (pl. Costa 2017: napi 90 g/h 2 hétig). A Springer-oldal nem
+      nyílt meg (429), a számok a Crossref-metaadat absztraktjából. Ultrára: a „gut training" a magas bevitel
+      tolerálásának eszköze; a többnapos versenyekre nincs vizsgálat.
+    status: ellenorizve-doi
+
+  - key: martinez-2025-gutchallenge
+    type: journal
+    authors: [Martinez I.G., Biesiekierski J.R., Rauch C.E., Costa R.J.S.]
+    year: 2025
+    title: "Feeding Tolerance to a Running Gut-Challenge Protocol: a Cross-Sectional Exploration"
+    journal: "International Journal of Sports Medicine 46(7):510-524"
+    doi: 10.1055/a-2541-2821
+    url: https://www.thieme-connect.de/products/ejournals/abstract/10.1055/a-2541-2821
+    grade: B
+    questions: [Q11]
+    summary: >-
+      53 állóképességi sportoló (43 férfi, 10 nő) keresztmetszeti vizsgálata: 2 órás futás 60% VO2max-on 90 g/h
+      szénhidráttal, majd 1 órás önütemezett távteszt. A tünetes sportolóknál az étel iránti érdeklődés és az étvágy
+      edzés közben alacsonyabb volt (p < 0,05); a nőknél magasabb vércukor és alacsonyabb zsíroxidáció (p = 0,009); a
+      teljesítmény nem függött nemtől, kortól, GI-tünet-előzménytől. Ajánlás: egyénre szabott GI-kezelés.
+    quote: >-
+      "Interest in food and appetite during exercise was lower in symptomatic athletes than asymptomatic athletes
+      (p<0.05)" ... "Exercise performance did not differ based on the biological sex, age, and Ex-GIS history"
+    notes: >-
+      Futók, labor, 3 óra. Ultrakerékpárra a lényeg: a GI-tünetekre hajlamosaknál az étvágy csökkenése a tünetek
+      korai jele – ezt a stáb/versenyző figyelheti.
+    status: ellenorizve-doi
+
+  - key: jeukendrup-2018-gssi-gut
+    type: web-article
+    authors: [Jeukendrup A.E.]
+    credential: "Loughborough University sporttáplálkozás-professzor, GSSI Sports Science Exchange #178"
+    year: 2018
+    title: "Training the Gut for Athletes (SSE #178)"
+    venue: "GSSI Sports Science Exchange"
+    doi: null
+    url: https://www.gssiweb.org/sports-science-exchange/article/training-the-gut-for-athletes
+    grade: C
+    questions: [Q11, Q10]
+    summary: >-
+      A „bél edzhetőségének" alapjai: futóknál a nagy folyadékmennyiség tolerálása a 4–5. gyakorlásra javult
+      (Lambert 2008); 3 napig napi 120 g fruktóz gyorsította a fruktóz gyomorürülését, a glükózét nem (Yau 2014);
+      egerekben 2 hét magas szénhidrátdiéta 1,9-szeresére emelte az SGLT1 fehérjét; a szénhidráttal kiegészített
+      diéta után nőtt az exogén szénhidrát-oxidáció (Cox 2010). Gyakorlati ajánlás: heti egy magas szénhidrátbevitelű
+      edzés 6–10 hét alatt javítja a toleranciát.
+    quote: >-
+      "training with high carbohydrate intake once a week will improve tolerance within 6-10 weeks."
+    notes: >-
+      Narratív (C), GSSI. Részben állatkísérletes mechanizmus. Ultrakerékpárra: a versenyen tervezett g/h-t és a
+      versenyen használt ételeket edzésen kell begyakorolni.
+    status: url-megnyitva
+
+  # ---------------------------------------------------------------- Q7: ízfáradás
+  - key: kelson-2023-ph-flavourfatigue
+    type: web-guide
+    authors: [Kelson L.]
+    credential: "regisztrált dietetikus, Precision Fuel & Hydration"
+    year: 2023
+    title: "How endurance athletes can beat 'flavour fatigue'"
+    venue: "Precision Fuel & Hydration – performance advice"
+    doi: null
+    url: https://www.precisionhydration.com/performance-advice/nutrition/what-is-flavour-fatigue-and-how-endurance-athletes-can-keep-fueling/
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Az „ízfáradás" tudományos neve szenzoros-specifikus jóllakottság (SSS): az ismétlődő íz iránti vonzalom csökken,
+      de idővel helyreáll. Hivatkozott 2021-es vizsgálat: az első 60 percben magasabb szénhidráttartalmú és édesebb,
+      utána sósabb termékeket preferáltak a sportolók; a jobb ízű ital 3 óra alatt több önkéntes folyadékbevitelt adott,
+      mint a víz. Gyakorlati tanács: tartalék üzemanyag (rágó, banán), edzésnapló az SSS-mintáról, a textúra/hőmérséklet/
+      látvány/illat variálása, nem csak az íz.
+    quote: >-
+      "Alter the other sensory elements of your source instead of just the general flavour. Play with texture,
+      temperature, sight and smell." ... [parafrázis: az első 60 percben édes, utána sós preferencia – a hivatkozott
+      2021-es vizsgálat pontos adatai a cikkben nem szerepelnek]
+    notes: >-
+      Gyártói tanácsadó cikk (C), a hivatkozott 2021-es taszt-preferencia vizsgálat szerzője/n-je nincs megadva.
+      Ultrakerékpárra: a sós/édes váltakozás gyakorlati alapja; a többnapos ízfáradásra nincs mért adat.
+    status: url-megnyitva
+
+  - key: narukawa-2024-taste-cycling
+    type: journal
+    authors: [Narukawa M., Nojiri K., Matsuda R., Murata M., Sakate S., Kuga S., Ue H.]
+    year: 2024
+    title: "Changes in taste and odor sensitivities during repeated bicycle ergometer exercises"
+    journal: "Journal of the International Society of Sports Nutrition 22(1)"
+    doi: 10.1080/15502783.2024.2441769
+    url: https://api.openalex.org/works/doi:10.1080/15502783.2024.2441769
+    grade: A
+    questions: [Q7]
+    summary: >-
+      20 nő (átlag 21,6 év), 4×60 perc kerékpár-ergométer, 5 érzékelési teszt (4 italkoncentráció, 8 illatanyag,
+      intenzitás és preferencia, fáradtság). Az ital – főleg a legerősebb koncentráció – iránti ízpreferencia az egymást
+      követő szakaszokkal fokozódott; az illatpreferenciára nem volt szignifikáns hatás. Következtetés: az elhúzódó
+      terhelés az ízérzékenységet fokozhatja, a szaglás stabil marad.
+    quote: >-
+      "no significant effect was observed" [az illatpreferenciára; OpenAlex-absztraktból rekonstruált, a többi
+      parafrázis]
+    notes: >-
+      Labor, nem edzett fiatal nők, 4 óra – nem ultra. A T&F-oldal 403, absztrakt OpenAlexről. Nem az „ízfáradást"
+      igazolja, hanem annak részleges ellenkezőjét (az édes ital preferenciája nőtt 4 óra alatt) – az ellentmondást a
+      bizonyítéktérkép jelzi.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q7: boltból táplálkozás – terep és versenyzői források
+  - key: white-ridefar-food
+    type: web-guide
+    authors: [White C.]
+    credential: "Chris White – TCR-veterán, a ridefar.info szerzője (önellátó bikepacking-versenyzés kézikönyv)"
+    year: 2023
+    title: "Nutrition, Food & Fueling Strategies for Bikepacking Races"
+    venue: "ridefar.info – Rider / Strategy"
+    doi: null
+    url: https://ridefar.info/rider/strategy/food/
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Önellátó versenyzés etetési kézikönyve. Felszívható kalória kb. 200–300 kcal/óra, azaz 4000–7000 kcal/nap; egy
+      tipikus TCR-versenyző napi égetése 6000–12 000 kcal (becslés). Allegaert állítólag napi ~3000 kcal-t evett
+      napi ~450 km mellett (másodlagos). „3 étkezés gyakran nem elég"; a leggyorsabbak szerint a verseny „inkább evő-
+      verseny". Boltnál van optimális boltméret; a McDonald's vonzereje az ismerős menü, gyors, forró, kalóriadús étel,
+      wifi, WC. Napi egy leülős étkezés Mäkipää szerint táplálkozási és pszichés haszon. Mediterrán boltok siesta és
+      esti nyitás (19–20 óra). Egy 2017-es versenyző 16 nap alatt 122 l folyadékot ivott (5–11 l/nap). Kalóriadús étel
+      utáni azonnali tekerés emésztési gondot okoz; egy versenyző az első energiaitaltól 2 hét után 24 órára kidőlt.
+    quote: >-
+      "Estimates of how many calories most people can absorb per hour are about 200 to 300, making about 4,000 to 7,000
+      calories per day." ... "Many of the fastest bikepacking racers have commented that doing such a race can be more
+      like an eating contest than a bike race."
+    notes: >-
+      Edzői/versenyzői kézikönyv (C), a számok becslések vagy másodlagos versenyzői közlések (n nincs). Közvetlenül
+      önellátó ultrakerékpárra vonatkozik. A 200–300 kcal/h felszívási plafon ellentmond a Strasser-féle 500+ kcal/h
+      folyékony bevitelnek (strasser-datasport-2019) – lásd ELLENTMONDÁS.
+    status: url-megnyitva
+
+  - key: hayden-tcr6-story
+    type: web-article
+    authors: [Hayden J.M.]
+    credential: "kétszeres TCR-győztes (2017, 2018), saját beszámoló a TCR No.6-ról"
+    year: 2018
+    title: "My TCR No.6 story"
+    venue: "jamesmarkhayden.eu – articles"
+    doi: null
+    url: https://jamesmarkhayden.eu/articles/my-tcr-story
+    grade: B
+    questions: [Q7, Q10]
+    summary: >-
+      Hayden győztes TCR No.6-beszámolója konkrét etetési epizódokkal: hotelben előre kért „lakoma" (felét lefekvés
+      előtt, felét ébredéskor), éjfélkor bárban „pár liter kóla és chips", hajnali 2-kor McDonald's „egy nagy családnak
+      elegendő étel", máshol 2 doboz gabonapehely és 4 l tej, Bilishtben kebab, a hajrá előtt 6 fagylalt és több kóla.
+      Saját szabálya: „ha éhes vagy, már késő"; elismeri, hogy napi ~10 000 kcal benzinkúti étel „nem tesz jót".
+    quote: >-
+      "Food is my fuel and I would need a lot of it to cover the road ahead, I must eat constantly, if you're hungry,
+      it's too late." ... "Consuming 10,000 calories of petrol station food daily is not good for you"
+    notes: >-
+      Elsődleges versenyzői beszámoló (B: mért/számolt adat nincs, de konkrét mennyiségek). Ultrakerékpárra közvetlen:
+      önellátó TCR, az élmezőny gyakorlata. A „10 000 kcal" a versenyző saját becslése.
+    status: url-megnyitva
+
+  - key: strasser-cyclite-2025
+    type: web-article
+    authors: [Strasser C.]
+    credential: "hatszoros RAAM-győztes, 24 órás világrekorder; Cyclite versenyzői interjú"
+    year: 2025
+    title: "Rider Interview – Christoph Strasser"
+    venue: "cyclite.cc – athlete interviews"
+    doi: null
+    url: https://cyclite.cc/en/blogs/athlete-interviews/christoph-strasser
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Strasser a kísérős (RAAM) és önellátó etetés különbségéről: RAAM-on óránként egy palack folyékony táp és egy
+      palack elektrolit volt a protokoll; önellátón a legnagyobb félelme a hasmenés/rosszullét, de „a test meglepően
+      sokáig jól teljesít benzinkúti ételen". Boltos szabályai: semmi romlandó (hűtőből semmi), könnyen emészthető és
+      ismerős (fehér kenyér, cukros szirup vízzel), kis mennyiségű elektrolit-por a táskában, mindig tartalék étel.
+    quote: >-
+      "one bottle of liquid nutrition and one bottle of electrolytes every hour." ... "the body can perform quite well on
+      gas station food for a long time." ... "nothing perishable. I wouldn't grab anything from the fridge"
+    notes: >-
+      Gyártói interjú (C), szám kevés. Két formátum egy versenyzőnél: kísérős = óránkénti folyékony protokoll;
+      önellátó = boltos, nem romlandó, ismerős. Közvetlenül ultrakerékpár.
+    status: url-megnyitva
+
+  - key: strasser-datasport-2019
+    type: web-article
+    authors: [Strasser C.]
+    credential: "hatszoros RAAM-győztes; Datasport-interjú 2019-09-23"
+    year: 2019
+    title: "Interview with Christoph Strasser"
+    venue: "datasport.com – essentials"
+    doi: null
+    url: https://datasport.com/en/essentials/interview-with-christoph-strasser/
+    grade: C
+    questions: [Q7, Q10, Q11]
+    summary: >-
+      RAAM-etetés számokkal: napi ~15 000 kcal égetés, cél ~12 000 kcal bevitel, ami csak folyékony táppal érhető el
+      (a hagyományos sportétel túlterhelné a gyomrot). Az „Ensure" összetétele 54% szénhidrát, 17% fehérje, 29% zsír
+      + mikrotápanyagok; emellett hőmérséklettől függően óránként akár 1 l szénhidrát-elektrolit ital. Az első három
+      napon nehéz a szilárd ételt teljesen elhagyni; verseny közben „nem érzi magát telinek, de éhesnek sem";
+      kedvenc ízek: csokoládé, vanília.
+    quote: >-
+      "Around 15,000 kcal are burned a day, and the target calorie intake is about 12,000 kcal" ... "Of course, I can
+      only attain this amount using liquid food. Conventional sport food would put an excessive strain on the stomach."
+      ... "up to 1 litre of carbohydrate-electrolyte drink an hour."
+    notes: >-
+      Versenyzői önbevallás, nem mért (a 15 000/12 000 kcal a versenyző becslése; a mért RAAM-adatok – hulton-2010 váltó,
+      fesseler-2026 szóló – ennél kisebb bevitelt és jelentős deficitet mutatnak). Csak kísérős formátumban
+      kivitelezhető. 12 000 kcal / ~22 óra tekerés ≈ 545 kcal/h (saját számítás).
+    status: url-megnyitva
+
+  - key: barnett-2017-raam-toone
+    type: web-article
+    authors: [Barnett B.]
+    credential: "BPC Performance Coaching vezető dietetikusa; Brian Toone 2017-es RAAM-stábjának táplálkozási felelőse"
+    year: 2017
+    title: "How Coach Brian Helped Fuel Brian Toone to a 2017 RAAM Podium"
+    venue: "buildpeakcompete.com"
+    doi: null
+    url: https://buildpeakcompete.com/fueling-for-raam/
+    grade: B
+    questions: [Q7, Q10]
+    summary: >-
+      Stáb-etetési protokoll egy dobogós (első amerikai, hegyi díj) 2017-es szóló RAAM-on: óránként 300–400 kcal
+      szilárd étel + 2 palack Gatorade/víz, összesen legalább 500 kcal/óra; ~8000 kcal/nap 10+ napon át, ~200 óra
+      tekerés. Átlagteljesítmény „a legtöbb embernél 150 W alatt", pulzus 100–120. Kevés rost (WC-szünetek, nyereg-
+      sebek); a hőségben (Kansas–Missouri) vissza folyékony diétára; emelkedők előtt magasabb szénhidrát, felfelé gél
+      és folyadék. Ételek: muffin, wrap, smoothie, Ensure, gél, Gatorade, Nutrigrain, reggeli burrito, Starbucks-italok.
+    quote: >-
+      "300-400 calories in solid food per hour and 2 bottles of Gatorade and water for at least 500 calories per hour."
+      ... "Feed higher carb foods leading into climbs, hand him gels, and keep him in liquids as he climbed."
+    notes: >-
+      n=1 esettanulmány, stáb-oldali beszámoló (B), a kalóriaszámok tervezettek, nem mértek. Közvetlenül RAAM-stáb
+      gyakorlat. Az 500 kcal/h célszám egybevág Strasserrel (~545 kcal/h), és ellentmond a ridefar 200–300 kcal/h
+      felszívási becslésnek.
+    status: url-megnyitva
+
+  - key: dickson-rusa-pbp
+    type: web-guide
+    authors: [Dickson S.]
+    credential: "háromszoros Paris–Brest–Paris-győztes amerikai randonneur; RUSA-hírlevél"
+    year: 2006
+    title: "Paris Brest Paris Preparation and Strategy (RUSA newsletter 02-02-06)"
+    venue: "rusa.org newsletter"
+    doi: null
+    url: https://rusa.org/newsletter/02-02-06.html
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Brevet-kontroll etkezés a PBP-n: 3–4 kontrollnál a segítők meleg ételt szereznek (omlett, krumplipüré, zöldség,
+      leves), a leves palackban megy tovább az útra; a kontrollmegállás legyen 10 perc alatt (merevedés ellen); mindig
+      legyen étel a kontrollok között, „jutalomfalat" szakaszonként; a teljes kalória 1/3–1/2-e folyadékpótló italból és
+      sporttápból; rendszeres, éhség/szomj előtti evés-ivás; koffein mellett több víz.
+    quote: >-
+      "At 3 or 4 controls my crew will obtain some hot food for me. This will include hot items such as omelets, mashed
+      potatoes, vegetables, and soups." ... "I try to limit my stops to less than ten minutes to avoid stiffening."
+    notes: >-
+      Élversenyző tanácsa, régi (segítős PBP-korszak), szám kevés. Brevet-specifikus; a kontrollok kínálata és a
+      megállási idő a modern PBP-n hasonló. Átvihető: leves palackban, meleg étel a kontrollon, rövid megállás.
+    status: url-megnyitva
+
+  - key: chlibkova-2014-24h-mtb
+    type: journal
+    authors: [Chlíbková D., Knechtle B., Rosemann T., Tomášková I., Chadim V., Shortall M.]
+    year: 2014
+    title: "Nutrition habits in 24-hour mountain bike racers"
+    journal: "SpringerPlus 3:715"
+    doi: 10.1186/2193-1801-3-715
+    url: https://api.crossref.org/works/10.1186/2193-1801-3-715
+    grade: B
+    questions: [Q7, Q10]
+    summary: >-
+      74 szóló 24 órás MTB-versenyző leíró terepvizsgálata (cseh versenyek). Verseny alatt a leggyakoribb ételek:
+      banán (86,5%), energiaszelet (50,0%), alma (43,2%) és sajt (43,2%); italok: izotóniás (82,4%), víz (71,6%),
+      Coca-Cola (54,1%), tea (51,4%). Étkezési gyakoriság 30,6 ± 10,5 alkalom/24 h (1,3 ± 0,4/óra); folyadék
+      0,5 ± 0,2 l/h, 12,0 ± 5,0 l/24 h; a bevitel a rajt után a legmagasabb, éjjel és az utolsó szakaszban alacsonyabb;
+      a folyadékbevitel és a sebesség között nincs összefüggés. Verseny után: kenyér, rizs, banán; víz, sör, kóla, leves.
+    quote: >-
+      "Bananas (86.5%), energy bars (50.0%), apples (43.2%) and cheese (43.2%)" ... "Average fluid intake was 0.5 ± 0.2
+      l/h" ... "Total frequency of food intake (30.6 ± 10.5 times/24 hrs)"
+    notes: >-
+      Kérdőíves/naplós leíró vizsgálat, box-etetéses 24 órás formátum (a versenyzők a boxban saját/segítői ételt esznek).
+      Nincs energiabevitel g/h-ban. Közvetlenül a 24 órás box-etetés mintázatát mutatja: sós (sajt) + édes (banán,
+      szelet) váltakozás, kóla és tea, éjszakai bevitelcsökkenés. A Springer-oldal 429, DOI Crossrefen ellenőrizve,
+      a számok az academia.edu tükrön olvasott teljes szövegből.
+    status: ellenorizve-doi
+
+  - key: stuempfle-2011-ws100-diet
+    type: journal
+    authors: [Stuempfle K.J., Hoffman M.D., Weschler L.B., Rogers I.R., Hew-Butler T.]
+    year: 2011
+    title: "Race Diet of Finishers and Non-Finishers in a 100 Mile (161 km) Mountain Footrace"
+    journal: "Journal of the American College of Nutrition 30(6)"
+    doi: 10.1080/07315724.2011.10719999
+    url: https://api.openalex.org/works/doi:10.1080/07315724.2011.10719999
+    grade: B
+    questions: [Q7, Q10]
+    summary: >-
+      16 futó a Western States 161 km-en; 6 célba ért (27,0 ± 2,3 h), a kiesők 96,5 ± 20,5 km-t tettek meg. A célba
+      érők bevitele szignifikánsan nagyobb: 4,6 ± 1,7 vs. 2,5 ± 1,3 kcal/kg/h; szénhidrát 0,98 ± 0,43 vs. 0,56 ± 0,32
+      g/kg/h; nátrium 10,2 ± 6,0 vs. 5,2 ± 3,0 mg/kg/h; már az első 48 km-en több kalória, zsír, folyadék, nátrium a
+      célba érőknél. A célba érők bevitel-tartománya nagy volt.
+    quote: >-
+      "finishers (4.6 ± 1.7 kcal/kg/h, 0.98 ± 0.43 g carbohydrate/kg/h, 0.06 ± 0.03 g fat/kg/h, 10.2 ± 6.0 mg
+      sodium/kg/h) versus non-finishers (2.5 ± 1.3 kcal/kg/h, 0.56 ± 0.32 g carbohydrate/kg/h...)" [OpenAlex-absztraktból]
+    notes: >-
+      Futók, n=16, megfigyeléses (ok-okozat nem bizonyított: a rosszul lévők esznek kevesebbet). 70 kg-ra: 322 vs.
+      175 kcal/h, 69 vs. 39 g CH/h (saját számítás). Ultrakerékpárra irányadó: a korai, magasabb bevitel a
+      célba érés egyik korrelátuma (egybevág black-2012-384km-mel).
+    status: ellenorizve-doi
+
+  - key: bakerfulco-1995-military-intake
+    type: book
+    authors: [Baker-Fulco C.J.]
+    year: 1995
+    title: "An Overview of Dietary Intakes During Military Exercises (in: Not Eating Enough: Overcoming Underconsumption of Military Operational Rations, ch. 8)"
+    venue: "National Academies Press (Institute of Medicine)"
+    doi: null
+    url: https://www.nationalacademies.org/read/5002/chapter/11
+    grade: C
+    questions: [Q7]
+    summary: >-
+      Katonai terepgyakorlatok étkezési adatainak áttekintése – a „meleg étel és morál" kérdés legközelebbi mért
+      analógja. Napi legalább egy meleg étkezés javítja a tápanyagbevitelt (Fort Sill-vizsgálat); az édességek
+      „ízfáradása" gyakori; az ízek, textúrák, színek változatosságának növelése növeli a bevitelt; hidegben az evés
+      körülményesebb (melegítés, rehidratálás); aki maga cipeli az ételt, a hátizsák-helyért versenyeztet.
+    quote: >-
+      "Provision of at least one hot meal per day enhances nutrient intake." ... "Taste fatigue of sweets is common."
+      ... "Increasing the variety of tastes, textures, or colors increases food intakes."
+    notes: >-
+      Nem sportolói, katonai populáció, könyvfejezet (C), számszerű hatásméret a fejezetben nincs. Ultrakerékpárra
+      analógia: önellátó, cipelt, monoton étrend mellett a napi egy meleg étkezés és a változatosság a bevitel
+      fenntartásának eszköze. Sportolói „meleg étel–morál" vizsgálatot nem találtam (keresés: „hot food morale
+      ultra-endurance", „warm meal mood prolonged exercise").
+    status: url-megnyitva
+
+  # ---------------------------------------------------------------- Q10: edzői / versenyzői gyakorlat
+  - key: rutberg-pulford-cts-ultra-2025
+    type: web-guide
+    authors: [Rutberg J., Pulford A.]
+    credential: "CTS Pro Endurance Coach (Rutberg) és CTS Pro-Level Coach, USA Cycling L1, CSCS (Pulford)"
+    year: 2025
+    title: "Nutrition For Ultra Endurance Cycling & Running Events"
+    venue: "trainright.com (CTS), 2021-09-30, frissítve 2025-03-07"
+    doi: null
+    url: https://trainright.com/nutrition-for-ultra-endurance-cycling-running-events/
+    grade: C
+    questions: [Q10, Q7]
+    summary: >-
+      CTS-edzői keret ultrára: kiindulás 200–300 kcal/óra (120–400 között intenzitástól/egyéntől függően); folyadék
+      legalább 20 uncia (~590 ml)/óra, hőségben 20–40 uncia (590–1180 ml); nátrium átlag ~500 mg/óra. A bél edzhető.
+      Első órákban inkább folyadék, 3–4 óra után szeletek, rizssütemény; „semmi új versenynapon", de edzésen gyakorolni
+      az ismeretlen frissítőállomás-ételeket. Hányingernél: lassíts, kortyolj tiszta vizet – a tempó és a bél véráramlása
+      összefügg. Görcsnél savanyúságlé/TRP-agonista. Frissítőállomáson 5–10 perc a rendes evésre.
+    quote: >-
+      "Two to 300 calories per hour" ... "Sodium is the main driver...500 milligrams on average per hour" ... "The
+      harder you go, the more blood flow is going to the peripheral muscle...if you can slow it down and bring some
+      blood back into the stomach."
+    notes: >-
+      Edzői konszenzus (C), podcast-átirat jellegű, n nincs. Ultrafutás és ultrakerékpár vegyesen. Egybevág
+      hughes-rbr-showstoppers-2019 és white-ridefar-food 200–300 kcal/h-jával.
+    status: url-megnyitva
+
+  - key: blow-ph-ultra-2021
+    type: web-guide
+    authors: [Blow A.]
+    credential: "sporttudós, a Precision Fuel & Hydration alapítója"
+    year: 2021
+    title: "How to fuel an ultra endurance race"
+    venue: "precisionhydration.com – performance advice, 2021-04-26"
+    doi: null
+    url: https://www.precisionhydration.com/performance-advice/nutrition/preparing-fueling-nutrition-plan-for-ultra-racing/
+    grade: C
+    questions: [Q10, Q7]
+    summary: >-
+      Ultra-etetési keret: 60–90 g szénhidrát/óra a kiindulási zóna; annyi üzemanyag, amennyit kényelmesen tolerálsz
+      (könnyebb alul-, mint túletetni); „front-loading" – korán a legjobb a felszívás, nappal jobb, mint éjjel; folyadék
+      200–300 ml/h hidegben, 1000+ ml/h hőségben; nátrium ~200–1500 mg/h egyénenként; a GI-panasz a DNF vezető oka,
+      oka gyakran a bél túlterhelése; nagyon hosszú eseményen az ízfáradás, éhség és morál miatt „gondosan válogatott
+      valódi ételek" (szénhidrátdús, zsír-fehérje mellett is); FODMAP-csökkentés opció; probléma esetén lassíts.
+    quote: >-
+      "taking in something in the region of 60-90g of carbs per hour is a good starting zone" ... "when things get
+      really, really long, taste fatigue, hunger levels and morale all benefit...from the inclusion of some carefully
+      selected 'real foods'" ... "sodium intakes also vary significantly from between ~200mg per hour up to around
+      1,500mg per hour"
+    notes: >-
+      Gyártói tanácsadó (C; elektrolit-termékeket árul – érdek). Sportág-független ultra; a „nappal jobb, mint éjjel"
+      állítás egybevág chlibkova-2014-24h-mtb éjszakai bevitelcsökkenésével.
+    status: url-megnyitva
+
+  - key: hughes-rbr-showstoppers-2019
+    type: web-guide
+    authors: [Hughes J.]
+    credential: "John Hughes – amerikai ultra/randonneur edző, RoadBikeRider szerző, ex-UMCA igazgató"
+    year: 2019
+    title: "Showstoppers II: A Dozen Mistakes Endurance Cyclists Make"
+    venue: "roadbikerider.com, 2019-04-23 (mód. 2022-04-18)"
+    doi: null
+    url: https://www.roadbikerider.com/showstoppers-12-mistakes-endurance-cyclists/
+    grade: C
+    questions: [Q10]
+    summary: >-
+      Brevet-/hosszútávú edzői hibalista: legalább 200 kcal/óra, 300 jobb, és MINDEN órában; jó reggeli (semmi új),
+      főleg szénhidrát kevés fehérjével/zsírral; a szomjnak megfelelően igyál, nem többet – a túlivás hyponatraemiát
+      okozhat; semmi új az eseményen.
+    quote: >-
+      "You should eat at least 200 calories per hour and 300 calories hour is better." ... "Drink enough to satisfy
+      your thirst but not more."
+    notes: >-
+      Edzői ökölszabály (C), brevet-világ. Egybevág CTS-szel (200–300 kcal/h) és Dickson PBP-tanácsával.
+    status: url-megnyitva
+
+  - key: towers-substack-2026
+    type: web-article
+    authors: [Towers G.]
+    credential: "ultrakerékpáros versenyző és edző (Equilibrio Cycling), DotWatcher-szerző"
+    year: 2026
+    title: "How to build a scientific nutrition & pacing strategy for ultra cycling races"
+    venue: "gregortowers.substack.com, 2026-02-06"
+    doi: null
+    url: https://gregortowers.substack.com/p/how-to-build-a-scientific-nutrition
+    grade: C
+    questions: [Q10, Q7]
+    summary: >-
+      Versenyző-edző saját tervezése a 2 Volcano Sprintre (1232 km): a napi kalóriaégetés könnyen 10 000 fölött, a
+      versenyzők gyakran a testtömeg 10%-át veszítik; 224 W tartós teljesítményhez ~69 g CH/óra, 265 W-nál ~144 g/óra
+      (saját anyagcsere-becslés); teljes tervezett CH 3795 g; az első ~24 órára gél/szelet magával (agresszív rajt);
+      utána benzinkút a leghatékonyabb ellátópont; Haribo és Snickers „csúf, de működik"; palackban maltodextrin:
+      fruktóz 2:1; koffein „nem alku tárgya"; kreatin kísérleti; „a legjobb üzemanyag az, amit 30 óra mélyén is le tudsz
+      nyelni".
+    quote: >-
+      "224 watts is a sustainable long-duration power for me, provided I'm consuming roughly 69 grams of carbohydrate
+      per hour" ... "My best tip for resupply is to target petrol stations. They are usually the most time-efficient
+      option" ... "The best fuel is simply the fuel you can keep consuming when you're 30 hours deep"
+    notes: >-
+      n=1 versenyzői terv (C), a g/h számok egyéni modellből, nem mérésből. Önellátó ultrakerékpár. A 144 g/h
+      265 W-nál a wilson-2025-highcarb-review szerint nem bizonyítottan hasznos 90 g/h-hoz képest.
+    status: url-megnyitva
+
+  - key: wilcox-adventurecycling-2022
+    type: web-article
+    authors: [Killingbeck L., Wilcox L.]
+    credential: "Lael Wilcox – Tour Divide-, TransAm-, Silk Road-győztes, világkörüli rekorder; Adventure Cycling-interjú"
+    year: 2022
+    title: "Lael Wilcox talks Nutrition, Adventure Cycling, and the Joy of Riding"
+    venue: "adventurecycling.org blog, 2022-07-11"
+    doi: null
+    url: https://www.adventurecycling.org/blog/lael-wilcox-talks-nutrition-adventure-cycling-and-the-joy-of-riding/
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Wilcox boltos étkezése: kis piacokon spanyol tortilla (tojás-krumpli), olvadni hagyott fagylalt, korábban sok
+      tej és csokoládés tej, „bármilyen valódi étel – szendvics, hot dog, pizza"; a sportételek édessége miatt korán
+      belefárad az édesbe, sósat keres („egy zacskó chips elképesztően messzire visz"); italport és fehérje-turmixot
+      korlátozottan cipel, kólával egészíti ki; „vegyél több ételt, mint gondolnád", „úgy kell enni, mintha ez lenne a
+      munkád".
+    quote: >-
+      "Personally, I get pretty tired of sweet stuff early on, because a lot of sports food is sweet. So I'm often just
+      looking for something savory." ... "Amazing how far a bag of potato chips can get you!" ... "You have to eat like
+      it's your job!"
+    notes: >-
+      Versenyzői interjú (C), szám nincs. Önellátó ultrakerékpár, élversenyző. Az édes-fáradás/sós-igény egybevág
+      Sehilivel és a katonai „taste fatigue of sweets" megfigyeléssel.
+    status: url-megnyitva
+
+  - key: sehili-rawcycling-atlas
+    type: web-article
+    authors: [Sehili S.]
+    credential: "Sofiane Sehili – többszörös önellátó ultra-győztes (Italy Divide, Silk Road, Atlas Mountain Race); RAW Cycling Magazine-interjú"
+    year: 2020
+    title: "Sofiane Sehili, ultra-cycling in the Atlas"
+    venue: "rawcyclingmag.com"
+    doi: null
+    url: https://rawcyclingmag.com/sofiane-sehili-ultra-cycling-in-the-atlas/
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      Sehili az Atlas Mountain Race-en: nem áll meg kényelmes étkezésre, a biciklin eszik, gyorsan vesz vizet, üdítőt,
+      boltos élelmet; Marokkóban falvanként egy kis bolt, főleg édesség, süti, keksz – „ezen nem tudok menni", sósat
+      és diófélét kíván; kenyér és sajt (krémsajt) lett a sós alap; otthonról hozott kedvelt ételt, mert tudta, hogy
+      az ellátás gond lesz.
+    quote: >-
+      "I am not stopping for a comfortable meal, I eat on the bike. I resupply fast by taking some water, soda or
+      groceries." ... "I crave salty food and nuts, which I was not able to find. I ended up eating a sort of creamy
+      cheese."
+    notes: >-
+      Versenyzői interjú (C), szám nincs; a cikk dátuma a lapon nem egyértelmű (AMR 2020 körül). Önellátó, ritkás
+      ellátású terep. Sós-igény és „nem állok meg enni" – ellentét a Mäkipää/White „napi egy leülős étkezés" elvvel.
+    status: url-megnyitva
+
+  - key: pfeiffer-2012-gi-events
+    type: journal
+    authors: [Pfeiffer B., Stellingwerff T., Hodgson A.B., Randell R.K., Pöttgen K., Res P., Jeukendrup A.E.]
+    year: 2012
+    title: "Nutritional Intake and Gastrointestinal Problems during Competitive Endurance Events"
+    journal: "Medicine & Science in Sports & Exercise 44(2):344-351"
+    doi: 10.1249/MSS.0b013e31822dc809
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0b013e31822dc809
+    grade: B
+    questions: [Q10, Q11]
+    summary: >-
+      221 versenyző terepvizsgálata több eseménytípuson. Szénhidrátbevitel: Ironman Hawaii 62 ± 26, Ironman Németország
+      71 ± 25, 70.3 65 ± 25, maraton 53 ± 22 g/h. Súlyos GI-panasz: Ironman ~31%, kerékpáros versenyek 14%, maraton 4%,
+      profi kerékpár 7%. A felső GI-panaszok korreláltak a CH-bevitellel (r = 0,37–0,51); a magasabb CH-bevitel több
+      hányingerrel/puffadással, ugyanakkor jobb versenyidővel járt.
+    quote: >-
+      "Upper gastrointestinal distress correlated with CHO intake (r=0.37-0.51, P<0.001)" [OpenAlex-absztraktból
+      rekonstruált] ... GI-panasz Ironman ~31%, kerékpáros versenyek 14%, profi kerékpár 7% [absztraktból]
+    notes: >-
+      Klasszikus terepadat (B), nem ultra (max ~10–17 óra), a kiadói oldal (LWW) nem elérhető, absztrakt OpenAlexről.
+      Ultrakerékpárra irányadó: a magas CH-bevitel egyszerre teljesítmény-előny és GI-kockázat – ezért kell bél-edzés.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q11: CGM ultrán, AI-tervezők
+  - key: ishihara-2020-cgm-ultra
+    type: journal
+    authors: [Ishihara K., Uchiyama N., Kizaki S., Mori E., Nonaka T., Oneda H.]
+    year: 2020
+    title: "Application of Continuous Glucose Monitoring for Assessment of Individual Carbohydrate Requirement during Ultramarathon Race"
+    journal: "Nutrients 12(4):1121"
+    doi: 10.3390/nu12041121
+    url: https://www.mdpi.com/2072-6643/12/4/1121
+    grade: B
+    questions: [Q11]
+    summary: >-
+      7 ultramaratoni futó (4 férfi, 3 nő), 165 km, 7942 m szint, FreeStyle Libre (15 percenként). Glükóz 61,9–252,0
+      mg/dl között; az átlag a rajttól a célig 104 ± 15,0-ről 164 ± 30,5 mg/dl-re nőtt. Szénhidrátbevitel 0,27–1,14
+      g/kg/h (16,3–52,9 g/h), energia 1,41–5,40 kcal/kg/h. A szakaszonkénti glükóz pozitívan korrelált a futósebességgel
+      (p < 0,005), az energia- és CH-bevitel az összsebességgel (p < 0,01) – főleg férfiaknál.
+    quote: >-
+      "Observed glucose levels ranged between 61.9–252.0 mg/dL. Average glucose concentration differed from start to end
+      (104 ± 15.0 to 164 ± 30.5 SD mg/dL)." ... "Glucose concentration positively correlated with running speeds in
+      segments (P < 0.005)."
+    notes: >-
+      n=7 futó, megfigyeléses (B), nem kerékpár. Fontos: a verseny VÉGÉRE a glükóz nőtt (stressz-hormonális
+      hiperglikémia), tehát a CGM-érték nem egyszerűen „üzemanyagszint". Ultrakerékpárra irányadó.
+    status: ellenorizve-doi
+
+  - key: ishihara-2026-glucose-phases
+    type: journal
+    authors: [Ishihara K., Kosaka H., Taniguchi H., Kakizaki H.]
+    year: 2026
+    title: "Glucose dynamics during ultramarathon running: a multi-phase framework and implications for late-stage glucose elevations"
+    journal: "Frontiers in Sports and Active Living (mini review)"
+    doi: 10.3389/fspor.2026.1843846
+    url: https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2026.1843846/full
+    grade: C
+    questions: [Q11]
+    summary: >-
+      Háromfázisú keret az ultramaratoni glükózdinamikára: (1) terhelés-indukált emelkedés, (2) elégtelen CH-bevitel
+      miatti csökkenés, (3) késői variabilitás és csúcsok – katekolamin/kortizol/glukagon és gyulladás okozta
+      inzulinrezisztencia miatt. A résztvevők >50%-a nem eszik többet 30 g CH/h-nál; a nagyobb egyénen belüli
+      glükóztartomány lassabb tempóval jár; késői fázisban már kis CH-bevitel is markáns glükózemelkedést ad.
+    quote: >-
+      "More than 50% of participants reportedly fail to consume more than 30 g/h of carbohydrates" ... "Greater
+      within-individual range of blood glucose levels has been associated with a slower running pace"
+    notes: >-
+      Mini review (C), futás. A CGM-érték értelmezésének kulcsa ultrán: a késői „magas" glükóz nem jó etetést, hanem
+      stresszválaszt jelezhet. Ultrakerékpárra (fesseler-2026-raam58 napról napra csökkenő glükóz) csak részben
+      átvihető.
+    status: ellenorizve-doi
+
+  - key: endurancebiz-2025-fuelin-ai
+    type: web-article
+    authors: [endurance.biz szerkesztőség]
+    credential: "iparági hírportál; a Fuelin (AI-alapú sporttáplálkozási app) sajtóközlése alapján"
+    year: 2025
+    title: "Fuelin launches AI-powered Smart Meals for endurance athlete nutrition"
+    venue: "endurance.biz, 2025-11-13"
+    doi: null
+    url: https://endurance.biz/2025/industry-news/fuelin-launches-ai-powered-smart-meals-for-endurance-athlete-nutrition/
+    grade: D
+    questions: [Q11]
+    summary: >-
+      A Fuelin AI-funkciója az edzésterhelés, makrocélok és célok alapján javasol étkezéseket (rendelkezésre álló
+      alapanyagból, étterem-menüből); világbajnok felhasználókra hivatkozik (Frodeno, Ryf, Lawrence), de a cikk
+      semmilyen validációs vizsgálatot, kontrollált tesztet vagy felhasználószámot nem közöl.
+    quote: >-
+      "AI-powered Smart Meals suggests tailored meal options based on an athlete's available ingredients, cuisine
+      preferences, or even local restaurant menus." [validáció: nincs idézve]
+    notes: >-
+      Gyártói közlés (D). Ultrakerékpáros verseny közbeni etetéstervezésre (útszakasz, bolt) egyik ismert app sem
+      publikált lektorált validációt (keresés: „AI fueling app validation study", „Hexis Fuelin peer-reviewed").
+    status: url-megnyitva
+
+  - key: wang-2025-ml-supplement
+    type: journal
+    authors: [Wang X., Wu H.]
+    year: 2025
+    title: "Data-augmented machine learning for personalized carbohydrate-protein supplement recommendation for endurance"
+    journal: "Scientific Reports 15"
+    doi: 10.1038/s41598-025-23989-7
+    url: https://www.nature.com/articles/s41598-025-23989-7
+    grade: D
+    questions: [Q11]
+    summary: >-
+      231 evezős próba, 46 bemeneti jellemző, WGAN-GP adat-augmentáció + XGBoost/SVR/MLP regresszió az evezett táv
+      előrejelzésére szénhidrát-fehérje kiegészítés függvényében; a legjobb modell R² = 0,53; a tréning–validáció
+      különbség túlillesztésre utal. A szerzők szerint a kis sportolói minták korlátozzák az ilyen modellek erejét.
+    quote: >-
+      "The XGBoost model, enhanced with WGAN-GP data augmentation, demonstrated the most robust performance, achieving a
+      strong predictive accuracy (R² = 0.53)." ... "A noticeable gap between CV training and validation performance
+      persisted across all models, suggesting overfitting tendencies remained."
+    notes: >-
+      Lektorált, de feltörekvő (D): evezés, labor, szintetikus adatokkal bővített minta, R² = 0,53. Ultrakerékpárra
+      nem átvihető; annyit mutat, hogy az „AI-etetéstervező" tudományos alapja ma még prediktív modellezési szinten
+      van.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q7: kalóriasűrűség
+  - key: watts-2015-bikepacking-trailfood
+    type: web-article
+    authors: [Watts L.]
+    credential: "bikepacking.com alapító-szerkesztő"
+    year: 2015
+    title: "Bikepacking Trail Food, High Calories"
+    venue: "bikepacking.com – gear"
+    doi: null
+    url: https://bikepacking.com/gear/bikepacking-trail-food/
+    grade: C
+    questions: [Q7]
+    summary: >-
+      Kalóriasűrűség-lista cipelhető ételekre: jó arány ~170 kcal/uncia (~5,7 kcal/g); mogyoróvaj-alapú „Trail Butter"
+      190 kcal/32 g (5,9 kcal/g), Larabar 230 kcal/48 g (4,8), Pro Bar 390 kcal/85 g (4,6), mandula 100 kcal/17 g (5,9),
+      Picky Bar ~200 kcal/40 g (5,0), Kind ~230 kcal/45 g (5,1). (kcal/g saját számítás a címkeadatokból.)
+    quote: >-
+      "170 calories per ounce (~30 grams)" ... "190 calories per 32g serving; that's 760 calories per 4oz soft pouch"
+    notes: >-
+      Termékcímke-alapú (C), amerikai termékek, 2015. Az általános boltos ételek (chips, Snickers, Haribo, banán, kenyér,
+      kóla) kcal/g értékei a bizonyítéktérkép kalkulátor-blokkjában általános címkeadatok – USDA-lekérdezés a proxy
+      429 miatt nem sikerült (DOI/URL nélkül, „nem ellenőrzött").
+    status: url-megnyitva
+
+  # ---------------------------------------------------------------- kiegészítő tételek (Q11 CGM-alapérték, nátrium-normatíva; Q7/Q10 ellátástervezés)
+  - key: bowler-2024-cgm-variability
+    type: journal
+    authors: [Bowler A.M., Burke L.M., Coffey V.G., Cox G.R.]
+    year: 2024
+    title: "Day-to-Day Glycemic Variability Using Continuous Glucose Monitors in Endurance Athletes"
+    journal: "Journal of Diabetes Science and Technology 19(6):1538-1545"
+    doi: 10.1177/19322968241250355
+    url: https://api.openalex.org/works/doi:10.1177/19322968241250355
+    grade: A
+    questions: [Q11]
+    summary: >-
+      12 elit gyalogló (7 férfi, 22,4 ± 3,5 év, VO2max 61,6 ± 7,3 ml/kg/perc), két 4 napos, standardizált magas
+      szénhidrátú és azonos edzésterhelésű blokk, FreeStyle Libre 2. 24 órás glükózvariabilitás: MAGE 36,0 ± 5,4 mg/dl,
+      MODD 12,6 ± 1,8 mg/dl; nappal 102,6 ± 5,7, éjjel 91,8 ± 5,1 mg/dl átlag. Az értékek a nem sportoló népesség
+      korábban közölt értékeihez hasonlók – az intenzív edzés és magas CH-bevitel ellenére.
+    quote: >-
+      "MAGE: 36.0±5.4 mg/dL" ... "MODD: 12.6±1.8 mg/dL" [OpenAlex-absztraktból rekonstruált]
+    notes: >-
+      Kontrollált labor-terep (A), gyaloglók, n=12, SAGE-oldal nem elérhető, absztrakt OpenAlexről. Ultrakerékpárra
+      referencia-tartományként használható: mekkora a „normális" napi CGM-ingadozás sportolónál (MODD ~13 mg/dl).
+    status: ellenorizve-doi
+
+  - key: baker-2016-sweat-normative
+    type: journal
+    authors: [Baker L.B., Barnes K.A., Anderson M.L., Passe D.H., Stofan J.R.]
+    year: 2016
+    title: "Normative data for regional sweat sodium concentration and whole-body sweating rate in athletes"
+    journal: "Journal of Sports Sciences 34(4):358-368"
+    doi: 10.1080/02640414.2015.1055291
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2015.1055291
+    grade: B
+    questions: [Q11]
+    summary: >-
+      506 sportoló (367 felnőtt, 139 fiatal; 404 férfi, 102 nő) retrospektív izzadságadatai 15–50 °C-on. Alkar
+      izzadság-nátrium 43,6 ± 18,2 (12,6–104,8) mmol/l; teljes test izzadásráta 1,21 ± 0,68 (0,26–5,73) l/h, azaz
+      15,3 ± 6,8 (3,3–69,7) ml/kg/h. Óriási egyéni szórás – ez az izzadásteszt-alapú személyre szabás érve.
+    quote: >-
+      "43.6 ± 18.2 (12.6-104.8) mmol·L⁻¹" ... "1.21 ± 0.68 (0.26-5.73) L·h⁻¹" [OpenAlex-absztraktból]
+    notes: >-
+      Gatorade (GSSI) szerzők – érdek; regionális (alkar) mérés, nem teljes test; T&F-oldal nem elérhető. Ultrakerékpárra:
+      az egyéni Na-veszteség 8-szoros tartományban mozog (12,6–104,8 mmol/l), tehát a „mindenkinek 500 mg/h" ökölszabály
+      (CTS) durva közelítés; ugyanakkor mccubbin-2024 szerint a 100%-os pótlás sem adott mérhető előnyt.
+    status: ellenorizve-doi
+
+  - key: dotwatcher-waypoints-2025
+    type: web-article
+    authors: [DotWatcher.cc szerkesztőség]
+    credential: "DotWatcher.cc – önellátó ultrakerékpáros versenykövető és -magazin; versenyzői tapasztalatok"
+    year: 2025
+    title: "Exploring Waypoints: Planning Efficiently"
+    venue: "dotwatcher.cc feature, 2025-09-05"
+    doi: null
+    url: https://dotwatcher.cc/feature/exploring-waypoints-planning-efficiently
+    grade: C
+    questions: [Q10, Q7]
+    summary: >-
+      Ellátás-tervezés útszakaszonként: az útvonal szakaszokra bontása és POI-k (ellátópont, benzinkút, vízforrás)
+      felvitele Ride with GPS-ben; az ellátópont helye a szintprofilon (emelkedő alja/teteje) számít; cél a „nem túl- és
+      nem alulvásárlás" minden benzinkútnál; egy versenyző 387 km-en át „fejben számolt" élelemre/vízre a hiányos
+      tervezés miatt, más egy 100 km-es „élelem-sivatagba" futott tudtán kívül. Nyitvatartásról és éjszakai stratégiáról
+      nem szól.
+    quote: >-
+      "I used Ride with GPS to split the route into the sections I wanted and to add all my POIs, which I use for
+      resupply points, petrol stations, and water sources." ... "I spent 387km having to do maths every time I needed
+      food or water"
+    notes: >-
+      Versenyzői gyakorlat (C), szám kevés. Önellátó bikepacking. Egybevág white-ridefar-food (bolt-nyitvatartás) és
+      towers-substack-2026 (benzinkút a leghatékonyabb) tanácsaival.
+    status: url-megnyitva
+
+  - key: lwcoaching-2008-24h-solo
+    type: web-guide
+    authors: [LW Coaching (Dave)]
+    credential: "LW Coaching – 24 órás szóló MTB-versenyző és edző (Lynda Wallenfels edzőcsapata)"
+    year: 2008
+    title: "Executing your first 24 solo, part 1 (nutrition)"
+    venue: "lwcoaching.com, 2008-11-18"
+    doi: null
+    url: https://lwcoaching.com/executing-your-first-24-solo-part-1-nutrition/
+    grade: C
+    questions: [Q7, Q10]
+    summary: >-
+      24 órás szóló MTB box-etetés: cél 250–300 kcal/óra – ha ennyit nem tudsz enni, túl gyors a tempó (tempómérő);
+      zsebben hámozott, darabolt banán; folyadék: EFS + víz; legalább kétszer leülni enni (18–20 óra és 4–7 óra
+      között), 10–15 perc; éjjel jön a kis zsírtartalmú szilárd étel igénye (sózott krumplipüré); körönként kevés
+      fehérje; hőségben V8-lé az elektrolitokért; éjjel a Pepsi néha rendbe teszi a gyomrot; „energiaválságból" 3
+      instant zabkása + kávé; éjjel koffein az éberségért és a bringakezelésért.
+    quote: >-
+      "As a general goal, I aim for 250-300 calories each hour." ... "Eating that much is a challenge if your pace is
+      too high – use that as one of your pacing gauges." ... "My favorites are salted mashed potatoes."
+    notes: >-
+      Edzői/versenyzői tapasztalat (C), 2008, n=1. Közvetlenül 24 órás box-formátum. Az „evési nehézség = túl gyors
+      tempó" elv egybevág a CTS „lassíts, ha hányingered van" tanácsával; a 250–300 kcal/h az önellátó/brevet
+      ökölszabályokkal (200–300) azonos, a kísérős RAAM 500 kcal/h-nál alacsonyabb.
+    status: url-megnyitva

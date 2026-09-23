@@ -1,0 +1,787 @@
+# 03. modul – Táplálkozás és hidratálás – B csomag (Q4: a bél edzése és GI-panaszok; Q5: hidratálás és nátrium)
+# Készült: 2026-09-23. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex / PubMed oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   thurber-2019-alimentary, hulton-2010-raam-energy, geesmann-2014-1230km, black-2012-384km, goulet-2011-dehydration-meta,
+#   montain-1992-dehydration, jeukendrup-2014-personalized, periard-2021-heat-review, racinais-2015-heat-consensus,
+#   muller-precisionhydration-2017, fesseler-2026-raam58, tiller-2019-issn-ultra
+# Megjegyzés: a legtöbb absztrakt az OpenAlex abstract_inverted_index-ből rekonstruált (kiadói oldal 403); az idézetek
+#   szórendje az indexből áll össze, ezért a "notes" mezőben "absztraktból (OpenAlex-rekonstrukció)" jelölés szerepel.
+sources:
+  # ---------------------------------------------------------------- Q4: a bél edzése, GI-panaszok
+  - key: costa-2017-guttraining
+    type: journal
+    authors: [Costa R.J.S., Miall A., Khoo A., Rauch C., Snipe R., Camões-Costa V., Gibson P.]
+    year: 2017
+    title: "Gut-training: the impact of two weeks repetitive gut-challenge during exercise on gastrointestinal status, glucose availability, fuel kinetics, and running performance"
+    journal: "Applied Physiology, Nutrition, and Metabolism 42(5):547-557"
+    doi: 10.1139/apnm-2016-0453
+    url: https://api.openalex.org/works/doi:10.1139/apnm-2016-0453
+    grade: A
+    questions: [Q4]
+    summary: >-
+      A Costa-munkacsoport alap "gut training" RCT-je: 25 állóképességi futó, 2 hetes napi "bélkihívás" (edzés közben
+      30 g CHO 20 percenként = 90 g/h, 2:1 glükóz:fruktóz gél, vagy ugyanennyi CHO ételként, vagy placebo). A gél-csoportban
+      a GI-tünetek 60%-kal (p=0,008), az étel-csoportban 63%-kal (p=0,046) csökkentek a 2. tesztre; a kilégzett H2-csúcs
+      (felszívódási zavar markere) 6 ppm (gél) vs. 9 (étel) vs. 12 ppm (placebo). Vércukor gélnél 7,2 vs. 6,1–6,2 mmol/l.
+      1 órás távteszt: +5,2% (gél), +4,3% (étel), -2,1% (placebo), trial×time p=0,009.
+    quote: >-
+      "Gastrointestinal symptoms reduced in GC2 CHO-S (60%; p = 0.008) and CHO-F (63%; p = 0.046); reductions were greater
+      than PLA (p < 0.05)."
+    notes: >-
+      n=25, futók, laboratóriumi (2 h 60% VO2max + 1 h teszt). Absztraktból (OpenAlex-rekonstrukció), a cdnsciencepub
+      oldal 403-at adott. A 90 g/h a kerékpáros ultra-céltartomány alsó fele; a futás mechanikai terhelése miatt a
+      kerékpárosnál a tüneti nyereség lehet kisebb, de a felszívódási adaptáció (SGLT1) sportfüggetlen. 2 hét elég a
+      mérhető tüneti javuláshoz – a "gut training" gyakorlati alapja.
+    status: ellenorizve-doi
+
+  - key: miall-2018-gutchallenge
+    type: journal
+    authors: [Miall A., Khoo A., Rauch C., Snipe R.M.J., Camões-Costa V.L., Gibson P.R., Costa R.J.S.]
+    year: 2018
+    title: "Two weeks of repetitive gut-challenge reduce exercise-associated gastrointestinal symptoms and malabsorption"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 28(2):630-640"
+    doi: 10.1111/sms.12912
+    url: https://api.openalex.org/works/doi:10.1111/sms.12912
+    grade: A
+    questions: [Q4]
+    summary: >-
+      Placebo-kontrollált, vak gut-training vizsgálat 18 futóval: 2 hét, napi 90 g CHO/h (vs. 0 g/h placebo) edzés közben.
+      A CHO-csoportban csökkent a bél-diszkomfort (p=0,012), az összes GI-tünet (p=0,009), a felső (p=0,015) és alsó
+      (p=0,008) GI-tünetek és a hányinger (p=0,05); a kilégzett H2-csúcs 6±3 ppm vs. placebo 13±6 ppm (p=0,004).
+      A záró 1 órás futótáv 11,7±1,5 → 12,3±1,3 km (p=0,035) csak a CHO-csoportban nőtt.
+    quote: >-
+      "In GC 2, a reduced gut discomfort (P=.012), total (P=.009), upper-(P=.015), lower-gastrointestinal (P=.008)
+      symptoms, nausea (P=.05) observed on CHO but not PLA."
+    notes: >-
+      n=18, futók, labor. Absztraktból (OpenAlex-rekonstrukció, Wiley 403). Az étkezési tolerancia (feeding tolerance)
+      nem változott – azaz a "mennyit tudok lenyelni" nem, a "mennyire zavar" és "mennyi szívódik fel" igen.
+      Ultrakerékpárra a 90 g/h-s edzésprotokoll közvetlenül átvihető (hosszú alapozó tekeréseken).
+    status: ellenorizve-doi
+
+  - key: costa-2017-eigs-review
+    type: journal
+    authors: [Costa R.J.S., Snipe R.M.J., Kitic C.M., Gibson P.R.]
+    year: 2017
+    title: "Systematic review: exercise-induced gastrointestinal syndrome—implications for health and intestinal disease"
+    journal: "Alimentary Pharmacology & Therapeutics 46(3):246-265"
+    doi: 10.1111/apt.14157
+    url: https://api.openalex.org/works/doi:10.1111/apt.14157
+    grade: A
+    questions: [Q4]
+    summary: >-
+      Szisztematikus áttekintés (5 adatbázis) az "exercise-induced gastrointestinal syndrome" (EIGS) mechanizmusairól:
+      az intenzitás és időtartam növekedésével nő a bélsérülés és -permeabilitás, romlik a gyomorürülés, lassul a
+      vékonybél-tranzit és nő a felszívódási zavar. Küszöb: ≥2 óra 60% VO2max-on, edzettségtől függetlenül. A hőstressz
+      és a futó mozgásforma súlyosbítja. 396 hivatkozás (OpenAlex).
+    quote: >-
+      "Exercise ≥2 hours at 60% VO2max appears to be the threshold whereby significant gastrointestinal perturbations
+      manifest, irrespective of fitness status."
+    notes: >-
+      Mechanisztikus alap (splanchnikus vérátáramlás-csökkenés → epithel-sérülés → permeabilitás/endotoxin; neuroendokrin
+      ág → gyomorürülés/tranzit lassulás). "Running mode" súlyosbító: kerékpáron a mechanikai komponens kisebb, a
+      keringési/hő komponens azonos. Absztraktból (OpenAlex-rekonstrukció).
+    status: ellenorizve-doi
+
+  - key: jeukendrup-2017-trainingthegut
+    type: journal
+    authors: [Jeukendrup A.E.]
+    year: 2017
+    title: "Training the Gut for Athletes"
+    journal: "Sports Medicine 47(Suppl 1):101-110"
+    doi: 10.1007/s40279-017-0690-6
+    url: https://link.springer.com/article/10.1007/s40279-017-0690-6
+    grade: C
+    questions: [Q4]
+    summary: >-
+      Narratív áttekintés a bél adaptálhatóságáról. A GI-panaszok az állóképességi sportolók 30–50%-ánál rendszeresek.
+      Öt "gut training" stratégia: (1) magas napi CHO-bevitel (Cox 2010: 28 nap 8,5 vs. 5,3 g/kg/nap → nagyobb exogén
+      CHO-oxidáció kerékpárosoknál), (2) rendszeres CHO-bevitel edzés közben, (3) gyomortérfogat-tolerancia edzése
+      (nagy folyadék/étel mennyiség edzés közben), (4) verseny-szimuláció a tervezett menüvel, (5) többféle CHO
+      (glükóz:fruktóz). Cunningham: 3 napi 400 g glükóz → gyomor fél-ürülési idő 29,1 → 20,7 perc.
+    quote: >-
+      "It is clear that 'nutritional training' can improve gastric emptying and absorption and likely reduce the chances
+      and/or severity of GI problems, thereby improving endurance performance as well as providing a better experience
+      for the athlete."
+    notes: >-
+      Narratív (C fokozat), de a hivatkozott alapvizsgálatok (Cox 2010 kerékpáros; Cunningham 1991) mért adatok. A
+      kerékpáros ultrára a leginkább átvihető: a Cox-vizsgálat kerékpárosokon készült. Az adaptáció időskálája (2 hét vs.
+      4 hét) nyitott kérdés a cikk szerint is.
+    status: ellenorizve-doi
+
+  - key: pfeiffer-2012-gi-endurance-events
+    type: journal
+    authors: [Pfeiffer B., Stellingwerff T., Hodgson A.B., Randell R.K., Pöttgen K., Res P., Jeukendrup A.E.]
+    year: 2012
+    title: "Nutritional Intake and Gastrointestinal Problems during Competitive Endurance Events"
+    journal: "Medicine & Science in Sports & Exercise 44(2):344-351"
+    doi: 10.1249/MSS.0b013e31822dc809
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0b013e31822dc809
+    grade: B
+    questions: [Q4]
+    summary: >-
+      221 állóképességi versenyző (Ironman Hawaii, Ironman Németország, 70.3, maraton, 100/150 km-es országúti
+      kerékpárverseny, profi kerékpárosok szakaszversenyen) verseny utáni kérdőíve. CHO-bevitel: IM 62±26 és 71±25 g/h,
+      70.3 65±25, maraton 53±22, kerékpárverseny 35±26 g/h; egyéni szórás 6–136 g/h. Súlyos GI-tünet: IM ~31%, 70.3 14%,
+      maraton 4%, profi kerékpáros 7%. A felső GI-tünetpontszám korrelált a CHO-bevitellel (r=0,37 és 0,51), de a
+      nagyobb CHO-bevitel jobb IM-időt is jelentett.
+    quote: >-
+      "Prevalence of serious GI symptoms was highest during IM races (~31%, P=0.001) compared with 70.3 (14%), marathon
+      (4%), and PRO (7%), and correlated with a history of GI problems."
+    notes: >-
+      n=221, vegyes sportok, terep-kérdőív (0–9-es skála, "súlyos" = ≥5). Absztraktból (OpenAlex-rekonstrukció). A
+      kerékpáros alcsoportokban (amatőr 100/150 km, profi szakaszverseny) alacsony a prevalencia, a versenyidő is
+      rövid (<8 h); ultrakerékpárra a tartamhatás miatt csak alsó becslés. A "GI-előzmény" a legerősebb prediktor.
+    status: ellenorizve-doi
+
+  - key: stuempfle-2015-wser-gi
+    type: journal
+    authors: [Stuempfle K.J., Hoffman M.D.]
+    year: 2015
+    title: "Gastrointestinal distress is common during a 161-km ultramarathon"
+    journal: "Journal of Sports Sciences 33(17):1814-1821"
+    doi: 10.1080/02640414.2015.1012104
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2015.1012104
+    grade: B
+    questions: [Q4]
+    summary: >-
+      Western States 161 km, 272 futó (a rajtolók 71%-a) verseny utáni kérdőíve 12 GI-tünetről négy versenyszakaszban.
+      GI-tünet 96,0%-nál; leggyakoribb: puffadás/szél 65,9%, böfögés 61,3%, hányinger 60,3%. A célba érők 43,9%-ánál a
+      GI-tünet rontotta a teljesítményt (ebből hányinger 86,0%); a feladók 35,6%-ánál a GI-panasz volt a feladás oka
+      (hányinger 90,5%). A tünetek a legmelegebb, legnehezebb szakaszon tetőztek.
+    quote: >-
+      "Among non-finishers, 35.6% cited GI distress as their reason for dropping out, with nausea (90.5%) most prevalent."
+    notes: >-
+      n=272, futás, terep-kérdőív (retrospektív). Absztraktból (OpenAlex-rekonstrukció). Ultrafutó adat; kerékpáron a
+      mechanikai rázkódás kisebb, de a hő + tartam + hányinger-mint-feladási-ok mintázat a RAAM-beszámolókkal egybevág.
+    status: ellenorizve-doi
+
+  - key: martinez-2025-mallorca312
+    type: journal
+    authors: [Martínez P., Martínez S., Mingorance J.A., Riera-Sampol A., Aguiló A., Tauler P.]
+    year: 2025
+    title: "Gastrointestinal symptoms and nutritional intake among participants in a non-professional cycling event"
+    journal: "European Journal of Applied Physiology 125(1):37-48"
+    doi: 10.1007/s00421-024-05582-4
+    url: https://link.springer.com/article/10.1007/s00421-024-05582-4
+    grade: B
+    questions: [Q4]
+    summary: >-
+      Mallorca 312 (2023; 167/225/312 km-es távok), 247 amatőr kerékpáros verseny előtt, 138 utána. GI-tünet edzésen és
+      korábbi versenyeken 22–26%, a versenyen 38,4% (közepes/súlyos 13,8%), a verseny után 28,3%. Leggyakoribb: szelesség
+      25,4%, böfögés 23,2%, puffadás 15,2%. Átlagos bevitel: 59,2 g CHO/h, ~500 ml folyadék/h, ~285 kcal/h. Az intake és a
+      GI-tünetek között nem volt összefüggés; a nyugalmi GI-tünetek és a rajt előtti idegesség jelezte előre a tüneteket.
+    quote: >-
+      "No association was found between GI symptoms and nutritional parameters"
+    notes: >-
+      Kerékpáros terepadat (a legközelebb az ultrakerékpárhoz: 312 km, ~10–14 h). n=138 a versenyutáni mintában; kérdőíves.
+      Az idézet a Springer-oldal absztraktjából. Tanulság: 60 g/h és 500 ml/h mellett a kerékpáros GI-panasz inkább
+      egyéni hajlam/szorongás, mint a bevitel függvénye – a bél edzése és a rutin számít.
+    status: ellenorizve-doi
+
+  - key: vanwijck-2012-ibuprofen
+    type: journal
+    authors: [van Wijck K., Lenaerts K., van Bijnen A.A.J.H.M., Boonen B., van Loon L.J.C., Dejong C.H.C., Buurman W.A.]
+    year: 2012
+    title: "Aggravation of Exercise-Induced Intestinal Injury by Ibuprofen in Athletes"
+    journal: "Medicine & Science in Sports & Exercise 44(12):2257-2262"
+    doi: 10.1249/MSS.0b013e318265dd3d
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0b013e318265dd3d
+    grade: A
+    questions: [Q4, Q5]
+    summary: >-
+      Kontrollált keresztezett vizsgálat, 9 edzett férfi, 4 kar: 2×400 mg ibuprofen + kerékpározás; kerékpározás;
+      ibuprofen nyugalomban; nyugalom. Az I-FABP csúcs (vékonybél-sérülés markere): 875±137 (ibuprofen+kerékpár) vs.
+      474±74 (kerékpár) vs. 507±103 (ibuprofen nyugalomban) vs. 352±44 pg/ml. Bélpermeabilitás (laktulóz/ramnóz):
+      0,08 vs. 0,04 vs. 0,05 vs. 0,01. Az ibuprofen tehát nyugalomban is sérülést okoz, edzéssel együtt megduplázza.
+    quote: >-
+      "peak I-FABP, 875 ± 137 ... 474 ± 74 ... 507 ± 103 ... 352 ± 44 pg·mL, respectively."
+    notes: >-
+      n=9, kerékpáros ergométer, labor. Absztraktból (OpenAlex-rekonstrukció). Kerékpározás volt a terhelési forma –
+      közvetlenül átvihető. Ultrán az NSAID-használat (nyereg-, térd-, nyakfájdalom) a GI-sérülés és – a Q5-ben – a
+      hyponatraemia kockázatát is emeli.
+    status: ellenorizve-doi
+
+  - key: snipe-2018-heat-gi
+    type: journal
+    authors: [Snipe R.M.J., Khoo A., Kitic C.M., Gibson P.R., Costa R.J.S.]
+    year: 2018
+    title: "The impact of exertional-heat stress on gastrointestinal integrity, gastrointestinal symptoms, systemic endotoxin and cytokine profile"
+    journal: "European Journal of Applied Physiology 118(2):389-400"
+    doi: 10.1007/s00421-017-3781-z
+    url: https://link.springer.com/article/10.1007/s00421-017-3781-z
+    grade: A
+    questions: [Q4]
+    summary: >-
+      10 futó, 2 h 60% VO2max 35 °C-on vs. 22 °C-on. Maghőmérséklet-emelkedés 2,4±0,8 vs. 1,4±0,5 °C. I-FABP-emelkedés
+      432% (hő) vs. 127% (mérsékelt), p<0,001. GI-tünet előfordulás 90% vs. 70%, a tünet-súlyosság 720 vs. 58 pont
+      (p=0,008) – a hő tehát a GI-tünetek intenzitását ~12-szeresére emelte ugyanannál a terhelésnél.
+    quote: >-
+      "Exertional-heat stress induces a thermoregulatory strain that subsequently injures the intestinal epithelium,
+      reduces endotoxin clearance capacity, promotes greater cytokinaemia, and development of gastrointestinal symptoms."
+    notes: >-
+      n=10, futás, labor, kontrollált. A hő-GI kapcsolat a kerékpáros ultrára (nyári RAAM-sivatag, TCR-Balkán) közvetlenül
+      releváns. Számok a Springer absztraktból.
+    status: ellenorizve-doi
+
+  - key: mlinaric-2025-gi-strategies-sr
+    type: journal
+    authors: [Mlinaric J., Mohorko N.]
+    year: 2025
+    title: "Nutritional strategies for minimizing gastrointestinal symptoms during endurance exercise: systematic review of the literature"
+    journal: "Journal of the International Society of Sports Nutrition 22(1)"
+    doi: 10.1080/15502783.2025.2529910
+    url: https://api.openalex.org/works/doi:10.1080/15502783.2025.2529910
+    grade: A
+    questions: [Q4]
+    summary: >-
+      PRISMA szisztematikus áttekintés, 29 vizsgálat (RCT, keresztezett, esettanulmány) öt területen: gut-training
+      protokollok, CHO-keverékek, low-FODMAP diéta, hidrogél-CHO, probiotikum. Következtetés: a gut-training ígéretes;
+      az ajánlás szerinti CHO-bevitel kevesebb és enyhébb GI-tünettel jár; a low-FODMAP csökkentheti a tüneteket, de
+      restriktív; a hidrogél "jelenleg nem mutat előnyt a standard CHO-termékekhez képest"; a probiotikum vegyes.
+    quote: >-
+      "Hydrogel carbohydrate products, at present, do not demonstrate any benefits over standard carbohydrate products."
+    notes: >-
+      Csak PubMed, 2023. jan.–márc. keresés; a beválogatott vizsgálatok többsége futó/kerékpáros labor. Absztraktból
+      (OpenAlex-rekonstrukció, T&F 403). A hidrogél-következtetés ellentmond Rowe 2022-nek (l. rowe-2022-hydrogel).
+    status: ellenorizve-doi
+
+  - key: rowe-2022-hydrogel
+    type: journal
+    authors: [Rowe J.T., King R.F.G.J., King A.J., Morrison D.J., Preston T., Wilson O.J., O'Hara J.P.]
+    year: 2022
+    title: "Glucose and Fructose Hydrogel Enhances Running Performance, Exogenous Carbohydrate Oxidation, and Gastrointestinal Tolerance"
+    journal: "Medicine & Science in Sports & Exercise 54(1):129-140"
+    doi: 10.1249/MSS.0000000000002764
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000002764
+    grade: A
+    questions: [Q4]
+    summary: >-
+      11 edzett férfi futó, randomizált kettős vak: 120 perc 68% VO2max + 5 km időfutam, 90 g/h 2:1 glükóz:fruktóz
+      hidrogélként vs. sima oldatként vs. CHO-mentes placebo. Időfutam: hidrogél 7,6%, sima oldat 5,6% gyorsabb a
+      placebónál; hidrogél 2,1%-kal gyorsabb a sima oldatnál (p=0,033). Exogén CHO-oxidáció 68,6±10,8 g (hidrogél) vs.
+      63,4±8,1 g. Az összes GI-tünet magasabb volt a sima oldatnál (p<0,001).
+    quote: >-
+      "Time-trial performance was 7.6% and 5.6% faster after hydrogel (19:29±2:24, P<0.001) and nonhydrogel
+      (19:54±2:23, P=0.002), respectively, versus placebo (21:05±2:34). Hydrogel was 2.1% faster than nonhydrogel (P=0.033)."
+    notes: >-
+      n=11, futás, labor; ez a hidrogél-irodalom kevés pozitív vizsgálata (kerékpáros vizsgálatok – Baur 2019, King 2020,
+      McCubbin 2020 – nem mutattak előnyt). Absztraktból (OpenAlex-rekonstrukció). Ultrakerékpáron a hidrogél előnye
+      legfeljebb a magas (≥90 g/h) beviteli szinten, futáshoz hasonló rázkódás nélkül még kevésbé valószínű.
+    status: ellenorizve-doi
+
+  - key: deoliveira-2014-gi-complaints
+    type: journal
+    authors: [de Oliveira E.P., Burini R.C., Jeukendrup A.]
+    year: 2014
+    title: "Gastrointestinal Complaints During Exercise: Prevalence, Etiology, and Nutritional Recommendations"
+    journal: "Sports Medicine 44(Suppl 1):79-85"
+    doi: 10.1007/s40279-014-0153-2
+    url: https://link.springer.com/article/10.1007/s40279-014-0153-2
+    grade: C
+    questions: [Q4]
+    summary: >-
+      Narratív áttekintés: az állóképességi sportolók 30–50%-a (távfutóknál 30–90%) tapasztal GI-panaszt; a tünetek
+      futóknál gyakoribbak, mint kerékpárosoknál (mechanikai ok). Maximális terhelésnél a splanchnikus vérátáramlás akár
+      80%-kal csökken. Kockázati tényezők: dehidráció (gyomorürülés romlik), >500 mOsm/l ital, rost, zsír, fehérje,
+      fruktóz, NSAID (ibuprofen). Ajánlás: rostszegény étkezés a verseny előtt, NSAID kerülése, hidráltan rajtolni,
+      alacsonyabb CHO-koncentráció, a versenytáplálkozás begyakorlása.
+    quote: >-
+      "During maximal exercise, splanchnic blood flow may be reduced by up to 80 %"
+    notes: >-
+      Narratív (C), de a leggyakrabban idézett ok-lista; a számok másodlagosak (a review hivatkozásaiból). Kerékpárra a
+      "kevesebb mechanikai tünet" közvetlenül vonatkozik; ultrán viszont a tartam + hő + NSAID + ozmolaritás dominál.
+    status: ellenorizve-doi
+
+  - key: pasternak-2021-ondansetron
+    type: journal
+    authors: [Pasternak A.V., Fiore D., Islas A., Toti S., Hoffman M.D.]
+    year: 2021
+    title: "Treatment with Oral Ondansetron for Ultramarathon-Associated Nausea: The TOO FUN Study"
+    journal: "Sports 9(3):35"
+    doi: 10.3390/sports9030035
+    url: https://www.mdpi.com/2075-4663/9/3/35
+    grade: A
+    questions: [Q4]
+    summary: >-
+      Randomizált, kettős vak: 62 hányingerre hajlamos ultrafutó (160/80/55 km, 2018–19) 4 mg ondanszetron vs. placebo
+      kapszulát vett be tünet esetén (max. 4 adag). 31-en használták (20 ondanszetron, 11 placebo): nem volt különbség a
+      javulás gyakoriságában (p=0,26) vagy mértékében (p=0,15). A bevezetés szerint a hányinger az ultrafutók akár 60%-át
+      érinti, és a 161 km-es feladás elsődleges oka.
+    quote: >-
+      "In this small study, there were no group differences in those reporting any improvement in nausea and vomiting
+      (p = 0.26) or in the amount of improvement (p = 0.15). We found no evidence that ondansetron capsules improve nausea
+      and vomiting during ultramarathons."
+    notes: >-
+      Kis minta (n=31 használó), futás, terep-RCT. Kiadói oldal (MDPI). Gyógyszeres hányinger-kezelésre ultrán nincs
+      pozitív bizonyíték; a diszkusszió a magasabb zsír-arány és folyadékbevitel (Stuempfle 2013) védő hatását említi.
+    status: ellenorizve-doi
+
+  - key: stuempfle-2013-racediet-gi
+    type: journal
+    authors: [Stuempfle K.J., Hoffman M.D., Hew-Butler T.]
+    year: 2013
+    title: "Association of Gastrointestinal Distress in Ultramarathoners With Race Diet"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 23(2):103-109"
+    doi: 10.1123/ijsnem.23.2.103
+    url: https://api.openalex.org/works/doi:10.1123/ijsnem.23.2.103
+    grade: B
+    questions: [Q4, Q5]
+    summary: >-
+      Javelina Jundred 161 km, 15 futó (10 férfi, 5 nő), körönként mért testtömeg és interjú a bevitelről. 9 futónál
+      GI-panasz (hányinger 89%, hasi görcs 44%, hasmenés/hányás 22%). A panaszmentesek folyadékbevitele 10,9±3,2 vs.
+      5,9±1,6 ml/kg/h (p=0,001), zsírbevitele 0,06±0,03 vs. 0,03±0,01 g/kg/h (p=0,01), zsír-energiaarány 16,5±2,6 vs.
+      11,1±5,0% (p=0,03). Az alacsonyabb folyadékbevitel már a tünetek megjelenése ELŐTT látszott.
+    quote: >-
+      "Fluid consumption rate was higher (p = .001) in runners without GI distress (10.9 ± 3.2 ml·kg⁻¹·hr⁻¹) than those
+      with GI distress (5.9 ± 1.6 ml·kg⁻¹·hr⁻¹)."
+    notes: >-
+      n=15, futás, terep; asszociáció, nem okság. Absztraktból (OpenAlex-rekonstrukció; a zsír-számok irányát az
+      ondanszetron-cikk diszkussziója erősíti meg: a több zsírt és folyadékot fogyasztók kevésbé hányingeresek).
+      A "kevés folyadék → hányinger" egy 75 kg-os kerékpárosnál ~450 vs. 820 ml/h-nak felel meg.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q5: hidratálás, nátrium, hyponatraemia
+  - key: baker-2016-sweat-normative
+    type: journal
+    authors: [Baker L.B., Barnes K.A., Anderson M.L., Passe D.H., Stofan J.R.]
+    year: 2016
+    title: "Normative data for regional sweat sodium concentration and whole-body sweating rate in athletes"
+    journal: "Journal of Sports Sciences 34(4):358-368"
+    doi: 10.1080/02640414.2015.1055291
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2015.1055291
+    grade: B
+    questions: [Q5]
+    summary: >-
+      506 sportoló (404 férfi, 102 nő; csapatsportok + kerékpár/futás/triatlon) retrospektív izzadásteszt-adatbázisa,
+      15–50 °C-os környezetben, alkar-tapasz módszerrel. Alkar-izzadás [Na+] 43,6±18,2 (12,6–104,8) mmol/l; egésztest-
+      becslés (y=0,57x+11,05) 35,9±10,4 (18,2–70,8) mmol/l. Egésztest-izzadásráta 1,21±0,68 (0,26–5,73) l/h, illetve
+      15,3±6,8 (3,3–69,7) ml/kg/h. Az egyéni tartomány tehát ~8-szoros izzadásrátában és ~6-szoros nátriumban.
+    quote: >-
+      "Forearm sweat [Na+] was 43.6 ± 18.2 (12.6–104.8) mmol·L⁻¹ and 35.9 ± 10.4 (18.2–70.8) mmol·L⁻¹, respectively.
+      Absolute and relative whole-body sweating rates were 1.21 ± 0.68 (0.26–5.73) L·h⁻¹ and 15.3 ± 6.8 (3.3–69.7) ml·kg⁻¹·h⁻¹"
+    notes: >-
+      Gatorade Sports Science Institute adatbázis (gyártói kutatóhely, de lektorált folyóirat). Vegyes sportok; kerékpáros
+      alcsoport külön nem bontva ebben a cikkben. Absztraktból (OpenAlex-rekonstrukció). Kalkulátor-alap: 1 mmol Na+ =
+      23 mg; 36 mmol/l ≈ 830 mg/l, 18–71 mmol/l ≈ 410–1630 mg/l.
+    status: ellenorizve-doi
+
+  - key: barnes-2019-sweat-by-sport
+    type: journal
+    authors: [Barnes K.A., Anderson M.L., Stofan J.R., Dalrymple K.J., Reimel A.J., Roberts T.J., Randell R.K., Ungaro C.T., Baker L.B.]
+    year: 2019
+    title: "Normative data for sweating rate, sweat sodium concentration, and sweat sodium loss in athletes: An update and analysis by sport"
+    journal: "Journal of Sports Sciences 37(20):2356-2366"
+    doi: 10.1080/02640414.2019.1633159
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2019.1633159
+    grade: B
+    questions: [Q5]
+    summary: >-
+      1303 sportoló (2000–2017) sportáganként bontva. Egésztest-izzadásráta: amerikai futball 1,51±0,70 l/h, állóképességi
+      (kerékpár/futás/triatlon) 1,28±0,57 l/h, kosárlabda 0,95, foci 0,94, baseball 0,83 l/h. Óránkénti nátriumveszteség:
+      am. futball 55,9±36,8 mmol/h, állóképességi 51,7±27,8 mmol/h (≈1190±640 mg/h), kosár 34,6, foci 34,5, baseball 27,2.
+      A különbségek ANCOVA-korrekció után is megmaradtak.
+    quote: >-
+      "American football showing highest WBSR (1.51±0.70 L/h), followed by endurance (1.28±0.57 L/h) ... For RSSL, American
+      football demonstrated greatest values (55.9±36.8 mmol/h) and endurance (51.7±27.8 mmol/h)"
+    notes: >-
+      Az "állóképességi" csoport meleg/edzés-versenykörülmények vegyesen; az 1,28 l/h edzésintenzitáson mért, ultrán
+      (alacsonyabb intenzitás, éjszaka) ennél alacsonyabb az átlag. Absztraktból (OpenAlex-rekonstrukció). A ±1 SD sáv
+      (0,7–1,85 l/h; 24–80 mmol/h ≈ 550–1830 mg Na/h) a kalkulátor "tipikus tartománya".
+    status: ellenorizve-doi
+
+  - key: baker-2017-sweat-methodology
+    type: journal
+    authors: [Baker L.B.]
+    year: 2017
+    title: "Sweating Rate and Sweat Sodium Concentration in Athletes: A Review of Methodology and Intra/Interindividual Variability"
+    journal: "Sports Medicine 47(Suppl 1):111-128"
+    doi: 10.1007/s40279-017-0691-5
+    url: https://link.springer.com/article/10.1007/s40279-017-0691-5
+    grade: C
+    questions: [Q5]
+    summary: >-
+      Módszertani áttekintés az izzadástesztekről. Az egésztest-izzadásráta tipikusan ~0,5–2,0 l/h (ritkán >3 l/h); a lokális
+      (tapasz) izzadás-[Na+] ~10–90 mmol/l, az egésztest-[Na+] ~10–70 mmol/l. A tapasz-módszer túlbecsüli az egésztest-értéket
+      (helyfüggő mértékben), ezért regressziós korrekció kell. A testtömeg-mérleg módszer korrekciói: folyadékbevitel, vizelet,
+      légzési + metabolikus tömegveszteség (együtt ~5–15%, több órás terhelésnél lényeges), ruhában maradt izzadság (8–10%
+      alábecslés). Hőakklimatizáció és edzettség: korábbi kezdet, nagyobb izzadás-válasz; az izzadásráta az intenzitással
+      arányos.
+    quote: >-
+      "WBSR typically ranges from approximately 0.5 to approximately 2.0 L/h"; "Local sweat [Na+] typically ranges from
+      approximately 10 to approximately 90 mmol/L" while "whole-body sweat [Na+] is approximately 10–70 mmol/L."
+    notes: >-
+      Narratív módszertani review (C), de a számok a szerző saját nagy adatbázisából (Baker 2016). A gyakorlati
+      izzadásteszt (mérleg + tapasz) protokollja innen vehető; a többórás korrekció (légzési/metabolikus 5–15%) ultrán
+      nem elhanyagolható.
+    status: ellenorizve-doi
+
+  - key: hewbutler-2017-eah-update
+    type: journal
+    authors: [Hew-Butler T., Loi V., Pani A., Rosner M.H.]
+    year: 2017
+    title: "Exercise-Associated Hyponatremia: 2017 Update"
+    journal: "Frontiers in Medicine 4:21"
+    doi: 10.3389/fmed.2017.00021
+    url: https://www.frontiersin.org/articles/10.3389/fmed.2017.00021/full
+    grade: C
+    questions: [Q5]
+    summary: >-
+      A 2015-ös konszenzus (Hew-Butler 2015, Clin J Sport Med 25:303) szerzőinek frissítése. Definíció: vér-[Na+] <135 mmol/l.
+      Prevalencia: maraton/félmaraton 5% (n=161, rajt előtt) és 8% (n=192, cél után); Ironman 11% (n=1089); ultramaraton 67%
+      (n=15, verseny közben mérve); állóképességi kerékpárosok 6% (n=33). Igazolt halálesetek: középiskolás futballisták,
+      katona, egy rendőr 19 km-es kerékpártúrán, egyetemista tornán. Kockázat: hipotóniás folyadék túlfogyasztása,
+      testtömeg-gyarapodás, hosszú tartam, NSAID (AVP-stimuláció). Ajánlás: szomjúság szerinti ivás; tüneti EAH kezelése
+      100 ml 3%-os NaCl 10 percenként a tünetek oldódásáig.
+    quote: >-
+      "the most individualized hydration strategy before, during, and immediately following exercise is to drink fluids
+      when thirsty"
+    notes: >-
+      Narratív frissítés (C), de a 2015-ös konszenzus-állásfoglalás (A) tartalmát összegzi; a prevalencia-számok
+      másodlagosak (a review hivatkozásaiból). A 6%-os kerékpáros adat az Armstrong-kohorsz (l. armstrong-2017-eh-cycling).
+      A 19 km-es kerékpáros haláleset mutatja: nem a táv, hanem a túlivás öl.
+    status: ellenorizve-doi
+
+  - key: chlibkova-2014-24h-mtb-eah
+    type: journal
+    authors: [Chlíbková D., Knechtle B., Rosemann T., Žákovská A., Tomášková I.]
+    year: 2014
+    title: "The prevalence of exercise-associated hyponatremia in 24-hour ultra-mountain bikers, 24-hour ultra-runners and multi-stage ultra-mountain bikers in the Czech Republic"
+    journal: "Journal of the International Society of Sports Nutrition 11:3"
+    doi: 10.1186/1550-2783-11-3
+    url: https://jissn.biomedcentral.com/articles/10.1186/1550-2783-11-3
+    grade: B
+    questions: [Q5]
+    summary: >-
+      Négy cseh ultra (két 24 órás MTB, egy 24 órás futás, egy többnapos MTB), 53 célba érő. EAH cél után 3/53 (5,7%):
+      24 h MTB 1/27 (3,7%), 24 h futás 1/12 (8,3%), többnapos MTB 1/14 (7,1%); a három eset plazma-[Na+] 129–134 mmol/l.
+      Folyadékbevitel: 24 h MTB 0,49±0,15 és 0,55±0,19 l/h, 24 h futás 0,58±0,38 l/h, többnapos 0,43±0,3 l/h. Testtömeg:
+      -2,0 kg (2,7%), -1,3 kg (1,9%), -0,9 kg (1,4%), 1. szakasz után -1,6 kg (2,1%). A 24 h MTB-n a többet ivók jobb
+      helyezést értek el (p=0,04; p=0,01).
+    quote: >-
+      "Of the 53 finishers, three (5.7%) developed post-race EAH"; "0.49 (0.15) l/h during the 24-hour MTB race"
+    notes: >-
+      Kerékpáros ultra-terepadat (24 h MTB), n=27 MTB-s. Kiadói oldal (BMC). A ~0,5 l/h bevitel és a -2–3% testtömeg
+      a 24 órás kerékpáros ultra "normális" tartománya; az EAH ritka, de nem nulla. A "többet ivók gyorsabbak" összefüggés
+      a több munka → több izzadás → több ivás irányát is tükrözheti.
+    status: ellenorizve-doi
+
+  - key: black-2014-387km-fluid
+    type: journal
+    authors: [Black K.E., Skidmore P., Brown R.C.]
+    year: 2014
+    title: "Fluid balance of cyclists during a 387-km race"
+    journal: "European Journal of Sport Science 14(S1):S421-S428"
+    doi: 10.1080/17461391.2012.711860
+    url: https://api.openalex.org/works/doi:10.1080/17461391.2012.711860
+    grade: B
+    questions: [Q5]
+    summary: >-
+      18 kerékpáros egy 387 km-es (új-zélandi) versenyen, vér- és vizeletminta rajt előtt/után, izzadás-tapasz, testtömeg.
+      Átlagos folyadékbevitel 0,58 l/h. A célban 7/18 (39%) kerékpárosnak volt ≤135 mmol/l a vér-[Na+]-ja (legalacsonyabb
+      132 mmol/l); csak 2 kerékpáros volt mérsékelten dehidrált. A kérdőív szerint a többség a dehidrációtól tartott,
+      nem a hyponatraemiától.
+    quote: >-
+      "Upon completion of 7 of 18 (39%) cyclists had blood sodium concentrations 135 mmol L⁻¹ or lower with one cyclist
+      recording a value of 132 mmol L⁻¹. Only two cyclists appeared to be moderately dehydrated."
+    notes: >-
+      Ugyanaz a kohorsz, mint black-2012-384km (energiabevitel). Absztraktból (OpenAlex-rekonstrukció). Kulcs ultrakerékpáros
+      terepadat: 16 órás versenyen az enyhe hyponatraemia (≤135) gyakoribb volt (39%), mint a dehidráció (11%) –
+      a "sokat inni" reflex kockázatosabb, mint a szomjúság.
+    status: ellenorizve-doi
+
+  - key: armstrong-2017-eh-cycling
+    type: journal
+    authors: [Armstrong L.E., Lee E.C., Casa D.J., Johnson E.C., Ganio M.S., McDermott B.P., Vingren J.L., Oh H.M., Williamson K.H.]
+    year: 2017
+    title: "Exertional Hyponatremia and Serum Sodium Change During Ultraendurance Cycling"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 27(2):139-147"
+    doi: 10.1123/ijsnem.2016-0135
+    url: https://api.openalex.org/works/doi:10.1123/ijsnem.2016-0135
+    grade: B
+    questions: [Q5]
+    summary: >-
+      164 km-es nyári (34±5 °C) hobbi-kerékpáros túra, 33 versenyző. Két hyponatraemiás eset (130 mmol/l): mindketten
+      ~190 ml/kg folyadékot ittak (≈14 l egy 75 kg-osnál 9–10,6 óra alatt, ≈1,4 l/h), -11 mmol/l Na-esés, alacsony
+      szomjúságérzet; az egyik +3,1 kg (+4,3%), a másik ±0 kg. A teljes kohorszban a cél utáni szérum-[Na+] a teljes
+      folyadékbevitellel (R²=0,45), a nátriumbevitellel (R²=0,28) és a testtömeg-változással (R²=0,22) korrelált.
+      Regressziós EAH-küszöb: 168 ml folyadék/kg. Szérum-Na-változás tartománya +6 – -11 mmol/l.
+    quote: >-
+      "In the entire cohort (n = 33), post-event serum sodium was strongly correlated with total fluid intake (R² = 0.45,
+      p <.0001) ... Linear regression analyses predicted the threshold for EAH onset as 168 ml fluid/kg."
+    notes: >-
+      Kerékpáros terepadat, hőségben, n=33; a Hew-Butler 2017 "6% kerékpáros" forrása. Absztraktból (OpenAlex-rekonstrukció).
+      Kalkulátor-korlát: 168 ml/kg összbevitel ≈ 12,6 l/75 kg egy 9–10 órás melegnapon; efölött nő az EAH-esély. A
+      testtömeg-tartás (±0) mellett is lehet EAH – a mérleg önmagában nem véd.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q4 kiegészítés: formátum, FODMAP
+  - key: guillochon-2017-format-cycling
+    type: journal
+    authors: [Guillochon M., Rowlands D.S.]
+    year: 2017
+    title: "Solid, Gel, and Liquid Carbohydrate Format Effects on Gut Comfort and Performance"
+    journal: "International Journal of Sport Nutrition and Exercise Metabolism 27(3):247-254"
+    doi: 10.1123/ijsnem.2016-0211
+    url: https://api.openalex.org/works/doi:10.1123/ijsnem.2016-0211
+    grade: A
+    questions: [Q4]
+    summary: >-
+      12 jól edzett férfi kerékpáros, randomizált keresztezett: 140 perces verseny-szimuláció + rámpateszt, 80 g CHO/h
+      (fruktóz+maltodextrin) italként, gélként, szeletként vagy vegyesen; folyadék 705 ml/h. Csúcsteljesítmény: ital 370,
+      gél 376, szelet 362, vegyes 368 W. A szelet a gélhez képest -3,9% (90% CI ±4,3; ártalom-valószínűség 81%), és
+      kis-közepes mértékben több hányingert, gyomorteltséget, hasi görcsöt és nagyobb erőkifejtés-érzetet okozott; ital
+      és gél között nem volt különbség.
+    quote: >-
+      "The reduction in power (-3.9%; 90%CI ±4.3) following bar ingestion vs. gel was likely substantial (likelihood harm
+      81.2%; benefit 0.8%), but no clear differences between drinks, gels, evident."
+    notes: >-
+      Kerékpáros labor, n=12, intenzív (nem ultra-intenzitású) protokoll. Absztraktból (OpenAlex-rekonstrukció, a szórend
+      helyenként sérült). Ultrán, alacsony intenzitáson a szilárd étel toleranciája jobb (Stuempfle 2013: a több zsírt evők
+      kevésbé hányingeresek), ezért a "szelet rosszabb" eredmény csak a tempós szakaszokra vihető át.
+    status: ellenorizve-doi
+
+  - key: lis-2018-lowfodmap
+    type: journal
+    authors: [Lis D.M., Stellingwerff T., Kitic C.M., Fell J.W., Ahuja K.D.K.]
+    year: 2018
+    title: "Low FODMAP: A Preliminary Strategy to Reduce Gastrointestinal Distress in Athletes"
+    journal: "Medicine & Science in Sports & Exercise 50(1):116-123"
+    doi: 10.1249/MSS.0000000000001419
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000001419
+    grade: A
+    questions: [Q4]
+    summary: >-
+      11 hobbi-versenyző futó (5 férfi, 6 nő) GI-panasz-előzménnyel, randomizált egyszeres vak keresztezett: 6 nap alacsony
+      vs. magas FODMAP-diéta, közben 5×1000 m és 7 km-es küszöbfutás. A napi GI-tünetek görbe alatti területe kisebb volt
+      low-FODMAP-on (különbség -13,4; 95% CI -22 – -4,6; p=0,003): kevesebb szelesség (p<0,001), székelési inger (p=0,04),
+      laza széklet (p=0,03), hasmenés (p=0,004). Az edzés KÖZBENI tünetekben nem volt különbség (p>0,05).
+    quote: >-
+      "A significantly smaller area under the curve was observed for 6 d during low FODMAP compared with high FODMAP (mean
+      difference, -13.4; 95% confidence interval, -22 to -4.60; P = 0.003)."
+    notes: >-
+      n=11, futók, rövid (6 nap). Absztraktból (OpenAlex-rekonstrukció). A low-FODMAP a verseny előtti 1–3 nap
+      "rostszegény" előkészítésének bizonyítéka; az edzés közbeni tüneteket nem csökkentette – ultrán a versenymenü
+      (gélek, sportitalok: fruktóz, poliolok) FODMAP-tartalma a kritikus, nem a napi étrend.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q5 kiegészítés: nátrium, görcs, EAH-kockázat, kalkulátor
+  - key: delcoso-2016-salt-halfironman
+    type: journal
+    authors: [Del Coso J., González-Millán C., Salinero J.J., Abián-Vicén J., Areces F., Lledó M., Lara B., Gallo-Salazar C., Ruiz-Vicente D.]
+    year: 2016
+    title: "Effects of oral salt supplementation on physical performance during a half-ironman: A randomized controlled trial"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 26(2):156-164"
+    doi: 10.1111/sms.12427
+    url: https://api.crossref.org/works/10.1111/sms.12427
+    grade: A
+    questions: [Q5]
+    summary: >-
+      26 tapasztalt triatlonista, randomizált, kontrollált, valódi félironman-versenyen: só-kapszula (összesen 113 mmol Na+
+      ≈ 2,6 g nátrium ≈ 6,6 g konyhasó, a verseny előtt/alatt elosztva) vs. cellulóz placebo. A só-csoport versenyideje
+      rövidebb volt (p=0,04); a testtömeg-csökkenés tendenciájában kisebb (p=0,09); cél utáni szérum-Na+ és Cl- magasabb
+      (p=0,03); izzadásveszteség és izzadás-[Na+] nem különbözött; az erő- és ugrásteszt-romlás azonos.
+    quote: >-
+      "Total race time was lower in the salt group than control (P = 0.04). ... Sweat loss was similarly reduced in both
+      groups (P = 0.98)."
+    notes: >-
+      Absztraktból (OpenAlex-rekonstrukció + Crossref); a versenyidő-különbség mértékét (percben) az absztrakt nem közli –
+      "DOI ellenőrizve, a hatásméret nem". Ez az egyetlen terep-RCT, amely nátriumpótlásra teljesítményelőnyt mutat;
+      ~5–6 órás, meleg verseny, ~20 mmol Na/h dózis. Ultrán (20–100+ h) nincs hasonló vizsgálat.
+    status: ellenorizve-doi
+
+  - key: veniamakis-2022-sodium-review
+    type: journal
+    authors: [Veniamakis E., Kaplanis G., Voulgaris P., Nikolaidis P.T.]
+    year: 2022
+    title: "Effects of Sodium Intake on Health and Performance in Endurance and Ultra-Endurance Sports"
+    journal: "International Journal of Environmental Research and Public Health 19(6):3651"
+    doi: 10.3390/ijerph19063651
+    url: https://www.mdpi.com/1660-4601/19/6/3651
+    grade: C
+    questions: [Q5]
+    summary: >-
+      Narratív áttekintés nátrium és állóképesség/ultra témában. Izzadásráta 0,3–2,4 l/h, átlagos izzadás-nátrium ~1 g/l
+      (50 mmol/l). Ajánlás hosszú terhelésre 300–600 mg Na/h; sportital 10–30 mmol/l (230–690 mg/l) az optimális
+      felszívódáshoz. A nátrium–izomgörcs (EAMC) kapcsolatra "nincs dokumentált tudományos bizonyíték"; a görcs
+      leggyakoribb oka a szokásosnál nagyobb relatív intenzitás/tartam. A verseny alatti nátriumbevitel mérsékli a
+      vér-Na-esést, de túlivás mellett nem előzi meg az EAH-t.
+    quote: >-
+      "there does not appear to be documented scientific evidence for the sodium–EAMC relationship." ... "Sodium intake
+      during a race can mitigate the drop in blood sodium concentrations, it cannot prevent EAH under conditions of
+      excessive fluid intake."
+    notes: >-
+      Narratív (C), MDPI; a számok másodlagosak. A 300–600 mg/h és a 230–690 mg/l tartomány a kalkulátor
+      "alap-ajánlás" sávja; az 1 g/l "átlag" a Baker-adatbázis 0,83 g/l-énél magasabb (tapasz vs. egésztest különbség).
+    status: ellenorizve-doi
+
+  - key: hoffman-2015-sodium-eah-wser
+    type: journal
+    authors: [Hoffman M.D., Stuempfle K.J.]
+    year: 2015
+    title: "Sodium Supplementation and Exercise-Associated Hyponatremia during Prolonged Exercise"
+    journal: "Medicine & Science in Sports & Exercise 47(9):1781-1787"
+    doi: 10.1249/MSS.0000000000000599
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000000599
+    grade: B
+    questions: [Q5]
+    summary: >-
+      Western States 161 km (≤30 h): 376 rajtoló 74,5%-a kérdőív, 296 célba érő 61,1%-a vérminta. EAH a célba érők 6,6%-ánál;
+      a futók 93,9%-a használt nátriumpótlást. A cél utáni szérum-Na gyengén korrelált a nátriumbevitel ütemével (r=0,24,
+      p=0,0027) és fordítottan a testtömeg-változással (r=-0,19). A hyponatraemiás és normonatraemiás célba érők
+      nátriumbevitele NEM különbözött; egy hyponatraemiás sem vesztett >4,3% testtömeget. Következtetés: 30 órán belül az
+      alacsony nátriumbevitel alig felelős az EAH-ért, a túlhidratálás az elsődleges ok.
+    quote: >-
+      "There was no difference in rate of sodium intake between hyponatremic and normonatremic finishers, and none of the
+      hyponatremic finishers lost >4.3% body weight."
+    notes: >-
+      Futás, terep, n=181 vérminta. Absztraktból (OpenAlex-rekonstrukció). Kerékpáros ultrára a "sókapszula nem véd a
+      túlivás ellen" üzenet közvetlenül átvihető (l. black-2014: 39% ≤135 mmol/l 0,58 l/h mellett).
+    status: ellenorizve-doi
+
+  - key: hoffman-2015-cramping-wser
+    type: journal
+    authors: [Hoffman M.D., Stuempfle K.J.]
+    year: 2015
+    title: "Muscle Cramping During a 161-km Ultramarathon: Comparison of Characteristics of Those With and Without Cramping"
+    journal: "Sports Medicine – Open 1:24"
+    doi: 10.1186/s40798-015-0019-7
+    url: https://api.openalex.org/works/doi:10.1186/s40798-015-0019-7
+    grade: B
+    questions: [Q5]
+    summary: >-
+      Western States 161 km, 280 kérdőív, 181 vérminta. Görcs 26,8%, "közel-görcs" 14,3% (vádli 54%, comb elülső 44%, hátsó
+      33%). A görcsölők nagyobb eséllyel görcsöltek korábbi ultrán is (p<0,0001) és magasabb volt a CK-jük (p=0,001); a
+      testtömeg-változás, a nátriumpótlás, a nátriumbevitel üteme és a szérum-Na NEM különbözött a görcsölők és nem
+      görcsölők között.
+    quote: >-
+      "Weight change during race, sodium supplements, sodium intake rate, and serum sodium concentration did not differ
+      between those with and without muscle cramping."
+    notes: >-
+      Futás, terep, megfigyeléses. Absztraktból (OpenAlex-rekonstrukció). A "sóhiány = görcs" népi elmélet ellen szóló
+      legnagyobb ultra-terepadat; kerékpáron a görcs (comb, vádli) a relatív izomterheléssel és az izomsérüléssel függ össze.
+    status: ellenorizve-doi
+
+  - key: kenefick-2018-drinking-strategies
+    type: journal
+    authors: [Kenefick R.W.]
+    year: 2018
+    title: "Drinking Strategies: Planned Drinking Versus Drinking to Thirst"
+    journal: "Sports Medicine 48(Suppl 1):31-37"
+    doi: 10.1007/s40279-017-0844-6
+    url: https://link.springer.com/article/10.1007/s40279-017-0844-6
+    grade: C
+    questions: [Q5]
+    summary: >-
+      Narratív állásfoglalás a tervezett ivás mellett: a szomjúság a teljes rehidráció előtt megszűnik; ≥2% testtömeg-
+      veszteség rontja a hőszabályozást, emeli a kardiovaszkuláris terhelést és (melegben, hosszan, intenzíven) az aerob
+      teljesítményt. Tervezett ivás javasolt >90 perces, meleg, magas izzadásrátájú, teljesítmény-orientált helyzetben;
+      szomjúság szerinti ivás elég <60–90 perc, hűvös, alacsony intenzitás mellett. Szabály: soha ne igyál annyit, hogy
+      hízz; a cél a ±2% testtömeg-ablak.
+    quote: >-
+      "Dehydration of ≥ 2% body mass is associated with impaired thermoregulatory function, elevated cardiovascular strain
+      and, in many conditions (e.g., warmer, longer, more intense), impaired aerobic exercise performance."
+    notes: >-
+      Narratív (C), ellentétes a goulet-2011-dehydration-meta és a Hew-Butler-vonal "szomjúság szerint" ajánlásával
+      (a cikkhez Goulet és Valenzuela kommentárt írt). Ultrán a kettő összeegyeztetése: tervezett FELSŐ korlát (ne hízz)
+      + szomjúság mint alsó jelzés; többnapos, alváshiányos állapotban a szomjúságérzet megbízhatóságáról nincs adat.
+    status: ellenorizve-doi
+
+  - key: gauckler-2024-ultracycling-fluid
+    type: journal
+    authors: [Gauckler P., Kesenheimer J.S., Leierer J., Kruus M., Schreinlechner M., Theurl F., Bauer A., Denicolò S., Egger A., Seeber B., Mayer G., Kolbinger F.R., Kronbichler A.]
+    year: 2024
+    title: "Exercise-Induced Fluid Retention, Cardiac Volume Overload, and Peripheral Edema in Ultra-Distance Cyclists"
+    journal: "Kidney International Reports 9(1)"
+    doi: 10.1016/j.ekir.2023.10.025
+    url: https://www.sciencedirect.com/science/article/pii/S2468024923015668
+    grade: B
+    questions: [Q5]
+    summary: >-
+      13 ultrakerékpáros (5 nő, 8 férfi) 6 napos, önellátó túrán (átlag 1205 km, 19 417 m szint). Testtömeg stabil (-0,26%,
+      n.s.), de teljes testvíz +1,98±1,37 l (p=0,003), plazmatérfogat +18,9±10,7% (p<0,001), NT-proBNP +298±190 ng/l
+      (p<0,001), copeptin (AVP-marker) +38,3±18,9 pg/ml (p<0,001), szérum-Na +1,77±2,46 mmol/l (p=0,04). Arc/szemhéj-ödéma
+      az 5. napon tetőzött, boka/csukló-körfogat nőtt (p<0,001); vizelet-Na mélypont a 4. napon (RAAS + AVP aktiváció).
+      Két enyhe hyponatraemia (133–134) már a rajtnapon.
+    quote: >-
+      "Ultracycling over multiple days induces extracellular volume expansion, peripheral edema, and cardiac volume
+      overload. Renal sodium and water retention is likely contributing to this condition."
+    notes: >-
+      Többnapos ultrakerékpáros terepadat (TCR-típusú önellátó formátum), n=13. Absztraktból + eredménytáblából
+      (ScienceDirect). Kulcs: a stabil testtömeg NEM jelent stabil folyadékháztartást – a zsír/glikogén-vesztést a
+      visszatartott víz és só "pótolja", a mérleg félrevezet. Ezért a többnapos ultrán a testtömeg-alapú hidratálási cél
+      (±2%) csak az első napon értelmezhető.
+    status: ellenorizve-doi
+
+  - key: jay-2024-sweat-prediction-outdoor
+    type: journal
+    authors: [Jay O., Périard J.D., Clark B., Hunt L., Ren H., Suh H., Gonzalez R.R., Sawka M.N.]
+    year: 2024
+    title: "Whole body sweat rate prediction: outdoor running and cycling exercise"
+    journal: "Journal of Applied Physiology 136(6):1478-1487"
+    doi: 10.1152/japplphysiol.00831.2023
+    url: https://api.openalex.org/works/doi:10.1152/japplphysiol.00831.2023
+    grade: B
+    questions: [Q5]
+    summary: >-
+      Új, validált egésztest-izzadásráta-előrejelző modellek kültéri futásra és kerékpározásra egyszerű aktivitás-
+      (sebesség/teljesítmény, testtömeg) és környezeti (léghőmérséklet, páratartalom, szél, napsugárzás) bemenetekből;
+      ha nem áll rendelkezésre mind a négy környezeti paraméter, egyszerű skálával becsülhető. A modellek a
+      sweatratecalculator.com oldalon szabadon elérhetők; a szerzők szerint a kültéri kerékpározás egyéni
+      folyadékmenedzsmentjére alkalmasak.
+    quote: >-
+      "All models are freely accessible through an online calculator: https://sweatratecalculator.com. These models,
+      via calculator, will enable individualized hydration management for training and recreational outdoor running or
+      cycling in an outdoor environment."
+    notes: >-
+      A validációs számok (n, MAE l/h, R²) a rekonstruált absztraktban nem szerepelnek, a kiadói oldal 403 – "számok nem
+      ellenőrizve". A könyv kalkulátorához a legjobb kiindulás: a saját izzadásteszt helyett/mellett ezt a modellt
+      ajánljuk; a modell "proprietary", az egyenlet nem publikus.
+    status: ellenorizve-doi
+
+  - key: almond-2005-boston-eah
+    type: journal
+    authors: [Almond C.S., Shin A.Y., Fortescue E.B., Mannix R., Wypij D., Binstadt B.A., Duncan C., Olson D.P., Salerno A.E., Newburger J.W., Greenes D.S.]
+    year: 2005
+    title: "Hyponatremia among Runners in the Boston Marathon"
+    journal: "New England Journal of Medicine 352(15):1550-1556"
+    doi: 10.1056/NEJMoa043901
+    url: https://api.openalex.org/works/doi:10.1056/NEJMoa043901
+    grade: B
+    questions: [Q5]
+    summary: >-
+      2002-es Boston Maraton, 766 beválasztott, 488 használható vérminta: hyponatraemia (≤135 mmol/l) 13%, kritikus
+      (≤120) 0,6%. Egyváltozósan: testtömeg-gyarapodás, >3 l folyadék, >4 órás versenyidő, női nem, alacsony BMI.
+      Többváltozósan a testtömeg-gyarapodás (OR 4,2; 95% CI 2,2–8,2) és a >4:00 h versenyidő (OR 7,4; 2,9–23,1) maradt
+      szignifikáns.
+    quote: >-
+      "On multivariate analysis, weight gain (odds ratio 4.2; 95% CI 2.2–8.2) and racing time >4:00 hours (odds ratio 7.4;
+      95% CI 2.9–23.1) remained significant."
+    notes: >-
+      Klasszikus (2005), futás, n=488. Absztraktból (OpenAlex-rekonstrukció; a rekonstrukcióban a "3 liter" mondat
+      sérült, a szám az eredeti absztraktban "more than 3 liters of fluids" – nem ellenőrizve). A ">4 óra" és a
+      "hízás" kockázati tényező kerékpáros ultrán alapértelmezés: minden ultra >4 óra, ezért a túlivás az egyetlen
+      szabályozható változó.
+    status: ellenorizve-doi
+
+  - key: knechtle-2011-100km-eah
+    type: journal
+    authors: [Knechtle B., Knechtle P., Rosemann T.]
+    year: 2011
+    title: "Low prevalence of exercise-associated hyponatremia in male 100 km ultra-marathon runners in Switzerland"
+    journal: "European Journal of Applied Physiology 111(6):1007-1016"
+    doi: 10.1007/s00421-010-1729-7
+    url: https://link.springer.com/article/10.1007/s00421-010-1729-7
+    grade: B
+    questions: [Q5]
+    summary: >-
+      145 férfi 100 km-es ultrafutó (Biel): tünetmentes EAH 7 futónál (4,8%). Folyadékbevitel 0,65±0,30 l/h; a bevitel
+      fordítottan korrelált a versenyidővel (r=-0,50, p<0,0001), a cél utáni plazma-Na-val nem, a testtömeg-változással
+      igen. A testtömeg, hematokrit, hemoglobin csökkent, a plazmatérfogat nőtt, a plazma-Na nem változott.
+    quote: >-
+      "The athletes consumed 0.65 (0.30) L/h; fluid intake correlated significantly and negatively (r = −0.50, p < 0.0001)
+      to race time."
+    notes: >-
+      Futás, terep, n=145, csak férfi. Kiadói (Springer) absztrakt. A "többet ivók gyorsabbak" összefüggés
+      (Chlíbková 24 h MTB-vel egybehangzó) valószínűleg fordított okság: a gyorsabbak többet izzadnak. Az EAH itt
+      tünetmentes, csak vérvétellel derült ki.
+    status: ellenorizve-doi

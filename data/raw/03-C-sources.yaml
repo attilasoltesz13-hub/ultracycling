@@ -1,0 +1,750 @@
+# 03. modul – Táplálkozás és hidratálás – C csomag (Q6: koffein és más szerek, NSAID; Q8: hőség/hideg/magasság; Q9: verseny előtti és utáni táplálkozás)
+# Készült: 2026-09-23. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex / Europe PMC / Semantic Scholar oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   gardiner-2023-caffeine, centofanti-2020-caffeinenap, filtness-2026-caffeinenap, tiller-2019-issn-ultra, thurber-2019-alimentary,
+#   hulton-2010-raam-energy, geesmann-2014-1230km, black-2012-384km, purcell-2025-canada, hyldahl-2024-tourdivide, fesseler-2026-raam58,
+#   periard-2021-heat-review, racinais-2015-heat-consensus, ito-2013-rain-cold, montain-1992-dehydration, goulet-2011-dehydration-meta,
+#   jeukendrup-2014-personalized, podlogar-2022-newhorizons, maunder-2018-mfo, strasser-inscyd-2022, baron-2022-utmb-recovery, mckenzie-2026-tcr12-frozen
+sources:
+  # ---------------------------------------------------------------- Q6: koffein – adag, időzítés, genetika, ismételt kis adagok
+  - key: guest-2021-issn-caffeine
+    type: position-stand
+    authors: [Guest N.S., VanDusseldorp T.A., Nelson M.T., Grgic J., Schoenfeld B.J., Jenkins N.D.M., Arent S.M., Antonio J., Stout J.R., Trexler E.T., Smith-Ryan A.E., Goldstein E.R., Kalman D.S., Campbell B.I.]
+    year: 2021
+    title: "International society of sports nutrition position stand: caffeine and exercise performance"
+    journal: "Journal of the International Society of Sports Nutrition 18:1"
+    doi: 10.1186/s12970-020-00383-4
+    url: https://jissn.biomedcentral.com/articles/10.1186/s12970-020-00383-4
+    grade: A
+    questions: [Q6]
+    summary: >-
+      Az ISSN konszenzus-állásfoglalása a koffeinről. Hatásos adag 3–6 mg/kg; a leggyakoribb időzítés 60 perc a terhelés
+      előtt; alacsony adag (1–3 mg/kg) is mérhető ergogén hatású; nagyon nagy adag (9 mg/kg) sok mellékhatással jár és nem
+      szükséges. A koffein a fáradtság felhalmozódásakor (hosszú, folyamatos terhelés) a leghasznosabb, alváshiányban is javíthatja
+      a kognitív és fizikai teljesítményt egyeseknél. Az egyéni válaszkülönbség részben CYP1A2 és ADORA2A gén-variánsokhoz köthető.
+      Objektív alvásmérések szerint rontja az elalvási latenciát, az éjszakai ébrenlétet, az alváshatékonyságot és az alvásidőt.
+    quote: >-
+      "Caffeine appears to be most beneficial during times or in sports where there is an accumulation of fatigue, i.e., exercise
+      over a longer continuous or intermittent duration." / "Ingestion of lower doses of caffeine (1–3 mg/kg of body mass) ... also
+      appear to deliver measurable ergogenic effects."
+    notes: >-
+      Konszenzus, sok RCT-re épül, de a bizonyíték zöme <3 órás labor-terhelés; ultrára (20–100+ óra, alváshiány) csak extrapoláció.
+      A 4 hetes napi koffeinbevitel toleranciát növelt (hivatkozott [310] tanulmány, n=18) – ultrán ezért a verseny előtti hét
+      mérséklése észszerű, de ezt a stand nem ultrán vizsgálta. Kiadói teljes szöveg megnyitva.
+    status: ellenorizve-doi
+
+  - key: guest-2018-cyp1a2-cycling
+    type: journal
+    authors: [Guest N., Corey P., Vescovi J., El-Sohemy A.]
+    year: 2018
+    title: "Caffeine, CYP1A2 Genotype, and Endurance Performance in Athletes"
+    journal: "Medicine & Science in Sports & Exercise 50(8):1570-1578"
+    doi: 10.1249/MSS.0000000000001596
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1249/MSS.0000000000001596&resultType=core&format=json
+    grade: A
+    questions: [Q6]
+    summary: >-
+      101 versenyző férfi sportoló, 10 km-es kerékpáros időfutam, 0 / 2 / 4 mg/kg koffein, kettős vak, placebo-kontrollált.
+      Összességében a 4 mg/kg 3%-kal javította az időt (17,6 vs 18,1 perc), de erős gén–koffein interakció: AA genotípusnál
+      -4,8% (2 mg/kg) és -6,8% (4 mg/kg); AC genotípusnál semmi; CC ("lassú metabolizáló") genotípusnál a 4 mg/kg 13,7%-kal
+      RONTOTTA az időt (20,8 vs 18,3 perc, p=0,04).
+    quote: >-
+      "In those with the CC genotype, 4 mg·kg increased cycling time by 13.7% versus placebo (20.8 ± 0.8 vs 18.3 ± 0.5 min, P = 0.04).
+      No effects were observed among those with the AC genotype."
+    notes: >-
+      Absztraktból (Europe PMC REST). Rövid (~18 perc) időfutam, nem ultra; a CC-csoport kicsi volt (a 101-ből csak ~8%),
+      ezért a 13,7% romlás bizonytalan. A gyakorlati üzenet ultrára: aki koffeinre rosszul reagál (szorongás, GI, alvásképtelenség),
+      annak a kis adag (≤2 mg/kg) vagy elhagyás észszerű – genetikai teszt nélkül is tesztelhető edzésen.
+    status: ellenorizve-doi
+
+  - key: grgic-2021-cyp1a2-sr
+    type: journal
+    authors: [Grgic J., Pickering C., Del Coso J., Schoenfeld B.J., Mikulic P.]
+    year: 2021
+    title: "CYP1A2 genotype and acute ergogenic effects of caffeine intake on exercise performance: a systematic review"
+    journal: "European Journal of Nutrition 60:1181-1195"
+    doi: 10.1007/s00394-020-02427-6
+    url: https://link.springer.com/article/10.1007/s00394-020-02427-6
+    grade: A
+    questions: [Q6]
+    summary: >-
+      Szisztematikus áttekintés 17 tanulmányról a CYP1A2 −163C>A polimorfizmusról. Csak 4 tanulmány talált szignifikáns
+      genotípus-különbséget, mindegyik az AA javára; aerob állóképességnél ez férfi kerékpárosokra, ≥10 km-es időfutamra és
+      60 perccel a terhelés előtt bevett koffeinre korlátozódott. A szerzők szerint a genotípusok közti különbségek kicsik,
+      inkonzisztensek vagy csak specifikus helyzetekre korlátozódnak – mindkét genotípus-csoport profitálhat.
+    quote: >-
+      "CYP1A2 genotype variations may modulate caffeine's ergogenic effects, but the differences between genotypes were small,
+      inconsistent, or limited to specific exercise scenarios"
+    notes: >-
+      Kiadói absztrakt-oldal. Ellensúlyozza a guest-2018 eredményt: a gén-teszt nem indokolt rutinszerűen; ultrán a fő kérdés
+      nem az ergogén hatás, hanem a mellékhatás/alvás – erre a genotípus-irodalom nem ad választ.
+    status: ellenorizve-doi
+
+  - key: cox-2002-caffeine-protocols
+    type: journal
+    authors: [Cox G.R., Desbrow B., Montgomery P.G., Anderson M.E., Bruce C.R., Macrides T.A., Martin D.T., Moquin A., Roberts A., Hawley J.A., Burke L.M.]
+    year: 2002
+    title: "Effect of different protocols of caffeine intake on metabolism and endurance performance"
+    journal: "Journal of Applied Physiology 93(3):990-999"
+    doi: 10.1152/japplphysiol.00249.2002
+    url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1152/japplphysiol.00249.2002?fields=title,abstract,year,venue
+    grade: A
+    questions: [Q6]
+    summary: >-
+      Klasszikus labor-vizsgálat versenyző kerékpárosokkal (A-vizsgálat n=12, B-vizsgálat n=8): 2 óra 70% VO2peak, majd 7 kJ/kg
+      időfutam, szénhidráttal. Egy nagy adag 1 órával előtte (6 mg/kg): +3,4% (95% CI 0,2–6,5); 6×1 mg/kg 20 percenként a
+      terhelés alatt: +3,1% (−0,1–6,5); Coca-Cola az utolsó 40 percben (~1,5 mg/kg koffein): +3,1% (−0,2–6,2). B-vizsgálat:
+      a koffeines kóla +3,3%, a koffein önmagában +2,2% (0,5–3,8; p<0,05). Következtetés: a 6 mg/kg hatása független az időzítéstől,
+      és a kis, késői adag (~1,5 mg/kg) is elegendő.
+    quote: >-
+      "6 mg/kg caffeine enhanced TT performance independent of timing of intake and 2) replacing sports drink with Coca-Cola
+      during the latter stages of exercise was equally effective in enhancing endurance performance, primarily due to low intake
+      of caffeine (approximately 1.5 mg/kg)."
+    notes: >-
+      Absztrakt Semantic Scholar API-ból; ~2,5 órás terhelés, jól edzett kerékpárosok, nem ultra. Ez az alapja az "ismételt kis
+      adag" és a "kóla a végén" stratégiának – 20+ órás versenyre a fenntartható, alvást kímélő adagolás átvitele saját következtetés.
+    status: ellenorizve-doi
+
+  - key: bescos-2012-24h-relay
+    type: journal
+    authors: [Bescós R., Rodríguez F.A., Iglesias X., Knechtle B., Benítez A., Marina M., Padullés J.M., Torrado P., Vazquez J., Rosemann T.]
+    year: 2012
+    title: "Nutritional behavior of cyclists during a 24-hour team relay race: a field study report"
+    journal: "Journal of the International Society of Sports Nutrition 9:3"
+    doi: 10.1186/1550-2783-9-3
+    url: https://api.openalex.org/works/doi:10.1186/1550-2783-9-3
+    grade: B
+    questions: [Q6, Q9]
+    summary: >-
+      Terepvizsgálat, 8 férfi (36,7 év, 71,6 kg) 24 órás kerékpáros csapatváltó versenyen; minden étel/ital lemérve. 24 óra alatt
+      943 ± 245 g CH (13,1 g/kg), 174 g fehérje (2,4 g/kg), 107 g zsír; energiabevitel 22,8 ± 8,9 MJ vs. becsült kiadás 42,9 ± 6,8 MJ
+      (p=0,012). Folyadék 10,5 ± 2,7 l/24 h. Koffeinbevitel átlag 142 ± 76 mg/24 h (~2 mg/kg) – kicsi, és nem függött össze a
+      teljesítménnyel (távolság, sebesség).
+    quote: >-
+      "Average fluid consumption corresponded to 10497 ± 2654 mL. Mean caffeine ingestion 142 ± 76 mg. Additionally, there was no
+      relationship between the nutritional main variables (i.e. energy intake, carbohydrates, proteins, fluids and caffeine ingestion)
+      and performance"
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva. Váltóverseny (szakaszos terhelés, pihenők), n=8, megfigyeléses – a szóló ultrára
+      korlátozottan vihető át. Az egyetlen kerékpáros terepadat, ahol koffeinbevitelt is mértek: a versenyzők ténylegesen keveset
+      (~2 mg/kg/24 h) fogyasztottak.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q6: nitrát, bikarbonát
+  - key: senefeld-2020-nitrate-meta
+    type: journal
+    authors: [Senefeld J.W., Wiggins C.C., Regimbal R.J., Dominelli P.B., Baker S.E., Joyner M.J.]
+    year: 2020
+    title: "Ergogenic Effect of Nitrate Supplementation: A Systematic Review and Meta-analysis"
+    journal: "Medicine & Science in Sports & Exercise 52(10):2250-2261"
+    doi: 10.1249/MSS.0000000000002363
+    url: https://api.crossref.org/works/10.1249/MSS.0000000000002363
+    grade: A
+    questions: [Q6]
+    summary: >-
+      80 randomizált, placebo-kontrollált tanulmány metaanalízise. A nitrát összességében kis hatással javítja a teljesítményt
+      (d=0,174; p<0,001), de a hatás nem jelent meg jól edzett állóképességi sportolóknál (VO2max ≥65 ml/kg/perc; d=0,021) és
+      csak nőket vizsgáló tanulmányokban sem (d=0,116). A szerzők szerint kiváló aerob fittségnél korlátozott a haszna.
+    quote: >-
+      "not observed in well-trained endurance athletes (≥65 mL·kg⁻¹·min⁻¹; d = 0.021)" ... "limited utility as an ergogenic aid in
+      participants with excellent aerobic fitness."
+    notes: >-
+      Absztraktból (Crossref + Semantic Scholar). A vizsgált terhelések rövidek (perc–1 óra); ultrán nincs nitrát-adat. Üzenet:
+      céklalé-nitrát ultrán a legkevésbé alátámasztott szer; GI-kockázat és a nagy volumenű lé (500 ml/adag) a hosszú eseményen
+      inkább hátrány.
+    status: ellenorizve-doi
+
+  - key: grgic-2021-issn-bicarbonate
+    type: position-stand
+    authors: [Grgic J., Pedisic Z., Saunders B., Artioli G.G., Schoenfeld B.J., McKenna M.J., Bishop D.J., Kreider R.B., Stout J.R., Kalman D.S., Arent S.M., VanDusseldorp T.A., Lopez H.L., Ziegenfuss T.N., Burke L.M., Antonio J., Campbell B.I.]
+    year: 2021
+    title: "International Society of Sports Nutrition position stand: sodium bicarbonate and exercise performance"
+    journal: "Journal of the International Society of Sports Nutrition 18:61"
+    doi: 10.1186/s12970-021-00458-w
+    url: https://api.semanticscholar.org/graph/v1/paper/DOI:10.1186/s12970-021-00458-w?fields=title,abstract,year,venue,authors
+    grade: A
+    questions: [Q6]
+    summary: >-
+      ISSN állásfoglalás: a nátrium-bikarbonát ergogén hatása főleg a 30 mp–12 perces, nagy intenzitású feladatoknál igazolt;
+      minimális egyszeri adag 0,2 g/kg, optimális 0,3 g/kg, 60–180 perccel a terhelés előtt. Leggyakoribb mellékhatás: puffadás,
+      hányinger, hányás, hasi fájdalom. Ultra-távú, több órás terhelésre nincs bizonyíték.
+    quote: >-
+      Ergogenic effects are "mostly established for exercise tasks of high-intensity that last between 30 s and 12 min." ...
+      "The most common side-effects of sodium bicarbonate supplementation are bloating, nausea, vomiting, and abdominal pain."
+    notes: >-
+      Absztraktból (Semantic Scholar API; a Springer-oldal 429-cel elutasította). Ultrakerékpárra: irreleváns, sőt a GI-mellékhatás
+      miatt kontraindikált tartós terhelésen.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q6: NSAID – vese, GI, hyponatraemia
+  - key: lipman-2017-ibuprofen-aki
+    type: journal
+    authors: [Lipman G.S., Shea K., Christensen M., Phillips C., Burns P., Higbee R., Koskenoja V., Eifling K., Krabak B.J.]
+    year: 2017
+    title: "Ibuprofen versus placebo effect on acute kidney injury in ultramarathons: a randomised controlled trial"
+    journal: "Emergency Medicine Journal 34(10):637-642"
+    doi: 10.1136/emermed-2016-206353
+    url: https://emj.bmj.com/content/34/10/637
+    grade: A
+    questions: [Q6]
+    summary: >-
+      Kettős vak, placebo-kontrollált RCT sivatagi többnapos ultrafutó-versenyek 50 mérföldes (80 km) szakaszán, n=89.
+      Ibuprofen 400 mg 4 óránként vs. placebo. Akut vesekárosodás (kreatinin-emelkedés alapján) 52% ibuprofen vs. 34% placebo
+      (különbség 18%, 95% CI −4–41%); az ibuprofennél súlyosabb AKI-fokozat; NNH = 5,5. Az NSAID-ot az ultrafutók akár 75%-a használja.
+    quote: >-
+      "Greater severity of AKI was seen with ibuprofen compared with placebo" ... "Consideration should therefore be taken before
+      ingesting NSAID during endurance running as it could exacerbate renal injury."
+    notes: >-
+      Kiadói oldal (BMJ) + Crossref. Futók, hőség, sivatag, 80 km; a nem-inferioritás nem bizonyult, a CI átfedi a nullát, de a
+      trend és a súlyosság egyértelmű. Kerékpáron az izomkárosodás kisebb (nincs excentrikus terhelés), a dehidráció + hőség +
+      NSAID kombináció viszont ugyanúgy veseterhelő.
+    status: ellenorizve-doi
+
+  - key: kuster-2013-analgesics-marathon
+    type: journal
+    authors: [Küster M., Renner B., Oppel P., Niederweis U., Brune K.]
+    year: 2013
+    title: "Consumption of analgesics before a marathon and the incidence of cardiovascular, gastrointestinal and renal problems: a cohort study"
+    journal: "BMJ Open 3(4):e002090"
+    doi: 10.1136/bmjopen-2012-002090
+    url: https://bmjopen.bmj.com/content/3/4/e002090
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Kohorsz-kérdőív a 2010-es bonni maratonon: 3913 válaszadó a 7048 indulóból; 49% (n=1931) vett be fájdalomcsillapítót a rajt
+      előtt. A fájdalomcsillapítós csoportban közel 5× nagyobb volt a nemkívánatos események előfordulása (kockázatkülönbség 13%),
+      dózisfüggően; GI-panasz miatti feladás gyakoribb; 9 kórházi felvétel (3 átmeneti veseelégtelenség ibuprofen után, 4 vérzés
+      aszpirin után, 2 szívinfarktus), a kontrollcsoportban egy sem.
+    quote: >-
+      "analgesics cohort had an almost 5 times higher incidence of AEs (overall risk difference of 13%)" ... "Nine respondents
+      reported temporary hospital admittance: three for temporary kidney failure ... four with bleeds ... None of the control
+      reported hospital admittance"
+    notes: >-
+      Kiadói oldal (BMJ Open) + Crossref. Önbevallás, nem randomizált, maraton (nem ultra), de a legnagyobb minta a GI-vérzés/vese
+      kimenetekre. Az aszpirin-vérzés és az ibuprofen-vese jel különválik.
+    status: ellenorizve-doi
+
+  - key: wichardt-2011-nsaid-adventure
+    type: journal
+    authors: [Wichardt E., Mattsson C.M., Ekblom B., Henriksson-Larsén K.]
+    year: 2011
+    title: "Rhabdomyolysis/myoglobinemia and NSAID during 48 h ultra-endurance exercise (adventure racing)"
+    journal: "European Journal of Applied Physiology 111:1541-1544"
+    doi: 10.1007/s00421-010-1774-2
+    url: https://link.springer.com/article/10.1007/s00421-010-1774-2
+    grade: B
+    questions: [Q6, Q9]
+    summary: >-
+      Terepvizsgálat egy 48+ órás kalandversenyen (kerékpár, futás, kajak), 20 induló (3 nő, 17 férfi). Mioglobin jelentősen
+      emelkedett a verseny alatt; 6/20 (30%) használt NSAID-ot, náluk a verseny utáni mioglobin alacsonyabb volt, de a versenyidejük
+      hosszabb. A magas mioglobin a gyorsabb befejezéssel korrelált.
+    quote: >-
+      "a significant rise in Mb throughout the race, with the NSAID group (n = 6) having significantly lower Mb-Post than the
+      no-NSAID group (n = 14)" ... "Rhabdomyolysis with myoglobinemia, which might be reduced with NSAID use, exists during a
+      48+ h adventure race"
+    notes: >-
+      Kiadói absztrakt-oldal. Kis minta, nem randomizált (aki NSAID-ot vett, lassabb is volt – ok-okozat nem tisztázott).
+      Vegyes sportág, részben kerékpár; a mioglobin-csökkenés a vesevédelem szempontjából nem jelent biztonságot.
+    status: ellenorizve-doi
+
+  - key: emerson-2020-naproxen-heat
+    type: journal
+    authors: [Emerson D.M., Davis J.M., Chen S.C.L., Torres-McGehee T.M., Pfeifer C.E., Emerson C.C., Bivona J.D., Stone J.V.]
+    year: 2020
+    title: "A 24 hour naproxen dose on gastrointestinal distress and performance during cycling in the heat"
+    journal: "Sports Medicine and Health Science 2(1):19-24"
+    doi: 10.1016/j.smhs.2020.02.003
+    url: https://www.sciencedirect.com/science/article/pii/S2666337620300032
+    grade: A
+    questions: [Q6, Q8]
+    summary: >-
+      Kontrollált labor-vizsgálat, 11 önkéntes (6 férfi, 5 nő): 220 mg naproxen vagy placebo 8 óránként 24 órán át, majd
+      kerékpározás 22,7 °C-on és 35,7 °C-on, euhidráltan, mérsékelt intenzitással. Nem volt különbség GI-tünetekben, teljesítményben
+      (távolság), pulzusban, RPE-ben.
+    quote: >-
+      "A 24 h naproxen dose did not significantly affect performance or cause more frequent or serious GI distress when
+      participants were euhydrated and cycling at moderate intensity"
+    notes: >-
+      Kiadói oldal (ScienceDirect). Rövid terhelés, euhidrált állapot, kis n – ellenpont: az NSAID-ártalom a dehidráció + hőség +
+      hosszú terhelés kombinációhoz kötődik, nem magához a gyógyszerhez rövid távon.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q8: hőség – izzadás, gyomorürülés, étvágy, hűtés
+  - key: barnes-2019-sweat-normative
+    type: journal
+    authors: [Barnes K.A., Anderson M.L., Stofan J.R., Dalrymple K.J., Reimel A.J., Roberts T.J., Randell R.K., Ungaro C.T., Baker L.B.]
+    year: 2019
+    title: "Normative data for sweating rate, sweat sodium concentration, and sweat sodium loss in athletes: An update and analysis by sport"
+    journal: "Journal of Sports Sciences 37(20):2356-2366"
+    doi: 10.1080/02640414.2019.1633159
+    url: https://api.openalex.org/works/doi:10.1080/02640414.2019.1633159
+    grade: B
+    questions: [Q8]
+    summary: >-
+      1303 sportoló megfigyeléses izzadásteszt-adatbázisa (2000–2017, GSSI, standardizált tapasz-módszer + testtömeg-változás).
+      Egésztest-izzadási ráta: amerikai futball 1,51 ± 0,70 l/h; állóképességi sportok (kerékpár, futás, triatlon) 1,28 ± 0,57 l/h;
+      kosárlabda 0,95; foci 0,94; baseball 0,83 l/h. Nátriumveszteség állóképességi sportban 51,7 ± 27,8 mmol/h (~1,2 g Na/h).
+      A ±0,57 l/h szórás miatt az egyéni tartomány kb. 0,7–1,9 l/h; hőségben és nagy teljesítménynél a felső sáv reális.
+    quote: >-
+      endurance "1.28 ± 0.57 L/h" ... endurance "51.7 ± 27.8 mmol/h"
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva. Zömmel edzés/verseny 1–2 órás mérések, mérsékelt–meleg környezet; nem ultra, nem
+      éjszakai/hidegebb szakaszokat is tartalmazó 20+ órás átlag. Ultrán a napi átlag jóval alacsonyabb (a bescos-2012 24 órás
+      váltóban 10,5 l/24 h bevitel ≈ 0,44 l/h), a nappali hőségcsúcsban viszont 1,5–2 l/h is előfordulhat.
+    status: ellenorizve-doi
+
+  - key: neufer-1989-gastric-heat
+    type: journal
+    authors: [Neufer P.D., Young A.J., Sawka M.N.]
+    year: 1989
+    title: "Gastric emptying during exercise: effects of heat stress and hypohydration"
+    journal: "European Journal of Applied Physiology and Occupational Physiology 58:433-439"
+    doi: 10.1007/BF00643521
+    url: https://link.springer.com/article/10.1007/BF00643521
+    grade: A
+    questions: [Q8]
+    summary: >-
+      Klasszikus kontrollált labor-vizsgálat, 10 fitt férfi, 400 ml víz 3×15 perc futószalag előtt (~50% VO2max), 18 / 35 / 49 °C-on,
+      euhidráltan és −5% testtömeg hypohidrációban. A gyomorürülés fordítottan korrelált a rektális hőmérséklettel (r=−0,76, p<0,01);
+      49 °C-on romlott a 18 °C-hoz képest; 35 °C-on euhidráltan (akklimatizáció előtt és után is) nem csökkent, de 35 °C + −5%
+      hypohidráció esetén már csökkent a gyomorürülés és a gyomorszekréció.
+    quote: >-
+      "Reductions in gastric emptying appear to be related to the severity of the thermal strain induced by an exercise/heat stress."
+    notes: >-
+      Kiadói absztrakt-oldal. Futás, rövid terhelés, n=10. Üzenet ultrára: nem a meleg levegő, hanem a magas maghőmérséklet +
+      dehidráció együttese lassítja a gyomrot – ezért kell a hőségben a folyadékot korán, kis adagokban, még a deficit előtt bevinni.
+    status: ellenorizve-doi
+
+  - key: shorten-2009-heat-appetite
+    type: journal
+    authors: [Shorten A.L., Wallman K.E., Guelfi K.J.]
+    year: 2009
+    title: "Acute effect of environmental temperature during exercise on subsequent energy intake in active men"
+    journal: "American Journal of Clinical Nutrition 90(5):1215-1221"
+    doi: 10.3945/ajcn.2009.28162
+    url: https://www.sciencedirect.com/science/article/pii/S0002916523266393
+    grade: A
+    questions: [Q8]
+    summary: >-
+      Keresztezett labor-vizsgálat, 11 aktív férfi: 40 perc futás 70% VO2peak-en 36 °C-on vs. 25 °C-on vs. pihenő kontroll, majd
+      ad libitum étkezés. A semleges hőmérsékletű edzés után nőtt az energiabevitel a kontrollhoz képest (p=0,021); a hőségben végzett
+      edzés után nem; a kiadásra korrigált relatív bevitel hőségben alacsonyabb volt (p=0,002), és a magasabb dobhártya-hőmérséklettel
+      és PYY-szinttel függött össze.
+    quote: >-
+      "lower relative energy intake after exercise in the heat was associated with an elevated tympanic temperature and circulating
+      concentrations of peptide YY (P < 0.05)."
+    notes: >-
+      Kiadói absztrakt-oldal; a kJ-értékek az absztraktban nem szerepeltek. Rövid terhelés, futás, n=11. A mechanizmus (PYY, maghő)
+      magyarázza az ultrán ismert "hőségben nem tudok enni" jelenséget – a megoldás a folyékony/hideg kalória és a hűtés.
+    status: ellenorizve-doi
+
+  - key: charlot-2017-hot-cold-review
+    type: journal
+    authors: [Charlot K., Faure C., Antoine-Jonville S.]
+    year: 2017
+    title: "Influence of Hot and Cold Environments on the Regulation of Energy Balance Following a Single Exercise Session: A Mini-Review"
+    journal: "Nutrients 9(6):592"
+    doi: 10.3390/nu9060592
+    url: https://www.mdpi.com/2072-6643/9/6/592
+    grade: C
+    questions: [Q8]
+    summary: >-
+      Narratív mini-áttekintés: hidegben (hideg vízben) végzett edzés után az energiabevitel 41–44%-kal (White és mtsai: 3666 ± 1910 kJ)
+      – más vizsgálatban 74–171%-kal – magasabb, mint semleges környezetben; hőségben inkább csökken (Wasse: −1400 ± 2401 kJ, nem
+      szignifikáns). Mechanizmus: hidegben nő az acil-ghrelin és csökken a leptin (étvágyfokozó), hőségben nő a PYY (étvágycsökkentő).
+    quote: >-
+      "EI in this condition (3666 ± 1910 kJ) was 44% and 41% higher than that following the exercise session in thermoneutral water." ...
+      "Anorexigenic signals, particularly PYY, appear to further increase in hot environments than in those that are thermoneutral"
+    notes: >-
+      Másodlagos (narratív) forrás, a hideg-adatok főleg hidegvíz-immerziós vizsgálatokból származnak, nem kerékpározásból. Ultrán a
+      hideg éjszakák/hegyek étvágyfokozása és a nappali hőség étvágycsökkenése egy versenyen belül váltakozhat.
+    status: ellenorizve-doi
+
+  - key: bongers-2015-cooling-meta
+    type: journal
+    authors: [Bongers C.C.W.G., Thijssen D.H.J., Veltmeijer M.T.W., Hopman M.T.E., Eijsvogels T.M.H.]
+    year: 2015
+    title: "Precooling and percooling (cooling during exercise) both improve performance in the heat: a meta-analytical review"
+    journal: "British Journal of Sports Medicine 49(6):377-384"
+    doi: 10.1136/bjsports-2013-092928
+    url: https://bjsm.bmj.com/content/49/6/377
+    grade: A
+    questions: [Q8]
+    summary: >-
+      Metaanalízis, 28 tanulmány, 36 beavatkozás, 323 résztvevő. Előhűtés: +5,7% teljesítmény (ES 0,44); terhelés alatti hűtés
+      (percooling): +9,9% (ES 0,40); összesen +6,7% (ES 0,43). Előhűtésnél a kombinált módszerek, terhelés alatt a jégmellény volt a
+      leghatékonyabb; a hideg ital/jégkása fogyasztás is a vizsgált percooling-technikák között volt.
+    quote: >-
+      "Cooling can significantly improve exercise performance in the heat" ... "wearing an ice vest during exercise has a
+      significantly larger effect than other percooling techniques"
+    notes: >-
+      Kiadói absztrakt-oldal (BMJ). Rövid, labor-terhelések (időfutam, kimerülésig), nem ultra; a % javulás nem vihető át
+      egy 24+ órás versenyre, de az elv (belső + külső hűtés hőségcsúcson) igen. Ultrán a "jégmellény" helyett jég a sapkába/nyakba,
+      hideg ital, vizes ruha a realisztikus megfelelő.
+    status: ellenorizve-doi
+
+  - key: siegel-2010-ice-slurry
+    type: journal
+    authors: [Siegel R., Maté J., Brearley M.B., Watson G., Nosaka K., Laursen P.B.]
+    year: 2010
+    title: "Ice slurry ingestion increases core temperature capacity and running time in the heat"
+    journal: "Medicine & Science in Sports & Exercise 42(4):717-725"
+    doi: 10.1249/MSS.0b013e3181bf257a
+    url: https://ro.ecu.edu.au/ecuworks/499/
+    grade: A
+    questions: [Q8]
+    summary: >-
+      Kontrollált labor, 10 férfi: 7,5 g/kg jégkása (−1 °C) vs. hideg víz (4 °C) 34 °C-os futás előtt. A jégkása a rektális
+      hőmérsékletet 0,66 ± 0,14 °C-kal csökkentette (hideg víz: 0,25 ± 0,09 °C); a kimerülésig futott idő 50,2 ± 8,5 perc vs.
+      40,7 ± 7,2 perc (+19%, p=0,001). A kimerüléskor a maghő magasabb volt jégkása után (39,36 vs 39,05 °C) – a jégkása "hőtárolót"
+      nyit, nem csak hűt.
+    quote: >-
+      "7.5 g·kg-1 of either ice slurry (-1°C) or cold water (4°C)" ... "rectal temperature was higher (P = 0.001) with ice slurry
+      (39.36°C ± 0.41°C) versus cold water ingestion (39.05°C ± 0.37°C)"
+    notes: >-
+      Egyetemi repozitórium-oldal (ECU) alapján, DOI ott látható. Futás, n=10, előhűtés (nem terhelés alatt). Ultrán 7,5 g/kg ≈
+      500 g jégkása egy 70 kg-os versenyzőnek – benzinkúti jégkása/jeges ital hőségcsúcs előtt reális, de a GI-tolerancia egyéni.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q8: hideg, fagyás, magasság
+  - key: smid-2025-cold-nutrition
+    type: journal
+    authors: [Smid D.J., Klous L., Ballak S.B., Catoire M., De Hoogh I.M., Hoevenaars F.P.M.]
+    year: 2025
+    title: "Exploring the role of nutritional strategies to influence physiological and cognitive mechanisms in cold weather operations in military personnel"
+    journal: "Frontiers in Physiology 16:1539615"
+    doi: 10.3389/fphys.2025.1539615
+    url: https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2025.1539615/full
+    grade: C
+    questions: [Q8]
+    summary: >-
+      Narratív áttekintés (katonai hideg-műveletek): az energiaigény hidegben 5000–7000 kcal/nap is lehet, a kalóriadeficit a szükséglet
+      70%-át is elérheti, mert nehéz enni (nincs éhség, kevés idő). Étrend-indukált termogenezis: szénhidrát 5–10%, fehérje 20–30%.
+      D-vitamin 1500–2000 NE/nap (alacsony bevitelnél 4000 NE-ig), cink 20 mg/nap ajánlás.
+    quote: >-
+      "Energy requirements have been reported to go as high as 5,000–7,000 kcal/day" ... "it is often challenging to increase caloric
+      intake due to not being hungry, limited time to eat."
+    notes: >-
+      Kiadói teljes szöveg (Frontiers). Katonai, gyalogos populáció; a kerékpáros hideg-versenyek (Tour Divide tavasz, Iditarod) analóg
+      helyzetek, de a menetszél és a lábmunka hőtermelése eltér. Konkrét didergési szorzó ("×5 nyugalmi") ebben a forrásban nem szerepel.
+    status: ellenorizve-doi
+
+  - key: tuft-7mesh-winter-tips
+    type: web-guide
+    authors: [Isaak B. (szerk.), Tuft S., Hackinen M., Kopp A., Curtis S., Walker R.]
+    credential: "7mesh márka-cikk; Svein Tuft volt WorldTour-profi és bikepacker, Meaghan Hackinen ultrakerékpáros (Silk Road Mountain Race, Tour Divide), Stef Curtis ultra-versenyző"
+    year: 2023
+    title: "Winter Bikepacking Tips & Tricks"
+    venue: "7mesh.com"
+    doi: null
+    url: https://7mesh.com/en-INT/articles/winter-bikepacking-tips
+    grade: C
+    questions: [Q8]
+    summary: >-
+      Versenyzői tapasztalat hidegben: a víz a testhez közel tartott tömlőben/bladderben nem fagy meg; a palackokat éjszakára a
+      hálózsákba kell tenni; szigetelt palack; a megfagyott gél nem szívható ki – a mezzsebben kell előmelegíteni; Tuft szerint hidegben
+      óránként ~200 kcal-lal többet eszik; ha fázik, forró tea és meleg étel.
+    quote: >-
+      "Throughout the day I tend to eat an extra 200 calories per hour depending on your effort." ... "they are really tough to suck
+      down when they're frozen. Keeping a few of them...in my jersey pocket to warm up before eating was key."
+    notes: >-
+      Gyártói/edzői-versenyzői közlés, nem mért adat; a "+200 kcal/h" egyéni becslés. DOI nem értelmezhető. Gyakorlati fogások fagyott
+      étel/ital kezelésére – a tankönyvben "tapasztalati" jelöléssel.
+    status: url-megnyitva
+
+  - key: matu-2018-hypoxia-appetite-meta
+    type: journal
+    authors: [Matu J., Gonzalez J.T., Ispoglou T., Duckworth L., Deighton K.]
+    year: 2018
+    title: "The effects of hypoxia on hunger perceptions, appetite-related hormone concentrations and energy intake: A systematic review and meta-analysis"
+    journal: "Appetite 125:98-108"
+    doi: 10.1016/j.appet.2018.01.015
+    url: https://www.sciencedirect.com/science/article/abs/pii/S0195666317317014
+    grade: A
+    questions: [Q8]
+    summary: >-
+      Szisztematikus áttekintés és metaanalízis, 28 tanulmány (54 éhgyomri és 22 posztprandiális összehasonlítás). Hypoxia mérsékelten
+      csökkenti az energiabevitelt (SMD −0,50; 95% CI −0,85 – −0,15; n=8 tanulmány; p=0,006); a posztprandiális éhségérzet (SMD −0,15) és az
+      acil-ghrelin (SMD −0,16) kis mértékben csökken. Az étvágy és a ghrelin magas, de nem mérsékelt szimulált magasságon csökkent.
+    quote: >-
+      "appetite and acylated ghrelin are concomitantly suppressed during exposure to high, but not moderate, simulated altitude"
+    notes: >-
+      Kiadói absztrakt-oldal. Zömmel nyugalmi/labor hypoxia, nem sportolók terhelés alatt; a "magas" (~>3500–4000 m) vs. "mérsékelt"
+      küszöb az európai ultrákon (max. 2000–2800 m hágók) ritkán érintett – a Colorado Trail, Silk Road, Andok-események relevánsak.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q9: feltöltés, rajt előtti étkezés, regeneráció
+  - key: thomas-2016-joint-position
+    type: position-stand
+    authors: [Thomas D.T., Erdman K.A., Burke L.M.]
+    year: 2016
+    title: "Position of the Academy of Nutrition and Dietetics, Dietitians of Canada, and the American College of Sports Medicine: Nutrition and Athletic Performance"
+    journal: "Medicine & Science in Sports & Exercise 48(3):543-568 (és J Acad Nutr Diet 116:501-528)"
+    doi: 10.1249/MSS.0000000000000852
+    url: https://www.dietitians.ca/DietitiansOfCanada/media/Documents/Resources/noap-position-paper.pdf?ext=.pdf
+    grade: A
+    questions: [Q9]
+    summary: >-
+      Hármas konszenzus. Szénhidrát-feltöltés >90 perces eseményre: 36–48 órán át 10–12 g/kg/24 h; rajt előtti étkezés >60 perces
+      terhelésre: 1–4 g/kg CH 1–4 órával előtte; gyors visszatöltés (<8 h két terhelés között): 1–1,2 g/kg/h az első 4 órában.
+      Fehérje 1,2–2,0 g/kg/nap, étkezésenként 0,25–0,3 g/kg (15–25 g) a terhelés utáni 0–2 órában. Alacsony energia-elérhetőség
+      küszöbe 30 kcal/kg FFM/nap. Ferritin aggályos tartomány <10–35 ng/ml (laborfüggő); D-vitamin cél 80–125 nmol/l.
+    quote: >-
+      "36-48 h of 10-12 g/kg BW per 24 h" ... "1-4 g/kg consumed 1-4 h before exercise" ... "1-1.2 g/kg/h for first 4 h" ...
+      "1.2 to 2.0 g/kg/d" ... "0.25-0.3g/kg BW or 15 to 25 g protein"
+    notes: >-
+      A Dietitians of Canada által közzétett teljes PDF; a DOI az OpenAlex-rekordból. Többnapos ultrára külön protokoll nincs benne
+      (szakaszversenyre általános "egészség és adaptáció" megjegyzés). A feltöltési adag egynapos eseményre van kalibrálva.
+    status: ellenorizve-doi
+
+  - key: bussau-2002-1day-loading
+    type: journal
+    authors: [Bussau V.A., Fairchild T.J., Rao A., Steele P., Fournier P.A.]
+    year: 2002
+    title: "Carbohydrate loading in human muscle: an improved 1 day protocol"
+    journal: "European Journal of Applied Physiology 87:290-295"
+    doi: 10.1007/s00421-002-0621-5
+    url: https://link.springer.com/article/10.1007/s00421-002-0621-5
+    grade: A
+    questions: [Q9]
+    summary: >-
+      8 állóképességi férfi sportoló, fizikai inaktivitás + 10 g/kg/nap szénhidrát: az izomglikogén 95 (5) mmol/kg nedves tömegről
+      1 nap alatt 180 (15) mmol/kg-ra nőtt, és a 2–3. napon már nem emelkedett tovább. Vagyis egy nap pihenés + 10 g/kg CH elegendő a
+      maximális raktárhoz.
+    quote: >-
+      "combining physical inactivity with a high intake of carbohydrate enables trained athletes to attain maximal muscle glycogen
+      contents within only 24 h."
+    notes: >-
+      Kiadói absztrakt-oldal. Kis n, biopsziás mérés, férfiak. Ultrán: az utolsó 24–36 óra elegendő a feltöltéshez, nem kell 3 napos
+      "hízlalás" – a többnapos eseményen az első 10–15 óra után a raktár úgyis a bevitel függvénye.
+    status: ellenorizve-doi
+
+  - key: jager-2017-issn-protein
+    type: position-stand
+    authors: [Jäger R., Kerksick C.M., Campbell B.I., Cribb P.J., Wells S.D., Skwiat T.M., Purpura M., Ziegenfuss T.N., Ferrando A.A., Arent S.M., Smith-Ryan A.E., Stout J.R., Arciero P.J., Ormsbee M.J., Taylor L.W., Wilborn C.D., Kalman D.S., Kreider R.B., Willoughby D.S., Hoffman J.R., Krzykowski J.L., Antonio J.]
+    year: 2017
+    title: "International Society of Sports Nutrition Position Stand: protein and exercise"
+    journal: "Journal of the International Society of Sports Nutrition 14:20"
+    doi: 10.1186/s12970-017-0177-8
+    url: https://api.openalex.org/works/doi:10.1186/s12970-017-0177-8
+    grade: A
+    questions: [Q9]
+    summary: >-
+      ISSN állásfoglalás: napi 1,4–2,0 g/kg fehérje elegendő a legtöbb edző embernek; adagonként 0,25 g/kg vagy 20–40 g; 3–4 óránként
+      egyenletesen elosztva; lefekvés előtt 30–40 g kazein növeli az éjszakai izomfehérje-szintézist/anyagcserét. Energia-megszorításnál
+      magasabb (2,3–3,1 g/kg FFM) bevitel indokolt.
+    quote: >-
+      "An overall daily protein intake in the range 1.4–2.0 g protein/kg body weight/day (g/kg/d) is sufficient most exercising
+      individuals" ... "Acute protein doses should ideally be evenly distributed, every 3–4 h, across the day"
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva (a BMC→Springer oldal 429-cel elutasította). Nem ultra-specifikus; a többnapos verseny utáni
+      regenerációra (nagy CK, izomtömeg-vesztés) a felső sáv (1,8–2,2 g/kg) a tiller-2019-issn-ultra és thomas-2016 alapján is indokolt.
+    status: ellenorizve-doi
+
+  - key: chlibkova-2015-rhabdo-eah
+    type: journal
+    authors: [Chlíbková D., Knechtle B., Rosemann T., Tomášková I., Novotný J., Žákovská A., Uher T.]
+    year: 2015
+    title: "Rhabdomyolysis and exercise-associated hyponatremia in ultra-bikers and ultra-runners"
+    journal: "Journal of the International Society of Sports Nutrition 12:29"
+    doi: 10.1186/s12970-015-0091-x
+    url: https://api.openalex.org/works/doi:10.1186/s12970-015-0091-x
+    grade: B
+    questions: [Q9, Q6]
+    summary: >-
+      Terepvizsgálat 7 cseh ultra-eseményen (többnapos MTB, 24 órás MTB, 100 km futás), 113 versenyző (13 hyponatraemiás, 100
+      normonatraemiás). CK >10 000 U/l hat versenyzőnél (2 a hyponatraemiás, 4 a normonatraemiás csoportból), mind futó, orvosi
+      ellátás nélkül. A CK százalékos emelkedése futóknál nagyobb volt, mint MTB-seknél; a hyponatraemiásoknál a CK és a vizelet-kreatinin
+      nagyobb emelkedést mutatott, a nátrium-clearance csökkent.
+    quote: >-
+      "The percentage increase in CK was higher in ultra-runners compared to mountain bikers." ... "Ultra-runners developed
+      rhabdomyolysis more frequently than bikers."
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva; abszolút CK-értékek kerékpárosokra az absztraktban nincsenek. A kerékpározás koncentrikus
+      jellege miatt az izomkárosodás (CK) ultrán is jóval kisebb, mint futásnál – a "rhabdo" kockázat kerékpáron elsősorban a
+      hyponatraemia/dehidráció + NSAID kombinációnál nő.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q9: RED-S, testtömeg
+  - key: mountjoy-2023-ioc-reds
+    type: position-stand
+    authors: [Mountjoy M., Ackerman K.E., Bailey D.M., Burke L.M., Constantini N., et al.]
+    year: 2023
+    title: "2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs)"
+    journal: "British Journal of Sports Medicine 57(17):1073-1098"
+    doi: 10.1136/bjsports-2023-106994
+    url: https://bjsm.bmj.com/content/57/17/1073
+    grade: A
+    questions: [Q9]
+    summary: >-
+      IOC konszenzus: a REDs "a problémás (elhúzódó és/vagy súlyos) alacsony energia-elérhetőség okozta, károsodott élettani és/vagy
+      pszichológiai működés szindrómája" nőknél és férfiaknál. A ≤30 kcal/kg FFM/nap küszöb nőknél történeti, egyénenként és
+      rendszerenként nagy a szórás; férfiak alacsonyabb (~9–25 kcal/kg FFM/nap) EA-t is tolerálhatnak a tünetek előtt. Rövid táv:
+      napok–hetek; közép: hetek–hónapok; hosszú: hónapok–évek. Becsült prevalencia nők 23–79,5%, férfiak 15–70%; a 2018–2022-es
+      vizsgálatok csak 20%-a vizsgált férfiakat.
+    quote: >-
+      "Wide range in the reported estimated prevalence of LEA/REDs indicators in female (23%–79.5%) and male (15%–70%) athletes across
+      a variety of sports." ... "only 20% of original studies from 2018 to 2022 include male athletes as subjects"
+    notes: >-
+      Kiadói oldal (BMJ) + Crossref. Ultrakerékpár-specifikus adat nincs; a felkészülés alatti krónikus deficit (fogyókúra W/kg-ért)
+      és a verseny alatti akut, elkerülhetetlen deficit (napok) külön kezelendő – a konszenzus a "rövid táv" kategóriába sorolná az utóbbit.
+    status: ellenorizve-doi
+
+  - key: keay-2018-male-cyclists-lea
+    type: journal
+    authors: [Keay N., Francis G., Hind K.]
+    year: 2018
+    title: "Low energy availability assessed by a sport-specific questionnaire and clinical interview indicative of bone health, endocrine profile and cycling performance in competitive male cyclists"
+    journal: "BMJ Open Sport & Exercise Medicine 4:e000424"
+    doi: 10.1136/bmjsem-2018-000424
+    url: https://bmjopensem.bmj.com/content/4/1/e000424
+    grade: B
+    questions: [Q9]
+    summary: >-
+      50 versenyző férfi országúti kerékpáros, DXA + hormonok + SEAQ-I kérdőív. Alacsony ágyéki csontsűrűség (Z <−1,0) a kerékpárosok
+      44%-ánál; a 10 krónikus alacsony EA-jú versenyzőnél alacsonyabb tesztoszteron (p=0,024); az edzésterhelés pozitívan függött össze
+      a 60 perces FTP/kg-mal (p<0,001), de a krónikus LEA-sok csont-, endokrin- és teljesítmény-hátrányt mutattak.
+    quote: >-
+      "Low lumbar spine BMD (Z-score<−1.0) was found in 44% of cyclists" ... "Cyclists with low EA, particularly in the long-term,
+      displayed adverse quantifiable measures of bone, endocrinology and performance consequences of RED-S"
+    notes: >-
+      Kiadói oldal (BMJ). Keresztmetszeti, n=50, országúti (nem ultra) férfiak – a kerékpáros populációra vonatkozó legjobb
+      RED-S-adat; a nem terheléses sportág csontkockázata ultrakerékpárosokra is érvényes.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- kiegészítő források (Q6 EAH/NSAID, Q8 ultra-kerékpáros folyadék, Q9 vas / D-vitamin / szakaszverseny CK)
+  - key: wharam-2006-nsaid-eah-ironman
+    type: journal
+    authors: [Wharam P.C., Speedy D.B., Noakes T.D., Thompson J.M.D., Reid S.A., Holtzhausen L.M.]
+    year: 2006
+    title: "NSAID Use Increases the Risk of Developing Hyponatremia during an Ironman Triathlon"
+    journal: "Medicine & Science in Sports & Exercise 38(4):618-622"
+    doi: 10.1249/01.mss.0000210209.40694.09
+    url: https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=DOI:10.1249/01.mss.0000210209.40694.09&resultType=core&format=json
+    grade: B
+    questions: [Q6]
+    summary: >-
+      Terepvizsgálat, 330 induló a 2004-es új-zélandi Ironmanen. NSAID-használat 30%; a hyponatraemia összincidenciája 1,8%; az
+      NSAID-használat összefüggött a hyponatraemia előfordulásával (p=0,0002), és az NSAID-csoport plazma-nátriuma alacsonyabb volt (p=0,02).
+    quote: >-
+      "The incidence of NSAID use was 30%" ... "NSAID use was related to the incidence of hyponatremia (P = 0.0002)" ...
+      "The NSAID group had lower plasma Na (P = 0.02)"
+    notes: >-
+      Absztraktból (Europe PMC REST); esélyhányados az absztraktban nincs. Triatlon, ~10–12 óra; megfigyeléses. Mechanizmus: az NSAID
+      gátolja a prosztaglandin-függő vese-vízkiválasztást (ADH-hatás erősödik), ezért túlivásnál hyponatraemiát segít elő – ultrán a
+      hosszú, alacsony intenzitású, "sokat iszom" fázisokban ez a kockázat.
+    status: ellenorizve-doi
+
+  - key: rust-2012-swiss-cycling-marathon
+    type: journal
+    authors: [Rüst C.A., Knechtle B., Knechtle P., Rosemann T.]
+    year: 2012
+    title: "No case of exercise-associated hyponatraemia in top male ultra-endurance cyclists: the 'Swiss Cycling Marathon'"
+    journal: "European Journal of Applied Physiology 112:689-697"
+    doi: 10.1007/s00421-011-2024-y
+    url: https://link.springer.com/article/10.1007/s00421-011-2024-y
+    grade: B
+    questions: [Q8, Q6]
+    summary: >-
+      65 férfi ultrakerékpáros a 720 km-es Swiss Cycling Marathonon (PBP/RAAM-kvalifikáció), ad libitum ivás. Testtömeg-változás
+      −1,5 (1,7)% (p<0,01); a folyadékbevitel negatívan korrelált a plazma-nátrium változásával (r=−0,32, p<0,05); egyetlen versenyző sem
+      lett hyponatraemiás. Ez a legnagyobb mintájú ultrakerékpáros folyadék/nátrium terepadat.
+    quote: >-
+      "The cyclists lost 1.5 (1.7)% body mass (P < 0.01)" ... "No athlete developed EAH"
+    notes: >-
+      Kiadói absztrakt-oldal; l/h folyadékbevitel az absztraktban nincs (a teljes szöveg tartalmazza). Csak férfiak, ~24–30 órás
+      verseny, mérsékelt svájci nyári hőmérséklet. A −1,5% átlagos veszteség és a nulla EAH azt jelzi, hogy ad libitum ivással a
+      kerékpáros ultrán a mérsékelt dehidráció, nem a túlivás a tipikus.
+    status: ellenorizve-doi
+
+  - key: sim-2019-iron-athlete
+    type: journal
+    authors: [Sim M., Garvican-Lewis L.A., Cox G.R., Govus A., McKay A.K.A., Stellingwerff T., Peeling P.]
+    year: 2019
+    title: "Iron considerations for the athlete: a narrative review"
+    journal: "European Journal of Applied Physiology 119:1463-1478"
+    doi: 10.1007/s00421-019-04157-y
+    url: https://link.springer.com/article/10.1007/s00421-019-04157-y
+    grade: C
+    questions: [Q9]
+    summary: >-
+      Narratív áttekintés: vashiány a női sportolói kohorszok ~15–35%-ánál, a férfi kohorszok ~5–11%-ánál; oka részben a terhelés
+      indukálta hepcidin-emelkedés (ami a vasfelszívódást órákra gátolja), a hemolízis, izzadás, GI-vérveszteség. Magasság és nagy
+      edzésvolumen növeli a szükségletet.
+    quote: >-
+      female athletes "~ 15–35% athlete cohorts deficient" ... "approximately 5–11% of male athlete cohorts also present with this issue"
+    notes: >-
+      Kiadói absztrakt-oldal; a hepcidin-időzítés (3–6 óra terhelés után) és a ferritin-küszöb a teljes szövegben, az absztraktban nem
+      szerepel – itt nem idézem számmal. Nem ultra-specifikus. A tankönyvi ajánlás (ferritin-ellenőrzés a felkészülés elején,
+      reggeli/terhelés előtti vasbevitel) a review teljes szövegére és thomas-2016-ra épül.
+    status: ellenorizve-doi
+
+  - key: owens-2018-vitamin-d
+    type: journal
+    authors: [Owens D.J., Allison R., Close G.L.]
+    year: 2018
+    title: "Vitamin D and the Athlete: Current Perspectives and New Challenges"
+    journal: "Sports Medicine 48(Suppl 1):3-16"
+    doi: 10.1007/s40279-017-0841-9
+    url: https://link.springer.com/article/10.1007/s40279-017-0841-9
+    grade: C
+    questions: [Q9]
+    summary: >-
+      Narratív áttekintés: elégséges 25(OH)D >75 nmol/l, súlyos hiány <25 nmol/l, toxicitási aggály >180 nmol/l. Elit sportban a
+      pótlás 1000 NE/nap-tól heti 100 000 NE bólusig terjed; 4000 NE/nap javította az erő regenerációját excentrikus izomkárosító
+      terhelés után; alacsony D-szint több felső légúti fertőzéssel jár; a csontsűrűséggel meglepően nem találtak összefüggést etnikailag
+      vegyes sportolói mintán.
+    quote: >-
+      Supplementation "at 4000 IU/day has a positive effect on the recovery of force following a bout of damaging eccentric exercise" ...
+      "no association between serum 25[OH]D concentration and measures of bone health in an ethnically diverse athletic population."
+    notes: >-
+      Kiadói absztrakt-oldal. Nem ultra-specifikus; téli felkészülésben (okt–márc, 47° é. sz.) a hiány gyakori, laborral ellenőrizve
+      pótolni – a nagy bólusok kerülendők.
+    status: ellenorizve-doi
+
+  - key: colombini-2012-giro-ck
+    type: journal
+    authors: [Colombini A., Corsetti R., Machado M., Graziani R., Lombardi G., Lanteri P., Banfi G.]
+    year: 2012
+    title: "Serum Creatine Kinase Activity and Its Relationship With Renal Function Indices in Professional Cyclists During the Giro d'Italia 3-Week Stage Race"
+    journal: "Clinical Journal of Sport Medicine 22(5):408-413"
+    doi: 10.1097/jsm.0b013e31825e66cc
+    url: https://api.openalex.org/works/doi:10.1097/jsm.0b013e31825e66cc
+    grade: B
+    questions: [Q9]
+    summary: >-
+      9 profi országúti kerékpáros (Liquigas-Cannondale) a 2011-es Girón, vér a rajt előtt, a 12. és a 22. napon. A CK és az AST a
+      verseny második felében, az LDH végig progresszíven emelkedett; a CK-emelkedés negatívan korrelált a kreatinin-alapú becsült
+      GFR-változással, ezért a szerzők a cisztatin C-t tartják pontosabbnak a vesefunkció megítélésére izomkárosodás mellett.
+    quote: >-
+      "Creatine kinase, AST activity increased during second part and LDH activity increased progressively during entire course of the
+      race." ... "measurement of cystatin C is more accurate than creatinine alone in evaluation of renal function"
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva; abszolút CK-értékek (U/l) az absztraktban nincsenek. n=9, profi, szakaszverseny alvással –
+      az ultra folyamatos terheléséhez képest enyhébb; az üzenet (kerékpáron a CK mérsékelten emelkedik; a kreatinin izomkárosodás
+      mellett túlbecsüli a vesekárosodást) átvihető.
+    status: ellenorizve-doi
+
+  - key: hickner-2010-creatine-cycling
+    type: journal
+    authors: [Hickner R.C., Dyck D.J., Sklar J., Hatley H., Byrd P.]
+    year: 2010
+    title: "Effect of 28 days of creatine ingestion on muscle metabolism and performance of a simulated cycling road race"
+    journal: "Journal of the International Society of Sports Nutrition 7:26"
+    doi: 10.1186/1550-2783-7-26
+    url: https://api.openalex.org/works/doi:10.1186/1550-2783-7-26
+    grade: A
+    questions: [Q6]
+    summary: >-
+      12 állóképességi férfi kerékpáros (27 év, VO2peak ~53 ml/kg/perc), 28 nap 3 g/nap kreatin-monohidrát vs. placebo, előtte-utána
+      2 órás szimulált országúti verseny 15 percenként 3×10 mp sprinttel. Az izom össz-kreatin és kreatin-foszfát nőtt, a plazmatérfogat
+      a kreatin-csoportnak kedvezett, a szubmaximális O2-fogyasztás ~10%-kal csökkent, de a záró sprint kimerülési ideje és teljesítménye
+      mindkét csoportban egyformán (~33%) javult – az állóképességi teljesítmény nem javult szignifikánsan.
+    quote: >-
+      "the effects of creatine supplementation on muscle metabolism and exercise performance during a simulated endurance road race"
+      (cél-mondat; az eredmény-számok az OpenAlex-rekonstrukció parafrázisából)
+    notes: >-
+      Absztrakt OpenAlex-ből rekonstruálva, a számok parafrázis – a végleges szövegbe csak teljes szöveg ellenőrzése után. Kis n, 2 órás
+      terhelés. Ultrán a kreatin +1–2 kg vízretenciója (hegyi versenyen W/kg-hátrány) és a nem igazolt állóképességi haszon miatt nem
+      ajánlott; egyetlen ultra-vizsgálatot sem találtam.
+    status: ellenorizve-doi
