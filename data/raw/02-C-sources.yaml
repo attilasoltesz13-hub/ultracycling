@@ -1,0 +1,519 @@
+# 02. modul – Edzéselmélet ultrára – C csomag (Q7: terhelésmutatók TSS/CTL/ATL/TSB, sRPE, TRIMP, ramp-rate, ACWR; Q8: HRV és készenlét; Q9: túledzés, betegség, alvás, RED-S)
+# Készült: 2026-09-24. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   bellenger-2016-hrv-meta, aubry-2015-overreaching-hrr, barrero-2019-tdf-hrv, swart-2023-mtb-hrv,
+#   friel-decoupling-tp, martin-1981-sleep-rpe, craven-2022-akut, walsh-2021-consensus, poussel-2015-utmb-sleep,
+#   mountjoy-2023-ioc-reds, keay-2018-male-cyclists-lea, spragg-2023-durability, maunder-2021-durability
+sources:
+  # ---------------------------------------------------------------- Q7: terhelésmutatók
+  - key: foster-2001-session-rpe
+    type: journal
+    authors: [Foster C., Florhaug J.A., Franklin J., Gottschall L., Hrovatin L.A., Parker S., Doleshal P., Dodge C.]
+    year: 2001
+    title: "A New Approach to Monitoring Exercise Training"
+    journal: "Journal of Strength and Conditioning Research 15(1):109-115"
+    doi: 10.1519/00124278-200102000-00019
+    url: https://api.openalex.org/works/doi:10.1519/00124278-200102000-00019
+    grade: A
+    questions: [02:Q7]
+    summary: >-
+      A session-RPE módszer alapcikke: az edzés terhelése = időtartam (perc) × CR-10 skálás érzett erőkifejtés,
+      a teljes edzésre, 30 perccel a vége után kérdezve. Egyenletes és intervallum-kerékpáredzésen, valamint
+      kosárlabdaedzésen a session-RPE-alapú pontszám szorosan együtt mozgott a pulzuszóna-alapú (Edwards-TRIMP jellegű)
+      terheléssel, és a regressziós kapcsolat a különböző mozgásformák között "közel átfedő" volt – tehát a módszer
+      mozgásformától és teljesítménymérőtől független, univerzális terhelésmutató.
+    quote: >-
+      "the relationship between the mean session RPE and the summated heart rate zone score was highly consistent"
+      ... the method offers "a valid, intensity-independent approach for monitoring diverse training modes." [absztraktból]
+    notes: >-
+      Klasszikus validációs vizsgálat (kerékpár + kosárlabda, egyetemista/edzett vegyes minta). A validitás referenciája
+      maga is pulzus-alapú, nem teljesítmény. Ultrára: teljesítménymérő nélkül is működik, de nagyon hosszú (6-15+ órás)
+      edzésen az egyetlen globális RPE a végállapotot súlyozza (recency-torzítás) – ezt későbbi módszertani irodalom jelzi.
+      Számok az OpenAlex-absztraktból.
+    status: ellenorizve-doi
+
+  - key: sanders-2017-load-cyclists
+    type: journal
+    authors: [Sanders D., Abt G., Hesselink M.K.C., Myers T., Akubat I.]
+    year: 2017
+    title: "Methods of Monitoring Training Load and Their Relationships to Changes in Fitness and Performance in Competitive Road Cyclists"
+    journal: "International Journal of Sports Physiology and Performance 12(5):668-675"
+    doi: 10.1123/ijspp.2016-0454
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2016-0454
+    grade: B
+    questions: [02:Q7]
+    summary: >-
+      15 jól edzett országúti kerékpáros 10 hetes felkészülési időszaka: a heti terhelést TSS-sel, session-RPE-vel és
+      négyféle TRIMP-pel (Banister, Edwards, individualizált iTRIMP, Lucia luTRIMP) számolták, és a fittség-változáshoz
+      (laborteszt + 8 perces időfutam) viszonyították. A terhelésmutatók és a szubmaximális fittségváltozás korrelációja
+      r=0,54-0,81; a 8 perces időfutam-teljesítmény változásával a legerősebb kapcsolatot az iTRIMP (r=0,81), a TSS (r=0,75)
+      és a luTRIMP (r=0,70) adta. A TSS és a jobb TRIMP-változatok tehát kerékpárosoknál hasonlóan jól követik az adaptációt.
+    quote: >-
+      "Large to very large correlations were observed between training-load methods and submaximal fitness changes
+      (r = .54–.81)" ... strongest with "iTRIMP (r = .81), TSS (r = .75) and luTRIMP (r = .70)". [absztraktból]
+    notes: >-
+      n=15 férfi versenykerékpáros, terep + labor, 10 hét. Kis minta, korrelációs (nem oksági) design; a "sima" Banister-
+      és Edwards-TRIMP gyengébben teljesített, mint az egyénre kalibrált változatok. Amatőr ultrásra a fő üzenet: a mutató
+      egyéni kalibrálása (FTP frissítés, egyéni laktát-HR görbe) többet számít, mint a mutató választása.
+    status: ellenorizve-doi
+
+  - key: gabbett-2016-paradox
+    type: journal
+    authors: [Gabbett T.J.]
+    year: 2016
+    title: "The training-injury prevention paradox: should athletes be training smarter and harder?"
+    journal: "British Journal of Sports Medicine 50(5):273-280"
+    doi: 10.1136/bjsports-2015-095788
+    url: https://api.openalex.org/works/doi:10.1136/bjsports-2015-095788
+    grade: C
+    questions: [02:Q7]
+    summary: >-
+      Az ACWR (akut:krónikus terhelésarány) koncepció alapcikke: a magas krónikus terhelés önmagában véd (a jobban edzett
+      sportoló kevesebbet sérül), a sérüléskockázatot a terhelés hirtelen megugrása (magas akut:krónikus arány) hajtja.
+      A javasolt "édes zóna" kb. 0,8-1,3 közötti arány, 1,5 felett a kockázat emelkedik (a csapatsport-adatokból származó
+      ábra alapján). Az elv: okosabban ÉS keményebben edzeni, fokozatos progresszióval.
+    quote: >-
+      "athletes accustomed to high training loads have fewer injuries than athletes training at lower workloads" ...
+      "the acute:chronic workload ratio ... is a critical predictor of injury risk". [absztraktból]
+    notes: >-
+      Narratív áttekintés, elsősorban csapatsport (rögbi, futball) sérülésadataira épül – kerékpáros/ultra validáció nincs.
+      A konkrét 0,8-1,3 sáv a szerző korábbi csapatsport-elemzéseiből származik. A módszertani kritikát lásd
+      impellizzeri-2020-acwr. Állóképességi sportban az ACWR inkább betegség/túlterhelés-, mint sérülés-proxi.
+    status: ellenorizve-doi
+
+  - key: impellizzeri-2020-acwr
+    type: journal
+    authors: [Impellizzeri F.M., Tenan M.S., Kempton T., Novak A.R., Coutts A.J.]
+    year: 2020
+    title: "Acute:Chronic Workload Ratio: Conceptual Issues and Fundamental Pitfalls"
+    journal: "International Journal of Sports Physiology and Performance 15(6):907-913"
+    doi: 10.1123/ijspp.2019-0864
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2019-0864
+    grade: C
+    questions: [02:Q7]
+    summary: >-
+      Az ACWR módszertani kritikája: a mutató és a sérülés közti kapcsolat nem oksági ("no studies have even tried to
+      estimate causal effects properly"), az arányképzés statisztikai műtermékeket kelt és zajt ad hozzá, a kapcsolat
+      iránya vizsgálatonként inkonzisztens, és a "0,8-1,3 édes zóna" ábrája módszertanilag hibás. Következtetés: az
+      ACWR-re épített terhelésmenedzsment-rendszerek bizonyítéka elégtelen, a mutató önmagában nem döntési alap.
+    quote: >-
+      "no studies have even tried to estimate causal effects properly" ... the ratio "adds noise and creates statistical
+      artifacts". [absztraktból]
+    notes: >-
+      Vezető terhelés-módszertani kutatók (Impellizzeri, Coutts) kritikai álláspontja; az IOC 2016-os terhelés-konszenzusa
+      még ajánlotta az ACWR-t, ez a vita máig nyitott. Ultrás gyakorlatban: a "ne ugorj hetek alatt a duplájára" elv marad,
+      a konkrét számküszöb nem védhető.
+    status: ellenorizve-doi
+
+  - key: friel-ramp-rate
+    type: web-article
+    authors: [Friel J.]
+    credential: "Edző, a 'Training Bible' sorozat szerzője, a TrainingPeaks társalapítója"
+    year: 2013
+    title: "The CTL Ramp Rate"
+    venue: joefrieltraining.com
+    doi: null
+    url: https://joefrieltraining.com/the-ctl-ramp-rate/
+    grade: C
+    questions: [02:Q7]
+    summary: >-
+      Edzői ökölszabály a CTL-emelkedés (ramp rate) biztonságos ütemére: a legtöbb sportolónak heti 5-8 CTL-pont emelkedés
+      "körülbelül megfelelő"; egyes kivételes sportolók rövid ideig (legfeljebb kb. 1 hét) heti 10+ pontot is elbírnak
+      ("crash" blokk), de ezen túl a kimenetel várhatóan romlik (túlterhelés, betegség, kiégés kockázata).
+    quote: >-
+      "an increase in CTL of about 5 to 8 points per week is about right for most" ... "Go much beyond a week at 10 or
+      more weekly CTL ramp rate and the outcomes aren't likely to be as beneficial."
+    notes: >-
+      Edzői heurisztika, nem validált vizsgálat; a számok TSS/nap dimenziójú CTL-pontban értendők. Heti 6-15 órás amatőr
+      ultrásnál a CTL jellemzően 50-90 közt mozog, így a heti 5-8 pont valóban érzékelhető progresszió. KALKULÁTOR-paraméter.
+    status: url-megnyitva
+
+  - key: trainingpeaks-tss-explainer
+    type: web-article
+    authors: [TrainingPeaks (McGregor S. szerk.)]
+    credential: "A TSS/CTL/ATL/TSB (PMC) modellt forgalmazó platform hivatalos ismertetője"
+    year: 2023
+    title: "What is TSS (Training Stress Score)?"
+    venue: trainingpeaks.com
+    doi: null
+    url: https://www.trainingpeaks.com/blog/what-is-tss/
+    grade: C
+    questions: [02:Q7]
+    summary: >-
+      A TSS hivatalos definíciós plafonja: 1 óra teljes, 100%-os (FTP-n tekert) munka = 100 TSS, és óránként soha nem
+      szerezhető 100 pontnál több; egy edzésen belül viszont igen, ha 1 óránál hosszabb. Példa: 2 óra "5-ös szinten"
+      (kb. 50 TSS/óra) = 100 pont. Ez rögzíti a TSS/óra skálát, amire a zónánkénti tipikus értékek épülnek.
+    quote: >-
+      "You earn 100 TSS for an all out, 100%, 60-minute workout." ... "you can earn more than 100 TSS within a single
+      workout (as long as it is longer than an hour), but never more than 100 TSS per hour."
+    notes: >-
+      Gyártói közlés (a Coggan-féle definíció népszerűsítő formája). A TSS-képlet: TSS = (t_s × NP × IF)/(FTP × 3600) × 100,
+      ahol IF = NP/FTP. Ultra-vonatkozás: a nagyon hosszú Z1-Z2 edzés IF~0,55-0,65 mellett is 30-45 TSS/órát ad, a modell
+      viszont az élettani költség nem-lineáris részét (glikogén, alváshiány, ülésfájdalom) nem látja.
+    status: url-megnyitva
+
+  # ---------------------------------------------------------------- Q8: HRV és készenlét
+  - key: javaloyes-2019-hrv-cycling
+    type: journal
+    authors: [Javaloyes A., Sarabia J.M., Lamberts R.P., Moya-Ramon M.]
+    year: 2019
+    title: "Training Prescription Guided by Heart-Rate Variability in Cycling"
+    journal: "International Journal of Sports Physiology and Performance 14(1):23-32"
+    doi: 10.1123/ijspp.2018-0122
+    url: https://api.crossref.org/works/10.1123/ijspp.2018-0122
+    grade: A
+    questions: [02:Q8]
+    summary: >-
+      17 jól edzett kerékpáros, 8 hét, randomizált: HRV-vezérelt (napi reggeli rMSSD 7 napos gördülő átlaga alapján
+      módosított) vs. hagyományos, előre írt periodizáció. A HRV-csoport javult: csúcsteljesítmény +5,1%, teljesítmény
+      a laktátküszöbön +13,9%, 40 perces időfutam +7,3%; a hagyományos csoport nem javult szignifikánsan. Ez az első
+      kifejezetten kerékpáros HRV-vezérelt RCT.
+    quote: >-
+      "the HRV-guided group showed meaningful improvements in peak power output (5.1%), lactate threshold power (13.9%),
+      and 40-min time trial performance (7.3%)" ... "daily training prescription based on HRV could result in a better
+      performance enhancement than a traditional periodization in well-trained cyclists." [absztraktból]
+    notes: >-
+      n=17 férfi, jól edzett, 8 hét – kis minta, rövid időtáv, a csoportkülönbség részben a kontrollcsoport stagnálásából
+      adódik. A protokoll lényege: ha a 7 napos rMSSD-átlag kilóg a normál sávból (SWC), az aznapi intenzív edzés
+      alacsony intenzitásúra cserélődik. Ultra-felkészülés hosszú Z2 blokkjaira közvetlenül nem tesztelt.
+    status: ellenorizve-doi
+
+  - key: medellin-2020-hrv-meta
+    type: journal
+    authors: [Medellín Ruiz J.P., Rubio-Arias J.Á., Clemente-Suárez V.J., Ramos-Campo D.J.]
+    year: 2020
+    title: "Effectiveness of Training Prescription Guided by Heart Rate Variability Versus Predefined Training for Physiological and Aerobic Performance Improvements: A Systematic Review and Meta-Analysis"
+    journal: "Applied Sciences 10(23):8532"
+    doi: 10.3390/app10238532
+    url: https://www.mdpi.com/2076-3417/10/23/8532
+    grade: A
+    questions: [02:Q8]
+    summary: >-
+      8 RCT, n=190 (férfi+nő): HRV-vezérelt vs. előre írt edzés. Egyik kimenetben sincs szignifikáns csoportkülönbség:
+      VO2max MD=0,96 ml/kg/perc (95% CI -1,11-3,03; p=0,36), maximális aerob teljesítmény SMD=0,06 (-0,26-0,38),
+      aerob teljesítmény SMD=0,14 (-0,22-0,51), teljesítmény VT1-en SMD=0,27 (-0,16-0,70), VT2-n SMD=0,18 (-0,20-0,57).
+      A HRV-vezérlés tehát nem rosszabb, de csoportszinten nem is jobb az előre írt tervnél.
+    quote: >-
+      "Although HRV-based training periodization improved both physiological variables and aerobic performance, this
+      method did not provide significant benefit over PT." (VO2max "MD = 0.96; 95% CI: −1.11, 3.03; p = 0.36")
+    notes: >-
+      Vegyes populáció (futó, kerékpáros, ülő), rövid (4-15 hetes) beavatkozások, kis vizsgálatok. Több egyedi RCT-ben
+      (Kiviniemi 2007, Vesterinen 2016, Javaloyes 2019) a HRV-csoport a KEVESEBB intenzív edzésnappal érte el ugyanazt
+      vagy jobbat – az érvelhető haszon a felesleges intenzitás kiszűrése, nem a többletteljesítmény.
+    status: ellenorizve-doi
+
+  - key: stone-2021-wearable-validity
+    type: journal
+    authors: [Stone J.D., Ulman H.K., Tran K., Thompson A.G., Halter M.D., Ramadan J.H., Stephenson M., Finomore V.S., Galster S.M., Rezai A.R., Hagen J.A.]
+    year: 2021
+    title: "Assessing the Accuracy of Popular Commercial Technologies That Measure Resting Heart Rate and Heart Rate Variability"
+    journal: "Frontiers in Sports and Active Living 3:585870"
+    doi: 10.3389/fspor.2021.585870
+    url: https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2021.585870/full
+    grade: B
+    questions: [02:Q8]
+    summary: >-
+      5 fiatal felnőtt (3 férfi, 2 nő), 148 validációs mérés EKG-referenciával: a mellkaspántok és a jobb appok
+      pontosak (nyugalmi pulzus MAPE: Firstbeat 0%, HRV4Training 2,34%), rMSSD-re a HRV4Training (MAPE 4,10%; CCC 0,98)
+      és az Oura gyűrű (6,84%; CCC 0,91) jó; a kamera-alapú CameraHRV app használhatatlan (MAPE 112,36%; CCC 0,04).
+      A validitás tehát eszközfüggő: dedikált mérés (pánt, gyűrű, validált app) igen, tetszőleges PPG nem.
+    quote: >-
+      "HRV4Training (4.10%; CCC: 0.98) and OURA (6.84%; CCC: 0.91)" ... "CameraHRV [112.36%, concordance correlation
+      coefficient (CCC): 0.04]".
+    notes: >-
+      Nagyon kis minta (n=5), fiatal egészségesek, nyugalmi kontrollált mérés – nem edzés utáni terepi állapot. Whoopot
+      és Garmint NEM tesztelte; azokra külön validációk vannak (éjszakai aggregált HRV általában elfogadható, pillanatnyi
+      értékek zajosabbak). A tanulság ultrásnak: az abszolút szám eszközök közt nem összevethető, csak a saját trend.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q9: túledzés és betegség
+  - key: meeusen-2013-ots-consensus
+    type: consensus
+    authors: [Meeusen R., Duclos M., Foster C., Fry A., Gleeson M., Nieman D., Raglin J., Rietjens G., Steinacker J., Urhausen A.]
+    year: 2013
+    title: "Prevention, diagnosis and treatment of the overtraining syndrome: Joint consensus statement of the European College of Sport Science (ECSS) and the American College of Sports Medicine (ACSM)"
+    journal: "European Journal of Sport Science 13(1):1-24"
+    doi: 10.1080/17461391.2012.730061
+    url: https://api.crossref.org/works/10.1080/17461391.2012.730061
+    grade: A
+    questions: [02:Q9]
+    summary: >-
+      ECSS-ACSM konszenzus: a kontinuum funkcionális overreaching (FOR: átmeneti teljesítményesés, pihenés után
+      szuperkompenzáció, napok-hetek), nem-funkcionális overreaching (NFOR: elhúzódó, hetek-hónapok, haszon nélkül) és
+      túledzés-szindróma (OTS: hónapok, több rendszert érintő "prolonged maladaptation", pszichés tünetekkel). A diagnózis
+      kizárásos (szervi betegség, hiányállapot, fertőzés kizárása); egyetlen megbízható, általánosan elfogadott
+      biomarker sincs, a legjobb jel maga a teljesítménycsökkenés + hangulatzavar.
+    quote: >-
+      OTS is characterized by "prolonged maladaptation" of multiple biological systems ... multiple markers exist
+      (hormonal, psychological, biochemical, immune) "but none universally meet acceptance criteria". [absztraktból]
+    notes: >-
+      Konszenzus, nem új adat. Prevalencia-becslések a szakirodalomban: elit állóképességi sportolók ~10%-a (karrier
+      szinten 30-60% is előfordul egyes felméréseknél) – a konszenzus maga óvatos a számokkal. Heti 6-15 órás amatőrnél
+      az OTS ritka; a reális kockázat a NFOR (munka+család+edzés össz-stressz), aminél a "kizárásos" logika ugyanúgy áll.
+    status: ellenorizve-doi
+
+  - key: tenhaaf-2017-for-prediction
+    type: journal
+    authors: [ten Haaf T., van Staveren S., Oudenhoven E., Piacentini M.F., Meeusen R., Roelands B., Koenderman L., Daanen H.A.M., Foster C., de Koning J.J.]
+    year: 2017
+    title: "Prediction of Functional Overreaching From Subjective Fatigue and Readiness to Train After Only 3 Days of Cycling"
+    journal: "International Journal of Sports Physiology and Performance 12(s2):S2-87-S2-94"
+    doi: 10.1123/ijspp.2016-0404
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2016-0404
+    grade: B
+    questions: [02:Q9]
+    summary: >-
+      Nem elit kerékpárosok 8 napos, 1300 km-es, 18 500 m szintemelkedésű túrája (n=15): akik utána teljesítményt
+      vesztettek, funkcionálisan túlterheltnek (FOR) minősültek. Egyetlen napi mutató (nyugalmi pulzus, hőmérséklet,
+      hangulat) sem különböztette meg egyénileg a FOR-t az akut fáradtságtól; a kérdőíves fáradtság + edzéskészség
+      (readiness to train) kombinációja viszont már a 3. napon 78%-os pontossággal (szenzitivitás 79%, specificitás 77%)
+      előre jelezte a FOR-t.
+    quote: >-
+      "a combination of questionnaire-based changes in readiness to train" predicted "78% of subjects or FOR
+      (sensitivity = 79%, specificity = 77%)". [absztraktból]
+    notes: >-
+      Kerékpáros, többnapos, amatőr-releváns terepvizsgálat (a hivatkozott esemény a Klimmen naar Parijs jellegű túra).
+      Kis n; a "FOR" határa itt a teszt-teljesítmény esése. Üzenet ultrásnak: az egyszerű napi kérdőív (fáradtság,
+      készenlét) korábban és jobban jelez, mint a pulzus-alapú objektív mutatók.
+    status: ellenorizve-doi
+
+  - key: hausswirth-2014-sleep-illness
+    type: journal
+    authors: [Hausswirth C., Louis J., Aubry A., Bonnet G., Duffield R., Le Meur Y.]
+    year: 2014
+    title: "Evidence of Disturbed Sleep and Increased Illness in Overreached Endurance Athletes"
+    journal: "Medicine & Science in Sports & Exercise 46(5):1036-1045"
+    doi: 10.1249/MSS.0000000000000177
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000000177
+    grade: A
+    questions: [02:Q9]
+    summary: >-
+      27 edzett férfi triatlonista, 6 hét aktigráfiás alvásmonitorozás, randomizált túlterheléses (n=18) vs. kontroll
+      (n=9) csoport. A túlterheltek fele (9/18) funkcionálisan túledzetté (F-OR) vált: alvásidő -7,9±6,7%,
+      alváshatékonyság -1,6±0,7%; a felső légúti megbetegedés az F-OR csoport 67%-át érintette, a kontroll 11%-át.
+      Taper alatt az alvás helyreállt. A romló alvás tehát a túlterhelés korai, mérhető kísérőjele, és a fertőzéskockázat
+      megugrásával jár együtt.
+    quote: >-
+      F-OR athletes showed a "decrease in duration (−7.9% ± 6.7%), efficiency (−1.6% ± 0.7%), and immobile time
+      (−7.6% ± 6.6%)"; illness incidence "F-OR group reported 67%, control athletes 11%". [absztraktból]
+    notes: >-
+      n=27, csak férfi, triatlon, laborhoz kötött edzésblokk. Az ok-okozat kétirányú lehet (rossz alvás → túlterhelés is).
+      Ultrás gyakorlat: nagy volumenblokk + romló alvás + munkahelyi stressz együttese a legerősebb betegség-előjel;
+      az alvásminőség-trend a legolcsóbb monitor.
+    status: ellenorizve-doi
+
+  - key: clarke-2013-banister-model
+    type: journal
+    authors: [Clarke D.C., Skiba P.F.]
+    year: 2013
+    title: "Rationale and resources for teaching the mathematical modeling of athletic training and performance"
+    journal: "Advances in Physiology Education 37(2):134-152"
+    doi: 10.1152/advan.00078.2011
+    url: https://api.crossref.org/works/10.1152/advan.00078.2011
+    grade: C
+    questions: [02:Q7]
+    summary: >-
+      Lektorált módszertani áttekintés a Banister-féle impulzus-válasz modellről, amelynek kereskedelmi leegyszerűsítése
+      a TrainingPeaks PMC (CTL/ATL/TSB): a teljesítménykapacitás a terhelés-impulzusokból számolt "fittség" (lassú,
+      alap-időállandó ~42 nap) és "fáradtság" (gyors, ~7 nap) exponenciálisan lecsengő különbsége. A modell jól illeszthető
+      egyéni teljesítményadatokra, de az élettant absztrahálja; az időállandók egyénenként nagyon eltérnek, és a jövőbeli
+      előrejelző ereje kalibrálás nélkül gyenge.
+    quote: >-
+      the Banister impulse-response model describes how "an individual's performance capacity changes over time as a
+      function of training" ... such models can "accurately fit performance data" while abstracting underlying physiology.
+      [absztraktból]
+    notes: >-
+      Oktatási célú áttekintés, nem validációs vizsgálat. A PMC-modell rejtett feltevései ultrásnak: (1) minden TSS-pont
+      egyenértékű (1 óra FTP = 3 óra Z1?), (2) a fáradtság 1 dimenziós, (3) a konstansok (42/7 nap) populációs átlagok.
+      A TSB ("frissesség") csak ezekkel a feltevésekkel értelmezhető.
+    status: ellenorizve-doi
+
+  - key: plews-2013-hrv-monitoring
+    type: journal
+    authors: [Plews D.J., Laursen P.B., Stanley J., Kilding A.E., Buchheit M.]
+    year: 2013
+    title: "Training Adaptation and Heart Rate Variability in Elite Endurance Athletes: Opening the Door to Effective Monitoring"
+    journal: "Sports Medicine 43(9):773-781"
+    doi: 10.1007/s40279-013-0071-8
+    url: https://link.springer.com/article/10.1007/s40279-013-0071-8
+    grade: C
+    questions: [02:Q8]
+    summary: >-
+      A gyakorlati HRV-monitorozás alapcikke: napi egyetlen mérés helyett gördülő (jellemzően 7 napos) átlagot kell
+      követni ("appropriate averaging techniques"), mert a napi rMSSD zaja nagy; a mutató a vagális tónusra érzékeny
+      rMSSD legyen; és figyelmeztet a "HRV-telítődés" jelenségére elit sportolóknál: a HRV csökkenhet MIKÖZBEN a nyugalmi
+      pulzus is csökken (paraszimpatikus telítődés), ami nem fáradtságjel.
+    quote: >-
+      the authors recommend "the use of appropriate averaging techniques" and "the use of specific HRV indices to
+      overcome the issue of HRV saturation in elite athletes (i.e., reductions in HRV despite decreases in resting
+      heart rate)". [absztraktból]
+    notes: >-
+      Narratív áttekintés elit állóképességi kontextusban; a "7 napos gördülő átlag" számszerű ajánlása a szerzők
+      kapcsolódó empirikus cikkeiből (Plews 2012, 2014) származik. Mérési feltételek a gyakorlatban: reggel, ébredés
+      után, ürítés után, fekve vagy ülve, spontán légzéssel, azonos protokollal.
+    status: ellenorizve-doi
+
+  - key: vesterinen-2016-hrv-rct
+    type: journal
+    authors: [Vesterinen V., Nummela A., Heikura I.A., Laine T., Hynynen E., Botella J., Häkkinen K.]
+    year: 2016
+    title: "Individual Endurance Training Prescription with Heart Rate Variability"
+    journal: "Medicine & Science in Sports & Exercise 48(7):1347-1354"
+    doi: 10.1249/MSS.0000000000000910
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000000910
+    grade: A
+    questions: [02:Q8]
+    summary: >-
+      40 amatőr futó, 8 hét, randomizált: a HRV-csoport csak akkor futott kemény edzést, ha a reggeli HRV a normál
+      sávban volt. A HRV-csoport szignifikánsan KEVESEBB intenzív edzést végzett (13,2±6,0 vs. 17,7±2,5), mégis többet
+      javult 3000 m-en (+2,1±2,0%, p=0,004 vs. +1,1±2,7%, p=0,118). VO2max mindkét csoportban nőtt (3,7±4,6% vs. 5,0±5,2%).
+      A HRV-vezérlés fő haszna az intenzív napok jobb időzítése, kevesebb "rossz napi" kemény edzés.
+    quote: >-
+      "HRV-guided group completed significantly fewer intense sessions (13.2 ± 6.0) compared to traditional training
+      (17.7 ± 2.5)" ... 3000 m "improved more in the HRV group (2.1% ± 2.0%, P = 0.004)". [absztraktból]
+    notes: >-
+      n=40 amatőr futó (vegyes nem), 8 hét. Futás, nem kerékpár; kerékpáros megfelelője javaloyes-2019-hrv-cycling.
+      Munka melletti amatőrnek a "kevesebb, jól időzített intenzitás" kifejezetten releváns tanulság.
+    status: ellenorizve-doi
+
+  - key: altini-2021-hrv-freeliving
+    type: journal
+    authors: [Altini M., Plews D.]
+    year: 2021
+    title: "What Is behind Changes in Resting Heart Rate and Heart Rate Variability? A Large-Scale Analysis of Longitudinal Measurements Acquired in Free-Living"
+    journal: "Sensors 21(23):7932"
+    doi: 10.3390/s21237932
+    url: https://www.mdpi.com/1424-8220/21/23/7932
+    grade: B
+    questions: [02:Q8]
+    summary: >-
+      28 175 HRV4Training-felhasználó, 9 032 749 szabadéletbeli mérés. A nyugalmi pulzust és rMSSD-t legjobban a nem
+      edzés jellegű stresszorok mozgatják: sok alkohol (pulzus +6%, rMSSD -12%), betegség (pulzus +6%, rMSSD -10%),
+      menstruációs fázisváltás (pulzus 1,6%, rMSSD 3,2% változás); az edzés önmagában csak kis hatás (pulzus 1,3%,
+      rMSSD 4,6%). A HRV érzékenyebb, de nem specifikus stresszjelző, mint a pulzus.
+    quote: >-
+      high alcohol intake: heart rate "6% increase", rMSSD "12% reduction"; sickness: "6% increase" / "10% reduction";
+      training: "1.3%" and "4.6%" change ... "HRV is a more sensitive but not specific marker of stress".
+    notes: >-
+      Óriási n, de önszelektált app-felhasználók, önbevallott címkék (alkohol, betegség), telefonkamerás/pántos vegyes
+      mérés. Döntési következmény: alacsony HRV-nap először életmód-okot keress (alkohol, kezdődő betegség, rossz alvás),
+      és csak trendszerű (7 napos) eltérésre reagálj edzésmódosítással.
+    status: ellenorizve-doi
+
+  - key: schwellnus-2016-ioc-illness
+    type: consensus
+    authors: [Schwellnus M., Soligard T., Alonso J.M., Bahr R., Clarsen B., Dijkstra H.P., Gabbett T.J., Gleeson M., Hägglund M., Hutchinson M.R., Janse van Rensburg C., Meeusen R., Orchard J.W., Pluim B.M., Raftery M., Budgett R., Engebretsen L.]
+    year: 2016
+    title: "How much is too much? (Part 2) International Olympic Committee consensus statement on load in sport and risk of illness"
+    journal: "British Journal of Sports Medicine 50(17):1043-1052"
+    doi: 10.1136/bjsports-2016-096572
+    url: https://api.openalex.org/works/doi:10.1136/bjsports-2016-096572
+    grade: A
+    questions: [02:Q9]
+    summary: >-
+      IOC-konszenzus a terhelés és a betegségkockázat kapcsolatáról: a helytelen terhelésmenedzsment (hirtelen
+      terhelésugrás, zsúfolt versenynaptár, pszichés stressz, utazás) az akut megbetegedés és a túledzés szignifikáns
+      kockázati tényezője. Ajánlás: egyénre szabott, fokozatos terhelésprogresszió, wellness-monitorozás (alvás, hangulat,
+      fáradtság), és a terhelés csökkentése fertőzéses tünetek idején.
+    quote: >-
+      "inappropriate load management is a significant risk factor for acute illness and the overtraining syndrome".
+      [absztraktból]
+    notes: >-
+      Konszenzus, főleg elit sportadatokra épül; konkrét számküszöböt (pl. ACWR-sáv) az illness-oldalra sem tud
+      bizonyítékkal adni. Amatőr ultrásnál az "össz-stressz" (munka, család, utazás) ugyanúgy a terhelés része.
+    status: ellenorizve-doi
+
+  - key: campbell-2018-immune-debunk
+    type: journal
+    authors: [Campbell J.P., Turner J.E.]
+    year: 2018
+    title: "Debunking the Myth of Exercise-Induced Immune Suppression: Redefining the Impact of Exercise on Immunological Health Across the Lifespan"
+    journal: "Frontiers in Immunology 9:648"
+    doi: 10.3389/fimmu.2018.00648
+    url: https://api.openalex.org/works/doi:10.3389/fimmu.2018.00648
+    grade: C
+    questions: [02:Q9]
+    summary: >-
+      A J-görbe/"nyitott ablak" hipotézis kritikai újraértelmezése: az edzés utáni limfocitaszám-esés nem immunszuppresszió,
+      hanem az immunsejtek átmeneti, időfüggő kivándorlása a perifériás szövetekbe (fokozott immunfelügyelet); a nyál-IgA
+      változásai nem jelölnek ki immunszupprimált időszakot; megbízható bizonyíték a megnövekedett opportunista
+      fertőzéskockázatra korlátozott. A rendszeres edzés összességében javítja az immunkompetenciát.
+    quote: >-
+      "limited reliable evidence exists to support the claim that exercise heightens risk of opportunistic infections"
+      ... changes in salivary IgA "do not signpost a period of immune suppression". [absztraktból]
+    notes: >-
+      Narratív, provokatív álláspont; a vita nem zárult le (Simpson 2020-as ellencikk védte a nyitott ablakot). A
+      gyakorlati közös nevező: a fertőzésklaszterek nagy versenyek/nagy terhelésblokkok körül valósak, de az ok
+      multifaktoriális (kitettség, utazás, alvás, energiahiány), nem az edzés önmagában.
+    status: ellenorizve-doi
+
+  - key: walsh-2018-immune-recs
+    type: journal
+    authors: [Walsh N.P.]
+    year: 2018
+    title: "Recommendations to maintain immune health in athletes"
+    journal: "European Journal of Sport Science 18(6):820-831"
+    doi: 10.1080/17461391.2018.1449895
+    url: https://api.crossref.org/works/10.1080/17461391.2018.1449895
+    grade: C
+    questions: [02:Q9]
+    summary: >-
+      Áttekintés + 10 pontos gyakorlati ajánlás: elhúzódó nehéz terhelés (≥90 perc) után az immunfunkciók órákra 15-70%-kal
+      csökkennek; hosszú repülőút 2-5-szörös URTI-tünet kockázattal jár; a <6 óra alvás ~4-5-szörösére emeli a megfázás
+      esélyét vírus-expozíció után. Betegség-szabály: "lázzal, nyak alatti tünetekkel ne edz és ne versenyezz"; kockázati
+      tényező még az alacsony energia-elérhetőség, a pszichés stressz és a depresszió.
+    quote: >-
+      "Do not train or compete with 'below-the-neck' symptoms" ... athletes sleeping "less than 6 hours" had "4-5 times
+      greater chance" of developing a common cold after viral exposure. [teljes szövegből, LJMU repozitórium-kézirat]
+    notes: >-
+      Egy szerzős szakértői áttekintés; az alvás-megfázás szám a Prather 2015 (Sleep) kísérletből idézett másodlagos adat.
+      A "nyak-szabály" (nyak feletti tünet: könnyű edzés mehet; nyak alatti tünet/láz: tilos) itt lektorált formában
+      jelenik meg – ultrán a lázas állapotban versenyzés miokarditisz-kockázata miatt abszolút stopszabály.
+    status: ellenorizve-doi
+
+  - key: neville-2008-siga
+    type: journal
+    authors: [Neville V., Gleeson M., Folland J.P.]
+    year: 2008
+    title: "Salivary IgA as a Risk Factor for Upper Respiratory Infections in Elite Professional Athletes"
+    journal: "Medicine & Science in Sports & Exercise 40(7):1228-1236"
+    doi: 10.1249/mss.0b013e31816be9c3
+    url: https://api.openalex.org/works/doi:10.1249/mss.0b013e31816be9c3
+    grade: B
+    questions: [02:Q9]
+    summary: >-
+      38 elit America's Cup vitorlázó, 50 hét, heti nyál-IgA mérés. Az abszolút s-IgA szint NEM korrelált az URTI-vel
+      (r=0,11), a mutató egyéni variabilitása óriási (CV 48% egyénen belül, 71% egyének közt); viszont az URTI-t megelőző
+      3 hétben az s-IgA átlagosan 28%-kal esett, és az egyéni átlag 40%-a alá csökkent érték jelezte a megnövekedett
+      fertőzéskockázatot. A nyál-IgA tehát csak egyéni trendként, nem abszolút értékként használható.
+    quote: >-
+      "No significant correlation existed between absolute s-IgA concentration and URTI incidence (r = 0.11)" ... "a
+      marked 28% reduction in s-IgA occurred during the 3 weeks preceding URTI episodes". [absztraktból]
+    notes: >-
+      Vitorlázás (nem állóképességi sport), elit férfiak, de a leghosszabb (50 hetes) longitudinális s-IgA adatsor.
+      Gyakorlati üzenet: amatőrnek a heti IgA-mérés nem reális; a helyettesítő az alvás/fáradtság/torokkaparás-trend.
+    status: ellenorizve-doi
+
+  - key: stellingwerff-2021-ots-reds
+    type: journal
+    authors: [Stellingwerff T., Heikura I.A., Meeusen R., Bermon S., Seiler S., Mountjoy M.L., Burke L.M.]
+    year: 2021
+    title: "Overtraining Syndrome (OTS) and Relative Energy Deficiency in Sport (RED-S): Shared Pathways, Symptoms and Complexities"
+    journal: "Sports Medicine 51(11):2251-2280"
+    doi: 10.1007/s40279-021-01491-0
+    url: https://api.crossref.org/works/10.1007/s40279-021-01491-0
+    grade: C
+    questions: [02:Q9]
+    summary: >-
+      Szisztematikus szemléletű narratív áttekintés: az OTS és a RED-S tünetei és élettani útvonalai nagymértékben
+      átfednek (teljesítményesés, hormonális szuppresszió, hangulatzavar, immunproblémák), és a publikált "túledzés"-esetek
+      jelentős részében az energiahiányt nem zárták ki – vagyis sok OTS-diagnózis valójában felismeretlen RED-S lehet.
+      Következtetés: teljesítményesésnél először az energia-elérhetőséget kell auditálni, csak utána túledzést kimondani.
+    quote: >-
+      The review examines the "shared pathways, symptoms and complexities" of OTS and RED-S, demonstrating substantial
+      overlap between the two conditions. [absztraktból/kiadói összefoglalóból]
+    notes: >-
+      Szerzői gárda a két terület vezetőiből (Meeusen=OTS konszenzus, Mountjoy=REDs konszenzus, Seiler). Nagy volumenű
+      ultra-felkészülés heti 6-15 órában is könnyen ad krónikus deficitet (lásd keay-2018-male-cyclists-lea,
+      mountjoy-2023-ioc-reds) – a modul "kizárási sorrend" tanítását ez a forrás alapozza meg.
+    status: ellenorizve-doi

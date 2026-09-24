@@ -1,0 +1,623 @@
+# 02. modul – Edzéselmélet ultrára – D csomag (Q10: gyakorlati konvergencia – rutinos ultrakerékpárosok és edzőik felkészülése; Q11: feltörekvő módszerek – hőblokk, hipoxia, AI-tervezők, durability-edzés, minimál-dózis, brain endurance training)
+# Készült: 2026-09-24. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex / Europe PMC oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   rutberg-cts-2016, rutberg-pulford-cts-ultra-2025, white-2016-ridefar-method, ridefar-schedule, ridefar-time-efficiency,
+#   wilcox-roadman-2026, wilcox-rouleur-2024, wilcox-adventurecycling-2022, strasser-inscyd-2022, strasser-power2max-2018,
+#   strasser-datasport-2019, strasser-pez-2019, strasser-cyclite-2025, sehili-breakaway, sehili-rawcycling-atlas,
+#   gemperle-apidura-2026, towers-3tactics-2024, towers-substack-2026, hayden-tcr6-story, hayden-confidence-realistic,
+#   hayden-restrap-2016, hughes-rbr-2015, hughes-rbr-showstoppers-2019, racinais-2015-heat-consensus, periard-2021-heat-review,
+#   spragg-2023-durability, spragg-2024-intensity, sanchez-jimenez-2025-durability-sr, maunder-2021-durability,
+#   barsumyan-2025-durability-amateur, hunter-2025-durability-methods, evans-2025-durability-domain, brayson-2019-tcr,
+#   hyldahl-2024-tourdivide, rothschild-2021-ultracyclist
+sources:
+  # ================================================================ Q10: gyakorlati konvergencia
+  - key: white-ridefar-trainingplan
+    type: web-guide
+    authors:
+    - White C. (Ride Far)
+    credential: Chris White – TCR-befutó (2015–2017), a Ride Far ultra-bikepacking tudástár szerzője
+    year: 2017
+    title: Training Plans for Bikepacking Races
+    venue: ridefar.info (Rider → Physical Training)
+    doi: null
+    url: https://ridefar.info/rider/physical/training-plan/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      A Ride Far edzésterv-filozófiája: havi (nem heti) km-célok, tipikusan 500–1000 km/hó télen és 1000–1500 km/hó
+      tavasszal-nyáron, azaz 2000–20 000+ km a verseny előtti hat hónapban (az elit példa: Allegaert ~20 000 km 7 hónap
+      alatt). A 4–6 óránál hosszabb edzések szerinte nem adnak további élettani hasznot, csak a regenerációt rontják;
+      a ~2 W/kg 12 órán át napi szinten már a legtöbb bikepacking-verseny befejezéséhez elég. Ingázás a leghatékonyabb
+      volumenforrás; a rajt előtt 1–2 hét könnyítés és sok alvás.
+    quote: >-
+      "Between 2,000 km and 20,000+ km in the six months leading up to the event." ... "Averaging about 2 watts per kg
+      for 12 hours of riding per day will allow you to finish most bikepacking races in a reasonable time." (WebFetch-kivonatból)
+    notes: >-
+      Nem lektorált tapasztalati útmutató (C), n nincs. A "4–6 óra fölött nincs többlet-adaptáció" állítás ellentmond a
+      hosszú edzések durability-irodalmának (spragg-2024-intensity) és a WUCA/CTS "long ride a kulcs" elvének – ez a
+      konvergencia-mátrix egyik fő eltérése. Idézetek a WebFetch-összefoglalóból (másodlagos kivonat az oldal szövegéből).
+    status: url-megnyitva
+
+  - key: white-ridefar-multiday
+    type: web-guide
+    authors:
+    - White C. (Ride Far)
+    credential: Chris White – TCR-befutó, Ride Far tudástár
+    year: 2017
+    title: Multi-Day Training Rides for Bikepacking Races
+    venue: ridefar.info (Rider → Physical Training)
+    doi: null
+    url: https://ridefar.info/rider/physical/multi-day/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      A többnapos gyakorlótúra célja White-nál nem az élettani adaptáció, hanem a mentális felkészülés, a felszerelés-
+      és stratégia-teszt: napi 10+ óra nyeregben, a teljes idő 80–90%-a mozgásban, a verseny-felszereléssel, alvás- és
+      táplálkozási stratégiát kipróbálva, a nagy esemény előtti hónapokban.
+    quote: >-
+      "Rides longer than about 4-6 hours do not increase your physical capabilities." ... "aim to be on the bike for
+      10+ hours per a day" ... "at least 80% to 90% of the elapsed time actually in the saddle" (WebFetch-kivonatból)
+    notes: >-
+      Tapasztalati (C). Pontos darabszámot és időzítést nem ad ("a hónapokban a verseny előtt"). Kontraszt: az Apidura-
+      cikkben Ibbett konkrétan "4 napos túra ~1 hónappal a verseny előtt" ajánlást ad (apidura-2018-ultratraining).
+    status: url-megnyitva
+
+  - key: towers-2024-trainingweek
+    type: web-article
+    authors:
+    - Towers G.
+    credential: Gregor Towers – ultrakerékpáros versenyző és edző (Equilibrio Cycling), DotWatcher-szerző
+    year: 2024
+    title: Perfect your ultra cycling training strategy & avoid my biggest mistake
+    venue: gregortowers.substack.com, 2024-05-24
+    doi: null
+    url: https://gregortowers.substack.com/p/perfect-your-ultra-cycling-training
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Versenyző-edző saját heti mintája: 15–20 óra/hét a "sweet spot", 12 óra alatt szerinte nem optimális az ultra-
+      felkészülés; 4 hetes blokkok (3 terhelő + 1 regeneráló hét); heti szerkezet: hétfő pihenő/1 h könnyű, kedd VO2max-
+      intervall, szerda tempó/küszöb (2,5 h), csütörtök Z2 (2–3 h), péntek alapozó 3–5 h, hétvégén back-to-back 5+ órás
+      hosszú edzések; 80/20 (néha 90/10) intenzitás-eloszlás; heti egy ~162 km-es edzés. Legnagyobb hibája: 7 hetes
+      blokkok pihenőhét nélkül → krónikus fáradtság.
+    quote: >-
+      "15-20 hour weeks is the sweet spot for my training. Anything below 12 hour training weeks isn't going to optimally
+      prepare your body." ... "The balance between zone 2 riding (endurance) and intensity should be 80/20, sometimes 90/10."
+    notes: >-
+      n=1 versenyzői-edzői gyakorlat (C); a 15–20 h a célközönség (6–15 h/hét) felső sávja fölött van. A "12 óra alatt nem
+      optimális" ellentmond a CTS time-crunched (4–6 h) és a Ride Far "havi km-cél" megközelítésnek – mátrix-sor. Idézetek
+      WebFetch-kivonatból.
+    status: url-megnyitva
+
+  - key: comeau-2017-raam-training
+    type: web-article
+    authors:
+    - Comeau B.
+    credential: World UltraCycling Association (WUCA) cikk; Hughes/Allen/Empfield-idézetekkel, RAAM-versenyzői körkérdéssel
+    year: 2017
+    title: 'From the Field: How RAAM Riders Train'
+    venue: ultracycling.com (WUCA), 2017-02-02
+    doi: null
+    url: https://ultracycling.com/how-raam-riders-train/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      A "klasszikus" RAAM-felkészülés négy fázisa: alap (4 hónap, ~5500 mérföld ≈ 8850 km, a fázis végére 12–18 órás
+      hetek); sebesség-munka (1–2 hónap, heti egy intenzív edzés a hosszú edzés megtartásával); csúcsforma (6 hét,
+      heti 100 mérföldes időfutamok + hétvégi back-to-back 250+150 mérföld vagy egyben 300 mérföld, egyeseknél 3×24 órás
+      edzés, ~2500 mérföld/hó); tapering (1–3 hét, hosszú edzés 100–150 mérföldre, ~600 mérföld/hó). Összvolumen: ~10 000
+      mérföld (~16 000 km) a RAAM előtti 7–8 hónapban. Az 1998-as RAAM utáni körkérdés tanulsága: a versenyzők többsége
+      "több sebesség-munkát" iktatna be.
+    quote: >-
+      "Accomplished RAAM riders typically ride about 10,000 miles in the 7-8 months preceding RAAM" ... "For endurance
+      riders, total volume is less important than the long ride of the week." ... many responded: "more speed work."
+    notes: >-
+      Szerkesztett szakcikk versenyzői körkérdéssel, n nincs számszerűsítve (C). Kísérős RAAM-ra kalibrált (a mezőny
+      felső része); a 12–18 órás hetek és a back-to-back csúcshétvége az önellátó felkészüléssel egybevág, a 3×24 órás
+      edzés szélsőség. Idézetek WebFetch-kivonatból.
+    status: url-megnyitva
+
+  - key: pulford-2026-timecrunched
+    type: web-guide
+    authors:
+    - Pulford A. (CTS)
+    credential: Adam Pulford – CTS Head Cycling Coach, USA Cycling L1, CSCS
+    year: 2026
+    title: 'Time-Crunched? Here''s the Training Week Framework That Works'
+    venue: trainright.com (CTS), 2026-03-27
+    doi: null
+    url: https://trainright.com/time-crunched-training-week-framework/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      CTS-keret munka melletti sportolónak: heti 2 kemény nap (kedd–csütörtök horgony-edzések), heti 4–6 óra összvolumen
+      2–3 órás leghosszabb edzéssel is fenntartható fejlődést adhat; legalább 1 teljes pihenőnap/hét; a "nehéz" edzés
+      TSS-ben a CTL 150–200%-a, a "könnyű" a CTL 75–90%-a; a konzisztencia fontosabb, mint a heti csúcsterhelés.
+    quote: >-
+      "Two hard days per week is a great starting point" ... "Designate at least 1 day completely off the bike per week"
+      ... "Easy: TSS 10-25% BELOW CTL; Hard: TSS 50-100% ABOVE CTL" (WebFetch-kivonatból)
+    notes: >-
+      Edzői keret (C), nem ultra-specifikus, de a CTS a RAAM-versenyzők edzőműhelye, és a célközönség (6–15 h/hét) alsó
+      sávjára ez a legrelevánsabb publikus keret. A 4–6 h/hét mint minimum éles ellentét Towers "12 óra alatt nem
+      optimális" tételével – mátrix-sor. TSS-szabályai a terhelés-kalkulátorhoz használhatók.
+    status: url-megnyitva
+
+  - key: apidura-2018-ultratraining
+    type: web-guide
+    authors:
+    - Apidura (Hammond S., Ibbett J., Allegaert K. közreműködésével)
+    credential: 'Apidura tudástár; idézett versenyzők: Sarah Hammond (Race to the Rock győztes), Josh Ibbett (TCR No.3 győztes 2015), Kristof Allegaert (3x TCR-győztes)'
+    year: 2018
+    title: How to Train for an Ultra-Distance Cycling Event
+    venue: apidura.com Journal, 2018-02-22 (frissítve 2025-03-25)
+    doi: null
+    url: https://www.apidura.com/journal/how-to-train-for-an-ultra-distance-bikepacking-race/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Három élversenyző felkészülési elvei: Ibbett 6 hónappal a verseny előtt általános fitnesz + küszöb/tempó fókuszt
+      javasol, és óva int a "csak hosszú-lassú" edzéstől ("attól leszel jó, hogy lassan mész sokáig"); kulcs-edzése egy
+      4 napos túra ~1 hónappal a nagy esemény előtt, napi egész napos tekeréssel és ~6 óra alvással. Hammond hétköznap
+      2 erő- (nagy áttételes hegyi ismétlés), 3 küszöb alatti (20–60 perc) és 2 core-edzést végez, hétvégén back-to-back
+      hosszú, mászós napokat. Tapering: Hammond 1 héttel a rajt előtt teljesen leáll; Ibbett szerint "sosem lehetsz túl friss".
+    quote: >-
+      "By doing loads of really long, slow rides, you'll just become good at riding slowly for a long time!" ...
+      "Try to do a four-day ride about a month away from a big event, making sure I ride all day and sleep for around
+      six hours." ... "You can never be too fresh."
+    notes: >-
+      Gyártói tudástár-cikk élversenyzői idézetekkel (C), n=3, önellátó ultrakerékpár. A "ne csak hosszú-lassú" elv
+      egybevág a WUCA "more speed work" tanulsággal; a hétvégi back-to-back mindhárom forrásban visszatér. Idézetek
+      WebFetch-kivonatból.
+    status: url-megnyitva
+
+  - key: strasser-welovecycling-2017
+    type: interview
+    authors:
+    - Škoda We Love Cycling (interjú Christoph Strasserrel)
+    credential: 'alany: Christoph Strasser – (akkor) négyszeres RAAM-győztes, később hatszoros; 24 órás világrekorder'
+    year: 2017
+    title: 'Interview: Meet Christoph Strasser, the Ultimate Endurance Enthusiast'
+    venue: welovecycling.com, 2017-11-23
+    doi: null
+    url: https://www.welovecycling.com/wide/2017/11/23/interview-meet-christoph-strasser-ultimate-endurance-enthusiast/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Strasser évi ~30 000 km edzésvolument közöl (plusz a ~4800 km-es RAAM), évi 2–3 versennyel és ~6 hónapos
+      célirányos RAAM-felkészüléssel. A 24 órás pálya-rekordkísérlethez kiegészítésként "sok gimnasztikát és felsőtest-
+      edzést" végzett a pályakerékpár tartáskényszere miatt.
+    quote: >-
+      "I do about 30,000 km of training per year, and then I add the 4,800 km of RAAM."
+    notes: >-
+      Versenyzői önbevallás (C), n=1, elit kísérős formátum. 30 000 km/év ~28–32 km/h-s edzéstempóval ~950–1050 óra/év,
+      azaz ~18–20 óra/hét átlagban – a munka melletti 6–15 órás sávnak 2–3-szorosa; a tankönyvben skála-referencia,
+      nem minta. Óra/hét bontást és zónaadatot nem közöl.
+    status: url-megnyitva
+
+  - key: knechtle-2011-finishers-720km
+    type: journal
+    authors: [Knechtle B., Knechtle P., Rüst C.A., Rosemann T., Lepers R.]
+    year: 2011
+    title: "Finishers and nonfinishers in the 'Swiss Cycling Marathon' to qualify for the 'Race Across America'"
+    journal: "Journal of Strength and Conditioning Research 25(12):3257-3263"
+    doi: 10.1519/jsc.0b013e31821606b3
+    url: https://api.openalex.org/works/pmid:22080313
+    grade: B
+    questions: [02:Q10]
+    summary: >-
+      720 km-es RAAM-kvalifikációs verseny, 39 befutó vs. 37 kieső amatőr. A befutók hetente több edzésegységet, több
+      km-t és gyorsabb edzéstempót mutattak; a teljesítéssel a heti edzéstáv (r=0,37), a heti edzésóra (r=0,44) és az
+      edzéssebesség (r=-0,59) korrelált, a versenyidővel a szervezői (r=0,50) és saját (r=0,49) táplálkozás. Az
+      antropometria nem jelezte előre a teljesítést – a szerzők szerint az edzésvolumen és a megfelelő táplálkozás a
+      siker kulcsa ultrakerékpáron.
+    quote: >-
+      "training distance (r=0.37), weekly training hours (r=0.44), and training speed (r=-0.59) correlated with race
+      completion" (absztraktból, OpenAlex-rekonstrukció)
+    notes: >-
+      Terep-megfigyelés (B), n=76 férfi amatőr ultrakerékpáros, 720 km-es egynapos formátum. Az abszolút heti óraszámok
+      a teljes szövegben vannak (nem nyitható); csak korrelációk idézhetők. Ellentmondás: knechtle-2009-anthropometry-600km
+      a befutókon belül nem talált edzésvolumen–sebesség kapcsolatot.
+    status: ellenorizve-doi
+
+  - key: knechtle-2009-anthropometry-600km
+    type: journal
+    authors: [Knechtle B., Wirth A., Knechtle P., Rosemann T.]
+    year: 2009
+    title: "Moderate Association of Anthropometry, But Not Training Volume, With Race Performance in Male Ultraendurance Cyclists"
+    journal: "Research Quarterly for Exercise and Sport 80(3):563-568"
+    doi: 10.5641/027013609x13088500159606
+    url: https://api.openalex.org/works/doi:10.5641/027013609x13088500159606
+    grade: B
+    questions: [02:Q10]
+    summary: >-
+      28 férfi hobbi-ultrakerékpáros a 600 km-es Swiss Cycling Marathonon: a verseny előtti 3 hónap edzésóráit és km-eit
+      rögzítették. Többszörös lineáris regresszióban az antropometria mérsékelten függött össze a versenysebességgel
+      (r²=0,178, p<0,05), az edzésvolumen egyáltalán nem (r²=0,000, p>0,05). Vagyis a befutók között a "ki mennyit
+      edzett" önmagában nem jósolta a sebességet.
+    quote: >-
+      "anthropometry demonstrated a moderate association with race speed (r² = .178, p < .05), while training volume
+      showed no significant correlation (r² = .000, p > .05)" (absztraktból, OpenAlex-rekonstrukció)
+    notes: >-
+      Megfigyelés (B), n=28 férfi amatőr, 600 km. A volumen–teljesítmény kapcsolat hiánya a BEFUTÓKON belül értendő;
+      a teljesítés valószínűségét a volumen igenis jelzi (knechtle-2011-finishers-720km) – a kettő együtt: a volumen
+      "belépő", nem rangsoroló. r² a sebesség varianciájára; CI nem közölt.
+    status: ellenorizve-doi
+
+  - key: wilcox-expeditionportal
+    type: interview
+    authors:
+    - Expedition Portal (interjú Lael Wilcoxszal)
+    credential: 'alany: Lael Wilcox – Trans Am győztes (2016), Tour Divide női rekorder, világkerülő rekorder (2024)'
+    year: 2016
+    title: An Interview with Ultra-endurance Rider Lael Wilcox
+    venue: expeditionportal.com
+    doi: null
+    url: https://expeditionportal.com/an-interview-with-ultra-endurance-rider-lael-wilcox-final/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Wilcox felkészülési filozófiája: nincs strukturált, periodizált edzés – a versenyre ODATEKERÉS az edzése (a Tour
+      Divide előtt ~3400 km Anchorage-ből Banffba). Kiegészítésként minimális off-bike munkát végez (plank, fekvőtámasz,
+      hátgyakorlatok) sérülésmegelőzésre, mert a kerékpározás "nagyon egyirányú" terhelés.
+    quote: >-
+      "Both times, I rode to the start line from Alaska, so that was my training." ... "I do some training off the bike:
+      planks, push-ups, a back workout, etc., but these are just things to keep my core strong and prevent injuries."
+    notes: >-
+      n=1 elit versenyző (C); a "volumen strukturálatlanul, versenyközeli formában" modell szélsőséges példája – éles
+      kontraszt Barth/Towers strukturált intervallos megközelítésével. Munka melletti amatőrre közvetlenül nem másolható
+      (Wilcox főállású versenyző). Idézetek WebFetch-kivonatból.
+    status: url-megnyitva
+
+  - key: barth-tcr-trainingpeaks-plan
+    type: web-guide
+    authors:
+    - Barth S. (SBU Coaching)
+    credential: Stefan Barth – SBU Sports / SBU Coaching vezetőedző, ultra-állóképességi specialista; TCR-versenyzőkkel dolgozik; kereskedelmi TrainingPeaks-terv
+    year: 2024
+    title: 'Ultracycling Trainingsplan – Transcontinental Race (race proven)'
+    venue: trainingpeaks.com (fizetős edzésterv adatlapja)
+    doi: null
+    url: https://www.trainingpeaks.com/training-plans/cycling/road-cycling/tp-531957/ultracycling-trainingsplan-transcontinental-race-race-proven
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Kereskedelmi, "versenyben bizonyított" 20 hetes TCR-felkészülési terv szerkezete: kombinált ingerek (K3 hegyi
+      intervall, küszöb, VO2max), két "crash" intenzív hét nagy volumennel az esemény-terhelés szimulálására, három
+      hosszú teszttúra (400, 600 és 1000 km) felszerelés- és stratégiateszthez, valamint célzott pihenőhetek a
+      túledzés elkerülésére.
+    quote: >-
+      "Drei lange Ausfahrten (400 km, 600 km, 1.000 km), um Material und Strategien zu testen" ... "Zwei Intensivwochen
+      mit hohem Trainingsumfang simulieren Event-Belastungen" (terméklap, WebFetch-kivonatból)
+    notes: >-
+      Edzői/kereskedelmi közlés (C), heti óraszámot a nyilvános adatlap nem közöl. A 400/600/1000 km-es próbatúrák a
+      brevet-naptárra (SR-sorozat) rímelnek; a "crash-hét" koncepció a WUCA back-to-back csúcshétvégéivel konvergál.
+      Az év a lekérés éve (a lapon nincs dátum) – bizonytalan.
+    status: url-megnyitva
+
+  - key: mcquarrie-tec-zone3
+    type: web-guide
+    authors:
+    - McQuarrie C. (Thomas Endurance Coaching)
+    credential: Carson McQuarrie – Thomas Endurance Coaching, ultra-távú kerékpáros specialista edző
+    year: 2023
+    title: Top 5 Zone 3 Workouts for the Ultra-Endurance Cyclist
+    venue: thomasendurancecoaching.com
+    doi: null
+    url: https://www.thomasendurancecoaching.com/top-5-zone-3-workouts-for-the-ultra-endurance-cyclist/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Ultra-specifikus Z3/tempó edzések időhiányos versenyzőknek: 3–6 óra a küszöb 76%-án; 2,5 h 70%-on + 4×15 perc
+      hegyi ismétlés 78%-on; "stacked" edzés (este 3 h + reggel 90 perc intervallal) a kevés pihenővel tekerés
+      gyakorlására; over-under küszöbmunka. A Z3 szerinte a leghatékonyabb TSS-építő, amikor a versenytáv-hosszú edzés
+      nem fér bele – a versenyközeli 6–8 hétre ajánlva.
+    quote: >-
+      "Strategically weaving zone 3 workouts that replicate race demands into an ultra-endurance cyclists' training is
+      the key to shorter training time." ... "3 – 6 hours @ 76% of Threshold" (WebFetch-kivonatból)
+    notes: >-
+      Edzői közlés (C), n nincs. A Z3-hangsúly részben ELTÉR a 80/20 polarizált ajánlástól (Towers, Seiler) – a mátrix
+      "intenzitás-eloszlás" sorának eltérés-oszlopa; a védekezés: az ultra versenyintenzitása maga is Z2-Z3 határa.
+      A "stacked" edzés a back-to-back elv időtakarékos változata. Év a cikk kontextusából, a lapon nem egyértelmű.
+    status: url-megnyitva
+
+  - key: lenhard-apidura-audax
+    type: web-article
+    authors:
+    - Apidura (Lenhard B. közreműködésével)
+    credential: 'Björn Lenhard – Paris-Brest-Paris-győztes (leggyorsabb befutó 2019), többszörös TCR-dobogós, Apidura-nagykövet'
+    year: 2019
+    title: 'Audax: a structured introduction to long-distance cycling and ultra-racing'
+    venue: apidura.com Journal
+    doi: null
+    url: https://www.apidura.com/journal/audax-a-structured-introduction-to-long-distance-cycling-and-ultra-racing/
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      A Super Randonneur brevet-sorozat (200→300→400→600 km) mint lépcsőzetes ultra-felkészülési keret: Lenhard szerint
+      a brevet és az ultraverseny "elég hasonló, mindkettőn magadra vagy utalva", kezdőnek "ez a legjobb út" az ultra-
+      távok felé; a sorozat egyben táv-progressziós edzésnaptár is a szezonra.
+    quote: >-
+      "The series consists of a 200km ride, followed by 300, 400 and finally 600km rides." ... "If you are new to
+      ultra-distance, I think it's the best way to do it."
+    notes: >-
+      Gyártói tudástár + élversenyzői idézet (C). A brevet-naptár mint progresszió minden gyakorlati forrással konvergál
+      (Barth 400/600/1000 km próbái, Ibbett 4 napos túrája); az ütemterv-generátor "brevet-naptár" modulja erre épülhet.
+      Év a cikk kontextusából.
+    status: url-megnyitva
+
+  - key: sehili-roadcc-2023
+    type: interview
+    authors:
+    - Thomas S. (road.cc/off-road.cc)
+    credential: 'alany: Sofiane Sehili – többszörös önellátó ultra-győztes (Tour Divide 2022, Silk Road, Atlas Mountain Race)'
+    year: 2023
+    title: Mountain Bike Icons – the Sofiane Sehili story
+    venue: road.cc (offroad), 2023-06-23
+    doi: null
+    url: https://road.cc/offroad/content/feature/mountain-bike-icons-the-sofiane-sehili-story-12823
+    grade: C
+    questions: [02:Q10]
+    summary: >-
+      Sehili felkészülési modellje a párizsi futárévekre épül: futárként napi munkavolumen + pihenőnapokon 200 km-es
+      túrák ("ők pihentek, én másnap újra dupla századot mentem"). Szerinte a futárkodás "mentálisan keménnyé és
+      fizikailag fitté tesz – tökéletes keverék az ultra-állóképességi sportolóhoz"; a terep-bikepackingben a
+      keménység többet ér, mint az FTP.
+    quote: >-
+      "Couriering makes you mentally tough and physically fit. That's the perfect mix to become an ultra-endurance
+      athlete." ... "We would go on 200km rides and the next day they'd rest and I'd go for another double century."
+    notes: >-
+      n=1 (C). A "munka mint volumen" a Wilcox-féle strukturálatlan modellel rokon, és a White-féle ingázás-elvvel
+      konvergál ("commuting a leghatékonyabb volumenforrás"). Az "FTP nem számít" retorikai túlzás – a mátrixban az
+      intenzitás-sor eltérés-oszlopába kerül.
+    status: url-megnyitva
+
+  - key: ronnestad-2014-strength-review
+    type: journal
+    authors: [Rønnestad B.R., Mujika I.]
+    year: 2014
+    title: "Optimizing strength training for running and cycling endurance performance: A review"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 24(4):603-612"
+    doi: 10.1111/sms.12104
+    url: https://api.crossref.org/works/10.1111/sms.12104
+    grade: A
+    questions: [02:Q10]
+    summary: >-
+      Áttekintés a nehéz súlyzós erőedzés állóképességi hatásairól: kerékpárban a gazdaságosság (cycling economy)
+      javítása a fő mechanizmus, a kevésbé hatékony II-es típusú rostok késleltetett bekapcsolása, a rostkonverzió
+      (IIX→IIA, fáradástűrőbb) és az izom-ín rendszer merevségének növekedése révén; a szerzők a nehéz (nagy terhelésű)
+      erőedzést ajánlják kiegészítésként állóképességi kerékpárosoknak.
+    quote: >-
+      "heavy strength training is recommended for improving cycling economy" ... improvements may stem from "delayed
+      activation of less efficient type II fibers" (Crossref-absztraktkivonatból)
+    notes: >-
+      Lektorált áttekintés (A). Országúti/labor kerékpárosokra épül, nem ultrára; ultra-relevancia közvetett (gazdaságosság
+      és fáradástűrés hosszú távon még fontosabb). A gyakorlati források (Hammond hegyi nagy áttétel, Wilcox core,
+      Strasser felsőtest, High North 3–5×4–8 nehéz guggolás) ezzel konvergálnak.
+    status: ellenorizve-doi
+
+  # ================================================================ Q11: feltörekvő módszerek
+  - key: tyler-2016-heatadapt-meta
+    type: journal
+    authors: [Tyler C.J., Reeve T., Hodges G.J., Cheung S.S.]
+    year: 2016
+    title: "The Effects of Heat Adaptation on Physiology, Perception and Exercise Performance in the Heat: A Meta-Analysis"
+    journal: "Sports Medicine 46(11):1699-1724"
+    doi: 10.1007/s40279-016-0538-5
+    url: https://api.crossref.org/works/10.1007/s40279-016-0538-5
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      Metaanalízis a hőadaptáció hatásairól: az ismételt hőterhelés javítja a kardiovaszkuláris stabilitást, növeli a
+      plazmatérfogatot, korábbra hozza és fokozza az izzadást, csökkenti a hőérzetet és az RPE-t, és javítja a melegben
+      mért teljesítményt; a tipikus indukciós protokoll 6–14 nap edzés meleg környezetben, a hatásméretek kicsitől
+      nagyig terjednek kimenettől függően.
+    quote: >-
+      "typical acclimation periods ranging from 6-14 days of exercise in heated environments producing measurable
+      improvements in both physiological responses and exercise performance outcomes" (Crossref-kivonatból, másodlagos megfogalmazás)
+    notes: >-
+      A (metaanalízis, 153 hivatkozás); vegyes sportok, főleg labor. Pontos összesített hatásméret-számokat a Crossref-
+      kivonat nem adott – a modulban a 6–14 napos protokoll-tartomány és az iránymutatás idézhető. A racinais-2015-heat-consensus
+      konszenzussal együtt kezelendő.
+    status: ellenorizve-doi
+
+  - key: daanen-2018-hadecay-meta
+    type: journal
+    authors: [Daanen H.A.M., Racinais S., Périard J.D.]
+    year: 2018
+    title: "Heat Acclimation Decay and Re-Induction: A Systematic Review and Meta-Analysis"
+    journal: "Sports Medicine 48(2):409-430"
+    doi: 10.1007/s40279-017-0808-x
+    url: https://api.openalex.org/works/doi:10.1007/s40279-017-0808-x
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      A hőadaptáció lecsengése: a pulzus-adaptáció naponta ~2,3%-ot (p<0,001), a maghőmérséklet-adaptáció ~2,6%-ot
+      (p<0,01) veszít a hőterhelés-mentes napokon – vagyis ~1 nap adaptáció vész el 2 hőmentes naponként; az
+      újra-akklimatizáció 8–12-szer gyorsabb, mint az első indukció. Hosszabb napi expozíció és magasabb intenzitás
+      tartósabb izzadás-adaptációt ad.
+    quote: >-
+      "2.3% (P < 0.001) for every day" of heat acclimation decay (HR) ... core temperature "2.6% (P < 0.01)" per day ...
+      re-induction "8–12 times faster than inducing" (absztraktból, OpenAlex-rekonstrukció)
+    notes: >-
+      A (SR+meta); vegyes populáció, labor. Ultra-alkalmazás: a hőblokk a verseny előtti utolsó 1–2 hétre időzítendő,
+      vagy fenntartó expozíciókkal hidalandó át; többnapos versenyen maga a verseny is hőterhelés. CI-ket az absztrakt
+      nem közölt.
+    status: ellenorizve-doi
+
+  - key: ronnestad-2022-heat-hbmass
+    type: journal
+    authors: [Rønnestad B.R., Urianstad T., Hamarsland H., Hansen J., Nygaard H., Ellefsen S., Hammarström D., Lundby C.]
+    year: 2022
+    title: "Heat Training Efficiently Increases and Maintains Hemoglobin Mass and Temperate Endurance Performance in Elite Cyclists"
+    journal: "Medicine & Science in Sports & Exercise 54(9):1515-1526"
+    doi: 10.1249/mss.0000000000002928
+    url: https://api.crossref.org/works/10.1249/mss.0000000000002928
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      Elit kerékpárosok 5 héten át heti 5×50 perc edzést végeztek hőkamrában vagy hőruhában: a hemoglobin-tömeg +2,6%
+      (hőruha) és +2,4% (kamra) vs. -0,7% (kontroll); a laktátküszöb-teljesítmény +3,6%, a csúcsteljesítmény +7,3%
+      (hőruha), az összevont hőcsoport összesített teljesítmény-indexe +4,9% vs. +1,7% kontroll – MÉRSÉKELT klímában
+      mérve. 3 hetes, heti 3 alkalmas fenntartó fázissal a Hb-tömeg tovább nőtt (+3,3%), leállásnál visszaesett (+0,8%).
+    quote: >-
+      Heat suit: hemoglobin mass "+2.6%" vs control "−0.7%"; performance composite "4.9%" vs "1.7%"; maintenance
+      "three sessions per week" kept "+3.3%" (Crossref-absztraktkivonatból)
+    notes: >-
+      A (kontrollált vizsgálat), elit kerékpárosok, n az absztraktkivonatban nem szerepelt. Fontos üzenet: a hőedzés nem
+      csak melegre készít – mérsékelt klímás teljesítményt is javíthat (hem-adaptáció), így ultrás "olcsó magaslat"-ként
+      is felfogható. Amatőr átvihetőség: 5×50 perc/hét extra hőstressz jelentős regenerációs teher.
+    status: ellenorizve-doi
+
+  - key: feng-2023-hypoxia-nma
+    type: journal
+    authors: [Feng X., Zhao L., Chen Y., Wang Z., Lu H., Wang C.]
+    year: 2023
+    title: "Optimal type and dose of hypoxic training for improving maximal aerobic capacity in athletes: a systematic review and Bayesian model-based network meta-analysis"
+    journal: "Frontiers in Physiology 14:1223037"
+    doi: 10.3389/fphys.2023.1223037
+    url: https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2023.1223037/full
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      Hálózatos metaanalízis, 59 RCT, 1821 sportoló: a VO2max-ra a "live high–train low" alacsony magassági edzéssel
+      kombinálva a leghatásosabb (természetes LHTL SMD 1,04, 95% CI 0,47–1,61; szimulált LHTL SMD 0,91, CI 0,44–1,38);
+      az IHT jóval kisebb hatású (SMD 0,36, CI 0,10–0,62). A dózis-hatás fordított U alakú: LHTL-nél 500–1415 km·h
+      (magasság×óra) az optimális sáv.
+    quote: >-
+      "LHTL combined with low altitude training was the most effective intervention" ... LHTL natural "SMD 1.04
+      (95% CI: 0.47–1.61)" ... IHT "SMD 0.36 (95% CI: 0.10–0.62)"
+    notes: >-
+      A (NMA), vegyes állóképességi sportolók. Ultra-relevancia korlátozott: az LHTL heteken át tartó magaslati
+      tartózkodást igényel (amatőrnek drága/kivitelezhetetlen); a hőedzés (ronnestad-2022-heat-hbmass) hasonló
+      hem-adaptációt ad olcsóbban – a modul fő gyakorlati következtetése.
+    status: ellenorizve-doi
+
+  - key: spiering-2021-minimaldose
+    type: journal
+    authors: [Spiering B.A., Mujika I., Sharp M.A., Foulis S.A.]
+    year: 2021
+    title: "Maintaining Physical Performance: The Minimal Dose of Exercise Needed to Preserve Endurance and Strength Over Time"
+    journal: "Journal of Strength and Conditioning Research 35(5):1449-1458"
+    doi: 10.1519/JSC.0000000000003964
+    url: https://api.crossref.org/works/10.1519/JSC.0000000000003964
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      Áttekintés a fenntartó edzés minimál-dózisáról: az állóképességi teljesítmény akár 15 hétig megőrizhető heti
+      2 edzéssel és 33–66%-kal csökkentett volumennel (akár 13–26 perc/edzés), HA az intenzitás megmarad; az erő
+      fiataloknál 32 hétig heti 1 edzéssel, gyakorlatonként 1 sorozattal fenntartható (idősebbeknél heti 2×2–3 sorozat).
+      A kulcsváltozó minden esetben az intenzitás megtartása.
+    quote: >-
+      "exercise intensity seems to be the key variable for maintaining physical performance over time" ... endurance
+      maintainable "up to 15 weeks" with "2 sessions weekly", volume reduced "33-66%" (Crossref-absztraktkivonatból)
+    notes: >-
+      A (áttekintés lektorált folyóiratban); alapja részben katonai/általános populáció, sportolókra a szerzők szerint
+      is kevés az adat. Ultra-alkalmazás: szezonközi/munkacsúcs-hetek "megőrző" programja és a tapering elvi háttere
+      (volumen vágható, intenzitás nem).
+    status: ellenorizve-doi
+
+  - key: staiano-2023-bet-cyclists
+    type: journal
+    authors: [Staiano W., Marcora S., Romagnoli M., Kirk U., Ring C.]
+    year: 2023
+    title: "Brain Endurance Training improves endurance and cognitive performance in road cyclists"
+    journal: "Journal of Science and Medicine in Sport 26(7):375-385"
+    doi: 10.1016/j.jsams.2023.05.008
+    url: https://pure-oai.bham.ac.uk/ws/portalfiles/portal/197974197/1_s2.0_S1440244023000889_main.pdf
+    grade: A
+    questions: [02:Q11]
+    summary: >-
+      Két randomizált, kontrollált edzésvizsgálat országúti kerékpárosokon. 1. vizsgálat (n=26, edzett, VO2peak 64):
+      6 hét, heti 5 edzés UTÁNI kognitív feladat (30→60 perc) – kimerülésig idő 80% PPO-n +11,4% vs +3,4% kontroll
+      (p=0,032), 65% PPO-n +17,1% vs +2,8% (p=0,011). 2. vizsgálat (n=24, jól edzett/elit, VO2peak 70): 6 hét, fix 30
+      perc növekvő nehézségű feladat – 20 perces TT +5,5% vs +1,6% (p=0,021). Az RPE mindkét vizsgálatban csökkent.
+    quote: >-
+      "TTE at 80% PPO: BET +11.4%, control +3.4% (p=0.032)" ... "20-min TT power: BET +5.5%, control +1.6% (p=0.021)"
+      (teljes szövegből, egyetemi repozitórium-PDF)
+    notes: >-
+      A (2 RCT), férfi országúti kerékpárosok, nem ultra – de a mechanizmus (mentális fáradtság-tolerancia) az ultra
+      több-órás/napos monotóniájára elvileg jól átvihető; ultrán direkt evidencia nincs. A kognitív edzésterhelés
+      (heti 5×30–60 perc) jelentős idő-plusz a munka melletti sportolónak.
+    status: ellenorizve-doi
+
+  - key: paine-2026-ai-coaching
+    type: web-article
+    authors:
+    - Paine I. (Cycling Weekly)
+    credential: 'Cycling Weekly szakcikk; megszólalók: David Bailey (NSN Cycling Team sporttudományi vezető), Sam Lloyd (Strathclyde PhD-kutató), Jake Hales (RideRevolution vezetőedző)'
+    year: 2026
+    title: "'Recreational cyclists risk becoming too reliant on AI' – How cycling coaching platforms are changing the way we train"
+    venue: cyclingweekly.com, 2026-03-02
+    doi: null
+    url: https://www.cyclingweekly.com/news/gadget-knows-best-how-are-ai-coaching-platforms-changing-how-we-train
+    grade: C
+    questions: [02:Q11]
+    summary: >-
+      Szakújságírói körkép az AI-edzésplatformokról (HumanGO, Vekta, JOIN, TrainingPeaks, Garmin Coach stb.): a
+      platformok alvás/stressz/regeneráció alapján valós időben módosítanak terveket és FTP-teszt nélkül becsülnek
+      zónákat; a szakértők szerint az AI "demokratizálja" a kifinomult edzéstervezést, de a rekreációs versenyző
+      túlzottan rá tud támaszkodni, a nagy nyelvi modellek "lehetetlenül kemény edzéseket" is ajánlhatnak, és az
+      emberi edző objektivitását/érzelmi intelligenciáját nem pótolják.
+    quote: >-
+      "Recreational cyclists risk becoming too reliant on AI, potentially ignoring their body's feelings." ...
+      "ChatGPT has recommended impossibly hard sessions—apply common sense always." (WebFetch-kivonatból)
+    notes: >-
+      Szakújságírás szakértői idézetekkel (C). Lektorált validációs vizsgálatot egyik kereskedelmi ultra-releváns
+      platformra (TrainerRoad AT, Xert, JOIN, AIRO) sem találtam (keresések: "TrainerRoad adaptive training validation
+      peer-reviewed", "JOIN cycling app study peer-reviewed", "Xert validation study") – a validitás publikus,
+      független bizonyítéka hiányzik; ez maga a Q11 egyik fő megállapítása.
+    status: url-megnyitva
+
+  - key: pulford-2026-durability-cts
+    type: web-guide
+    authors:
+    - Pulford A. (CTS)
+    credential: Adam Pulford – CTS Head Cycling Coach, testedzés-élettani diploma, 20+ év edzői tapasztalat
+    year: 2026
+    title: How to Test Fatigue Resistance and Improve Durability in Cycling
+    venue: trainright.com (CTS), 2026-05-04
+    doi: null
+    url: https://trainright.com/durability-training-fatigue-resistance/
+    grade: C
+    questions: [02:Q11, 02:Q10]
+    summary: >-
+      Gyakorlati durability-protokoll: teszt = friss csúcsteljesítmény vs. 1000–2500 kJ Z2–Z3 előterhelés utáni
+      teljesítmény (példa: 370 W friss, 303 W fáradt 20 perces = -19%); sávok: elit 0–1%, nagyon jó 1–5%, átlagos
+      10–20% esés. Öt edzésmódszer: intervall a hosszú edzés VÉGÉN (2–3 h Z2-3 után 4×6 perc 30/30), sprintek fáradt
+      lábbal, kettéosztott fő-szett (frissen + órákkal később fáradtan), korai intervall + utána órák Z2, hátul-terhelt
+      mászás (haladóknak 2000–2500 kJ előmunka után). Kiemeli a szénhidrát-ellátás szerepét.
+    quote: >-
+      "Fresh 20-min power: 370W. Fatigued 20-min power: 303W. Decline = -19%" ... "4 sets of 6-minute 30/30 second
+      SpeedIntervals, separated by 4 minutes easy spinning" (WebFetch-kivonatból)
+    notes: >-
+      Edzői közlés (C), Gallo és Jones munkáira hivatkozik; RCT a durability-edzés hatásáról nincs (a sanchez-jimenez-2025-durability-sr
+      is csak akut előterhelés-hatásokat összegez) – a "durability edzhetőségének" közvetlen bizonyítéka hiányzik,
+      a módszerek élettanilag plauzibilis extrapolációk. A kJ-célok a terhelés-kalkulátorhoz hasznosak.
+    status: url-megnyitva
+
+  - key: highnorth-durability-guide
+    type: web-guide
+    authors:
+    - High North Performance
+    credential: High North Performance – brit állóképességi kerékpáros edzőműhely (Tom Bell alapította, PhD)
+    year: 2023
+    title: 'Fatigue Resistance or Durability in Cycling: Tests & Training Tips'
+    venue: highnorth.co.uk
+    doi: null
+    url: https://www.highnorth.co.uk/articles/fatigue-resistance-durability-cycling
+    grade: C
+    questions: [02:Q11, 02:Q10]
+    summary: >-
+      Durability-teszt: friss maximális erőkifejtés bemelegítés után, majd ugyanaz az erőkifejtés több óra egyenletes
+      tekerés után; 5–8%-nál kisebb esés jó fáradástűrést jelez. Edzésmódszerek: hosszú Z2 (a legerősebb adaptációk a
+      fáradó szakaszban), intenzitás a hosszú edzés utolsó 30–60 percében ("negatív split"), elő-fáradasztott intervall
+      (intervall + 1–2 h Z2 utána), alacsony kadenciájú (60–70/perc) Z3 izom-állóképesség, nehéz erőedzés (3–5×4–8
+      guggolás/felhúzás).
+    quote: >-
+      "less than a 5-8% decline between fresh and fatigued power" ... "some of the most potent adaptations from your
+      endurance rides occur in the latter stages, when your muscle fibres are beginning to fatigue" (WebFetch-kivonatból)
+    notes: >-
+      Edzői közlés (C), Muriel 2022, Thomas 2015 és Rønnestad-Mujika 2014 kutatásokra hivatkozik. A "kései adaptáció"
+      tézis mechanisztikus érv, közvetlen RCT-bizonyíték nélkül; a CTS-protokollal (pulford-2026-durability-cts) jól
+      konvergál (teszt-logika, késleltetett intenzitás). Év a cikk kontextusából, a lapon nem egyértelmű.
+    status: url-megnyitva

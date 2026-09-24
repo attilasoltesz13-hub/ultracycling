@@ -1,0 +1,631 @@
+# 02. modul – Edzéselmélet ultrára – A csomag (Q1: intenzitás-eloszlás; Q2: volumen vs. intenzitás; Q3: hosszú edzés és back-to-back)
+# Készült: 2026-09-24. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   clark-2019-cp-dynamics, spragg-2023-durability, spragg-2024-intensity, sanchez-jimenez-2025-durability-sr,
+#   barsumyan-2025-durability-amateur, maunder-2021-durability, hunter-2025-durability-methods, evans-2025-durability-domain,
+#   maunder-2018-mfo, gejl-2021-trainlow-meta, friel-decoupling-tp, martin-1981-sleep-rpe, craven-2022-akut,
+#   poussel-2015-utmb-sleep, rothschild-2021-ultracyclist, brayson-2019-tcr, hyldahl-2024-tourdivide,
+#   ridefar-sleepdep, ridefar-time-efficiency, hayden-sleeping-guide, jeukendrup-2017-trainingthegut
+sources:
+  # ---------------------------------------------------------------- Q1: intenzitás-eloszlás (polarizált / piramis / küszöb)
+  - key: seiler-kjerland-2006
+    type: journal
+    authors: [Seiler K.S., Kjerland G.Ø.]
+    year: 2006
+    title: "Quantifying training intensity distribution in elite endurance athletes: is there evidence for an 'optimal' distribution?"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 16(1):49-56"
+    doi: 10.1111/j.1600-0838.2004.00418.x
+    url: https://api.crossref.org/works/10.1111/j.1600-0838.2004.00418.x
+    grade: B
+    questions: [02:Q1]
+    summary: >-
+      A „polarizált eloszlás" alapcikke: 12 junior válogatott sífutó 32 napos edzésnaplója pulzus-, laktát- és
+      session-RPE-alapon. Pulzus-idő szerint a 3 zóna aránya 75±3% / 8±3% / 17±4% (Z1/Z2/Z3, VT1 és VT2 határokkal);
+      a laktátmérések 71%-a ≤2,0 mM, 7%-a 2–4 mM, 22%-a >4 mM. Az edzések ~75%-a egyértelműen VT1 alatt, 15–20%-a
+      VT2 felett zajlott – a VT1–VT2 közötti „laktát-akkomodációs zóna" tudatosan kerülve.
+    quote: >-
+      "75±3%, zone 1; 8±3%, zone 2; 17±4%, zone 3" … "training was organized after a polarized pattern, with most
+      sessions performed clearly below (about 75%) or with substantial periods above (15–20%) the lactate accommodation zone".
+    notes: >-
+      n=12 junior sífutó (norvég, elit utánpótlás), megfigyeléses terepadat, nem RCT – ezért B. Session-alapú (nem
+      idő-alapú) számolásnál polarizáltabbnak tűnik ugyanaz az edzés. A 3-zónás VT1/VT2 modell definíciós forrása.
+      Számok Crossref-absztraktból. Átvitel ultrára: az eloszlás elve igen, a sífutó-volumen nem.
+    status: ellenorizve-doi
+
+  - key: seiler-2010-bestpractice
+    type: journal
+    authors: [Seiler S.]
+    year: 2010
+    title: "What is Best Practice for Training Intensity and Duration Distribution in Endurance Athletes?"
+    journal: "International Journal of Sports Physiology and Performance 5(3):276-291"
+    doi: 10.1123/ijspp.5.3.276
+    url: https://api.crossref.org/works/10.1123/ijspp.5.3.276
+    grade: C
+    questions: [02:Q1, 02:Q2]
+    venue_note: "lektorált áttekintés, de narratív jellegű"
+    summary: >-
+      A „80/20" szabály kanonikus összefoglalója: elit állóképességi sportolóknál a session-ök ~80%-a alacsony
+      intenzitású (≤2 mM laktát), ~20%-a magas intenzitású. Érvelés: a sok alacsony intenzitású, hosszú edzés és a
+      kevés, kemény intervall adaptációs jelátvitele komplementer; a küszöb körüli „középzóna" nagy stresszt ad
+      viszonylag kis többlet-adaptációért. Zóna-definíciók: 3-zónás modell VT1/VT2 (kb. 2 és 4 mM laktát) határokkal.
+    quote: >-
+      "about 80% of training sessions are performed at low intensity (2 mM blood lactate), with about 20% dominated by
+      periods of high-intensity work".
+    notes: >-
+      Narratív áttekintés (ezért C), de a terület legidézettebb kerete. A 80/20 session-alapú; idő-alapon az elit
+      eloszlás inkább 90/10 közeli. Crossref-absztraktból idézve. Amatőr, heti 6–8 órás sportolóra a szerző maga is
+      óvatos extrapolációt javasol.
+    status: ellenorizve-doi
+
+  - key: stoggl-2014-polarized-rct
+    type: journal
+    authors: [Stöggl T., Sperlich B.]
+    year: 2014
+    title: "Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training"
+    journal: "Frontiers in Physiology 5:33"
+    doi: 10.3389/fphys.2014.00033
+    url: https://www.frontiersin.org/journals/physiology/articles/10.3389/fphys.2014.00033/full
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      A legnagyobb TID-RCT: 48 jól edzett állóképességi sportoló (futó, kerékpáros, triatlonos, sífutó; VO2peak
+      62,6±7,1 ml/kg/perc) 4 csoportban (POL, HIIT, HVT=nagy volumen, THR=küszöb) 9 hétig. A POL-csoport VO2peak-je
+      +6,8 ml/kg/perc (+11,7%, p<0,001), kimerülésig tartó idő +17,4%, csúcssebesség/teljesítmény +5,1%; a 4 mM-os
+      sebesség/teljesítmény POL-nál +8,1%, HIIT-nél +5,6% nőtt. A THR- és HVT-csoport kulcsváltozói érdemben nem javultak.
+    quote: >-
+      "POL demonstrated the greatest increase in VO2peak (+6.8 ml∙min∙kg−1 or 11.7%, P<0.001), time to exhaustion during
+      the ramp protocol (+17.4%, P<0.001) and peak velocity/power (+5.1%, P<0.01)".
+    notes: >-
+      n=48 (41 befejező), vegyes sport, jól edzett férfiak főleg; 9 hét, kiadói teljes szövegből idézve. Kritika: a
+      THR-csoport terhelése alacsonyabb lehetett; a HVT-csoport már eleve nagy volument edzett (plafonhatás).
+      Ultra-átvitel: a „küszöbön ragadás" ellen szól, de a HVT-kar gyengesége nem cáfolja a volumen szerepét ultrán.
+    status: ellenorizve-doi
+
+  - key: neal-2013-polarized-cyclists
+    type: journal
+    authors: [Neal C.M., Hunter A.M., Brennan L., O'Sullivan A., Hamilton D.L., DeVito G., Galloway S.D.R.]
+    year: 2013
+    title: "Six weeks of a polarized training-intensity distribution leads to greater physiological and performance adaptations than a threshold model in trained cyclists"
+    journal: "Journal of Applied Physiology 114(4):461-471"
+    doi: 10.1152/japplphysiol.00652.2012
+    url: https://api.crossref.org/works/10.1152/japplphysiol.00652.2012
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      Keresztezett RCT kerékpárosokon: 12 edzett férfi kerékpáros 2×6 hét polarizált (80/0/20) vs. küszöb (57/43/0)
+      eloszlással, azonos edzésidő mellett, 4 hét kimosással. A csúcsteljesítmény (PPO) +8±2% vs. +3±1%, a laktátküszöb
+      +9±3% vs. +2±4%, a nagy intenzitású kapacitás +85±14% vs. +37±14% a polarizált javára (p<0,05). 40 km-es
+      időfutamban is a POL adott nagyobb javulást.
+    quote: >-
+      "Improvements were greater following polarized rather than threshold for PPO [mean (±SE) change of 8 (±2)% vs.
+      3 (±1)%], LT [9 (±3)% vs. 2 (±4)%]" … "high-intensity exercise capacity [85 (±14)% vs. 37 (±14)%]".
+    notes: >-
+      n=12 férfi kerékpáros, ~heti 6–10 óra edzés – a célközönséghez közeli óraszám; kerékpáros-specifikus.
+      Crossref-absztraktból idézve. 6 hét rövid táv; a küszöbcsoport session-RPE-terhelése magasabb volt (nagyobb
+      fáradtság ugyanannyi idő alatt) – ultrára ez a „fenntarthatósági" érv.
+    status: ellenorizve-doi
+
+  - key: munoz-2014-recreational
+    type: journal
+    authors: [Muñoz I., Seiler S., Bautista J., España J., Larumbe E., Esteve-Lanao J.]
+    year: 2014
+    title: "Does Polarized Training Improve Performance in Recreational Runners?"
+    journal: "International Journal of Sports Physiology and Performance 9(2):265-272"
+    doi: 10.1123/ijspp.2012-0350
+    url: https://api.crossref.org/works/10.1123/ijspp.2012-0350
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      Amatőr adat: 30 hobbi futó 10 hétig polarizált (~77/3/20) vs. küszöb közeli (~46/35/19) eloszlással, azonos
+      terhelés mellett, heti ~4-5 edzés. Mindkét csoport javított 10 km-en (p<0,001); a polarizált 5,0%, a küszöb 3,6%
+      javulás (~41 s különbség a poszt-teszten), a különbség nem szignifikáns. Következtetés: amatőr szinten a
+      polarizált legalább olyan jó, és akik ténylegesen elérték a cél-eloszlást, azoknál nagyobb volt a javulás.
+    quote: >-
+      "Improvements were 5.0% vs 3.6%, ~41 s difference at post-training-intervention." … zone distribution "±77/3/20"
+      (PET) vs "±46/35/19" (BThET).
+    notes: >-
+      n=30 hobbifutó (vegyes), futás, 10 hét – a legjobb közvetlen adat alacsony óraszámú amatőrre. Crossref-absztraktból.
+      Csoportkülönbség nem szignifikáns → a „polarizált mindenkinek jobb" állítás amatőröknél gyenge. Kerékpárra
+      áttétel: elvi (nem terheléses ízület, több Z2 tolerálható).
+    status: ellenorizve-doi
+
+  - key: rosenblat-2019-pol-thr-meta
+    type: journal
+    authors: [Rosenblat M.A., Perrotta A.S., Vicenzino B.]
+    year: 2019
+    title: "Polarized vs. Threshold Training Intensity Distribution on Endurance Sport Performance: A Systematic Review and Meta-Analysis of Randomized Controlled Trials"
+    journal: "Journal of Strength and Conditioning Research 33(12):3491-3500 (online 2018)"
+    doi: 10.1519/jsc.0000000000002618
+    url: https://api.openalex.org/works/doi:10.1519/JSC.0000000000002618
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      Az első POL vs. THR meta-analízis RCT-kből: 4 vizsgálat, ebből 3 a metában. Időfutam-teljesítményben közepes
+      hatás a polarizált javára (ES=-0,66; 95% CI -1,17 – -0,15). A vizsgálatok módszertani minősége alacsony
+      (PEDro 4-5/10), a minta kicsi – az irány konzisztens, a bizonyosság mérsékelt.
+    quote: >-
+      "moderate effect (ES = -0.66; 95% CI: -1.17 to -0.15) favoring POL group over THR group" … "2 of 4 studies scored
+      a 4/10 on PEDro Scale".
+    notes: >-
+      Csak 4 RCT (futó+kerékpáros+sífutó, edzett), kis össz-n; OpenAlex-rekonstruált absztraktból idézve. Print 2019,
+      online 2018. A frissebb silva-oliveira-2024-pol-meta árnyalja (időfutamban nincs POL-előny nagyobb mintán).
+    status: ellenorizve-doi
+
+  - key: silva-oliveira-2024-pol-meta
+    type: journal
+    authors: [Silva Oliveira P., Boppre G., Fonseca H.]
+    year: 2024
+    title: "Comparison of Polarized Versus Other Types of Endurance Training Intensity Distribution on Athletes' Endurance Performance: A Systematic Review with Meta-analysis"
+    journal: "Sports Medicine 54:2071-2095"
+    doi: 10.1007/s40279-024-02034-z
+    url: https://link.springer.com/article/10.1007/s40279-024-02034-z
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      A legfrissebb, legnagyobb TID-meta: 17 vizsgálat, 437 résztvevő (183 POL, 223 egyéb TID). VO2peak-ben kis
+      POL-előny (SMD=0,24; 95% CI 0,01–0,48; p=0,040), ami <12 hetes beavatkozásnál (SMD=0,40; CI 0,08–0,71) és
+      magasan edzetteknél (SMD=0,46; CI 0,10–0,82) erősebb. Időfutam-teljesítményben viszont NINCS különbség
+      (SMD=-0,01; CI -0,28–0,25), és a küszöb-sebességben/teljesítményben sem (SMD=0,04).
+    quote: >-
+      "SMD = 0.24 [95% CI 0.01, 0.48]; z = 2.02 (p = 0.040); 11 studies, n = 284" (VO2peak) … time-trial:
+      "SMD = –0.01 [95% CI -0.28, 0.25]; z = −0.10 (p = 0.92); n = 221".
+    notes: >-
+      Vegyes sportok, többségében edzett férfiak; kiadói absztraktból idézve. Fő üzenet ultrára: a TID-válasz
+      kimenet-függő – VO2peak-re polarizált kicsit jobb, versenyteljesítményre az eloszlások egyenértékűek, ha a
+      terhelés azonos. A „melyik TID" kérdés másodlagos a összterhelés és a konzisztencia mögött.
+    status: ellenorizve-doi
+
+  - key: filipas-2022-pyr-pol
+    type: journal
+    authors: [Filipas L., Bonato M., Gallo G., Codella R.]
+    year: 2022
+    title: "Effects of 16 weeks of pyramidal and polarized training intensity distributions in well-trained endurance runners"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 32(3):498-511"
+    doi: 10.1111/sms.14101
+    url: https://api.crossref.org/works/10.1111/sms.14101
+    grade: A
+    questions: [02:Q1]
+    summary: >-
+      60 jól edzett férfi futó, 16 hét, 4 csoport: végig piramis, végig polarizált, piramis→polarizált, polarizált→piramis.
+      A piramis→polarizált szekvencia adta a legnagyobb javulást: ~3,0% rel. VO2max, ~1,7% vBLa2, ~1,5% vBLa4, ~1,5%
+      5 km-es időfutam. Üzenet: nem „vagy-vagy" – az alapozásban piramis, a versenyközeli fázisban polarizált eloszlás
+      periodizált váltása a leghatékonyabb.
+    quote: >-
+      "participants in the PYR → POL group showed the largest improvement in all these variables (~3.0% for relative
+      VO2max, ~1.7% for vBLa2, ~1.5% for vBLa4, ~1.5% for 5-km running time trial performance)".
+    notes: >-
+      n=60 férfi futó, terep-RCT jellegű; Crossref-absztraktból. Ultrára fordítva: az „alap piramis → specifikus fázisban
+      több csúcsosított minőség" sorrend támogatott; de az ultra-versenyintenzitás Z1-Z2, így a „polarizálás" célja itt a
+      fittség emelése, nem a versenyspecificitás.
+    status: ellenorizve-doi
+
+  - key: galan-rioja-2023-cyclist-tid-sr
+    type: journal
+    authors: [Galán-Rioja M.Á., González-Ravé J.M., González-Mohíno F., Seiler S.]
+    year: 2023
+    title: "Training Periodization, Intensity Distribution, and Volume in Trained Cyclists: A Systematic Review"
+    journal: "International Journal of Sports Physiology and Performance 18(2):112-122"
+    doi: 10.1123/ijspp.2022-0302
+    url: https://journals.humankinetics.com/view/journals/ijspp/18/2/article-p112.xml
+    grade: A
+    questions: [02:Q1, 02:Q2]
+    summary: >-
+      Kerékpáros-specifikus szisztematikus áttekintés: 7 vizsgálat, 161 edzett kerékpáros (18–41 év). Heti volumen
+      7,5–10,76 h (tradicionális) ill. 8,75–11,68 h (blokk-periodizáció) – vagyis a vizsgált „edzett kerékpáros"
+      óraszám pont a célközönség sávjában van. Piramis TID: ~80% Z1, a maradék Z2>Z3; polarizált: ~80% Z1, ~20%
+      főleg Z3, minimál Z2. Fő következtetés: 8–12 hetes távon egyik periodizációs modell sem bizonyítottan jobb.
+    quote: >-
+      "Seven studies met the inclusion criteria" … weekly hours "7.5 to 10.76 h·wk–1" (traditional) and
+      "8.75 to 11.68 h·wk–1" (block) … "No evidence is currently available favoring a specific periodization model
+      during 8 to 12 weeks in trained road cyclists."
+    notes: >-
+      Kerékpáros, döntően férfi minták; kiadói oldalról idézve. Közvetlenül releváns a 8–12 h/hét sávra. Ultra-specifikus
+      kimenet (többórás teljesítmény) egyik beválasztott vizsgálatban sem volt.
+    status: ellenorizve-doi
+
+  - key: burnley-2022-pol-debate
+    type: journal
+    authors: [Burnley M., Bearden S.E., Jones A.M.]
+    year: 2022
+    title: "Polarized Training Is Not Optimal for Endurance Athletes"
+    journal: "Medicine & Science in Sports & Exercise 54(6):1032-1034"
+    doi: 10.1249/mss.0000000000002869
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000002869
+    grade: C
+    questions: [02:Q1]
+    summary: >-
+      Vitacikk a polarizált edzés ellen: az elit sportolók valójában ritkán edzenek ténylegesen polarizáltan (idő-alapon
+      inkább piramis), a „polarizált" definíciója következetlen, az edzésnapló-elemzések megerősítési torzításra
+      hajlamosak, és nincs meggyőző bizonyíték a más modellekkel szembeni fölényre. A Foster-oldali válaszcikkel együtt
+      a terület fő kontroverziáját rögzíti.
+    quote: >-
+      "polarized training is, in fact, rarely practiced by elite athletes, there is limited to no evidence that it is
+      more effective than other training models".
+    notes: >-
+      Lektorált folyóiratban megjelent álláspont-cikk (nem adatközlés) – ezért C. OpenAlex-ből idézve. Párja: Foster és
+      mtsai. pro-polarizált cikke ugyanabban a számban (itt nem külön tétel). Az ellentmondás-blokk kulcsforrása.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q2: volumen vs. intenzitás, time-crunched, durability-edzés
+  - key: milanovic-2015-hiit-meta
+    type: journal
+    authors: [Milanović Z., Sporiš G., Weston M.]
+    year: 2015
+    title: "Effectiveness of High-Intensity Interval Training (HIT) and Continuous Endurance Training for VO2max Improvements: A Systematic Review and Meta-Analysis of Controlled Trials"
+    journal: "Sports Medicine 45(10):1469-1481"
+    doi: 10.1007/s40279-015-0365-0
+    url: https://link.springer.com/article/10.1007/s40279-015-0365-0
+    grade: A
+    questions: [02:Q2]
+    summary: >-
+      28 kontrollált vizsgálat, 723 résztvevő (átlag 25,1±5 év): a HIIT VO2max-emelése 5,5 ml/kg/perc (±1,2), a
+      folyamatos állóképességi edzésé 4,9 ml/kg/perc (±1,4) nem edző kontrollhoz képest; a HIIT előnye a folyamatos
+      edzéssel szemben kicsi, 1,2 ml/kg/perc (±0,9). A time-crunched megközelítés élettani alapja: VO2max-ra a HIIT
+      időhatékony helyettesítő.
+    quote: >-
+      "a possibly small beneficial effect for HIT (1.2 mL·kg−1·min−1; ±0.9 mL·kg−1·min−1)" … endurance training
+      "(4.9 mL·kg−1·min−1; 95 % confidence limits ±1.4 mL·kg−1·min−1)", HIT "(5.5 mL·kg−1·min−1; ±1.2 mL·kg−1·min−1)".
+    notes: >-
+      Döntően fiatal, mérsékelten edzett populációk, rövid (≤16 hét) beavatkozások; kimenet csak VO2max – zsíranyagcsere,
+      durability, többórás teljesítmény NEM. Kiadói absztraktból. Ultra-korlát: a VO2max-transzfer nem azonos az
+      5-10 órás teljesítménnyel.
+    status: ellenorizve-doi
+
+  - key: casado-2019-easyruns
+    type: journal
+    authors: [Casado A., Hanley B., Santos-Concejero J., Ruiz-Pérez L.M.]
+    year: 2019
+    title: "World-Class Long-Distance Running Performances Are Best Predicted by Volume of Easy Runs and Deliberate Practice of Short-Interval and Tempo Runs"
+    journal: "Journal of Strength and Conditioning Research 35(9):2525-2531 (online 2019)"
+    doi: 10.1519/jsc.0000000000003176
+    url: https://api.openalex.org/works/doi:10.1519/jsc.0000000000003176
+    grade: B
+    questions: [02:Q2]
+    summary: >-
+      Dózis-válasz megfigyelés: 85 (világklasszistól nemzeti szintig terjedő) férfi futó retrospektív edzésadatai az
+      első 3-5-7 szisztematikus edzésévre. A könnyű futás volumene r≥0,75 (p<0,001) korrelációt mutatott a
+      versenyteljesítménnyel, a tempófutás r=0,68; az összes lefutott távolság a variancia ≥57%-át magyarázta
+      (R²≥0,57). A hosszú-intervall gyakorlás korrelációja gyenge (r=0,22).
+    quote: >-
+      "Eighty-five male runners reported their times in different running events and amounts of DP activities" …
+      easy run volume "r ≥ 0.75, p < 0.001", tempo runs "r = 0.68, p < 0.001", total distance "R² ≥ 0.57, p < 0.001".
+    notes: >-
+      Retrospektív, önbevallásos, futás, csak férfi – okozatiság nem igazolt (a tehetségesebbek többet bírnak edzeni).
+      OpenAlex-rekonstruált absztraktból. A „volumen a legerősebb prediktor" tézis fő számszerű forrása; kerékpárra
+      elvi átvitel (nem ütéses sport, volumen még skálázhatóbb).
+    status: ellenorizve-doi
+
+  - key: spragg-2022-durability-training
+    type: journal
+    authors: [Spragg J., Leo P., Swart J.]
+    year: 2023
+    title: "The relationship between training characteristics and durability in professional cyclists across a competitive season"
+    journal: "European Journal of Sport Science 23(4):489-498 (online 2022)"
+    doi: 10.1080/17461391.2022.2049886
+    url: https://api.openalex.org/works/doi:10.1080/17461391.2022.2049886
+    grade: B
+    questions: [02:Q2, 02:Q3]
+    summary: >-
+      Az edzés-oldali durability-bizonyíték kulcsa: 30 U23 profi kerékpáros (20,1±1,1 év, VO2max 73,8±2,5) friss és
+      fáradt (előzetes munka utáni) power-profilja egy szezonon át. A fáradt 5 és 12 perces teljesítmény a szezon
+      végére csökkent (p<0,05). A VT1 ALATTI edzésidő korrelált a fáradt 2 perces teljesítmény javulásával (r=0,43,
+      p=0,018), és a polarizáltabb eloszlás felé mozdulás is a későbbi fáradt-teljesítmény javulásával járt.
+    quote: >-
+      "30 under 23 professional cyclists (age: 20.1 ± 1.1 years…)" … "Time below first ventilatory threshold (VT1)
+      improvements in 2MMPfatigue (r = 0.43 p 0.018)".
+    notes: >-
+      Megfigyeléses (nem RCT), profi U23 férfi kerékpárosok ~20-25 h/hét volumennel – az r=0,43 közepes korreláció.
+      OpenAlex-rekonstruált absztraktból (a mondat csonkolt, az irány és a számok egyértelműek). Ultra-üzenet: a Z1-Z2
+      volumen az, ami a fáradtságállóságot építi – de amatőr óraszámra közvetlen dózis-adat nincs.
+    status: ellenorizve-doi
+
+  - key: voet-2025-durability-training
+    type: journal
+    authors: [Voet J.G., van Erp T., Viribay A., de Koning J.J., Lamberts R.P.]
+    year: 2025
+    title: "Training Characteristics Related to (the Changes in) Durability in Semiprofessional Cyclists"
+    journal: "International Journal of Sports Physiology and Performance 20(5):711-721"
+    doi: 10.1123/ijspp.2024-0321
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2024-0321
+    grade: B
+    questions: [02:Q2]
+    summary: >-
+      10 félprofi férfi kerékpáros 8 hetes edzésblokkja: friss és fáradt állapotú 1 és 10 perces teljesítmény,
+      hatásfok és szubsztrát-oxidáció változása vs. terhelésmutatók (sRPE, kJ, LuTRIMP, TSS, polarizációs index,
+      zónaidők). Egyik önmagában vett terhelésmutató sem jelezte előre a javulást; a szénhidrát-oxidáció változása
+      viszont erősen összefüggött az első laktátküszöb alatti edzésvolumennel.
+    quote: >-
+      "No significant relationship was found between higher training load on PO1 and PO10." … "a single training-load
+      measure is not able to predict performance improvements".
+    notes: >-
+      n=10, kis minta, 8 hét, megfigyeléses; OpenAlex-rekonstruált absztraktból, korrelációs együtthatók az absztraktban
+      nem szerepelnek. Tanulság a kalkulátorhoz: a TSS/TRIMP-féle egyszámos mutatók korlátosak – több mutató együtt kell.
+    status: ellenorizve-doi
+
+  - key: jones-2023-resilience
+    type: journal
+    authors: [Jones A.M.]
+    year: 2023
+    title: "The fourth dimension: physiological resilience as an independent determinant of endurance exercise performance"
+    journal: "Journal of Physiology 602(17):4113-4128 (online 2023)"
+    doi: 10.1113/jp284205
+    url: https://api.openalex.org/works/doi:10.1113/JP284205
+    grade: C
+    questions: [02:Q2, 02:Q3]
+    summary: >-
+      Narratív keret-cikk: a VO2max–gazdaságosság–küszöb hármas mellé a „élettani reziliencia" (durability) a negyedik
+      dimenzió. 2 óra heavy-intenzitású kerékpározás után a kritikus teljesítmény (CP) átlagosan ~10%-kal esik, de az
+      egyéni szórás <1%-tól ~32%-ig terjed – ez az egyéni különbség önálló teljesítmény-meghatározó, és feltehetően
+      edzhető (nagy volumen, glikogénnel manipulált edzés, hosszú terhelés végi minőség).
+    quote: >-
+      "'critical power' (CP)…may fall by an average of 10% following 2 h of heavy intensity cycle exercise" with
+      "changes in CP ranging from <1% to ∼32%".
+    notes: >-
+      Narratív áttekintés (C); az edzés-módszertani rész hipotetikus, RCT-bizonyíték nélkül. OpenAlex-ből idézve
+      (a 10%-os szám az alapul szolgáló Clark-2019 vizsgálatból származik – lásd clark-2019-cp-dynamics).
+      Print 2024, online 2023.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q3: hosszú edzés, back-to-back, tapering, terhelésmutatók
+  - key: bosquet-2007-taper-meta
+    type: journal
+    authors: [Bosquet L., Montpetit J., Arvisais D., Mujika I.]
+    year: 2007
+    title: "Effects of Tapering on Performance: A Meta-Analysis"
+    journal: "Medicine & Science in Sports & Exercise 39(8):1358-1365"
+    doi: 10.1249/mss.0b013e31806010e0
+    url: https://api.openalex.org/works/doi:10.1249/mss.0b013e31806010e0
+    grade: A
+    questions: [02:Q3]
+    summary: >-
+      Tapering-meta 27 vizsgálatból, versenyző sportolókon: az optimális forma a 2 hetes, exponenciálisan 41–60%-os
+      volumencsökkentés az intenzitás és a gyakoriság megtartásával (összhatás ES=0,72±0,36, p<0,001; 2 hetes időtartamra
+      ES=0,59±0,33). Intenzitás- vagy gyakoriság-csökkentés rontja a hatást (ES=0,33 ill. 0,35).
+    quote: >-
+      "A 2-wk taper during which training volume is reduced by 41-60% seems the most efficient strategy to maximize
+      performance gains." … volume decrease 41-60% without intensity/frequency modification: "effect = 0.72 +/- 0.36, P < 0.001".
+    notes: >-
+      Úszó/futó/kerékpáros vegyes, jellemzően 1-2 órás versenykimenetek – ultrára a volumencsökkentés elve átvihető, de
+      az „intenzitás megtartása" ultránál a hosszú edzés rövidítését jelenti, nem intervallokat. OpenAlex-rekonstruált
+      absztraktból; a ± értékek 95% CI-ként közöltek.
+    status: ellenorizve-doi
+
+  - key: foster-2001-srpe
+    type: journal
+    authors: [Foster C., Florhaug J.A., Franklin J., Gottschall L., Hrovatin L.A., Parker S., Doleshal P., Dodge C.]
+    year: 2001
+    title: "A New Approach to Monitoring Exercise Training"
+    journal: "Journal of Strength and Conditioning Research 15(1):109-115"
+    doi: 10.1519/00124278-200102000-00019
+    url: https://api.crossref.org/works/10.1519/00124278-200102000-00019
+    grade: B
+    questions: [02:Q2]
+    summary: >-
+      A session-RPE módszer alapcikke: az edzés terhelése = időtartam (perc) × ülés utáni RPE (CR-10 skála, 0–10).
+      A módszer pulzus-alapú TRIMP-pel validált, eszköz nélkül használható; ebből származik a monotónia (napi terhelés
+      átlag/szórás) és a strain (heti terhelés × monotónia) mutató. A terhelés-kalkulátor sRPE-ágának forrása.
+    quote: null
+    notes: >-
+      Crossref-rekord metaadatból ellenőrizve (cím, szerzők, év, DOI); az absztrakt szövege nem volt elérhető, ezért
+      quote nincs – számszerű állítást ebből a tételből csak a módszer definíciójára (perc × CR-10 RPE) alapozunk,
+      ami a cikk címoldali módszertana. Populáció: egyetemi sportolók, kerékpáros validálással korábbi Foster-munkákban.
+    status: ellenorizve-doi
+
+  - key: mateo-march-2025-worldtour
+    type: journal
+    authors: [Mateo-March M., Peña-González I., Moya-Ramón M., Javaloyes A.]
+    year: 2025
+    title: "Training Strategies of World Tour Cyclists: Periodization and Load Distribution Across a Competitive Season"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 35:e70153"
+    doi: 10.1111/sms.70153
+    url: https://api.openalex.org/works/doi:10.1111/sms.70153
+    grade: B
+    questions: [02:Q1, 02:Q2]
+    summary: >-
+      28 férfi World Tour-kerékpáros retrospektív szezonelemzése: a volumen fázisról fázisra progresszíven nőtt és a
+      versenyfázisban tetőzött (p≤0,01), az intenzitás-eloszlás piramis mintázatú volt, verseny felé közeledve nőtt a
+      magas intenzitás aránya (p≤0,001). A profi országúti gyakorlat tehát: piramis TID + progresszív intenzifikáció,
+      nem klasszikus polarizált.
+    quote: >-
+      "28 male World Tour" cyclists … volume "increased progressively across phases, peaking in the competitive phase"
+      … cyclists employed a "pyramidal pattern" with "progressive intensification".
+    notes: >-
+      Megfigyeléses, csak férfi profik (~20-30 h/hét); OpenAlex-rekonstruált absztraktból, pontos zóna-százalékok az
+      absztraktban nincsenek. Ultra-átvitel: a „piramis alap + verseny-specifikus intenzifikáció" logikája ultrán
+      fordított előjelű – ott a versenyspecifikus fázis a hosszú Z1-Z2 tömbösítése.
+    status: ellenorizve-doi
+
+  - key: ronnestad-2014-block
+    type: journal
+    authors: [Rønnestad B.R., Hansen J., Ellefsen S.]
+    year: 2014
+    title: "Block periodization of high-intensity aerobic intervals provides superior training effects in trained cyclists"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 24(1):34-42 (online 2012)"
+    doi: 10.1111/j.1600-0838.2012.01485.x
+    url: https://api.openalex.org/works/doi:10.1111/j.1600-0838.2012.01485.x
+    grade: A
+    questions: [02:Q3]
+    summary: >-
+      A tömbösítés (block) kontrollált bizonyítéka: 19 versenyző kerékpáros 4 hétig; a blokk-csoport (n=10) az 1. héten
+      5 HIT-edzést, majd 3 héten heti 1 HIT + alacsony intenzitást végzett; a tradicionális csoport (n=9) egyenletesen
+      elosztva, azonos össz-volumen és -intenzitás mellett. A blokk-csoport csúcsteljesítménye +4,6±3,7%-kal nőtt
+      (ES=1,34), a 4 mM-os teljesítmény +2,1±2,8% (ES=0,85); a tradicionális csoportban nem volt szignifikáns változás.
+    quote: >-
+      Block periodization: Wmax "4.6 ± 3.7%", power at 4 mmol/L "2.1 ± 2.8%" … "Traditional training showed no
+      significant changes across these measures".
+    notes: >-
+      n=19 férfi kerékpáros, 4 hét; OpenAlex-rekonstruált absztraktból (a VO2max-változás rekonstrukciója bizonytalan,
+      ezért nem idézzük). FONTOS: ez HIT-blokk, nem hosszú-edzés-blokk – a back-to-back HOSSZÚ napokra közvetlen RCT
+      nincs; a tömbösítés elve (koncentrált inger + utána könnyű hetek) innen vihető át.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- C fokozatú edzői/versenyzői és kalkulátor-források
+  - key: apidura-ultra-training
+    type: web-guide
+    authors: [Apidura (szerk. Laura M.), Allegaert K., Hammond S., Ibbett J.]
+    credential: "Kristof Allegaert – 3× TCR-győztes; Sarah Hammond – IPWR-győztes; Josh Ibbett – 2015 TCR-győztes"
+    year: 2018
+    title: "How to Train for an Ultra-Distance Cycling Event"
+    venue: apidura.com Journal
+    doi: null
+    url: https://www.apidura.com/journal/how-to-train-for-an-ultra-distance-bikepacking-race/
+    grade: C
+    questions: [02:Q2, 02:Q3]
+    summary: >-
+      Három elit önellátó ultra-versenyző edzésgyakorlata. Hammond hétközben rövid minőségi munkát végez (2 erő-, 3
+      küszöb-alatti 20–60 perces, 2 core-edzés), a hétvége a hosszú, back-to-back napoké. Közös üzenet: nem kell
+      hetente irdatlan távokat menni; Ibbett szerint a csak-hosszú-lassú edzés arra tesz jóvá, hogy „lassan menj
+      sokáig", ezért intenzitás is kell; nagy esemény előtt ~1 hónappal 4 napos többnapos gyakorlótúrát tart.
+    quote: >-
+      "During the week, I'll do two strength sessions…three sub-threshold efforts (20-60 minutes)" (Hammond) …
+      "Weekends are for riding long; back-to-back days" (Hammond) … "I always try to do a four-day ride about a month
+      away from a big event" (Ibbett).
+    notes: >-
+      Elit versenyzői tapasztalat (C), nem mért adat; heti óraszámot nem közöl. A back-to-back hétvége és a verseny
+      előtti többnapos főpróba edzői konszenzus-gyakorlatként ide horgonyzik. Publikálási év a cikk archívuma alapján ~2018.
+    status: url-megnyitva
+
+  - key: tatt-boundary-ultraguide
+    type: web-guide
+    authors: [Tatt N.]
+    credential: "Nick Tatt – UESCA-minősített ultra-állóképességi kerékpáros edző (Boundary Cycle Coach, UK)"
+    year: 2024
+    title: "Ultra-distance cycling training guide"
+    venue: boundarycycle.coach
+    doi: null
+    url: https://www.boundarycycle.coach/knowledge/article/ultra-distance-cycling-training-guide
+    grade: C
+    questions: [02:Q2, 02:Q3]
+    summary: >-
+      Edzői keretszámok 200+ mérföldes (320+ km) eseményekhez: minimum 10–15 óra/hét, 16–20 hét alatt felépítve; a
+      leghosszabb edzések 4–6 órától 10+ óráig progresszíven; hétvégi back-to-back hosszú edzések a kumulatív fáradtság
+      gyakorlására; 3 hét progresszív terhelés (heti +10–15% időtartam/volumen) + 1 könnyebb hét; a fő tartalom
+      Z2-domináns hosszú tekerés, a build-fázisban tempó- és alacsony kadenciájú erő-intervallokkal; végül fokozatos taper.
+    quote: >-
+      "Minimum training: 10-15 hours/week for 200+ mile events, built over 16-20 weeks" … "Include back-to-back long
+      rides on weekends to prepare for cumulative fatigue" … "three weeks of progressive overload (increasing duration
+      and volume by around 10-15% each week) followed by a lighter recovery week".
+    notes: >-
+      Edzői közlés (C), mérés nélkül; a 10–15 h/hét minimum a célközönség felső sávja – a kalkulátor fázis- és
+      rámpa-paramétereinek gyakorlati horgonya. Keltezés nélküli oldal (letöltve 2026-09-24).
+    status: url-megnyitva
+
+  - key: rutberg-cts-multiday
+    type: web-guide
+    authors: [Rutberg J.]
+    credential: "Jim Rutberg – CTS Pro Endurance Coach, a Time-Crunched Cyclist társszerzője"
+    year: 2023
+    title: "Training, Performance, and Recovery for Multi-Day Cycling Tours and Events"
+    venue: trainright.com (CTS)
+    doi: null
+    url: https://trainright.com/crushing-multi-day-cycling-tours-amateur-stage-race/
+    grade: C
+    questions: [02:Q3]
+    summary: >-
+      A back-to-back edzés edzői indoklása többnapos eseményekre: a felkészülésbe kötelezően építs egymást követő napos
+      edzésblokkokat, mert „a második-harmadik napi azonos szintű teljesítés képességét edzed"; a többnapos esemény
+      terhelése jellemzően a normál heti edzésterhelés 2–3-szorosa (órában, km-ben vagy TSS-ben); a ma elköltött
+      energia holnap hiányzik, ezért a napon belüli tankolás a másnapi regenerációt is szolgálja.
+    quote: >-
+      "it is imperative to reconfigure your training schedule to incorporate blocks of back-to-back training." …
+      "A multi-day event is likely 2-3 times your normal weekly training load, measured by hours, miles, or Training
+      Stress Score."
+    notes: >-
+      Edzői közlés (C); a „heti terhelés 2–3-szorosa" hüvelykujjszabály a kalkulátor többnapos-modúljához hasznos.
+      Amatőr túrázó/etap-versenyző célcsoportra írva – kísérős ultrára jól, önellátóra részben vihető át.
+    status: url-megnyitva
+
+  - key: towers-ultra-training
+    type: web-rider
+    authors: [Towers G.]
+    credential: "Gregor Towers – ultra-távú versenyző (Race around the Netherlands), edzésadatait publikáló szerző"
+    year: 2024
+    title: "Perfect your ultra cycling training strategy & avoid my biggest mistake"
+    venue: gregortowers.substack.com
+    doi: null
+    url: https://gregortowers.substack.com/p/perfect-your-ultra-cycling-training
+    grade: C
+    questions: [02:Q1, 02:Q2]
+    summary: >-
+      Versenyzői adatközlés: RatN-felkészülésében a heti 15–20 óra volt a „sweet spot"; heti egy ~162 km-es hosszú
+      edzés; az eloszlás heti 80/20, néha 90/10 Z2/intenzitás. Fő hibája: a pihenőhetek kihagyása – két 7 hetes,
+      regeneráció nélküli blokk közel krónikus fáradtsághoz vezetett és majdnem elrontotta a versenyét.
+    quote: >-
+      "15-20 hour weeks is the sweet spot for my training." … "In every training week the balance between zone 2 riding
+      (endurance) and intensity should be 80/20, sometimes 90/10." … "I decided to ignore rest weeks and do 2
+      ridiculously long training blocks".
+    notes: >-
+      Egyetlen versenyző tapasztalata (C), n=1; a 15–20 h a célközönség (6–15 h) fölött van – a modulban mint „ambiciózus
+      felső határ" idézhető. A pihenőhét-kihagyás kudarca a rámpa-szabály (friel-ctl-ramp) gyakorlati illusztrációja.
+    status: url-megnyitva
+
+  - key: houston-tcr-training
+    type: web-rider
+    authors: [Houston J.]
+    credential: "James Houston – amatőr versenyző, TCR-t teljesített Brompton kerékpáron"
+    year: 2022
+    title: "Training – The Transcontinental Race on a Brompton"
+    venue: jameshouston.com
+    doi: null
+    url: https://www.jameshouston.com/tcr/training/
+    grade: C
+    questions: [02:Q2]
+    summary: >-
+      Amatőr TCR-teljesítő valós felkészülése munka mellett: júliusi rajthoz januárban kezdett (~6 hónap); az alapozó
+      hetek ~150 mérföld (~240 km) és ~1800 m szint; tavasszal több 160 km feletti (century+) edzés, leghosszabb
+      egynapos ~275 mérföld helyett km-ben ~440 km jellegű audax-dupla (a szövegben "275 miles" két kör audaxszal);
+      taper a verseny előtt ~2–3 héttel.
+    quote: >-
+      "A typical week at the beginning of training is about 150 miles of cycling with 1,800 m climbing" … "With a race
+      date in July, training begins in January" … "I started tapering my training about 2-3 weeks before".
+    notes: >-
+      n=1 amatőr (C); a ~240 km/hét kb. 9–11 óra – közvetlen bizonyíték arra, hogy a TCR-szintű cél tipikus amatőr
+      óraszámmal is teljesíthető (teljesítés, nem dobogó). Back-to-back adatot nem közöl.
+    status: url-megnyitva
+
+  - key: pbp-2027-rules
+    type: web-org
+    authors: [Audax Club Parisien]
+    credential: "Audax Club Parisien – a PBP Randonneur szervezője, a brevet-rendszer nemzetközi gazdája"
+    year: 2026
+    title: "Rules and regulations of Paris-Brest-Paris Randonneur (2027 edition)"
+    venue: paris-brest-paris.org
+    doi: null
+    url: https://www.paris-brest-paris.org/en/rules-and-regulations-of-paris-brest-paris-randonneur/
+    grade: C
+    questions: [02:Q3]
+    summary: >-
+      A brevet-sorozat mint kötelező felkészülési gerinc intézményesítése: a PBP-re nevezéshez a versenyévben teljes
+      Super Randonneur sorozat (200, 300, 400 és 600 km-es ACP-brevet) kell; hosszabb brevet helyettesítheti a
+      rövidebbet; a PBP szintideje hullámtól függően 80–90 óra. A 200-300-400-600 progresszió így de facto
+      szabványosított, ellenőrzött hosszú-edzés-lépcső.
+    quote: >-
+      Participants must have completed "a Super Randonneur brevet serie (200, 300, 400 and 600km) of Audax Club
+      Parisien (ACP) sanctionned brevet" … "it is tolerated that a brevet may be replaced by a brevet of a greater distance".
+    notes: >-
+      Szervezői szabályzat (C) – nem élettani bizonyíték, hanem a gyakorlatban validált progressziós keret; a
+      600-as brevet egyben az első alvásmegvonásos „főpróba" is. A 2027-es kiadás szövege (letöltve 2026-09-24).
+    status: url-megnyitva
+
+  - key: friel-ctl-ramp
+    type: web-guide
+    authors: [Friel J.]
+    credential: "Joe Friel – a Training Bible-sorozat szerzője, a TrainingPeaks társalapítója"
+    year: 2015
+    title: "The CTL Ramp Rate"
+    venue: joefrieltraining.com
+    doi: null
+    url: https://joefrieltraining.com/the-ctl-ramp-rate/
+    grade: C
+    questions: [02:Q2]
+    summary: >-
+      A terhelés-kalkulátor rámpa-paraméterének forrása: a CTL (42 napos exponenciális terhelésátlag, TSS/nap) biztonságos
+      emelése a legtöbb sportolónak ~5–8 pont/hét; 10 pont/hét feletti rámpát csak elit sportoló és legfeljebb ~1 hétig
+      bírjon, utána vissza kell venni. A túledzés jelei jellemzően csak több hét túlzott terhelés után jönnek elő.
+    quote: >-
+      "an increase in CTL of about 5 to 8 points per week is about right for most" … greater than 10 CTL points per week
+      should last "a week or less before backing off".
+    notes: >-
+      Edzői közlés (C), a CTL/ATL/TSB (PMC-modell) Coggan-féle keretére épül; validáló RCT nincs, de az iparági
+      sztenderd. A kalkulátorban: rámpa-cél 3–5 (kezdő), 5–8 (haladó), max 10 (rövid ideig).
+    status: url-megnyitva

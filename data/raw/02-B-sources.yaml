@@ -1,0 +1,569 @@
+# 02. modul – Edzéselmélet ultrára – B csomag (Q4: periodizáció; Q5: tapering; Q6: erősítés)
+# Készült: 2026-09-24. DOI csak ott szerepel, ahol kiadói / Crossref / OpenAlex / Europe PMC oldalon látható volt.
+# Meglévő forrástárból (data/sources.yaml) csak hivatkozott, itt NEM újradefiniált kulcsok:
+#   rothschild-2021-ultracyclist, hyldahl-2024-tourdivide, brayson-2019-tcr, spragg-2023-durability,
+#   maunder-2021-durability, friel-decoupling-tp, rutberg-cts-2016, rutberg-pulford-cts-ultra-2025,
+#   white-2016-ridefar-method, strasser-inscyd-2022, tiller-2019-issn-ultra, thomas-2016-joint-position
+# 23 tétel. Lezárva: 2026-09-24.
+sources:
+  # ---------------------------------------------------------------- Q4: periodizáció
+  - key: molmen-2019-block-meta
+    type: journal
+    authors: [Mølmen K.S., Øfsteng S.J., Rønnestad B.R.]
+    year: 2019
+    title: "Block periodization of endurance training – a systematic review and meta-analysis"
+    journal: "Open Access Journal of Sports Medicine 10:145-160"
+    doi: 10.2147/OAJSM.S180408
+    url: https://api.openalex.org/works/doi:10.2147/OAJSM.S180408
+    grade: A
+    questions: ["02:Q4"]
+    summary: >-
+      Szisztematikus áttekintés és meta-analízis (20 vizsgálat) a blokk-periodizáció (BP) vs. hagyományos szervezés
+      hatásáról állóképességi sportban. VO2max-ra a standardizált átlagkülönbség 0,40 (95% CI 0,02–0,79), maximális
+      teljesítményre (Wmax) 0,28 (95% CI 0,01–0,54) a BP javára — kis hatás. A küszöb-teljesítmény változásaiban
+      közepes-nagy hatások a BP javára. A szerzők óvatosságra intenek: a vizsgálatok módszertani minősége alacsony
+      (átlagos PEDro-pontszám 3,7/10).
+    quote: >-
+      "the standardized mean difference was 0.40 (95% CI=0.02, 0.79)" for VO2max and "0.28 (95% CI=0.01, 0.54)" for
+      maximal power output, favoring block periodization; mean PEDro score 3.7/10.
+    notes: >-
+      Absztraktból (OpenAlex-rekonstrukció). Vegyes állóképességi sportok, döntően rövid (1–12 hetes) beavatkozások,
+      jórészt jól edzett férfiak. Ultra-távra közvetlen adat nincs; a kis hatásméret + gyenge módszertan miatt a
+      BP-fölény bizonyítéka gyenge-közepes. Az egyik szerző (Rønnestad) maga a BP-vizsgálatok fő szerzője — érdekütközés lehetséges.
+    status: ellenorizve-doi
+
+  - key: ronnestad-2014-block-cyclists
+    type: journal
+    authors: [Rønnestad B.R., Hansen J., Ellefsen S.]
+    year: 2014
+    title: "Block periodization of high-intensity aerobic intervals provides superior training effects in trained cyclists"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 24(1):34-42 (online 2012)"
+    doi: 10.1111/j.1600-0838.2012.01485.x
+    url: https://api.openalex.org/works/doi:10.1111/j.1600-0838.2012.01485.x
+    grade: A
+    questions: ["02:Q4"]
+    summary: >-
+      Kontrollált vizsgálat edzett kerékpárosokon (BP: n=10, VO2max 62±2; hagyományos: n=9, 63±2 ml/kg/perc), 4 hetes
+      ciklus. BP: 1. héten 5 HIT-edzés, majd 3 héten heti 1 HIT + alacsony intenzitás; hagyományos: heti 2 HIT elosztva,
+      azonos össz-terhelés. A BP-csoportban a csúcsteljesítmény +4,6±3,7%, a 4 mmol/l laktátnál mért teljesítmény
+      +2,1±2,8%, a VO2max +10±12% (p<0,05); a hagyományos csoportban nem volt szignifikáns változás. Hatásméretek:
+      ES=1,34; 0,85; 0,71.
+    quote: >-
+      "peak power output increased 4.6±3.7%, power at 4 mmol/L lactate rose 2.1±2.8%, and VO2max increased 10±12%
+      (P<0.05)… Effect size analysis revealed large to moderate improvements (ES=1.34, ES=0.85, ES=0.71)."
+    notes: >-
+      Absztraktból (OpenAlex). n=19, edzett férfi kerékpárosok, 4 hét — rövid táv, kis minta, a heti 6–15 órás amatőrre
+      a HIT-sokkhét adaptálható (pl. HIT-blokk hét), de a tartós ultra-felkészülésre extrapoláció. Crossref-évszám 2012
+      (online), nyomtatott 2014.
+    status: ellenorizve-doi
+
+  - key: sylta-2016-hit-periodization
+    type: journal
+    authors: [Sylta Ø., Tønnessen E., Hammarström D., Danielsen J., Skovereng K., Ravn T., Rønnestad B.R., Sandbakk Ø., Seiler S.]
+    year: 2016
+    title: "The Effect of Different High-Intensity Periodization Models on Endurance Adaptations"
+    journal: "Medicine & Science in Sports & Exercise 48(11):2165-2174"
+    doi: 10.1249/MSS.0000000000001007
+    url: https://api.openalex.org/works/doi:10.1249/MSS.0000000000001007
+    grade: A
+    questions: ["02:Q4"]
+    summary: >-
+      RCT: 63 kerékpáros (VO2peak 61,3±5,8 ml/kg/perc), 12 hét, 24 intervall-edzés azonos össz-terheléssel, három
+      modell: növekvő, csökkenő, vegyes HIT-progresszió (16–4 perces intervallumok). Minden csoport 5–10%-ot javult
+      teljesítményben és VO2peak-ben, de a modellek között NEM volt adaptációs különbség (p>0,05); a nagy/közepes/nem-
+      reagálók eloszlása is azonos volt. Fő üzenet: azonos össz-terhelés mellett a periodizációs forma alig számít.
+    quote: >-
+      "All groups improved 5%-10% in power output… no adaptation differences emerged among" the three models; "organizing
+      different specific periodized interval training… has little effect on endurance adaptation."
+    notes: >-
+      Absztraktból (OpenAlex). n=63 (döntően férfi), jól edzett kerékpárosok, 12 hét, labor-kimenetek. A modul
+      kulcsbizonyítéka arra, hogy az összvolumen/össz-terhelés fontosabb a mikro-elrendezésnél. Ultra-versenyre nem
+      teljesítmény-specifikus, de kerékpáros populáció.
+    status: ellenorizve-doi
+
+  - key: gonzalez-rave-2022-reverse
+    type: journal
+    authors: [González-Ravé J.M., González-Mohino F., Rodrigo-Carranza V., Pyne D.B.]
+    year: 2022
+    title: "Reverse Periodization for Improving Sports Performance: A Systematic Review"
+    journal: "Sports Medicine - Open 8:56"
+    doi: 10.1186/s40798-022-00445-8
+    url: https://link.springer.com/article/10.1186/s40798-022-00445-8
+    grade: A
+    questions: ["02:Q4"]
+    summary: >-
+      Szisztematikus áttekintés a fordított periodizációról: 11 vizsgálat, 200 sportoló (5 úszó-, 3 futó-, 2 erő-,
+      1 triatlon-vizsgálat). Úszásban 100 m-en mindkét modell 1–5%-ot javított; futásban 2000–5000 m-en mindkettő ~2,4%-ot;
+      erőben a hagyományos periodizáció adott nagyobb maximálerő-nyereséget. Konklúzió: a fordított periodizáció nem
+      hatékonyabb a többi formánál. Átlagos PEDro 4,9/7 — mérsékelt bizonyíték-minőség.
+    quote: >-
+      "It appears that reverse periodization is no more effective than other forms of periodization in improving
+      sports performance."
+    notes: >-
+      Springer-oldal megnyitva. Kerékpáros vizsgálat nincs benne; úszó/futó populáció. Ultrára az üzenet közvetett:
+      a „forma" megválasztása másodlagos. A fordított periodizáció ultrán amúgy is ritka (a hosszú alapozás maga a
+      verseny-specifikus munka).
+    status: ellenorizve-doi
+
+  - key: kiely-2018-periodization-critique
+    type: journal
+    authors: [Kiely J.]
+    year: 2018
+    title: "Periodization Theory: Confronting an Inconvenient Truth"
+    journal: "Sports Medicine 48(4):753-764 (online 2017)"
+    doi: 10.1007/s40279-017-0823-y
+    url: https://api.openalex.org/works/doi:10.1007/s40279-017-0823-y
+    grade: C
+    questions: ["02:Q4"]
+    summary: >-
+      Narratív-elméleti kritika: a periodizáció-elmélet hét évtizedes filozófiai alapjai (Selye-féle stresszmodell,
+      „a fizikai stressz elsődlegesen biológiai jelenség") elavultak, miközben az elmélet feltevései „nagyrészt
+      megkérdőjelezetlenek és változatlanok" maradtak. Nem ad számokat; érv arra, hogy a merev periodizációs sémák
+      helyett az egyéni stressz-válaszra (alvás, munka, élet-terhelés) reagáló rugalmas tervezés indokolt — ami a
+      munka melletti amatőrnek különösen releváns.
+    quote: >-
+      "the philosophical assumptions underpinning periodization remain largely unchallenged and unchanged" despite the
+      erosion of its original scientific platform.
+    notes: >-
+      Absztraktból (OpenAlex). Elméleti cikk, számszerű bizonyíték nélkül — C fokozat. Lektorált folyóiratban megjelent,
+      sokat idézett kritika; a modul „mennyire számít a periodizáció-forma" kérdésének elméleti kerete.
+    status: ellenorizve-doi
+
+  - key: mujika-2018-integrated-periodization
+    type: journal
+    authors: [Mujika I., Halson S.L., Burke L.M., Balagué G., Farrow D.]
+    year: 2018
+    title: "An Integrated, Multifactorial Approach to Periodization for Optimal Performance in Individual and Team Sports"
+    journal: "International Journal of Sports Physiology and Performance 13(5):538-561"
+    doi: 10.1123/ijspp.2018-0093
+    url: https://api.openalex.org/works/doi:10.1123/ijspp.2018-0093
+    grade: C
+    questions: ["02:Q4", "02:Q5"]
+    summary: >-
+      Áttekintő/álláspont-cikk vezető kutatóktól: a periodizáció ne csak az edzésterhelést, hanem a regenerációt,
+      táplálkozást (tápanyag-időzítés fázisokhoz), pszichológiai készségeket, hő- és magaslati adaptációt,
+      testösszetételt is tervezze. A periodizáció hatékonyságáról zajló vita ellenére a különböző megközelítések
+      alkalmazását támogatja elit egyéni és csapatsportban. A modul „integrált" szemléletének (edzés+alvás+táplálkozás
+      egyben) hivatkozási alapja.
+    quote: >-
+      "Despite ongoing debate about periodization's effectiveness, evidence supports using various approaches to
+      enhance performance across elite individual and team sports."
+    notes: >-
+      Absztraktból (OpenAlex). Narratív áttekintés (nem meta-analízis), ezért C. Elit sportolókra írt; az ultra-amatőr
+      kontextusra elvi szinten vihető át.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q5: tapering
+  - key: bosquet-2007-taper-meta
+    type: journal
+    authors: [Bosquet L., Montpetit J., Arvisais D., Mujika I.]
+    year: 2007
+    title: "Effects of Tapering on Performance: A Meta-Analysis"
+    journal: "Medicine & Science in Sports & Exercise 39(8):1358-1365"
+    doi: 10.1249/mss.0b013e31806010e0
+    url: https://api.openalex.org/works/doi:10.1249/mss.0b013e31806010e0
+    grade: A
+    questions: ["02:Q5"]
+    summary: >-
+      A tapering-irodalom máig alap meta-analízise: 182 szűrt tanulmányból 27 felelt meg (verseny- vagy terep-
+      teljesítménnyel). A leghatékonyabb stratégia: 2 hetes tapering, a volumen exponenciális, 41–60%-os csökkentésével,
+      az intenzitás és a gyakoriság megtartásával — össz-hatásméret 0,72 (±0,36, p<0,001). Intenzitás-megtartás
+      önmagában: ES 0,59 (±0,33); csak gyakoriság-csökkentés: ES 0,35 (±0,17).
+    quote: >-
+      "a 2-week taper during which training volume is exponentially reduced by 41-60%… overall effect 0.72 (±0.36,
+      P < 0.001)… the most efficient strategy".
+    notes: >-
+      Absztraktból (OpenAlex-rekonstrukció). Vegyes állóképességi sportok (úszás, futás, kerékpár), döntően versenyszerű
+      sportolók; a teljesítmény-kimenet jellemzően rövidebb (perc–óra) erőfeszítés. Többnapos, alacsony intenzitású
+      ultrára közvetlen adat nincs — az átvitel kérdéses, mert ott a rajt-frissesség vs. edzés-kiesés mérlege más.
+    status: ellenorizve-doi
+
+  - key: mujika-2003-taper-bases
+    type: journal
+    authors: [Mujika I., Padilla S.]
+    year: 2003
+    title: "Scientific Bases for Precompetition Tapering Strategies"
+    journal: "Medicine & Science in Sports & Exercise 35(7):1182-1187"
+    doi: 10.1249/01.MSS.0000074448.73931.11
+    url: https://api.openalex.org/works/doi:10.1249/01.MSS.0000074448.73931.11
+    grade: C
+    questions: ["02:Q5"]
+    summary: >-
+      Klasszikus áttekintés a tapering tudományos alapjairól: optimális, ha az intenzitás megmarad, a volumen 60–90%-kal
+      csökken, a gyakoriság legfeljebb ~20%-kal. Ideális időtartam 4–28 nap; a progresszív, nemlineáris tapering jobb a
+      lépcsős csökkentésnél. Tipikus teljesítményjavulás ~3% (0,5–6,0%), kardiorespiratorikus, metabolikus, hematológiai,
+      hormonális és neuromuszkuláris helyreállás révén.
+    quote: >-
+      "Optimal outcomes occur by preserving training intensity, reducing volume (60-90%)… duration spans between 4 and
+      28 days… performance typically improves by approximately 3% (ranging from 0.5-6.0%)."
+    notes: >-
+      Absztraktból (OpenAlex). Narratív áttekintés — C fokozat. A 60–90% volumencsökkentés a taper VÉGÉRE értendő
+      (progresszív); a Bosquet-meta 41–60%-os átlagcsökkentése az egész időszakra. Rövidebb versenyszámok sportolóira épül.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- Q6: erősítés
+  - key: llanos-lagos-2025-hst-cyclists-meta
+    type: journal
+    authors: [Llanos-Lagos C., Ramírez-Campillo R., Sáez de Villarreal E.]
+    year: 2025
+    title: "Heavy strength training effects on physiological determinants of endurance cyclist performance: a systematic review with meta-analysis"
+    journal: "European Journal of Applied Physiology 125:2913-2934"
+    doi: 10.1007/s00421-025-05883-2
+    url: https://api.openalex.org/works/pmid:40632222
+    grade: A
+    questions: ["02:Q6"]
+    summary: >-
+      A legfrissebb kerékpáros-specifikus meta-analízis: 17 kontrollált vizsgálat, 262 résztvevő (60 nő). A nehéz
+      erősítő edzés (≥80% 1RM, ≥3 hét) szignifikánsan javította a VO2max-ot (ES=0,353, p=0,012), az anaerob kapacitást
+      (ES=0,560, p=0,024) és a kerékpáros teljesítményt (ES=0,463, p=0,016); a metabolikus steady-state mutatókban
+      (küszöbök, gazdaságosság) nem volt szignifikáns változás (p≥0,263). Moderátor-hatás nem volt (p≥0,170);
+      a bizonyosság alacsony.
+    quote: >-
+      "Heavy strength training… produced significant improvements in VO2max (ES = 0.353, p = 0.012), anaerobic capacity
+      (ES = 0.560, p = 0.024), and cycling performance (ES = 0.463, p = 0.016). No significant changes occurred in
+      metabolic steady state (all p ≥ 0.263)."
+    notes: >-
+      Absztraktból (OpenAlex-rekonstrukció). Kerékpáros populáció, de a teljesítmény-tesztek rövidek (percek–1 óra);
+      ultra-teljesítményre a hatás közvetett (frissebb izomzat, elfáradás-késleltetés). Meglepő: a gazdaságosság-javulás
+      itt NEM szignifikáns — ellentmond a korábbi narratív áttekintéseknek (ronnestad-2014-strength-review).
+    status: ellenorizve-doi
+
+  - key: ronnestad-2014-strength-review
+    type: journal
+    authors: [Rønnestad B.R., Mujika I.]
+    year: 2014
+    title: "Optimizing strength training for running and cycling endurance performance: A review"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 24(4):603-612 (online 2013)"
+    doi: 10.1111/sms.12104
+    url: https://api.crossref.org/works/10.1111/sms.12104
+    grade: C
+    questions: ["02:Q6"]
+    summary: >-
+      Sokat idézett áttekintés: a nehéz erősítő edzés javítja a kerékpáros gazdaságosságot és a futó-gazdaságosságot
+      (futóknál nehéz vagy explozív erősítés egyaránt), és javítja az állóképességi teljesítményt. Javasolt mechanizmusok:
+      a kevésbé gazdaságos IIX-rostok aktivációjának késleltetése, IIX→IIA rost-átalakulás, ín-merevség javulása.
+      Gyakorlati ajánlás: heti 2 nehéz erősítés a felkészülési, heti 1 a versenyidőszakban.
+    quote: >-
+      "running economy is improved by performing combined endurance training with either heavy or explosive strength
+      training," while heavy strength training shows superior benefits for cycling economy; mechanisms include "delayed
+      activation of less efficient type II fibers".
+    notes: >-
+      Absztraktból (Crossref). Narratív áttekintés — C. A gazdaságosság-állítást a frissebb meta (llanos-lagos-2025)
+      kerékpárnál nem erősíti meg szignifikánsan — a modulban jelezni. Crossref-évszám 2013 (online), nyomtatott 2014.
+    status: ellenorizve-doi
+
+  - key: vikmoen-2016-female-cyclists
+    type: journal
+    authors: [Vikmoen O., Ellefsen S., Trøen Ø., Hollan I., Hanestadhaugen M., Raastad T., Rønnestad B.R.]
+    year: 2016
+    title: "Strength training improves cycling performance, fractional utilization of VO2max and cycling economy in female cyclists"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 26(4):384-396 (online 2015)"
+    doi: 10.1111/sms.12468
+    url: https://api.openalex.org/works/doi:10.1111/sms.12468
+    grade: A
+    questions: ["02:Q6"]
+    summary: >-
+      Kontrollált vizsgálat jól edzett női kerékpárosokon: 11 hét, állóképesség+erő (n=11) vs. csak állóképesség (n=8).
+      A kombinált csoportban nagyobb lábtoló-erő és négyfejű-keresztmetszet, jobb 40 perces maximális teszt-teljesítmény,
+      jobb frakcionális VO2max-kihasználás és gazdaságosság. Rost-eltolódás IIAX-IIX→IIA irányba; az egyéni
+      teljesítményjavulás korrelált a rost-átalakulással (r=-0,63) és az izomkeresztmetszet-növekedéssel (r=0,73).
+    quote: >-
+      "Individual performance gains correlated with both fiber compositional changes (r = -0.63) and muscle area
+      increases (r = 0.73)."
+    notes: >-
+      Absztraktból (OpenAlex; ott 2015-ös online évszám). n=19 nő — ritka női kerékpáros adat. 40 perces teszt: ultrára
+      közvetett, de az elfáradás-késleltetés mechanizmus (rost-átalakulás) az ultra-relevancia alapja.
+    status: ellenorizve-doi
+
+  - key: ronnestad-2010-inseason-maintenance
+    type: journal
+    authors: [Rønnestad B.R., Hansen E.A., Raastad T.]
+    year: 2010
+    title: "In-season strength maintenance training increases well-trained cyclists' performance"
+    journal: "European Journal of Applied Physiology 110(6):1269-1282"
+    doi: 10.1007/s00421-010-1622-4
+    url: https://link.springer.com/article/10.1007/s00421-010-1622-4
+    grade: A
+    questions: ["02:Q6"]
+    summary: >-
+      Kontrollált vizsgálat jól edzett kerékpárosokon: 12 hét felkészülési fázis heti 2 nehéz erősítéssel, majd 13 hét
+      versenyidőszak heti 1 fenntartó edzéssel (E+S, n=6) vs. csak állóképesség (E, n=6). Az E+S csoport megőrizte a
+      comb-keresztmetszet- és erőnövekedést, javult a Wingate-csúcsteljesítmény, a Wmax és a 40 perces all-out átlagteljesítmény
+      (p<0,05); az E csoportban a Wmax és a küszöbteljesítmény nem változott. A „heti 1 elég a szinten tartáshoz" elv forrása.
+    quote: >-
+      "At 13 weeks into the competition period, E + S had preserved the increase in CSA and strength" with one weekly
+      maintenance session; 40-min all-out mean power increased (p < 0.05).
+    notes: >-
+      Springer-oldal megnyitva (absztrakt). Nagyon kis minta (2×6 fő, férfi), nem randomizált a szó szoros értelmében.
+      A fenntartó dózis (heti 1) közvetlenül alkalmazható a munka melletti ultrás szezontervben.
+    status: ellenorizve-doi
+
+  - key: iversen-2021-notimetolift
+    type: journal
+    authors: [Iversen V.M., Norum M., Schoenfeld B.J., Fimland M.S.]
+    year: 2021
+    title: "No Time to Lift? Designing Time-Efficient Training Programs for Strength and Hypertrophy: A Narrative Review"
+    journal: "Sports Medicine 51(10):2079-2095"
+    doi: 10.1007/s40279-021-01490-1
+    url: https://api.openalex.org/works/doi:10.1007/s40279-021-01490-1
+    grade: C
+    questions: ["02:Q6"]
+    summary: >-
+      Narratív áttekintés az időhatékony erősítésről: minimum heti 4 sorozat izomcsoportonként, 6–15 RM terheléssel;
+      a heti össz-volumen fontosabb, mint a gyakoriság (elosztás); több-ízületes, kétoldali gyakorlatok előnyben;
+      szuperszettek és drop-szettek idő-megtakarításra; hosszú általános bemelegítés és nyújtás elhagyható. A munka
+      melletti ultrás „minimál-protokoll" (heti 1×30–40 perc) tudományos kerete.
+    quote: >-
+      "weekly training volume is more important than frequency"; recommend "a minimum of 4 weekly sets per muscle group
+      using 6-15 RM loading".
+    notes: >-
+      Absztraktból (OpenAlex). Narratív review — C. Általános (nem sportoló-specifikus) populáció; erő/hipertrófia
+      kimenetek, nem állóképesség-teljesítmény. A kerékpáros-specifikus dózishoz lásd ronnestad-2014-strength-review.
+    status: ellenorizve-doi
+
+  - key: abt-2007-core-cycling
+    type: journal
+    authors: [Abt J.P., Smoliga J.M., Brick M.J., Jolly J.T., Lephart S.M., Fu F.H.]
+    year: 2007
+    title: "Relationship between cycling mechanics and core stability"
+    journal: "Journal of Strength and Conditioning Research 21(4):1300-1304"
+    doi: null
+    url: https://chs.uky.edu/sites/default/files/2023-12/JSCR_Relationship%20Between%20Cycling%20Mechanics%20and%20Core%20Stability.pdf
+    grade: B
+    questions: ["02:Q6"]
+    summary: >-
+      Labor-vizsgálat 15 versenyző kerékpároson (34,5±9,8 év): 32 perces törzs-fárasztó kör (7 gyakorlat) után
+      megnőtt a térd frontális síkú mozgása (15,1°→23,3°, +54,3%), a térd szagittális mozgása (+13,4%) és a boka
+      szagittális mozgása (29,0°→43,0°, +48,3%) a fárasztás előtti teszthez képest; a pedálerő nem változott.
+      A törzsfáradás tehát „extra", parazita-mozgást visz a hajtásba — a törzserősítés ultra-indoklása.
+    quote: >-
+      "Total frontal plane knee motion and total sagittal plane knee and ankle motion increased (13.4-54.3%) after the
+      core fatigue protocol, indicating greater extraneous motion throughout the pedal stroke."
+    notes: >-
+      Teljes szöveg (PDF) megnyitva. DOI a dokumentumban nem szerepel — DOI nem ellenőrizve. n=15, akut fárasztás
+      (nem edzés-intervenció): azt mutatja, hogy a törzsfáradás rontja a mechanikát, de NEM bizonyítja, hogy a
+      törzsedzés javítja a teljesítményt. Térd-boka kinematika ultrán a túlterheléses sérülés-kockázathoz kapcsolható.
+    status: url-megnyitva
+
+  - key: ronnestad-2011-strength-185min
+    type: journal
+    authors: [Rønnestad B.R., Hansen E.A., Raastad T.]
+    year: 2011
+    title: "Strength training improves 5-min all-out performance following 185 min of cycling"
+    journal: "Scandinavian Journal of Medicine & Science in Sports 21(2):250-259 (online 2009)"
+    doi: 10.1111/j.1600-0838.2009.01035.x
+    url: https://api.openalex.org/works/doi:10.1111/j.1600-0838.2009.01035.x
+    grade: A
+    questions: ["02:Q6"]
+    summary: >-
+      A legultra-relevánsabb erősítés-vizsgálat: 20 edzett kerékpáros, 12 hét, heti 2 nehéz láberősítés (4 gyakorlat,
+      3×4–10 RM) + állóképesség (E+S, n=11) vs. csak állóképesség (E, n=9). 185 perc szubmaximális tekerés UTÁN mért
+      5 perces all-out teljesítmény az E+S csoportban 371±9 W-ról 400±13 W-ra nőtt (~+8%, p<0,05), az E csoportban nem
+      változott. Az E+S-ben a hosszú tekerés alatt kisebb lett az oxigénfogyasztás, pulzus, laktát és RPE (p<0,05) —
+      azaz az erősítés a FÁRADT állapotbeli teljesítményt (durability) javítja.
+    quote: >-
+      "power output improved from 371±9 to 400±13 W in E+S (P<0.05), while no change occurred in E"; E+S showed
+      "greater reductions in oxygen consumption, heart rate, blood lactate, and perceived exertion during prolonged cycling".
+    notes: >-
+      Absztraktból (OpenAlex; ott 2009-es online évszám, nyomtatott 2011). n=20 férfi, labor, 185 perc — az ultrához
+      képest rövid, de a „több órás munka utáni frissesség" kimenet a durability-irodalom (spragg-2023-durability,
+      maunder-2021-durability) erősítés-oldali párja.
+    status: ellenorizve-doi
+
+  - key: schumann-2022-concurrent-meta
+    type: journal
+    authors: [Schumann M., Feuerbacher J.F., Sünkeler M., Freitag N., Rønnestad B.R., Doma K., Lundberg T.R.]
+    year: 2022
+    title: "Compatibility of Concurrent Aerobic and Strength Training for Skeletal Muscle Size and Function: An Updated Systematic Review and Meta-Analysis"
+    journal: "Sports Medicine 52(3):601-612 (online 2021)"
+    doi: 10.1007/s40279-021-01587-7
+    url: https://api.openalex.org/works/doi:10.1007/s40279-021-01587-7
+    grade: A
+    questions: ["02:Q6"]
+    summary: >-
+      Frissített meta-analízis (43 vizsgálat) az „interferencia-hatásról": az egyidejű állóképességi+erő edzés a
+      maximális erőt (SMD=-0,06; 95% CI -0,20–0,09; p=0,446) és a hipertrófiát (SMD=-0,01; -0,16–0,18; p=0,919)
+      NEM rontja; egyedül az explozív erő csökken mérsékelten (SMD=-0,28; -0,48– -0,08; p=0,007), főleg ha a két
+      edzés ugyanabban az edzésegységben van (≥3 óra szétválasztás enyhíti). Ultrásnak megnyugtató: a magas aerob
+      volumen mellett az erőfejlesztés működik.
+    quote: >-
+      "maximal strength: SMD = -0.06 (95% CI: -0.20 to 0.09; p=0.446)… muscle hypertrophy: SMD = -0.01 (p=0.919)…
+      explosive strength: SMD = -0.28 (95% CI: -0.48 to -0.08; p=0.007)", attenuation intensified "within the same session".
+    notes: >-
+      Absztraktból (OpenAlex; online 2021, nyomtatott 2022). Egészséges felnőttek (nem csak sportolók), vegyes nem.
+      Az explozív erő ultrán másodlagos, így az interferencia gyakorlati jelentősége kicsi; időzítési tanács (külön
+      napra vagy ≥3 órára szétválasztani) közvetlenül alkalmazható.
+    status: ellenorizve-doi
+
+  - key: shiose-2016-carboload-water
+    type: journal
+    authors: [Shiose K., Yamada Y., Motonaga K., Sagayama H., Higaki Y., Tanaka H., Takahashi H.]
+    year: 2016
+    title: "Segmental extracellular and intracellular water distribution and muscle glycogen after 72-h carbohydrate loading using spectroscopic techniques"
+    journal: "Journal of Applied Physiology 121(1):205-211"
+    doi: 10.1152/japplphysiol.00126.2016
+    url: https://api.openalex.org/works/doi:10.1152/japplphysiol.00126.2016
+    grade: A
+    questions: ["02:Q5"]
+    summary: >-
+      Kontrollált labor (n=8): kimerítő tekerés után 72 órás szénhidrát-feltöltés (12 g/kg/nap). Az izomglikogén
+      szignifikánsan nőtt (169,4±55,9 mmol/kg nedves tömegre; p<0,001), a teljes testvíz 39,3±3,2 kg-ról 40,2±3,0 kg-ra
+      (+~0,9 kg; p<0,05); a növekedés intracelluláris és főleg a lábakban jelentkezett. A tapering+feltöltés alatti
+      1–2 kg súlygyarapodás tehát glikogén+víz, nem zsír — a rajtnál ez normális és kívánatos.
+    quote: >-
+      "muscle glycogen increased significantly to 169.4 ± 55.9 mmol/kg wet weight (P < 0.001), and total body water
+      increased from 39.3 ± 3.2 to 40.2 ± 3.0 kg (P < 0.05)".
+    notes: >-
+      Absztraktból (OpenAlex; a kiadói oldal 403-at adott). n=8 (feltehetően férfi), labor, 12 g/kg/nap extrém-magas
+      CHO — a 03-as modul feltöltési protokolljához kapcsolódik. A vízfelvétel szegmens-specifikus (láb), ami a
+      „nehéz láb" érzést is magyarázhatja a taper végén.
+    status: ellenorizve-doi
+
+  # ---------------------------------------------------------------- edzői / versenyzői gyakorlat (C)
+  - key: rutberg-cts-taper
+    type: web
+    authors: [Rutberg J.]
+    credential: "CTS Pro edzéstervező-edző, ultra- és országúti sportolók edzője, több CTS-könyv társszerzője"
+    year: 2023
+    title: "Tapering and What to Do the Week Before Your Cycling Race"
+    venue: "CTS / trainright.com"
+    doi: null
+    url: https://trainright.com/tapering-week-before-race/
+    grade: C
+    questions: ["02:Q5"]
+    summary: >-
+      Edzői protokoll a versenyhét taperjére: 7–10 napos taper, a volumen jelentős csökkentése (90 perces edzés → 60,
+      60 → 45 perc), némi intenzitás megtartásával. Állóképességi eseményre a versenyhét szerdájára 3–4 órás
+      „szuperkompenzációs" hosszú tekerést javasol a szénhidrát-raktárak kiürítésére a feltöltés előtt. Fő üzenet:
+      az utolsó héten már nem lehet formát építeni, csak elrontani.
+    quote: >-
+      "No matter where your conditioning is with one week to go, that's what you have to work with. In the time you
+      have left, no combination of workouts is going to significantly boost your sustainable power."
+    notes: >-
+      Edzői tapasztalat, számok mérés nélkül — C. Elsősorban hagyományos (rövidebb) országúti versenyre írva; az ultra-
+      adaptációt a modulban jelezni kell. Évszám a cikk frissítése alapján hozzávetőleges.
+    status: url-megnyitva
+
+  - key: vanderlinden-wuca-1224
+    type: web
+    authors: [Vander Linden M.]
+    credential: "WUCA-versenyző (2000 WUCA 24 óra korosztályos 2. hely, PBP-teljesítő 1999)"
+    year: 2001
+    title: "Training for 12 and 24 Hour Ultra Races - Part 1"
+    venue: "World UltraCycling Association (ultracycling.com)"
+    doi: null
+    url: https://ultracycling.com/training-for-12-24-part1/
+    grade: C
+    questions: ["02:Q4", "02:Q5"]
+    summary: >-
+      Versenyzői-edzői keret 12/24 órás ultrára: 4 hónapos alapozás (novembertől), 2 hónapos intenzitás-fázis
+      (március 1-től), majd csúcsforma+taper versenyenként. Intenzitás-fázisban heti 4 kulcsedzés (speed ~40 km,
+      hegyi ~40 km, tempó, verseny-tempójú hosszú). A leghosszabb edzés a cél-táv ~75%-a, két héttel a verseny előtt,
+      előtte hetente ~10%-kal növelve. Versenyek között 6–8 hét teljes regeneráció → évi ~2–3 fő verseny.
+    quote: >-
+      "The longest ride should equal 75% of race mileage goal, performed two weeks before the event… Most of us need
+      approximately six to eight weeks to recover completely."
+    notes: >-
+      Egy versenyző tapasztalata, nem mért adat — C. Kísérős/fix-körös 12–24 órás versenyre írva; a 75%-os leghosszabb
+      edzés szabálya többnapos önellátó versenyre NEM vihető át (ott a leghosszabb edzés a versenytáv törtrésze).
+      Publikálás dátuma bizonytalan (2000-es évek eleje).
+    status: url-megnyitva
+
+  - key: grandgeorge-t2m-season
+    type: web
+    authors: [Grandgeorge G.]
+    credential: "ultrakerékpáros edző (T2M Coaching), TABR- és RAAM-indulók felkészítője"
+    year: 2022
+    title: "Thoughts on season planning for multi-day ultra-cycling races/events"
+    venue: "T2M Coaching blog"
+    doi: null
+    url: https://www.tri2max.com/blog/2022/1/15/thoughts-on-season-planning-for-multi-day-ultra-cycling-racesevents
+    grade: C
+    questions: ["02:Q4", "02:Q5"]
+    summary: >-
+      Edzői keret többnapos ultrára: a terhelés-csúcs a verseny előtt 4–6 héttel legyen (30–42 nap kell az
+      adaptációnak); 3+1 vagy 2+1 hetes építő/regeneráló mikrociklusok; heti 6 edzésnap + 1 teljes pihenőnap;
+      a taper 2–3 héttel a verseny előtt kezdődik, csökkentett volumennel és megtartott/emelt intenzitással.
+      Merev fázisok helyett fokozatos terhelés-emelést hangsúlyoz.
+    quote: >-
+      "Progression does not mean that each day has to be higher than the previous… but that the general trend of load
+      needs to increase over time, to constructively build fitness."
+    notes: >-
+      Edzői tapasztalat — C. Többnapos önellátó ultrára írva (TABR/RAAM), ezért a taper- és csúcsidőzítés-számai a
+      modul ütemterv-generátorának közvetlen bemenetei.
+    status: url-megnyitva
+
+  - key: white-ridefar-training-plan
+    type: web
+    authors: [White C.]
+    credential: "a Ride Far bikepacking-kézikönyv szerzője, TCR-teljesítő"
+    year: 2021
+    title: "Training Plans for Bikepacking Races"
+    venue: "ridefar.info"
+    doi: null
+    url: https://ridefar.info/rider/training/training-plan/
+    grade: C
+    questions: ["02:Q4", "02:Q5"]
+    summary: >-
+      Bikepacking-verseny felkészülési keret: a verseny előtti 6 hónapban 2000–20 000+ km összkilométer a tipikus
+      tartomány (Kristof Allegaert 7 hónap alatt 20 000+ km-t is edzett); heti helyett HAVI távcélok a munka melletti
+      rugalmasság miatt; a ~4–6 óránál hosszabb edzések fiziológiásan már nem adnak pluszt, a többnapos túrák a
+      mentális/felszerelés-tesztet szolgálják. Taper 1–2 hét; a bringa-szervizt 2–3 héttel a rajt előtt lezárni.
+    quote: >-
+      "Rides of longer than about 4-6 hours don't yield any additional gains"; suggested range "between 2,000 km and
+      20,000+ km in the six months leading up to the event".
+    notes: >-
+      Tapasztalati kézikönyv — C. A „4–6 óra felett nincs többlet-adaptáció" állítás nem hivatkozott mérés, a
+      durability-irodalommal (spragg-2023-durability) ütközhet — a modulban ellentmondásként jelezni. A 2000 km-es
+      alsó határ a „minimális felkészülés" kérdés egyik horgonya.
+    status: url-megnyitva
+
+  - key: tatt-boundary-pbp
+    type: web
+    authors: [Tatt N.]
+    credential: "UESCA-minősített ultra-állóképességi kerékpáros edző, 14+ ultra (köztük London-Edinburgh-London) teljesítője"
+    year: 2026
+    title: "Paris-Brest-Paris 2027: Qualification & Event Guide"
+    venue: "boundarycycle.coach"
+    doi: null
+    url: https://www.boundarycycle.coach/knowledge/article/paris-brest-paris-qualification-guide
+    grade: C
+    questions: ["02:Q4"]
+    summary: >-
+      A PBP-kvalifikáció (Super Randonneur sorozat: 200-300-400-600 km brevet) 2026. november és 2027. június 30.
+      között teljesítendő. Edzői tanács: a 600-ast nem szabad késő tavaszra hagyni (bukott kísérlet után nincs idő
+      újra); a brevet-sorozat elsősorban a táv-teljesíthetőség igazolása, a többnapos versenyre való tényleges
+      felkészülést külön kell megtervezni. A brevet-naptár mint beépített, esemény-vezérelt táv-progresszió a modul
+      ütemterv-generátorának mintája.
+    quote: >-
+      "Don't leave your 600km until late spring. The deadline is June 30th 2027, and if you fail a late attempt,
+      there won't be time for another." … "Completing 200/300/400/600km brevets proves distances possible."
+    notes: >-
+      Edzői útmutató — C. A brevet-sorozat mint progresszió-váz általánosítható (200→300→400→600 tavasszal,
+      2-6 hetes közökkel), de a cikk maga hangsúlyozza: a kvalifikáció önmagában nem edzésterv.
+    status: url-megnyitva
+
+  - key: dotwatcher-shermers-roundtable
+    type: web
+    authors: [Strasser C., Hayden J., O'Sullivan A., Ray N., Schnell M., "Joe (gyógytornász)"]
+    credential: "RAAM/TCR-győztesek és -versenyzők + ultrakerékpáros-specifikus fizioterapeuta kerekasztala"
+    year: 2021
+    title: "Roundtable: Shermer's Neck - Part 2"
+    venue: "DotWatcher.cc"
+    doi: null
+    url: https://dotwatcher.cc/feature/roundtable-shermers-neck-part-2
+    grade: C
+    questions: ["02:Q6"]
+    summary: >-
+      Versenyzői-fizioterapeutás kerekasztal a Shermer-nyak megelőzéséről: a nyak-fej mozgásminta tanulása (fej
+      behúzása, áll enyhe betűrése, nyak megnyújtása), mikro-szünetek beépítése „az első mérföldtől", a helyes
+      pozíció begyakorlása már edzésen; kényelmi bike-fit (magasabb, szélesebb aerobár-pad, „a kényelem a király");
+      a nyak-tudatosság hétköznapi gyakorlása. Az edzés-oldali nyak-felkészítés legjobb elérhető (tapasztalati) forrása.
+    quote: >-
+      "It helps to learn how the neck and head move… try to elongate the whole neck by retracting the head and tucking
+      the chin in slightly." … "Raise your pads and widen them if you need to. It may be less aero, but comfort is king." (Joe)
+    notes: >-
+      Tapasztalati kerekasztal, kontrollált vizsgálat nélkül — C. Progresszív nyakerősítő protokoll ultrásokra
+      publikált, mért formában nem létezik (keresve: "Shermer's neck prevention neck strengthening ultracycling RAAM").
+      A klinikai oldal a 07-es modulé; itt csak az edzés-oldal.
+    status: url-megnyitva
