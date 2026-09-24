@@ -1,0 +1,80 @@
+<div class="wrap tool">
+  <div class="kicker"><b>03 · Táplálkozás és hidratálás</b> · Eszköz · Haladó</div>
+  <h1>Etetési és hidratálási terv</h1>
+  <p class="lede">Három réteg: <b>energia</b> (forgalom, bevitel-cél, napi hiány és hány napig tartható), <b>folyadék és nátrium</b> (izzadásráta-sáv vagy saját mérés, órás padló és plafon, nátrium), <b>koffein</b> (adag, ismételt adag, utolsó adag a bivak előtt). A végén a 16. oldal sablonja kitölthetően.</p>
+  <div class="legend"><span>Jelölés:</span><span class="t fix">{{ICON_FIX}}fix</span> képlet, szabály <span class="t ex">{{ICON_EX}}példa</span> mért vagy becsült sáv, igazítandó <span class="t ind">{{ICON_IND}}egyéni</span> saját mérés (<a href="../../03-taplalkozas/#p-17">17. oldal</a>)</div>
+
+  <div class="card">
+    <h2>1 · Te és a formátum <span class="t ex">{{ICON_EX}}példa</span></h2>
+    <div class="grid3">
+      <label class="f">Formátum <select id="fmt"></select><span class="hint" id="fmt-note"></span></label>
+      <label class="f">Testtömeg (kg) <input id="kg" type="number" min="40" max="130" step="1" value="75"></label>
+      <label class="f">Magasság (cm) <input id="cm" type="number" min="140" max="210" step="1" value="180"></label>
+      <label class="f">Életkor (év) <input id="ev" type="number" min="16" max="90" step="1" value="40"></label>
+      <label class="f">Nem (az alapanyagcsere-képlethez) <select id="sex"><option value="m">férfi</option><option value="f">nő</option></select></label>
+      <label class="f">Napi nyeregóra <input id="rideh" type="number" min="4" max="24" step="0.5" value="16"></label>
+      <label class="f">Versenynapok <input id="days" type="number" min="1" max="30" step="0.5" value="8"></label>
+      <label class="f">Bevitel-cél (kcal/óra a nyeregben) <input id="kcalh" type="number" min="100" max="700" step="10" value="250"><span class="hint" id="kcalh-hint"></span></label>
+      <label class="f">Szénhidrát-cél (g/óra) <input id="choh" type="number" min="20" max="140" step="5" value="75"><span class="hint">60–90 az alap; 90 fölött csak bél-edzés + saját teszt után (<a href="../../03-taplalkozas/#p-04">4. oldal</a>)</span></label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Energia: a mérleg <span class="t fix">{{ICON_FIX}}fix</span></h2>
+    <div class="kv" id="energy"></div>
+    <div id="energy-warn" style="margin-top:12px"></div>
+    <div class="timeline" id="energy-bars" style="margin-top:12px"></div>
+    <p class="note" style="margin:12px 0 0">A forgalom-szorzók mért terepadatok (24 h ~750, 2 napos ~590, többnapos ~500 kcal/h az eltelt órára), ±30 % becslés; a tartós bevitel-plafon a 2,4 × alapanyagcsere populációs átlag (<a href="../../03-taplalkozas/#p-02">2. oldal</a>). A második félben a mezőny bevitele esik — a kalkulátor 25 %-os eséssel számol a verseny második felére.</p>
+  </div>
+
+  <div class="card">
+    <h2>2 · Folyadék és nátrium <span class="t ind">{{ICON_IND}}egyéni</span></h2>
+    <div class="grid3">
+      <label class="f">Hőmérséklet-sáv <select id="sweat-band"></select></label>
+      <label class="f">Saját izzadásráta (l/h, felülírja) <input id="sweat-own" type="number" min="0.2" max="4" step="0.05" placeholder="pl. 0,9"><span class="hint">mérleg-módszer: <a href="../../03-taplalkozas/#p-17">17. oldal</a>, 2. teszt</span></label>
+      <label class="f">Izzadás-nátrium <select id="na-band"></select></label>
+      <label class="f">Saját izzadás-Na (mg/l, felülírja) <input id="na-own" type="number" min="200" max="2000" step="10" placeholder="pl. 1100"><span class="hint">tapaszteszt esetén egésztestre korrigálva</span></label>
+    </div>
+    <div class="kv" id="fluid" style="margin-top:16px"></div>
+    <div id="fluid-warn" style="margin-top:12px"></div>
+    <p class="note" style="margin:12px 0 0">Szomjúság szerint, két korláttal: padló 6–8 ml/kg/óra (ez alatt nőtt a hányinger), plafon: ne hízz, ne igyál többet a becsült izzadásnál, és egy napon 168 ml/kg-nál semmiképp (<a href="../../03-taplalkozas/#p-08">8. oldal</a>). A nátrium a vér hígulását mérsékli és az étvágyat segíti — görcs ellen nem véd (<a href="../../03-taplalkozas/#p-09">9. oldal</a>). Ultrakerékpáron mért izzadásráta nincs: a sávok szerkesztői összeállítás, a saját mérés a mérce.</p>
+  </div>
+
+  <div class="card">
+    <h2>3 · Koffein-adagoló <span class="t fix">{{ICON_FIX}}fix</span></h2>
+    <div class="grid3">
+      <label class="f">Tervezett bivak/alvás kezdete <input id="sleep-at" type="time" value="23:00"></label>
+      <label class="f">Első koffein a fáradtság kezdetén (óra a rajttól) <input id="caf-start" type="number" min="0" max="48" step="1" value="10"></label>
+      <label class="f">Ismételt adag (mg / 60–90 perc) <input id="caf-dose" type="number" min="25" max="200" step="5" value="75"></label>
+      <label class="f">Koffein-alvás (200 mg a mikroalvás elején) <select id="caf-nap"><option value="1">igen</option><option value="0">nem</option></select></label>
+    </div>
+    <div class="kv" id="caf" style="margin-top:16px"></div>
+    <div class="timeline" id="caf-bar" style="margin-top:12px"></div>
+    <p class="note" style="margin:12px 0 0">Hatásos adag 1–3 mg/kg; az ismételt kis adag ugyanannyit ér, mint az egy nagy; 107 mg-ot ≥ 8,8, 217 mg-ot ≥ 13 órával a tervezett alvás előtt; 200 mg közvetlenül a 15–30 perces alvás elején (<a href="../../03-taplalkozas/#p-10">10. oldal</a>). Koffein-vizsgálat 6 óránál hosszabb kerékpáros eseményen nincs — a napi plafonra ultra-adat nincs, a mért terepátlag ~2 mg/kg/nap.</p>
+  </div>
+
+  <div class="card" id="sablon">
+    <h2>Etetési és hidratálási terv-sablon <span class="badge gray">03 · 16. oldal</span></h2>
+    <div class="actions noprint"><button class="btn" id="atvesz">Átvétel a kalkulátorból</button><button class="btn sec" id="print">Nyomtatás / PDF</button><button class="btn sec" id="torol">Mezők törlése</button></div>
+    <div class="grid2" id="sablon-f" style="margin-top:14px">
+      <label class="f">Formátum, hossz, hőmérséklet-sáv <textarea data-k="formatum"></textarea></label>
+      <label class="f">Alapanyagcsere <span class="t ind">{{ICON_IND}}egyéni</span> <textarea data-k="bmr"></textarea></label>
+      <label class="f">Napi forgalom (formátum-szorzó) <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="tee"></textarea></label>
+      <label class="f">Bevitel-cél kcal/h <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="kcalh"></textarea></label>
+      <label class="f">Szénhidrát g/h és keverék <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="cho" placeholder="60–90 g/h, glükóz:fruktóz 2:1 – 1:0,8; a második félben −20–30 %"></textarea></label>
+      <label class="f">Napi hiány és „hány napig” <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="deficit"></textarea></label>
+      <label class="f">Folyadék: padló és plafon <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="fluid"></textarea></label>
+      <label class="f">Izzadásráta sávonként <span class="t ind">{{ICON_IND}}egyéni</span> <textarea data-k="sweat"></textarea></label>
+      <label class="f">Nátrium mg/h <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="na"></textarea></label>
+      <label class="f">Koffein <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="caf"></textarea></label>
+      <label class="f">Hőség-szabály <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="heat" placeholder="30 °C fölött folyékonyra, szilárd a hűvös órákra, jégkása/fagylalt a csúcs előtt"></textarea></label>
+      <label class="f">Hideg-szabály <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="cold" placeholder="+10–20 % energia, étel kesztyűben elérhetően, palack a testhez"></textarea></label>
+      <label class="f">Bolt-terv (önellátó) <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="bolt" placeholder="boltsűrűség, nyitvatartás, tartalék 1500 kcal; sűrű a táskába, híg a helyszínre"></textarea></label>
+      <label class="f">Stáb-szabály (kísérős) <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="stab" placeholder="óránként egy palack táp + egy elektrolit; a 3. naptól a stáb dönt"></textarea></label>
+      <label class="f">Kontroll-szabály (brevet) <span class="t ex">{{ICON_EX}}példa</span> <textarea data-k="kontroll" placeholder="meleg étel <10 perc, leves palackban tovább"></textarea></label>
+      <label class="f">Tiltólista <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="tilt" placeholder="NSAID verseny alatt; semmi új; ketóra váltás szezonban"></textarea></label>
+      <label class="f">Feltöltés és regeneráció <span class="t fix">{{ICON_FIX}}fix</span> <textarea data-k="pre" placeholder="utolsó 24–36 h: 10 g/kg; rajt előtt 1–4 g/kg; után 48 h: fehérje 4–5 adag, alvás"></textarea></label>
+    </div>
+    <p class="small muted" style="margin-top:10px">A mezők ebben a böngészőben mentődnek; szerverre semmi nem megy.</p>
+  </div>
+</div>

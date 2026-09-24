@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 200" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<line x1="40.0" y1="100.0" x2="330.0" y2="100.0" stroke="#c3c2b7" stroke-width="1.5" stroke-linecap="round"/>
+<line x1="40.0" y1="96.0" x2="40.0" y2="104.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="40.0" y="118.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">16 h</text>
+<line x1="112.5" y1="96.0" x2="112.5" y2="104.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="112.5" y="118.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">12 h</text>
+<line x1="185.0" y1="96.0" x2="185.0" y2="104.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="185.0" y="118.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">8 h</text>
+<line x1="257.5" y1="96.0" x2="257.5" y2="104.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="257.5" y="118.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">4 h</text>
+<line x1="330.0" y1="96.0" x2="330.0" y2="104.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="330.0" y="118.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">alvás</text>
+<rect x="40.0" y="70.0" width="50.8" height="12.0" rx="2" fill="#1baf7a" fill-opacity="0.5"/>
+<rect x="40.0" y="86.0" width="130.5" height="12.0" rx="2" fill="#1baf7a" fill-opacity="0.5"/>
+<rect x="90.8" y="70.0" width="239.2" height="12.0" rx="2" fill="#ec835a" fill-opacity="0.35"/>
+<rect x="170.5" y="86.0" width="159.5" height="12.0" rx="2" fill="#ec835a" fill-opacity="0.35"/>
+<text x="40.0" y="66.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">217 mg (erős kávé vagy két koffeines gél): ≥ 13 órával az alvás előtt</text>
+<text x="40.0" y="112.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400"></text>
+<text x="93.8" y="79.0" font-size="7.5" fill="#d03b3b" text-anchor="start" font-weight="600">217 mg itt már rontja</text>
+<text x="173.5" y="95.0" font-size="7.5" fill="#d03b3b" text-anchor="start" font-weight="600">107 mg itt már rontja</text>
+<text x="40.0" y="140.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">107 mg (egy kávé): ≥ 8,8 órával az alvás előtt</text>
+<text x="40.0" y="154.0" font-size="8" fill="#898781" text-anchor="start" font-weight="400">átlagos hatás: −45 perc alvásidő, −7 % hatékonyság, +9 perc elalvás (meta-analízis)</text>
+<text x="40.0" y="30.0" font-size="9.5" fill="#52514e" text-anchor="start" font-weight="600">utolsó koffein a tervezett alvás előtt</text>
+<line x1="380.0" y1="150.0" x2="380.0" y2="154.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="380.0" y="164.0" font-size="8" fill="#898781" text-anchor="middle" font-weight="400">0</text>
+<line x1="433.3" y1="150.0" x2="433.3" y2="154.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="433.3" y="164.0" font-size="8" fill="#898781" text-anchor="middle" font-weight="400">30</text>
+<line x1="486.7" y1="150.0" x2="486.7" y2="154.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="486.7" y="164.0" font-size="8" fill="#898781" text-anchor="middle" font-weight="400">60</text>
+<line x1="540.0" y1="150.0" x2="540.0" y2="154.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="540.0" y="164.0" font-size="8" fill="#898781" text-anchor="middle" font-weight="400">90</text>
+<line x1="380.0" y1="150.0" x2="540.0" y2="150.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<rect x="380.0" y="50.0" width="35.6" height="100.0" rx="0" fill="#2a78d6" fill-opacity="0.1"/>
+<text x="397.8" y="60.0" font-size="7.5" fill="#2a78d6" text-anchor="middle" font-weight="600">alvás</text>
+<path d="M380.0 150.0 L381.8 141.3 L383.6 133.4 L385.3 126.2 L387.1 119.7 L388.9 113.9 L390.7 108.6 L392.4 103.8 L394.2 99.5 L396.0 95.6 L397.8 92.1 L399.6 89.0 L401.3 86.1 L403.1 83.5 L404.9 81.2 L406.7 79.1 L408.4 77.3 L410.2 75.6 L412.0 74.1 L413.8 72.8 L415.6 71.6 L417.3 70.6 L419.1 69.7 L420.9 68.9 L422.7 68.2 L424.4 67.7 L426.2 67.2 L428.0 66.8 L429.8 66.6 L431.6 66.4 L433.3 66.3 L435.1 66.3 L436.9 66.4 L438.7 66.6 L440.4 66.8 L442.2 67.2 L444.0 67.7 L445.8 68.2 L447.6 68.9 L449.3 69.6 L451.1 70.5 L452.9 71.4 L454.7 72.5 L456.4 73.7 L458.2 75.0 L460.0 76.4 L461.8 77.9 L463.6 79.6 L465.3 81.4 L467.1 83.2 L468.9 85.2 L470.7 87.3 L472.4 89.5 L474.2 91.8 L476.0 94.2 L477.8 96.6 L479.6 99.1 L481.3 101.6 L483.1 104.1 L484.9 106.7 L486.7 109.2 L488.4 111.7 L490.2 114.1 L492.0 116.5 L493.8 118.8 L495.6 121.1 L497.3 123.2 L499.1 125.3 L500.9 127.2 L502.7 129.1 L504.4 130.8 L506.2 132.5 L508.0 134.0 L509.8 135.4 L511.6 136.7 L513.3 137.9 L515.1 139.0 L516.9 140.1 L518.7 141.0 L520.4 141.9 L522.2 142.7 L524.0 143.4 L525.8 144.0 L527.6 144.6 L529.3 145.2 L531.1 145.6 L532.9 146.1 L534.7 146.5 L536.4 146.8 L538.2 147.2 L540.0 147.4" fill="none" stroke="#eb6834" stroke-width="2.2" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<text x="460.0" y="30.0" font-size="8.5" fill="#52514e" text-anchor="middle" font-weight="600">koffein-alvás: 200 mg a 15–30 perces</text>
+<text x="460.0" y="42.0" font-size="7.5" fill="#898781" text-anchor="middle" font-weight="400">alvás elején; hatás 15–45 perc, lecseng 60–75-re</text>
+<text x="460.0" y="176.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">perc a bevétel után</text>
+</svg>

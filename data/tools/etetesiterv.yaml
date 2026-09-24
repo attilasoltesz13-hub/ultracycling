@@ -1,0 +1,94 @@
+# Etetési és hidratálási terv — kalkulátor-paraméterek a 03 modul 2., 4., 8., 9., 10., 12. és 16. oldalából.
+# Jelölés: fix (képlet, szabály) · példa (mért/becsült sáv, igazítandó) · egyéni (saját mérés: bél-edzés, izzadásteszt).
+# A kísérőoldal build/site.py-ból olvassa és JSON-ként a kalkulátor oldalába írja.
+module: "03"
+bmr:                        # fix — Mifflin–St Jeor (általános egyenlet, nem forrásadat)
+  formula: "férfi: 10·kg + 6,25·cm − 5·év + 5; nő: 10·kg + 6,25·cm − 5·év − 161"
+intake_ceiling_x_bmr: 2.4   # példa — thurber-2019-alimentary (2,36 ± 0,59 × BMR populációs plafon); egyéni kerékpáros esetek 4×-ig
+formats:                    # példa — enqvist-2010 (24 h 750 kcal/h; 6 nap 500 kcal/h az eltelt órára), geesmann-2014 (~590 kcal/h), barnett-2017 / strasser-datasport-2019 (kísérős 500 kcal/h), white-ridefar-food / rutberg-pulford-cts-ultra-2025 (200–300)
+  - id: 24h
+    label: "24 órás (szóló, nonstop)"
+    tee_kcal_h_elapsed: 750
+    intake_kcal_h: [250, 350]
+    cho_g_h: [60, 90]
+    days_default: 1
+    ride_h_default: 24
+    note: "forgalom ~750 kcal/h; box-etetés, 1,3 étkezés/óra, kóla 54 %"
+  - id: 2nap
+    label: "1–2 napos nonstop (600–1300 km)"
+    tee_kcal_h_elapsed: 590
+    intake_kcal_h: [250, 460]
+    cho_g_h: [60, 90]
+    days_default: 2
+    ride_h_default: 22
+    note: "1230 km: ~590 kcal/h forgalom, ~460 kcal/h bevitel (csoportos, részben folyékony)"
+  - id: onellato
+    label: "Többnapos önellátó (bolt, szilárd)"
+    tee_kcal_h_elapsed: 500
+    intake_kcal_h: [200, 300]
+    cho_g_h: [60, 90]
+    days_default: 8
+    ride_h_default: 16
+    note: "200–300 kcal/h a boltos, szilárd, állva-evő plafon; a mért terep többet enged, ha folyékony"
+  - id: kiseros
+    label: "Többnapos kísérős (stáb, folyékony)"
+    tee_kcal_h_elapsed: 500
+    intake_kcal_h: [400, 550]
+    cho_g_h: [60, 100]
+    days_default: 9
+    ride_h_default: 22
+    note: "óránként egy palack táp + egy palack elektrolit; 500–550 kcal/h; a 3–4. naptól a stáb dönt"
+  - id: brevet
+    label: "Brevet / 1200 km (kontrollok)"
+    tee_kcal_h_elapsed: 590
+    intake_kcal_h: [200, 300]
+    cho_g_h: [60, 90]
+    days_default: 3.5
+    ride_h_default: 19
+    note: "kontroll-étkezés meleg étellel <10 perc; a kalória 1/3–1/2-e italból"
+rest_kcal_h: 100            # példa — alvás/pihenő órák forgalma (BMR-közeli, ~1,2 × BMR/24)
+second_half_drop_pct: 25    # példa — geesmann-2014: 618 km után szignifikáns csökkenés (mérték nem közölt); szerkesztői 20–30 %
+fat_kcal_per_kg: 7350       # fix — 7000–7700 kcal/kg általános érték, közepe
+cho_kcal_per_g: 4           # fix
+sweat:                      # példa — B csomag Q5 kalkulátor-blokk (szerkesztői sávok B-fokozatú horgonyokból; saját mérés felülírja)
+  bands:
+    - id: hideg
+      label: "hűvös / éjszaka (<15 °C)"
+      l_h: [0.3, 0.6]
+    - id: mersekelt
+      label: "mérsékelt (15–25 °C)"
+      l_h: [0.6, 1.0]
+    - id: meleg
+      label: "meleg (25–32 °C) vagy tempós"
+      l_h: [1.0, 1.8]
+    - id: forro
+      label: "forró (>32 °C), napsütés"
+      l_h: [1.8, 2.5]
+  na_mg_l_default: 830      # példa — baker-2016-sweat-normative (átlag ~830, 410–1630 mg/l)
+  na_bands:
+    - { id: alacsony, label: "alacsony", mg_l: 450 }
+    - { id: kozepes, label: "közepes (átlag)", mg_l: 830 }
+    - { id: magas, label: "magas (fehér csík a ruhán)", mg_l: 1250 }
+    - { id: nagyon, label: "nagyon magas", mg_l: 1600 }
+fluid:                      # fix/példa — stuempfle-2013 (padló 6–8 ml/kg/h), armstrong-2017 (168 ml/kg/nap), kenefick-2018 / almond-2005 (ne hízz)
+  floor_ml_kg_h: [6, 8]
+  eah_ml_kg_day: 168
+  max_body_mass_loss_pct_day: 2
+sodium:                     # példa — veniamakis-2022 (300–600 mg/h; ital 230–690 mg/l); szerkesztői 50–80 % pótlás magas Na-nál
+  base_mg_h: [300, 600]
+  replace_pct: [50, 80]
+  drink_mg_l: [230, 690]
+  na_per_g_salt_mg: 393     # fix
+caffeine:                   # guest-2021 (1–3 mg/kg), cox-2002 (ismételt kis adag), gardiner-2023 (107 mg ≥ 8,8 h; 217 mg ≥ 13,2 h), bescos-2012 (~2 mg/kg/24 h terepátlag), centofanti-2020 (200 mg + rövid alvás)
+  dose_mg_kg: [1, 3]
+  repeat_mg: [50, 100]
+  repeat_every_min: [60, 90]
+  field_avg_mg_kg_day: 2
+  sleep_gap_h: [[107, 8.8], [217, 13.2]]
+  nap_dose_mg: 200
+  sources_mg:               # példa — tipikus címkeértékek (általános ismeret, nem ellenőrzött forrás; a termék címkéje a mérce)
+    - { label: "kávé, eszpresszó", mg: 80 }
+    - { label: "kóla 330 ml", mg: 35 }
+    - { label: "energiaital 250 ml", mg: 80 }
+    - { label: "koffeines gél", mg: 50 }
+    - { label: "koffeintabletta", mg: 100 }

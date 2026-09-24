@@ -9481,3 +9481,27 @@ sources:
       elv egybevág a CTS „lassíts, ha hányingered van" tanácsával; a 250–300 kcal/h az önellátó/brevet ökölszabályokkal (200–300)
       azonos, a kísérős RAAM 500 kcal/h-nál alacsonyabb.
     status: url-megnyitva
+  cimkeadat-kaloriasuruseg-2026:
+    key: cimkeadat-kaloriasuruseg-2026
+    type: dataset
+    authors:
+    - Soltész A. (összeállítás)
+    credential: Bolti termékcímkék és magyar tápérték-táblázatok, 2026-09-23-án ellenőrizve
+    year: 2026
+    title: Boltból kapható ételek kalóriasűrűsége (kcal/100 g) – címkeadat-ellenőrzés a 03. modulhoz
+    venue: Dietless kalóriatáblázat; Tesco.hu termékoldal (Haribo Goldbären); nutrola.app (Lay's); stayfit.hu (Snickers)
+    doi: null
+    url: https://dietless.hu/kaloriatablazat/
+    grade: C
+    questions:
+    - 03:Q7
+    modules:
+    - '03'
+    summary: Ellenőrzött értékek (kcal/100 g) – chips 536–552; tejcsokoládé 535; Snickers 491; keksz 483; földimogyoró 609;
+      trappista sajt 381; gumicukor 336–343; fehér kenyér 255; jégkrém 164; banán 90–103; tej (2,8 %) 62; kóla 42–46 (100 ml).
+      Pizza és kebab a táblázatokban nem szerepel – a 03. modul ezekre a D-csomag becslését (230–270) adja „nem ellenőrzött" jellel.
+    quote: 'Dietless: "Chips 536 kcal" · "Fehér kenyér 255 kcal" · "Trappista sajt 381 kcal" · "Tej 2,8% 62 kcal"; Tesco: "343 kcal"
+      (Haribo, 100 g); nutrola: "552 kcal per 100 g" (Lay''s); stayfit: "Snickers szelet ... 491 kcal".'
+    notes: Címkeadat és másodlagos táblázatok (C). Márkánként ±10 % eltérés; a modulban {példa} jelöléssel, kerekítve.
+      A hivatalos Coca-Cola címke 42 kcal/100 ml, a Dietless 46-ot ad.
+    status: url-megnyitva

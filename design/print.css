@@ -70,6 +70,7 @@ sup.cite { font-size: 6.5pt; color: var(--brand); font-weight: 500; margin-left:
 .t.fix { color: var(--t-fix); }
 .t.ex { color: var(--t-example); border-style: dashed; }
 .t.ind { color: var(--t-individual); }
+.t.male { color: #6b6a66; border-style: dotted; }
 .status { display: inline-flex; align-items: center; gap: 1.5mm; font-size: var(--fs-small); font-weight: 600; }
 .status i { width: 3mm; height: 3mm; border-radius: 0.6mm; display: inline-block; }
 .status.crit i { background: var(--critical); } .status.warn i { background: var(--warning); } .status.good i { background: var(--good); }

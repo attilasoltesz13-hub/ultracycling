@@ -21,11 +21,12 @@ REFS = "--refs" in sys.argv   # forrásjegyzék a modul PDF-jében (különben: 
 GRADE_LABEL = {"A": "összesített kutatás", "B": "terepvizsgálat", "C": "szakmai tapasztalat", "D": "feltörekvő"}
 LEVEL_HU = {"alap": "Alap", "halado": "Haladó", "elit": "Elit"}
 TYPE_HU = {"modulnyito": "Modulnyitó", "fogalom": "Fogalom", "adat": "Adat", "konvergencia": "Tapasztalat", "protokoll": "Protokoll",
-           "sablon": "Sablon", "feladat": "Feladat", "osszefoglalo": "Összefoglaló", "forrasok": "Források"}
+           "sablon": "Sablon", "feladat": "Feladat", "osszefoglalo": "Összefoglaló", "forrasok": "Források", "vita": "Vita"}
 ICONS = {
     "fix": '<svg viewBox="0 0 24 24"><path d="M12 3v6l4 5H8l4-5zM12 14v7M6 21h12"/></svg>',
     "ex": '<svg viewBox="0 0 24 24"><path d="M4 20l4-1 11-11-3-3L5 16zM13 6l3 3"/></svg>',
     "ind": '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg>',
+    "male": '<svg viewBox="0 0 24 24"><circle cx="10" cy="14" r="5"/><path d="M14 10l6-6M15 4h5v5"/></svg>',
 }
 DISC_ICONS = {
     "onellato": '<svg viewBox="0 0 24 24" fill="none" stroke="#52514e" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8h12l1 12H5zM9 8V6a3 3 0 0 1 6 0v2"/></svg>',
@@ -42,8 +43,9 @@ def ev_svg(g):
 
 
 def tag_html(kind):
-    k = {"fix": "fix", "példa": "ex", "egyéni": "ind"}[kind]
-    return f'<span class="t {k}">{ICONS[k]}{kind}</span>'
+    k = {"fix": "fix", "példa": "ex", "egyéni": "ind", "férfi": "male"}[kind]
+    label = {"férfi": "férfi adat"}.get(kind, kind)
+    return f'<span class="t {k}">{ICONS[k]}{label}</span>'
 
 
 def level_svg(level):
@@ -76,7 +78,7 @@ class Module:
             return f'<sup class="cite">{", ".join(nums)}</sup>'
         s = re.sub(r"\[(@[^\]]+)\]", cite, s)
         s = re.sub(r"\{ev:([ABCD])\}", lambda m: ev_svg(m.group(1)), s)
-        s = re.sub(r"\{(fix|példa|egyéni)\}", lambda m: tag_html(m.group(1)), s)
+        s = re.sub(r"\{(fix|példa|egyéni|férfi)\}", lambda m: tag_html(m.group(1)), s)
         return s
 
     def md(self, s):

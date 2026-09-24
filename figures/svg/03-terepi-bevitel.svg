@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 240" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<line x1="60.0" y1="149.2" x2="540.0" y2="149.2" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="152.7" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">30</text>
+<line x1="60.0" y1="113.5" x2="540.0" y2="113.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="117.0" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">60</text>
+<line x1="60.0" y1="77.7" x2="540.0" y2="77.7" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="81.2" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">90</text>
+<line x1="60.0" y1="41.9" x2="540.0" y2="41.9" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="45.4" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">120</text>
+<rect x="60.0" y="77.7" width="480.0" height="35.8" rx="0" fill="#1baf7a" fill-opacity="0.1"/>
+<text x="64.0" y="98.6" font-size="8.5" fill="#1baf7a" text-anchor="start" font-weight="600">ajánlott alap</text>
+<text x="64.0" y="109.6" font-size="8.5" fill="#1baf7a" text-anchor="start" font-weight="600">60–90 g/h</text>
+<rect x="60.0" y="125.4" width="480.0" height="23.8" rx="0" fill="#eda100" fill-opacity="0.08"/>
+<text x="64.0" y="140.3" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">ultrafutó-</text>
+<text x="64.0" y="150.3" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">állásfoglalás 30–50</text>
+<rect x="180.0" y="117.0" width="48.0" height="68.0" rx="3" fill="#2a78d6" fill-opacity="0.9"/>
+<line x1="204.0" y1="138.5" x2="204.0" y2="95.6" stroke="#0b0b0b" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="199.0" y1="95.6" x2="209.0" y2="95.6" stroke="#0b0b0b" stroke-width="1.2" stroke-linecap="round"/>
+<line x1="199.0" y1="138.5" x2="209.0" y2="138.5" stroke="#0b0b0b" stroke-width="1.2" stroke-linecap="round"/>
+<text x="204.0" y="90.6" font-size="8.5" fill="#0b0b0b" text-anchor="middle" font-weight="600">57 g/h</text>
+<text x="204.0" y="198.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">1230 km nonstop</text>
+<text x="204.0" y="209.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">(n = 14)</text>
+<rect x="264.0" y="123.0" width="48.0" height="62.0" rx="3" fill="#2a78d6" fill-opacity="0.9"/>
+<text x="288.0" y="118.0" font-size="8.5" fill="#0b0b0b" text-anchor="middle" font-weight="600">52 g/h</text>
+<text x="288.0" y="198.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">384 km</text>
+<text x="288.0" y="209.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">(n = 18)</text>
+<rect x="348.0" y="114.7" width="48.0" height="70.3" rx="3" fill="#2a78d6" fill-opacity="0.9"/>
+<text x="372.0" y="109.7" font-size="8.5" fill="#0b0b0b" text-anchor="middle" font-weight="600">59 g/h</text>
+<text x="372.0" y="198.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">Mallorca 312</text>
+<text x="372.0" y="209.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">(n = 138)</text>
+<rect x="432.0" y="138.5" width="48.0" height="46.5" rx="3" fill="#898781" fill-opacity="0.9"/>
+<text x="456.0" y="133.5" font-size="8.5" fill="#0b0b0b" text-anchor="middle" font-weight="600">39 g/h</text>
+<text x="456.0" y="198.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">8 fős váltó,</text>
+<text x="456.0" y="209.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">eltelt órára</text>
+<rect x="516.0" y="53.8" width="48.0" height="131.2" rx="3" fill="#eb6834" fill-opacity="0.9"/>
+<text x="540.0" y="48.8" font-size="8.5" fill="#0b0b0b" text-anchor="middle" font-weight="600">105–116 g/h</text>
+<text x="540.0" y="198.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">elit 24 h rekord</text>
+<text x="540.0" y="209.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400">(n = 1, közlés)</text>
+<line x1="60.0" y1="185.0" x2="540.0" y2="185.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="16.0" y="107.5" font-size="9" fill="#898781" text-anchor="middle" font-weight="400" transform="rotate(-90 16 107.5)">szénhidrát g/óra →</text>
+<text x="60.0" y="18.0" font-size="9.5" fill="#52514e" text-anchor="start" font-weight="600">mért óránkénti szénhidrát-bevitel ultrakerékpáron; egyéni szórás futóultrán 22–126 g/h</text>
+</svg>

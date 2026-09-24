@@ -12,8 +12,10 @@ Részek:
 - `js/kviz.js` — önellenőrző kvíz; kérdések: `data/quiz/<modul>.yaml` (a build keveri a válaszokat, determinisztikusan).
 - `js/alvasterv.js` + `templates/alvasterv.html` — alvásterv-kalkulátor és a 12. oldal sablonja; paraméterek: `data/tools/alvasterv.yaml`.
 - `js/kronotipus.js` + `templates/kronotipus.html` — rMEQ-alapú kronotípus-kérdőív (forrás: `adan-1991-rmeq`).
+- `js/idokoltsegvetes.js` + `templates/idokoltsegvetes.html` — időköltségvetés-kalkulátor (08); paraméterek: `data/tools/idokoltsegvetes.yaml`.
+- `js/etetesiterv.js` + `templates/etetesiterv.html` — etetési és hidratálási terv (03): energia · folyadék és nátrium · koffein, a 16. oldal sablonja; paraméterek: `data/tools/etetesiterv.yaml`.
 
-Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
+Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.idokoltsegvetes`, `ht.etetesiterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
 
 GitHub Pages: a `dist/site/` tartalma tehető a `gh-pages` ágra vagy egy Actions-lépés futtathatja a buildet (`.nojekyll` benne van).
 

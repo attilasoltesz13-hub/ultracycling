@@ -1,0 +1,85 @@
+# Önellenőrző kvíz — 03 Táplálkozás és hidratálás. A kérdések a modul 17. oldalának tíz kérdését követik;
+# minden válasz a modul szövegéből vezethető le (page = a PDF oldala). A helyes válasz a fájlban az első; a build keveri.
+module: "03"
+title: Önellenőrzés — tíz kérdés
+questions:
+  - q: "Miért nő a szénhidrát-plafon 75-ről 100 g/h-ra, ha fruktózt adsz a glükózhoz — és mi történik a 75 feletti csak-glükózzal?"
+    options:
+      - "A fruktóz másik bélszállítón jut be, így két kapu nyílik; a 75 g/h feletti csak-glükóz a bélben marad, és panasz lesz belőle, nem energia."
+      - "A fruktóz gyorsabban ég, ezért a glükóz is jobban felszívódik; a többlet glükóz glikogénként raktározódik."
+      - "A fruktóz édesebb, ezért többet iszol; a többlet glükóz vizelettel távozik."
+    answer: 0
+    why: "Egy szállítón ~1,0–1,25 g/perc a plató; glükóz+fruktóz keverékkel 1,4–1,7 g/perc; a bevitt többlet nem ég el, hanem a bélben marad."
+    page: 3
+  - q: "Mekkora a többnapos verseny napi forgalma és a tartósan fenntartható bevitel — és mi tölti ki a kettő közötti rést?"
+    options:
+      - "Forgalom ~500–600 kcal/óra (az alapanyagcsere 4–7-szerese), a fenntartható bevitel ~2,4-szerese az alapanyagcserének; a rést a testraktár (zsír, glikogén, izom) adja."
+      - "A forgalom és a bevitel egy jól tervezett versenyen kiegyenlíthető; hiány csak hibából keletkezik."
+      - "A forgalom ~200 kcal/óra, ezért a bevitel elegendő, ha óránként eszel."
+    answer: 0
+    why: "A bevitel a forgalom 47–78 %-a; a populációs bevitel-plafon 2,36 ± 0,59 × BMR; a hiány a norma, a raktár fizeti."
+    page: 2
+  - q: "Mit mond a meta-analízis a zsíradaptáció teljesítményhatásáról, és hol ront biztosan?"
+    options:
+      - "Semleges: a zsírégetés nő, a teljesítmény nem változik; magas intenzitáson (a maximális oxigénfelvétel 80–90 %-án) elit szinten ront az ökonómia miatt."
+      - "Egyértelműen javít: több zsírt égetsz, ezért gyorsabb vagy minden intenzitáson."
+      - "Egyértelműen ront minden intenzitáson, mert a zsír lassabban ég."
+    answer: 0
+    why: "Kimerülésig tartó idő SMD −0,13 (semleges); elit gyaloglóknál 3–3,5 hét után reprodukálhatóan lassabb; ultrás intenzitáson nincs kontrollált adat."
+    page: 5
+  - q: "Mi a három szorzója a bélpanasznak, és melyiket okozod te magad tablettával?"
+    options:
+      - "A hő (12-szeres tünetsúlyosság), a kiszáradás (lassuló gyomorürülés) és a fájdalomcsillapító — az ibuprofen megduplázza a bélsérülést."
+      - "A gél, a szilárd étel és a hideg ital — a koffeintabletta duplázza a sérülést."
+      - "A rázkódás, az alváshiány és a magasság — a sótabletta duplázza a sérülést."
+    answer: 0
+    why: "35 vs. 22 °C: I-FABP +432 % vs. +127 %, tünetsúlyosság 12×; ibuprofen kerékpározás közben 2× bélsérülés; a kiszáradás a gyomorürülést lassítja."
+    page: 6
+  - q: "Két hét bél-edzés mennyivel csökkenti a tüneteket, és mi az, amit nem változtat meg?"
+    options:
+      - "A tüneteket 60 %-kal, a felszívódási zavart felére; a gyomorürülés, az áteresztőképesség és a lenyelhető mennyiség nem változik."
+      - "A tüneteket megszünteti, és a gyomor térfogata megduplázódik."
+      - "A tüneteket 10 %-kal; a felszívódás nem változik."
+    answer: 0
+    why: "Két RCT: tünet −60/−63 %, hidrogéncsúcs felére, +4–5 % teljesítmény; az „etetési tolerancia” nem változott."
+    page: 7
+  - q: "Egy 387 km-es versenyen a célba érők hány százalékának volt alacsony a vér-nátriuma, és hányan száradtak ki?"
+    options:
+      - "39 %-nak volt legfeljebb 135 mmol/l a vér-nátriuma, és csak 11 % volt mérsékelten kiszáradva — miközben a kiszáradástól féltek."
+      - "11 %-nak volt alacsony a nátriuma, 39 % száradt ki."
+      - "Senkinek nem volt alacsony a nátriuma; a fele kiszáradt."
+    answer: 0
+    why: "7/18 hígult, 2/18 dehidrált; ultrán a túlivás gyakoribb baj, mint a kiszáradás."
+    page: 8
+  - q: "Miért nem véd a só a görcs ellen, és mire jó akkor?"
+    options:
+      - "A görcsölők sóbevitele és vér-nátriuma nem különbözött a többiekétől; a só a vér nátriumesését mérsékli és az étvágyat segíti."
+      - "A só a görcs egyetlen oka és gyógyszere; 1 g óránként megszünteti."
+      - "A só egyáltalán nem kell ultrán, mert az étel eleget tartalmaz."
+    answer: 0
+    why: "161 km-en 27 % görcsölt; CK és görcs-előzmény különbözött, a só nem; alap 300–600 mg nátrium/óra."
+    page: 9
+  - q: "Mikor kell bevenni 217 mg koffeint, ha éjfélkor akarsz aludni — és mikor a 200 mg-ot a mikroalvásnál?"
+    options:
+      - "Legalább 13 órával előtte, azaz délelőtt 11 előtt; a 200 mg-ot közvetlenül a 15–30 perces alvás elején, nem a végén."
+      - "Két órával előtte; a 200 mg-ot az alvás után."
+      - "Bármikor, mert a koffein nem hat az alvásra."
+    answer: 0
+    why: "107 mg ≥ 8,8 h, 217 mg ≥ 13 h a tervezett alvás előtt (meta-analízis); a koffein-alvás elve: a hatás 15–45 perc múlva jön."
+    page: 10
+  - q: "Mi lassítja a gyomorürülést hőségben — a meleg levegő vagy valami más?"
+    options:
+      - "A maghő emelkedése és a kiszáradás: 35 °C-on euhidráltan nem lassul, 5 %-os kiszáradásnál igen."
+      - "A meleg levegő önmagában: 30 °C fölött mindig lassul."
+      - "A hideg ital: a jégkása leállítja a gyomrot."
+    answer: 0
+    why: "Gyomorürülés vs. rektális hőmérséklet r = −0,76; ezért hőségben korán, kis adagokban, folyékonyan."
+    page: 12
+  - q: "Hány órányi tekerést fedez a teli raktár, és mit ér a feltöltés egy tíznapos versenyen?"
+    options:
+      - "Kb. 5–10 órát (500–600 g szénhidrát ≈ 2000–2400 kcal); a feltöltés a hiány kezdetét tolja ki, nem a hiányt szünteti meg."
+      - "Kb. három napot; a feltöltés a teljes versenyt fedezi."
+      - "Egy órát; a feltöltésnek semmi értelme."
+    answer: 0
+    why: "Egy nap 10 g/kg elég a teli raktárhoz; többnapos versenyen utána a bevitel dönt."
+    page: 15

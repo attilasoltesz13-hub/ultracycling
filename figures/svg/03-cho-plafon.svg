@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 250" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<line x1="60.0" y1="153.8" x2="380.0" y2="153.8" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="157.2" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">0,5</text>
+<line x1="60.0" y1="112.5" x2="380.0" y2="112.5" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="116.0" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">1,0</text>
+<line x1="60.0" y1="71.2" x2="380.0" y2="71.2" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="74.8" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">1,5</text>
+<line x1="60.0" y1="30.0" x2="380.0" y2="30.0" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round"/>
+<text x="55.0" y="33.5" font-size="8.5" fill="#898781" text-anchor="end" font-weight="400">2,0</text>
+<line x1="60.0" y1="195.0" x2="60.0" y2="199.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="60.0" y="210.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">0</text>
+<line x1="128.6" y1="195.0" x2="128.6" y2="199.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="128.6" y="210.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">30</text>
+<line x1="197.1" y1="195.0" x2="197.1" y2="199.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="197.1" y="210.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">60</text>
+<line x1="265.7" y1="195.0" x2="265.7" y2="199.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="265.7" y="210.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">90</text>
+<line x1="334.3" y1="195.0" x2="334.3" y2="199.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="334.3" y="210.0" font-size="8.5" fill="#898781" text-anchor="middle" font-weight="400">120</text>
+<line x1="60.0" y1="195.0" x2="380.0" y2="195.0" stroke="#c3c2b7" stroke-width="1" stroke-linecap="round"/>
+<text x="220.0" y="225.0" font-size="9" fill="#52514e" text-anchor="middle" font-weight="400">bevitt szénhidrát, g/óra</text>
+<text x="16.0" y="112.5" font-size="9" fill="#898781" text-anchor="middle" font-weight="400" transform="rotate(-90 16 112.5)">elégetett külső CH, g/perc →</text>
+<line x1="60.0" y1="195.0" x2="300.0" y2="50.6" stroke="#e1e0d9" stroke-width="1" stroke-linecap="round" stroke-dasharray="3 3"/>
+<text x="304.6" y="53.6" font-size="7.5" fill="#898781" text-anchor="start" font-weight="400">100 %</text>
+<path d="M60.0 195.0 L64.6 190.7 L69.1 186.6 L73.7 182.7 L78.3 178.9 L82.9 175.4 L87.4 172.0 L92.0 168.7 L96.6 165.6 L101.1 162.6 L105.7 159.8 L110.3 157.1 L114.9 154.5 L119.4 152.0 L124.0 149.7 L128.6 147.4 L133.1 145.3 L137.7 143.3 L142.3 141.3 L146.9 139.4 L151.4 137.7 L156.0 136.0 L160.6 134.3 L165.1 132.8 L169.7 131.3 L174.3 129.9 L178.9 128.5 L183.4 127.2 L188.0 126.0 L192.6 124.8 L197.1 123.7 L201.7 122.7 L206.3 121.6 L210.9 120.7 L215.4 119.7 L220.0 118.8 L224.6 118.0 L229.1 117.2 L233.7 116.4 L238.3 115.7 L242.9 115.0 L247.4 114.3 L252.0 113.7 L256.6 113.0 L261.1 112.5 L265.7 111.9 L270.3 111.4 L274.9 110.9 L279.4 110.4 L284.0 109.9 L288.6 109.5 L293.1 109.0 L297.7 108.6 L302.3 108.2 L306.9 107.9 L311.4 107.5 L316.0 107.2 L320.6 106.9 L325.1 106.6 L329.7 106.3 L334.3 106.0 L338.9 105.7 L343.4 105.5 L348.0 105.2 L352.6 105.0 L357.1 104.8 L361.7 104.6 L366.3 104.4 L370.9 104.2 L375.4 104.0 L380.0 103.8" fill="none" stroke="#2a78d6" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<path d="M60.0 195.0 L64.6 190.7 L69.1 186.5 L73.7 182.4 L78.3 178.5 L82.9 174.7 L87.4 171.0 L92.0 167.5 L96.6 164.1 L101.1 160.7 L105.7 157.5 L110.3 154.4 L114.9 151.4 L119.4 148.5 L124.0 145.6 L128.6 142.9 L133.1 140.3 L137.7 137.7 L142.3 135.2 L146.9 132.9 L151.4 130.5 L156.0 128.3 L160.6 126.1 L165.1 124.0 L169.7 122.0 L174.3 120.0 L178.9 118.1 L183.4 116.3 L188.0 114.5 L192.6 112.8 L197.1 111.1 L201.7 109.5 L206.3 108.0 L210.9 106.4 L215.4 105.0 L220.0 103.6 L224.6 102.2 L229.1 100.9 L233.7 99.6 L238.3 98.4 L242.9 97.2 L247.4 96.0 L252.0 94.9 L256.6 93.8 L261.1 92.7 L265.7 91.7 L270.3 90.7 L274.9 89.8 L279.4 88.9 L284.0 88.0 L288.6 87.1 L293.1 86.3 L297.7 85.5 L302.3 84.7 L306.9 83.9 L311.4 83.2 L316.0 82.5 L320.6 81.8 L325.1 81.2 L329.7 80.5 L334.3 79.9 L338.9 79.3 L343.4 78.7 L348.0 78.1 L352.6 77.6 L357.1 77.1 L361.7 76.6 L366.3 76.1 L370.9 75.6 L375.4 75.1 L380.0 74.7" fill="none" stroke="#eb6834" stroke-width="2.4" stroke-linejoin="round" stroke-linecap="round" opacity="1"/>
+<circle cx="265.7" cy="92.7" r="4.5" fill="#2a78d6" stroke="#fff" stroke-width="1.5"/>
+<text x="273.7" y="118.7" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">90 g/h csak glükóz: 1,24</text>
+<circle cx="265.7" cy="79.5" r="4.5" fill="#eb6834" stroke="#fff" stroke-width="1.5"/>
+<text x="257.7" y="73.5" font-size="8" fill="#52514e" text-anchor="end" font-weight="400">90 g/h 2:1: 1,40</text>
+<circle cx="334.3" cy="70.4" r="4.5" fill="#eb6834" stroke="#fff" stroke-width="1.5"/>
+<circle cx="334.3" cy="61.3" r="4.5" fill="#eb6834" stroke="#fff" stroke-width="1.5"/>
+<circle cx="334.3" cy="56.4" r="4.5" fill="#0d366b" stroke="#fff" stroke-width="1.5"/>
+<text x="326.3" y="48.4" font-size="8" fill="#52514e" text-anchor="end" font-weight="400">120 g/h (1:0,8 – 1:1): 1,51–1,68</text>
+<text x="178.9" y="143.8" font-size="8.5" fill="#2a78d6" text-anchor="start" font-weight="600">egy kapu (csak glükóz): plató 1,0–1,25 g/perc = 60–75 g/h</text>
+<text x="64.6" y="29.3" font-size="8.5" fill="#eb6834" text-anchor="start" font-weight="600">két kapu (glükóz + fruktóz): 1,4–1,7 g/perc = 84–100 g/h</text>
+<text x="470.0" y="40.0" font-size="9" fill="#52514e" text-anchor="middle" font-weight="600">hasznosulás a 3. órától</text>
+<rect x="425.0" y="60.0" width="72.0" height="14.0" rx="2" fill="#2a78d6" fill-opacity="0.85"/>
+<text x="425.0" y="56.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">≤90 g/h, 2:1</text>
+<text x="501.0" y="71.0" font-size="8" fill="#0b0b0b" text-anchor="start" font-weight="600">~80 %</text>
+<rect x="425.0" y="102.0" width="65.7" height="14.0" rx="2" fill="#eb6834" fill-opacity="0.85"/>
+<text x="425.0" y="98.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">120 g/h, 1:0,8</text>
+<text x="494.7" y="113.0" font-size="8" fill="#0b0b0b" text-anchor="start" font-weight="600">~73 %</text>
+<rect x="425.0" y="144.0" width="45.0" height="14.0" rx="2" fill="#898781" fill-opacity="0.85"/>
+<text x="425.0" y="140.0" font-size="8" fill="#52514e" text-anchor="start" font-weight="400">első 2 óra (vitairat)</text>
+<text x="474.0" y="155.0" font-size="8" fill="#0b0b0b" text-anchor="start" font-weight="600">~50 %</text>
+</svg>

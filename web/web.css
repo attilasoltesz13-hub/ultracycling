@@ -101,6 +101,7 @@ a.pref { border-bottom: 1px dotted var(--baseline); }
 .t.fix { color: var(--t-fix); }
 .t.ex { color: var(--t-example); border-style: dashed; }
 .t.ind { color: var(--t-individual); }
+.t.male { color: #6b6a66; border-style: dotted; }
 .legend { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; font-size: .78rem; color: var(--muted); padding: 12px 0; border-top: 1px solid var(--hairline); border-bottom: 1px solid var(--hairline); margin: 16px 0 8px; }
 .legend > span { display: inline-flex; align-items: center; gap: 4px; }
 
