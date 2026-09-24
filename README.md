@@ -32,7 +32,7 @@ kísérőoldal. Előbb teljes magyar kiadás, utána angol.
 ## Modulok
 
 Használati útmutató (0) · I. Elmélet és élettan (1–8) · II. Gyakorlat (9–14) · III. Sablonok, eszközök, feladatok (15–19) · Függelékek.
-Kész modulok (vázlat, tényellenőrzött): **03 – Táplálkozás és hidratálás**, **04 – Alvás, fáradtság, kognitív teljesítmény**, **08 – Pacing és versenystratégia**. Kísérőoldal: https://attilasoltesz13-hub.github.io/ultracycling/
+Kész modulok (vázlat, tényellenőrzött): **02 – Edzéselmélet ultrára**, **03 – Táplálkozás és hidratálás**, **04 – Alvás, fáradtság, kognitív teljesítmény**, **08 – Pacing és versenystratégia**. Kísérőoldal: https://attilasoltesz13-hub.github.io/ultracycling/
 
 ## Build
 

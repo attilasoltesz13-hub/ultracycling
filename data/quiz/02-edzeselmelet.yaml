@@ -1,0 +1,85 @@
+# Önellenőrző kvíz — 02 Edzéselmélet. A kérdések a modul 17. oldalának tíz kérdését követik;
+# minden válasz a modul szövegéből vezethető le (page = a PDF oldala). A helyes válasz a fájlban az első; a build keveri.
+module: "02"
+title: Önellenőrzés — tíz kérdés
+questions:
+  - q: "Mit mértek a nagy meták az intenzitás-eloszlás modelljeiről időfutam-teljesítményre — és mi az, ami tényleg számít?"
+    options:
+      - "Nulla különbséget a modellek között (SMD −0,01); az összterhelés és a kihagyás-mentes konzisztencia dönt, nem a címke."
+      - "A polarizált modell 10–15 %-kal jobb mindenben; a címke a legfontosabb döntés."
+      - "A küszöb-edzés a legjobb, mert a verseny is küszöbön zajlik."
+    answer: 0
+    why: "17 vizsgálat, n = 437: időfutamra SMD −0,01; a legnagyobb kerékpáros RCT-ben az elrendezés semmit nem változtatott azonos terhelés mellett."
+    page: 2
+  - q: "Hány százalék Z1 való a te heti óraszámodhoz, és miért drága a „mindig kicsit tempósan”?"
+    options:
+      - "6–8 h: ~75–80 %, 12–15+ h: ~85–90 % Z1; a küszöb körüli középzóna nagy stresszt ad kis többlet-adaptációért."
+      - "Minden szinten 50 % Z1; a tempós középzóna a leghatékonyabb."
+      - "A Z1 felesleges; kevés időből csak intervall éri meg."
+    answer: 0
+    why: "A Z1-óra ultrán egyben versenyspecifikus; a minőség kevés és tudatos — heti 1–2 edzés."
+    page: 3
+  - q: "Mit jósol a heti edzésóra egy ultrán, és mit nem?"
+    options:
+      - "A célba érést jósolja (r = 0,44); a befutók helyezését már nem (egy 600 km-es versenyen r² = 0,000)."
+      - "A helyezést jósolja pontosan; aki többet edz, előrébb végez."
+      - "Semmit: az edzésóra és a teljesítmény független."
+    answer: 0
+    why: "A volumen belépőjegy; a rangsort a szerkezet, a fáradtságállóság és a 08. modul logisztikája adja."
+    page: 4
+  - q: "Mi az edzésjellemzők közül a legtisztább jel a fáradt-teljesítmény javulására — és mit ad hozzá az erősítés?"
+    options:
+      - "Az első küszöb alatti (Z1) edzésidő (r = 0,43); az erősítés a fáradt állapotú teljesítményt +8 %-kal javította 185 perc után."
+      - "A heti intervallok száma; az erősítés a sprintet javítja, ultrán lényegtelen."
+      - "A TSS-összeg; az erősítés rontja az állóképességet (interferencia)."
+    answer: 0
+    why: "Spragg U23-adata és a Rønnestad-RCT; az interferencia-félelem a meta szerint alaptalan."
+    page: 5
+  - q: "Mire való a back-to-back, és mi a 600-as brevet szerepe?"
+    options:
+      - "A második-harmadik napi teljesítés gyakorlása (mérve nincs, a gyakorlat egybehangzó); a 600-as az alvás-stratégia főpróbája, legkésőbb 4–6 héttel a verseny előtt."
+      - "A back-to-back a sprintformát élesíti; a 600-as csak nevezési formalitás."
+      - "Mindkettő az alvásmegvonás edzésére való."
+    answer: 0
+    why: "Szándékos alvásmegvonás-edzés nem ajánlott; az ellenőrzött főpróba a 600-as brevet."
+    page: 6
+  - q: "Mikorra essen a terhelés-csúcs és a főpróba a versenydátumhoz képest?"
+    options:
+      - "A csúcs 4–6 héttel, a 2–4 napos főpróba ~4 héttel a rajt előtt."
+      - "A csúcs a versenyhét; a főpróba 3 nappal a rajt előtt."
+      - "A csúcs fél évvel korábban; főpróba nem kell."
+    answer: 0
+    why: "Edzői keret-szintézis: az adaptációnak 30–42 nap kell; a taper 10–21 nap."
+    page: 7
+  - q: "Mennyi volument vágj a taperben, és mi marad változatlan?"
+    options:
+      - "A volumen átlagosan −40–60 % két (ultrára 2–3) hét alatt; az intenzitás és az edzésgyakoriság marad."
+      - "Mindent elhagysz két hétre — a teljes pihenés a leggyorsabb."
+      - "A volumen marad, csak az intenzitást hagyod el."
+    answer: 0
+    why: "A meta szerint az intenzitás-csökkentő taper a hatás felét elviszi (ES 0,72 → 0,33)."
+    page: 8
+  - q: "Miért „olcsó” a hosszú Z1-edzés TSS-ben, és miért nem baj ez?"
+    options:
+      - "Az IF²-súlyozás miatt (IF 0,6 → 36 TSS/óra), miközben a 6+ órás edzés valós költsége nem-lineárisan nő — ezért a hosszú napon az órát és a kJ-t nézd, ne a pontszámot."
+      - "Mert a Z1 nem terhelés; a TSS pontosan méri."
+      - "Mert a TSS-t 24 órás edzésekre kalibrálták."
+    answer: 0
+    why: "A TSS/CTL 6 óránál hosszabb edzésre nem validált; iránymutató, nem cél."
+    page: 10
+  - q: "Mikor cserélj intenzív edzést pihenőre a HRV-trend alapján — és mikor gyanús a szokatlanul magas HRV?"
+    options:
+      - "Ha a 7 napos gördülő átlag a normálsávod alá csúszik (a volumen mehet, az intenzitás nem); a szokatlanul magas érték nagy blokkban, romló teljesítménnyel szintén túlterhelés-jel."
+      - "Minden egyes alacsony napi értéknél; a magas érték mindig jó."
+      - "Soha: a HRV csak reggeli érdekesség."
+    answer: 0
+    why: "A napi érték zajos; túlterhelésnél az rMSSD inkább nő (meta SMD 0,26)."
+    page: 11
+  - q: "Milyen tünetekkel tilos edzeni, és mit auditálsz először tartós teljesítményesésnél?"
+    options:
+      - "Lázzal és „nyak alatti” tünettel (mellkasi köhögés, izomfájdalom) tilos; tartós esésnél először az energia-bevitelt (RED-S), aztán az alvást, csak utána az edzéstervet."
+      - "Bármilyen náthával tilos; esésnél azonnal több edzés kell."
+      - "Semmilyennel; a betegség kifutható."
+    answer: 0
+    why: "A lázas terhelés szívizomgyulladás-kockázat; sok „túledzés”-esetben az energiahiányt ki sem zárták."
+    page: 12

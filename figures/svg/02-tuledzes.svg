@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg viewBox="0 0 560 220" xmlns="http://www.w3.org/2000/svg" font-family="{{FONT}}">
+<rect x="40.0" y="52.0" width="80.0" height="36.0" rx="4" fill="#1baf7a" fill-opacity="0.35"/>
+<text x="80.0" y="44.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400"></text>
+<text x="80.0" y="73.0" font-size="9" fill="#0b0b0b" text-anchor="middle" font-weight="600">terhelés</text>
+<text x="80.0" y="100.0" font-size="7.3" fill="#898781" text-anchor="middle" font-weight="400">napok</text>
+<rect x="124.0" y="52.0" width="86.0" height="36.0" rx="4" fill="#eda100" fill-opacity="0.35"/>
+<text x="167.0" y="44.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400"></text>
+<text x="167.0" y="73.0" font-size="9" fill="#0b0b0b" text-anchor="middle" font-weight="600">FOR</text>
+<text x="167.0" y="100.0" font-size="7.3" fill="#898781" text-anchor="middle" font-weight="400">napok–hetek</text>
+<rect x="214.0" y="52.0" width="96.0" height="36.0" rx="4" fill="#ec835a" fill-opacity="0.35"/>
+<text x="262.0" y="44.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400"></text>
+<text x="262.0" y="73.0" font-size="9" fill="#0b0b0b" text-anchor="middle" font-weight="600">NFOR</text>
+<text x="262.0" y="100.0" font-size="7.3" fill="#898781" text-anchor="middle" font-weight="400">hetek–hónapok</text>
+<rect x="314.0" y="52.0" width="106.0" height="36.0" rx="4" fill="#d03b3b" fill-opacity="0.35"/>
+<text x="367.0" y="44.0" font-size="8" fill="#52514e" text-anchor="middle" font-weight="400"></text>
+<text x="367.0" y="73.0" font-size="9" fill="#0b0b0b" text-anchor="middle" font-weight="600">OTS</text>
+<text x="367.0" y="100.0" font-size="7.3" fill="#898781" text-anchor="middle" font-weight="400">hónapok</text>
+<text x="40.0" y="30.0" font-size="9" fill="#52514e" text-anchor="start" font-weight="600">a túlterhelés kontinuuma (konszenzus): a visszaút minden lépéssel hosszabb</text>
+<circle cx="52.0" cy="127.0" r="3.5" fill="#1baf7a"/>
+<text x="64.0" y="130.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">kérdőív (fáradtság + edzéskészség), 3. nap</text>
+<text x="520.0" y="130.0" font-size="8.5" fill="#0b0b0b" text-anchor="end" font-weight="600">78 % pontosság</text>
+<circle cx="52.0" cy="149.0" r="3.5" fill="#d03b3b"/>
+<text x="64.0" y="152.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">objektív napi mutatók (pulzus, hőmérséklet)</text>
+<text x="520.0" y="152.0" font-size="8.5" fill="#0b0b0b" text-anchor="end" font-weight="600">egyénileg: semmi</text>
+<circle cx="52.0" cy="171.0" r="3.5" fill="#ec835a"/>
+<text x="64.0" y="174.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">alvásidő 6 hét túlterhelésben</text>
+<text x="520.0" y="174.0" font-size="8.5" fill="#0b0b0b" text-anchor="end" font-weight="600">−7,9 %</text>
+<circle cx="52.0" cy="193.0" r="3.5" fill="#ec835a"/>
+<text x="64.0" y="196.0" font-size="8.5" fill="#52514e" text-anchor="start" font-weight="400">felső légúti fertőzés (túlterheltek vs. kontroll)</text>
+<text x="520.0" y="196.0" font-size="8.5" fill="#0b0b0b" text-anchor="end" font-weight="600">67 % vs. 11 %</text>
+<text x="40.0" y="112.0" font-size="9" fill="#52514e" text-anchor="start" font-weight="600">a korai jelek — mi működik</text>
+</svg>

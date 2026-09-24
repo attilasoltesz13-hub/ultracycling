@@ -20,8 +20,10 @@ DISC_HU = {"onellato": "önellátó", "kiseros": "kísérős", "brevet": "brevet
 TOOLS = [("alvasterv", "Alvásterv-kalkulátor", "Rajtidőből a 17. és 24. ébrenléti óra, mélypont, éjszakai blokkok, mozgáshányad; a 04 modul sablonja kitölthetően.", "04", "alvasterv.yaml"),
          ("kronotipus", "Kronotípus-kérdőív", "Öt kérdés (rMEQ-alapú): korai, köztes vagy késői típus — a kalkulátor ebből tolja el a mélypontot.", "04", None),
          ("idokoltsegvetes", "Időköltségvetés-kalkulátor", "Táv, sebesség, alvás, álló idő → napok és a három kar; fizikai réteg (CdA, Crr, lejtés, szél, magasság); a 08 modul versenyterv-sablonja.", "08", "idokoltsegvetes.yaml"),
-         ("etetesiterv", "Etetési és hidratálási terv", "Három réteg: energia (forgalom, bevitel-cél, napi hiány), folyadék és nátrium (izzadásráta, padló, plafon), koffein-adagoló; a 03 modul terv-sablonja.", "03", "etetesiterv.yaml")]
-MODULES_NAV = [("03-taplalkozas", "03 · Táplálkozás"), ("04-alvas", "04 · Alvás"), ("08-pacing", "08 · Pacing")]
+         ("etetesiterv", "Etetési és hidratálási terv", "Három réteg: energia (forgalom, bevitel-cél, napi hiány), folyadék és nátrium (izzadásráta, padló, plafon), koffein-adagoló; a 03 modul terv-sablonja.", "03", "etetesiterv.yaml"),
+         ("terheles", "Terhelés-kalkulátor", "Heti órák zónánként → TSS/sRPE → 16 hetes CTL-szimuláció rámpa-figyelmeztetéssel; fáradt-teljesítmény teszt kiértékelő.", "02", "terheles.yaml"),
+         ("utemterv", "Felkészülési ütemterv-generátor", "Versenydátum + heti óra + formátum → fázisok visszafelé: taper, csúcs, főpróba, brevet-lépcső, hőblokk, erősítés.", "02", "utemterv.yaml")]
+MODULES_NAV = [("02-edzeselmelet", "02 · Edzés"), ("03-taplalkozas", "03 · Táplálkozás"), ("04-alvas", "04 · Alvás"), ("08-pacing", "08 · Pacing")]
 
 
 def shell(title, body, rel, nav_on="", extra_head="", scripts=()):

@@ -1,0 +1,38 @@
+# Terhelés-kalkulátor — paraméterek a 02 modul 3., 10. és 17. oldalából.
+# Jelölés: fix (képlet) · példa (heurisztika/edzői sáv) · egyéni (saját mérés).
+module: "02"
+formulas:                  # fix — trainingpeaks-tss-explainer, foster-2001-session-rpe, clarke-2013-banister-model
+  tss: "TSS = óra × IF² × 100, IF = NP/FTP; plafon 100/óra"
+  srpe: "terhelés = perc × érzett erőkifejtés (0–10)"
+  ctl: "CTL = 42 napos, ATL = 7 napos exponenciálisan súlyozott napi TSS-átlag; TSB = CTL − ATL"
+zones:                     # fix — IF²×100 determinisztikus sávjai; a zónacímkék a modul 3-zónás modellje szerint
+  - { id: z1a, label: "Z1 könnyű, alsó (regeneráló)", if_range: [0.50, 0.55], tss_h: [25, 30] }
+  - { id: z1b, label: "Z1–Z2 ultra-alap", if_range: [0.56, 0.75], tss_h: [31, 56] }
+  - { id: z2, label: "Z2 tempó", if_range: [0.76, 0.90], tss_h: [58, 81] }
+  - { id: z3, label: "Z3 küszöb és fölötte", if_range: [0.91, 1.05], tss_h: [83, 100] }
+race_intensity_if: [0.55, 0.70]   # 08. modul: az FTP 55–70 %-a → ~30–49 TSS/h
+distribution_bands:        # példa — A csomag Q1 (szerkesztői sávok)
+  - { hours: [6, 8], z1_pct: [75, 80], z2_pct: [10, 15], z3_pct: [8, 12] }
+  - { hours: [8, 12], z1_pct: [80, 85], z2_pct: [8, 12], z3_pct: [6, 10] }
+  - { hours: [12, 16], z1_pct: [85, 90], z2_pct: [5, 10], z3_pct: [4, 6] }
+srpe_scale:                # fix — foster-2001 (CR-10)
+  - { rpe: 2, label: "könnyű" }
+  - { rpe: 4, label: "közepes" }
+  - { rpe: 6, label: "kemény" }
+  - { rpe: 8, label: "nagyon kemény" }
+  - { rpe: 10, label: "maximális" }
+ramp:                      # példa — friel-ramp-rate (heurisztika, nem validált) + szerkesztői amatőr-sáv
+  amateur: [3, 5]
+  advanced: [5, 8]
+  max_short: 10
+weekly_reference:          # példa — amatőr sáv: heti 6–15 óra, zömmel Z2 → ~300–700 TSS, CTL ~45–90
+  tss_range: [300, 700]
+  ctl_range: [45, 90]
+multiday_factor: [2, 3]    # példa — rutberg-cts-multiday: többnapos főpróba-hét = heti terhelés 2–3-szorosa
+durability_test:           # példa — pulford-2026-durability-cts, highnorth-durability-guide
+  kj_targets: { kozephalado: [1000, 1500], halado: [2000, 2500] }
+  bands:
+    - { max_drop_pct: 1, label: "elit" }
+    - { max_drop_pct: 5, label: "erős" }
+    - { max_drop_pct: 10, label: "átlagos" }
+    - { max_drop_pct: 20, label: "fejlesztendő — a következő blokk fókusza a Z1-volumen és az erősítés" }

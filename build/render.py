@@ -282,7 +282,7 @@ def fit_pages(html_path, pdf_path):
         res = pg.evaluate(js)
         for i, r in enumerate(res):
             flag = "TÚLCSORDUL" if r["over"] > 0 else "ok"
-            report.append(f"oldal {i+1:02d}: {flag:10s} {r['over']:+5d}px  [{r['cls']}]")
+            report.append(f"oldal {i+1:02d}: {flag:10s} {int(r['over']):+5d}px  [{r['cls']}]")
         pg.pdf(path=str(pdf_path), format="A4", print_background=True, prefer_css_page_size=True,
                margin={"top": "0", "right": "0", "bottom": "0", "left": "0"})
         b.close()

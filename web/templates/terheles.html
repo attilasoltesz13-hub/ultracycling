@@ -1,0 +1,43 @@
+<div class="wrap tool">
+  <div class="kicker"><b>02 · Edzéselmélet ultrára</b> · Eszköz · Haladó</div>
+  <h1>Terhelés-kalkulátor</h1>
+  <p class="lede">Heti óráid zónánként → terhelés (TSS, vagy sRPE eszköz nélkül) → 16 hetes CTL-szimuláció rámpa-figyelmeztetéssel; alul a fáradt-teljesítmény teszt kiértékelője. A számok iránymutatók, nem célok — a tervet az edződdel készítsd.</p>
+  <div class="legend"><span>Jelölés:</span><span class="t fix">{{ICON_FIX}}fix</span> képlet <span class="t ex">{{ICON_EX}}példa</span> heurisztika, edzői sáv <span class="t ind">{{ICON_IND}}egyéni</span> saját mérés (<a href="../../02-edzeselmelet/#p-17">17. oldal</a>)</div>
+
+  <div class="card">
+    <h2>1 · A heted zónánként <span class="t ind">{{ICON_IND}}egyéni</span></h2>
+    <div class="grid3">
+      <label class="f">FTP (W; ha nincs, hagyd üresen és használd az sRPE-t) <input id="ftp" type="number" min="80" max="450" step="5" placeholder="pl. 250"></label>
+      <label class="f">Z1 könnyű (óra/hét) <input id="h-z1" type="number" min="0" max="30" step="0.5" value="6"></label>
+      <label class="f">Z1–Z2 ultra-alap / hosszú (óra/hét) <input id="h-z1b" type="number" min="0" max="20" step="0.5" value="3"></label>
+      <label class="f">Z2 tempó (óra/hét) <input id="h-z2" type="number" min="0" max="10" step="0.25" value="0.75"></label>
+      <label class="f">Z3 küszöb és fölötte (óra/hét) <input id="h-z3" type="number" min="0" max="8" step="0.25" value="0.5"></label>
+      <label class="f">Kiinduló CTL (ha tudod) <input id="ctl0" type="number" min="10" max="150" step="1" value="45"><span class="hint">nem tudod? hagyd az alapértéket — a görbe alakja a lényeg</span></label>
+    </div>
+    <div class="kv" id="week-out" style="margin-top:16px"></div>
+    <div id="dist-warn" style="margin-top:10px"></div>
+  </div>
+
+  <div class="card">
+    <h2>2 · 16 hetes CTL-szimuláció <span class="t ex">{{ICON_EX}}példa</span></h2>
+    <div class="grid3">
+      <label class="f">Heti emelés (rámpa) <select id="ramp"><option value="4">óvatos (+3–5 CTL/hét)</option><option value="6">haladó (+5–8)</option></select></label>
+      <label class="f">Blokk <select id="block"><option value="4">3 terhelő + 1 könnyű hét</option><option value="3">2 terhelő + 1 könnyű hét</option></select></label>
+      <label class="f">Taper az utolsó <select id="taperw"><option value="2">2 hétben</option><option value="3">3 hétben</option></select></label>
+    </div>
+    <div class="timeline" id="ctl-chart" style="margin-top:14px"></div>
+    <div class="kv" id="ctl-out" style="margin-top:10px"></div>
+    <p class="note" style="margin:12px 0 0">A CTL/ATL/TSB a Banister-modell leegyszerűsítése, populációs időállandókkal; 6 óránál hosszabb edzésre és többnapos terhelésre nem validált, a hosszú Z1-t alulárazza — a hosszú napon az órát és a kJ-t nézd, ne a pontot (<a href="../../02-edzeselmelet/#p-10">10. oldal</a>). A rámpa-sávok edzői heurisztikák. Többnapos főpróba-hét: a heti terhelés 2–3-szorosa, utána kötelező könnyű hét.</p>
+  </div>
+
+  <div class="card">
+    <h2>3 · Fáradt-teljesítmény teszt kiértékelő <span class="t ind">{{ICON_IND}}egyéni</span></h2>
+    <div class="grid3">
+      <label class="f">Friss 20 perces átlag (W) <input id="fresh" type="number" min="80" max="450" step="1" placeholder="pl. 260"></label>
+      <label class="f">Fáradt 20 perces átlag (W) <input id="tired" type="number" min="60" max="450" step="1" placeholder="pl. 240"></label>
+      <label class="f">Előmunka (kJ) <select id="kj"><option value="1250">középhaladó: 1000–1500 kJ</option><option value="2250">haladó: 2000–2500 kJ</option></select></label>
+    </div>
+    <div class="kv" id="dur-out" style="margin-top:14px"></div>
+    <p class="note" style="margin:12px 0 0">A teszt: friss 20 perces maximális teszt, majd másik napon ugyanez a kJ-célú Z1–Z2 előmunka után, a versenyevéseddel (<a href="../../02-edzeselmelet/#p-17">17. oldal</a>, 3. feladat). A sávok edzői protokollból (C); évente 2–3 ismétlés a leghosszabb visszajelzési hurok.</p>
+  </div>
+</div>

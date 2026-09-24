@@ -1,0 +1,28 @@
+<div class="wrap tool">
+  <div class="kicker"><b>02 · Edzéselmélet ultrára</b> · Eszköz · Haladó</div>
+  <h1>Felkészülési ütemterv-generátor</h1>
+  <p class="lede">Versenydátum + heti időkeret + formátum → a fázisok visszafelé kiszámolva: taper, terhelés-csúcs, főpróba, brevet-lépcső, erősítés, opcionális hőblokk. A kimenet keret — az edződdel együtt lesz belőle terv.</p>
+  <div class="legend"><span>Jelölés:</span><span class="t fix">{{ICON_FIX}}fix</span> szabály <span class="t ex">{{ICON_EX}}példa</span> edzői keret (C) <span class="t ind">{{ICON_IND}}egyéni</span> saját helyzet</div>
+
+  <div class="card">
+    <h2>1 · A versenyed <span class="t ind">{{ICON_IND}}egyéni</span></h2>
+    <div class="grid3">
+      <label class="f">Versenydátum <input id="race" type="date"></label>
+      <label class="f">Formátum <select id="fmt"><option value="tobb">többnapos önellátó / brevet 1000+</option><option value="24h">24 órás / 1 napos</option><option value="kiseros">többnapos kísérős</option></select></label>
+      <label class="f">Heti vállalható óra (őszintén) <input id="hours" type="number" min="4" max="25" step="0.5" value="10"></label>
+      <label class="f">Nyári / meleg verseny? <select id="hot"><option value="1">igen — hőblokk a taperbe</option><option value="0">nem</option></select></label>
+      <label class="f">Brevet-lépcső beillesztése? <select id="brevet"><option value="1">igen (200→300→400→600)</option><option value="0">nem</option></select></label>
+      <label class="f">Kezdés (ma vagy későbbi dátum) <input id="start" type="date"></label>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Az ütemterved <span class="t ex">{{ICON_EX}}példa</span></h2>
+    <div class="kv" id="head-out"></div>
+    <div id="warn" style="margin-top:10px"></div>
+    <div class="timeline" id="gantt" style="margin-top:14px"></div>
+    <div id="plan-out" style="margin-top:12px"></div>
+    <div class="actions noprint"><button class="btn sec" id="print">Nyomtatás / PDF</button></div>
+    <p class="note" style="margin:12px 0 0">A fázishosszak edzői keret-szintézisből jönnek (C fokozat): taper 10–21 nap (volumen −40–60 %, az intenzitás és a ritmus marad), terhelés-csúcs 4–6 héttel a rajt előtt, 2–4 napos főpróba ~4 héttel előtte, 3+1 blokkok, heti ≥1 pihenőnap, a 600-as brevet legkésőbb a −4…−6. héten. Kontrollált ultra-edzésvizsgálat nem létezik — a keretet a rövid távú bizonyíték és az egybehangzó gyakorlat adja (<a href="../../02-edzeselmelet/#p-07">7. oldal</a>).</p>
+  </div>
+</div>

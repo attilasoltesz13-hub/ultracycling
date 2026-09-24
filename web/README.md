@@ -14,8 +14,10 @@ Részek:
 - `js/kronotipus.js` + `templates/kronotipus.html` — rMEQ-alapú kronotípus-kérdőív (forrás: `adan-1991-rmeq`).
 - `js/idokoltsegvetes.js` + `templates/idokoltsegvetes.html` — időköltségvetés-kalkulátor (08); paraméterek: `data/tools/idokoltsegvetes.yaml`.
 - `js/etetesiterv.js` + `templates/etetesiterv.html` — etetési és hidratálási terv (03): energia · folyadék és nátrium · koffein, a 16. oldal sablonja; paraméterek: `data/tools/etetesiterv.yaml`.
+- `js/terheles.js` + `templates/terheles.html` — terhelés-kalkulátor (02): zónaórák → TSS/sRPE, CTL-szimuláció, fáradt-teljesítmény kiértékelő; paraméterek: `data/tools/terheles.yaml`.
+- `js/utemterv.js` + `templates/utemterv.html` — felkészülési ütemterv-generátor (02): fázisok visszafelé a versenydátumtól, brevet-lépcső, hőblokk; paraméterek: `data/tools/utemterv.yaml`.
 
-Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.idokoltsegvetes`, `ht.etetesiterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
+Adat csak a böngészőben marad (`localStorage`: `ht.level`, `ht.kviz.<modul>`, `ht.kronotipus`, `ht.alvasterv`, `ht.idokoltsegvetes`, `ht.etetesiterv`, `ht.terheles`, `ht.utemterv`, `ht.sablon.<modul>`). Külső függőség, betöltés hálózatról nincs; a betűk a `dist/site/assets/fonts` mappából jönnek.
 
 GitHub Pages: a `dist/site/` tartalma tehető a `gh-pages` ágra vagy egy Actions-lépés futtathatja a buildet (`.nojekyll` benne van).
 
